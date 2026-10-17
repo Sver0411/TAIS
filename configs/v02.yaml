@@ -1,0 +1,17 @@
+# Mechanism and full matrix preregistered in design commit 8222873.
+legacy_config: configs/experiment.yaml
+v02:
+  enabled: true
+  confirmation_samples: 3
+  min_duration_s: 10
+  max_confirmation_duration_s: 120
+  confirmation_interval_s: 5
+  diagnostic_interval_s: 60
+splits:
+  development: [0,1,2,3,4,5,6,7,8,9]
+  validation: [10,11,12,13,14,15,16,17,18,19]
+  test: [50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99]
+methods: [Fixed-5, Fixed-10, Fixed-20, Fixed-40, Fixed-60, AdaptiveSense, AdaptiveSense+TrustLog, GateOnly, TAIS, V02, V02-Passive]
+threshold_multipliers: [0.75,1.0,1.5]
+bootstrap_replicates: 2000
+bootstrap_seed: 731
