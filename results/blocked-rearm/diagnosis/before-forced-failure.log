@@ -1,0 +1,21 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_________________ test_known_blocked_rearm_failure_after_spike _________________
+
+cfg = {'project': {'name': 'TAIS', 'version': '0.1.0', 'random_seed': 42}, 'sampling': {'min_interval_s': 5, 'default_interv...1, 12, 13, 14, 15, ...], 'held_out_test_seeds': [20, 21, 22, 23, 24, 25, ...], 'event_match_tolerance_s': 5, ...}, ...}
+
+    @pytest.mark.xfail(strict=True, reason='Post-final known failure: BLOCKED survives spike return and suppresses following healthy event; retained for next version, no final-set tuning')
+    def test_known_blocked_rearm_failure_after_spike(cfg):
+        from simulator.events import match_events
+        trace=generate(cfg,91,'spike_same_long')
+        result=run(trace,cfg,'V02')
+>       assert match_events(trace.events,result['reports'],5).true_positives==1
+E       AssertionError: assert 0 == 1
+E        +  where 0 = MatchResult(matches=(), unmatched_ground_truth=(Event(channel='temperature', start_s=662.0, end_s=838.0, event_type='s...hed_detections=(Event(channel='temperature', start_s=870, end_s=870, event_type='detected'),), redundant_detections=()).true_positives
+E        +    where MatchResult(matches=(), unmatched_ground_truth=(Event(channel='temperature', start_s=662.0, end_s=838.0, event_type='s...hed_detections=(Event(channel='temperature', start_s=870, end_s=870, event_type='detected'),), redundant_detections=()) = <function match_events at 0x104a7f690>([Event(channel='temperature', start_s=662.0, end_s=838.0, event_type='sudden_change')], [Event(channel='temperature', start_s=870, end_s=870, event_type='detected')], 5)
+E        +      where [Event(channel='temperature', start_s=662.0, end_s=838.0, event_type='sudden_change')] = Trace(scenario='spike_same_long', relationship='same', profile='long', seed=91, latent=[{'timestamp': 0, 'temperature'...end_s=838.0, event_type='sudden_change')], faults=[Fault(channel='temperature', start_s=600, end_s=601, kind='spike')]).events
+
+tests/test_v02.py:128: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_v02.py::test_known_blocked_rearm_failure_after_spike - Asse...
+1 failed in 0.20s

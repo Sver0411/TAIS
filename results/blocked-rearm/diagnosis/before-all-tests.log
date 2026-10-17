@@ -1,0 +1,5 @@
+........................................................................ [ 57%]
+.....................................................x                   [100%]
+=========================== short test summary info ============================
+XFAIL tests/test_v02.py::test_known_blocked_rearm_failure_after_spike - Post-final known failure: BLOCKED survives spike return and suppresses following healthy event; retained for next version, no final-set tuning
+125 passed, 1 xfailed in 10.71s
