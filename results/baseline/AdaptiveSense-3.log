@@ -1,0 +1,14 @@
+Event matching tolerance: 5.0 s (channel-aware, one-to-one)
+
+A: stable                7200 rows   0 GT events  (120 min)
+B: sudden                1800 rows   2 GT events  (30 min)
+C: mixed                 7200 rows   4 GT events  (120 min)
+D: repeated              3600 rows  14 GT events  (60 min)
+E: short event           1800 rows   2 GT events  (30 min)
+F: noisy stable          1200 rows   0 GT events  (20 min)
+G: slow drift            3600 rows   2 GT events  (60 min)
+
+Wrote per-scenario metrics -> /private/var/folders/7y/53t4ynw12dn0c_lj5r7zz5vr0000gn/T/tais-baseline-xcdvxf64/AdaptiveSense/results/metrics_all.csv
+Wrote micro-aggregated summary -> /private/var/folders/7y/53t4ynw12dn0c_lj5r7zz5vr0000gn/T/tais-baseline-xcdvxf64/AdaptiveSense/results/metrics_summary.csv
+Scenarios with zero ground-truth events (reported as N/A, never 0%): A: stable, F: noisy stable
+Wrote plots -> /private/var/folders/7y/53t4ynw12dn0c_lj5r7zz5vr0000gn/T/tais-baseline-xcdvxf64/AdaptiveSense/results/plots

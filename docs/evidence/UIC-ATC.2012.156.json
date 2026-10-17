@@ -1,0 +1,264 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        5
+      ]
+    ],
+    "date-time": "2026-07-05T02:36:57Z",
+    "timestamp": 1783219017242,
+    "version": "3.54.6"
+  },
+  "reference-count": 11,
+  "publisher": "IEEE",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2012,
+            9,
+            1
+          ]
+        ],
+        "date-time": "2012-09-01T00:00:00Z",
+        "timestamp": 1346457600000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-029"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2012,
+            9,
+            1
+          ]
+        ],
+        "date-time": "2012-09-01T00:00:00Z",
+        "timestamp": 1346457600000
+      },
+      "content-version": "stm-asf",
+      "delay-in-days": 0,
+      "URL": "https://doi.org/10.15223/policy-037"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+    "date-parts": [
+      [
+        2012,
+        9
+      ]
+    ]
+  },
+  "DOI": "10.1109/uic-atc.2012.156",
+  "type": "proceedings-article",
+  "created": {
+    "date-parts": [
+      [
+        2012,
+        10,
+        19
+      ]
+    ],
+    "date-time": "2012-10-19T20:41:35Z",
+    "timestamp": 1350679295000
+  },
+  "page": "298-305",
+  "source": "Crossref",
+  "is-referenced-by-count": 7,
+  "title": [
+    "A Decentralized Quality Aware Adaptive Sampling Strategy in Wireless Sensor Networks"
+  ],
+  "prefix": "10.1109",
+  "author": [
+    {
+      "given": "A.",
+      "family": "Masoum",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Dept. of Comput. Sci., Univ. of Twente, Enschede, Netherlands"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "N.",
+      "family": "Meratnia",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Dept. of Comput. Sci., Univ. of Twente, Enschede, Netherlands"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "P.J.M.",
+      "family": "Havinga",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Dept. of Comput. Sci., Univ. of Twente, Enschede, Netherlands"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "263",
+  "reference": [
+    {
+      "key": "ref1",
+      "article-title": "Decentralized, Adaptive Resource Allocation for Sensor Networks",
+      "volume-title": "Published in: \u2022 Proceeding NSDI\u201905 Proceedings of the 2nd conference on Symposium on Networked Systems Design & Implementation",
+      "volume": "2",
+      "author": "Mainland"
+    },
+    {
+      "key": "ref2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-540-79996-2_4"
+    },
+    {
+      "key": "ref3",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2528/PIERB08122303"
+    },
+    {
+      "key": "ref4",
+      "volume-title": "ARIMA"
+    },
+    {
+      "key": "ref5",
+      "volume-title": "MVN"
+    },
+    {
+      "key": "ref6",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1080/09537287.2011.564219"
+    },
+    {
+      "key": "ref7",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-540-69170-9_5"
+    },
+    {
+      "key": "ref8",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s11390-007-9017-7"
+    },
+    {
+      "key": "ref9",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/984622.984641"
+    },
+    {
+      "key": "ref10",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/TPDS.2007.1110"
+    },
+    {
+      "key": "ref11",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1160633.1160885"
+    }
+  ],
+  "event": {
+    "name": "2012 IEEE 9th Int'l Conference on Ubiquitous Intelligence & Computing / 9th Int'l Conference on Autonomic & Trusted Computing (UIC/ATC)",
+    "location": "Fukuoka, Japan",
+    "start": {
+      "date-parts": [
+        [
+          2012,
+          9,
+          4
+        ]
+      ]
+    },
+    "end": {
+      "date-parts": [
+        [
+          2012,
+          9,
+          7
+        ]
+      ]
+    }
+  },
+  "container-title": [
+    "2012 9th International Conference on Ubiquitous Intelligence and Computing and 9th International Conference on Autonomic and Trusted Computing"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "http://xplorestaging.ieee.org/ielx5/6331798/6331954/06332012.pdf?arnumber=6332012",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        5,
+        21
+      ]
+    ],
+    "date-time": "2025-05-21T05:19:13Z",
+    "timestamp": 1747804753000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://ieeexplore.ieee.org/document/6332012/"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2012,
+        9
+      ]
+    ]
+  },
+  "references-count": 11,
+  "URL": "https://doi.org/10.1109/uic-atc.2012.156",
+  "relation": {},
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2012,
+        9
+      ]
+    ]
+  }
+}
