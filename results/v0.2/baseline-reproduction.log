@@ -1,0 +1,40 @@
+AdaptiveSense ['/Users/mac/Documents/TAIS/.venv/bin/python', '-m', 'pytest', 'tests/', '-q'] exit 0 ........................................................................ [ 30%]
+........................................................................ [ 61%]
+........................................................................ [ 91%]
+...................                                                      [100%]
+235 passed in 13.80s
+
+AdaptiveSense ['/Users/mac/Documents/TAIS/.venv/bin/python', 'scripts/check_config_parity.py'] exit 0  create its own i2c bus                OK
+sensor_sht30.c does not create its own i2c bus                 OK
+sht30_proto.c has no ESP-IDF dependency                        OK
+CMakeLists.txt compiles sensor_bme280.c                        OK
+CMakeLists.txt compiles sensor_sht30.c                         OK
+CONFIG_AS_SENSOR_BACKEND selects a documented backend          OK
+
+PASS: all 69 checks passed
+
+AdaptiveSense ['/Users/mac/Documents/TAIS/.venv/bin/python', 'dataset/generate_dataset.py'] exit 0 cenarios to /private/var/folders/7y/53t4ynw12dn0c_lj5r7zz5vr0000gn/T/tais-baseline-j95892ld/AdaptiveSense/dataset/raw
+wrote 24 channel-level labels to /private/var/folders/7y/53t4ynw12dn0c_lj5r7zz5vr0000gn/T/tais-baseline-j95892ld/AdaptiveSense/dataset/labels, derived from 13 injected physical disturbances
+  (one injected disturbance can label several channels: humidity is coupled to temperature)
+
+AdaptiveSense ['/Users/mac/Documents/TAIS/.venv/bin/python', 'analysis/analyze.py'] exit 0 /results/metrics_all.csv
+Wrote micro-aggregated summary -> /private/var/folders/7y/53t4ynw12dn0c_lj5r7zz5vr0000gn/T/tais-baseline-j95892ld/AdaptiveSense/results/metrics_summary.csv
+Scenarios with zero ground-truth events (reported as N/A, never 0%): A: stable, F: noisy stable
+Wrote plots -> /private/var/folders/7y/53t4ynw12dn0c_lj5r7zz5vr0000gn/T/tais-baseline-j95892ld/AdaptiveSense/results/plots
+
+SensorTrust ['/Users/mac/Documents/TAIS/.venv/bin/python', '-m', 'pytest', 'tests/', '-q'] exit 0 ...........................                                              [100%]
+27 passed in 3.87s
+
+SensorTrust ['cc', '-std=c11', '-Wall', '-Wextra', '-Werror', '-Icore', 'core/sensor_trust.c', 'tests/test_core.c', '-lm', '-o', 'test_core'] exit 0 
+SensorTrust ['./test_core'] exit 0 
+ok 14 - drift_slope_is_independent_of_sampling_interval
+ok 15 - drift_ignores_non_increasing_timestamps
+ok 16 - missing_detected_after_limit_and_clears_on_recovery
+ok 17 - stuck_and_range_combine_into_fault
+ok 18 - score_from_flags_is_clamped
+ok 19 - state_thresholds_and_names
+ok 20 - format_flags_truncation_is_safe
+ok 21 - reset_clears_detection_state
+
+21 tests, 21 passed, 0 failed (404 checks)
+

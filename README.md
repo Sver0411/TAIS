@@ -6,6 +6,12 @@ Working title: **Trust-Gated Event-Aware Adaptive Sampling under Sensor Faults f
 
 When one agricultural IoT sensor becomes unreliable, can health-aware scheduling reduce false environmental reports while retaining real events on healthy channels and controlling sampling/application-upload costs? TAIS investigates this question with independent environmental and fault labels. Effectiveness is a hypothesis tested by the results, not assumed by the design.
 
+## v0.2 research branch
+
+The [v0.2 failure analysis](docs/FAILURE_ANALYSIS_V0.1.md), [preimplementation design](docs/V02_DESIGN.md), [pretest review](docs/V02_PRETEST_REVIEW.md), [new report](docs/RESEARCH_REPORT_V0.2.md) and [reproduction record](docs/V02_REPRODUCIBILITY.md) are independent additions. The original [v0.1 report](docs/RESEARCH_REPORT.md), algorithms and result artifacts remain accessible and unchanged.
+
+V0.2 tests one bounded persistent candidate policy and a passive scheduling ablation. All operating points are retained; effectiveness is judged from fresh seeds50–99 after a source/config freeze. See [v0.2 results and safe regeneration commands](results/v0.2/README.md). Fresh final tests show a small, late same-channel gain only at multiplier.75; original thresholds show no same-channel gain, and a blocked-rearm failure remains. This is a conditional research result with extra costs. See the full report for all points and confidence intervals.
+
 ## Quick start
 
 Reference environment: Python 3.14.7, macOS arm64, Apple Clang 17. A C11 compiler (`cc`, Clang or GCC) is required. No hardware or credentials are needed after cloning the public sources.

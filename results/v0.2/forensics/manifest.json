@@ -4090,5 +4090,12 @@
     "49/stable_offset_same_long/AdaptiveSense.json.gz": "ebe5e4c35fce6c550176c19cdfc4fde6c842b0e3490f5e5fdd86fff004f41458",
     "49/stable_offset_same_long/GateOnly.json.gz": "00312b7d880caa51a502ae74f08d674f4efbd1a07aa40dbfcc6ac17082bcabe0",
     "49/stable_offset_same_long/TAIS.json.gz": "00312b7d880caa51a502ae74f08d674f4efbd1a07aa40dbfcc6ac17082bcabe0"
-  }
+  },
+  "source_commit_semantics": "Observed repository HEAD when instrumentation ran; legacy policy is committed, observer tools were uncommitted. Do not interpret this as a complete instrumentation source snapshot.",
+  "committed_instrumentation_source": "dccf2f0",
+  "instrumentation_hashes": {
+    "src/tais_v02/forensics.py": "5df3a71e58d114201bb84c10439bc7fb8e819d7337d54cb501200c8bee4a0871",
+    "scripts/v02_forensics.py": "b7c850f19bf36e05bb39ffba92ed97ea74cfe6cacc96cd7c5cb3ed441201a21e"
+  },
+  "plot_note": "Representative plots rerendered offline from the same exported JSON with the committed two-channel plot function before analysis commit. No scheduler rerun or metric change."
 }
