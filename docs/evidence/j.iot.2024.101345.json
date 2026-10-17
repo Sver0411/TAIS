@@ -1,18 +1,123 @@
 {
-  "indexed": {
+  "DOI": "10.1016/j.iot.2024.101345",
+  "title": [
+    "CLARA: A cluster-based node correlation for sampling rate adaptation and fault tolerance in sensor networks"
+  ],
+  "author": [
+    {
+      "given": "Hassan",
+      "family": "Harb",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Clara Abou",
+      "family": "Nader",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Ali",
+      "family": "Jaber",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Mourad",
+      "family": "Hakem",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Jean-Claude",
+      "family": "Charr",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-5760-3182",
+      "authenticated-orcid": false,
+      "given": "Chady Abou",
+      "family": "Jaoude",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-9232-3901",
+      "authenticated-orcid": false,
+      "given": "Chamseddine",
+      "family": "Zaki",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "container-title": [
+    "Internet of Things"
+  ],
+  "volume": "28",
+  "page": "101345",
+  "article-number": "101345",
+  "publisher": "Elsevier BV",
+  "type": "journal-article",
+  "published": {
     "date-parts": [
       [
-        2026,
-        9,
-        22
+        2024,
+        12
       ]
-    ],
-    "date-time": "2026-09-22T16:09:48Z",
-    "timestamp": 1790093388060,
-    "version": "4.0.1"
+    ]
   },
-  "reference-count": 48,
-  "publisher": "Elsevier BV",
+  "published-print": {
+    "date-parts": [
+      [
+        2024,
+        12
+      ]
+    ]
+  },
+  "URL": "https://doi.org/10.1016/j.iot.2024.101345",
   "license": [
     {
       "start": {
@@ -127,702 +232,6 @@
       "URL": "https://doi.org/10.15223/policy-004"
     }
   ],
-  "content-domain": {
-    "domain": [
-      "elsevier.com",
-      "sciencedirect.com"
-    ],
-    "crossmark-restriction": true
-  },
-  "short-container-title": [
-    "Internet of Things"
-  ],
-  "published-print": {
-    "date-parts": [
-      [
-        2024,
-        12
-      ]
-    ]
-  },
-  "DOI": "10.1016/j.iot.2024.101345",
-  "type": "journal-article",
-  "created": {
-    "date-parts": [
-      [
-        2024,
-        9,
-        2
-      ]
-    ],
-    "date-time": "2024-09-02T17:15:23Z",
-    "timestamp": 1725297323000
-  },
-  "page": "101345",
-  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
-  "source": "Crossref",
-  "is-referenced-by-count": 3,
-  "special_numbering": "C",
-  "title": [
-    "CLARA: A cluster-based node correlation for sampling rate adaptation and fault tolerance in sensor networks"
-  ],
-  "prefix": "10.1016",
-  "volume": "28",
-  "author": [
-    {
-      "given": "Hassan",
-      "family": "Harb",
-      "sequence": "first",
-      "affiliation": [],
-      "role": [
-        {
-          "vocabulary": "crossref",
-          "role": "author"
-        }
-      ]
-    },
-    {
-      "given": "Clara Abou",
-      "family": "Nader",
-      "sequence": "additional",
-      "affiliation": [],
-      "role": [
-        {
-          "vocabulary": "crossref",
-          "role": "author"
-        }
-      ]
-    },
-    {
-      "given": "Ali",
-      "family": "Jaber",
-      "sequence": "additional",
-      "affiliation": [],
-      "role": [
-        {
-          "vocabulary": "crossref",
-          "role": "author"
-        }
-      ]
-    },
-    {
-      "given": "Mourad",
-      "family": "Hakem",
-      "sequence": "additional",
-      "affiliation": [],
-      "role": [
-        {
-          "vocabulary": "crossref",
-          "role": "author"
-        }
-      ]
-    },
-    {
-      "given": "Jean-Claude",
-      "family": "Charr",
-      "sequence": "additional",
-      "affiliation": [],
-      "role": [
-        {
-          "vocabulary": "crossref",
-          "role": "author"
-        }
-      ]
-    },
-    {
-      "ORCID": "https://orcid.org/0000-0002-5760-3182",
-      "authenticated-orcid": false,
-      "given": "Chady Abou",
-      "family": "Jaoude",
-      "sequence": "additional",
-      "affiliation": [],
-      "role": [
-        {
-          "vocabulary": "crossref",
-          "role": "author"
-        }
-      ]
-    },
-    {
-      "ORCID": "https://orcid.org/0000-0002-9232-3901",
-      "authenticated-orcid": false,
-      "given": "Chamseddine",
-      "family": "Zaki",
-      "sequence": "additional",
-      "affiliation": [],
-      "role": [
-        {
-          "vocabulary": "crossref",
-          "role": "author"
-        }
-      ]
-    }
-  ],
-  "member": "78",
-  "reference": [
-    {
-      "issue": "6",
-      "key": "10.1016/j.iot.2024.101345_b1",
-      "doi-asserted-by": "crossref",
-      "first-page": "5482",
-      "DOI": "10.1109/JSEN.2022.3148128",
-      "article-title": "Challenges, applications, and future of wireless sensors in internet of things: A review",
-      "volume": "22",
-      "author": "Jamshed",
-      "year": "2022",
-      "journal-title": "IEEE Sens. J."
-    },
-    {
-      "issue": "1",
-      "key": "10.1016/j.iot.2024.101345_b2",
-      "doi-asserted-by": "crossref",
-      "first-page": "14",
-      "DOI": "10.3390/asi3010014",
-      "article-title": "Applications of wireless sensor networks: an up-to-date survey",
-      "volume": "3",
-      "author": "Kandris",
-      "year": "2020",
-      "journal-title": "Appl. Syst. Innov."
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b3",
-      "doi-asserted-by": "crossref",
-      "DOI": "10.1016/j.apenergy.2023.121765",
-      "article-title": "Prediction of transportation energy demand in t\u00fcrkiye using stacking ensemble models: Methodology and comparative analysis",
-      "volume": "350",
-      "author": "Hoxha",
-      "year": "2023",
-      "journal-title": "Appl. Energy"
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b4",
-      "series-title": "International Conference on Computing, Intelligence and Data Analytics",
-      "first-page": "241",
-      "article-title": "Agent-based model for oil storage monitor and control system using iot",
-      "author": "Kanj",
-      "year": "2023"
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b5",
-      "article-title": "A sensing-based patient classification framework for efficient patient-nurse scheduling",
-      "volume": "38",
-      "author": "Saad",
-      "year": "2023",
-      "journal-title": "Sustain. Comput.: Inform. Syst."
-    },
-    {
-      "issue": "16",
-      "key": "10.1016/j.iot.2024.101345_b6",
-      "doi-asserted-by": "crossref",
-      "first-page": "16662",
-      "DOI": "10.1109/JSEN.2022.3189431",
-      "article-title": "Aggregation-scheduling based mechanism for energy-efficient multivariate sensor networks",
-      "volume": "22",
-      "author": "Ibrahim",
-      "year": "2022",
-      "journal-title": "IEEE Sens. J."
-    },
-    {
-      "issue": "1",
-      "key": "10.1016/j.iot.2024.101345_b7",
-      "doi-asserted-by": "crossref",
-      "first-page": "300",
-      "DOI": "10.3390/su15010300",
-      "article-title": "The use of virtual reality technology in intelligent transportation systems education",
-      "volume": "15",
-      "author": "Pense",
-      "year": "2022",
-      "journal-title": "Sustainability"
-    },
-    {
-      "issue": "3",
-      "key": "10.1016/j.iot.2024.101345_b8",
-      "doi-asserted-by": "crossref",
-      "first-page": "3452",
-      "DOI": "10.1109/JSEN.2020.3025188",
-      "article-title": "Zizo: A zoom-in zoom-out mechanism for minimizing redundancy and saving energy in wireless sensor networks",
-      "volume": "21",
-      "author": "Sayed",
-      "year": "2020",
-      "journal-title": "IEEE Sens. J."
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b9",
-      "series-title": "Intel lab data",
-      "author": "Madden",
-      "year": "2004"
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b10",
-      "series-title": "Argo project",
-      "author": "ARGO",
-      "year": "2000"
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b11",
-      "series-title": "Mimic ii database",
-      "author": "PhysioNet",
-      "year": "2000"
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b12",
-      "unstructured": "Guillermo Barrenetxea, Henri Dubois-Ferriere, Roger Meier, John Selker, A weather station for sensorscope, in: The Fifth International Conference on Information Processing in Sensor Networks, IPSN 2006, 2006."
-    },
-    {
-      "issue": "8s",
-      "key": "10.1016/j.iot.2024.101345_b13",
-      "first-page": "81",
-      "article-title": "Data reduction techniques in wireless sensor networks with internet of things",
-      "volume": "12",
-      "author": "Venkatesh",
-      "year": "2024",
-      "journal-title": "Int. J. Intell. Syst. Appl. Eng."
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b14",
-      "first-page": "1",
-      "article-title": "Data reduction techniques for wireless multimedia sensor networks: a systematic literature review",
-      "author": "Abbood",
-      "year": "2023",
-      "journal-title": "J. Supercomput."
-    },
-    {
-      "issue": "1",
-      "key": "10.1016/j.iot.2024.101345_b15",
-      "doi-asserted-by": "crossref",
-      "first-page": "1009",
-      "DOI": "10.1007/s11227-023-05481-z",
-      "article-title": "Fasr-led: reducing energy consumption in wireless body area networks by an efficient smart method",
-      "volume": "80",
-      "author": "Khalifavi",
-      "year": "2024",
-      "journal-title": "J. Supercomput."
-    },
-    {
-      "issue": "4",
-      "key": "10.1016/j.iot.2024.101345_b16",
-      "doi-asserted-by": "crossref",
-      "first-page": "3859",
-      "DOI": "10.1007/s11277-022-09739-2",
-      "article-title": "An improvement energy consumption policy using communication reduction in wireless body sensor network",
-      "volume": "125",
-      "author": "Mehdi",
-      "year": "2022",
-      "journal-title": "Wirel. Pers. Commun."
-    },
-    {
-      "issue": "20",
-      "key": "10.1016/j.iot.2024.101345_b17",
-      "doi-asserted-by": "crossref",
-      "first-page": "6884",
-      "DOI": "10.3390/s21206884",
-      "article-title": "Adaptive segmentation of streaming sensor data on edge devices",
-      "volume": "21",
-      "author": "D\u0119bski",
-      "year": "2021",
-      "journal-title": "Sensors"
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b18",
-      "series-title": "2023 11th IEEE International Conference on Mobile Cloud Computing, Services, and Engineering",
-      "first-page": "39",
-      "article-title": "Enhancing virtual sensors to deal with missing values and low sampling rates",
-      "author": "Anagnostopoulos",
-      "year": "2023"
-    },
-    {
-      "issue": "1\u20133",
-      "key": "10.1016/j.iot.2024.101345_b19",
-      "first-page": "173",
-      "article-title": "Srcm: An efficient method for energy consumption reduction in wireless body area networks based on data similarity",
-      "volume": "51",
-      "author": "Khani",
-      "year": "2022",
-      "journal-title": "Ad Hoc Sens. Wirel. Netw."
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b20",
-      "doi-asserted-by": "crossref",
-      "DOI": "10.1109/JSEN.2023.3278497",
-      "article-title": "Multibiosensor data sampling and transmission reduction with decision-making for remote patient monitoring in iomt networks",
-      "author": "Idrees",
-      "year": "2023",
-      "journal-title": "IEEE Sens. J."
-    },
-    {
-      "issue": "2",
-      "key": "10.1016/j.iot.2024.101345_b21",
-      "doi-asserted-by": "crossref",
-      "first-page": "661",
-      "DOI": "10.1109/TII.2017.2776082",
-      "article-title": "Energy-efficient sensor data collection approach for industrial process monitoring",
-      "volume": "14",
-      "author": "Harb",
-      "year": "2017",
-      "journal-title": "IEEE Trans. Ind. Inform."
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b22",
-      "article-title": "Trilateration method based node localization and energy efficient routing using rsa for under water wireless sensor network",
-      "volume": "41",
-      "author": "Shenbagharaman",
-      "year": "2024",
-      "journal-title": "Sustain. Comput.: Inform. Syst."
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b23",
-      "doi-asserted-by": "crossref",
-      "first-page": "225",
-      "DOI": "10.1016/j.future.2023.11.007",
-      "article-title": "Prediction-based data reduction with dynamic target node selection in iot sensor networks",
-      "volume": "152",
-      "author": "P\u0142aczek",
-      "year": "2024",
-      "journal-title": "Future Gener. Comput. Syst."
-    },
-    {
-      "issue": "2",
-      "key": "10.1016/j.iot.2024.101345_b24",
-      "doi-asserted-by": "crossref",
-      "first-page": "1049",
-      "DOI": "10.1007/s12083-023-01458-0",
-      "article-title": "A hybrid anfis reptile optimization algorithm for energy-efficient inter-cluster routing in internet of things-enabled wireless sensor networks",
-      "volume": "16",
-      "author": "Paruthi Ilam Vazhuthi",
-      "year": "2023",
-      "journal-title": "Peer-to-Peer Netw. Appl."
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b25",
-      "doi-asserted-by": "crossref",
-      "DOI": "10.1016/j.eswa.2022.119448",
-      "article-title": "Teeech: Three-tier extended energy efficient clustering hierarchy protocol for heterogeneous wireless sensor network",
-      "volume": "216",
-      "author": "Kumar",
-      "year": "2023",
-      "journal-title": "Expert Syst. Appl."
-    },
-    {
-      "issue": "3",
-      "key": "10.1016/j.iot.2024.101345_b26",
-      "doi-asserted-by": "crossref",
-      "first-page": "439",
-      "DOI": "10.1109/LCOMM.2014.011214.132319",
-      "article-title": "An efficient and robust data compression algorithm in wireless sensor networks",
-      "volume": "18",
-      "author": "Liang",
-      "year": "2014",
-      "journal-title": "IEEE Commun. Lett."
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b27",
-      "doi-asserted-by": "crossref",
-      "DOI": "10.3389/fmars.2023.1117787",
-      "article-title": "Energy-efficient clustering protocol for underwater wireless sensor networks using optimized glowworm swarm optimization",
-      "volume": "10",
-      "author": "Bharany",
-      "year": "2023",
-      "journal-title": "Front. Mar. Sci."
-    },
-    {
-      "issue": "5",
-      "key": "10.1016/j.iot.2024.101345_b28",
-      "doi-asserted-by": "crossref",
-      "first-page": "2487",
-      "DOI": "10.3390/en16052487",
-      "article-title": "An energy-efficient data aggregation clustering algorithm for wireless sensor networks using hybrid pso",
-      "volume": "16",
-      "author": "Sharmin",
-      "year": "2023",
-      "journal-title": "Energies"
-    },
-    {
-      "issue": "20",
-      "key": "10.1016/j.iot.2024.101345_b29",
-      "doi-asserted-by": "crossref",
-      "first-page": "15269",
-      "DOI": "10.1007/s00500-023-07940-4",
-      "article-title": "Using advanced distributed energy efficient clustering increasing the network lifetime in wireless sensor networks",
-      "volume": "27",
-      "author": "Raghava Rao",
-      "year": "2023",
-      "journal-title": "Soft Comput."
-    },
-    {
-      "issue": "2",
-      "key": "10.1016/j.iot.2024.101345_b30",
-      "first-page": "214",
-      "article-title": "Felzmacs: A novel data compression model in wireless sensor networks for fast data transfer",
-      "volume": "12",
-      "author": "Sreenivasu",
-      "year": "2024",
-      "journal-title": "Int. J. Intell. Syst. Appl. Eng."
-    },
-    {
-      "issue": "12s",
-      "key": "10.1016/j.iot.2024.101345_b31",
-      "first-page": "445",
-      "article-title": "Dcor: Enhancing network lifetime and performance in iot-based wireless sensor networks through distributed clustering and optimized routing",
-      "volume": "12",
-      "author": "Deshpande",
-      "year": "2024",
-      "journal-title": "Int. J. Intell. Syst. Appl. Eng."
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b32",
-      "article-title": "A q-learning-based fault-tolerance data routing scheme for iot-enabled wsns",
-      "author": "Rawal",
-      "year": "2024",
-      "journal-title": "IEEE Internet Things J."
-    },
-    {
-      "issue": "4",
-      "key": "10.1016/j.iot.2024.101345_b33",
-      "first-page": "4416",
-      "article-title": "Self-checking method for fault tolerance solution in wireless sensor network",
-      "volume": "10",
-      "author": "Croock",
-      "year": "2020",
-      "journal-title": "Int. J. Electr. Comput. Eng."
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b34",
-      "first-page": "1",
-      "article-title": "Peftospro: A power-efficient and fault-tolerant scheme for permutation routing in multi-hop wireless sensor networks",
-      "author": "Bomgni",
-      "year": "2024",
-      "journal-title": "Int. J. Wirel. Inf. Netw."
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b35",
-      "first-page": "1",
-      "article-title": "Novel fault-tolerant clustering-based multipath algorithm (ftcm) for wireless sensor networks",
-      "author": "Moridi",
-      "year": "2020",
-      "journal-title": "Telecommun. Syst."
-    },
-    {
-      "issue": "4",
-      "key": "10.1016/j.iot.2024.101345_b36",
-      "article-title": "Original research article an optimized deep learning-based fault-tolerant mechanism for energy efficient data transmission in iot",
-      "volume": "7",
-      "author": "Kumar",
-      "year": "2024",
-      "journal-title": "J. Auton. Intell."
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b37",
-      "article-title": "Ftor-mod pso: A fault tolerance and an optimal relay node selection algorithm for wireless sensor networks using modified pso",
-      "volume": "272",
-      "author": "Pushpa Rani",
-      "year": "2023",
-      "journal-title": "Knowl.-Based Syst."
-    },
-    {
-      "issue": "3",
-      "key": "10.1016/j.iot.2024.101345_b38",
-      "doi-asserted-by": "crossref",
-      "first-page": "5407",
-      "DOI": "10.3233/JIFS-221733",
-      "article-title": "Fuzzy logic based nodes distributed clustering for energy efficient fault tolerance in iot-enabled wsn",
-      "volume": "44",
-      "author": "Sebastin Suresh",
-      "year": "2023",
-      "journal-title": "J. Intell. Fuzzy Systems"
-    },
-    {
-      "issue": "2",
-      "key": "10.1016/j.iot.2024.101345_b39",
-      "doi-asserted-by": "crossref",
-      "first-page": "63",
-      "DOI": "10.1504/IJSNET.2020.107871",
-      "article-title": "Optimisation of delay tolerance in wireless sensor networks based on unscented kalman filter estimation",
-      "volume": "33",
-      "author": "Shen",
-      "year": "2020",
-      "journal-title": "Int. J. Sens. Netw."
-    },
-    {
-      "issue": "1",
-      "key": "10.1016/j.iot.2024.101345_b40",
-      "doi-asserted-by": "crossref",
-      "first-page": "1040",
-      "DOI": "10.1038/s41598-024-51218-0",
-      "article-title": "A self-adaptive attraction and repulsion-based naked mole-rat algorithm for energy-efficient mobile wireless sensor networks",
-      "volume": "14",
-      "author": "Singh",
-      "year": "2024",
-      "journal-title": "Sci. Rep."
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b41",
-      "first-page": "1",
-      "article-title": "Ida: Improved dragonfly algorithm for load balanced cluster heads selection in wireless sensor networks",
-      "author": "Srivastava",
-      "year": "2024",
-      "journal-title": "Peer-to-Peer Netw. Appl."
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b42",
-      "doi-asserted-by": "crossref",
-      "DOI": "10.1109/TCE.2024.3360513",
-      "article-title": "Optimizing cluster head selection for e-commerce-enabled wireless sensor networks",
-      "author": "Gupta",
-      "year": "2024",
-      "journal-title": "IEEE Trans. Consum. Electron."
-    },
-    {
-      "issue": "4",
-      "key": "10.1016/j.iot.2024.101345_b43",
-      "doi-asserted-by": "crossref",
-      "first-page": "3251",
-      "DOI": "10.1007/s00500-023-09316-0",
-      "article-title": "Energy efficient multi-criterion binary grey wolf optimizer based clustering for heterogeneous wireless sensor networks",
-      "volume": "28",
-      "author": "Pal",
-      "year": "2024",
-      "journal-title": "Soft Comput."
-    },
-    {
-      "issue": "2",
-      "key": "10.1016/j.iot.2024.101345_b44",
-      "doi-asserted-by": "crossref",
-      "first-page": "187",
-      "DOI": "10.1111/jtsa.12000",
-      "article-title": "Forecasting with prediction intervals for periodic autoregressive moving average models",
-      "volume": "34",
-      "author": "Anderson",
-      "year": "2013",
-      "journal-title": "J. Time Series Anal."
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b45",
-      "first-page": "1649",
-      "article-title": "Functional coefficient moving average model with applications to forecasting chinese cpi",
-      "author": "Chen",
-      "year": "2016",
-      "journal-title": "Statist. Sinica"
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b46",
-      "series-title": "Sg1000 hardware",
-      "author": "advanticsys",
-      "year": "2012"
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b47",
-      "series-title": "Nesc language manual",
-      "author": "Gay",
-      "year": "2009"
-    },
-    {
-      "key": "10.1016/j.iot.2024.101345_b48",
-      "series-title": "Tinyos",
-      "author": "Griessen",
-      "year": "2012"
-    }
-  ],
-  "container-title": [
-    "Internet of Things"
-  ],
-  "original-title": [],
-  "language": "en",
-  "link": [
-    {
-      "URL": "https://api.elsevier.com/content/article/PII:S2542660524002865?httpAccept=text/xml",
-      "content-type": "text/xml",
-      "content-version": "vor",
-      "intended-application": "text-mining"
-    },
-    {
-      "URL": "https://api.elsevier.com/content/article/PII:S2542660524002865?httpAccept=text/plain",
-      "content-type": "text/plain",
-      "content-version": "vor",
-      "intended-application": "text-mining"
-    }
-  ],
-  "deposited": {
-    "date-parts": [
-      [
-        2024,
-        11,
-        30
-      ]
-    ],
-    "date-time": "2024-11-30T20:50:20Z",
-    "timestamp": 1732999820000
-  },
-  "score": 1,
-  "resource": {
-    "primary": {
-      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S2542660524002865"
-    }
-  },
-  "subtitle": [],
-  "short-title": [],
-  "issued": {
-    "date-parts": [
-      [
-        2024,
-        12
-      ]
-    ]
-  },
-  "references-count": 48,
-  "alternative-id": [
-    "S2542660524002865"
-  ],
-  "URL": "https://doi.org/10.1016/j.iot.2024.101345",
-  "relation": {},
-  "ISSN": [
-    "2542-6605"
-  ],
-  "issn-type": [
-    {
-      "value": "2542-6605",
-      "type": "print"
-    }
-  ],
-  "subject": [],
-  "published": {
-    "date-parts": [
-      [
-        2024,
-        12
-      ]
-    ]
-  },
-  "assertion": [
-    {
-      "value": "Elsevier",
-      "name": "publisher",
-      "label": "This article is maintained by"
-    },
-    {
-      "value": "CLARA: A cluster-based node correlation for sampling rate adaptation and fault tolerance in sensor networks",
-      "name": "articletitle",
-      "label": "Article Title"
-    },
-    {
-      "value": "Internet of Things",
-      "name": "journaltitle",
-      "label": "Journal Title"
-    },
-    {
-      "value": "https://doi.org/10.1016/j.iot.2024.101345",
-      "name": "articlelink",
-      "label": "CrossRef DOI link to publisher maintained version"
-    },
-    {
-      "value": "article",
-      "name": "content_type",
-      "label": "Content Type"
-    },
-    {
-      "value": "\u00a9 2024 Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
-      "name": "copyright",
-      "label": "Copyright"
-    }
-  ],
-  "article-number": "101345"
+  "retrieved": "2026-10-17",
+  "metadata_source": "https://api.crossref.org/works/10.1016/j.iot.2024.101345"
 }

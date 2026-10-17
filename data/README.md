@@ -1,0 +1,18 @@
+# Hull greenhouse data: source and access status
+
+Source: Hull, Mabitsela, Phiri and Booysen (2023), DOI [10.17632/54htxm94bv.1](https://data.mendeley.com/datasets/54htxm94bv/1). Pin **version 1**. A [version 2](https://data.mendeley.com/datasets/54htxm94bv/2) published 2024-01-11 exists but is not silently substituted. Dataset license is **CC BY 4.0** according to the V1 landing page. The article's CC BY-NC-ND license is different. No raw data is redistributed here.
+
+Actual verification on 2026-10-17: V1 landing page/DOI and license accessible with web retrieval. Raw-file API requests returned **HTTP 403 Forbidden**; a CLI curl attempt exited 56 and Python urllib confirmed 403 for three metadata/file endpoints. Two in-app browser retrievals timed out. No file download completed, therefore actual CSV header spelling, missing counts, gaps, checksum and greenhouse replay remain **unverified**. See `results/greenhouse-access.json`. The following source descriptions must not be mistaken for a raw-file audit.
+
+The [author article](https://pmc.ncbi.nlm.nih.gov/articles/PMC10577051/) describes Full Data Set.csv: date, time, front temperature/humidity, middle temperature/humidity, back temperature/humidity, fan/wet-wall state. It describes 162 days at mainly 5-minute stored averages, with more frequent original acquisition. Training/Test Set.csv include interpolated hourly weather data and shifted temperature columns; they must not be treated as native 1-minute observations. Raw Full Data is described as uncleaned. Nominal interval is not proof of gap-free samples.
+
+Reproducible acquisition and audit after official file access is available:
+
+1. Open the pinned V1 page, verify its license, copy the **official Full Data Set.csv download URL**. This URL was not available in the current API response; no file ID is invented here.
+2. Download using `python scripts/greenhouse.py download --url "$GREENHOUSE_FILE_URL" --output 'data/raw/Full Data Set.csv'`. Retain stdout with URL, bytes and SHA-256. Subsequent downloads should add `--sha256 EXPECTED_HASH` from the first verified acquisition or publisher manifest.
+3. Inspect actual fields and missingness with `python scripts/greenhouse.py audit 'data/raw/Full Data Set.csv'`.
+4. Create a local JSON mapping with keys date, time, temperature, humidity, state set to the **actual** field names (choose middle temperature/humidity). Run `python scripts/greenhouse.py audit 'data/raw/Full Data Set.csv' --mapping data/raw/columns.json --time-format '%Y-%m-%d %H:%M:%S'`. Use the file's actual date format rather than this example if different. The script rejects bad/duplicate/out-of-order timestamps; it preserves rows and reports missing values and interval counts. Outputs go to ignored data/processed/.
+
+The mapped audit provides fixed-rate 5/10/15/30/60-minute causal reconstruction and upload counts. No fine-resolution hidden signal is interpolated. A TAIS greenhouse-specific configuration and fault replay are **deferred until the real CSV audit succeeds**; the synthetic second-based configuration cannot be applied unchanged. Fan/wet-wall transitions remain control-state references only, not complete environmental truth. The helper is tested on an artificial fixture solely to validate parsing and statistics; that test is not real greenhouse evidence.
+
+Missing values are not filled in the source. Reconstruction ignores unavailable target/sample values and preserves their missing counts. Gaps must be documented before claims about full-signal reconstruction. No sub-minute event-detection claim is supported by these data.

@@ -1,11 +1,72 @@
 # TAIS — Trust-Aware Importance Scheduler
 
-Independent reproducible research prototype for **Trust-Gated Event-Aware Adaptive Sampling under Sensor Faults for Resource-Constrained Agricultural IoT**.
+**A reproducible Python research prototype using the real SensorTrust C11 core.**
 
-How should sensor health constrain sampling and application uploads while retaining healthy-channel events and limiting fault-induced reports? These are research hypotheses, not established advantages.
+Working title: **Trust-Gated Event-Aware Adaptive Sampling under Sensor Faults for Resource-Constrained Agricultural IoT**.
 
-Python algorithms reuse pinned AdaptiveSense; sensor health comes from the actual pinned SensorTrust C11 core. Both upstream repositories retain MIT licenses and attribution in vendor/.
+When one agricultural IoT sensor becomes unreliable, can health-aware scheduling reduce false environmental reports while retaining real events on healthy channels and controlling sampling/application-upload costs? TAIS investigates this question with independent environmental and fault labels. Effectiveness is a hypothesis tested by the results, not assumed by the design.
 
-Implementation and experiment commands will be added after verified execution. See [research scope](docs/RESEARCH_QUESTION.md), [algorithm](docs/ALGORITHM_SPEC.md), [protocol](docs/EXPERIMENT_PROTOCOL.md), [audit](docs/IMPLEMENTATION_DECISIONS.md), and [related work](docs/RELATED_WORK.md).
+## Quick start
 
-Limitations: heuristic health, same-channel ambiguity, stable-offset blind spot, simulation only; application uploads are not physical energy measurements. Greenhouse data supports 5-minute and longer comparisons only.
+Reference environment: Python 3.14.7, macOS arm64, Apple Clang 17. A C11 compiler (`cc`, Clang or GCC) is required. No hardware or credentials are needed after cloning the public sources.
+
+```bash
+git clone --recurse-submodules https://github.com/Sver0411/TAIS.git
+cd TAIS
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-lock.txt
+python -m pip install -e . --no-build-isolation
+python -m pytest -q
+python scripts/run_experiments.py --split development --smoke
+python scripts/summarize_results.py --split development-smoke
+```
+
+The lock records the tested Python 3.14 environment; older Python versions may need compatible dependency resolution with `pip install -e .` and are not claimed as verified. Scripts and pytest explicitly locate checkout source. On macOS, hidden editable `.pth` files can prevent interactive imports; see [validation history](docs/VALIDATION_HISTORY.md).
+
+Full reproduction, without changing configuration or selecting a favorable point:
+
+```bash
+python scripts/reproduce_baseline.py
+python scripts/run_experiments.py --split development
+python scripts/run_experiments.py --split validation
+python scripts/run_experiments.py --split test
+python scripts/summarize_results.py --split development
+python scripts/summarize_results.py --split validation
+python scripts/summarize_results.py --split test
+```
+
+Upstream reproduction runs tests/generation/analysis in temporary copies; vendored source and historical results stay unchanged. Full synthetic execution retains all 50 seeds and all 45 scenarios, with 13 operating points each (29,250 scored runs). Expect several minutes and local trace storage; manifests enumerate each trace hash. Signals/labels and sampled decisions are regenerated under ignored `results/traces/`. Committed CSVs, plots, configuration, logs and manifests are the reviewable evidence.
+
+## Implementation and evidence
+
+- Per-channel health and change history; healthy-channel priority cannot be vetoed by another channel's fault.
+- Actual pinned AdaptiveSense scorer, hysteresis, ladder primitives and original scheduler baseline.
+- Actual pinned SensorTrust C11 through a small opaque-context ctypes adapter; comparison against its original C replay CLI on every upstream dataset fixture.
+- Bounded suspicious-reading confirmation, diagnostic sampling, explicit recovery reseeding, health/flag changes and heartbeat uploads.
+- Independent latent, noisy and faulted streams; physical-unit event labels and scheduled fault labels; no hidden/future observations in scheduler inputs.
+- Fixed 5/10/20/40/60 s, unchanged AdaptiveSense, diagnostic-only trust logging, GateOnly and full TAIS; all three threshold multipliers are reported.
+- Channel-aware report matching, local detection counts, false reports, fault attribution, latency, samples, uploads, serialized payload estimates, causal reconstruction and fault diagnosis metrics. Whole-seed paired bootstrap confidence intervals and upload/recall plots.
+
+See [results and actual run status](results/README.md), [research report](docs/RESEARCH_REPORT.md), [protocol](docs/EXPERIMENT_PROTOCOL.md), [algorithm contract](docs/ALGORITHM_SPEC.md), [implementation audit](docs/IMPLEMENTATION_DECISIONS.md) and [validation history](docs/VALIDATION_HISTORY.md). The report is the source for outcome claims.
+
+## Dependencies and attribution
+
+| Dependency | Pinned commit | Use |
+| --- | --- | --- |
+| [AdaptiveSense](https://github.com/Sver0411/AdaptiveSense) | `f7ec30fd4721aa1a7c308f879050a83936e60067` | Score, state/ladder primitives, baseline and event matcher/physical labels |
+| [SensorTrust](https://github.com/Sver0411/SensorTrust) | `2ce98dd043bb01ea99052eda218c68a172499a4c` | Unmodified real C11 health detector |
+
+Both upstream projects and TAIS are MIT licensed. Original licenses and notices remain in submodules. This is an independent sibling repository; AdaptiveSense and SensorTrust are not modified. [Smart-Agriculture-Edge-AI](https://github.com/Sver0411/Smart-Agriculture-Edge-AI) was inspected as an eventual integration reference, not a TAIS dependency or source of performance results. Academic references are in [related work](docs/RELATED_WORK.md) and [BibTeX](references.bib).
+
+## Main limitations
+
+Simulation does not establish field reliability, radio delivery or energy savings. SensorTrust health is heuristic, not a calibrated probability. Valid stable offsets and same-channel event/fault overlap remain ambiguous. Confirmation can cost samples and still miss short events. Reported application requests do not establish successful transport. Diagnostic-demand counts are not automatically additional samples. The synthetic benchmark uses two channels and jointly varied profiles; it is not a complete agriculture fault model.
+
+The [Hull greenhouse dataset](data/README.md) has nominal 5-minute stored resolution. Its DOI/license/publication description were checked, but raw API access returned 403 and no real file was validated in this environment. No actual missingness statistics, real-greenhouse TAIS experiment, sub-minute detection result, firmware integration, threshold-proximity ablation or measured energy result is claimed. See [limitations](docs/LIMITATIONS.md).
+
+To verify recorded hashes and one fresh held-out replay after full reproduction:
+
+```bash
+python scripts/verify_artifacts.py --split test --traces --replay-one
+```

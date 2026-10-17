@@ -40,6 +40,15 @@ def paired(df,cfg):
                     boot=a[rng.integers(0,len(a),size=(cfg['evaluation']['bootstrap_replicates'],len(a)))].mean(axis=1)
                     low,high=np.quantile(boot,[.025,.975])
                     output.append(dict(relationship=relation,method=method,multiplier=mult,metric=metric,paired_mean_difference=a.mean(),ci_low=low,ci_high=high,seeds=len(a)))
+        for mult in cfg['evaluation']['threshold_multipliers']:
+            a=seed[(seed.method=='TAIS')&(seed.multiplier==mult)].set_index('seed')
+            b=seed[(seed.method=='GateOnly')&(seed.multiplier==mult)].set_index('seed')
+            for metric in ['recall','uploads','samples','fault_induced_false','false_reports']:
+                delta=(a[metric]-b[metric]).dropna().to_numpy()
+                if not len(delta):continue
+                boot=delta[rng.integers(0,len(delta),size=(cfg['evaluation']['bootstrap_replicates'],len(delta)))].mean(axis=1)
+                low,high=np.quantile(boot,[.025,.975])
+                output.append(dict(relationship=relation,method='TAIS-minus-GateOnly',multiplier=mult,metric=metric,paired_mean_difference=delta.mean(),ci_low=low,ci_high=high,seeds=len(delta)))
     return pd.DataFrame(output)
 
 def main():
