@@ -2,7 +2,7 @@
 
 ## Phase 0 — freeze and reproduce the baseline
 
-From the repository root, run the existing commands:
+From the TAIS root, run `python scripts/reproduce_baseline.py`. It executes the following original commands inside an isolated copy of the pinned AdaptiveSense repository (these are upstream-relative paths, not TAIS-root paths):
 
 - python -m pytest tests/ -v
 - python scripts/check_config_parity.py
