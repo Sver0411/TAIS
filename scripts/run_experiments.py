@@ -3,6 +3,8 @@ import argparse,csv,gzip,hashlib,json,math,platform,subprocess,sys
 from copy import copy
 from dataclasses import asdict
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]/"src"))
 from tais import ROOT
 from tais.config import load
 from tais.signals import generate,scenarios

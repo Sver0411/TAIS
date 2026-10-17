@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/mac/Documents/TAIS/scripts/run_experiments.py", line 6, in <module>
+    from tais import ROOT
+ModuleNotFoundError: No module named 'tais'

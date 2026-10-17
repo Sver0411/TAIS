@@ -33,7 +33,7 @@ Hassan Harb et al., “CLARA: A cluster-based node correlation for sampling rate
 Guoqing Lu, Yixuan Sun, Yiwen Jiang, Bernard Butler, “Adaptive Sampling for Spatiotemporal Anomaly Monitoring in Wireless Sensor Networks,” arXiv:2607.15235 (16 July 2026). [arXiv page](https://arxiv.org/abs/2607.15235).
 
 - Uses Kalman-filter prediction uncertainty for sparse sensing, continuously sampled sentinel nodes for anomaly detection, and neighborhood wake-up for localized events.
-- It is a recent preprint and must be treated as such unless a peer-reviewed version is found.
+- As checked on 2026-10-17, the arXiv v1 comments explicitly state acceptance at IEEE ISSC 2026 in Limerick. This is an accepted manuscript hosted on arXiv; a proceedings DOI was not verified. The earlier specification understated its status.
 - Implication: anomaly-aware sampling and event-window visibility are active research areas. Our first version does not attempt to compete with its spatial sentinel architecture; it studies a different node-level fault/health gating question.
 
 ## Real agricultural trace
@@ -67,3 +67,17 @@ Keegan Hull et al., “Dataset of temperature, humidity, and actuator states of 
 3. Inspect full methods and experimental assumptions of the closest papers.
 4. Add a comparison matrix listing sensing unit, fault model, event ground truth, communication model, baselines, and evaluation metrics.
 5. Adjust the research question if a directly equivalent method is found.
+
+## Verification record (2026-10-17)
+
+Publisher-registered Crossref title/author/venue/DOI metadata are archived in docs/evidence. The publication status and methods were checked against primary sources:
+
+| Work | Primary source checked | Method / comparison boundary |
+| --- | --- | --- |
+| Rao 2019 | [PMC author article](https://pmc.ncbi.nlm.nih.gov/articles/PMC6631566/) | Compressed sensing/prediction mode switching and critical sensing; its conclusion leaves fault/link outliers for future work. No TAIS comparison was run. |
+| Masoum 2012 | [IEEE publisher abstract](https://ieeexplore.ieee.org/document/6332012/) | Correlation-based prediction and user ranges; full text not independently accessed in this audit. No specific fault robustness attributed beyond abstract. |
+| Harb 2024 | [Publisher abstract/section excerpts](https://www.sciencedirect.com/science/article/pii/S2542660524002865) | Cluster-head correlation; sink moving-average/exponential-smoothing reconstruction, simulations and telosB. Different architecture; not a direct benchmark. Full paywalled methods not reproduced. |
+| Lu 2026 | [arXiv v1](https://arxiv.org/abs/2607.15235) | KF sparse sampling, GLR sentinels and neighbor wakeup; accepted ISSC 2026 according to author-submitted comments. Proceedings record not independently confirmed. |
+| Hull 2023 | [Author dataset article](https://pmc.ncbi.nlm.nih.gov/articles/PMC10577051/) and [version 1 landing page](https://data.mendeley.com/datasets/54htxm94bv/1) | Dataset DOI/version/license verified; file downloads separately audited. Article license CC BY-NC-ND differs from dataset CC BY 4.0. |
+
+Mendeley also lists [version 2, January 11 2024](https://data.mendeley.com/datasets/54htxm94bv/2). This project pins requested V1; it never silently substitutes V2. Crossref resolves CLARA authors as Clara Abou Nader and Chady Abou Jaoude; BibTeX uses braces for compound surnames. This focused review is not a systematic novelty search.

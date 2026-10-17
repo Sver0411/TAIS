@@ -1,0 +1,17 @@
+# Limitations and failure boundaries
+
+- This is a host simulation. No field deployment, radio model, measured current, joules, battery-life claim or embedded resource benchmark.
+- SensorTrust is a heuristic detector. A persistent valid offset may look healthy; an actual sustained environmental ramp can resemble drift. Confirmation tests persistence, not physical causality.
+- Same-channel event plus fault can be unidentifiable. Fault replacement can erase the true signal. Recovery reseeding prevents stale-history alarms but can miss an event already in progress.
+- Stable-offset and slow-drift blind spots are explicit scenarios, not evidence of complete fault coverage. STUCK/DRIFT confirmation windows are sample-based: sparse sampling delays or misses diagnosis. One-second spikes can occur wholly between actual samples.
+- Independent physical-unit event labels are synthetic interventions. Event duration and fault intensity vary together in two profiles, so this version is not an independent factorial analysis of those factors. Only two environmental channels and one injected faulty channel are studied. Multi-fault combinations and real fault distributions need future work.
+- There is no finite universal guarantee that gating preserves every healthy-channel event. Channel isolation prevents direct veto; different shared schedules can still miss brief healthy events. See short and cross scenario results.
+- Counterfactual-new false reports are an explicit operational attribution, with a 120 s post-recovery window and 5 s onset comparison. A changed sampling schedule can shift an otherwise similar alarm, and effects later than 120 s are excluded. Report all strict unmatched alarms alongside this metric.
+- Reconstruction is simple causal zero-order hold from finite raw values, including annotated faulty values, compared to latent signal. There is no fault repair, model-based reconstruction or imputation benefit hidden in TAIS.
+- Payload bytes are actual serialized simulated application envelopes. Health logging has metadata costs; they are not calibrated radio bytes. No transport delivery success is simulated. Local detections and upload-requested reports are separate.
+- Diagnostic/confirmation demand counts overlap other scheduling needs. They cannot be added as extra samples. Paired total sample counts measure actual incremental sampling under each policy.
+- Bootstrap CIs cluster by seed on this fixed scenario suite. They do not describe uncertainty across farms, sensors or climates. Many descriptive comparisons are not multiple-testing-adjusted significance tests.
+- Baseline experiments and TAIS have different signal suites. The former is an exact separate upstream reproduction; only same-suite same-seed methods in TAIS may support relative comparisons.
+- Closest literature methods are reviewed but not reproduced as runnable baselines. No superiority to AAS, CLARA or sentinel methods, and no first/novelty claim.
+- Greenhouse download/API access and actual file validation status are reported in data/README.md. Documentation of nominal fields/resolution is not empirical verification of raw-file missingness. No real-greenhouse TAIS result is claimed unless the raw-file audit and replay actually succeed.
+- Optional control-threshold proximity is deferred. Reinforcement learning, neural methods, multichannel corroboration and firmware integration are outside v0.1.
