@@ -81,3 +81,5 @@ Publisher-registered Crossref title/author/venue/DOI metadata are archived in do
 | Hull 2023 | [Author dataset article](https://pmc.ncbi.nlm.nih.gov/articles/PMC10577051/) and [version 1 landing page](https://data.mendeley.com/datasets/54htxm94bv/1) | Dataset DOI/version/license verified; file downloads separately audited. Article license CC BY-NC-ND differs from dataset CC BY 4.0. |
 
 Mendeley also lists [version 2, January 11 2024](https://data.mendeley.com/datasets/54htxm94bv/2). This project pins requested V1; it never silently substitutes V2. Crossref resolves CLARA authors as Clara Abou Nader and Chady Abou Jaoude; BibTeX uses braces for compound surnames. This focused review is not a systematic novelty search.
+
+A second exact-title IEEE-domain search and a Crossref title query on 2026-10-17 did not return a matching proceedings DOI for Lu et al. (the registry query returned different titles). This is a search outcome, not proof that no proceedings record exists; the citation remains the arXiv accepted manuscript with author-reported conference acceptance.

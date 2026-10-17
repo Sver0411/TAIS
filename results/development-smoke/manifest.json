@@ -16,7 +16,7 @@
   ],
   "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]",
   "platform": "macOS-15.7.7-arm64-arm-64bit-Mach-O",
-  "source_commit": "e95bbefc422648e049aab3082a7b2d15b28fb075",
+  "source_commit": "c1921d151ab7a27e18c533358c1878032fa342ac",
   "config_sha256": "1be38a7b47e5e0104435086587d543dfbaa74c320389971aa2f9ecf96779dae2",
   "artifacts": {
     "0/clean_none/signals.json.gz": "f189c0e3e6edfa68fc461f8552dba13c2df31c529d19f1e279dac8de2d8dc1ae",
@@ -41,12 +41,12 @@
     "0/range_cross_long/Fixed-60-1.json.gz": "9524b5fbbeb0d5640c6dc531c8d19d7f3228c98b260689c0d4b3e8d4f14b0f06",
     "0/range_cross_long/AdaptiveSense-1.json.gz": "0100a09e2df0b89890969b21cca68eda1360fe3e1156738186fd9e57914d6a2d",
     "0/range_cross_long/AdaptiveSense+TrustLog-1.json.gz": "b00735b3ff60797d5dda5fc0e8c23cecd44ebeb7d0a7cacb2750174fd3c5c349",
-    "0/range_cross_long/GateOnly-0.75.json.gz": "f084071174a5fcf26a5eb8f54a74f169824251d5c5c65bebec133b851179e694",
-    "0/range_cross_long/GateOnly-1.json.gz": "40771a5f8735bd7fec71c2e4e8a12f88a514d07ad0537c40f78145d0282461e8",
-    "0/range_cross_long/GateOnly-1.5.json.gz": "61fcb604929fa4083b4d3974ce03629738fae2845c829c0835f61fe3763a7884",
-    "0/range_cross_long/TAIS-0.75.json.gz": "f084071174a5fcf26a5eb8f54a74f169824251d5c5c65bebec133b851179e694",
-    "0/range_cross_long/TAIS-1.json.gz": "40771a5f8735bd7fec71c2e4e8a12f88a514d07ad0537c40f78145d0282461e8",
-    "0/range_cross_long/TAIS-1.5.json.gz": "61fcb604929fa4083b4d3974ce03629738fae2845c829c0835f61fe3763a7884",
+    "0/range_cross_long/GateOnly-0.75.json.gz": "9cf6d46a72e09ff05dcb01b31ad46555859629d6631690d69a0850e2286bf698",
+    "0/range_cross_long/GateOnly-1.json.gz": "8a7e101313ebb79c276ebcb5a92012b303e3412040eb1f5a358a733cc0a7b71c",
+    "0/range_cross_long/GateOnly-1.5.json.gz": "e087904f6ec626f4eeca79627ebe6961488602105bc59cd289dd4370ed44dd5b",
+    "0/range_cross_long/TAIS-0.75.json.gz": "9cf6d46a72e09ff05dcb01b31ad46555859629d6631690d69a0850e2286bf698",
+    "0/range_cross_long/TAIS-1.json.gz": "8a7e101313ebb79c276ebcb5a92012b303e3412040eb1f5a358a733cc0a7b71c",
+    "0/range_cross_long/TAIS-1.5.json.gz": "e087904f6ec626f4eeca79627ebe6961488602105bc59cd289dd4370ed44dd5b",
     "0/spike_same_short/signals.json.gz": "eea4db87d0c00629cf6a48318493b7fc8e09adf84f8d5a3d0b0d040c7f1669e1",
     "0/spike_same_short/Fixed-5-1.json.gz": "b8bb86991148593be4f1b516c8c692e74e96085ef7d5639037449d768bef78c5",
     "0/spike_same_short/Fixed-10-1.json.gz": "369d08fe025d6bb2334a95239d6cfd0882272056ef8b3e91afe7ec5d60ae1228",
@@ -63,5 +63,5 @@
     "0/spike_same_short/TAIS-1.5.json.gz": "2102bbf3383b8f82bd7f993562dab54905711ef4f377f2dadad6921349bb7c89"
   },
   "runs": 39,
-  "metrics_sha256": "fb445fa89558a4ffb088d9e40fdbcaa96f1aef8069e4c7b3e4397be2821f0f5b"
+  "metrics_sha256": "1ddefc6339301f16f9e2ee9953db699f1a74abbbc3a809591124e77d8071341c"
 }

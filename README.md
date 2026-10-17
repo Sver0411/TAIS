@@ -36,7 +36,7 @@ python scripts/summarize_results.py --split validation
 python scripts/summarize_results.py --split test
 ```
 
-Upstream reproduction runs tests/generation/analysis in temporary copies; vendored source and historical results stay unchanged. Full synthetic execution retains all 50 seeds and all 45 scenarios, with 13 operating points each (29,250 scored runs). Expect several minutes and local trace storage; manifests enumerate each trace hash. Signals/labels and sampled decisions are regenerated under ignored `results/traces/`. Committed CSVs, plots, configuration, logs and manifests are the reviewable evidence.
+Upstream reproduction runs tests/generation/analysis in temporary copies; vendored source and historical results stay unchanged. Full synthetic execution retains all 50 seeds and all 45 scenarios, with 13 operating points each (29,250 scored runs). Allow tens of minutes and several hundred MB of local trace storage; manifests enumerate each trace hash. Signals/labels and sampled decisions are regenerated under ignored `results/traces/`. Committed CSVs, plots, configuration, logs and manifests are the reviewable evidence.
 
 ## Implementation and evidence
 

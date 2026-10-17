@@ -17,3 +17,5 @@
 - Optional control-threshold proximity is deferred. Reinforcement learning, neural methods, multichannel corroboration and firmware integration are outside v0.1.
 
 During development analysis, two reporting distinctions were made explicit: clean temperature events are not same-channel fault cases; and the generated one-second spike occurs 60 s before the event. Its cross/same cases are reported as sequential, while actual cross/same overlap tables exclude them. All raw traces and all 45 scenario outcomes are retained. Concurrent single-spike/event robustness remains untested.
+
+Sensor-specific ranges and spike thresholds are proposed heuristic settings, not field-calibrated sensor specifications. The hand-designed event/fault amplitudes and absence of tuning do not remove benchmark-design bias. Robustness across thresholds, physical sensor types and independently varied interventions needs further work.

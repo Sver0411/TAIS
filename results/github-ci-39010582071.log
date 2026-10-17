@@ -1,0 +1,408 @@
+prototype	Set up job	﻿2026-10-17T06:37:13.2706226Z Current runner version: '2.337.0'
+prototype	Set up job	2026-10-17T06:37:13.2741160Z ##[group]Runner Image Provisioner
+prototype	Set up job	2026-10-17T06:37:13.2742584Z Hosted Compute Agent
+prototype	Set up job	2026-10-17T06:37:13.2743538Z Version: 20261012.601
+prototype	Set up job	2026-10-17T06:37:13.2744664Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+prototype	Set up job	2026-10-17T06:37:13.2746329Z Build Date: 2026-10-12T17:48:21Z
+prototype	Set up job	2026-10-17T06:37:13.2747536Z Worker ID: {5a913cf6-f77d-4b52-bd5d-8eaa57040b22}
+prototype	Set up job	2026-10-17T06:37:13.2748800Z Region: eastus
+prototype	Set up job	2026-10-17T06:37:13.2749734Z Cloud: Azure
+prototype	Set up job	2026-10-17T06:37:13.2750664Z ##[endgroup]
+prototype	Set up job	2026-10-17T06:37:13.2753441Z ##[group]Operating System
+prototype	Set up job	2026-10-17T06:37:13.2754570Z Ubuntu
+prototype	Set up job	2026-10-17T06:37:13.2755822Z 24.04.5
+prototype	Set up job	2026-10-17T06:37:13.2756720Z LTS
+prototype	Set up job	2026-10-17T06:37:13.2757618Z ##[endgroup]
+prototype	Set up job	2026-10-17T06:37:13.2758635Z ##[group]Runner Image
+prototype	Set up job	2026-10-17T06:37:13.2760160Z Image: ubuntu-24.04
+prototype	Set up job	2026-10-17T06:37:13.2761132Z Version: 20261012.334.1
+prototype	Set up job	2026-10-17T06:37:13.2762949Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+prototype	Set up job	2026-10-17T06:37:13.2766270Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+prototype	Set up job	2026-10-17T06:37:13.2768055Z ##[endgroup]
+prototype	Set up job	2026-10-17T06:37:13.2770005Z ##[group]GITHUB_TOKEN Permissions
+prototype	Set up job	2026-10-17T06:37:13.2773045Z Contents: read
+prototype	Set up job	2026-10-17T06:37:13.2774059Z Metadata: read
+prototype	Set up job	2026-10-17T06:37:13.2775070Z Packages: read
+prototype	Set up job	2026-10-17T06:37:13.2776298Z ##[endgroup]
+prototype	Set up job	2026-10-17T06:37:13.2779248Z Secret source: Actions
+prototype	Set up job	2026-10-17T06:37:13.2780847Z Cache mode: write
+prototype	Set up job	2026-10-17T06:37:13.2782410Z Prepare workflow directory
+prototype	Set up job	2026-10-17T06:37:13.3261282Z Prepare all required actions
+prototype	Set up job	2026-10-17T06:37:13.3332337Z Getting action download info
+prototype	Set up job	2026-10-17T06:37:13.5147031Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+prototype	Set up job	2026-10-17T06:37:13.6426270Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+prototype	Set up job	2026-10-17T06:37:13.8383364Z Complete job name: prototype
+prototype	Run actions/checkout@v4	﻿2026-10-17T06:37:13.9172743Z ##[group]Run actions/checkout@v4
+prototype	Run actions/checkout@v4	2026-10-17T06:37:13.9173633Z with:
+prototype	Run actions/checkout@v4	2026-10-17T06:37:13.9174074Z   submodules: recursive
+prototype	Run actions/checkout@v4	2026-10-17T06:37:13.9174573Z   repository: Sver0411/TAIS
+prototype	Run actions/checkout@v4	2026-10-17T06:37:13.9178478Z   token: ***
+prototype	Run actions/checkout@v4	2026-10-17T06:37:13.9178922Z   ssh-strict: true
+prototype	Run actions/checkout@v4	2026-10-17T06:37:13.9179363Z   ssh-user: git
+prototype	Run actions/checkout@v4	2026-10-17T06:37:13.9179805Z   persist-credentials: true
+prototype	Run actions/checkout@v4	2026-10-17T06:37:13.9180290Z   clean: true
+prototype	Run actions/checkout@v4	2026-10-17T06:37:13.9180733Z   sparse-checkout-cone-mode: true
+prototype	Run actions/checkout@v4	2026-10-17T06:37:13.9181249Z   fetch-depth: 1
+prototype	Run actions/checkout@v4	2026-10-17T06:37:13.9181680Z   fetch-tags: false
+prototype	Run actions/checkout@v4	2026-10-17T06:37:13.9182125Z   show-progress: true
+prototype	Run actions/checkout@v4	2026-10-17T06:37:13.9182566Z   lfs: false
+prototype	Run actions/checkout@v4	2026-10-17T06:37:13.9183003Z   set-safe-directory: true
+prototype	Run actions/checkout@v4	2026-10-17T06:37:13.9183509Z   allow-unsafe-pr-checkout: false
+prototype	Run actions/checkout@v4	2026-10-17T06:37:13.9184279Z ##[endgroup]
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0212180Z Syncing repository: Sver0411/TAIS
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0214521Z ##[group]Getting Git version info
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0215555Z Working directory is '/home/runner/work/TAIS/TAIS'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0216760Z [command]/usr/bin/git version
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0351438Z git version 2.55.0
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0408591Z ##[endgroup]
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0424526Z Temporarily overriding HOME='/home/runner/work/_temp/5aed2583-2365-484b-b6a2-01317edd9f29' before making global git config changes
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0427480Z Adding repository directory to the temporary git global config as a safe directory
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0431398Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/TAIS/TAIS
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0485995Z Deleting the contents of '/home/runner/work/TAIS/TAIS'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0498064Z ##[group]Initializing the repository
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0503549Z [command]/usr/bin/git init /home/runner/work/TAIS/TAIS
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0659033Z hint: Using 'master' as the name for the initial branch. This default branch name
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0660727Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0662721Z hint: to use in all of your new repositories, which will suppress this warning,
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0663940Z hint: call:
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0664582Z hint:
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0665606Z hint: 	git config --global init.defaultBranch <name>
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0666699Z hint:
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0667674Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0669237Z hint: 'development'. The just-created branch can be renamed via this command:
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0670503Z hint:
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0671467Z hint: 	git branch -m <name>
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0672408Z hint:
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0673506Z hint: Disable this message with "git config set advice.defaultBranchName false"
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0675149Z Initialized empty Git repository in /home/runner/work/TAIS/TAIS/.git/
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0678384Z [command]/usr/bin/git remote add origin https://github.com/Sver0411/TAIS
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0733649Z ##[endgroup]
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0734471Z ##[group]Disabling automatic garbage collection
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0739682Z [command]/usr/bin/git config --local gc.auto 0
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0773613Z ##[endgroup]
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0774410Z ##[group]Setting up auth
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0783642Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.0821705Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.1222620Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.1261753Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.1486303Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.1524215Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.1747969Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.1790087Z ##[endgroup]
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.1791435Z ##[group]Fetching the repository
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.1800105Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +c1921d151ab7a27e18c533358c1878032fa342ac:refs/remotes/origin/main
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.5660375Z From https://github.com/Sver0411/TAIS
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.5661585Z  * [new ref]         c1921d151ab7a27e18c533358c1878032fa342ac -> origin/main
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.5666073Z ##[endgroup]
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.5667305Z ##[group]Determining the checkout info
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.5668800Z ##[endgroup]
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.5674793Z [command]/usr/bin/git sparse-checkout disable
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.5730399Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.5766224Z ##[group]Checking out the ref
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.5770849Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.6032361Z Switched to a new branch 'main'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.6037573Z branch 'main' set up to track 'origin/main'.
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.6046208Z ##[endgroup]
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.6047613Z ##[group]Setting up auth for fetching submodules
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.6052752Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.6099501Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.6136255Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.6174521Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-297551027@github.com:
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.6210665Z ##[endgroup]
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.6211993Z ##[group]Fetching submodules
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.6215625Z [command]/usr/bin/git submodule sync --recursive
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.6478548Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.6732900Z Submodule 'vendor/AdaptiveSense' (https://github.com/Sver0411/AdaptiveSense.git) registered for path 'vendor/AdaptiveSense'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.6737558Z Submodule 'vendor/SensorTrust' (https://github.com/Sver0411/SensorTrust.git) registered for path 'vendor/SensorTrust'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:14.6764682Z Cloning into '/home/runner/work/TAIS/TAIS/vendor/AdaptiveSense'...
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.0271358Z Cloning into '/home/runner/work/TAIS/TAIS/vendor/SensorTrust'...
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.2992818Z Submodule path 'vendor/AdaptiveSense': checked out 'f7ec30fd4721aa1a7c308f879050a83936e60067'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.3171343Z Submodule path 'vendor/SensorTrust': checked out '2ce98dd043bb01ea99052eda218c68a172499a4c'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.3201348Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.3414597Z Entering 'vendor/AdaptiveSense'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.3582352Z Entering 'vendor/SensorTrust'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.3628625Z ##[endgroup]
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.3629237Z ##[group]Persisting credentials for submodules
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.3634508Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.3847915Z Entering 'vendor/AdaptiveSense'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.3891376Z Entering 'vendor/SensorTrust'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.3949981Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.4165870Z Entering 'vendor/AdaptiveSense'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.4209911Z file:/home/runner/work/TAIS/TAIS/.git/modules/vendor/AdaptiveSense/config	remote.origin.url
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.4230157Z Entering 'vendor/SensorTrust'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.4271696Z file:/home/runner/work/TAIS/TAIS/.git/modules/vendor/SensorTrust/config	remote.origin.url
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.4315881Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.4530767Z Entering 'vendor/AdaptiveSense'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.4570616Z Entering 'vendor/SensorTrust'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.4628948Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-297551027@github.com:'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.4844580Z Entering 'vendor/AdaptiveSense'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.4884466Z Entering 'vendor/SensorTrust'
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.4930910Z ##[endgroup]
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.4977054Z [command]/usr/bin/git log -1 --format=%H
+prototype	Run actions/checkout@v4	2026-10-17T06:37:15.5004716Z c1921d151ab7a27e18c533358c1878032fa342ac
+prototype	Run actions/setup-python@v5	﻿2026-10-17T06:37:15.5268617Z ##[group]Run actions/setup-python@v5
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:15.5269046Z with:
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:15.5269311Z   python-version: 3.14
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:15.5269591Z   cache: pip
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:15.5269838Z   check-latest: false
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:15.5272379Z   token: ***
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:15.5272647Z   update-environment: true
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:15.5272949Z   allow-prereleases: false
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:15.5273234Z   freethreaded: false
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:15.5273502Z ##[endgroup]
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:15.6596097Z ##[group]Installed versions
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:15.6691986Z (node:2481) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:15.6693033Z (Use `node --trace-deprecation ...` to show where the warning was created)
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:15.6693887Z Successfully set up CPython (3.14.8)
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:15.6694812Z ##[endgroup]
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:15.7771490Z [command]/opt/hostedtoolcache/Python/3.14.8/x64/bin/pip cache dir
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:16.1287905Z /home/runner/.cache/pip
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:16.2136344Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.14.8-pip-fb8a1d3eacfa5d08f1a76db4422b680f4abf24808bb18507f5bc14f250b77cec
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:16.2248239Z (node:2481) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:16.6512619Z Received 58760065 of 58760065 (100.0%), 145.2 MBs/sec
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:16.6513591Z Cache Size: ~56 MB (58760065 B)
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:16.6592049Z [command]/usr/bin/tar -xf /home/runner/work/_temp/d7548b30-12d5-4cc5-b2fe-3ca9392c5a38/cache.tzst -P -C /home/runner/work/TAIS/TAIS --use-compress-program unzstd
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:16.7717036Z Cache restored successfully
+prototype	Run actions/setup-python@v5	2026-10-17T06:37:16.7762564Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.14.8-pip-fb8a1d3eacfa5d08f1a76db4422b680f4abf24808bb18507f5bc14f250b77cec
+prototype	Run python -m pip install -r requirements-lock.txt	﻿2026-10-17T06:37:16.7930620Z ##[group]Run python -m pip install -r requirements-lock.txt
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:16.7931191Z ^[[36;1mpython -m pip install -r requirements-lock.txt^[[0m
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:16.8218314Z shell: /usr/bin/bash -e {0}
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:16.8218648Z env:
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:16.8218971Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:16.8219502Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib/pkgconfig
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:16.8220018Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:16.8220454Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:16.8220893Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:16.8221340Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:16.8221715Z ##[endgroup]
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:17.5805638Z Collecting contourpy==1.4.0 (from -r requirements-lock.txt (line 1))
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:17.5819689Z   Using cached contourpy-1.4.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:17.5935088Z Collecting cycler==0.12.1 (from -r requirements-lock.txt (line 2))
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:17.5947366Z   Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:17.7347470Z Collecting fonttools==4.67.0 (from -r requirements-lock.txt (line 3))
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:17.7361225Z   Using cached fonttools-4.67.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (137 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:17.7557910Z Collecting iniconfig==2.3.1 (from -r requirements-lock.txt (line 4))
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:17.7570037Z   Using cached iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:17.8185147Z Collecting kiwisolver==1.5.1 (from -r requirements-lock.txt (line 5))
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:17.8198887Z   Using cached kiwisolver-1.5.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.2 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:17.9421330Z Collecting matplotlib==3.11.2 (from -r requirements-lock.txt (line 6))
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:17.9441373Z   Using cached matplotlib-3.11.2-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (80 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.1451228Z Collecting numpy==2.5.4 (from -r requirements-lock.txt (line 7))
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.1466108Z   Using cached numpy-2.5.4-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.1594858Z Collecting packaging==26.3 (from -r requirements-lock.txt (line 8))
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.1607048Z   Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.2689914Z Collecting pandas==3.0.6 (from -r requirements-lock.txt (line 9))
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.2703928Z   Using cached pandas-3.0.6-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.4428002Z Collecting pillow==13.0.0 (from -r requirements-lock.txt (line 10))
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.4441740Z   Using cached pillow-13.0.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.4562141Z Collecting pluggy==1.7.0 (from -r requirements-lock.txt (line 11))
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.4573303Z   Using cached pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.4713300Z Collecting Pygments==2.21.0 (from -r requirements-lock.txt (line 12))
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.4724643Z   Using cached pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.4906484Z Collecting pyparsing==3.3.3 (from -r requirements-lock.txt (line 13))
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.4918078Z   Using cached pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.5129732Z Collecting pytest==9.1.1 (from -r requirements-lock.txt (line 14))
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.5140912Z   Using cached pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.5251273Z Collecting python-dateutil==2.9.0.post0 (from -r requirements-lock.txt (line 15))
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.5262346Z   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.5581565Z Collecting PyYAML==6.0.3 (from -r requirements-lock.txt (line 16))
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.5593351Z   Using cached pyyaml-6.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6240298Z Collecting setuptools==84.0.0 (from -r requirements-lock.txt (line 17))
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6252341Z   Using cached setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6392823Z Collecting six==1.17.0 (from -r requirements-lock.txt (line 18))
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6404571Z   Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6591943Z Using cached contourpy-1.4.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (384 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6605603Z Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6618084Z Using cached fonttools-4.67.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.3 MB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6648175Z Using cached iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6659538Z Using cached kiwisolver-1.5.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6675734Z Using cached matplotlib-3.11.2-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (11.0 MB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6726542Z Using cached numpy-2.5.4-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6795086Z Using cached packaging-26.3-py3-none-any.whl (129 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6807192Z Using cached pandas-3.0.6-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (10.8 MB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6855828Z Using cached pillow-13.0.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6892031Z Using cached pluggy-1.7.0-py3-none-any.whl (27 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6903036Z Using cached pygments-2.21.0-py3-none-any.whl (1.3 MB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6918533Z Using cached pyparsing-3.3.3-py3-none-any.whl (126 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6930534Z Using cached pytest-9.1.1-py3-none-any.whl (386 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6943048Z Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6954964Z Using cached pyyaml-6.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (794 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6968482Z Using cached setuptools-84.0.0-py3-none-any.whl (818 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.6982220Z Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:18.9204282Z Installing collected packages: six, setuptools, PyYAML, pyparsing, Pygments, pluggy, pillow, packaging, numpy, kiwisolver, iniconfig, fonttools, cycler, python-dateutil, pytest, contourpy, pandas, matplotlib
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:33.7492672Z 
+prototype	Run python -m pip install -r requirements-lock.txt	2026-10-17T06:37:33.7517781Z Successfully installed PyYAML-6.0.3 Pygments-2.21.0 contourpy-1.4.0 cycler-0.12.1 fonttools-4.67.0 iniconfig-2.3.1 kiwisolver-1.5.1 matplotlib-3.11.2 numpy-2.5.4 packaging-26.3 pandas-3.0.6 pillow-13.0.0 pluggy-1.7.0 pyparsing-3.3.3 pytest-9.1.1 python-dateutil-2.9.0.post0 setuptools-84.0.0 six-1.17.0
+prototype	Run python -m pip install -e . --no-build-isolation	﻿2026-10-17T06:37:33.8844290Z ##[group]Run python -m pip install -e . --no-build-isolation
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:33.8844796Z ^[[36;1mpython -m pip install -e . --no-build-isolation^[[0m
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:33.8911959Z shell: /usr/bin/bash -e {0}
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:33.8912247Z env:
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:33.8912526Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:33.8912998Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib/pkgconfig
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:33.8913455Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:33.8913857Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:33.8914254Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:33.8914648Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:33.8915011Z ##[endgroup]
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.2449941Z Obtaining file:///home/runner/work/TAIS/TAIS
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.2460471Z   Checking if build backend supports build_editable: started
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.4663723Z   Checking if build backend supports build_editable: finished with status 'done'
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.4672704Z   Preparing editable metadata (pyproject.toml): started
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.6997844Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.7045827Z Requirement already satisfied: PyYAML>=6 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from tais-research==0.1.0) (6.0.3)
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.7050285Z Requirement already satisfied: numpy>=1.26 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from tais-research==0.1.0) (2.5.4)
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.7054359Z Requirement already satisfied: pandas>=2 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from tais-research==0.1.0) (3.0.6)
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.7058722Z Requirement already satisfied: matplotlib>=3.7 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from tais-research==0.1.0) (3.11.2)
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.7088795Z Requirement already satisfied: contourpy>=1.0.1 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from matplotlib>=3.7->tais-research==0.1.0) (1.4.0)
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.7093242Z Requirement already satisfied: cycler>=0.10 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from matplotlib>=3.7->tais-research==0.1.0) (0.12.1)
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.7098137Z Requirement already satisfied: fonttools>=4.28.2 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from matplotlib>=3.7->tais-research==0.1.0) (4.67.0)
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.7102431Z Requirement already satisfied: kiwisolver>=1.3.1 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from matplotlib>=3.7->tais-research==0.1.0) (1.5.1)
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.7108045Z Requirement already satisfied: packaging>=20.0 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from matplotlib>=3.7->tais-research==0.1.0) (26.3)
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.7112195Z Requirement already satisfied: pillow>=9 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from matplotlib>=3.7->tais-research==0.1.0) (13.0.0)
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.7116436Z Requirement already satisfied: pyparsing>=3 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from matplotlib>=3.7->tais-research==0.1.0) (3.3.3)
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.7121343Z Requirement already satisfied: python-dateutil>=2.7 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from matplotlib>=3.7->tais-research==0.1.0) (2.9.0.post0)
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.7312315Z Requirement already satisfied: six>=1.5 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from python-dateutil>=2.7->matplotlib>=3.7->tais-research==0.1.0) (1.17.0)
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.7329450Z Building wheels for collected packages: tais-research
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.7337417Z   Building editable for tais-research (pyproject.toml): started
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.9812530Z   Building editable for tais-research (pyproject.toml): finished with status 'done'
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.9819376Z   Created wheel for tais-research: filename=tais_research-0.1.0-0.editable-py3-none-any.whl size=2213 sha256=cd0b25aaf1033774442981008e2b718d29ef9ff20201c1d48be7c9428fd8b9a6
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.9820966Z   Stored in directory: /tmp/pip-ephem-wheel-cache-b7a1lx25/wheels/e5/f2/35/95a0d264de1a4718b86d991ac669cdc057d2b80cc89fe21617
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:34.9841935Z Successfully built tais-research
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:35.0151689Z Installing collected packages: tais-research
+prototype	Run python -m pip install -e . --no-build-isolation	2026-10-17T06:37:35.0223390Z Successfully installed tais-research-0.1.0
+prototype	Run python -m pytest -q	﻿2026-10-17T06:37:35.0779353Z ##[group]Run python -m pytest -q
+prototype	Run python -m pytest -q	2026-10-17T06:37:35.0779697Z ^[[36;1mpython -m pytest -q^[[0m
+prototype	Run python -m pytest -q	2026-10-17T06:37:35.0842726Z shell: /usr/bin/bash -e {0}
+prototype	Run python -m pytest -q	2026-10-17T06:37:35.0842985Z env:
+prototype	Run python -m pytest -q	2026-10-17T06:37:35.0843260Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python -m pytest -q	2026-10-17T06:37:35.0843720Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib/pkgconfig
+prototype	Run python -m pytest -q	2026-10-17T06:37:35.0844204Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python -m pytest -q	2026-10-17T06:37:35.0844603Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python -m pytest -q	2026-10-17T06:37:35.0844996Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python -m pytest -q	2026-10-17T06:37:35.0845761Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib
+prototype	Run python -m pytest -q	2026-10-17T06:37:35.0846109Z ##[endgroup]
+prototype	Run python -m pytest -q	2026-10-17T06:37:43.2051962Z ..................................................................       [100%]
+prototype	Run python -m pytest -q	2026-10-17T06:37:43.2052551Z 66 passed in 7.11s
+prototype	Run python scripts/reproduce_baseline.py	﻿2026-10-17T06:37:43.2946033Z ##[group]Run python scripts/reproduce_baseline.py
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:43.2946475Z ^[[36;1mpython scripts/reproduce_baseline.py^[[0m
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:43.3011376Z shell: /usr/bin/bash -e {0}
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:43.3011651Z env:
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:43.3011931Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:43.3012393Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib/pkgconfig
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:43.3012837Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:43.3013241Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:43.3013633Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:43.3014018Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:43.3014348Z ##[endgroup]
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.3158884Z AdaptiveSense ['/opt/hostedtoolcache/Python/3.14.8/x64/bin/python', '-m', 'pytest', 'tests/', '-q'] exit 0 ........................................................................ [ 30%]
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.3159835Z ........................................................................ [ 61%]
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.3160259Z ........................................................................ [ 91%]
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.3160649Z ...................                                                      [100%]
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.3160994Z 235 passed in 5.67s
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.3161143Z 
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.4040314Z AdaptiveSense ['/opt/hostedtoolcache/Python/3.14.8/x64/bin/python', 'scripts/check_config_parity.py'] exit 0  create its own i2c bus                OK
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.4041782Z sensor_sht30.c does not create its own i2c bus                 OK
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.4042593Z sht30_proto.c has no ESP-IDF dependency                        OK
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.4043378Z CMakeLists.txt compiles sensor_bme280.c                        OK
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.4044083Z CMakeLists.txt compiles sensor_sht30.c                         OK
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.4044699Z CONFIG_AS_SENSOR_BACKEND selects a documented backend          OK
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.4045115Z 
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.4045545Z PASS: all 69 checks passed
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.4045863Z 
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.7210284Z AdaptiveSense ['/opt/hostedtoolcache/Python/3.14.8/x64/bin/python', 'dataset/generate_dataset.py'] exit 0 ity, temperature
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.7211193Z                            slow +3 degC drift over 30 min, hold, then return
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.7211462Z 
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.7211979Z wrote 7 scenarios to /tmp/tais-baseline-uy6v_mug/AdaptiveSense/dataset/raw
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.7212731Z wrote 24 channel-level labels to /tmp/tais-baseline-uy6v_mug/AdaptiveSense/dataset/labels, derived from 13 injected physical disturbances
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.7213706Z   (one injected disturbance can label several channels: humidity is coupled to temperature)
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:50.7214076Z 
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:53.2902517Z AdaptiveSense ['/opt/hostedtoolcache/Python/3.14.8/x64/bin/python', 'analysis/analyze.py'] exit 0 00 rows   2 GT events  (60 min)
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:53.2903501Z 
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:53.2904056Z Wrote per-scenario metrics -> /tmp/tais-baseline-uy6v_mug/AdaptiveSense/results/metrics_all.csv
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:53.2905506Z Wrote micro-aggregated summary -> /tmp/tais-baseline-uy6v_mug/AdaptiveSense/results/metrics_summary.csv
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:53.2906441Z Scenarios with zero ground-truth events (reported as N/A, never 0%): A: stable, F: noisy stable
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:53.2907096Z Wrote plots -> /tmp/tais-baseline-uy6v_mug/AdaptiveSense/results/plots
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:53.2907435Z 
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:54.6452250Z SensorTrust ['/opt/hostedtoolcache/Python/3.14.8/x64/bin/python', '-m', 'pytest', 'tests/', '-q'] exit 0 ...........................                                              [100%]
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:54.6453069Z 27 passed in 1.10s
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:54.6453221Z 
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:54.7965485Z SensorTrust ['cc', '-std=c11', '-Wall', '-Wextra', '-Werror', '-Icore', 'core/sensor_trust.c', 'tests/test_core.c', '-lm', '-o', 'test_core'] exit 0 
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:54.7993229Z SensorTrust ['./test_core'] exit 0 
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:54.7994399Z ok 14 - drift_slope_is_independent_of_sampling_interval
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:54.7995053Z ok 15 - drift_ignores_non_increasing_timestamps
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:54.7995963Z ok 16 - missing_detected_after_limit_and_clears_on_recovery
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:54.7996616Z ok 17 - stuck_and_range_combine_into_fault
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:54.7997145Z ok 18 - score_from_flags_is_clamped
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:54.7997663Z ok 19 - state_thresholds_and_names
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:54.7998175Z ok 20 - format_flags_truncation_is_safe
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:54.7998710Z ok 21 - reset_clears_detection_state
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:54.7999042Z 
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:54.7999247Z 21 tests, 21 passed, 0 failed (404 checks)
+prototype	Run python scripts/reproduce_baseline.py	2026-10-17T06:37:54.7999602Z 
+prototype	Run python scripts/run_experiments.py --split development --smoke	﻿2026-10-17T06:37:54.8148602Z ##[group]Run python scripts/run_experiments.py --split development --smoke
+prototype	Run python scripts/run_experiments.py --split development --smoke	2026-10-17T06:37:54.8149183Z ^[[36;1mpython scripts/run_experiments.py --split development --smoke^[[0m
+prototype	Run python scripts/run_experiments.py --split development --smoke	2026-10-17T06:37:54.8212511Z shell: /usr/bin/bash -e {0}
+prototype	Run python scripts/run_experiments.py --split development --smoke	2026-10-17T06:37:54.8212781Z env:
+prototype	Run python scripts/run_experiments.py --split development --smoke	2026-10-17T06:37:54.8213061Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python scripts/run_experiments.py --split development --smoke	2026-10-17T06:37:54.8213525Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib/pkgconfig
+prototype	Run python scripts/run_experiments.py --split development --smoke	2026-10-17T06:37:54.8213970Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python scripts/run_experiments.py --split development --smoke	2026-10-17T06:37:54.8214361Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python scripts/run_experiments.py --split development --smoke	2026-10-17T06:37:54.8214750Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python scripts/run_experiments.py --split development --smoke	2026-10-17T06:37:54.8215150Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib
+prototype	Run python scripts/run_experiments.py --split development --smoke	2026-10-17T06:37:54.8215761Z ##[endgroup]
+prototype	Run python scripts/run_experiments.py --split development --smoke	2026-10-17T06:37:56.6418093Z development-smoke seed 0 runs 39
+prototype	Run python scripts/run_experiments.py --split development --smoke	2026-10-17T06:37:56.6431932Z Saved /home/runner/work/TAIS/TAIS/results/development-smoke/metrics.csv runs 39
+prototype	Run python scripts/summarize_results.py --split development-smoke	﻿2026-10-17T06:37:56.6700559Z ##[group]Run python scripts/summarize_results.py --split development-smoke
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:56.6701134Z ^[[36;1mpython scripts/summarize_results.py --split development-smoke^[[0m
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:56.6763696Z shell: /usr/bin/bash -e {0}
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:56.6763960Z env:
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:56.6764234Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:56.6764688Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib/pkgconfig
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:56.6765139Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:56.6765921Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:56.6766511Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:56.6766913Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:56.6767270Z ##[endgroup]
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:57.7084874Z Traceback (most recent call last):
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:57.7097985Z   File "/home/runner/work/TAIS/TAIS/scripts/summarize_results.py", line 102, in <module>
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:57.7098669Z     if __name__=='__main__':main()
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:57.7098990Z                             ~~~~^^
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:57.7099528Z   File "/home/runner/work/TAIS/TAIS/scripts/summarize_results.py", line 89, in main
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:57.7100077Z     ax.set_xlim(low-margin,high+margin)
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:57.7100410Z     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:57.7101131Z   File "/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages/matplotlib/axes/_base.py", line 3992, in set_xlim
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:57.7101939Z     return self.xaxis._set_lim(left, right, emit=emit, auto=auto)
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:57.7102427Z            ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:57.7103167Z   File "/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages/matplotlib/axis.py", line 1263, in _set_lim
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:57.7103880Z     v0 = self.axes._validate_converted_limits(v0, self.convert_units)
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:57.7104723Z   File "/opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages/matplotlib/axes/_base.py", line 3913, in _validate_converted_limits
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:57.7105733Z     raise ValueError("Axis limits cannot be NaN or Inf")
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:57.8287126Z ValueError: Axis limits cannot be NaN or Inf
+prototype	Run python scripts/summarize_results.py --split development-smoke	2026-10-17T06:37:57.8298381Z ##[error]Process completed with exit code 1.
+prototype	Post Run actions/checkout@v4	﻿2026-10-17T06:37:57.8442532Z Post job cleanup.
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:57.9302616Z [command]/usr/bin/git version
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:57.9350257Z git version 2.55.0
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:57.9398378Z Temporarily overriding HOME='/home/runner/work/_temp/7e09f532-0508-4932-92f0-7cde167d01f2' before making global git config changes
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:57.9399724Z Adding repository directory to the temporary git global config as a safe directory
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:57.9400638Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/TAIS/TAIS
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:57.9432938Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:57.9470335Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:57.9704751Z Entering 'vendor/AdaptiveSense'
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:57.9753986Z Entering 'vendor/SensorTrust'
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:57.9878027Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:57.9904386Z http.https://github.com/.extraheader
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:57.9919032Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:57.9956795Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:58.0199337Z Entering 'vendor/AdaptiveSense'
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:58.0229478Z http.https://github.com/.extraheader
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:58.0269110Z Entering 'vendor/SensorTrust'
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:58.0297964Z http.https://github.com/.extraheader
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:58.0350200Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:58.0390110Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:58.0613211Z Entering 'vendor/AdaptiveSense'
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:58.0632839Z file:/home/runner/work/TAIS/TAIS/.git/modules/vendor/AdaptiveSense/config	remote.origin.url
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:58.0652906Z Entering 'vendor/SensorTrust'
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:58.0672438Z file:/home/runner/work/TAIS/TAIS/.git/modules/vendor/SensorTrust/config	remote.origin.url
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:58.0707851Z [command]/usr/bin/git config --file /home/runner/work/TAIS/TAIS/.git/modules/vendor/AdaptiveSense/config --name-only --get-regexp ^includeIf\.gitdir:
+prototype	Post Run actions/checkout@v4	2026-10-17T06:37:58.0749736Z [command]/usr/bin/git config --file /home/runner/work/TAIS/TAIS/.git/modules/vendor/SensorTrust/config --name-only --get-regexp ^includeIf\.gitdir:
+prototype	Complete job	﻿2026-10-17T06:37:58.0928228Z Cleaning up orphan processes
+prototype	Complete job	2026-10-17T06:37:58.1237499Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

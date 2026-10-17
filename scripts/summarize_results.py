@@ -76,13 +76,18 @@ def main():
     markers={'AdaptiveSense':'s','AdaptiveSense+TrustLog':'+','GateOnly':'o','TAIS':'^'}
     for column,relation in enumerate(['all','cross','same']):
         sub=summary if relation=='all' else byrel[byrel.relationship==relation]
+        if sub.empty:
+            for ax in axes[:,column]:
+                ax.text(.5,.5,'N/A: no cases in this run',ha='center',va='center',transform=ax.transAxes)
+                ax.set_axis_off()
+            continue
         for row in [0,1]:
             ax=axes[row,column]
             for method,g in sub.groupby('method'):
                 ax.plot(g.uploads_per_run,g.recall*100,marker=markers.get(method,'d'),linestyle='-' if len(g)>1 else '',label=method,markersize=6,alpha=.85)
                 if row==1:
-                    for _,r in g.iterrows():
-                        if len(g)>1:ax.annotate(f'{r.multiplier:g}',(r.uploads_per_run,r.recall*100),fontsize=7,xytext=(3,7 if method=='TAIS' else -10),textcoords='offset points')
+                    for point_index,(_,r) in enumerate(g.iterrows()):
+                        if len(g)>1:ax.annotate(f'{r.multiplier:g}',(r.uploads_per_run,r.recall*100),fontsize=7,xytext=(8 if method=='TAIS' else -24,12 if point_index%2==0 else -12),textcoords='offset points')
             if row==1:
                 policies=sub[~sub.method.str.startswith('Fixed-')].uploads_per_run
                 low,high=policies.min(),policies.max();margin=max(2,(high-low)*.2)

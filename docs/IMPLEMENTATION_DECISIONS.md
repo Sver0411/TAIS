@@ -25,3 +25,11 @@ Output definitions: local detections use the same channel debounce as AdaptiveSe
 The Smart-Agriculture-Edge-AI firmware SensorTrust C source was fetched and compared by SHA-256: `84ff663157edb012af0290cf9f0f1d6400cee382f47ea272e8ec2089e59a2b90`, identical to the selected SensorTrust core. Its integration manifest still records an older full repository SHA; identical core source does not imply identical whole-project experiments.
 
 `configs/experiment.yaml` retains HEALTHY/DEGRADED/FAULT spellings and `rewarm_after_fault: true` as descriptive metadata. They do not redefine the upstream C enum or enable unsafe history reuse. All effective scoring/hysteresis/ladder/upload-delta parameters load from the audited upstream YAML. Sampling limits/heartbeat/confirmation/diagnostics and synthetic interventions are TAIS config values.
+
+## Publication transport
+
+Initial repository/docs/implementation pushes used normal authenticated `gh repo create ... --push` and `git push`. A later Git transport attempt failed with an HTTP/2 framing error; HTTP/1.1 retry could not connect to github.com:443, while api.github.com remained reachable. Used a one-off official Git Data API publisher via `gh api`: create missing blobs, base-tree updates, exact author/committer/message/parents, then non-forcing ref update. Every blob, tree and commit SHA was asserted equal to its existing local Git object before updating main, and the remote ref was read back. No history rewriting or fabricated link. First recovered publication: c1921d151ab7a27e18c533358c1878032fa342ac. See results/publication-transport.json and results/publish-api.log. Remote remains the ordinary public GitHub URL for future cloning/pushing.
+
+The audited fallback is retained as scripts/publish_exact_git_objects.py, with a repository-relative root and explicit destination guard. It uses existing gh authentication and refuses SHA mismatches or non-fast-forward history. It is an optional publication command, not part of experiment execution.
+
+CSV artifacts retain csv.DictWriter's CRLF line endings explicitly through .gitattributes. Git whitespace review treats CR-at-EOL as valid and never rewrites result bytes to silence a check; recorded SHA-256 stays tied to the actual generated artifact.

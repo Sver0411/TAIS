@@ -1,0 +1,4 @@
+# csv.DictWriter emits CRLF; preserve artifact bytes and their SHA-256 on checkout.
+*.csv -text whitespace=cr-at-eol
+# Keep diagnostic console logs verbatim, including spaces emitted by GitHub Actions.
+*.log -whitespace

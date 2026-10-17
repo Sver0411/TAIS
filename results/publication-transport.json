@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-17",
+  "repository": "https://github.com/Sver0411/TAIS",
+  "git_https_attempts": [
+    {"result": "exit 128", "error": "Error in the HTTP2 framing layer"},
+    {"transport": "HTTP/1.1", "result": "exit 128", "error": "Failed to connect to github.com port 443 after approximately 75 seconds"}
+  ],
+  "fallback": "Official GitHub Git Data REST API through authenticated gh api",
+  "integrity": "Every posted blob SHA, tree SHA and commit SHA required equality to the original local Git object; ref updated non-forcing only after equality and remote-head checks",
+  "published_commit_verified": "c1921d151ab7a27e18c533358c1878032fa342ac",
+  "object_log": "publish-api.log",
+  "tokens_read_or_printed_by_helper": false,
+  "final_remote_head": "See GitHub main and final response; this committed record describes the already verified preceding publication"
+}
