@@ -1,0 +1,132 @@
+{
+  "old_split_same_channel_breakdown": [
+    {
+      "split": "development",
+      "method": "AdaptiveSense",
+      "erased": false,
+      "tp": 33,
+      "events": 40
+    },
+    {
+      "split": "development",
+      "method": "AdaptiveSense",
+      "erased": true,
+      "tp": 4,
+      "events": 80
+    },
+    {
+      "split": "development",
+      "method": "GateOnly",
+      "erased": false,
+      "tp": 33,
+      "events": 40
+    },
+    {
+      "split": "development",
+      "method": "GateOnly",
+      "erased": true,
+      "tp": 0,
+      "events": 80
+    },
+    {
+      "split": "development",
+      "method": "TAIS",
+      "erased": false,
+      "tp": 33,
+      "events": 40
+    },
+    {
+      "split": "development",
+      "method": "TAIS",
+      "erased": true,
+      "tp": 0,
+      "events": 80
+    },
+    {
+      "split": "validation",
+      "method": "AdaptiveSense",
+      "erased": false,
+      "tp": 32,
+      "events": 40
+    },
+    {
+      "split": "validation",
+      "method": "AdaptiveSense",
+      "erased": true,
+      "tp": 2,
+      "events": 80
+    },
+    {
+      "split": "validation",
+      "method": "GateOnly",
+      "erased": false,
+      "tp": 32,
+      "events": 40
+    },
+    {
+      "split": "validation",
+      "method": "GateOnly",
+      "erased": true,
+      "tp": 0,
+      "events": 80
+    },
+    {
+      "split": "validation",
+      "method": "TAIS",
+      "erased": false,
+      "tp": 32,
+      "events": 40
+    },
+    {
+      "split": "validation",
+      "method": "TAIS",
+      "erased": true,
+      "tp": 0,
+      "events": 80
+    },
+    {
+      "split": "test",
+      "method": "AdaptiveSense",
+      "erased": false,
+      "tp": 109,
+      "events": 120
+    },
+    {
+      "split": "test",
+      "method": "AdaptiveSense",
+      "erased": true,
+      "tp": 18,
+      "events": 240
+    },
+    {
+      "split": "test",
+      "method": "GateOnly",
+      "erased": false,
+      "tp": 108,
+      "events": 120
+    },
+    {
+      "split": "test",
+      "method": "GateOnly",
+      "erased": true,
+      "tp": 0,
+      "events": 240
+    },
+    {
+      "split": "test",
+      "method": "TAIS",
+      "erased": false,
+      "tp": 109,
+      "events": 120
+    },
+    {
+      "split": "test",
+      "method": "TAIS",
+      "erased": true,
+      "tp": 0,
+      "events": 240
+    }
+  ],
+  "range_same_artifact_matches": 18,
+  "note": "Equality concerns observed streams; latent signals and truth differ. Matcher TP alone does not establish event sensitivity."
+}
