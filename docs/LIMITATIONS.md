@@ -15,3 +15,5 @@
 - Closest literature methods are reviewed but not reproduced as runnable baselines. No superiority to AAS, CLARA or sentinel methods, and no first/novelty claim.
 - Greenhouse download/API access and actual file validation status are reported in data/README.md. Documentation of nominal fields/resolution is not empirical verification of raw-file missingness. No real-greenhouse TAIS result is claimed unless the raw-file audit and replay actually succeed.
 - Optional control-threshold proximity is deferred. Reinforcement learning, neural methods, multichannel corroboration and firmware integration are outside v0.1.
+
+During development analysis, two reporting distinctions were made explicit: clean temperature events are not same-channel fault cases; and the generated one-second spike occurs 60 s before the event. Its cross/same cases are reported as sequential, while actual cross/same overlap tables exclude them. All raw traces and all 45 scenario outcomes are retained. Concurrent single-spike/event robustness remains untested.

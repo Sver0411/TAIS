@@ -70,3 +70,5 @@ To verify recorded hashes and one fresh held-out replay after full reproduction:
 ```bash
 python scripts/verify_artifacts.py --split test --traces --replay-one
 ```
+
+After all three summary commands, regenerate the report tables with `python scripts/build_report.py`.

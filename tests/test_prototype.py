@@ -78,15 +78,17 @@ def test_future_and_truth_changes_do_not_change_prefix(cfg):
     assert [r for r in ra if r['timestamp']<=900]==[r for r in rb if r['timestamp']<=900]
     assert list(inspect.signature(Scheduler.update).parameters)==['self','t','values']
 
-def test_unsampled_values_are_not_read(cfg):
+@pytest.mark.parametrize("method",["Fixed-60","TAIS"])
+def test_unsampled_values_are_not_read(cfg,method):
     a=generate(cfg,0,'clean_event')
+    allowed={r['timestamp'] for r in run(a,cfg,method)['records']}
     class Hidden(dict):
         def __getitem__(self,k):
-            if k!='timestamp' and super().__getitem__('timestamp')%60:
+            if k!='timestamp' and super().__getitem__('timestamp') not in allowed:
                 raise AssertionError('unsampled observation accessed')
             return super().__getitem__(k)
     a.observed=[Hidden(r) for r in a.observed]
-    run(a,cfg,'Fixed-60')
+    run(a,cfg,method)
 
 def test_labels_independent_of_policy_and_fault_values(cfg):
     a=generate(cfg,5,'range_same_long');b=deepcopy(cfg)
