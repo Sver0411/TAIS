@@ -271,7 +271,7 @@ PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q -rx -p no:cacheprovider 
   tests/test_rearm.py::test_known_spike_then_event_all_points
 ```
 
-实际结果：**8 passed, 2 xfailed**；两项1.5仍按原断言严格失败，没有XPASS或意外失败。本阶段没有重跑全部192项通过的套件；192通过/2 xfail是原提交已有记录，不冒充本次新结果。
+实际本地结果：**8 passed, 2 xfailed**；两项1.5仍按原断言严格失败，没有XPASS或意外失败。本阶段本地没有重跑全套；原提交已有的192通过/2 xfail不冒充本地本次结果。文档推送后，[GitHub自动CI](https://github.com/Sver0411/TAIS/actions/runs/39049535828)在文档提交`01ea1874a82ae8fd3a76fb7ec7df316457094472`上另行实际复核成功：192 passed/2 xfailed；AdaptiveSense235通过及69项配置检查；SensorTrust27项Python测试、21项C测试/404项检查。自动CI与本地定向取证分开列明，不视为新独立算法实验。
 
 另外实际完成：7,650对指标归并、9个不利运行点全轨迹读取、6次seed91高阈值插桩/未插桩一致性比较、235次C健康复核、1,200对生成观测比较、3,600对归档策略输出比较（8,000个哈希通过）。这些都是已用数据审计，没有阈值搜索或新最终集。
 
