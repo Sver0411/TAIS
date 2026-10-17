@@ -1,7 +1,7 @@
 """Mechanism, causality, real C integration and immutable legacy regression."""
 from copy import deepcopy
 from dataclasses import asdict
-import gzip,json,math,subprocess
+import gzip,json,math,hashlib
 import pytest
 from tais import ROOT
 from tais.signals import generate,scenarios
@@ -95,9 +95,10 @@ def test_disabled_exact_legacy_and_frozen_sources(cfg):
     for case in ['clean_short','drift_same_long','range_cross_short','spike_same_short']:
         tr=generate(cfg,0,case)
         assert canon(run(tr,cfg,'V02'))==canon(legacy_run(tr,cfg,'TAIS'))
-    for path in sorted((ROOT/'src/tais').glob('*')):
-        if path.suffix in ['.py','.c']:
-            assert path.read_bytes()==subprocess.check_output(['git','show','68af4b6:'+str(path.relative_to(ROOT))])
+    # Committed immutable hashes also work in GitHub's depth-1 checkout.
+    frozen=json.loads((ROOT/'results/v0.2/legacy_source_hashes.json').read_text())
+    for name,digest in frozen.items():
+        assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==digest
 
 def test_legacy_archive_fresh_reproduction(cfg):
     import sys

@@ -1,0 +1,114 @@
+prototype	Run python -m pytest -q	﻿2026-10-17T07:25:06.4946586Z ##[group]Run python -m pytest -q
+prototype	Run python -m pytest -q	2026-10-17T07:25:06.4946932Z ^[[36;1mpython -m pytest -q^[[0m
+prototype	Run python -m pytest -q	2026-10-17T07:25:06.5011159Z shell: /usr/bin/bash -e {0}
+prototype	Run python -m pytest -q	2026-10-17T07:25:06.5011429Z env:
+prototype	Run python -m pytest -q	2026-10-17T07:25:06.5011709Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python -m pytest -q	2026-10-17T07:25:06.5012516Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib/pkgconfig
+prototype	Run python -m pytest -q	2026-10-17T07:25:06.5012998Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python -m pytest -q	2026-10-17T07:25:06.5013412Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python -m pytest -q	2026-10-17T07:25:06.5013821Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	Run python -m pytest -q	2026-10-17T07:25:06.5014234Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib
+prototype	Run python -m pytest -q	2026-10-17T07:25:06.5014591Z ##[endgroup]
+prototype	Run python -m pytest -q	2026-10-17T07:25:16.0720887Z ........................................................................ [ 57%]
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1860700Z ...............................................F.....                    [100%]
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1861446Z =================================== FAILURES ===================================
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1862586Z ________________ test_disabled_exact_legacy_and_frozen_sources _________________
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1864317Z 
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1865394Z cfg = {'project': {'name': 'TAIS', 'version': '0.1.0', 'random_seed': 42}, 'sampling': {'min_interval_s': 5, 'default_interv...1, 12, 13, 14, 15, ...], 'held_out_test_seeds': [20, 21, 22, 23, 24, 25, ...], 'event_match_tolerance_s': 5, ...}, ...}
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1866582Z 
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1866815Z     def test_disabled_exact_legacy_and_frozen_sources(cfg):
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1867334Z         cfg['v02']['enabled']=False
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1867956Z         for case in ['clean_short','drift_same_long','range_cross_short','spike_same_short']:
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1868599Z             tr=generate(cfg,0,case)
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1869134Z             assert canon(run(tr,cfg,'V02'))==canon(legacy_run(tr,cfg,'TAIS'))
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1869788Z         for path in sorted((ROOT/'src/tais').glob('*')):
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1870329Z             if path.suffix in ['.py','.c']:
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1871143Z >               assert path.read_bytes()==subprocess.check_output(['git','show','68af4b6:'+str(path.relative_to(ROOT))])
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1872410Z                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1872888Z 
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1873031Z tests/test_v02.py:100: 
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1873459Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1874263Z /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/subprocess.py:473: in check_output
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1875070Z     return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1875705Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1876075Z 
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1876342Z input = None, capture_output = False, timeout = None, check = True
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1877011Z popenargs = (['git', 'show', '68af4b6:src/tais/__init__.py'],)
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1878022Z kwargs = {'stdout': -1}
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1878243Z 
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1878370Z     def run(*popenargs,
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1878881Z             input=None, capture_output=False, timeout=None, check=False, **kwargs):
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1879656Z         """Run command with arguments and return a CompletedProcess instance.
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1880224Z     
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1880684Z         The returned instance will have attributes args, returncode, stdout and
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1881478Z         stderr. By default, stdout and stderr are not captured, and those attributes
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1882505Z         will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1883167Z         or pass capture_output=True to capture both.
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1883597Z     
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1883994Z         If check is True and the exit code was non-zero, it raises a
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1885034Z         CalledProcessError. The CalledProcessError object will have the return code
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1885869Z         in the returncode attribute, and output & stderr attributes if those streams
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1886474Z         were captured.
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1886780Z     
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1887170Z         If timeout (seconds) is given and the process takes too long,
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1887748Z          a TimeoutExpired exception will be raised.
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1888194Z     
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1888570Z         There is an optional argument "input", allowing you to
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1889298Z         pass bytes or a string to the subprocess's stdin.  If you use this argument
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1890043Z         you may not also use the Popen constructor's "stdin" argument, as
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1890602Z         it will be used internally.
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1890969Z     
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1891484Z         By default, all communication is in bytes, and therefore any "input" should
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1892560Z         be bytes, and the stdout and stderr will be bytes. If in text mode, any
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1893353Z         "input" should be a string, and stdout and stderr will be strings decoded
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1894088Z         according to locale encoding, or by "encoding" if set. Text mode is
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1894837Z         triggered by setting any of text, encoding, errors or universal_newlines.
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1895425Z     
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1895832Z         The other arguments are the same as for the Popen constructor.
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1896371Z         """
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1896667Z         if input is not None:
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1897065Z             if kwargs.get('stdin') is not None:
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1897635Z                 raise ValueError('stdin and input arguments may not both be used.')
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1898198Z             kwargs['stdin'] = PIPE
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1898556Z     
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1898825Z         if capture_output:
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1899321Z             if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1900032Z                 raise ValueError('stdout and stderr arguments may not be used '
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1900623Z                                  'with capture_output.')
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1901052Z             kwargs['stdout'] = PIPE
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1901423Z             kwargs['stderr'] = PIPE
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1901765Z     
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1902313Z         with Popen(*popenargs, **kwargs) as process:
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1902741Z             try:
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1903181Z                 stdout, stderr = process.communicate(input, timeout=timeout)
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1903825Z             except TimeoutExpired as exc:
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1904230Z                 process.kill()
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1904580Z                 if _mswindows:
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1905032Z                     # Windows accumulates the output in a single blocking
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1905636Z                     # read() call run on child threads, with the timeout
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1906483Z                     # being done in a join() on those threads.  communicate()
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1907132Z                     # _after_ kill() is required to collect that and add it
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1907667Z                     # to the exception.
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1908166Z                     exc.stdout, exc.stderr = process.communicate()
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1908640Z                 else:
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1909065Z                     # POSIX _communicate already populated the output so
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1909657Z                     # far into the TimeoutExpired exception.
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1910154Z                     process.wait()
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1910524Z                 raise
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1911114Z             except:  # Including KeyboardInterrupt, communicate handled that.
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1911683Z                 process.kill()
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1912636Z                 # We don't call process.wait() as .__exit__ does that for us.
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1913167Z                 raise
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1913511Z             retcode = process.poll()
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1913911Z             if check and retcode:
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1914381Z >               raise CalledProcessError(retcode, process.args,
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1914942Z                                          output=stdout, stderr=stderr)
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1915886Z E               subprocess.CalledProcessError: Command '['git', 'show', '68af4b6:src/tais/__init__.py']' returned non-zero exit status 128.
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1916658Z 
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1917079Z /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/subprocess.py:578: CalledProcessError
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1917940Z ----------------------------- Captured stderr call -----------------------------
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1918540Z fatal: invalid object name '68af4b6'.
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1919046Z =========================== short test summary info ============================
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1920466Z FAILED tests/test_v02.py::test_disabled_exact_legacy_and_frozen_sources - subprocess.CalledProcessError: Command '['git', 'show', '68af4b6:src/tais/__init__.py']' returned non-zero exit status 128.
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.1921721Z 1 failed, 124 passed in 14.81s
+prototype	Run python -m pytest -q	2026-10-17T07:25:22.3417714Z ##[error]Process completed with exit code 1.
