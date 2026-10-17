@@ -1,0 +1,19 @@
+.................................................F...........            [100%]
+=================================== FAILURES ===================================
+_________________ test_isolated_degraded_spike_never_confirmed _________________
+
+cfg = {'project': {'name': 'TAIS', 'version': '0.1.0', 'random_seed': 42}, 'sampling': {'min_interval_s': 5, 'default_interv...1, 12, 13, 14, 15, ...], 'held_out_test_seeds': [20, 21, 22, 23, 24, 25, ...], 'event_match_tolerance_s': 5, ...}, ...}
+
+    def test_isolated_degraded_spike_never_confirmed(cfg):
+        a=Scheduler(cfg);out=[]
+        for t in range(0,150,5):out.append(a.update(t,{'temperature':36 if t==60 else 24,'humidity':45+.1*math.sin(t)}))
+        assert out[12].health['temperature']['state']=='DEGRADED'
+        assert out[12].confirmation
+>       assert not any('temperature' in d.onsets for d in out)
+E       assert not True
+E        +  where True = any(<generator object test_isolated_degraded_spike_never_confirmed.<locals>.<genexpr> at 0x104c182b0>)
+
+tests/test_prototype.py:51: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_prototype.py::test_isolated_degraded_spike_never_confirmed
+1 failed, 60 passed in 7.75s
