@@ -6,6 +6,10 @@ Working title: **Trust-Gated Event-Aware Adaptive Sampling under Sensor Faults f
 
 When one agricultural IoT sensor becomes unreliable, can health-aware scheduling reduce false environmental reports while retaining real events on healthy channels and controlling sampling/application-upload costs? TAIS investigates this question with independent environmental and fault labels. Effectiveness is a hypothesis tested by the results, not assumed by the design.
 
+## BLOCKED rearm repair research branch
+
+The optional `V02-Rearm` strategy fixes cancellation/reset synchronization after an observed reference return. [Design](docs/BLOCKED_REARM_FIX.md), [independent interpretation](docs/BLOCKED_REARM_INTERPRETATION.md), [complete results](docs/BLOCKED_REARM_REPORT.md), and [reproduction](docs/BLOCKED_REARM_REPRODUCIBILITY.md). Final seeds120–149:19,890 runs; full tests192 passed/2 strict expected failures. At multiplier1, main recall450/900→454/900 (difference95% CI includes zero), while deliberately aligned spike-recovery same-channel recall0/60→60/60. Other multipliers can increase false reports. The repair restores a specific v0.1 capability; it does not improve actual same-channel fault/event overlap. Frozen v0.1/v0.2 code/results remain unchanged; no automatic merge.
+
 ## v0.2 research branch
 
 The [v0.2 failure analysis](docs/FAILURE_ANALYSIS_V0.1.md), [preimplementation design](docs/V02_DESIGN.md), [pretest review](docs/V02_PRETEST_REVIEW.md), [new report](docs/RESEARCH_REPORT_V0.2.md) and [reproduction record](docs/V02_REPRODUCIBILITY.md) are independent additions. The original [v0.1 report](docs/RESEARCH_REPORT.md), algorithms and result artifacts remain accessible and unchanged.

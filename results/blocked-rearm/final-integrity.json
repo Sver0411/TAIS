@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "protected_original_files": 261,
+  "allowed_original_edits": [
+    "README.md",
+    "docs/LIMITATIONS.md",
+    "tests/test_v02.py"
+  ],
+  "frozen_source_files": 37,
+  "splits": {
+    "development": {
+      "runs": 6630,
+      "event_rows": 4420,
+      "archive_hashes": 8700,
+      "source": "4958b6ef0869302620b40c052f428353c79870ef"
+    },
+    "validation": {
+      "runs": 6630,
+      "event_rows": 4420,
+      "archive_hashes": 8700,
+      "source": "4958b6ef0869302620b40c052f428353c79870ef"
+    },
+    "test": {
+      "runs": 19890,
+      "event_rows": 13260,
+      "archive_hashes": 26100,
+      "source": "8a735930883cd1a2dc6e6a0f0860bc3d2f91440e"
+    }
+  },
+  "upstream_worktrees": "clean",
+  "AdaptiveSense_original_workspace": "clean",
+  "main_and_v02_refs": "unchanged",
+  "audit_environment_note": "Initial system python invocation lacked PyYAML; rerun in recorded .venv succeeded. No experiment was rerun or changed."
+}

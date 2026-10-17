@@ -1,0 +1,412 @@
+prototype	UNKNOWN STEP	﻿2026-10-17T08:20:50.8248837Z Current runner version: '2.337.0'
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8267387Z ##[group]Runner Image Provisioner
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8268029Z Hosted Compute Agent
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8268633Z Version: 20261012.601
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8269066Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8269545Z Build Date: 2026-10-12T17:48:21Z
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8269955Z Worker ID: {cf69f19c-85bd-4d56-9c60-5f407b20c494}
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8270444Z Region: westus3
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8270779Z Cloud: Azure
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8271132Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8272087Z ##[group]Operating System
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8272452Z Ubuntu
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8272809Z 24.04.5
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8273127Z LTS
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8273430Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8273844Z ##[group]Runner Image
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8274214Z Image: ubuntu-24.04
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8274616Z Version: 20261012.334.1
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8275342Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8276278Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8276837Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8277592Z ##[group]GITHUB_TOKEN Permissions
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8279256Z Contents: read
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8279943Z Metadata: read
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8280280Z Packages: read
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8280609Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8282066Z Secret source: Actions
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8282645Z Cache mode: write
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8283129Z Prepare workflow directory
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8489074Z Prepare all required actions
+prototype	UNKNOWN STEP	2026-10-17T08:20:50.8520764Z Getting action download info
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.1483278Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.2495867Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.4135257Z Complete job name: prototype
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.4604913Z ##[group]Run actions/checkout@v4
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.4605323Z with:
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.4605556Z   submodules: recursive
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.4605820Z   repository: Sver0411/TAIS
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.4607871Z   token: ***
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.4608107Z   ssh-strict: true
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.4608474Z   ssh-user: git
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.4608719Z   persist-credentials: true
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.4608984Z   clean: true
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.4609231Z   sparse-checkout-cone-mode: true
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.4609516Z   fetch-depth: 1
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.4609750Z   fetch-tags: false
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.4609995Z   show-progress: true
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.4610238Z   lfs: false
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.4610475Z   set-safe-directory: true
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.4610753Z   allow-unsafe-pr-checkout: false
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.4611225Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5283831Z Syncing repository: Sver0411/TAIS
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5285359Z ##[group]Getting Git version info
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5285996Z Working directory is '/home/runner/work/TAIS/TAIS'
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5286805Z [command]/usr/bin/git version
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5337207Z git version 2.55.0
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5350581Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5375459Z Temporarily overriding HOME='/home/runner/work/_temp/069a2ce2-9d0f-454a-9ea9-29e22b77c488' before making global git config changes
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5379728Z Adding repository directory to the temporary git global config as a safe directory
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5380768Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/TAIS/TAIS
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5418998Z Deleting the contents of '/home/runner/work/TAIS/TAIS'
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5424499Z ##[group]Initializing the repository
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5428973Z [command]/usr/bin/git init /home/runner/work/TAIS/TAIS
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5518777Z hint: Using 'master' as the name for the initial branch. This default branch name
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5519757Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5520839Z hint: to use in all of your new repositories, which will suppress this warning,
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5521766Z hint: call:
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5521992Z hint:
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5522301Z hint: 	git config --global init.defaultBranch <name>
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5522642Z hint:
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5522960Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5523466Z hint: 'development'. The just-created branch can be renamed via this command:
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5523866Z hint:
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5524102Z hint: 	git branch -m <name>
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5524365Z hint:
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5524706Z hint: Disable this message with "git config set advice.defaultBranchName false"
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5528872Z Initialized empty Git repository in /home/runner/work/TAIS/TAIS/.git/
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5536171Z [command]/usr/bin/git remote add origin https://github.com/Sver0411/TAIS
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5583437Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5584017Z ##[group]Disabling automatic garbage collection
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5586676Z [command]/usr/bin/git config --local gc.auto 0
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5614858Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5615497Z ##[group]Setting up auth
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5623708Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5653848Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5961433Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.5990626Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.6170359Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.6200246Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.6378507Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.6415333Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.6416099Z ##[group]Fetching the repository
+prototype	UNKNOWN STEP	2026-10-17T08:20:51.6423433Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +8a735930883cd1a2dc6e6a0f0860bc3d2f91440e:refs/remotes/origin/research/blocked-rearm-fix
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.1110604Z From https://github.com/Sver0411/TAIS
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.1112346Z  * [new ref]         8a735930883cd1a2dc6e6a0f0860bc3d2f91440e -> origin/research/blocked-rearm-fix
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.1116235Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.1117565Z ##[group]Determining the checkout info
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.1119255Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.1121117Z [command]/usr/bin/git sparse-checkout disable
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.1201260Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.1230094Z ##[group]Checking out the ref
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.1231787Z [command]/usr/bin/git checkout --progress --force -B research/blocked-rearm-fix refs/remotes/origin/research/blocked-rearm-fix
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.2540914Z Switched to a new branch 'research/blocked-rearm-fix'
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.2543179Z branch 'research/blocked-rearm-fix' set up to track 'origin/research/blocked-rearm-fix'.
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.2559607Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.2560899Z ##[group]Setting up auth for fetching submodules
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.2564388Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.2600873Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.2626900Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.2654852Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-297551027@github.com:
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.2683862Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.2685521Z ##[group]Fetching submodules
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.2686826Z [command]/usr/bin/git submodule sync --recursive
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.2857317Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.3021469Z Submodule 'vendor/AdaptiveSense' (https://github.com/Sver0411/AdaptiveSense.git) registered for path 'vendor/AdaptiveSense'
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.3025462Z Submodule 'vendor/SensorTrust' (https://github.com/Sver0411/SensorTrust.git) registered for path 'vendor/SensorTrust'
+prototype	UNKNOWN STEP	2026-10-17T08:20:55.3044689Z Cloning into '/home/runner/work/TAIS/TAIS/vendor/AdaptiveSense'...
+prototype	UNKNOWN STEP	2026-10-17T08:20:56.2461555Z Cloning into '/home/runner/work/TAIS/TAIS/vendor/SensorTrust'...
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.1178080Z Submodule path 'vendor/AdaptiveSense': checked out 'f7ec30fd4721aa1a7c308f879050a83936e60067'
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.1331537Z Submodule path 'vendor/SensorTrust': checked out '2ce98dd043bb01ea99052eda218c68a172499a4c'
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.1360365Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.1528948Z Entering 'vendor/AdaptiveSense'
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.1565558Z Entering 'vendor/SensorTrust'
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.1608908Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.1609409Z ##[group]Persisting credentials for submodules
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.1610504Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.1774879Z Entering 'vendor/AdaptiveSense'
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.1808622Z Entering 'vendor/SensorTrust'
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.1851568Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2012268Z Entering 'vendor/AdaptiveSense'
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2044437Z file:/home/runner/work/TAIS/TAIS/.git/modules/vendor/AdaptiveSense/config	remote.origin.url
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2060226Z Entering 'vendor/SensorTrust'
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2089544Z file:/home/runner/work/TAIS/TAIS/.git/modules/vendor/SensorTrust/config	remote.origin.url
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2123969Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2284059Z Entering 'vendor/AdaptiveSense'
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2314506Z Entering 'vendor/SensorTrust'
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2355066Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-297551027@github.com:'
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2520865Z Entering 'vendor/AdaptiveSense'
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2552647Z Entering 'vendor/SensorTrust'
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2590444Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2627529Z [command]/usr/bin/git log -1 --format=%H
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2650690Z 8a735930883cd1a2dc6e6a0f0860bc3d2f91440e
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2839343Z ##[group]Run actions/setup-python@v5
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2839549Z with:
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2839695Z   python-version: 3.14
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2839861Z   cache: pip
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2840007Z   check-latest: false
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2841423Z   token: ***
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2841574Z   update-environment: true
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2841746Z   allow-prereleases: false
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2841911Z   freethreaded: false
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.2842064Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.3722963Z ##[group]Installed versions
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.3729581Z (node:2324) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.3732766Z Successfully set up CPython (3.14.8)
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.3733252Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.3733936Z (Use `node --trace-deprecation ...` to show where the warning was created)
+prototype	UNKNOWN STEP	2026-10-17T08:20:57.4645154Z [command]/opt/hostedtoolcache/Python/3.14.8/x64/bin/pip cache dir
+prototype	UNKNOWN STEP	2026-10-17T08:20:58.5790381Z /home/runner/.cache/pip
+prototype	UNKNOWN STEP	2026-10-17T08:20:58.7948030Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.14.8-pip-fb8a1d3eacfa5d08f1a76db4422b680f4abf24808bb18507f5bc14f250b77cec
+prototype	UNKNOWN STEP	2026-10-17T08:20:58.8010017Z (node:2324) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+prototype	UNKNOWN STEP	2026-10-17T08:20:59.9950034Z Received 58760065 of 58760065 (100.0%), 56.4 MBs/sec
+prototype	UNKNOWN STEP	2026-10-17T08:20:59.9950385Z Cache Size: ~56 MB (58760065 B)
+prototype	UNKNOWN STEP	2026-10-17T08:21:00.0037104Z [command]/usr/bin/tar -xf /home/runner/work/_temp/9fe5782b-89f5-4d07-84bf-2962b936f97d/cache.tzst -P -C /home/runner/work/TAIS/TAIS --use-compress-program unzstd
+prototype	UNKNOWN STEP	2026-10-17T08:21:00.0656468Z Cache restored successfully
+prototype	UNKNOWN STEP	2026-10-17T08:21:00.0684397Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.14.8-pip-fb8a1d3eacfa5d08f1a76db4422b680f4abf24808bb18507f5bc14f250b77cec
+prototype	UNKNOWN STEP	2026-10-17T08:21:00.0821895Z ##[group]Run python -m pip install -r requirements-lock.txt
+prototype	UNKNOWN STEP	2026-10-17T08:21:00.0822209Z ^[[36;1mpython -m pip install -r requirements-lock.txt^[[0m
+prototype	UNKNOWN STEP	2026-10-17T08:21:00.1052689Z shell: /usr/bin/bash -e {0}
+prototype	UNKNOWN STEP	2026-10-17T08:21:00.1052857Z env:
+prototype	UNKNOWN STEP	2026-10-17T08:21:00.1053028Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:00.1053282Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib/pkgconfig
+prototype	UNKNOWN STEP	2026-10-17T08:21:00.1053516Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:00.1053722Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:00.1053930Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:00.1054138Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib
+prototype	UNKNOWN STEP	2026-10-17T08:21:00.1054317Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.0659203Z Collecting contourpy==1.4.0 (from -r requirements-lock.txt (line 1))
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.0668386Z   Using cached contourpy-1.4.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.0743842Z Collecting cycler==0.12.1 (from -r requirements-lock.txt (line 2))
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.0751041Z   Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.1380177Z Collecting fonttools==4.67.0 (from -r requirements-lock.txt (line 3))
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.1390080Z   Using cached fonttools-4.67.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (137 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.1550614Z Collecting iniconfig==2.3.1 (from -r requirements-lock.txt (line 4))
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.1557407Z   Using cached iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.1845502Z Collecting kiwisolver==1.5.1 (from -r requirements-lock.txt (line 5))
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.1853426Z   Using cached kiwisolver-1.5.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.2 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.2443379Z Collecting matplotlib==3.11.2 (from -r requirements-lock.txt (line 6))
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.2453417Z   Using cached matplotlib-3.11.2-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (80 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.3422239Z Collecting numpy==2.5.4 (from -r requirements-lock.txt (line 7))
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.3433019Z   Using cached numpy-2.5.4-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.3515548Z Collecting packaging==26.3 (from -r requirements-lock.txt (line 8))
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.3523974Z   Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.4038044Z Collecting pandas==3.0.6 (from -r requirements-lock.txt (line 9))
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.4048649Z   Using cached pandas-3.0.6-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.4927497Z Collecting pillow==13.0.0 (from -r requirements-lock.txt (line 10))
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.4938546Z   Using cached pillow-13.0.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.5020445Z Collecting pluggy==1.7.0 (from -r requirements-lock.txt (line 11))
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.5028704Z   Using cached pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.5116810Z Collecting Pygments==2.21.0 (from -r requirements-lock.txt (line 12))
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.5124890Z   Using cached pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.5235892Z Collecting pyparsing==3.3.3 (from -r requirements-lock.txt (line 13))
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.5243817Z   Using cached pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.5361554Z Collecting pytest==9.1.1 (from -r requirements-lock.txt (line 14))
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.5369850Z   Using cached pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.5444198Z Collecting python-dateutil==2.9.0.post0 (from -r requirements-lock.txt (line 15))
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.5451994Z   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.5616699Z Collecting PyYAML==6.0.3 (from -r requirements-lock.txt (line 16))
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.5624623Z   Using cached pyyaml-6.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.5969590Z Collecting setuptools==84.0.0 (from -r requirements-lock.txt (line 17))
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.5979930Z   Using cached setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6068975Z Collecting six==1.17.0 (from -r requirements-lock.txt (line 18))
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6076926Z   Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6185934Z Using cached contourpy-1.4.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (384 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6194382Z Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6201854Z Using cached fonttools-4.67.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.3 MB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6224060Z Using cached iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6231200Z Using cached kiwisolver-1.5.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6241570Z Using cached matplotlib-3.11.2-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (11.0 MB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6275733Z Using cached numpy-2.5.4-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6324664Z Using cached packaging-26.3-py3-none-any.whl (129 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6332625Z Using cached pandas-3.0.6-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (10.8 MB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6365210Z Using cached pillow-13.0.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6389000Z Using cached pluggy-1.7.0-py3-none-any.whl (27 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6396441Z Using cached pygments-2.21.0-py3-none-any.whl (1.3 MB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6406284Z Using cached pyparsing-3.3.3-py3-none-any.whl (126 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6413206Z Using cached pytest-9.1.1-py3-none-any.whl (386 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6421157Z Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6428559Z Using cached pyyaml-6.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (794 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6437001Z Using cached setuptools-84.0.0-py3-none-any.whl (818 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.6445479Z Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+prototype	UNKNOWN STEP	2026-10-17T08:21:01.8629976Z Installing collected packages: six, setuptools, PyYAML, pyparsing, Pygments, pluggy, pillow, packaging, numpy, kiwisolver, iniconfig, fonttools, cycler, python-dateutil, pytest, contourpy, pandas, matplotlib
+prototype	UNKNOWN STEP	2026-10-17T08:21:10.5552415Z 
+prototype	UNKNOWN STEP	2026-10-17T08:21:10.5567291Z Successfully installed PyYAML-6.0.3 Pygments-2.21.0 contourpy-1.4.0 cycler-0.12.1 fonttools-4.67.0 iniconfig-2.3.1 kiwisolver-1.5.1 matplotlib-3.11.2 numpy-2.5.4 packaging-26.3 pandas-3.0.6 pillow-13.0.0 pluggy-1.7.0 pyparsing-3.3.3 pytest-9.1.1 python-dateutil-2.9.0.post0 setuptools-84.0.0 six-1.17.0
+prototype	UNKNOWN STEP	2026-10-17T08:21:10.6760351Z ##[group]Run python -m pip install -e . --no-build-isolation
+prototype	UNKNOWN STEP	2026-10-17T08:21:10.6760612Z ^[[36;1mpython -m pip install -e . --no-build-isolation^[[0m
+prototype	UNKNOWN STEP	2026-10-17T08:21:10.6813968Z shell: /usr/bin/bash -e {0}
+prototype	UNKNOWN STEP	2026-10-17T08:21:10.6814113Z env:
+prototype	UNKNOWN STEP	2026-10-17T08:21:10.6814264Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:10.6814497Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib/pkgconfig
+prototype	UNKNOWN STEP	2026-10-17T08:21:10.6814727Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:10.6814933Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:10.6815138Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:10.6815351Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib
+prototype	UNKNOWN STEP	2026-10-17T08:21:10.6815531Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:21:10.9009870Z Obtaining file:///home/runner/work/TAIS/TAIS
+prototype	UNKNOWN STEP	2026-10-17T08:21:10.9017220Z   Checking if build backend supports build_editable: started
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.0524749Z   Checking if build backend supports build_editable: finished with status 'done'
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.0534405Z   Preparing editable metadata (pyproject.toml): started
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.2041755Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.2075355Z Requirement already satisfied: PyYAML>=6 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from tais-research==0.1.0) (6.0.3)
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.2077930Z Requirement already satisfied: numpy>=1.26 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from tais-research==0.1.0) (2.5.4)
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.2080319Z Requirement already satisfied: pandas>=2 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from tais-research==0.1.0) (3.0.6)
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.2082491Z Requirement already satisfied: matplotlib>=3.7 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from tais-research==0.1.0) (3.11.2)
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.2100747Z Requirement already satisfied: contourpy>=1.0.1 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from matplotlib>=3.7->tais-research==0.1.0) (1.4.0)
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.2103290Z Requirement already satisfied: cycler>=0.10 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from matplotlib>=3.7->tais-research==0.1.0) (0.12.1)
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.2105702Z Requirement already satisfied: fonttools>=4.28.2 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from matplotlib>=3.7->tais-research==0.1.0) (4.67.0)
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.2107891Z Requirement already satisfied: kiwisolver>=1.3.1 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from matplotlib>=3.7->tais-research==0.1.0) (1.5.1)
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.2110868Z Requirement already satisfied: packaging>=20.0 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from matplotlib>=3.7->tais-research==0.1.0) (26.3)
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.2113030Z Requirement already satisfied: pillow>=9 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from matplotlib>=3.7->tais-research==0.1.0) (13.0.0)
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.2115170Z Requirement already satisfied: pyparsing>=3 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from matplotlib>=3.7->tais-research==0.1.0) (3.3.3)
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.2117620Z Requirement already satisfied: python-dateutil>=2.7 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from matplotlib>=3.7->tais-research==0.1.0) (2.9.0.post0)
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.2217096Z Requirement already satisfied: six>=1.5 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from python-dateutil>=2.7->matplotlib>=3.7->tais-research==0.1.0) (1.17.0)
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.2227527Z Building wheels for collected packages: tais-research
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.2233305Z   Building editable for tais-research (pyproject.toml): started
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.3769864Z   Building editable for tais-research (pyproject.toml): finished with status 'done'
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.3775852Z   Created wheel for tais-research: filename=tais_research-0.1.0-0.editable-py3-none-any.whl size=2228 sha256=bd2f82b2e8a780bbb99d71c01f6e66ace2bcce3d68699ec6de9776e1a3aa4aef
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.3776805Z   Stored in directory: /tmp/pip-ephem-wheel-cache-ijbins3_/wheels/e5/f2/35/95a0d264de1a4718b86d991ac669cdc057d2b80cc89fe21617
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.3792591Z Successfully built tais-research
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.3970575Z Installing collected packages: tais-research
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.4019019Z Successfully installed tais-research-0.1.0
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.4512611Z ##[group]Run python -m pytest -q
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.4512817Z ^[[36;1mpython -m pytest -q^[[0m
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.4566263Z shell: /usr/bin/bash -e {0}
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.4566412Z env:
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.4566567Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.4566823Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib/pkgconfig
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.4567063Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.4567278Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.4567492Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.4567708Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib
+prototype	UNKNOWN STEP	2026-10-17T08:21:11.4567894Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:21:15.8187340Z ........................................................................ [ 37%]
+prototype	UNKNOWN STEP	2026-10-17T08:21:19.5549477Z ....xx.................................................................. [ 74%]
+prototype	UNKNOWN STEP	2026-10-17T08:21:22.3310880Z ..................................................                       [100%]
+prototype	UNKNOWN STEP	2026-10-17T08:21:22.3311250Z 192 passed, 2 xfailed in 10.11s
+prototype	UNKNOWN STEP	2026-10-17T08:21:22.4664507Z ##[group]Run python scripts/reproduce_baseline.py
+prototype	UNKNOWN STEP	2026-10-17T08:21:22.4664748Z ^[[36;1mpython scripts/reproduce_baseline.py^[[0m
+prototype	UNKNOWN STEP	2026-10-17T08:21:22.4717875Z shell: /usr/bin/bash -e {0}
+prototype	UNKNOWN STEP	2026-10-17T08:21:22.4718023Z env:
+prototype	UNKNOWN STEP	2026-10-17T08:21:22.4718180Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:22.4718483Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib/pkgconfig
+prototype	UNKNOWN STEP	2026-10-17T08:21:22.4718712Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:22.4718920Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:22.4719126Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:22.4719336Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib
+prototype	UNKNOWN STEP	2026-10-17T08:21:22.4719513Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.2778887Z AdaptiveSense ['/opt/hostedtoolcache/Python/3.14.8/x64/bin/python', '-m', 'pytest', 'tests/', '-q'] exit 0 ........................................................................ [ 30%]
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.2779359Z ........................................................................ [ 61%]
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.2779588Z ........................................................................ [ 91%]
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.2779786Z ...................                                                      [100%]
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.2779953Z 235 passed in 2.67s
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.2780032Z 
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.3295712Z AdaptiveSense ['/opt/hostedtoolcache/Python/3.14.8/x64/bin/python', 'scripts/check_config_parity.py'] exit 0  create its own i2c bus                OK
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.3296224Z sensor_sht30.c does not create its own i2c bus                 OK
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.3296454Z sht30_proto.c has no ESP-IDF dependency                        OK
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.3296678Z CMakeLists.txt compiles sensor_bme280.c                        OK
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.3296895Z CMakeLists.txt compiles sensor_sht30.c                         OK
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.3297128Z CONFIG_AS_SENSOR_BACKEND selects a documented backend          OK
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.3297475Z 
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.3297539Z PASS: all 69 checks passed
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.3297625Z 
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.5031435Z AdaptiveSense ['/opt/hostedtoolcache/Python/3.14.8/x64/bin/python', 'dataset/generate_dataset.py'] exit 0 ity, temperature
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.5031797Z                            slow +3 degC drift over 30 min, hold, then return
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.5031935Z 
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.5032049Z wrote 7 scenarios to /tmp/tais-baseline-irw71jdx/AdaptiveSense/dataset/raw
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.5032430Z wrote 24 channel-level labels to /tmp/tais-baseline-irw71jdx/AdaptiveSense/dataset/labels, derived from 13 injected physical disturbances
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.5032840Z   (one injected disturbance can label several channels: humidity is coupled to temperature)
+prototype	UNKNOWN STEP	2026-10-17T08:21:26.5033029Z 
+prototype	UNKNOWN STEP	2026-10-17T08:21:27.8969020Z AdaptiveSense ['/opt/hostedtoolcache/Python/3.14.8/x64/bin/python', 'analysis/analyze.py'] exit 0 00 rows   2 GT events  (60 min)
+prototype	UNKNOWN STEP	2026-10-17T08:21:27.8969349Z 
+prototype	UNKNOWN STEP	2026-10-17T08:21:27.8969538Z Wrote per-scenario metrics -> /tmp/tais-baseline-irw71jdx/AdaptiveSense/results/metrics_all.csv
+prototype	UNKNOWN STEP	2026-10-17T08:21:27.8969932Z Wrote micro-aggregated summary -> /tmp/tais-baseline-irw71jdx/AdaptiveSense/results/metrics_summary.csv
+prototype	UNKNOWN STEP	2026-10-17T08:21:27.8970296Z Scenarios with zero ground-truth events (reported as N/A, never 0%): A: stable, F: noisy stable
+prototype	UNKNOWN STEP	2026-10-17T08:21:27.8970603Z Wrote plots -> /tmp/tais-baseline-irw71jdx/AdaptiveSense/results/plots
+prototype	UNKNOWN STEP	2026-10-17T08:21:27.8970777Z 
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.7950196Z SensorTrust ['/opt/hostedtoolcache/Python/3.14.8/x64/bin/python', '-m', 'pytest', 'tests/', '-q'] exit 0 ...........................                                              [100%]
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.7950899Z 27 passed in 0.72s
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.7951039Z 
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.8980644Z SensorTrust ['cc', '-std=c11', '-Wall', '-Wextra', '-Werror', '-Icore', 'core/sensor_trust.c', 'tests/test_core.c', '-lm', '-o', 'test_core'] exit 0 
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.8999050Z SensorTrust ['./test_core'] exit 0 
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.8999495Z ok 14 - drift_slope_is_independent_of_sampling_interval
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.8999832Z ok 15 - drift_ignores_non_increasing_timestamps
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9000154Z ok 16 - missing_detected_after_limit_and_clears_on_recovery
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9000456Z ok 17 - stuck_and_range_combine_into_fault
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9000710Z ok 18 - score_from_flags_is_clamped
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9000950Z ok 19 - state_thresholds_and_names
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9001199Z ok 20 - format_flags_truncation_is_safe
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9001440Z ok 21 - reset_clears_detection_state
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9001598Z 
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9001695Z 21 tests, 21 passed, 0 failed (404 checks)
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9001858Z 
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9125668Z ##[group]Run python scripts/run_experiments.py --split development --smoke
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9125998Z ^[[36;1mpython scripts/run_experiments.py --split development --smoke^[[0m
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9177773Z shell: /usr/bin/bash -e {0}
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9177922Z env:
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9178094Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9178460Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib/pkgconfig
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9178691Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9178894Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9179096Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9179306Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib
+prototype	UNKNOWN STEP	2026-10-17T08:21:28.9179487Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:21:29.9381012Z development-smoke seed 0 runs 39
+prototype	UNKNOWN STEP	2026-10-17T08:21:29.9391506Z Saved /home/runner/work/TAIS/TAIS/results/development-smoke/metrics.csv runs 39
+prototype	UNKNOWN STEP	2026-10-17T08:21:29.9651104Z ##[group]Run python scripts/summarize_results.py --split development-smoke
+prototype	UNKNOWN STEP	2026-10-17T08:21:29.9651432Z ^[[36;1mpython scripts/summarize_results.py --split development-smoke^[[0m
+prototype	UNKNOWN STEP	2026-10-17T08:21:29.9705698Z shell: /usr/bin/bash -e {0}
+prototype	UNKNOWN STEP	2026-10-17T08:21:29.9706014Z env:
+prototype	UNKNOWN STEP	2026-10-17T08:21:29.9706171Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:29.9706409Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib/pkgconfig
+prototype	UNKNOWN STEP	2026-10-17T08:21:29.9706644Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:29.9706853Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:29.9707065Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.8/x64
+prototype	UNKNOWN STEP	2026-10-17T08:21:29.9707286Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.8/x64/lib
+prototype	UNKNOWN STEP	2026-10-17T08:21:29.9707463Z ##[endgroup]
+prototype	UNKNOWN STEP	2026-10-17T08:21:30.9787376Z                 method  multiplier  recall  tp  missed  false_reports  fault_induced_false  samples  uploads
+prototype	UNKNOWN STEP	2026-10-17T08:21:30.9787979Z          AdaptiveSense        1.00     0.0   0       2              2                    2      240      108
+prototype	UNKNOWN STEP	2026-10-17T08:21:30.9788525Z AdaptiveSense+TrustLog        1.00     0.0   0       2              2                    2      240      108
+prototype	UNKNOWN STEP	2026-10-17T08:21:30.9788968Z               Fixed-10        1.00     1.0   2       0              3                    2      540      540
+prototype	UNKNOWN STEP	2026-10-17T08:21:30.9789362Z               Fixed-20        1.00     1.0   2       0              3                    2      270      270
+prototype	UNKNOWN STEP	2026-10-17T08:21:30.9789747Z               Fixed-40        1.00     0.5   1       1              4                    2      135      135
+prototype	UNKNOWN STEP	2026-10-17T08:21:30.9790004Z                Fixed-5        1.00     1.0   2       0              4                    3     1080     1080
+prototype	UNKNOWN STEP	2026-10-17T08:21:30.9790250Z               Fixed-60        1.00     0.5   1       1              3                    2       90       90
+prototype	UNKNOWN STEP	2026-10-17T08:21:30.9790503Z               GateOnly        0.75     0.5   1       1              1                    0      153      104
+prototype	UNKNOWN STEP	2026-10-17T08:21:30.9790746Z               GateOnly        1.00     0.5   1       1              1                    0      149      103
+prototype	UNKNOWN STEP	2026-10-17T08:21:30.9790991Z               GateOnly        1.50     0.0   0       2              0                    0      134       97
+prototype	UNKNOWN STEP	2026-10-17T08:21:30.9791236Z                   TAIS        0.75     0.5   1       1              1                    0      153      104
+prototype	UNKNOWN STEP	2026-10-17T08:21:30.9791470Z                   TAIS        1.00     0.5   1       1              1                    0      149      103
+prototype	UNKNOWN STEP	2026-10-17T08:21:30.9791701Z                   TAIS        1.50     0.0   0       2              0                    0      134       97
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.0973494Z Post job cleanup.
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.1715181Z (node:2804) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.1715784Z (Use `node --trace-deprecation ...` to show where the warning was created)
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.1716879Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.14.8-pip-fb8a1d3eacfa5d08f1a76db4422b680f4abf24808bb18507f5bc14f250b77cec, not saving cache.
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.1901434Z Post job cleanup.
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.2446191Z [command]/usr/bin/git version
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.2479280Z git version 2.55.0
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.2503620Z Temporarily overriding HOME='/home/runner/work/_temp/8d9d1136-ca31-40aa-b731-fe7a8d761961' before making global git config changes
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.2504328Z Adding repository directory to the temporary git global config as a safe directory
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.2506946Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/TAIS/TAIS
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.3295024Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.3329897Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.3502012Z Entering 'vendor/AdaptiveSense'
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.3535631Z Entering 'vendor/SensorTrust'
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.3583134Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.3605698Z http.https://github.com/.extraheader
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.3613890Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.3680849Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.3863404Z Entering 'vendor/AdaptiveSense'
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.3882203Z http.https://github.com/.extraheader
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.3913843Z Entering 'vendor/SensorTrust'
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.3934772Z http.https://github.com/.extraheader
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.3998194Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.4028168Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.4218475Z Entering 'vendor/AdaptiveSense'
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.4232290Z file:/home/runner/work/TAIS/TAIS/.git/modules/vendor/AdaptiveSense/config	remote.origin.url
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.4246458Z Entering 'vendor/SensorTrust'
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.4261275Z file:/home/runner/work/TAIS/TAIS/.git/modules/vendor/SensorTrust/config	remote.origin.url
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.4287806Z [command]/usr/bin/git config --file /home/runner/work/TAIS/TAIS/.git/modules/vendor/AdaptiveSense/config --name-only --get-regexp ^includeIf\.gitdir:
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.4322241Z [command]/usr/bin/git config --file /home/runner/work/TAIS/TAIS/.git/modules/vendor/SensorTrust/config --name-only --get-regexp ^includeIf\.gitdir:
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.4456478Z Cleaning up orphan processes
+prototype	UNKNOWN STEP	2026-10-17T08:21:31.4655304Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

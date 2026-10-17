@@ -33,3 +33,11 @@ Offline logs are not transmitted bytes, and their storage/CPU cost has not been 
 The false-report metric counts unmatched **episode onsets**. A persistent CONFIRMED episode can merge what would otherwise be several onsets. A lower false-report count therefore does not by itself establish less time spent falsely active; false-active occupancy is not a primary measured metric here. Do not interpret persistence as reliable environmental cause identification.
 
 Final v0.2 evidence is conditional: same-channel improvement occurs only at multiplier.75 and consists of six detections169–174 s after onset; multipliers1/1.5 have no same-channel improvement. Seed91 demonstrates BLOCKED suppressing a later healthy event after a returned spike. It remains a strict expected-failure regression; no post-final algorithm correction was made. See the v0.2 interpretation and complete paired CIs.
+
+## Optional BLOCKED reference-return repair
+
+The preceding v0.2 findings describe the frozen strategy. The subsequent optional `V02-Rearm` strategy addresses seed91 with a separate Evidence subclass; the original v0.2 module and report remain intact. See [repair interpretation](BLOCKED_REARM_INTERPRETATION.md) and [all operating points](BLOCKED_REARM_REPORT.md). The repaired multiplier1 regression passes normally; two additional1.5 score/debounce boundary assertions remain strict expected failures.
+
+An observed numerical return inside the existing threshold band is not proof of physical fault recovery. Continuing drift can cancel an unconfirmed candidate and later produce additional false episodes. Final main fault-attributed/total false reports increase by2 at0.75 and6 at1.5, with extra sampling/upload costs. At1 the small main recall difference has a95% CI including zero. Deliberately aligned sampled-spike recovery yields a much larger conditional benefit, but does not estimate real fault prevalence, concurrent same-channel robustness or superiority to v0.1. Continuing CONFIRMED episode release semantics are unchanged; passing no-repeat regressions do not establish a universal guarantee under arbitrary recurring faults.
+
+Main random-jitter and aligned recovery suites must remain separate. All seeds100–149 are now used. Further result-driven design requires a new untouched test set. No real-greenhouse or radio-energy validation was added in this repair.
