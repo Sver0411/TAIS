@@ -1,0 +1,6 @@
+[submodule "vendor/AdaptiveSense"]
+	path = vendor/AdaptiveSense
+	url = https://github.com/Sver0411/AdaptiveSense.git
+[submodule "vendor/SensorTrust"]
+	path = vendor/SensorTrust
+	url = https://github.com/Sver0411/SensorTrust.git
