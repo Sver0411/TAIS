@@ -1,0 +1,28 @@
+{
+  "TAIS": {
+    "tp": 1,
+    "reports": [
+      675,
+      870
+    ],
+    "samples": 78,
+    "uploads": 40
+  },
+  "V02": {
+    "tp": 0,
+    "reports": [
+      870
+    ],
+    "samples": 78,
+    "uploads": 39
+  },
+  "V02-Rearm": {
+    "tp": 1,
+    "reports": [
+      675,
+      870
+    ],
+    "samples": 78,
+    "uploads": 40
+  }
+}

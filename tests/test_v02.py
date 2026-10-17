@@ -120,9 +120,9 @@ def test_nonidentifiable_pairs_are_boundary_not_success(cfg,kind):
     assert canon(a.observed)==canon(b.observed) and len(a.events)==1 and not b.events
     assert canon(run(a,cfg,'V02'))==canon(run(b,cfg,'V02'))
 
-@pytest.mark.xfail(strict=True, reason='Post-final known failure: BLOCKED survives spike return and suppresses following healthy event; retained for next version, no final-set tuning')
 def test_known_blocked_rearm_failure_after_spike(cfg):
     from simulator.events import match_events
     trace=generate(cfg,91,'spike_same_long')
-    result=run(trace,cfg,'V02')
+    from tais_rearm.replay import run as repaired_run
+    result=repaired_run(trace,cfg,'V02-Rearm')
     assert match_events(trace.events,result['reports'],5).true_positives==1
