@@ -1,0 +1,11 @@
+{
+  "base": "89aa8341181aa42791f9a4de80739bb7c10fa9e5",
+  "guard_sha256": "caa667311e21e4c1c350034bb2635e36801d70c58116eb813d6877cd4f3c4059",
+  "guard_path": "/Users/mac/Documents/TAIS/results/traces/independent-reference-budget/history-guard.json.gz",
+  "tracked": 657,
+  "ignored": 236199,
+  "submodules": {
+    "vendor/AdaptiveSense": "f7ec30fd4721aa1a7c308f879050a83936e60067",
+    "vendor/SensorTrust": "2ce98dd043bb01ea99052eda218c68a172499a4c"
+  }
+}
