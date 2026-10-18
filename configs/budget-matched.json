@@ -1,0 +1,99 @@
+{
+  "version": "BM-1",
+  "base": "97feccb36acb6790b40be31e3cee1661e8811a61",
+  "seed_audit_sha256": "2ec23461b1727995f87dbeb765115aa9d94b0170d44bcc5a91f1f8b3b1f0d8f7",
+  "seeds": {
+    "development": [
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159
+    ],
+    "validation": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169
+    ],
+    "test": [
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199
+    ]
+  },
+  "grid": [
+    0.5,
+    0.625,
+    0.75,
+    0.875,
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.0
+  ],
+  "anchors": [
+    0.75,
+    1.0,
+    1.5
+  ],
+  "calibration_methods": [
+    "AdaptiveSense",
+    "AdaptiveSense+TrustLog",
+    "GateOnly",
+    "TAIS"
+  ],
+  "pair_relative_tolerance": 0.01,
+  "development_target_band": 0.02,
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 2026101810,
+  "recall_noninferiority_margin": -0.01,
+  "minimum_fault_induced_reduction": 0.05,
+  "familywise_alpha": 0.05,
+  "comparison_family_size": 3,
+  "workers": 4,
+  "byte_formats": [
+    "original_json",
+    "binary_v1"
+  ],
+  "protocol_v2_used": false
+}
