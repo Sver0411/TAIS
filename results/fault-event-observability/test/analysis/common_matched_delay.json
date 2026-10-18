@@ -1,0 +1,7 @@
+{
+  "common_matched_events": 2600,
+  "tais_minus_gate_delay_s": -0.5423076923076923,
+  "ci95_low": -0.8471648661838209,
+  "ci95_high": -0.2207024454833499,
+  "valid_draws": 10000
+}

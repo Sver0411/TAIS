@@ -53,3 +53,13 @@ Actual staged sequence (existing destinations refuse overwrite):
 For reproduction use an isolated checkout and fresh `--results-root`/`--archive-root`, run calibration, write/commit that root's lock, then run its final matrix. This is reproduction, not fresh evidence; after completion0–299 are used/reserved. Do not rerun the allocator expecting its original seeds still to be unused. Runtime failure retains partial artifacts and must not be relabeled a complete experiment.
 
 Per-phase manifests pin source commit, all source/config/protocol hashes, exact commands/environment, methods/seeds/cases, clean-counterfactual paths and all archive/CSV checksums. Analysis manifests exclude themselves from their output list, avoiding the BM-1 manifest self-hash issue. Counterfactual increments in samples/uploads/bytes are operational intervention differences, not a unique causal decomposition into diagnostic effort. Flagged samples are annotations, not extra measurements automatically added to totals.
+
+## Completed evidence and decision
+
+Development5,580 +validation5,580 +final16,740 =**27,900scored runs**, plus13,500offline clean-counterfactual runs;50,700scientific gzip artifacts. Final seed240–299 matrix executed once. Every scored metric/event match was independently recomputed from archived records. Software checks:499passed,2unchanged strict expected failures,0failed.
+
+[Full report](../../docs/FAULT_EVENT_OBSERVABILITY_REPORT.md) · [All56 timing cells](interpretation/all56_timing_cells.csv) · [Primary interactions](test/analysis/timing_interactions.csv) · [Final verification](test/verification.json)
+
+Actual-overlap spikes: GateOnly/TAIS262/360TP each, fault-induced14→1. Drift:1,047→1,049TP out of1,680, fault-induced2,688→3,022. All480replacement/stuck event/no-event pairs have different truth and identical complete inputs/policy outputs. Four of12primary interactions survive adjusted intervals and every deletion check, all on false reports. No generic Recall advantage or physical attribution accuracy is established. **Prior confirmation NO-GO remains unchanged**; the next research question is what independent same-quantity information could resolve drift/local-change ambiguity.
+
+`interpretation/` adds source-pinned presentation tables/heatmap from completed frozen CSVs; it does not select configurations, rerun policies or alter analysis. `scripts/report_fault_event_observability.py` renders the numerical tables; the report's final scientific interpretation was added after reviewing all cells.

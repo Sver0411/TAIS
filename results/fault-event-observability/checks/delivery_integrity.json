@@ -1,0 +1,144 @@
+{
+  "status": "PASS",
+  "all_existing_tracked_files_unchanged": true,
+  "pretest_lock_committed_and_unchanged": true,
+  "all_frozen_sources_unchanged": true,
+  "all_calibration_lock_hashes_match": true,
+  "analysis_and_interpretation_hashes_match": true,
+  "analysis_manifests_exclude_themselves": true,
+  "relative_links_checked": [
+    {
+      "source": "docs/FAULT_EVENT_OBSERVABILITY_PREREGISTRATION.md",
+      "target": "../results/fault-event-observability/seed-audit.json"
+    },
+    {
+      "source": "docs/FAULT_EVENT_OBSERVABILITY_PREREGISTRATION.md",
+      "target": "../configs/fault-event-observability.json"
+    },
+    {
+      "source": "docs/FAULT_EVENT_OBSERVABILITY_REPORT.md",
+      "target": "FAULT_EVENT_OBSERVABILITY_PREREGISTRATION.md"
+    },
+    {
+      "source": "docs/FAULT_EVENT_OBSERVABILITY_REPORT.md",
+      "target": "../results/fault-event-observability/final-lock.json"
+    },
+    {
+      "source": "docs/FAULT_EVENT_OBSERVABILITY_REPORT.md",
+      "target": "../results/fault-event-observability/test/analysis/common_matched_delay.json"
+    },
+    {
+      "source": "docs/FAULT_EVENT_OBSERVABILITY_REPORT.md",
+      "target": "../results/fault-event-observability/timing_geometry.csv"
+    },
+    {
+      "source": "docs/FAULT_EVENT_OBSERVABILITY_REPORT.md",
+      "target": "../results/fault-event-observability/test/analysis/spike_timing.png"
+    },
+    {
+      "source": "docs/FAULT_EVENT_OBSERVABILITY_REPORT.md",
+      "target": "../results/fault-event-observability/test/analysis/drift_timing.png"
+    },
+    {
+      "source": "docs/FAULT_EVENT_OBSERVABILITY_REPORT.md",
+      "target": "../results/fault-event-observability/interpretation/all56_timing_cells.csv"
+    },
+    {
+      "source": "docs/FAULT_EVENT_OBSERVABILITY_REPORT.md",
+      "target": "../results/fault-event-observability/test/analysis/primary_interactions.png"
+    },
+    {
+      "source": "docs/FAULT_EVENT_OBSERVABILITY_REPORT.md",
+      "target": "../results/fault-event-observability/test/analysis/observational_equivalence.csv"
+    },
+    {
+      "source": "docs/FAULT_EVENT_OBSERVABILITY_REPORT.md",
+      "target": "../results/fault-event-observability/checks/execution_notes.json"
+    },
+    {
+      "source": "docs/FAULT_EVENT_OBSERVABILITY_REPORT.md",
+      "target": "../results/fault-event-observability/test/verification.json"
+    },
+    {
+      "source": "docs/FAULT_EVENT_OBSERVABILITY_REPORT.md",
+      "target": "../results/fault-event-observability/README.md"
+    },
+    {
+      "source": "docs/FAULT_EVENT_OBSERVABILITY_REPORT.md",
+      "target": "../results/fault-event-observability/interpretation/all_timing_cells.png"
+    },
+    {
+      "source": "docs/FAULT_EVENT_OBSERVABILITY_REPORT.md",
+      "target": "../results/fault-event-observability/interpretation/equivalence_matching_boundary.csv"
+    },
+    {
+      "source": "results/fault-event-observability/README.md",
+      "target": "../../docs/FAULT_EVENT_OBSERVABILITY_PREREGISTRATION.md"
+    },
+    {
+      "source": "results/fault-event-observability/README.md",
+      "target": "../../configs/fault-event-observability.json"
+    },
+    {
+      "source": "results/fault-event-observability/README.md",
+      "target": "../../docs/FAULT_EVENT_OBSERVABILITY_REPORT.md"
+    },
+    {
+      "source": "results/fault-event-observability/README.md",
+      "target": "interpretation/all56_timing_cells.csv"
+    },
+    {
+      "source": "results/fault-event-observability/README.md",
+      "target": "test/analysis/timing_interactions.csv"
+    },
+    {
+      "source": "results/fault-event-observability/README.md",
+      "target": "test/verification.json"
+    }
+  ],
+  "completed_file_sha256": {
+    "results/fault-event-observability/development/event_matches.csv": "ee8f5f2f8c29e409e91a0ef1cd29f7f5b7d5a36068dee47a0bdc501fbbc01cae",
+    "results/fault-event-observability/development/metrics.csv": "9e5034d7360ce7a0486781f118640d2a7fb437955d33bfb508e81b47db915c71",
+    "results/fault-event-observability/development/manifest.json": "97b6bac7a01d2e905a7337e0c965c292f536bdcb0ee8edab90b403e81fcc39fb",
+    "results/fault-event-observability/development/run_started.json": "cbbce7ec7c96389b7eec4307300f6c3467f1866aeb7ea726d4d766fbbfe4a3cd",
+    "results/fault-event-observability/development/verification.json": "150d3647d34442ade8254db790a598e402075d50b21a6b468db79d9c23d2cd6f",
+    "results/fault-event-observability/development/reports.csv": "ce5958a0c445bf7e93dda7bb825e952e73d3330ff46ddf72a8d8a06de660d228",
+    "results/fault-event-observability/development/analysis/summary.csv": "9b35a5c0748d380899666db087ceb07ffc471a89bf863ff50cbf0dca8d954109",
+    "results/fault-event-observability/development/analysis/observational_equivalence.csv": "03bf8ee697bda97a4511cf153b6f981f108f4267572a71165773dc441596d8c3",
+    "results/fault-event-observability/development/analysis/manifest.json": "12eb3201b33b9e2b7129006a53d68f23751b7f226919a4e9141f6c8044ba70af",
+    "results/fault-event-observability/validation/event_matches.csv": "545f9849f9246ac4cb56e1a04bab7362d5bae5cd1515d03b81d874ea6374ced8",
+    "results/fault-event-observability/validation/metrics.csv": "e8a9239dbe000ce0b75cc307ed23004d9feccbc53652037e8981974a4b1cadbe",
+    "results/fault-event-observability/validation/manifest.json": "24d2a3472bd2e4bbf67a60fc34d01e707341ab3d3edfd426e0c77fb5f521ab75",
+    "results/fault-event-observability/validation/run_started.json": "e7f2810cca422479cce45706e360f090b34e2cfbf221ba8aeb3a9a67d098f9d0",
+    "results/fault-event-observability/validation/verification.json": "d621416b558f4512d57e7627b983e12a7e836552d55a8cf109a7ccb60a4b2652",
+    "results/fault-event-observability/validation/reports.csv": "7bfe1832e6afb45ea8896f3afaeccc7e1d7e7eac76425db00e58648237b64bb2",
+    "results/fault-event-observability/validation/analysis/summary.csv": "bbd24bfa9860e1813779447b5cdd781a2b33e473d14917518ae2b028dab25130",
+    "results/fault-event-observability/validation/analysis/observational_equivalence.csv": "ea2d8145c5e621375eaa8bdb4bf0ebcb2ebeec8bd9bde5030e6ed16716166c9d",
+    "results/fault-event-observability/validation/analysis/manifest.json": "72fbe7de7e067cc3d6a2186a93c6cb5340d007d1237a6eb4e961f6cb84f96074",
+    "results/fault-event-observability/test/event_matches.csv": "0357e3ca5fe0f7ba838177a41315fd12b75c891d1f818b466623ac558fb3e0ba",
+    "results/fault-event-observability/test/metrics.csv": "3eada58191cbd63bf4050136ab77f764af1bebce6afc8f27aad1fcca68db1471",
+    "results/fault-event-observability/test/manifest.json": "2398f64bef86632c7494da2e81bdaf0aefc61dda429de64b0a73064138755a3b",
+    "results/fault-event-observability/test/run_started.json": "2773a6602fe4a64d6f1a88c5e07889d7e3ab81a0f5393aa04cda43e9adcaebc4",
+    "results/fault-event-observability/test/verification.json": "f527cf496ef96c39a52831544cffa36e020183b5618ed9f26dc79a866bda06eb",
+    "results/fault-event-observability/test/reports.csv": "aef87b3af9c625cd8372c6e99440b35909f4c729742e18a3246382f52847ba7e",
+    "results/fault-event-observability/test/analysis/summary.csv": "466575001d329215a46764ef77972c1d7e2684f0a8a001f80593a9067f59eb2d",
+    "results/fault-event-observability/test/analysis/paired_intervals.csv": "494c47d372a74a9ce76e44ee4f2b2701d18335d2104a51c769910d541400a610",
+    "results/fault-event-observability/test/analysis/common_matched_delay.json": "bffc8dcdab263f28e8be4f5538885f2d654ea5fb20ef5ece351d655cb12ee013",
+    "results/fault-event-observability/test/analysis/interaction_deletions.csv": "f302b6fc074e6949bebee0a61b87359b2909bdf70e3da44b20851a9ae790452f",
+    "results/fault-event-observability/test/analysis/observational_equivalence.csv": "88fd44eee5e3480f29d59cca1394c9a55ae5fd86a90188ab738cedc55f42daa8",
+    "results/fault-event-observability/test/analysis/timing_interactions.csv": "2b2b5f4518a162a90e04301cf511c25083f56c0175ffb0e13fa49c4e32d7dbb6",
+    "results/fault-event-observability/test/analysis/spike_timing.png": "07fed183bd1268c33380852a5d049891aa93056440487ceae8fa953e12609329",
+    "results/fault-event-observability/test/analysis/primary_interactions.png": "d6cf167f3d5bdbf6b9bc1f0ad497e1e5f591e8fcbb410843662e4f24b7843466",
+    "results/fault-event-observability/test/analysis/manifest.json": "50ad3697cd202e563d595cd2f40dbd04da368db1d401d6fb0835c6d39c4c7507",
+    "results/fault-event-observability/test/analysis/drift_timing.png": "d3c80a90605934f8d9c0c2a8a8e604548bf89d08a12e13775ee270afb395fbe1",
+    "results/fault-event-observability/interpretation/equivalence_matching_boundary.csv": "a1a8bbcafe821ac6639ed9f331ccc36484d232a82a98a3b95ab3ce15d498c9f5",
+    "results/fault-event-observability/interpretation/all56_timing_cells.csv": "ca9dea46e8cc792f0f6f7ff8892f0dc5cbbedd8167f24e152b20f8b5b68cbdd1",
+    "results/fault-event-observability/interpretation/evidence_opportunities.csv": "2d4ec78497cd7e574f462dde95e8067c3678e2ee6615b4f1c408c41a038a2149",
+    "results/fault-event-observability/interpretation/phase_counts.csv": "11d0fa29e07757c4628e5eb89ac9437fb7a32ee9d1c4bcd31c8a116cc3a93432",
+    "results/fault-event-observability/interpretation/all_timing_cells.png": "a2d5b2a40ae9a0f4cb14242cee3d903d7c1fc076f37862f585b9ce056fd1fea0",
+    "results/fault-event-observability/interpretation/manifest.json": "79848777c1ab9707de88906a2079a98f255b5a1c7cc41811892a03ff9a7d5096",
+    "docs/FAULT_EVENT_OBSERVABILITY_PREREGISTRATION.md": "48b367476f51c0a94b1179912e1c9ac5be8a66629d34329beb086a7ae8565e74",
+    "docs/FAULT_EVENT_OBSERVABILITY_REPORT.md": "290e4b564307d75d4044699a2780ecce726c97360936be3fcb6b0d39a89d1e81",
+    "results/fault-event-observability/README.md": "4daaa863206f6948b1faccb935f06b1668dc80e9c8d848f7885fc27c2ae071d8"
+  }
+}

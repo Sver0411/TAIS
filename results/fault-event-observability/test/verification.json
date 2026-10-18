@@ -1,0 +1,18 @@
+{
+  "phase": "test",
+  "verified_rows": 16740,
+  "verified_artifacts": 30420,
+  "verified_events": 14040,
+  "all_metrics_recomputed": true,
+  "inputs_identical_across_methods": true,
+  "label_metadata_recomputed": true,
+  "no_policy_rerun": true,
+  "metrics_sha256": "3eada58191cbd63bf4050136ab77f764af1bebce6afc8f27aad1fcca68db1471",
+  "history": {
+    "tracked_unchanged": 576,
+    "ignored_unchanged": 185135,
+    "submodules_unchanged": true,
+    "external_raw_stat_signatures_unchanged": true
+  },
+  "verifier_sha256": "ad6abd7c7cc386fbc25c77568246094da1b6fe86a7e877636148065d3780092d"
+}
