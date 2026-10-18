@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scope": "complete historical format-layer engineering review",
+  "runs": 10800,
+  "verified_archive_files": 12150,
+  "uploaded_frames": 383196,
+  "all_roundtrips_exact": true,
+  "all_original_json_bytes_match": true,
+  "all_sender_reports_detections_and_matches_identical": true,
+  "historical_group_totals_match": true,
+  "unchanged_metrics": "Frozen original metrics retained, except application byte cost; matching recomputed. Fault attribution not rerun.",
+  "layout_descriptor_bytes": 65,
+  "version_layout_cost_per_frame": 2,
+  "minimum_legal_frame": 13,
+  "maximum_legal_frame": 56,
+  "goal_fraction": 0.4,
+  "primary_goal_met": true,
+  "primary_tais_json_bytes": 12804006,
+  "primary_tais_binary_bytes": 1678512,
+  "primary_tais_saving": 0.8689072779253618
+}
