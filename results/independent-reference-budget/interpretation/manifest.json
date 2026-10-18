@@ -1,0 +1,22 @@
+{
+  "report_script_sha256": "8dc5face9aa1399133467fa94d927664f5ebf84f03091433136a870eb6ed98c1",
+  "input_sha256": {
+    "results/independent-reference-budget/test/metrics.csv": "cf97177d75ce5db483b962cf87ceb8967a4ec566625779f2190fa753feffc261",
+    "results/independent-reference-budget/test/analysis/summary.csv": "4aa8f6cb1565aaca6ee872aa800362173b77020ba8e2268af8303e457cf7219a",
+    "results/independent-reference-budget/test/analysis/paired_intervals.csv": "8da6a1c2ffc9b62ce456e8701b1588c226cbf33b2ad598d8a76276da08eb8b88",
+    "results/independent-reference-budget/test/analysis/decision.json": "d45699568a953608d7fbb493218eb804587672e2bfc7b991fb1db272b81bb274",
+    "results/independent-reference-budget/test/verification.json": "5d1c5979c732bb86acb58340fcdfbd955f3e585e15aa40bec4e6a5bc83c0fade"
+  },
+  "outputs": {
+    "core_response_tradeoff.png": "421bd98fdc541e984d259386e51751af503d2db4f6ba606bcd76cea7d615af4d",
+    "budget_consumption.csv": "258b507d881d15646343bd08348bd47cc811bff58f169264fa0d4bfca1b28a9d",
+    "scenario_parameters.csv": "479abb063bab84487832c42171f21a41d7681ed9c869d60022bfb73828593f50",
+    "actual_scenario_timing.csv": "9bfb39eb751bc4c10451a9d0ffefd3a641d67ffada963dacb983dec04db452cb",
+    "core_alpha_summary.csv": "958c5189906a8d2e0635d461f8bcd037a0de47547bd057d5618b6d1dd58c710c",
+    "primary_paired_intervals.png": "619079616e93b575e4c324d46ec89d01081c97008f84db5dd57d1176b258b116",
+    "split_comparison.csv": "5d2ff50bff6f5ca5f26b895febc204b92f763c0860dc725c4d22aa2d6f462825",
+    "reference_availability.csv": "5a1d0b95990eab3858f6c711f490c0a984f44e7f9e07a1c8580a5f04e3b3f361",
+    "observability_and_acquisition_pairs.csv": "9bfa5002bf18d4360b97d435c332a92a023b1bb01e8068f638f05fb5806296f8",
+    "budget_usage.png": "30366f2439fccc2f5a8c18f798c54654195f9ceeb28159d30e718224e5551789"
+  }
+}

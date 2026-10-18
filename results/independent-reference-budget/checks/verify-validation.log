@@ -1,0 +1,11 @@
+{
+  "phase": "validation",
+  "verified_rows": 15660,
+  "verified_artifacts": 29100,
+  "all_metrics_recomputed": true,
+  "no_policy_rerun": true,
+  "independent_ledger_and_json_checks": true,
+  "paired_inputs_identical": true,
+  "metrics_sha256": "c3be577c1746a5b1d0c238d510752f3895b11ee93801db71afa4f0cd98a37c7b",
+  "verifier_sha256": "ae4e089ba334d48b97423c8ce6d408e4dba19315b3d77c7949ce5b103a3503ba"
+}
