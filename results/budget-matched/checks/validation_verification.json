@@ -1,0 +1,12 @@
+{
+  "phase": {
+    "phase": "validation",
+    "verified_rows": 9000,
+    "verified_artifacts": 10650,
+    "input_pairs_identical": true,
+    "every_original_metric_recomputed_from_saved_artifacts": true,
+    "no_policy_rerun": true,
+    "metrics_sha256": "83f210ef1a3ff93120857a18cade7700d5ff7603d931d6fd9d92a20d86716231"
+  },
+  "verifier_sha256": "1c2ccbf8703446668398ef7fda4b7a7822eb6c5fc941dff91acacb8d48cfa680"
+}
