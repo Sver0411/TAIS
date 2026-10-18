@@ -4,6 +4,8 @@
 
 Working title: **Trust-Gated Event-Aware Adaptive Sampling under Sensor Faults for Resource-Constrained Agricultural IoT**.
 
+[Research Overview: Japanese two-page summary, English technical report, figures and evidence index](docs/research-portfolio/README.md).
+
 ## Offline spatial pilot (separate research branch)
 
 **这是基于真实温室背景和受控干预的离线探索性实验，不是实际在线 LoRaWAN 系统或自然故障诊断的确认性验证。**

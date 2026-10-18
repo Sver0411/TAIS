@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "base_commit": "f21bc2f0e1d01d0670ce1c1bd4ab5a2aab7e171d",
+  "unchanged_existing_files_except_readme": 459,
+  "upstream": [
+    {
+      "path": "vendor/AdaptiveSense",
+      "sha": "f7ec30fd4721aa1a7c308f879050a83936e60067"
+    },
+    {
+      "path": "vendor/SensorTrust",
+      "sha": "2ce98dd043bb01ea99052eda218c68a172499a4c"
+    }
+  ],
+  "source_hashes_verified": 58,
+  "raw_metric_summary_rows_reconciled": 58,
+  "central_numeric_and_failure_assertions": "PASS",
+  "local_markdown_links_checked": 91,
+  "figures": {
+    "svg": 8,
+    "png_300dpi": 8
+  },
+  "pdf": {
+    "RESEARCH_SUMMARY_JA.pdf": {
+      "pages": 2,
+      "live_links": 3,
+      "embedded_fonts": [
+        "AAAAAA+ArialUnicodeMS",
+        "AAAAAA+BitstreamVeraSans-Roman",
+        "AAAAAB+ArialUnicodeMS"
+      ],
+      "a4": true,
+      "replacement_or_tofu_characters": false,
+      "sha256": "45d20888fa4bab082b420ecb39b02367c67929ec0dc6505e87d4f9172c7aa845"
+    },
+    "TECHNICAL_REPORT_EN.pdf": {
+      "pages": 10,
+      "live_links": 18,
+      "embedded_fonts": [
+        "AAAAAA+ArialUnicodeMS",
+        "AAAAAA+BitstreamVeraSans-Bold",
+        "AAAAAA+BitstreamVeraSans-Oblique",
+        "AAAAAA+BitstreamVeraSans-Roman"
+      ],
+      "a4": true,
+      "replacement_or_tofu_characters": false,
+      "sha256": "1338e34d537541fbee3ba2aae82c972dd9328f574e27e7aa2f92da851b8b96c4"
+    }
+  },
+  "japanese_font_full_text_coverage": "PASS",
+  "original_external_files_verified": [
+    {
+      "file": "Training Set.csv",
+      "sha256": "5663ee2f6dfa114d1d647f5d8de08ea659589c42be6f81edccbed063cddeb09c"
+    },
+    {
+      "file": "Test Set.csv",
+      "sha256": "81624b3bd95f7cc996d205b914798c7230b98e30b816e8bbcf13c7f022867542"
+    },
+    {
+      "file": "Full Data Set.csv",
+      "sha256": "e4051527575af636c0e9be940ec6f8b084ed31743d1441371d69647455c4191a"
+    },
+    {
+      "file": "mote_locs.txt",
+      "sha256": "3865c0263110c24c40e3377690cecaa552e0575cf56cdb9f5f8bd17130b6bf04"
+    },
+    {
+      "file": "data.txt.gz",
+      "sha256": "d99288c8f406ca6604d359ceaa0d8adfffa79e7095061a1e27dc4399f48c7225"
+    },
+    {
+      "file": "Greenhouse-1.xlsx",
+      "sha256": "9b5f48b5f37ebc90052658649de7471b298da7dd4581bf47d0d8ec404cadff19"
+    },
+    {
+      "file": "Greenhouse-2.xlsx",
+      "sha256": "82a882d0dce0044458c1ac3d787b62c9434fbce48f2ebaa3c55d9330e6c810eb"
+    }
+  ],
+  "english_full_text_glyph_coverage": "PASS_WITH_EMBEDDED_FALLBACK",
+  "inline_fallback_symbols": [
+    "\u2192"
+  ],
+  "svg_xml_valid": true,
+  "git_whitespace_check": "PASS; PDF/PNG marked binary",
+  "final_page_images_visually_reviewed": true,
+  "effect_experiments_or_parameter_search_run": false,
+  "ci_for_this_document_branch": "SKIPPED_BY_COMMIT_MESSAGE",
+  "python": "3.12.14",
+  "packages": {
+    "reportlab": "4.4.9",
+    "pypdf": "6.10.0",
+    "Pillow": "12.3.0"
+  }
+}
