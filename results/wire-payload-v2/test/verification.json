@@ -1,0 +1,27 @@
+{
+  "scope": "full historical format/link engineering review",
+  "runs": 10800,
+  "archived_uploads": 383196,
+  "periods": [
+    8,
+    16,
+    32
+  ],
+  "profiles": [
+    "loss0",
+    "loss1",
+    "loss5",
+    "loss10",
+    "burst",
+    "sender_restart",
+    "receiver_restart"
+  ],
+  "all_loss0_frames_exact": true,
+  "all_reconstructed_received_frames_exact": true,
+  "sender_policy_outputs_unchanged": true,
+  "v1_per_run_bytes_and_envelope_hashes_identical": true,
+  "primary_tais_v2_bytes": 1503239,
+  "primary_saving_vs_v1": 0.10442165441772233,
+  "challenge_below_1455208": false,
+  "link_event_rows": 8047116
+}

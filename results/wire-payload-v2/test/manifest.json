@@ -1,0 +1,74 @@
+{
+  "created_utc": "2026-10-18T07:02:00.269345+00:00",
+  "base": "b184240226025d86c5e77a74f124c5c788564613",
+  "implementation_commit": "9121945b53d447f68a4dd85af75de90bcca33bdd",
+  "command": [
+    "scripts/benchmark_wire_v2.py"
+  ],
+  "source_experiment_commit": "97aa5d50afeb2cbf97bc9d91562a01c71dfd98cf",
+  "source_config_sha256": "1be38a7b47e5e0104435086587d543dfbaa74c320389971aa2f9ecf96779dae2",
+  "source_files": {
+    "results/test/manifest.json": "432bfb6d5bc9179095d831428ae5aeff0793b7dc054462aad6ad81f7edcf7f56",
+    "results/test/metrics.csv": "6bf5d5c18e7c49e262d18d4a1e308f223790053e98e93b1f2d384c35cbc3fc41",
+    "results/test/summary.csv": "6538f13f88f2d16419d84098e0c16c2302c1706cadbc1bfad4250e93be59881f",
+    "results/wire-payload/test/manifest.json": "cfc0f1a1ec5752c7448318e58edea2a563898abad69edb8dec4694adf3ad700d",
+    "results/wire-payload/test/per_run.csv": "14bb3d6a8f384a608a6c465518e59bba9af26c258b4572c87c03f37d668b0611",
+    "results/wire-payload/test/summary.csv": "10623bf6bab02055c87d0c4e80beab49a2eeea77eb89dba0d6b546a9d42f90dd"
+  },
+  "implementation_files": {
+    "src/tais/wire_v2.py": "1cbebbff92dbaf6c9b0e514fcc6f72b6ca6e37e2e2ced75517af565e662d2b51",
+    "src/tais/wire_link.py": "3bd1f62d678a1230a31c14d5bdd9fd79cdb0145714ae7a6f7868ec2963de7726",
+    "scripts/audit_wire_health.py": "62eefbc6e67aa20056c2ef1af5cdf95bfdeacd08c1df5c02e67b2e50712bff1a",
+    "scripts/benchmark_wire_v2.py": "aa750cfa9afac49b3bb411df3c664279822c8348643a009d9f9cfa1f74037746",
+    "tests/test_wire_v2.py": "6eb7acdc39c2d007c7d093170026bd4be788d36b122227f75e519a5315994ab5"
+  },
+  "verified_archives": 12150,
+  "verified_archive_index_sha256": "78815454562eac0e472ccc37795d116ea82f4d408dfc639787c53f2372cb6f02",
+  "original_manifest_pins_all_archive_hashes": true,
+  "archive_root": "/Users/mac/Documents/TAIS/results/traces/test",
+  "main_period": 16,
+  "sensitivity_periods": [
+    8,
+    32
+  ],
+  "link_seed": 2026101807,
+  "event_columns": [
+    "index",
+    "timestamp",
+    "device",
+    "session",
+    "sequence",
+    "kind",
+    "v1_bytes",
+    "v2_bytes",
+    "link_action",
+    "receiver_status",
+    "gap",
+    "recovered",
+    "restored_envelope_sha256",
+    "v2_hex"
+  ],
+  "full_trace": {
+    "path": "/Users/mac/Documents/TAIS/results/traces/wire-payload-v2/test/link_events.jsonl.gz",
+    "sha256": "8d06a274cd61d0377411b61f15af7d524bc51aba7179b02ff194eee1e63acc63",
+    "bytes": 115438538,
+    "events": 8047116
+  },
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "platform": "macOS-15.7.7-arm64-arm-64bit-Mach-O",
+  "outputs": {
+    "by_scenario.csv": "d0c4e4df2ec5801f076778de81456ee9f6eb78272d87e2f44b0605e14561de6a",
+    "by_seed.csv": "17d8bd09b3488c25dfce71fa3bb179c62ddab03856eac50b0e20589d72df2949",
+    "cost_recovery.png": "c63a7d13f7dd865508971b2cf06f07bee6fea8178366fdd5e2030f0f0a0f06df",
+    "frame_histograms.csv": "0a90a3e8144c4cb8ee7d76f6789ec2e8f61bbaf5c387749375d092ac74c9a3de",
+    "frame_sizes.csv": "063546d10f24cd14bfb9a64506d85112cfdb2c05c8c636641068009c680dcdb4",
+    "invariants.csv.gz": "c986db774d303bac5689f5bd148390571b05999d296186bdd2a6d2349e1480cf",
+    "paired_uncertainty.csv": "84f2f68e67d5cd41986b7e153278aeea96f6ad3271007f40de32865c7883134f",
+    "per_run.csv.gz": "bcb834fefe759728458323743c8aa03990be80e43f9dd1fba4f5926a902fdcaf",
+    "recovery_episodes.csv.gz": "da3f97f425d4dadd168667f289da5d39c64e8b3d45fd122867fb435e99848db7",
+    "recovery_summary.csv": "b38b76deb5f052b9317cce7e79db412c596ab2fa9e0377c64ee5cfa48a888d49",
+    "summary.csv": "a90e0bbdb5e997367f3bfdf70be71eee3814aee224d8c7f0116b4c9925863b67",
+    "trace_excerpt.csv": "f3106d7cb8db02f3f7b34ef701f1295ccfb2a29fc92f2731b599f9ac18bead46",
+    "verification.json": "c86b66d8ed29e8868a13c8e2ff17c126dc191c879568fae4c4fb8a2da2e608d4"
+  }
+}
