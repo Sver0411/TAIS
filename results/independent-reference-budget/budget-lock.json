@@ -1,0 +1,56 @@
+{
+  "status": "FROZEN_CAPS",
+  "development_mean": {
+    "reads": 94.12380952380953,
+    "uploads": 45.57936507936508,
+    "bytes": 7775.4857142857145
+  },
+  "budgets": {
+    "0.75": {
+      "reads": 70,
+      "uploads": 34,
+      "bytes": 5831
+    },
+    "1.0": {
+      "reads": 94,
+      "uploads": 45,
+      "bytes": 7775
+    },
+    "1.5": {
+      "reads": 141,
+      "uploads": 68,
+      "bytes": 11663
+    }
+  },
+  "frozen_files": {
+    "configs/experiment.yaml": "1be38a7b47e5e0104435086587d543dfbaa74c320389971aa2f9ecf96779dae2",
+    "configs/independent-reference-budget.json": "358263dbf0cbd256b73eca40475f9db44a82bff262b2b6e9fca299c64c8f9a3b",
+    "docs/INDEPENDENT_REFERENCE_BUDGET_PREREGISTRATION.md": "03f8a47d09e0a2527807e25ebc7d062ae10691a49093f32d17891514cfa2bdea",
+    "scripts/analyze_independent_reference_budget.py": "ef5657bd153bae995ada0569e72e13a42fac5e08204d8103a1e90605e379f203",
+    "scripts/audit_reference_budget.py": "7ba7ff05d0e0e9ad943ae68cf005893ab198d5de1c5124e1ff23d4bfd34a0058",
+    "scripts/run_budget_matched_experiment.py": "bec71a36eb32127361713ac492a49a0b616c5b619573e83eedb1f61f4f559c6a",
+    "scripts/run_experiments.py": "8f941d9239ddc7c27e0974896cd2c3d12162c0a573559f2c3f4e6d92d8d07dd2",
+    "scripts/run_independent_reference_budget.py": "1d5b267bb0364a3e546efaa7cc41168caf244f8c54e3c91561a9e4fb31dfd072",
+    "scripts/verify_independent_reference_budget.py": "ae4e089ba334d48b97423c8ce6d408e4dba19315b3d77c7949ce5b103a3503ba",
+    "src/tais/__init__.py": "767a02952c53ff2fdf442b5c5301323ba41c93fad431c50548e1e8997d55e9d8",
+    "src/tais/budget_eval.py": "49f555d01407869545ff8de18fdfcd68666235f5bedab668131faa950fb024a0",
+    "src/tais/config.py": "c7d57e3750eacc5f97de846b583f04153db964b7c40346260bec25a640336e7a",
+    "src/tais/metrics.py": "607e589983f9831e9f18d93cc89e39f241dede25ede1eeb52ca58217cf1acdef",
+    "src/tais/observability_eval.py": "1151a8eba3925b6c84783ce80fde4dcd564a100df5995eed8a597a02bb1ed812",
+    "src/tais/observability_signals.py": "cb17e876975f9bc6bac8acb4f1841541e8ef5d49460a61f9ae7d8f757fc55dc7",
+    "src/tais/reference_metrics.py": "7e4e5e0aad1ef25fc2216ab18b290e833bc56c2ccb871d861776436db2c4c586",
+    "src/tais/reference_policy.py": "f838ea72196150200c0985f951278925757d3616e018c3345e1f02a3cfab5be5",
+    "src/tais/reference_signals.py": "52a8232f5578aff1928c99c13f76cb10a9fff17f03907d8331f3db92e7a44dcc",
+    "src/tais/replay.py": "59508d037fb153e2df242f81eca509f70128f536a8efd655889c466ba3f35dd1",
+    "src/tais/scheduler.py": "9ab0b073e7fdb6d1293e3b6fc6cbae7f6de1cb55363bb48986335c8c602f5609",
+    "src/tais/signals.py": "6b60b254b2653dc00079bc71c37a97496030f800326273580d1bfab9ce1ed4d0",
+    "src/tais/trust.py": "7dda86dd97fc435863368a3dbdb65610ed412b8d529821ecd9959608ccdd645e",
+    "src/tais/trust_bridge.c": "2bc01e19185922291d39a89aee9941a10eaf1b9ba1b15dffab308d7acb58c68e",
+    "src/tais/wire_codec.py": "944522828d4562dffe21d7f522d382f7e105eceaed7aa9ceeec1d05acdc0030f",
+    "src/tais/wire_link.py": "3bd1f62d678a1230a31c14d5bdd9fd79cdb0145714ae7a6f7868ec2963de7726",
+    "src/tais/wire_v2.py": "1cbebbff92dbaf6c9b0e514fcc6f72b6ca6e37e2e2ced75517af565e662d2b51",
+    "tests/test_reference_budget.py": "2d671a2d249abc7fbf6b07d41938928857f6581468e5a981ae8f7c1538d9eaa8"
+  },
+  "calibration_manifest_sha256": "ddd68c53a2f5ea17de481f622e2a267fd2094dca771c1efdd1a13f2f4f7d0160",
+  "calibration_metrics_sha256": "a8fda4786b326ede0cc6587d1086131bd886f60ccbbba0e4bd2874868310bdc5"
+}
