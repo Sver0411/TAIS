@@ -1,0 +1,12 @@
+{
+  "phase": "validation",
+  "verified_rows": 5580,
+  "verified_artifacts": 10140,
+  "verified_events": 4680,
+  "all_metrics_recomputed": true,
+  "inputs_identical_across_methods": true,
+  "label_metadata_recomputed": true,
+  "no_policy_rerun": true,
+  "metrics_sha256": "e8a9239dbe000ce0b75cc307ed23004d9feccbc53652037e8981974a4b1cadbe",
+  "verifier_sha256": "ad6abd7c7cc386fbc25c77568246094da1b6fe86a7e877636148065d3780092d"
+}
