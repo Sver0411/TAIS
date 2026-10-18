@@ -50,6 +50,8 @@ HistoryExtended使用更多已取得的目标历史，存储/运算增加，但�
 - 局地缓慢事件：与漂移完全相同的数值轨迹，但事件标签不同，作为可辨识性边界，不能计为故障识别成功。
 - 参考缺失：10:00–14:00四参考均不可用；参考故障：几何顺序第一参考具有上述漂移。无信息对照保持相同可用掩码。
 
+在首轮开发效果之前明确数值支持规则：所有受控副本在加干预后限制于上述分析范围，防止把超过100%RH的数值当真实局地环境事件；漂移/偏移也用相同饱和规则，因此局地缓变与漂移输入仍完全一致。原始值不改；日志记录目标饱和轮询数，幅度是名义请求值，不保证每个样本实现全幅。总体请求召回保留所有干预请求，并另报固定采样窗口内确有非零干预差值的机会分母，零变化/无观测不能伪装成检出成功。
+
 13场景：untouched、drift、offset、local_fast、local_slow、common_fast、drift_local_fast、drift_common_fast、reference_missing、reference_missing_local、reference_fault、reference_fault_local、drift_reference_missing。后两类无事件的参考场景也是必要的配对控制，不删除不利场景。所有方法/对齐点共用潜在背景与干预计划。
 
 ## 指标与成本
