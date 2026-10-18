@@ -1,0 +1,9 @@
+{
+  "before_any_300_399_trajectory": true,
+  "notes": [
+    "Protocol P1 clarified unmatched candidates versus committed environment errors before any new seed generation. Undecided is not a false committed environmental declaration; candidate and supported-event noninferiority gates both prevent success via excessive abstention.",
+    "Initial old-seed20 software run:108 passed,2failed. Both parity regressions raised KeyError(t) because the new wrapper omitted the original debug Decision time field. The field was restored; neither assertion nor original algorithm was changed. The complete initial failure log is retained.",
+    "Corrected new suite:110passed, including87 physical-case tests, exact twin streams and complete outputs for every method/budget, budget-boundary/no-unpaid-read tests, original one-channel replay parity and a full87-case old-seed20 pipeline with offline ledger/metric verification.",
+    "Main rules use existing1.2C displacement and10s persistence without any threshold search. Development will only calibrate common hard caps by the preregistered mean-resource formula."
+  ]
+}
