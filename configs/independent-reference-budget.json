@@ -1103,5 +1103,7 @@
   "recall_margin": -0.01,
   "minimum_false_reduction": 0.05,
   "alpha": 0.05,
-  "workers": 4
+  "workers": 4,
+  "protocol_revision": "P1-before-any-new-trajectory",
+  "primary_false_endpoint": "committed environmental fault-induced reports; unresolved stays in candidate/abstention metrics"
 }
