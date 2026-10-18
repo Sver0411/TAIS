@@ -1,0 +1,13 @@
+{
+  "base": "b184240226025d86c5e77a74f124c5c788564613",
+  "scope": "Health compressibility only, all original test seeds20-49 and native points",
+  "source_manifest_sha256": "432bfb6d5bc9179095d831428ae5aeff0793b7dc054462aad6ad81f7edcf7f56",
+  "source_config_sha256": "1be38a7b47e5e0104435086587d543dfbaa74c320389971aa2f9ecf96779dae2",
+  "verified_archives": 10800,
+  "verified_archive_index_sha256": "b566ed9affc19ea183cc946f1b22b25d0351321d28796349b085d228ec19a438",
+  "output_sha256": {
+    "summary.csv": "7c950db9ace4b9a015ecda11cbac3512fd406718f4d79f92ca5b13fe9240bdba",
+    "by_scenario.csv": "be2a64e529806b93dd363ebf3c1d2586bed31712ff7b3043bf639554935a4bfe",
+    "per_run.csv": "b7d2dce459e0577ade783b761b11642c9f866a8810f9d2f206a71270e9a883f1"
+  }
+}
