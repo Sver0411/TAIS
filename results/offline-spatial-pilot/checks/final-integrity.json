@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "unchanged_existing_files_except_readme": 399,
+  "upstream_gitlinks_unchanged": 2,
+  "workbook_sha256_verified": "9b5f48b5f37ebc90052658649de7471b298da7dd4581bf47d0d8ec404cadff19",
+  "frozen_code_and_config_verified": true,
+  "trace_availability_checks": 15132,
+  "identical_input_boundary_verified": true,
+  "cost_equalization_verified": true,
+  "splits": {
+    "development": {
+      "metric_rows": 185328,
+      "independent_dates": 6,
+      "artifact_hashes_verified": 9
+    },
+    "validation": {
+      "metric_rows": 154440,
+      "independent_dates": 5,
+      "artifact_hashes_verified": 9
+    },
+    "test": {
+      "metric_rows": 277992,
+      "independent_dates": 9,
+      "artifact_hashes_verified": 9
+    }
+  }
+}

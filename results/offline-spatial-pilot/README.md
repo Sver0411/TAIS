@@ -2,6 +2,8 @@
 
 **这是基于真实温室背景和受控干预的离线探索性实验，不是实际在线 LoRaWAN 系统或自然故障诊断的确认性验证。** [协议](../../docs/OFFLINE_SPATIAL_PILOT_PROTOCOL.md)在效果运行前提交；[配置](../../configs/offline_spatial_pilot.json)固定全部节点、时间块、方法和敏感性设置。[完整结果解释](../../docs/OFFLINE_SPATIAL_PILOT_REPORT.md)区分净报告变化、新增/消失报告、局地召回和信息边界。旧C0/C1/C1.1及v0.1/v0.2/BLOCKED结果保持原样。
 
+**本轮保留评估为 NO-GO：目标覆盖25.89%、至少两参考覆盖24.12%，均未达到预设50%。** [失败声明](TEST_NO_GO.md)适用于全部 `test/` 产物；这些输出保留供审计，不能当作独立有效性证据。开发/验证存在局部收益、局地缓变损害、负对照相似收益及明显参考成本，没有宣称空间方法整体优效。[覆盖图](audit/coverage-by-date.png)显示全部预定日期，未更换测试集或筛选节点。
+
 ## 输入与许可
 
 Singh、Rahmani、Weyn、Berkvens，*Joint Communication and Sensing: a Proof of Concept and Datasets for Greenhouse Monitoring using LoRaWAN*，Zenodo v1.0，数据 DOI [10.5281/zenodo.5793685](https://doi.org/10.5281/zenodo.5793685)，论文 DOI [10.3390/s22041326](https://doi.org/10.3390/s22041326)。数据 [CC BY4.0](https://creativecommons.org/licenses/by/4.0/)；本项目输出为明确标识的治理统计及受控副本实验，不暗示作者背书。原始工作簿不重新分发。
@@ -82,3 +84,12 @@ freeze会拒绝未通过的开发/验证门槛；test会拒绝冻结后代码/�
 源文件及旧跟踪文件的前后指纹检查、原有测试和新增测试结果列于研究报告。初始192通过/2预期失败属于旧基线；新增23项通过后完整套件为215通过/2旧预期失败。后续如果检查有失败，保留原日志，不覆盖为成功。
 
 正式在线NO-GO未解除；没有联系作者、实现新在线调度器、修改上游、向自然数据赋故障真值或合并main。固定计划下的信息证据与之后的闭环预算研究是两个不同阶段。
+
+已归档结果可只读复核；汇总脚本拒绝覆盖既有 `audit/`，重复时应在新结果根目录执行：
+
+```bash
+python scripts/verify_offline_spatial.py --workbook "$TAIS_WORKBOOK"
+python scripts/report_offline_spatial.py --results results/scratch/my-pilot
+```
+
+第二条仅从该根目录的开发/验证/测试CSV生成覆盖与完整操作点表，不运行效果实验，不修改冻结方法。

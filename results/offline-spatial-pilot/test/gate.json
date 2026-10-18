@@ -1,0 +1,9 @@
+{
+  "independent_dates": 9,
+  "mean_target_coverage": 0.2589203582667635,
+  "mean_reference_quorum_coverage": 0.2412490922294844,
+  "spatial_outputs_differ_from_history_or_null": true,
+  "coverage_pass": false,
+  "informative_exploration_pass": false,
+  "not_evidence_of_superiority": true
+}

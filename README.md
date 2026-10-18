@@ -10,6 +10,8 @@ Working title: **Trust-Gated Event-Aware Adaptive Sampling under Sensor Faults f
 
 The independent `tais_spatial` prototype uses the pinned LoRaWAN Greenhouse-1 workbook, an explicitly assumed reception clock, fixed polling, controlled interventions, and four history/spatial/null controls. It does not change the existing TAIS schedulers. The [pilot protocol](docs/OFFLINE_SPATIAL_PILOT_PROTOCOL.md) and [results/reproduction](results/offline-spatial-pilot/README.md) describe the data governance, all alignment assumptions, costs and limitations. Earlier [formal online NO-GO decisions](docs/REAL_DATA_EXPERIMENT_PREREGISTRATION.md) remain in force. Raw workbooks and full provenance ledgers stay outside Git.
 
+**Held-out coverage failed (target 25.89%, reference quorum 24.12%; both below the predefined 50% gate).** The [actual report](docs/OFFLINE_SPATIAL_PILOT_REPORT.md) retains all outputs, local-event harms, null-control comparisons and added reference costs; this pilot provides no qualified independent evidence of effectiveness.
+
 When one agricultural IoT sensor becomes unreliable, can health-aware scheduling reduce false environmental reports while retaining real events on healthy channels and controlling sampling/application-upload costs? TAIS investigates this question with independent environmental and fault labels. Effectiveness is a hypothesis tested by the results, not assumed by the design.
 
 ## BLOCKED rearm repair research branch
