@@ -1,0 +1,10 @@
+seed,scenario,method,channel,truth_start,truth_end,matched,report_time,latency_s,sampled_event_points,first_sample_in_event,first_fault_flag
+20,range_same_long,AdaptiveSense,temperature,634.0,810.0,False,,,36,635,
+20,range_same_long,GateOnly,temperature,634.0,810.0,False,,,3,660,600
+20,range_same_long,TAIS,temperature,634.0,810.0,False,,,3,660,600
+20,spike_same_short_dt_m10,AdaptiveSense,temperature,564.0,586.0,False,,,0,,
+20,spike_same_short_dt_m10,GateOnly,temperature,564.0,586.0,False,,,0,,
+20,spike_same_short_dt_m10,TAIS,temperature,564.0,586.0,False,,,0,,
+20,drift_cross_long_dt_p650,AdaptiveSense,humidity,1225.0,1399.0,False,,,33,1225,
+20,drift_cross_long_dt_p650,GateOnly,humidity,1225.0,1399.0,True,1250,25.0,29,1240,820
+20,drift_cross_long_dt_p650,TAIS,humidity,1225.0,1399.0,True,1275,50.0,25,1265,820

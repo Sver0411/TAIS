@@ -1,0 +1,12 @@
+{
+  "phase": "smoke",
+  "verified_rows": 12,
+  "verified_artifacts": 28,
+  "verified_events": 9,
+  "all_metrics_recomputed": true,
+  "inputs_identical_across_methods": true,
+  "label_metadata_recomputed": true,
+  "no_policy_rerun": true,
+  "metrics_sha256": "35fd4d13268c3264a9c24fadaa4ac063676250e9a9a3dd614ec36ad331792121",
+  "verifier_sha256": "ad6abd7c7cc386fbc25c77568246094da1b6fe86a7e877636148065d3780092d"
+}

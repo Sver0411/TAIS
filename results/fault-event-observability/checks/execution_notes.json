@@ -1,0 +1,10 @@
+{
+  "before_new_seed_generation": true,
+  "notes": [
+    "The initial inline configuration writer could not import tais without PYTHONPATH=src; no trajectories were generated. It was rerun with the explicit source path before protocol commit.",
+    "Initial63 new unit tests passed. Old-seed20 CLI smoke ran12 scored cases and its original metrics independently verified.",
+    "Partial CLI smoke analysis raised KeyError(20, range_none_long, GateOnly): the equivalence helper checked for the event case but not its absent no-event partner. Partial analysis and original smoke artifacts were retained unchanged. The helper now requires both records before describing an equivalence; full experimental populations still require every planned case.",
+    "Before development generation, explicit clean-counterfactual sample/upload/JSON counts and their fault-present differences were added as secondary cost accounting. These are not a decomposition into causal diagnostic-only work and do not change primary metrics, labels, policies or protocol.",
+    "Added partial-population regression plus complete93-case old-seed20 execution/analysis/verification test. No200-299 trajectory was used for debugging or rule selection."
+  ]
+}

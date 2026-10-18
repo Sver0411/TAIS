@@ -1,0 +1,2 @@
+smoke: seed 20, 1/1, 12 scored runs
+Complete smoke: 12 scored runs, 12 offline counterfactuals
