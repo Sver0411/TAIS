@@ -79,7 +79,7 @@ Both upstream projects and TAIS are MIT licensed. Original licenses and notices 
 
 Simulation does not establish field reliability, radio delivery or energy savings. SensorTrust health is heuristic, not a calibrated probability. Valid stable offsets and same-channel event/fault overlap remain ambiguous. Confirmation can cost samples and still miss short events. Reported application requests do not establish successful transport. Diagnostic-demand counts are not automatically additional samples. The synthetic benchmark uses two channels and jointly varied profiles; it is not a complete agriculture fault model.
 
-The [Hull greenhouse dataset](data/README.md) has nominal 5-minute stored resolution. Its DOI/license/publication description were checked, but raw API access returned 403 and no real file was validated in this environment. No actual missingness statistics, real-greenhouse TAIS experiment, sub-minute detection result, firmware integration, threshold-proximity ablation or measured energy result is claimed. See [limitations](docs/LIMITATIONS.md).
+The [earlier Hull access note](data/README.md) preserves a historical failed download. The subsequent [C0 intake](docs/REAL_DATA_INTAKE_AUDIT.md) obtained the files, but [C1](docs/REAL_DATA_EXPERIMENT_PREREGISTRATION.md) retained formal online NO-GO because date/window semantics remain unresolved. The separate offline pilot uses LoRaWAN Greenhouse-1 under declared proxy-clock assumptions. Neither dataset establishes sub-minute detection, natural-fault diagnosis, firmware performance or measured energy savings. See [limitations](docs/LIMITATIONS.md).
 
 To verify recorded hashes and one fresh held-out replay after full reproduction:
 

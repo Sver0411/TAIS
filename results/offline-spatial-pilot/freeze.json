@@ -1,0 +1,39 @@
+{
+  "code_sha256": {
+    "src/tais_spatial/__init__.py": "6d35b211f6ddac64b8dd09559c972deae2a94c20af5525dae9519409cd1222b4",
+    "src/tais_spatial/analysis.py": "c7681cee956271030c400bff66a5a504863e25e88fc9b99a715f8d4b6ee3a77c",
+    "src/tais_spatial/data.py": "ab7e33906a6c68d45db8bfa3d2da3b43e8e0dfd7e4755495eaa905847250e497",
+    "src/tais_spatial/interventions.py": "ce84f5575b65192e42b3723f98d6bec6b397405549a34df8886befc41f43621b",
+    "src/tais_spatial/io.py": "d4e8473cbf8d6b01977461ca597c8c6e3d9f866a4b92a7240c1ea6556489d3f7",
+    "src/tais_spatial/methods.py": "bdcf709f91cf50ef03552be7141101b807274b22f97b78adff8027dfefe2e3eb",
+    "src/tais_spatial/pilot.py": "3f5ba72ef57c55a13df90ac346231bb510fa6e8946884c9d4ca488f857ad0c2e",
+    "scripts/offline_spatial.py": "500ffe12a10c142316240618d9039a772a9ada60bb0d95c5fc98cb621a36e883",
+    "configs/offline_spatial_pilot.json": "8c7dc926bdead4f9ea9a4c0f154fa7304dd6d2bd0fb701d512dc49197665e412"
+  },
+  "held_out_allowed": true,
+  "gates": [
+    {
+      "independent_dates": 6,
+      "mean_target_coverage": 0.804720406681191,
+      "mean_reference_quorum_coverage": 0.8334059549745824,
+      "spatial_outputs_differ_from_history_or_null": true,
+      "coverage_pass": true,
+      "informative_exploration_pass": true,
+      "not_evidence_of_superiority": true
+    },
+    {
+      "independent_dates": 5,
+      "mean_target_coverage": 0.7638344226579521,
+      "mean_reference_quorum_coverage": 0.845925925925926,
+      "spatial_outputs_differ_from_history_or_null": true,
+      "coverage_pass": true,
+      "informative_exploration_pass": true,
+      "not_evidence_of_superiority": true
+    }
+  ],
+  "prior_outputs": {
+    "results/offline-spatial-pilot/development": "c019b77f4ca02a8f791b78688c5fa15c13a4b756093a25f87a5abd768dc76940",
+    "results/offline-spatial-pilot/validation": "8b52a1893649ff04b35c604cd23d74bda13ead0bc68c83999986be093730b566"
+  },
+  "interpretation": "exploratory; freezes rules, not evidence of superiority"
+}
