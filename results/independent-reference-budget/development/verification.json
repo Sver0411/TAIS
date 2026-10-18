@@ -1,0 +1,11 @@
+{
+  "phase": "development",
+  "verified_rows": 15660,
+  "verified_artifacts": 29100,
+  "all_metrics_recomputed": true,
+  "no_policy_rerun": true,
+  "independent_ledger_and_json_checks": true,
+  "paired_inputs_identical": true,
+  "metrics_sha256": "bd330c6a9e10a23d75498523dd2970e1084499edcc8518bb757d86c620c02750",
+  "verifier_sha256": "ae4e089ba334d48b97423c8ce6d408e4dba19315b3d77c7949ce5b103a3503ba"
+}
