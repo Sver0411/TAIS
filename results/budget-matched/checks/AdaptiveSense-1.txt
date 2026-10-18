@@ -1,0 +1,78 @@
+config parity: experiments/experiment_config.yaml  <->  firmware/main/config.example.h
+parameter                                                      firmware  result
+--------------------------------------------------------------------------------------
+sampling.min_interval                                                 5  OK
+sampling.default_interval                                            20  OK
+sampling.max_interval                                                60  OK
+adaptive.channels.temperature.noise_floor                          0.15  OK
+adaptive.channels.humidity.noise_floor                              0.8  OK
+adaptive.channels.pressure.noise_floor                              0.3  OK
+adaptive.channels.light.noise_floor                                  30  OK
+adaptive.channels.humidity.use                                     True  OK
+adaptive.channels.pressure.use                                    False  OK
+adaptive.channels.light.use                                        True  OK
+adaptive.analyzer.variety_window_s                                   30  OK
+adaptive.analyzer.roc_window_s                                       10  OK
+adaptive.analyzer.baseline_tau_s                                     60  OK
+adaptive.stable_threshold                                             3  OK
+adaptive.active_threshold                                             8  OK
+adaptive.hysteresis_fraction                                        0.5  OK
+adaptive.ladders.stable                                    [20, 40, 60]  OK
+adaptive.ladders.active                                     [15, 10, 5]  OK
+adaptive.ladders.alert                                              [5]  OK
+adaptive.ladder_confirmations.stable                                  2  OK
+adaptive.ladder_confirmations.active                                  1  OK
+adaptive.event_threshold                                              8  OK
+adaptive.event_min_duration_s                                        10  OK
+adaptive.upload.upload_first_sample                                True  OK
+adaptive.upload.on_event                                           True  OK
+adaptive.upload.on_state_change                                    True  OK
+adaptive.upload.on_interval_change                                 True  OK
+adaptive.upload.heartbeat_s                                          60  OK
+adaptive.upload.delta_threshold                                       2  OK
+firmware.mqtt_keepalive_s                                           120  OK
+firmware.sensor_failures_before_unavailable                           3  OK
+firmware.use_bh1750                                                True  OK
+firmware.bh1750_i2c_addr                                             35  OK
+firmware.bh1750_meas_time_ms                                        180  OK
+firmware.use_soil_sensor                                           True  OK
+firmware.soil_adc_gpio                                                1  OK
+firmware.soil_adc_atten                                               3  OK
+firmware.soil_sample_count                                           16  OK
+firmware.soil_dry_raw                                                 0  OK
+firmware.soil_wet_raw                                                 0  OK
+
+structural checks
+check                                                          result
+--------------------------------------------------------------------------------------
+change_detector.h does not define CD_VARIETY_WINDOW_S          OK
+change_detector.h does not define CD_ROC_WINDOW_S              OK
+policy_config.c has no numeric literals                        OK
+CMakeLists.txt does not call require()                         OK
+CMakeLists.txt declares dependencies with REQUIRES             OK
+idf_component.yml does not declare a managed mqtt component    OK
+main.c does not short-circuit readiness into the read result   OK
+main.c counts a read failure from exactly one place            OK
+the counted failure sits inside 'if (sensor_read(...) != 0)'   OK
+main.c resets the streak only after the failure branch         OK
+power_mgmt.c does not stop Wi-Fi before sleeping               OK
+power_mgmt.c does not call esp_light_sleep_start               OK
+power_mgmt.c configures the PM subsystem (esp_pm_configure + light_sleep_enable) OK
+sdkconfig.defaults sets CONFIG_PM_ENABLE=y                     OK
+sdkconfig.defaults sets CONFIG_FREERTOS_USE_TICKLESS_IDLE=y    OK
+sdkconfig.defaults sets CONFIG_PM_LIGHT_SLEEP_CALLBACKS=y      OK
+sdkconfig.defaults sets CONFIG_PM_DFS_INIT_AUTO=n              OK
+tickless idle is enabled whenever PM is enabled                OK
+config.example.h rejects deep sleep at compile time            OK
+config.example.h cross-checks the MQTT keepalive against max_interval OK
+CMakeLists.txt REQUIRES esp_pm                                 OK
+sensor_bus.c creates the shared i2c bus                        OK
+sensor.c does not create its own i2c bus                       OK
+sensor_bme280.c does not create its own i2c bus                OK
+sensor_sht30.c does not create its own i2c bus                 OK
+sht30_proto.c has no ESP-IDF dependency                        OK
+CMakeLists.txt compiles sensor_bme280.c                        OK
+CMakeLists.txt compiles sensor_sht30.c                         OK
+CONFIG_AS_SENSOR_BACKEND selects a documented backend          OK
+
+PASS: all 69 checks passed

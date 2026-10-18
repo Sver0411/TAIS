@@ -1,0 +1,18 @@
+{
+  "history": {
+    "protected_base_files": 521,
+    "protected_old_ignored_files": 150108,
+    "submodules_unchanged": true,
+    "external_raw_stat_signatures_unchanged": true
+  },
+  "phase": {
+    "phase": "test",
+    "verified_rows": 10800,
+    "verified_artifacts": 13590,
+    "input_pairs_identical": true,
+    "every_original_metric_recomputed_from_saved_artifacts": true,
+    "no_policy_rerun": true,
+    "metrics_sha256": "015809a2a4a1f9c38edee899abeabd0cb1209b8f53d3b23cb3932b8fe27a74bd"
+  },
+  "verifier_sha256": "1c2ccbf8703446668398ef7fda4b7a7822eb6c5fc941dff91acacb8d48cfa680"
+}

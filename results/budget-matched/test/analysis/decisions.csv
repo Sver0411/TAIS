@@ -1,0 +1,4 @@
+budget,gate_multiplier,tais_multiplier,calibration_matched,test_matched,samples_gap,uploads_gap,recall_noninferior,fault_improvement,robustness,go
+B0.75,0.75,0.75,True,True,0.001534189605548441,0.003332983963945079,True,False,False,False
+B1.00,1.0,1.0,True,True,0.006544279012313232,0.006571049472420547,True,False,False,False
+B1.50,1.5,1.5,True,False,0.010297867570824109,0.005536124283844388,True,True,True,False

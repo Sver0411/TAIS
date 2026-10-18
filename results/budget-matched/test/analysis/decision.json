@@ -1,0 +1,169 @@
+{
+  "decision": "NO-GO",
+  "budgets": [
+    {
+      "budget": "B0.75",
+      "gate_multiplier": 0.75,
+      "tais_multiplier": 0.75,
+      "calibration_matched": true,
+      "test_matched": true,
+      "samples_gap": 0.001534189605548441,
+      "uploads_gap": 0.003332983963945079,
+      "recall_noninferior": true,
+      "fault_improvement": false,
+      "robustness": false,
+      "go": false
+    },
+    {
+      "budget": "B1.00",
+      "gate_multiplier": 1.0,
+      "tais_multiplier": 1.0,
+      "calibration_matched": true,
+      "test_matched": true,
+      "samples_gap": 0.006544279012313232,
+      "uploads_gap": 0.006571049472420547,
+      "recall_noninferior": true,
+      "fault_improvement": false,
+      "robustness": false,
+      "go": false
+    },
+    {
+      "budget": "B1.50",
+      "gate_multiplier": 1.5,
+      "tais_multiplier": 1.5,
+      "calibration_matched": true,
+      "test_matched": false,
+      "samples_gap": 0.010297867570824109,
+      "uploads_gap": 0.005536124283844388,
+      "recall_noninferior": true,
+      "fault_improvement": true,
+      "robustness": true,
+      "go": false
+    }
+  ],
+  "rule": "All predeclared matching,noninferiority,practical false-reduction,multiplicity and deletion-robustness gates",
+  "counts": {
+    "paired_intervals": 6222,
+    "absolute_intervals": 14152,
+    "deletion_checks": 249
+  },
+  "selection_sha256": "4fda73fa85edc541edc0f4a649279557b957781d2af051d3101365502fd27a75",
+  "source_manifest_sha256": "3b1e9e8c7b60cb9b75ac821f5e27a77a95aabbf684c533881a4424979dcd891a",
+  "frozen_plan_sha256": "3d935344040ab3b39ad1e38022a72ec35672d4a938af6c162184d788bc0936b8",
+  "phase": "test",
+  "rows": 10800,
+  "seeds": [
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199
+  ],
+  "scenarios": [
+    "clean_none",
+    "clean_event",
+    "clean_short",
+    "range_none_short",
+    "range_none_long",
+    "range_cross_short",
+    "range_cross_long",
+    "range_same_short",
+    "range_same_long",
+    "spike_none_short",
+    "spike_none_long",
+    "spike_cross_short",
+    "spike_cross_long",
+    "spike_same_short",
+    "spike_same_long",
+    "stuck_none_short",
+    "stuck_none_long",
+    "stuck_cross_short",
+    "stuck_cross_long",
+    "stuck_same_short",
+    "stuck_same_long",
+    "drift_none_short",
+    "drift_none_long",
+    "drift_cross_short",
+    "drift_cross_long",
+    "drift_same_short",
+    "drift_same_long",
+    "missing_none_short",
+    "missing_none_long",
+    "missing_cross_short",
+    "missing_cross_long",
+    "missing_same_short",
+    "missing_same_long",
+    "invalid_none_short",
+    "invalid_none_long",
+    "invalid_cross_short",
+    "invalid_cross_long",
+    "invalid_same_short",
+    "invalid_same_long",
+    "stable_offset_none_short",
+    "stable_offset_none_long",
+    "stable_offset_cross_short",
+    "stable_offset_cross_long",
+    "stable_offset_same_short",
+    "stable_offset_same_long"
+  ],
+  "points": [
+    [
+      "AdaptiveSense",
+      1.0
+    ],
+    [
+      "AdaptiveSense+TrustLog",
+      1.0
+    ],
+    [
+      "GateOnly",
+      0.75
+    ],
+    [
+      "GateOnly",
+      1.0
+    ],
+    [
+      "GateOnly",
+      1.5
+    ],
+    [
+      "TAIS",
+      0.75
+    ],
+    [
+      "TAIS",
+      1.0
+    ],
+    [
+      "TAIS",
+      1.5
+    ]
+  ],
+  "all_groups_seed_clustered": true
+}

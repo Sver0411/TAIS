@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "existing_changes_only_additions": true,
+  "relative_links_checked": [
+    {
+      "source": "docs/BUDGET_MATCHED_EXPERIMENT_REPORT.md",
+      "target": "BUDGET_MATCHED_EXPERIMENT_PREREGISTRATION.md"
+    },
+    {
+      "source": "docs/BUDGET_MATCHED_EXPERIMENT_REPORT.md",
+      "target": "../configs/budget-matched.json"
+    },
+    {
+      "source": "docs/BUDGET_MATCHED_EXPERIMENT_REPORT.md",
+      "target": "../results/budget-matched/selection.json"
+    },
+    {
+      "source": "docs/BUDGET_MATCHED_EXPERIMENT_REPORT.md",
+      "target": "../results/budget-matched/test/analysis/budget_tradeoff.png"
+    },
+    {
+      "source": "docs/BUDGET_MATCHED_EXPERIMENT_REPORT.md",
+      "target": "../results/budget-matched/checks/upstream_checks.json"
+    },
+    {
+      "source": "docs/BUDGET_MATCHED_EXPERIMENT_REPORT.md",
+      "target": "../results/budget-matched/checks/final_verification.json"
+    },
+    {
+      "source": "docs/BUDGET_MATCHED_EXPERIMENT_REPORT.md",
+      "target": "../results/budget-matched/checks/environment.json"
+    },
+    {
+      "source": "docs/BUDGET_MATCHED_EXPERIMENT_REPORT.md",
+      "target": "../results/budget-matched/test/analysis/paired_intervals.csv"
+    },
+    {
+      "source": "docs/BUDGET_MATCHED_EXPERIMENT_REPORT.md",
+      "target": "../results/budget-matched/test/analysis/absolute_intervals.csv"
+    },
+    {
+      "source": "docs/BUDGET_MATCHED_EXPERIMENT_REPORT.md",
+      "target": "../results/budget-matched/test/analysis/common_matched_event_pairs.csv"
+    },
+    {
+      "source": "docs/BUDGET_MATCHED_EXPERIMENT_REPORT.md",
+      "target": "../results/budget-matched/checks/delivery_integrity.json"
+    },
+    {
+      "source": "docs/BUDGET_MATCHED_EXPERIMENT_REPORT.md",
+      "target": "../results/budget-matched/README.md"
+    },
+    {
+      "source": "results/budget-matched/README.md",
+      "target": "../../docs/BUDGET_MATCHED_EXPERIMENT_PREREGISTRATION.md"
+    },
+    {
+      "source": "results/budget-matched/README.md",
+      "target": "../../docs/BUDGET_MATCHED_EXPERIMENT_REPORT.md"
+    },
+    {
+      "source": "results/budget-matched/README.md",
+      "target": "../../configs/budget-matched.json"
+    },
+    {
+      "source": "docs/BUDGET_MATCHED_EXPERIMENT_PREREGISTRATION.md",
+      "target": "../results/budget-matched/seed-audit.json"
+    },
+    {
+      "source": "docs/BUDGET_MATCHED_EXPERIMENT_PREREGISTRATION.md",
+      "target": "../configs/budget-matched.json"
+    }
+  ],
+  "base": "97feccb36acb6790b40be31e3cee1661e8811a61"
+}
