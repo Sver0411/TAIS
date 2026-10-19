@@ -1,0 +1,3 @@
+# Preserve actual PTY CR/escape bytes and verbatim pytest failure whitespace.
+*.ansi -text -diff
+checks/pytest-core-initial.txt -text -diff

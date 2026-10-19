@@ -1,0 +1,6 @@
+{
+  "frames_checked": 40,
+  "all_business_fields_and_float_bits_match": true,
+  "last_state_matches_last_actual_frame": true,
+  "scope": "separate ideal replay of original unimpaired TX frames; not lost-frame recovery"
+}

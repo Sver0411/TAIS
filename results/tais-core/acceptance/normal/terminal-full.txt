@@ -1,0 +1,921 @@
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=0s rows=1 | SENDER sampled=0s next_due=20.0s
+samples=1 uploads=1 sample_upload=True sample_frame=35B last_tx=0s last_frame=35B total_application_bytes=35
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.101020121831503 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.659693627999175 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=1 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=0s age=0s (no filling of dropped frames)
+  temperature: value=24.101020121831503 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.659693627999175 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=20s rows=21 | SENDER sampled=20s next_due=40.0s
+samples=2 uploads=1 sample_upload=False sample_frame=0B last_tx=0s last_frame=35B total_application_bytes=35
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.9616135274287 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.74329252322458 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=1 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=0s age=20s (no filling of dropped frames)
+  temperature: value=24.101020121831503 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.659693627999175 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=40s rows=41 | SENDER sampled=40s next_due=80.0s
+samples=3 uploads=2 sample_upload=True sample_frame=35B last_tx=40s last_frame=35B total_application_bytes=70
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.00468008860595 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.19016247074236 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=2 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=40s age=0s (no filling of dropped frames)
+  temperature: value=24.00468008860595 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.19016247074236 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=80s rows=81 | SENDER sampled=80s next_due=120.0s
+samples=4 uploads=2 sample_upload=False sample_frame=0B last_tx=40s last_frame=35B total_application_bytes=70
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.08454913601757 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.018456278352126 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=2 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=40s age=40s (no filling of dropped frames)
+  temperature: value=24.00468008860595 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.19016247074236 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=120s rows=121 | SENDER sampled=120s next_due=180s
+samples=5 uploads=3 sample_upload=True sample_frame=35B last_tx=120s last_frame=35B total_application_bytes=105
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.103271501396726 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.952796600027 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=3 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=120s age=0s (no filling of dropped frames)
+  temperature: value=24.103271501396726 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.952796600027 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=160s rows=161 | SENDER sampled=120s next_due=180s
+samples=5 uploads=3 sample_upload=True sample_frame=35B last_tx=120s last_frame=35B total_application_bytes=105
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.103271501396726 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.952796600027 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=3 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=120s age=40s (no filling of dropped frames)
+  temperature: value=24.103271501396726 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.952796600027 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=180s rows=181 | SENDER sampled=180s next_due=240s
+samples=6 uploads=4 sample_upload=True sample_frame=36B last_tx=180s last_frame=36B total_application_bytes=141
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.04338090726982 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.58915818164349 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=4 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=180s age=0s (no filling of dropped frames)
+  temperature: value=24.04338090726982 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.58915818164349 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=220s rows=221 | SENDER sampled=180s next_due=240s
+samples=6 uploads=4 sample_upload=True sample_frame=36B last_tx=180s last_frame=36B total_application_bytes=141
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.04338090726982 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.58915818164349 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=4 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=180s age=40s (no filling of dropped frames)
+  temperature: value=24.04338090726982 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.58915818164349 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=240s rows=241 | SENDER sampled=240s next_due=300s
+samples=7 uploads=5 sample_upload=True sample_frame=36B last_tx=240s last_frame=36B total_application_bytes=177
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.037527851896975 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.1901464871446 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=5 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=240s age=0s (no filling of dropped frames)
+  temperature: value=24.037527851896975 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.1901464871446 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=280s rows=281 | SENDER sampled=240s next_due=300s
+samples=7 uploads=5 sample_upload=True sample_frame=36B last_tx=240s last_frame=36B total_application_bytes=177
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.037527851896975 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.1901464871446 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=5 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=240s age=40s (no filling of dropped frames)
+  temperature: value=24.037527851896975 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.1901464871446 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=300s rows=301 | SENDER sampled=300s next_due=360s
+samples=8 uploads=6 sample_upload=True sample_frame=36B last_tx=300s last_frame=36B total_application_bytes=213
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.146349738282947 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.15079862871133 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=6 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=300s age=0s (no filling of dropped frames)
+  temperature: value=24.146349738282947 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.15079862871133 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=339s rows=340 | SENDER sampled=300s next_due=360s
+samples=8 uploads=6 sample_upload=True sample_frame=36B last_tx=300s last_frame=36B total_application_bytes=213
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.146349738282947 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.15079862871133 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=6 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=300s age=39s (no filling of dropped frames)
+  temperature: value=24.146349738282947 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.15079862871133 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=360s rows=361 | SENDER sampled=360s next_due=420s
+samples=9 uploads=7 sample_upload=True sample_frame=36B last_tx=360s last_frame=36B total_application_bytes=249
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.019985533674856 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.36896465739914 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=7 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=360s age=0s (no filling of dropped frames)
+  temperature: value=24.019985533674856 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.36896465739914 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=398s rows=399 | SENDER sampled=360s next_due=420s
+samples=9 uploads=7 sample_upload=True sample_frame=36B last_tx=360s last_frame=36B total_application_bytes=249
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.019985533674856 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.36896465739914 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=7 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=360s age=38s (no filling of dropped frames)
+  temperature: value=24.019985533674856 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.36896465739914 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=420s rows=421 | SENDER sampled=420s next_due=480s
+samples=10 uploads=8 sample_upload=True sample_frame=36B last_tx=420s last_frame=36B total_application_bytes=285
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.991404397755442 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.43009156328305 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=8 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=420s age=0s (no filling of dropped frames)
+  temperature: value=23.991404397755442 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.43009156328305 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=454s rows=455 | SENDER sampled=420s next_due=480s
+samples=10 uploads=8 sample_upload=True sample_frame=36B last_tx=420s last_frame=36B total_application_bytes=285
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.991404397755442 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.43009156328305 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=8 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=420s age=34s (no filling of dropped frames)
+  temperature: value=23.991404397755442 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.43009156328305 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=473s rows=474 | SENDER sampled=420s next_due=480s
+samples=10 uploads=8 sample_upload=True sample_frame=36B last_tx=420s last_frame=36B total_application_bytes=285
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.991404397755442 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.43009156328305 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=8 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=420s age=53s (no filling of dropped frames)
+  temperature: value=23.991404397755442 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.43009156328305 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=480s rows=481 | SENDER sampled=480s next_due=540s
+samples=11 uploads=9 sample_upload=True sample_frame=36B last_tx=480s last_frame=36B total_application_bytes=321
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.959897766778198 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.031191836336575 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=9 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=480s age=0s (no filling of dropped frames)
+  temperature: value=23.959897766778198 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.031191836336575 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=513s rows=514 | SENDER sampled=480s next_due=540s
+samples=11 uploads=9 sample_upload=True sample_frame=36B last_tx=480s last_frame=36B total_application_bytes=321
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.959897766778198 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.031191836336575 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=9 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=480s age=33s (no filling of dropped frames)
+  temperature: value=23.959897766778198 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.031191836336575 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=540s rows=541 | SENDER sampled=540s next_due=600s
+samples=12 uploads=10 sample_upload=True sample_frame=36B last_tx=540s last_frame=36B total_application_bytes=357
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.91779169083124 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.87693813301897 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=10 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=540s age=0s (no filling of dropped frames)
+  temperature: value=23.91779169083124 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.87693813301897 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=577s rows=578 | SENDER sampled=540s next_due=600s
+samples=12 uploads=10 sample_upload=True sample_frame=36B last_tx=540s last_frame=36B total_application_bytes=357
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.91779169083124 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.87693813301897 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=10 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=540s age=37s (no filling of dropped frames)
+  temperature: value=23.91779169083124 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.87693813301897 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=600s rows=601 | SENDER sampled=600s next_due=660s
+samples=13 uploads=11 sample_upload=True sample_frame=36B last_tx=600s last_frame=36B total_application_bytes=393
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.863863569977074 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.226142852921626 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=11 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=600s age=0s (no filling of dropped frames)
+  temperature: value=23.863863569977074 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.226142852921626 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=639s rows=640 | SENDER sampled=600s next_due=660s
+samples=13 uploads=11 sample_upload=True sample_frame=36B last_tx=600s last_frame=36B total_application_bytes=393
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.863863569977074 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.226142852921626 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=11 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=600s age=39s (no filling of dropped frames)
+  temperature: value=23.863863569977074 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.226142852921626 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=660s rows=661 | SENDER sampled=660s next_due=720s
+samples=14 uploads=12 sample_upload=True sample_frame=36B last_tx=660s last_frame=36B total_application_bytes=429
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.93038423167601 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.1324583756399 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=12 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=660s age=0s (no filling of dropped frames)
+  temperature: value=23.93038423167601 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.1324583756399 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=689s rows=690 | SENDER sampled=660s next_due=720s
+samples=14 uploads=12 sample_upload=True sample_frame=36B last_tx=660s last_frame=36B total_application_bytes=429
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.93038423167601 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.1324583756399 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=12 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=660s age=29s (no filling of dropped frames)
+  temperature: value=23.93038423167601 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.1324583756399 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=720s rows=721 | SENDER sampled=720s next_due=780s
+samples=15 uploads=13 sample_upload=True sample_frame=36B last_tx=720s last_frame=36B total_application_bytes=465
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.11634467838243 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.74492791188965 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=13 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=720s age=0s (no filling of dropped frames)
+  temperature: value=24.11634467838243 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.74492791188965 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=759s rows=760 | SENDER sampled=720s next_due=780s
+samples=15 uploads=13 sample_upload=True sample_frame=36B last_tx=720s last_frame=36B total_application_bytes=465
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.11634467838243 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.74492791188965 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=13 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=720s age=39s (no filling of dropped frames)
+  temperature: value=24.11634467838243 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.74492791188965 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=780s rows=781 | SENDER sampled=780s next_due=840s
+samples=16 uploads=14 sample_upload=True sample_frame=36B last_tx=780s last_frame=36B total_application_bytes=501
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.126641360597638 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.95303553769861 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=14 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=780s age=0s (no filling of dropped frames)
+  temperature: value=24.126641360597638 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.95303553769861 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=820s rows=821 | SENDER sampled=780s next_due=840s
+samples=16 uploads=14 sample_upload=True sample_frame=36B last_tx=780s last_frame=36B total_application_bytes=501
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.126641360597638 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.95303553769861 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=14 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=780s age=40s (no filling of dropped frames)
+  temperature: value=24.126641360597638 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.95303553769861 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=840s rows=841 | SENDER sampled=840s next_due=900s
+samples=17 uploads=15 sample_upload=True sample_frame=36B last_tx=840s last_frame=36B total_application_bytes=537
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.998217609673762 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.70166081183623 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=15 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=840s age=0s (no filling of dropped frames)
+  temperature: value=23.998217609673762 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.70166081183623 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=880s rows=881 | SENDER sampled=840s next_due=900s
+samples=17 uploads=15 sample_upload=True sample_frame=36B last_tx=840s last_frame=36B total_application_bytes=537
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.998217609673762 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.70166081183623 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=15 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=840s age=40s (no filling of dropped frames)
+  temperature: value=23.998217609673762 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.70166081183623 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=900s rows=901 | SENDER sampled=900s next_due=960s
+samples=18 uploads=16 sample_upload=True sample_frame=36B last_tx=900s last_frame=36B total_application_bytes=573
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.96745623719152 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.11207782727206 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=16 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=900s age=0s (no filling of dropped frames)
+  temperature: value=23.96745623719152 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.11207782727206 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=940s rows=941 | SENDER sampled=900s next_due=960s
+samples=18 uploads=16 sample_upload=True sample_frame=36B last_tx=900s last_frame=36B total_application_bytes=573
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.96745623719152 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.11207782727206 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=16 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=900s age=40s (no filling of dropped frames)
+  temperature: value=23.96745623719152 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.11207782727206 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=960s rows=961 | SENDER sampled=960s next_due=1020s
+samples=19 uploads=17 sample_upload=True sample_frame=36B last_tx=960s last_frame=36B total_application_bytes=609
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.968635888989944 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.8748925508345 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=17 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=960s age=0s (no filling of dropped frames)
+  temperature: value=23.968635888989944 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.8748925508345 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=999s rows=1000 | SENDER sampled=960s next_due=1020s
+samples=19 uploads=17 sample_upload=True sample_frame=36B last_tx=960s last_frame=36B total_application_bytes=609
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.968635888989944 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.8748925508345 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=17 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=960s age=39s (no filling of dropped frames)
+  temperature: value=23.968635888989944 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.8748925508345 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1020s rows=1021 | SENDER sampled=1020s next_due=1080s
+samples=20 uploads=18 sample_upload=True sample_frame=36B last_tx=1020s last_frame=36B total_application_bytes=645
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.980309037776905 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.72187894312856 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=18 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1020s age=0s (no filling of dropped frames)
+  temperature: value=23.980309037776905 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.72187894312856 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1055s rows=1056 | SENDER sampled=1020s next_due=1080s
+samples=20 uploads=18 sample_upload=True sample_frame=36B last_tx=1020s last_frame=36B total_application_bytes=645
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.980309037776905 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.72187894312856 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=18 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1020s age=35s (no filling of dropped frames)
+  temperature: value=23.980309037776905 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.72187894312856 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1080s rows=1081 | SENDER sampled=1080s next_due=1140s
+samples=21 uploads=19 sample_upload=True sample_frame=36B last_tx=1080s last_frame=36B total_application_bytes=681
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.992793771223422 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.877382957360965 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=19 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1080s age=0s (no filling of dropped frames)
+  temperature: value=23.992793771223422 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.877382957360965 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1120s rows=1121 | SENDER sampled=1080s next_due=1140s
+samples=21 uploads=19 sample_upload=True sample_frame=36B last_tx=1080s last_frame=36B total_application_bytes=681
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.992793771223422 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.877382957360965 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=19 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1080s age=40s (no filling of dropped frames)
+  temperature: value=23.992793771223422 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.877382957360965 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1140s rows=1141 | SENDER sampled=1140s next_due=1200s
+samples=22 uploads=20 sample_upload=True sample_frame=36B last_tx=1140s last_frame=36B total_application_bytes=717
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.971096813951846 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.4279419468561 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=20 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1140s age=0s (no filling of dropped frames)
+  temperature: value=23.971096813951846 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.4279419468561 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1180s rows=1181 | SENDER sampled=1140s next_due=1200s
+samples=22 uploads=20 sample_upload=True sample_frame=36B last_tx=1140s last_frame=36B total_application_bytes=717
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.971096813951846 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.4279419468561 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=20 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1140s age=40s (no filling of dropped frames)
+  temperature: value=23.971096813951846 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.4279419468561 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1200s rows=1201 | SENDER sampled=1200s next_due=1260s
+samples=23 uploads=21 sample_upload=True sample_frame=36B last_tx=1200s last_frame=36B total_application_bytes=753
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.088136390662356 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.99302483358242 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=21 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1200s age=0s (no filling of dropped frames)
+  temperature: value=24.088136390662356 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.99302483358242 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1240s rows=1241 | SENDER sampled=1200s next_due=1260s
+samples=23 uploads=21 sample_upload=True sample_frame=36B last_tx=1200s last_frame=36B total_application_bytes=753
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.088136390662356 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.99302483358242 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=21 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1200s age=40s (no filling of dropped frames)
+  temperature: value=24.088136390662356 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.99302483358242 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1260s rows=1261 | SENDER sampled=1260s next_due=1320s
+samples=24 uploads=22 sample_upload=True sample_frame=36B last_tx=1260s last_frame=36B total_application_bytes=789
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.89598217822399 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.10622251604641 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=22 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1260s age=0s (no filling of dropped frames)
+  temperature: value=23.89598217822399 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.10622251604641 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1300s rows=1301 | SENDER sampled=1260s next_due=1320s
+samples=24 uploads=22 sample_upload=True sample_frame=36B last_tx=1260s last_frame=36B total_application_bytes=789
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.89598217822399 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.10622251604641 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=22 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1260s age=40s (no filling of dropped frames)
+  temperature: value=23.89598217822399 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.10622251604641 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1320s rows=1321 | SENDER sampled=1320s next_due=1380s
+samples=25 uploads=23 sample_upload=True sample_frame=36B last_tx=1320s last_frame=36B total_application_bytes=825
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.067467460594116 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.28538242483906 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=23 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1320s age=0s (no filling of dropped frames)
+  temperature: value=24.067467460594116 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.28538242483906 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1360s rows=1361 | SENDER sampled=1320s next_due=1380s
+samples=25 uploads=23 sample_upload=True sample_frame=36B last_tx=1320s last_frame=36B total_application_bytes=825
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.067467460594116 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.28538242483906 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=23 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1320s age=40s (no filling of dropped frames)
+  temperature: value=24.067467460594116 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.28538242483906 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1380s rows=1381 | SENDER sampled=1380s next_due=1440s
+samples=26 uploads=24 sample_upload=True sample_frame=36B last_tx=1380s last_frame=36B total_application_bytes=861
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.14177705293572 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.7739943033 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=24 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1380s age=0s (no filling of dropped frames)
+  temperature: value=24.14177705293572 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.7739943033 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1420s rows=1421 | SENDER sampled=1380s next_due=1440s
+samples=26 uploads=24 sample_upload=True sample_frame=36B last_tx=1380s last_frame=36B total_application_bytes=861
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.14177705293572 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.7739943033 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=24 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1380s age=40s (no filling of dropped frames)
+  temperature: value=24.14177705293572 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.7739943033 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1440s rows=1441 | SENDER sampled=1440s next_due=1500s
+samples=27 uploads=25 sample_upload=True sample_frame=36B last_tx=1440s last_frame=36B total_application_bytes=897
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.98488078454019 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.985296448504144 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=25 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1440s age=0s (no filling of dropped frames)
+  temperature: value=23.98488078454019 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.985296448504144 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1480s rows=1481 | SENDER sampled=1440s next_due=1500s
+samples=27 uploads=25 sample_upload=True sample_frame=36B last_tx=1440s last_frame=36B total_application_bytes=897
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.98488078454019 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.985296448504144 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=25 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1440s age=40s (no filling of dropped frames)
+  temperature: value=23.98488078454019 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.985296448504144 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1500s rows=1501 | SENDER sampled=1500s next_due=1560s
+samples=28 uploads=26 sample_upload=True sample_frame=36B last_tx=1500s last_frame=36B total_application_bytes=933
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.10376036033815 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.93876136452777 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=26 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1500s age=0s (no filling of dropped frames)
+  temperature: value=24.10376036033815 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.93876136452777 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1540s rows=1541 | SENDER sampled=1500s next_due=1560s
+samples=28 uploads=26 sample_upload=True sample_frame=36B last_tx=1500s last_frame=36B total_application_bytes=933
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.10376036033815 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.93876136452777 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=26 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1500s age=40s (no filling of dropped frames)
+  temperature: value=24.10376036033815 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.93876136452777 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1560s rows=1561 | SENDER sampled=1560s next_due=1620s
+samples=29 uploads=27 sample_upload=True sample_frame=36B last_tx=1560s last_frame=36B total_application_bytes=969
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.974966809830626 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.810194471295816 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=27 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1560s age=0s (no filling of dropped frames)
+  temperature: value=23.974966809830626 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.810194471295816 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1600s rows=1601 | SENDER sampled=1560s next_due=1620s
+samples=29 uploads=27 sample_upload=True sample_frame=36B last_tx=1560s last_frame=36B total_application_bytes=969
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.974966809830626 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.810194471295816 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=27 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1560s age=40s (no filling of dropped frames)
+  temperature: value=23.974966809830626 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.810194471295816 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1620s rows=1621 | SENDER sampled=1620s next_due=1680s
+samples=30 uploads=28 sample_upload=True sample_frame=36B last_tx=1620s last_frame=36B total_application_bytes=1005
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.002877784487737 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.39508258945932 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=28 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1620s age=0s (no filling of dropped frames)
+  temperature: value=24.002877784487737 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.39508258945932 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1660s rows=1661 | SENDER sampled=1620s next_due=1680s
+samples=30 uploads=28 sample_upload=True sample_frame=36B last_tx=1620s last_frame=36B total_application_bytes=1005
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.002877784487737 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.39508258945932 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=28 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1620s age=40s (no filling of dropped frames)
+  temperature: value=24.002877784487737 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.39508258945932 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1680s rows=1681 | SENDER sampled=1680s next_due=1740s
+samples=31 uploads=29 sample_upload=True sample_frame=36B last_tx=1680s last_frame=36B total_application_bytes=1041
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.87472958214344 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.89804055496754 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=29 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1680s age=0s (no filling of dropped frames)
+  temperature: value=23.87472958214344 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.89804055496754 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1720s rows=1721 | SENDER sampled=1680s next_due=1740s
+samples=31 uploads=29 sample_upload=True sample_frame=36B last_tx=1680s last_frame=36B total_application_bytes=1041
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.87472958214344 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.89804055496754 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=29 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1680s age=40s (no filling of dropped frames)
+  temperature: value=23.87472958214344 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.89804055496754 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1740s rows=1741 | SENDER sampled=1740s next_due=1800s
+samples=32 uploads=30 sample_upload=True sample_frame=36B last_tx=1740s last_frame=36B total_application_bytes=1077
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.04404197606581 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.18104836290798 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=30 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1740s age=0s (no filling of dropped frames)
+  temperature: value=24.04404197606581 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.18104836290798 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1780s rows=1781 | SENDER sampled=1740s next_due=1800s
+samples=32 uploads=30 sample_upload=True sample_frame=36B last_tx=1740s last_frame=36B total_application_bytes=1077
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.04404197606581 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.18104836290798 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=30 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1740s age=40s (no filling of dropped frames)
+  temperature: value=24.04404197606581 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.18104836290798 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+TAIS CORE | GateOnly | Stateless Binary v1 | SYNTHETIC DEMO clean_none seed=20 | not device measurements
+SOURCE clock=1799s rows=1800 | SENDER sampled=1740s next_due=1800s
+samples=32 uploads=30 sample_upload=True sample_frame=36B last_tx=1740s last_frame=36B total_application_bytes=1077
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.04404197606581 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.18104836290798 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=30 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1740s age=59s (no filling of dropped frames)
+  temperature: value=24.04404197606581 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.18104836290798 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+{
+  "status": "COMPLETE",
+  "error": null,
+  "input_label": "SYNTHETIC DEMO clean_none seed=20 | not device measurements",
+  "sender": {
+    "source_rows": 1800,
+    "samples": 32,
+    "uploads": 30,
+    "binary_bytes": 1077
+  },
+  "health_sample_counts": {
+    "temperature:HEALTHY": 32,
+    "humidity:HEALTHY": 32
+  },
+  "link": {
+    "sent": 30,
+    "sent_bytes": 1077,
+    "dropped": 0,
+    "altered": 0
+  },
+  "receiver": {
+    "received": 30,
+    "received_bytes": 1077,
+    "decoded": 30,
+    "updates": 30,
+    "corrupt": 0,
+    "out_of_order": 0,
+    "duplicate": 0,
+    "conflict": 0
+  },
+  "truth_metrics": {
+    "source": "synthetic independent intervention labels; offline only",
+    "truth": [],
+    "faults": [],
+    "tp": 0,
+    "unmatched": 0,
+    "missed": 0,
+    "precision": null,
+    "recall": null,
+    "f1": null,
+    "fault_episodes": 0,
+    "flagged_during_fault": 0
+  },
+  "truth_metrics_reason": "offline synthetic truth; not available to sender or receiver",
+  "verification": {
+    "frozen_gateonly_records_and_reports_identical": true,
+    "tx_frames": 30,
+    "actual_binary_bytes_recomputed": 1077,
+    "received_valid_frames_exact": 30,
+    "all_valid_received_envelopes_match_sender": true
+  },
+  "journal_sha256": "1874d24e7265e8271274ab74348d5fc3d853aa100ccf12b936c1afb2bdb29064"
+}

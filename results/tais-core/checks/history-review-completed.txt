@@ -1,0 +1,31 @@
+{
+  "scope": "Historical BM-1 seeds170-199; all45 scenarios; not new validation",
+  "runs": 5400,
+  "uploads": 191623,
+  "actual_binary_bytes_recomputed": 6744258,
+  "all_frames_lossless": true,
+  "scheduler_rerun": false,
+  "thresholds_selected": false,
+  "baseline": "AdaptiveSense+TrustLog multiplier1; NOT resource-matched to GateOnly",
+  "gate_points": [
+    0.75,
+    1.0,
+    1.5
+  ],
+  "bootstrap": "10000 paired whole-seed resamples; 30 clusters",
+  "interval_scope": "Descriptive historical comparisons, no new superiority test; family3 per metric",
+  "bm1_source_commit": "7600f2c1d0093bfe840d9c35d3ae1d3bfe7433ce",
+  "source_sha256": {
+    "results/budget-matched/test/metrics.csv": "015809a2a4a1f9c38edee899abeabd0cb1209b8f53d3b23cb3932b8fe27a74bd",
+    "results/budget-matched/test/manifest.json": "3b1e9e8c7b60cb9b75ac821f5e27a77a95aabbf684c533881a4424979dcd891a",
+    "configs/experiment.yaml": "1be38a7b47e5e0104435086587d543dfbaa74c320389971aa2f9ecf96779dae2",
+    "docs/BUDGET_MATCHED_EXPERIMENT_REPORT.md": "4cf6211e41ba9f3c019bdd11d8ba1d819710ad6cf6a92535eed047e93cf27fc9",
+    "examples/tais-core/historical_review.py": "7a52a48567cace082c6bac4e6ecc540246209e7500174098b301881898866a1a"
+  },
+  "outputs": {
+    "summary.csv": "556f605b944a6eae9cebc79997ad4673cfaa8c1d1e2cf985e431abd40ae1b1cd",
+    "frozen_rows.csv": "228d333ce45fba39b899aad5fec6b917cb7ee28a2b954b84cb4e74e91d252bbb",
+    "paired_intervals.csv": "c9b78f64f3653d4dec2c10b6633991786b7f0d6f7d6be2a4ee3b3bba55d8c7ed",
+    "per_run_encoding_audit.csv": "0f644237d67c9fc68b1daa6b89a59b5391ee5af5df59d2f59401d5a6b6e04837"
+  }
+}

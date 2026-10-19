@@ -1,0 +1,51 @@
+{
+  "policy": "GateOnly",
+  "multiplier": 1.0,
+  "wire_version": 1,
+  "input_label": "SYNTHETIC DEMO missing_cross_long seed=20 | not device measurements",
+  "source_commit": "2ea17b39a502e32136333b0987d72c613cccbd70",
+  "command": [
+    "examples/tais-core/run.py",
+    "--scenario",
+    "missing_cross_long",
+    "--pace",
+    "0",
+    "--ui",
+    "log",
+    "--verify",
+    "--out",
+    "results/tais-core/acceptance/fault-event"
+  ],
+  "layout": {
+    "channels": [
+      "temperature",
+      "humidity"
+    ],
+    "layout_id": 1,
+    "version": 1
+  },
+  "mapping_preprovisioned": true,
+  "descriptor_bytes_not_transmitted": 65,
+  "source_csv_sha256": null,
+  "config_sha256": "1be38a7b47e5e0104435086587d543dfbaa74c320389971aa2f9ecf96779dae2",
+  "transport": "local bounded Python frame link; no ACK, radio or network headers",
+  "failures": {
+    "drop_every": 0,
+    "corrupt_every": 0,
+    "reorder_pairs": false
+  },
+  "source_sha256": {
+    "src/tais/core_stream.py": "9e2788136c26d415b2b9088cbe33e85f31ac9ee5d6e3dba7bbcce288a3c882af",
+    "examples/tais-core/run.py": "e9d894dfa1c5299f352bac6c222f3381c8c1b44124340e8f6654ae2cd4c7d6d6",
+    "src/tais/scheduler.py": "9ab0b073e7fdb6d1293e3b6fc6cbae7f6de1cb55363bb48986335c8c602f5609",
+    "src/tais/replay.py": "59508d037fb153e2df242f81eca509f70128f536a8efd655889c466ba3f35dd1",
+    "src/tais/trust.py": "7dda86dd97fc435863368a3dbdb65610ed412b8d529821ecd9959608ccdd645e",
+    "src/tais/trust_bridge.c": "2bc01e19185922291d39a89aee9941a10eaf1b9ba1b15dffab308d7acb58c68e",
+    "src/tais/wire_codec.py": "944522828d4562dffe21d7f522d382f7e105eceaed7aa9ceeec1d05acdc0030f",
+    "configs/experiment.yaml": "1be38a7b47e5e0104435086587d543dfbaa74c320389971aa2f9ecf96779dae2",
+    "vendor/SensorTrust/core/sensor_trust.c": "84ff663157edb012af0290cf9f0f1d6400cee382f47ea272e8ec2089e59a2b90",
+    "vendor/SensorTrust/core/sensor_trust.h": "d81eba8192d60dbdf480ffaa8280d0ec46d5c2463c1ca7035c52a87aeff15089",
+    "vendor/AdaptiveSense/simulator/scoring.py": "e914d6d81faff710b3599f5f45e6a7db333a5e8fe2e250519d00c5cfd21d0837",
+    "vendor/AdaptiveSense/simulator/adaptive.py": "12bb92dac735ed699c7aeac23b23823d7ab93be78917fe8de3c96cb7102b8661"
+  }
+}

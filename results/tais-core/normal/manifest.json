@@ -1,0 +1,37 @@
+{
+  "policy": "GateOnly",
+  "multiplier": 1.0,
+  "wire_version": 1,
+  "input_label": "SYNTHETIC DEMO clean_none seed=20 | not device measurements",
+  "source_commit": "2ea17b39a502e32136333b0987d72c613cccbd70",
+  "command": [
+    "examples/tais-core/run.py",
+    "--scenario",
+    "clean_none",
+    "--pace",
+    "0",
+    "--ui",
+    "quiet",
+    "--verify",
+    "--out",
+    "results/tais-core/normal"
+  ],
+  "layout": {
+    "channels": [
+      "temperature",
+      "humidity"
+    ],
+    "layout_id": 1,
+    "version": 1
+  },
+  "mapping_preprovisioned": true,
+  "descriptor_bytes_not_transmitted": 65,
+  "source_csv_sha256": null,
+  "config_sha256": "1be38a7b47e5e0104435086587d543dfbaa74c320389971aa2f9ecf96779dae2",
+  "transport": "local bounded Python frame link; no ACK, radio or network headers",
+  "failures": {
+    "drop_every": 0,
+    "corrupt_every": 0,
+    "reorder_pairs": false
+  }
+}

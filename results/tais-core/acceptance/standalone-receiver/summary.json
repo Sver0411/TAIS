@@ -1,0 +1,39 @@
+{
+  "receiver": {
+    "received": 40,
+    "received_bytes": 1285,
+    "decoded": 40,
+    "updates": 40,
+    "corrupt": 0,
+    "out_of_order": 0,
+    "duplicate": 0,
+    "conflict": 0
+  },
+  "invalid_text_lines": 0,
+  "latest": {
+    "timestamp": 1785,
+    "values": {
+      "temperature": 23.932528857385783,
+      "humidity": 44.73438992198787
+    },
+    "environment_active": {
+      "temperature": false,
+      "humidity": false
+    },
+    "health": {
+      "temperature": {
+        "state": "HEALTHY",
+        "score": 100,
+        "flags": 0
+      },
+      "humidity": {
+        "state": "HEALTHY",
+        "score": 100,
+        "flags": 0
+      }
+    }
+  },
+  "wire_version": 1,
+  "layout_id": 1,
+  "scope": "independent local consumer; hex framing is inspection only"
+}
