@@ -1,0 +1,33 @@
+.....................................................................    [100%]
+69 passed in 4.64s
+{
+  "status": "PASS",
+  "runs": 12880,
+  "event_rows": 26880,
+  "fault_rows": 14868,
+  "archive_digests": 0,
+  "frames_roundtripped": 0,
+  "seed_clusters": 20,
+  "frozen_sources_unchanged": true
+}
+test 703 644 runs
+test 702 644 runs
+test 701 644 runs
+test 700 644 runs
+test 705 644 runs
+test 704 644 runs
+test 707 644 runs
+test 706 644 runs
+test 708 644 runs
+test 709 644 runs
+test 710 644 runs
+test 711 644 runs
+test 712 644 runs
+test 713 644 runs
+test 714 644 runs
+test 715 644 runs
+test 716 644 runs
+test 718 644 runs
+test 717 644 runs
+test 719 644 runs
+Analyzed 12880 runs; 390 event groups; 854 paired intervals

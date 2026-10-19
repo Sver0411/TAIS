@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "runs": 12880,
+  "seed_clusters": 20,
+  "methods": 14,
+  "scenarios": 46,
+  "archive_digests": 14920,
+  "frames_roundtripped": 1336537,
+  "matched_csv_and_histogram_sha256": {
+    "test/metrics.csv": "da5dd5ebef3026974e1c0c734baa9c93f16cc326f590112662634d7ee9dc577b",
+    "test/events.csv": "439a227d65e2d3b818d77c074d2a00f8a62636588d7c06afe88600218519c2c8",
+    "test/faults.csv": "ab8b8172ce355c32d5a119109d8bfc8e5e8f06e437d8be7683beab89b13afd8f",
+    "test/pooled_age.csv": "73bbbf9d5d1748bcf48799878e9aa36a2ed1a7ae9a8c97bdce6bb8043f91045e",
+    "test/age_histograms.json": "b914cafc1033acf29b17be12fbe8ee200d60cb6ed8d4c50f874fa6f4e236935e",
+    "test/analysis/budget_comparisons.csv": "6795e8c671a547e7112f90ced6f8df3f7c980e71a1910d275b8f401beba3f349",
+    "test/analysis/common_event_delays.csv": "604e0a9645072feb009428d135dfa31d403d24476e848ce3637f1485bad7d1bd",
+    "test/analysis/cross_generator_directions.csv": "c9b94b084f97f3b5c56449f7818babd7c855cb5f5bf482236f8199502cf5408d",
+    "test/analysis/events_grouped.csv": "66c408b25c6c042a665e992e3f0bfac49a934f8735e6fd18f3ce2c4254b9800f",
+    "test/analysis/fault_diagnostics.csv": "d0ce81b561ad7ccee73eb874c131cdeb548db9246f304e465c4668a3aa6ed1af",
+    "test/analysis/paired_intervals.csv": "284382f10bc11e5ef5f5121105d6e5244f3e2d762dbad3a317af02b607032d01",
+    "test/analysis/summary.csv": "f147b19229943661c835f95119ca7fe5d66eeaaf45d315de355f6017f3c8c2f9"
+  },
+  "execution": "Complete fresh scratch replays+analysis, read-only verification resumed after dtype-only checker fix. See engineering-notes.md. No semantic data or frozen sources changed.",
+  "resume_log_sha256": "97404b62ba02345d4258cf016c1edaace915d55b0ba5c0916f3bfbfffd99a441"
+}

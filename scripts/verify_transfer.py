@@ -58,6 +58,16 @@ def verify(root,phase,archives):
     if analysis.exists():
         a=json.loads(analysis.read_text());assert a['input_manifest_sha256']==sha(base/'manifest.json')
         for p,h in a['outputs'].items():assert sha(base/'analysis'/p)==h
+        summary=pd.read_csv(base/'analysis/summary.csv')
+        for _,r in summary[summary.group=='overall'].iterrows():
+            rr=d[d.method==r.method]
+            for k in ['tp','false_reports','missed','n_events','samples','uploads','binary_v1_bytes','fault_induced_false','rx_tp','rx_false_reports','rx_missed','fault_detected','fault_type_detected','event_edges_unreported','health_edges_unreported']:
+                assert rr[k].sum()==r[k],(r.method,k)
+            assert abs(r.f1-2*r.tp/(r.n_events+r.tp+r.false_reports))<1e-12
+            assert abs(r.rx_f1-2*r.rx_tp/(r.n_events+r.rx_tp+r.rx_false_reports))<1e-12
+            assert r.pooled_age_p95_s==pool.loc[r.method,'p95_age_s']
+        if phase=='test':
+            pd.testing.assert_frame_equal(pd.read_csv(root/'summary.csv'),summary[summary.group=='overall'].reset_index(drop=True),check_dtype=False,check_exact=True)
         budgets=pd.read_csv(base/'analysis/budget_comparisons.csv')
         for _,r in budgets.iterrows():assert abs(r.relative_gap-(r.samples/r.target_samples-1))<1e-12 and r.within_5pct==(abs(r.relative_gap)<=.05)
     paper=ROOT/'papers/tais/tables/transfer_data_audit.csv'
@@ -69,6 +79,15 @@ def verify(root,phase,archives):
                 row=frame.iloc[int(r.row_index)];x=float(row[r.metric]);y=float(r.value)
                 assert (np.isnan(x) and np.isnan(y)) or abs(x-y)<1e-9*max(1,abs(x))
         for p,h in json.loads((paper.parent/'transfer_source_fingerprints.json').read_text()).items():assert sha(ROOT/p)==h
+    figures=root/'figures/manifest.json'
+    if figures.exists():
+        fig=json.loads(figures.read_text())
+        for p,h in fig['inputs'].items():assert sha(ROOT/p)==h
+        for p,h in fig['figures'].items():assert sha(root/'figures'/p)==h
+    pdf_check=root/'checks/pdf-validation.json'
+    if pdf_check.exists():
+        pdf=json.loads(pdf_check.read_text());assert sha(ROOT/'papers/tais/manuscript.pdf')==pdf['pdf_sha256']
+        for p,h in pdf['source_sha256'].items():assert sha(ROOT/p)==h
     # Existing protected files must retain the exact inherited versions.
     paths=['src','vendor','configs/experiment.yaml','configs/tais-paper.json','results/tais-paper','results/tais-su','src/tais/signals.py']
     changed=subprocess.check_output(['git','diff','--name-only',BASE,'--',*paths],cwd=ROOT,text=True).splitlines()

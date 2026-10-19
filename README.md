@@ -8,6 +8,8 @@ Working title: **Trust-Gated Event-Aware Adaptive Sampling under Sensor Faults f
 
 The [paper evidence and complete independent-baseline results](https://github.com/Sver0411/TAIS/blob/research/tais-paper-evaluation/docs/TAIS_PAPER_EVIDENCE.md) collect native/common-detector comparisons, nearby sample budgets, limitations and reproduction. [English LaTeX/PDF draft](https://github.com/Sver0411/TAIS/tree/research/tais-paper-evaluation/papers/tais) and [Chinese summary](https://github.com/Sver0411/TAIS/blob/research/tais-paper-evaluation/docs/TAIS_PAPER_SUMMARY_ZH.md). This is a simulation-based systems study; existing historical results and NO-GO decisions remain unchanged.
 
+The [frozen cross-generator supplement](https://github.com/Sver0411/TAIS/blob/research/tais-cross-generator-validation/docs/TAIS_CROSS_GENERATOR_REPORT.md) tests the same policies on a separately specified stochastic mechanism without retuning. The G1 near-budget quality advantage does not transfer uniformly; all adverse results and the revised [English draft](https://github.com/Sver0411/TAIS/tree/research/tais-cross-generator-validation/papers/tais) are retained. This remains synthetic systems evidence.
+
 ## Offline spatial pilot (separate research branch)
 
 **这是基于真实温室背景和受控干预的离线探索性实验，不是实际在线 LoRaWAN 系统或自然故障诊断的确认性验证。**

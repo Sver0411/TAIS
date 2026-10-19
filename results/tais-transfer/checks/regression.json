@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "command": ".venv/bin/python -m pytest -q",
+  "passed": 890,
+  "xfail": 2,
+  "duration_s": 200.07,
+  "notes": "Two pre-existing strict expected failures retained; all69 new G2 tests included."
+}

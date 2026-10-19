@@ -1,0 +1,23 @@
+.....................................................................    [100%]
+69 passed in 4.65s
+{
+  "status": "PASS",
+  "runs": 12880,
+  "event_rows": 26880,
+  "fault_rows": 14868,
+  "archive_digests": 0,
+  "frames_roundtripped": 0,
+  "seed_clusters": 20,
+  "frozen_sources_unchanged": true
+}
+{
+  "status": "PASS",
+  "runs": 12880,
+  "event_rows": 26880,
+  "fault_rows": 14868,
+  "archive_digests": 14920,
+  "frames_roundtripped": 1336537,
+  "seed_clusters": 20,
+  "frozen_sources_unchanged": true
+}
+PASS: complete G2 replay and all analysis CSVs reproduce byte-for-byte /Users/mac/Documents/TAIS/results/scratch/transfer-replica-1f1q2b5g

@@ -11,7 +11,10 @@ def verify(root,archives=False,phase='test'):
     assert sha(root/phase/'metrics.csv')==m['metrics_sha256']
     assert sha(root/phase/'events.csv')==m['events_sha256']
     if (OUT/'selection.json').exists():
-        lock=json.loads((OUT/'selection.json').read_text());assert lock['sources']==fingerprints()
+        lock=json.loads((OUT/'selection.json').read_text())
+        # A separately frozen G2 generator adds a module to src/tais. Verify every
+        # original pinned file; a new unrelated file is not an old-source mutation.
+        current=fingerprints();assert all(current.get(p)==h for p,h in lock['sources'].items())
         assert lock['operating_points_sha256']==sha(OUT/'operating-points.json')
     d=pd.read_csv(root/phase/'metrics.csv');assert len(d)==m['runs']
     assert not d.duplicated(['seed','scenario','view','method']).any()

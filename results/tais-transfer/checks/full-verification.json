@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "runs": 12880,
+  "event_rows": 26880,
+  "fault_rows": 14868,
+  "archive_digests": 14920,
+  "frames_roundtripped": 1336537,
+  "seed_clusters": 20,
+  "frozen_sources_unchanged": true
+}

@@ -113,3 +113,8 @@ files=[OUT/'test/analysis/resource_sensitivity.csv',OUT/'test/metrics.csv',OUT/'
 from paper_publication_figures import render
 render(FIGS,OUT/'test/analysis')
 print('generated',len(audit),'audited numeric cells and all empirical paragraphs')
+# The original G1 bindings above remain literal and unchanged. Append a separate
+# G2 binding only after its independent final analysis is complete.
+if (ROOT/'results/tais-transfer/test/analysis/manifest.json').exists():
+    from build_transfer_paper import main as build_transfer
+    build_transfer()
