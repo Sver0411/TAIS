@@ -1,0 +1,93 @@
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO missing_cross_long seed=20 | not device measurements
+SOURCE clock=1799s rows=1800 | SENDER sampled=1795s next_due=1815s
+samples=97 uploads=24 sample_upload=False sample_frame=0B last_tx=1775s last_frame=36B total_application_bytes=774
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.077267149934084 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.405571364820545 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=24 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1775s age=24s (no filling of dropped frames)
+  temperature: value=23.944537117332615 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.34807075967003 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  620s temperature FAULT MISSING event=False
+  645s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  650s humidity HEALTHY APP_SUSPECT_DRIFT event=True
+  675s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  815s humidity HEALTHY NONE event=False RECOVERED
+  935s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  975s humidity HEALTHY NONE event=False RECOVERED
+  1175s temperature HEALTHY NONE event=False RECOVERED
+
+{
+  "status": "COMPLETE",
+  "error": null,
+  "input_label": "SYNTHETIC DEMO missing_cross_long seed=20 | not device measurements",
+  "sender": {
+    "source_rows": 1800,
+    "samples": 97,
+    "uploads": 24,
+    "binary_bytes": 774
+  },
+  "health_sample_counts": {
+    "temperature:HEALTHY": 63,
+    "humidity:HEALTHY": 97,
+    "temperature:FAULT": 34
+  },
+  "link": {
+    "sent": 24,
+    "sent_bytes": 774,
+    "dropped": 0,
+    "altered": 0
+  },
+  "receiver": {
+    "received": 24,
+    "received_bytes": 774,
+    "decoded": 24,
+    "updates": 24,
+    "corrupt": 0,
+    "out_of_order": 0,
+    "duplicate": 0,
+    "conflict": 0
+  },
+  "truth_metrics": {
+    "source": "synthetic independent intervention labels; offline only",
+    "truth": [
+      {
+        "channel": "humidity",
+        "start_s": 635.0,
+        "end_s": 809.0,
+        "event_type": "sudden_change"
+      }
+    ],
+    "faults": [
+      {
+        "channel": "temperature",
+        "start_s": 572,
+        "end_s": 1172,
+        "kind": "missing"
+      }
+    ],
+    "tp": 1,
+    "unmatched": 0,
+    "missed": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "fault_episodes": 1,
+    "flagged_during_fault": 1
+  },
+  "truth_metrics_reason": "offline synthetic truth; not available to sender or receiver",
+  "verification": {
+    "frozen_gateonly_records_and_reports_identical": null,
+    "selected_policy_records_and_reports_identical": true,
+    "tx_frames": 24,
+    "actual_binary_bytes_recomputed": 774,
+    "received_valid_frames_exact": 24,
+    "all_valid_received_envelopes_match_sender": true
+  },
+  "journal_sha256": "eb617e478a9a4648d0d901a44d796ef0908f32e13866d5ca4392effeed01de6e"
+}

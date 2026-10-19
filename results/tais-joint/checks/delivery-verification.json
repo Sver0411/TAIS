@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "phase": "development",
+      "runs": 1620,
+      "complete": true,
+      "actual_frames_exact": true,
+      "truth_match_recomputed": true,
+      "same_input_per_method": true
+    },
+    {
+      "phase": "validation",
+      "runs": 2700,
+      "complete": true,
+      "actual_frames_exact": true,
+      "truth_match_recomputed": true,
+      "same_input_per_method": true
+    },
+    {
+      "phase": "test",
+      "runs": 8100,
+      "complete": true,
+      "actual_frames_exact": true,
+      "truth_match_recomputed": true,
+      "same_input_per_method": true
+    }
+  ],
+  "runs": 12420,
+  "actual_frames_verified": 471467,
+  "signals_verified": 1890,
+  "unchanged_original_files": 832,
+  "only_permitted_existing_edit": "examples/tais-core/run.py adds explicit opt-in JO; original default policy intact",
+  "submodules": {
+    "vendor/AdaptiveSense": "f7ec30fd4721aa1a7c308f879050a83936e60067",
+    "vendor/SensorTrust": "2ce98dd043bb01ea99052eda218c68a172499a4c"
+  },
+  "selection_source_fingerprints_unchanged": true,
+  "counterfactual_note": "Fault-induced counts computed by frozen runner from paired clean replays; primary archived report matching independently recomputed here, not a second algorithm experiment."
+}

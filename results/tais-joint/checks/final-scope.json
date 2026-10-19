@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "local_links_checked": 11,
+  "source_sha256": {
+    "src/tais/joint_policy.py": "6f63386da1e4f1143572eab51b958724d7d962c65b03aaf070e2d0ee21050be1",
+    "src/tais/joint_upload.py": "7212610cbf2c5acff40c0890dd99e37df21d13e480fe8f26e0f494432a71597d",
+    "src/tais/joint_sampling.py": "62ceca08b5d02fe20ac282e15b929ba0203ebe03e06faaa10f429dd318db4db6",
+    "scripts/import_joint_csv.py": "6ae6cabb14259e08c0425e71d00719ce039538d064c1596658c77a53cf9a8af0",
+    "scripts/benchmark_joint_optimization.py": "16eeb9fa8833ba88c31b4e0bdedcf3ee2aedb6fca52f4c0006d39e1c9ca00fac",
+    "scripts/joint_secondary_audit.py": "041390047867d776ca2efcb806b8959c9fc35f1485d52aefc24ce70959d650d8",
+    "scripts/inspect_joint_cases.py": "d8d1c77c96a9f8371c560368cabd714e49cf7a3297596a00b3ef329b840e2864",
+    "scripts/replay_joint_frozen.py": "34831810bab451c4dae9942c943b1db71ec34dd4ba079d859df19baab617039e",
+    "scripts/analyze_joint_optimization.py": "3b1f05cce7d46293c7a3b66260d9cee2a8c94d6dce7b1f50690a7dc3bbf995de",
+    "scripts/diagnose_joint_history.py": "db8e5e368790e241b4dde7f329039986ff49c6da4f732ae31336b6d91a81bd47",
+    "scripts/verify_joint_delivery.py": "02074257210527c604bad921de5436b497ce7a4ebfdc549025d608aebeab558d",
+    "examples/tais-core/run.py": "fe977adf46d117218931b369053d5e04f8480cdb1a6cf6528d91c773f96db0ef",
+    "configs/tais-joint.yaml": "9c68278decef2eebc189c26b7156d524c3f7102cde5bea0b4f48af83f14f3798",
+    "tests/test_joint_policy.py": "08e9ebc0d7a3b5fc1c4d26bf2ae0b6b75a35533e8cf58cb9f687737dbc919282"
+  },
+  "freeze_commit": "4cd19c37f3848cadf3f5510bcdec68cdaf6abd71",
+  "test_once_manifest": "results/tais-joint/test/manifest.json",
+  "tests": "700 passed,2 unchanged strict xfails,36 new",
+  "raw_hull_blocked": true,
+  "default_policy": "GateOnly"
+}
