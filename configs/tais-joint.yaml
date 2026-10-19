@@ -1,0 +1,10 @@
+# JO-1 candidate plan; selected configuration is separately locked before final test.
+idle_interval_s: 20
+trend_slope: 0.005
+heartbeat_s: 120
+idle_candidates: [20, 30, 40]
+trend_candidates: [0.005, 0.01]
+seeds:
+  development: [500, 501, 502, 503, 504, 505, 506, 507, 508, 509]
+  validation: [510, 511, 512, 513, 514, 515, 516, 517, 518, 519]
+  test: [520, 521, 522, 523, 524, 525, 526, 527, 528, 529, 530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548, 549]

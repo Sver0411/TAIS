@@ -1,0 +1,5 @@
+{
+  "status": "KEEP_FROZEN_FOR_NEGATIVE_AND_POSITIVE_EVALUATION",
+  "note": "Validation trend layer harms Recall relative to sampling-only; no parameter changes or replacement recommendation. Final tests all predefined ablations of same choice; GateOnly stays default.",
+  "validation_metrics_sha256": "e7e3116e76fb1af7b27974684ba91468c17279249ccb40413df8eb2621d96d35"
+}

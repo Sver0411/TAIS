@@ -86,7 +86,7 @@ def evaluation(trace, records, reports, cfg):
                           cfg['evaluation']['event_match_tolerance_s'])
     tp, fp, fn = result.true_positives, result.false_positives, result.false_negatives
     detected = sum(any(f.start_s <= r['timestamp'] < f.end_s and
-                       r['health'][f.channel]['flags'] for r in records) for f in trace.faults)
+                       r.get('joint',{}).get(f.channel,{}).get('raw_c11',r['health'][f.channel])['flags'] for r in records) for f in trace.faults)
     return dict(source='synthetic independent intervention labels; offline only',
                 truth=[asdict(e) for e in trace.events], faults=[asdict(f) for f in trace.faults],
                 tp=tp, unmatched=fp, missed=fn,
@@ -96,16 +96,21 @@ def evaluation(trace, records, reports, cfg):
                 fault_episodes=len(trace.faults), flagged_during_fault=detected)
 
 
-def verify(out, trace, cfg, layout):
+def verify(out, trace, cfg, layout, policy="gateonly", options=None, variant="JO-Full"):
     """Compare actual sender journal to frozen replay and decode actual frames."""
     from tais.replay import run as frozen_run
     entries = [json.loads(line) for line in (out/'journal.jsonl').open()]
     samples = [e['record'] for e in entries if e['kind'] == 'sample']
     tx = {e['harness_tx_id']: e for e in entries if e['kind'] == 'tx'}
-    expected = frozen_run(trace, cfg, 'GateOnly', multiplier=1.0)
+    if policy == 'gateonly':
+        expected = frozen_run(trace, cfg, 'GateOnly', multiplier=1.0)
+    else:
+        sys.path.insert(0, str(ROOT/'scripts'))
+        from benchmark_joint_optimization import replay
+        expected = replay(trace, cfg, variant, options)
     parity = None
     if trace is not None:
-        assert canonical(samples) == canonical(expected['records']), 'Frozen sender records differ'
+        assert canonical(samples) == canonical(expected['records']), 'Policy sender records differ'
         reports = [r for e in entries if e['kind'] == 'sample' for r in e['reports']]
         assert canonical(reports) == canonical([asdict(r) for r in expected['reports']])
         parity = True
@@ -118,7 +123,8 @@ def verify(out, trace, cfg, layout):
         if e['kind'] == 'rx' and e['envelope'] is not None:
             assert encode(e['envelope'], layout) == bytes.fromhex(tx[e['harness_tx_id']]['frame_hex'])
             exact += 1
-    return dict(frozen_gateonly_records_and_reports_identical=parity,
+    return dict(frozen_gateonly_records_and_reports_identical=parity if policy=='gateonly' else None,
+                selected_policy_records_and_reports_identical=parity,
                 tx_frames=len(tx), actual_binary_bytes_recomputed=sizes,
                 received_valid_frames_exact=exact,
                 all_valid_received_envelopes_match_sender=True)
@@ -126,6 +132,8 @@ def verify(out, trace, cfg, layout):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--policy', choices=['gateonly','tais-jo'], default='gateonly')
+    p.add_argument('--joint-variant', choices=['JO-S','JO-HS','JO-Full'], default='JO-Full')
     inputs = p.add_mutually_exclusive_group()
     inputs.add_argument('--scenario', choices=scenarios())
     inputs.add_argument('--csv', type=Path)
@@ -149,6 +157,14 @@ def main():
     cfg = deepcopy(load());cfg['channels'] = {n: cfg['channels'][n] for n in LAYOUTS[a.layout]}
     if not (a.csv or a.stdin) and a.layout != 1:
         p.error('existing synthetic demonstrations use the frozen two-channel layout 1')
+    options = None
+    if a.policy == 'tais-jo':
+        from tais.joint_policy import JointSender, joint_render
+        global render
+        render = joint_render
+        import yaml
+        selection = ROOT/'results/tais-joint/selection.json'
+        options = json.loads(selection.read_text())['options'] if selection.exists() else yaml.safe_load((ROOT/'configs/tais-joint.yaml').read_text())
     trace = None
     if a.csv:
         source = csv_rows(a.csv, tuple(cfg['channels']));label = 'USER CSV | provenance unverified | no truth metrics'
@@ -159,7 +175,7 @@ def main():
         source = ((r, {}) for r in trace.observed)
         label = f'SYNTHETIC DEMO {trace.scenario} seed={a.seed} | not device measurements'
     a.out.mkdir(parents=True, exist_ok=False)
-    manifest = dict(policy='GateOnly', multiplier=1.0, wire_version=1,
+    manifest = dict(policy='GateOnly' if a.policy=='gateonly' else a.joint_variant, joint_options=options, multiplier=1.0, wire_version=1,
                     input_label=label, source_commit=subprocess.check_output(
                         ['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
                     command=sys.argv, layout=json.loads(layout_descriptor(a.layout)),
@@ -175,7 +191,11 @@ def main():
         'vendor/SensorTrust/core/sensor_trust.c', 'vendor/SensorTrust/core/sensor_trust.h',
         'vendor/AdaptiveSense/simulator/scoring.py', 'vendor/AdaptiveSense/simulator/adaptive.py')}
     (a.out/'manifest.json').write_text(json.dumps(manifest, indent=2)+'\n')
-    sender, receiver = CoreSender(cfg, a.layout), CoreReceiver(a.layout)
+    if options is not None:
+        manifest['joint_source_sha256'] = {name: file_sha(ROOT/name) for name in ('src/tais/joint_policy.py','src/tais/joint_sampling.py','src/tais/joint_upload.py','configs/tais-joint.yaml')}
+        (a.out/'manifest.json').write_text(json.dumps(manifest, indent=2)+'\n')
+    sender = CoreSender(cfg,a.layout) if a.policy=='gateonly' else JointSender(cfg,options,a.layout,a.joint_variant)
+    receiver = CoreReceiver(a.layout)
     status, error = 'COMPLETE', None
     with (a.out/'journal.jsonl').open('x') as journal:
         def emit(entry):
@@ -199,6 +219,8 @@ def main():
                         last_render = time.monotonic()
                     continue
                 emit(dict(kind='sample', record=step['record'], reports=step['reports']))
+                if a.policy=='tais-jo' and a.ui!='quiet':
+                    print('JO diagnostics:', canonical(dict(channels=step['record']['joint'],upload_reasons=step['record']['reasons'])),flush=True)
                 if step['frame'] is not None:
                     frame = step['frame']
                     emit(dict(kind='tx', harness_tx_id=sender.counts['uploads'],
@@ -226,7 +248,7 @@ def main():
                                             [r for e in entries if e['kind']=='sample' for r in e['reports']], cfg)
         summary['truth_metrics_reason'] = 'offline synthetic truth; not available to sender or receiver'
     if a.verify and status == 'COMPLETE':
-        summary['verification'] = verify(a.out, trace, cfg, a.layout)
+        summary['verification'] = verify(a.out, trace, cfg, a.layout,a.policy,options,a.joint_variant)
         assert summary['verification']['actual_binary_bytes_recomputed'] == summary['sender']['binary_bytes']
     summary['journal_sha256'] = file_sha(a.out/'journal.jsonl')
     (a.out/'summary.json').write_text(json.dumps(summary, indent=2, allow_nan=False)+'\n')
