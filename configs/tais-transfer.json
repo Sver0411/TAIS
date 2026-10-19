@@ -1,0 +1,14 @@
+{
+  "version": "transfer-v1",
+  "duration_s": 1800,
+  "engineering_seeds": [690, 691],
+  "final_seeds": [700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719],
+  "background": {"temperature_center": [22,28], "humidity_center": [40,60], "segment_s": [180,360], "target_sd": [0.35,1.75], "reversion": 0.003, "innovation_sd": [0.006,0.03], "correlation": [-0.65,0.2]},
+  "noise": {"sigma": [0.08,0.4], "rho": [0.65,0.9], "scale": [0.6,1.8], "segment_s": 120, "tail_probability": 0.002, "tail_multiplier": 3},
+  "events": {"duration_ranges": {"short": [12,40], "medium": [41,100], "long": [101,240]}, "onset_ranges": [[180,300],[660,780],[1140,1260]], "amplitude": {"temperature": [1.8,4.8], "humidity": [6,18]}, "shapes": ["step_recovery","smooth_pulse","asymmetric_pulse"]},
+  "faults": {"onset_s": [150,1300], "duration_s": [120,360], "recovery_s": [30,100], "range_values": {"temperature": [-55,110], "humidity": [-20,125]}, "spike_amplitude": {"temperature": [6,18], "humidity": [20,50]}, "offset_amplitude": {"temperature": [0.8,3.2], "humidity": [3,12]}, "drift_slope": {"temperature": [0.003,0.02], "humidity": [0.015,0.08]}},
+  "methods": ["AdaptiveSense+TrustLog","GateOnly","GateOnly+U","JO-SU-20","JO-SU-40","Fixed-5","Fixed-10","Fixed-20","Fixed-30","Fixed-40","Fixed-60","Delta-budget-SU40","Variance-budget-SU40","Rao-inspired-budget-SU40"],
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 2026101923,
+  "example": {"g1_seed":610,"g1_scenario":"drift_same_long","g2_seed":700,"g2_scenario":"drift_temperature_same"}
+}

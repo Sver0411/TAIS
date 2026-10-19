@@ -1,0 +1,126 @@
+{
+  "status": "FROZEN_BEFORE_G2",
+  "base": "0170196dda10f78b85d5e4b685d56331a0021083",
+  "inherited_sources": {
+    "configs/experiment.yaml": "1be38a7b47e5e0104435086587d543dfbaa74c320389971aa2f9ecf96779dae2",
+    "configs/tais-paper.json": "7711f33f2ec53085b449262cfaff2461f50d4de450b34c94e3267f8e3ff579c9",
+    "docs/TAIS_PAPER_PROTOCOL.md": "9fb89b659e951e7273d89306498624ab5d688323402696de64e30970546a92bd",
+    "scripts/analyze_paper.py": "b15c53aeea5185dfa5b0c9f9298c728292b22b0e34fc809bb12bc0dcdd8af0f5",
+    "scripts/benchmark_joint_optimization.py": "16eeb9fa8833ba88c31b4e0bdedcf3ee2aedb6fca52f4c0006d39e1c9ca00fac",
+    "scripts/benchmark_paper.py": "fa3c7d4f438bf80bb4894e632adb8bbe9fbad242c48bf9645c724eac3abfb9e5",
+    "scripts/benchmark_su.py": "1d6db9e1b09f67fc5c369fd371a54e60013633333de0597aa4faca1dd4ba6845",
+    "scripts/paper_metrics.py": "612af5d61d08f2ecefd568018d0004c556f53ec338720301cc1fd88992937358",
+    "src/tais/__init__.py": "767a02952c53ff2fdf442b5c5301323ba41c93fad431c50548e1e8997d55e9d8",
+    "src/tais/budget_eval.py": "49f555d01407869545ff8de18fdfcd68666235f5bedab668131faa950fb024a0",
+    "src/tais/config.py": "c7d57e3750eacc5f97de846b583f04153db964b7c40346260bec25a640336e7a",
+    "src/tais/core_stream.py": "9e2788136c26d415b2b9088cbe33e85f31ac9ee5d6e3dba7bbcce288a3c882af",
+    "src/tais/joint_policy.py": "6f63386da1e4f1143572eab51b958724d7d962c65b03aaf070e2d0ee21050be1",
+    "src/tais/joint_sampling.py": "62ceca08b5d02fe20ac282e15b929ba0203ebe03e06faaa10f429dd318db4db6",
+    "src/tais/joint_upload.py": "7212610cbf2c5acff40c0890dd99e37df21d13e480fe8f26e0f494432a71597d",
+    "src/tais/metrics.py": "607e589983f9831e9f18d93cc89e39f241dede25ede1eeb52ca58217cf1acdef",
+    "src/tais/observability_eval.py": "1151a8eba3925b6c84783ce80fde4dcd564a100df5995eed8a597a02bb1ed812",
+    "src/tais/observability_signals.py": "cb17e876975f9bc6bac8acb4f1841541e8ef5d49460a61f9ae7d8f757fc55dc7",
+    "src/tais/paper_baselines.py": "6fa1ca83d6617fad920322d19854fe5aeb9277f6905a0102384ee7e0f703b3f1",
+    "src/tais/reference_metrics.py": "7e4e5e0aad1ef25fc2216ab18b290e833bc56c2ccb871d861776436db2c4c586",
+    "src/tais/reference_policy.py": "f838ea72196150200c0985f951278925757d3616e018c3345e1f02a3cfab5be5",
+    "src/tais/reference_signals.py": "52a8232f5578aff1928c99c13f76cb10a9fff17f03907d8331f3db92e7a44dcc",
+    "src/tais/replay.py": "59508d037fb153e2df242f81eca509f70128f536a8efd655889c466ba3f35dd1",
+    "src/tais/scheduler.py": "9ab0b073e7fdb6d1293e3b6fc6cbae7f6de1cb55363bb48986335c8c602f5609",
+    "src/tais/signals.py": "6b60b254b2653dc00079bc71c37a97496030f800326273580d1bfab9ce1ed4d0",
+    "src/tais/su_policy.py": "92f679e66560f89c16086d9f51127f6b787d6ff6aeebdbd3b35eaba24b17e3fc",
+    "src/tais/trust.py": "7dda86dd97fc435863368a3dbdb65610ed412b8d529821ecd9959608ccdd645e",
+    "src/tais/wire_codec.py": "944522828d4562dffe21d7f522d382f7e105eceaed7aa9ceeec1d05acdc0030f",
+    "src/tais/wire_link.py": "3bd1f62d678a1230a31c14d5bdd9fd79cdb0145714ae7a6f7868ec2963de7726",
+    "src/tais/wire_v2.py": "1cbebbff92dbaf6c9b0e514fcc6f72b6ca6e37e2e2ced75517af565e662d2b51",
+    "tests/test_paper_baselines.py": "7c5fa6e55b3e1f0a669f35eba19b4d632859c83520b6fa6057c8d74053645659",
+    "vendor/AdaptiveSense/simulator/scoring.py": "e914d6d81faff710b3599f5f45e6a7db333a5e8fe2e250519d00c5cfd21d0837",
+    "vendor/SensorTrust/core/sensor_trust.c": "84ff663157edb012af0290cf9f0f1d6400cee382f47ea272e8ec2089e59a2b90",
+    "vendor/SensorTrust/core/sensor_trust.h": "d81eba8192d60dbdf480ffaa8280d0ec46d5c2463c1ca7035c52a87aeff15089"
+  },
+  "sources": {
+    "src/tais/transfer_signals.py": "7c4446d084ac7e758811ec9ac3790cce7ba4ff08fa4157d3c58c10f5932c21a0",
+    "configs/tais-transfer.json": "597735cfc5df885a9e5db08954472a951c2e8cc75c74bda9bbe95ec4caa2bf76",
+    "scripts/benchmark_transfer.py": "d3f231d0f1ed9e38cce771d4cde523acfa64291eb930784c7e3788e04b43a8f1",
+    "scripts/transfer_metrics.py": "e7f0c56ac92e3d6a7f087fe063fcfeec9f0516bcbb79d6cb3bb325aa2e34cf73",
+    "scripts/analyze_transfer.py": "a450f1fa33b274f6733ed4a073a1457aab4c07c14296550901db7c5153bc5c7a",
+    "tests/test_transfer_signals.py": "3cd3cbe0008894298f27d260c10939e5822f697f0036dd14f076593d85d7c2a6",
+    "tests/test_transfer_benchmark.py": "320e5b2436e631b9db822461baa13755f8608139fafbb38b39e24c80e82eb4ed",
+    "docs/TAIS_CROSS_GENERATOR_PROTOCOL.md": "0ca934ea18d759a27e42d1364deba26790f36891156f754846affdd90521c579"
+  },
+  "specs": [
+    {
+      "id": "AdaptiveSense+TrustLog",
+      "kind": "TAIS"
+    },
+    {
+      "id": "GateOnly",
+      "kind": "TAIS"
+    },
+    {
+      "id": "GateOnly+U",
+      "kind": "TAIS"
+    },
+    {
+      "id": "JO-SU-20",
+      "kind": "TAIS"
+    },
+    {
+      "id": "JO-SU-40",
+      "kind": "TAIS"
+    },
+    {
+      "id": "Fixed-5",
+      "kind": "Fixed",
+      "cap": 5
+    },
+    {
+      "id": "Fixed-10",
+      "kind": "Fixed",
+      "cap": 10
+    },
+    {
+      "id": "Fixed-20",
+      "kind": "Fixed",
+      "cap": 20
+    },
+    {
+      "id": "Fixed-30",
+      "kind": "Fixed",
+      "cap": 30
+    },
+    {
+      "id": "Fixed-40",
+      "kind": "Fixed",
+      "cap": 40
+    },
+    {
+      "id": "Fixed-60",
+      "kind": "Fixed",
+      "cap": 60
+    },
+    {
+      "id": "Delta-budget-SU40",
+      "kind": "Delta",
+      "cap": 50,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-budget-SU40",
+      "kind": "Variance",
+      "cap": 60,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Rao-inspired-budget-SU40",
+      "kind": "Rao-inspired",
+      "cap": 35,
+      "minimum": 10,
+      "threshold": 4
+    }
+  ],
+  "operating_points_sha256": "56d49fdaf2d07076fa944a8c9419b835d8e3d6ef7df8f09ced63a78de7a44994",
+  "engineering_metrics_sha256": "8fd62863da35801f1785a7ee06edef9947b62ab8e8751ece2cc5e192761c0cc7",
+  "seed_audit_sha256": "324f991c82421765812f2099c109d451331f7fff3a9964a14fa3b06aba4fa2bd"
+}

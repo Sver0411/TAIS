@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETE",
+  "input_manifest_sha256": "1a82aed7abda20fee4f4b744982979c6b5dfc3c0c026038dc07a8fff4c92c645",
+  "runs": 448,
+  "seed_clusters": 2,
+  "outputs": {
+    "budget_comparisons.csv": "10a71b8ea59807850bc3f07c73a0016dc12a9eae80838d7613361a628e029fc8",
+    "common_event_delays.csv": "959597adbccb7cb7d3c99ed31e85bad7f50bf24b5f716fa838db6625d19934ba",
+    "cross_generator_directions.csv": "a62a647bb5fbf58b5b88140e5a0d1335012a5d9707b2a2347cb550347f98e449",
+    "events_grouped.csv": "e21a25c0982e06a4ed89a4d834e3d5243c97fbdcaa544bcad467b1f8913f97fb",
+    "fault_diagnostics.csv": "77b36d3680daee5758b20a8da782c4c4ff85f1403a5239978d4d348d34cb8eb7",
+    "paired_intervals.csv": "eddab12a79e0d443dc66abfc8189bc2c498e586b547f4fe5c85113b43defcc02",
+    "summary.csv": "e1c2d72f449ddc90ac6868a780310da122cfd0d9f7285155945890e10ec6193e"
+  }
+}
