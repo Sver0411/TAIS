@@ -15,4 +15,5 @@ jobs:
       - run: python -m pip install -e . --no-build-isolation
       - run: python -m pytest tests/test_paper_baselines.py -q
       - run: python scripts/verify_paper.py
+      - run: python scripts/check_paper_artifacts.py
       - run: python scripts/benchmark_paper.py smoke --output-root results/scratch/ci-paper --archive-root results/scratch/ci-paper-archive

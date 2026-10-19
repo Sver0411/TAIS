@@ -19,3 +19,5 @@ python scripts/reproduce_paper.py --output results/scratch/paper-reproduction-01
 ```
 
 This uses the committed final points and20 held-out seeds, refuses existing outputs, performs real encoding/decoding, regenerates all45 scenarios, verifies archives and requires exact per-run metrics fingerprint equality. It never retunes using final labels. Raw archives are intentionally outside Git under ignored output paths.
+
+Publication figure layout is exported by `scripts/paper_publication_figures.py` from the frozen summaries and sensitivity grid. It changes labels, fonts and layout only; original frozen analysis figures and every numerical result remain preserved.

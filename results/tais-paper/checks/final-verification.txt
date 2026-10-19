@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "phase": "test",
+  "runs": 73800,
+  "seed_count": 20,
+  "scenarios": 45,
+  "view_methods": {
+    "common": 29,
+    "native": 53
+  },
+  "historical_changes": [
+    "README.md"
+  ],
+  "archive_hashes_checked": 84540,
+  "source_freeze_checked": true,
+  "budget_points_within_5pct": 10,
+  "budget_points": 12,
+  "metrics_sha256": "ab80a348898587f32e0d22cd91be4668fc5a903f058fdbd2e7aa1b758ff8ed6b"
+}

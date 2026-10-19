@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "compiler": "Tectonic0.17.0",
+  "pages_rendered_and_reviewed": 12,
+  "layout_review": "All12 final rendered pages inspected; no clipping, overlap, missing glyphs or unresolved citations; figures and reference page legible",
+  "latex_warning_patterns_found": [],
+  "pdf_sha256": "84fca9b41dc34262240dcb42de3db0293d4f9eafefb4b2daa82744fd3d001a48",
+  "source_sha256": {
+    "papers/tais/references.bib": "6c8e4b8628dd5aadea2e8b225e6a35f1a0047c8811d2ec8c8c18b0b5dcf580ad",
+    "papers/tais/manuscript.tex": "707e8cb9e8839a86f38e5c7b64c6f75ff241cc661c6997a5ac160138702ad5e6",
+    "papers/tais/tables/fault_text.tex": "bfba7073de09e5b7170524d761b16d8fff3193db0f103f27a368fdf6721d34c2",
+    "papers/tais/tables/native_complete.tex": "69e3777ab90b4cf508237889da2f5128a84c882e091133d191e9e1b4217a59c3",
+    "papers/tais/tables/conclusion_results.tex": "04055c6e5b0b7b98f50b25880d58cc99eb613507f6f8a0ca7b4003a33be2980e",
+    "papers/tais/tables/budget_text.tex": "ad5933af070e858e9c815343270179c30db297beeadbb58eceee423e2c55e894",
+    "papers/tais/tables/abstract_boundary.tex": "60fa092a7d3a2fefb3c1cf003b777d5abada0aee4d3a1ae735d85d8d580930b7",
+    "papers/tais/tables/macros.tex": "f5235adf9355062085c282a2f044cef8e9b6cb70d84f3e64fceee56583b47846",
+    "papers/tais/tables/abstract_results.tex": "b01d9ea57bbc879032011e77b362786f98d558a64324d39bce932437cfc165fc",
+    "papers/tais/tables/native_main.tex": "a97f7558ea1d3c1c2b7afeabe51a2f5c0d9228013669d174a468e3a8f29cfa90",
+    "papers/tais/tables/receiver_text.tex": "8379bc39c972e96d1572b1025d42be59f2e199b86d1eabc183946e75ad9ce6d0",
+    "papers/tais/tables/faults.tex": "d348a1b5c6e0ac641c075367f592ac5d8ed54f319cd7fc454fc8d6378e6105ba",
+    "papers/tais/tables/common_complete.tex": "d81f16af90986bd16c364cf85df57c706e93575f778f8ba9298bf8e2a425d828",
+    "papers/tais/tables/discussion_results.tex": "3a29933973d9a3c8337c5ff4128c5b6055a9726a9bd5318cb16be05c64754ea1",
+    "papers/tais/tables/communication.tex": "1e54b958778fad2295d65cedaa76342b844e41da7c40c0e563c18add196b8402",
+    "papers/tais/tables/boundaries.tex": "f2a60bcbb65ed555c1adff3dae1c73d152556ebe5c893fc2d069e7f7ea0962f7",
+    "papers/tais/tables/budgets.tex": "30f5b61311d6b6791c7c0a7f302eec13d9ca5552e0ec2e19108096605080318c",
+    "papers/tais/tables/results_overview.tex": "d3b22576ff82378062ee405eb2e4353d1b96abc74afc9c9b89ecef1e3adaebf8",
+    "papers/tais/figures/common_tradeoffs.png": "0f2aa2b4764b14b59c86e8189bc108d10d66ab02fdf3430e1c68f33605e635cd",
+    "papers/tais/figures/resource_sensitivity.png": "2a17bd8ac7ed036f3f7a02c6db3d78779b39c11763b4996b4611397263fc4f49",
+    "papers/tais/figures/native_tradeoffs.png": "9bbc28104edb82e359f39814f41c3bb967c75c585c1fd016b88b1d2c6a91ba24"
+  },
+  "contact_sheet": "results/tais-paper/checks/pdf-layout-contact.png",
+  "scope": "Layout and software/data provenance review; no peer review or hardware validation"
+}

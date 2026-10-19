@@ -19,10 +19,10 @@ def esc(x):return str(x).replace('_',r'\_').replace('%',r'\%').replace('&',r'\&'
 def label(m):
     m=m.replace('AdaptiveSense+TrustLog','AS+C11').replace('AdaptiveSense','AS').replace('JO-SU-','SU').replace('JO-S','S').replace('GateOnly','Gate').replace('Variance','Var').replace('Rao-inspired','Rao').replace('-budget-SU40','-bS40').replace('-budget-Gate','-bGate').replace('-c','-')
     return esc(m)
-def write(name,text):(TABLES/name).write_text(text+'\n')
+def write(name,text):(TABLES/name).write_text(text.rstrip()+'\n')
 def table(name,headers,rows,align=None):
     a=align or 'l'+'r'*(len(headers)-1)
-    text=r'\begin{tabular}{'+a+'}\toprule\n'+' & '.join(headers)+r' \\\midrule'+'\n'
+    text=r'\setlength{\tabcolsep}{3pt}\begin{tabular}{'+a+r'}\toprule'+'\n'+' & '.join(headers)+r' \\\midrule'+'\n'
     text+='\n'.join(' & '.join(map(str,r))+r' \\' for r in rows)+'\n'+r'\bottomrule\end{tabular}'
     write(name,text)
 def interval(A,B,k='f1',view='native',group='overall'):
@@ -61,15 +61,23 @@ table('faults.tex',['Fault','Gate R','SU40 R','Fixed30 R','Gate FI','SU40 FI','F
 boundary=['GateOnly','GateOnly+U','JO-SU-20','JO-SU-40','Fixed-20+C11','Fixed-30+C11']+[f'{k}-budget-SU40+C11' for k in ['Delta','Variance','Rao-inspired']]
 table('boundaries.tex',['Mode','Short','Long','Same','Cross','FD','Delay(s)','Age(s)'],[[label(m)]+[val(m,'recall',g) for g in ['profile:short','profile:long','relation:same','relation:cross']]+[val(m,'fault_detection_rate'),val(m,'event_delay_s',fmt='float'),val(m,'pooled_age_p95_s',fmt='int')+'/'+val(m,'pooled_age_max_s',fmt='int')] for m in boundary])
 
+communication=['AdaptiveSense+TrustLog','GateOnly','GateOnly+U','JO-S','JO-SU-20','JO-SU-30','JO-SU-40']+[k+'-c40+C11+U' for k in ['Delta','Variance','Rao-inspired']]
+table('communication.tex',['Mode','Tx','B/Tx','Age P95/max(s)','Missed','Lag E/H(s)'],[[label(m),val(m,'uploads',fmt='int'),val(m,'average_upload_bytes',fmt='float'),val(m,'pooled_age_p95_s',fmt='int')+'/'+val(m,'pooled_age_max_s',fmt='int'),val(m,'important_edges_unreported',fmt='int'),val(m,'event_edge_delay_max_s',fmt='int')+'/'+val(m,'health_edge_delay_max_s',fmt='int')] for m in communication])
 a=row('JO-SU-40');g=row('GateOnly');t=row('AdaptiveSense+TrustLog');f=row('Fixed-30+C11')
 nb=budget[budget['view']=='native'];qualified=nb[nb.within_5pct];su_b=nb[nb.target=='JO-SU-40'];wins=int((su_b.target_f1>su_b.f1).sum());losses=int((su_b.target_f1<su_b.f1).sum())
-write('abstract_results.tex',f'JO-SU-40 achieved {val("JO-SU-40","recall")}\\% Recall and {val("JO-SU-40","f1")}\\% F1 with {val("JO-SU-40","samples",fmt="int")} samples and {val("JO-SU-40","binary_v1_bytes",fmt="int")} application bytes. At its three development-selected independent budget comparisons, its F1 was higher in {wins} and lower in {losses}; all individual gaps and confidence intervals are reported.')
+abstract_controls=[]
+for _,r in su_b.iterrows():
+    abstract_controls.append(f"{r.method.split('-budget-')[0]} F1 {r.f1*100:.2f}\\% (sample gap {r.test_gap*100:+.2f}\\%)")
+write('abstract_results.tex',f'JO-SU-40 achieved {val("JO-SU-40","recall")}\\% Recall and {val("JO-SU-40","f1")}\\% F1 with {val("JO-SU-40","samples",fmt="int")} samples and {val("JO-SU-40","binary_v1_bytes",fmt="int")} application bytes. Development-selected SU40-budget controls yielded '+ '; '.join(abstract_controls)+'. Individual paired intervals and budget qualification are reported.')
+unmatched=su_b[~su_b.within_5pct]
+if len(unmatched):
+    with (TABLES/'abstract_results.tex').open('a') as fh:fh.write(' '+', '.join(r.method.split('-budget-')[0] for _,r in unmatched.iterrows())+' failed the 5\\% matching tolerance.\n')
 write('abstract_boundary.tex',f'Against GateOnly, SU40 used {(a.samples/g.samples-1)*100:+.2f}\\% samples and produced {a.fault_induced_false-g.fault_induced_false:+.0f} additional operational fault-induced false reports.')
-write('results_overview.tex',f'The final evaluation contains {int(json.loads((OUT/"test/manifest.json").read_text())["runs"]):,} scored method/view runs on {int(a.runs)} seed--scenario streams, with {int(a.n_events)} labeled events per operating point. Table\\ref{{tab:native}} separates the costs of native behavior. Compared with AS+C11, SU40 changed Recall from {val("AdaptiveSense+TrustLog","recall")}\\% to {val("JO-SU-40","recall")}\\%, F1 from {val("AdaptiveSense+TrustLog","f1")}\\% to {val("JO-SU-40","f1")}\\%, samples by {(a.samples/t.samples-1)*100:+.2f}\\%, and bytes by {(a.binary_v1_bytes/t.binary_v1_bytes-1)*100:+.2f}\\%. This comparison alone is insufficient: against GateOnly the F1 difference is {(a.f1-g.f1)*100:+.2f} points,95\\% CI {interval("JO-SU-40","GateOnly")}, accompanied by {(a.samples/g.samples-1)*100:+.2f}\\% samples and {a.fault_induced_false-g.fault_induced_false:+.0f} fault-induced reports. Fixed competitors and all adverse modes remain visible.')
-parts=[f'{len(qualified)}/{len(nb)} native independent budget points remained within5\\% in the held-out split. No parameters were adjusted.']
-for _,b in nb.iterrows():parts.append(f'{label(b.target)} versus {label(b.method)}: final sample gap {b.test_gap*100:+.2f}\\%, target-minus-independent F1 {(b.target_f1-b.f1)*100:+.2f} points,95\\% CI {interval(b.target,b.method)}; '+('qualifies as approximately matched.' if b.within_5pct else 'does not qualify as matched.'))
+write('results_overview.tex',f'The final evaluation contains {int(json.loads((OUT/"test/manifest.json").read_text())["runs"]):,} scored method/view runs on {int(a.runs)} seed--scenario streams, with {int(a.n_events)} labeled events per operating point. Table~\\ref{{tab:native}} separates the costs of native behavior. Compared with AS+C11, SU40 changed Recall from {val("AdaptiveSense+TrustLog","recall")}\\% to {val("JO-SU-40","recall")}\\%, F1 from {val("AdaptiveSense+TrustLog","f1")}\\% to {val("JO-SU-40","f1")}\\%, samples by {(a.samples/t.samples-1)*100:+.2f}\\%, and bytes by {(a.binary_v1_bytes/t.binary_v1_bytes-1)*100:+.2f}\\%. This comparison alone is insufficient: against GateOnly the F1 difference is {(a.f1-g.f1)*100:+.2f} points, 95\\% CI {interval("JO-SU-40","GateOnly")}, accompanied by {(a.samples/g.samples-1)*100:+.2f}\\% samples and {a.fault_induced_false-g.fault_induced_false:+.0f} fault-induced reports. Fixed competitors and all adverse modes remain visible.')
+parts=[f'{len(qualified)}/{len(nb)} native independent budget points remained within 5\\% in the held-out split. No parameters were adjusted.']
+for _,b in nb.iterrows():parts.append(f'{label(b.target)} versus {label(b.method)}: final sample gap {b.test_gap*100:+.2f}\\%, target-minus-independent F1 {(b.target_f1-b.f1)*100:+.2f} points, 95\\% CI {interval(b.target,b.method)}; '+('qualifies as approximately matched.' if b.within_5pct else 'does not qualify as matched.'))
 write('budget_text.tex',' '.join(parts))
-write('fault_text.tex',f'Table\\ref{{tab:faults}} includes every fault class. For drift, GateOnly/SU40 Recall is {val("GateOnly","recall","fault:drift")}\\%/{val("JO-SU-40","recall","fault:drift")}\\%, and operational induced counts are {val("GateOnly","fault_induced_false","fault:drift",fmt="int")}/{val("JO-SU-40","fault_induced_false","fault:drift",fmt="int")}. Stable-offset groups yield Recall {val("GateOnly","recall","fault:stable_offset")}\\%/{val("JO-SU-40","recall","fault:stable_offset")}\\%. These failures are not removed from overall totals. Short-event Recall is {val("GateOnly","recall","profile:short")}\\% for GateOnly and {val("JO-SU-40","recall","profile:short")}\\% for SU40; long-event rates are separately tabulated.')
+write('fault_text.tex',f'Table~\\ref{{tab:faults}} includes every fault class. For drift, GateOnly/SU40 Recall is {val("GateOnly","recall","fault:drift")}\\%/{val("JO-SU-40","recall","fault:drift")}\\%, and operational induced counts are {val("GateOnly","fault_induced_false","fault:drift",fmt="int")}/{val("JO-SU-40","fault_induced_false","fault:drift",fmt="int")}. Stable-offset groups yield Recall {val("GateOnly","recall","fault:stable_offset")}\\%/{val("JO-SU-40","recall","fault:stable_offset")}\\%. These failures are not removed from overall totals. Short-event Recall is {val("GateOnly","recall","profile:short")}\\% for GateOnly and {val("JO-SU-40","recall","profile:short")}\\% for SU40; long-event rates are separately tabulated.')
 parts=[]
 for m in ['GateOnly','GateOnly+U','JO-SU-20','JO-SU-40']:
     r=row(m);parts.append(f'{label(m)}: sender TP/FP/FN {int(r.tp)}/{int(r.false_reports)}/{int(r.missed)}, receiver {int(r.rx_tp)}/{int(r.rx_false_reports)}/{int(r.rx_missed)}; receiver F1 {r.rx_f1*100:.2f}\\%; sampled important edges unreported {int(r.important_edges_unreported)}, maximum reported edge delay {r.important_edge_delay_max_s:.0f}s.')
@@ -81,12 +89,27 @@ for k in ['Delta','Variance','Rao-inspired']:
     assert r.samples==z.samples and r.tp==z.tp and r.false_reports==z.false_reports
     parts.append(f'Adding U to {label(m)} preserved sender TP/FP and sample counts while changing bytes by {(z.binary_v1_bytes/r.binary_v1_bytes-1)*100:+.2f}\\% and pooled age P95 from {r.pooled_age_p95_s:.0f}s to {z.pooled_age_p95_s:.0f}s; important missed edges were {int(z.important_edges_unreported)}.')
 parts.append(f'In the common-detector view SU40 F1 was {val("JO-SU-40","f1",v="common")}\\%, compared with its native {val("JO-SU-40","f1")}\\%. The difference is a detector/gating comparison under the same sample times, not a new schedule.')
+gate_rao=budget[(budget['view']=='native')&(budget.target=='GateOnly')&(budget.method=='Rao-inspired-budget-Gate+C11')].iloc[0]
+parts.append(f'At the lower Gate budget, Rao-inspired F1 was {gate_rao.f1*100:.2f}\\% versus GateOnly {gate_rao.target_f1*100:.2f}\\%; Gate-minus-Rao F1 CI {interval("GateOnly",gate_rao.method)}. This adverse quality comparison remains despite higher independent-method fault-induced reporting. GateOnly is not universally optimal. ')
+grx=row('GateOnly');urx=row('GateOnly+U')
+parts.append(f'Gate+U also restored a received false edge: receiver false reports changed from {int(grx.rx_false_reports)} to {int(urx.rx_false_reports)}, although sender reports were unchanged. Complete edge delivery does not necessarily improve receiver F1. ')
 write('discussion_results.tex',' '.join(parts))
-write('conclusion_results.tex',f'The held-out results show a conditional operating tradeoff: SU40 F1 was {val("JO-SU-40","f1")}\\%, with {val("JO-SU-40","samples",fmt="int")} samples and {val("JO-SU-40","binary_v1_bytes",fmt="int")} bytes, while GateOnly F1 was {val("GateOnly","f1")}\\%. At SU40-targeted independent points the F1 ordering favored TAIS in {wins} and independent methods in {losses}; no claim of universal superiority follows. Full native and common-view comparisons, actual budget qualification and negative groups determine the scope of this result.')
+qsu=su_b[su_b.within_5pct]
+conclusion=f'The held-out results show a conditional operating tradeoff: SU40 F1 was {val("JO-SU-40","f1")}\\%, with {val("JO-SU-40","samples",fmt="int")} samples and {val("JO-SU-40","binary_v1_bytes",fmt="int")} bytes, while GateOnly F1 was {val("GateOnly","f1")}\\%. Of the three SU40-targeted independent controls, {len(qsu)} qualified within 5\\% on final samples. '
+for _,r in qsu.iterrows():
+    conclusion+=f'Against {r.method.split("-budget-")[0]}, the F1 difference was {(r.target_f1-r.f1)*100:+.2f} points, 95\\% CI {interval(r.target,r.method)}. '
+for _,r in su_b[~su_b.within_5pct].iterrows():
+    conclusion+=f'{r.method.split("-budget-")[0]} had a {r.test_gap*100:+.2f}\\% sample gap and cannot support a matched-budget superiority claim. '
+conclusion+='Full native and common-view comparisons, adverse lower-budget results and interval uncertainty prevent a universal-superiority conclusion.'
+write('conclusion_results.tex',conclusion)
+
 for name in ['native_tradeoffs.png','common_tradeoffs.png','resource_sensitivity.png']:shutil.copyfile(OUT/'test/analysis'/name,FIGS/name)
 pd.DataFrame(audit).to_csv(TABLES/'data_audit.csv',index=False)
+budget.to_csv(TABLES/'budget_data_audit.csv',index=False)
 # Keep exact source hashes in the paper artifact.
 import hashlib
-files=[OUT/'test/metrics.csv',OUT/'test/analysis/summary.csv',OUT/'test/analysis/paired_intervals.csv',OUT/'test/analysis/budget_comparisons.csv']
-(PAPER/'tables/source_fingerprints.json').write_text(json.dumps({str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in files},indent=2)+'\n')
+files=[OUT/'test/analysis/resource_sensitivity.csv',OUT/'test/metrics.csv',OUT/'test/analysis/summary.csv',OUT/'test/analysis/paired_intervals.csv',OUT/'test/analysis/budget_comparisons.csv']
+(PAPER/'tables/source_fingerprints.json').write_text(json.dumps({str(p.resolve().relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in files},indent=2)+'\n')
+from paper_publication_figures import render
+render(FIGS,OUT/'test/analysis')
 print('generated',len(audit),'audited numeric cells and all empirical paragraphs')
