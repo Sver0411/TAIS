@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Independent SU archive/bytes/C11/parity checks; no policy rerun or tuning."""
 import csv,gzip,hashlib,json,subprocess,sys
+import numpy as np
 from pathlib import Path
 from dataclasses import asdict
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src'))
@@ -20,6 +21,7 @@ def main():
  lock=json.loads((OUT/'selection.json').read_text());assert lock['sources']==fingerprints()
  for phase in ['engineering','development','validation','test']:
   manifest=json.loads((OUT/phase/'manifest.json').read_text());assert manifest['status']=='COMPLETE';assert sha(OUT/phase/'metrics.csv')==manifest['metrics_sha256']
+  hist={m:np.zeros(1800,dtype=np.int64) for m in manifest['methods']}
   raw=Path(manifest['archive_root'])/phase;table=list(csv.DictReader((OUT/phase/'metrics.csv').open()));keys={(int(r['seed']),r['scenario'],r['method']) for r in table};expected={(s,c,m) for s in manifest['seeds'] for c in manifest['cases'] for m in manifest['methods']};assert keys==expected and len(keys)==len(table)
   for seed in manifest['seeds']:
    cf_cache={}
@@ -40,6 +42,7 @@ def main():
      for r,f in zip(sent,data['frames']):
       b=bytes.fromhex(f['frame_hex']);assert b==encode(envelope_from_record(r)) and encode(decode(b))==b and f['bytes']==len(b);total+=len(b);frames_checked+=1
      assert total==float(row['binary_v1_bytes'])
+     times=np.array([f['timestamp'] for f in data['frames']]);grid=np.arange(len(signal['observed']));idx=np.searchsorted(times,grid,side='right')-1;assert (idx>=0).all();ages=grid-times[idx];h=np.bincount(ages.astype(int),minlength=1800);assert h.tolist()==data['age_histogram'];hist[method]+=h
      rx,history=receiver_result(result,data['frames']);rxcf,_=receiver_result(cf['result'],cf['frames']);rx_stats=evaluate(trace,rx,cfg,rxcf)
      for k in ['tp','false_reports','fault_induced_false']:assert rx_stats[k]==float(row['rx_'+k])
      assert canon(history)==canon(data['receiver'])
@@ -51,6 +54,8 @@ def main():
     assert canon(local(results['JO-S']))==canon(local(results['JO-SU-20']))
     assert canon(local(results['GateOnly']))==canon(local(results['GateOnly+U']))
    print(phase,seed,'verified',flush=True)
+  for age in csv.DictReader((OUT/phase/'pooled_age.csv').open()):
+   h=hist[age['method']];assert float(age['mean_age_s'])==float(np.arange(1800)@h/h.sum());assert int(age['p95_age_s'])==int(np.searchsorted(np.cumsum(h),h.sum()*.95));assert int(age['max_age_s'])==int(np.flatnonzero(h)[-1])
   phases.append(dict(phase=phase,runs=len(table),input_and_bytes_and_receiver_exact=True,counterfactual_metrics_recomputed=True,upload_only_parity=True))
  protected=0;links={}
  for item in subprocess.check_output(['git','ls-tree','-rz',BASE],cwd=ROOT).split(b'\0'):
