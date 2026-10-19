@@ -1,0 +1,188 @@
+{
+  "seeds": [
+    600,
+    601,
+    602,
+    603,
+    604,
+    605,
+    606,
+    607,
+    608,
+    609
+  ],
+  "specs": [
+    {
+      "id": "Delta-c20",
+      "kind": "Delta",
+      "cap": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c25",
+      "kind": "Delta",
+      "cap": 25,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c30",
+      "kind": "Delta",
+      "cap": 30,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c35",
+      "kind": "Delta",
+      "cap": 35,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c40",
+      "kind": "Delta",
+      "cap": 40,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c45",
+      "kind": "Delta",
+      "cap": 45,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c50",
+      "kind": "Delta",
+      "cap": 50,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c55",
+      "kind": "Delta",
+      "cap": 55,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c60",
+      "kind": "Delta",
+      "cap": 60,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c20",
+      "kind": "Variance",
+      "cap": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c25",
+      "kind": "Variance",
+      "cap": 25,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c30",
+      "kind": "Variance",
+      "cap": 30,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c35",
+      "kind": "Variance",
+      "cap": 35,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c40",
+      "kind": "Variance",
+      "cap": 40,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c45",
+      "kind": "Variance",
+      "cap": 45,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c50",
+      "kind": "Variance",
+      "cap": 50,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c55",
+      "kind": "Variance",
+      "cap": 55,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c60",
+      "kind": "Variance",
+      "cap": 60,
+      "threshold": 2
+    },
+    {
+      "id": "Rao-inspired-c20",
+      "kind": "Rao-inspired",
+      "cap": 20,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c25",
+      "kind": "Rao-inspired",
+      "cap": 25,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c30",
+      "kind": "Rao-inspired",
+      "cap": 30,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c35",
+      "kind": "Rao-inspired",
+      "cap": 35,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c40",
+      "kind": "Rao-inspired",
+      "cap": 40,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c45",
+      "kind": "Rao-inspired",
+      "cap": 45,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c50",
+      "kind": "Rao-inspired",
+      "cap": 50,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c55",
+      "kind": "Rao-inspired",
+      "cap": 55,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c60",
+      "kind": "Rao-inspired",
+      "cap": 60,
+      "threshold": 4
+    },
+    {
+      "id": "GateOnly",
+      "kind": "TAIS"
+    },
+    {
+      "id": "JO-SU-40",
+      "kind": "TAIS"
+    }
+  ],
+  "runs": 13050,
+  "metrics_sha256": "98944e2b61fd5eb6d9fcb788c736cf86925050220f00992d338b5bb621892809"
+}

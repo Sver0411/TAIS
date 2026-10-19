@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "phase": "development",
+  "runs": 36900,
+  "seed_count": 10,
+  "scenarios": 45,
+  "view_methods": {
+    "common": 29,
+    "native": 53
+  },
+  "historical_changes": [],
+  "archive_hashes_checked": 42270,
+  "source_freeze_checked": false,
+  "budget_points_within_5pct": 12,
+  "budget_points": 12,
+  "metrics_sha256": "85befcf877fabb38864dd8e764293f7acb8c90703c7c45073330f77583823f19"
+}

@@ -1,0 +1,91 @@
+{
+  "rule": "at cap40 maximize development micro F1, then recall, fewer samples, smaller threshold",
+  "chosen": {
+    "Delta": 2,
+    "Variance": 2,
+    "Rao-inspired": 4
+  },
+  "candidates": [
+    {
+      "id": "Delta-t2",
+      "kind": "Delta",
+      "cap": 40,
+      "threshold": 2,
+      "f1": 0.45146198830409356,
+      "recall": 0.6433333333333333,
+      "samples": 102312
+    },
+    {
+      "id": "Delta-t4",
+      "kind": "Delta",
+      "cap": 40,
+      "threshold": 4,
+      "f1": 0.4204131227217497,
+      "recall": 0.5766666666666667,
+      "samples": 75969
+    },
+    {
+      "id": "Delta-t8",
+      "kind": "Delta",
+      "cap": 40,
+      "threshold": 8,
+      "f1": 0.42118537200504413,
+      "recall": 0.5566666666666666,
+      "samples": 35865
+    },
+    {
+      "id": "Variance-t2",
+      "kind": "Variance",
+      "cap": 40,
+      "threshold": 2,
+      "f1": 0.434052757793765,
+      "recall": 0.6033333333333334,
+      "samples": 59006
+    },
+    {
+      "id": "Variance-t4",
+      "kind": "Variance",
+      "cap": 40,
+      "threshold": 4,
+      "f1": 0.4098159509202454,
+      "recall": 0.5566666666666666,
+      "samples": 54528
+    },
+    {
+      "id": "Variance-t8",
+      "kind": "Variance",
+      "cap": 40,
+      "threshold": 8,
+      "f1": 0.38022813688212925,
+      "recall": 0.5,
+      "samples": 47730
+    },
+    {
+      "id": "Rao-inspired-t4",
+      "kind": "Rao-inspired",
+      "cap": 40,
+      "threshold": 4,
+      "f1": 0.43301435406698563,
+      "recall": 0.6033333333333334,
+      "samples": 52197
+    },
+    {
+      "id": "Rao-inspired-t8",
+      "kind": "Rao-inspired",
+      "cap": 40,
+      "threshold": 8,
+      "f1": 0.40632603406326034,
+      "recall": 0.5566666666666666,
+      "samples": 43371
+    },
+    {
+      "id": "Rao-inspired-t12",
+      "kind": "Rao-inspired",
+      "cap": 40,
+      "threshold": 12,
+      "f1": 0.4004884004884005,
+      "recall": 0.5466666666666666,
+      "samples": 42782
+    }
+  ]
+}

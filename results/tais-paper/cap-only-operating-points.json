@@ -1,0 +1,218 @@
+{
+  "thresholds": {
+    "Delta": 2,
+    "Variance": 2,
+    "Rao-inspired": 4
+  },
+  "budget_selection": [
+    {
+      "kind": "Delta",
+      "target": "GateOnly",
+      "cap": 45,
+      "threshold": 2,
+      "development_samples": 94472,
+      "target_samples": 25480,
+      "relative_gap": 2.707692307692308
+    },
+    {
+      "kind": "Delta",
+      "target": "JO-SU-40",
+      "cap": 45,
+      "threshold": 2,
+      "development_samples": 94472,
+      "target_samples": 31686,
+      "relative_gap": 1.9815060278987566
+    },
+    {
+      "kind": "Variance",
+      "target": "GateOnly",
+      "cap": 60,
+      "threshold": 2,
+      "development_samples": 54476,
+      "target_samples": 25480,
+      "relative_gap": 1.1379905808477235
+    },
+    {
+      "kind": "Variance",
+      "target": "JO-SU-40",
+      "cap": 60,
+      "threshold": 2,
+      "development_samples": 54476,
+      "target_samples": 31686,
+      "relative_gap": 0.7192450924698606
+    },
+    {
+      "kind": "Rao-inspired",
+      "target": "GateOnly",
+      "cap": 35,
+      "threshold": 4,
+      "development_samples": 50413,
+      "target_samples": 25480,
+      "relative_gap": 0.9785321821036106
+    },
+    {
+      "kind": "Rao-inspired",
+      "target": "JO-SU-40",
+      "cap": 35,
+      "threshold": 4,
+      "development_samples": 50413,
+      "target_samples": 31686,
+      "relative_gap": 0.591018115255949
+    }
+  ],
+  "schedules": [
+    {
+      "id": "AdaptiveSense",
+      "kind": "TAIS"
+    },
+    {
+      "id": "AdaptiveSense+TrustLog",
+      "kind": "TAIS"
+    },
+    {
+      "id": "GateOnly",
+      "kind": "TAIS"
+    },
+    {
+      "id": "GateOnly+U",
+      "kind": "TAIS"
+    },
+    {
+      "id": "JO-S",
+      "kind": "TAIS"
+    },
+    {
+      "id": "JO-SU-20",
+      "kind": "TAIS"
+    },
+    {
+      "id": "JO-SU-30",
+      "kind": "TAIS"
+    },
+    {
+      "id": "JO-SU-40",
+      "kind": "TAIS"
+    },
+    {
+      "id": "Fixed-5",
+      "kind": "Fixed",
+      "cap": 5
+    },
+    {
+      "id": "Fixed-10",
+      "kind": "Fixed",
+      "cap": 10
+    },
+    {
+      "id": "Fixed-20",
+      "kind": "Fixed",
+      "cap": 20
+    },
+    {
+      "id": "Fixed-30",
+      "kind": "Fixed",
+      "cap": 30
+    },
+    {
+      "id": "Fixed-40",
+      "kind": "Fixed",
+      "cap": 40
+    },
+    {
+      "id": "Fixed-60",
+      "kind": "Fixed",
+      "cap": 60
+    },
+    {
+      "id": "Delta-c20",
+      "kind": "Delta",
+      "cap": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c40",
+      "kind": "Delta",
+      "cap": 40,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c60",
+      "kind": "Delta",
+      "cap": 60,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c20",
+      "kind": "Variance",
+      "cap": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c40",
+      "kind": "Variance",
+      "cap": 40,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c60",
+      "kind": "Variance",
+      "cap": 60,
+      "threshold": 2
+    },
+    {
+      "id": "Rao-inspired-c20",
+      "kind": "Rao-inspired",
+      "cap": 20,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c40",
+      "kind": "Rao-inspired",
+      "cap": 40,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c60",
+      "kind": "Rao-inspired",
+      "cap": 60,
+      "threshold": 4
+    },
+    {
+      "id": "Delta-budget-Gate",
+      "kind": "Delta",
+      "cap": 45,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-budget-SU40",
+      "kind": "Delta",
+      "cap": 45,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-budget-Gate",
+      "kind": "Variance",
+      "cap": 60,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-budget-SU40",
+      "kind": "Variance",
+      "cap": 60,
+      "threshold": 2
+    },
+    {
+      "id": "Rao-inspired-budget-Gate",
+      "kind": "Rao-inspired",
+      "cap": 35,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-budget-SU40",
+      "kind": "Rao-inspired",
+      "cap": 35,
+      "threshold": 4
+    }
+  ],
+  "rule": "closest development sample total; tie larger cap. No test adjustment. Native caps20/40/60 and all fixed periods retained."
+}
