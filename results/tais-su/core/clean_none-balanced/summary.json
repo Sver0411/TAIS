@@ -1,0 +1,54 @@
+{
+  "status": "COMPLETE",
+  "error": null,
+  "input_label": "SYNTHETIC DEMO clean_none seed=20 | not device measurements",
+  "sender": {
+    "source_rows": 1800,
+    "samples": 61,
+    "uploads": 15,
+    "binary_bytes": 539
+  },
+  "health_sample_counts": {
+    "temperature:HEALTHY": 61,
+    "humidity:HEALTHY": 61
+  },
+  "link": {
+    "sent": 15,
+    "sent_bytes": 539,
+    "dropped": 0,
+    "altered": 0
+  },
+  "receiver": {
+    "received": 15,
+    "received_bytes": 539,
+    "decoded": 15,
+    "updates": 15,
+    "corrupt": 0,
+    "out_of_order": 0,
+    "duplicate": 0,
+    "conflict": 0
+  },
+  "truth_metrics": {
+    "source": "synthetic independent intervention labels; offline only",
+    "truth": [],
+    "faults": [],
+    "tp": 0,
+    "unmatched": 0,
+    "missed": 0,
+    "precision": null,
+    "recall": null,
+    "f1": null,
+    "fault_episodes": 0,
+    "flagged_during_fault": 0
+  },
+  "truth_metrics_reason": "offline synthetic truth; not available to sender or receiver",
+  "verification": {
+    "frozen_gateonly_records_and_reports_identical": null,
+    "selected_policy_records_and_reports_identical": true,
+    "tx_frames": 15,
+    "actual_binary_bytes_recomputed": 539,
+    "received_valid_frames_exact": 15,
+    "all_valid_received_envelopes_match_sender": true
+  },
+  "journal_sha256": "f71dba91b40cf3035e2dd2748397ef4dc372ca76f7f97d6222eaa3b89fb2f39b"
+}

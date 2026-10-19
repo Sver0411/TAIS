@@ -104,6 +104,10 @@ def verify(out, trace, cfg, layout, policy="gateonly", options=None, variant="JO
     tx = {e['harness_tx_id']: e for e in entries if e['kind'] == 'tx'}
     if policy == 'gateonly':
         expected = frozen_run(trace, cfg, 'GateOnly', multiplier=1.0)
+    elif policy in ('tais-su','gateonly-u'):
+        sys.path.insert(0,str(ROOT/'scripts'))
+        from benchmark_su import replay
+        expected = replay(trace,cfg,'GateOnly+U' if policy=='gateonly-u' else 'JO-SU-'+str(options['idle_interval_s']))
     else:
         sys.path.insert(0, str(ROOT/'scripts'))
         from benchmark_joint_optimization import replay
@@ -132,7 +136,8 @@ def verify(out, trace, cfg, layout, policy="gateonly", options=None, variant="JO
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--policy', choices=['gateonly','tais-jo'], default='gateonly')
+    p.add_argument('--policy', choices=['gateonly','tais-jo','tais-su','gateonly-u'], default='gateonly')
+    p.add_argument('--su-mode',choices=['high','balanced'],default='high',help='frozen SU20 or development-selected SU30/40; never H')
     p.add_argument('--joint-variant', choices=['JO-S','JO-HS','JO-Full'], default='JO-Full')
     inputs = p.add_mutually_exclusive_group()
     inputs.add_argument('--scenario', choices=scenarios())
@@ -165,6 +170,14 @@ def main():
         import yaml
         selection = ROOT/'results/tais-joint/selection.json'
         options = json.loads(selection.read_text())['options'] if selection.exists() else yaml.safe_load((ROOT/'configs/tais-joint.yaml').read_text())
+    if a.policy in ('tais-su','gateonly-u'):
+        from tais.su_policy import SUSender,su_render
+        render = su_render
+        selection=ROOT/'results/tais-su/selection.json'
+        if a.su_mode=='balanced' and not selection.exists():
+            p.error('balanced mode requires the committed development selection')
+        cap=20 if a.su_mode=='high' else json.loads(selection.read_text())['balanced_cap']
+        options=dict(idle_interval_s=cap,heartbeat_s=120,health_layer=False)
     trace = None
     if a.csv:
         source = csv_rows(a.csv, tuple(cfg['channels']));label = 'USER CSV | provenance unverified | no truth metrics'
@@ -174,8 +187,9 @@ def main():
         trace = generate(cfg, a.seed, a.scenario or 'clean_none')
         source = ((r, {}) for r in trace.observed)
         label = f'SYNTHETIC DEMO {trace.scenario} seed={a.seed} | not device measurements'
+    policy_name=('GateOnly' if a.policy=='gateonly' else 'GateOnly+U' if a.policy=='gateonly-u' else 'JO-SU-'+str(options['idle_interval_s']) if a.policy=='tais-su' else a.joint_variant)
     a.out.mkdir(parents=True, exist_ok=False)
-    manifest = dict(policy='GateOnly' if a.policy=='gateonly' else a.joint_variant, joint_options=options, multiplier=1.0, wire_version=1,
+    manifest = dict(policy=policy_name, joint_options=options, multiplier=1.0, wire_version=1,
                     input_label=label, source_commit=subprocess.check_output(
                         ['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
                     command=sys.argv, layout=json.loads(layout_descriptor(a.layout)),
@@ -194,7 +208,13 @@ def main():
     if options is not None:
         manifest['joint_source_sha256'] = {name: file_sha(ROOT/name) for name in ('src/tais/joint_policy.py','src/tais/joint_sampling.py','src/tais/joint_upload.py','configs/tais-joint.yaml')}
         (a.out/'manifest.json').write_text(json.dumps(manifest, indent=2)+'\n')
-    sender = CoreSender(cfg,a.layout) if a.policy=='gateonly' else JointSender(cfg,options,a.layout,a.joint_variant)
+    if a.policy in ('tais-su','gateonly-u'):
+        manifest['su_source_sha256']={n:file_sha(ROOT/n) for n in ('src/tais/su_policy.py','configs/tais-su.json')}
+        manifest['su_selection_sha256']=file_sha(ROOT/'results/tais-su/selection.json') if (ROOT/'results/tais-su/selection.json').exists() else None
+        (a.out/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+        sender=SUSender(cfg,options['idle_interval_s'],a.layout,'gateonly' if a.policy=='gateonly-u' else 'jo-s')
+    else:
+        sender = CoreSender(cfg,a.layout) if a.policy=='gateonly' else JointSender(cfg,options,a.layout,a.joint_variant)
     receiver = CoreReceiver(a.layout)
     status, error = 'COMPLETE', None
     with (a.out/'journal.jsonl').open('x') as journal:
@@ -221,6 +241,8 @@ def main():
                 emit(dict(kind='sample', record=step['record'], reports=step['reports']))
                 if a.policy=='tais-jo' and a.ui!='quiet':
                     print('JO diagnostics:', canonical(dict(channels=step['record']['joint'],upload_reasons=step['record']['reasons'])),flush=True)
+                if a.policy in ('tais-su','gateonly-u') and a.ui!='quiet':
+                    print('SU diagnostics (no H):',canonical(dict(local=step['record']['su'],upload_reasons=step['record']['reasons'])),flush=True)
                 if step['frame'] is not None:
                     frame = step['frame']
                     emit(dict(kind='tx', harness_tx_id=sender.counts['uploads'],

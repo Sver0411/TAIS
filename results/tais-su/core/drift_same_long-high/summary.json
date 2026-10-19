@@ -1,0 +1,69 @@
+{
+  "status": "COMPLETE",
+  "error": null,
+  "input_label": "SYNTHETIC DEMO drift_same_long seed=20 | not device measurements",
+  "sender": {
+    "source_rows": 1800,
+    "samples": 179,
+    "uploads": 55,
+    "binary_bytes": 1978
+  },
+  "health_sample_counts": {
+    "temperature:HEALTHY": 168,
+    "humidity:HEALTHY": 179,
+    "temperature:DEGRADED": 11
+  },
+  "link": {
+    "sent": 55,
+    "sent_bytes": 1978,
+    "dropped": 0,
+    "altered": 0
+  },
+  "receiver": {
+    "received": 55,
+    "received_bytes": 1978,
+    "decoded": 55,
+    "updates": 55,
+    "corrupt": 0,
+    "out_of_order": 0,
+    "duplicate": 0,
+    "conflict": 0
+  },
+  "truth_metrics": {
+    "source": "synthetic independent intervention labels; offline only",
+    "truth": [
+      {
+        "channel": "temperature",
+        "start_s": 634.0,
+        "end_s": 810.0,
+        "event_type": "sudden_change"
+      }
+    ],
+    "faults": [
+      {
+        "channel": "temperature",
+        "start_s": 572,
+        "end_s": 1172,
+        "kind": "drift"
+      }
+    ],
+    "tp": 1,
+    "unmatched": 2,
+    "missed": 0,
+    "precision": 0.3333333333333333,
+    "recall": 1.0,
+    "f1": 0.5,
+    "fault_episodes": 1,
+    "flagged_during_fault": 1
+  },
+  "truth_metrics_reason": "offline synthetic truth; not available to sender or receiver",
+  "verification": {
+    "frozen_gateonly_records_and_reports_identical": null,
+    "selected_policy_records_and_reports_identical": true,
+    "tx_frames": 55,
+    "actual_binary_bytes_recomputed": 1978,
+    "received_valid_frames_exact": 55,
+    "all_valid_received_envelopes_match_sender": true
+  },
+  "journal_sha256": "8aee34708073285a1d74456373bb09ba0ea0d3ed893ca1dbca95de74598cbc3d"
+}
