@@ -7,6 +7,11 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from benchmark_paper import OUT,RAW,sha,fingerprints,dump
 
 def verify(root,archives=False,phase='test'):
+    """Check exact historical source identity, metrics, views and saved budget qualification.
+
+    Read-only unless the CLI --write-report option is explicitly selected.
+    Source fingerprints include comments/docstrings; an annotation-only mismatch
+    is not by itself evidence that experimental data or runtime logic changed."""
     m=json.loads((root/phase/'manifest.json').read_text());assert m['status']=='COMPLETE'
     assert sha(root/phase/'metrics.csv')==m['metrics_sha256']
     assert sha(root/phase/'events.csv')==m['events_sha256']

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Generate every empirical manuscript cell and claim from real held-out outputs."""
+"""Generate G1 LaTeX bindings, copied figures and cell audits from saved held-out outputs.
+
+This historical builder performs writes at import time. It records source cells
+but does not independently establish their scientific interpretation or run new
+experiments. Do not import it as a read-only manuscript checker."""
 from pathlib import Path
 import csv,json,shutil,sys
 import pandas as pd
@@ -10,6 +14,7 @@ s=pd.read_csv(OUT/'test/analysis/summary.csv');ci=pd.read_csv(OUT/'test/analysis
 def row(m,group='overall',view='native'):
     r=s[(s.method==m)&(s.group==group)&(s['view']==view)];assert len(r)==1,(m,group,view);return r.iloc[0]
 def val(m,k,g='overall',v='native',fmt='pct'):
+    """Format one saved metric and record its unformatted value in the cell audit."""
     x=row(m,g,v)[k];audit.append(dict(method=m,view=v,group=g,metric=k,value=x,format=fmt))
     if pd.isna(x):return 'N/A'
     if fmt=='pct':return f'{x*100:.2f}'

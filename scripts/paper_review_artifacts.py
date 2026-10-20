@@ -17,6 +17,7 @@ def frame(path):
     if path not in FRAMES:FRAMES[path]=pd.read_csv(ROOT/path)
     return FRAMES[path]
 def get(path,filters,column):
+    """Require one source row and append its literal cell to the manuscript audit ledger."""
     d=frame(path);mask=np.ones(len(d),dtype=bool)
     for k,v in filters.items():mask&=d[k]==v
     rows=d[mask];assert len(rows)==1,(path,filters);index=int(rows.index[0]);x=rows.iloc[0][column]
@@ -41,6 +42,10 @@ def tab(name,headers,rows,align=None):
     a=align or 'l'+'r'*(len(headers)-1)
     write(name,r'\begingroup\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.1}\begin{tabular}{'+a+r'}\toprule'+'\n'+' & '.join(headers)+r' \\\midrule'+'\n'+'\n'.join(' & '.join(r)+r' \\' for r in rows)+'\n'+r'\bottomrule\end{tabular}\endgroup')
 def main():
+    """Overwrite publication bindings/plots from saved G1/G2 outputs and record fingerprints.
+
+    Generate editorial comparisons and post-hoc qualification, without new
+    policy runs. This is a material writer; do not import/call it as a validator."""
     analyze();TABLES.mkdir(exist_ok=True);FIGS.mkdir(exist_ok=True)
     rows=[[label(m)]+[p(value(g,m,k)) for g in ['G1','G2'] for k in ['precision','recall','f1']] for m in METHODS]
     tab('review_quality.tex',['Mode','G1 P','G1 R','G1 F1','G2 P','G2 R','G2 F1'],rows)

@@ -11,6 +11,7 @@ def source(name):
     if p not in frames:frames[p]=pd.read_csv(ROOT/p)
     return p,frames[p]
 def value(name,filters,metric,fmt='pct'):
+    """Require a unique saved G2 row, record its literal cell and format for LaTeX."""
     p,d=source(name);mask=np.ones(len(d),dtype=bool)
     for k,v in filters.items():mask&=d[k]==v
     found=d[mask];assert len(found)==1,(p,filters);idx=int(found.index[0]);x=found.iloc[0][metric]
@@ -32,6 +33,10 @@ def table(name,headers,rows):
     text=r'\setlength{\tabcolsep}{3pt}\begin{tabular}{l'+'r'*(len(headers)-1)+r'}\toprule'+'\n'+' & '.join(headers)+r' \\\midrule'+'\n'
     text+='\n'.join(' & '.join(row)+r' \\' for row in rows)+'\n'+r'\bottomrule\end{tabular}';write(name,text)
 def main():
+    """Write G2 tables, narrative bindings, figures and source/cell provenance.
+
+    This publication writer consumes existing results; it is not an experiment
+    runner or read-only verifier. Existing generated paper artifacts are replaced."""
     methods=pd.read_csv(OUT/'summary.csv').method.tolist();sel=['AdaptiveSense+TrustLog','GateOnly','GateOnly+U','JO-SU-20','JO-SU-40','Delta-budget-SU40+C11','Variance-budget-SU40+C11','Rao-inspired-budget-SU40+C11']
     table('transfer_main.tex',['Mode','P','R','F1','RxF1','FI','Samples','Bytes'],[[label(m)]+[v(m,k,fmt=fmt) for k,fmt in [('precision','pct'),('recall','pct'),('f1','pct'),('rx_f1','pct'),('fault_induced_false','int'),('samples','int'),('binary_v1_bytes','int')]] for m in methods])
     table('transfer_communication.tex',['Mode','Tx','B/Tx','Mean age','P95/max(s)','Miss E/H'],[[label(m),v(m,'uploads',fmt='int'),v(m,'average_upload_bytes',fmt='float'),v(m,'age_mean_s',fmt='float'),v(m,'pooled_age_p95_s',fmt='int')+'/'+v(m,'pooled_age_max_s',fmt='int'),v(m,'event_edges_unreported',fmt='int')+'/'+v(m,'health_edges_unreported',fmt='int')] for m in methods])

@@ -8,6 +8,11 @@ from PIL import Image
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'results/tais-paper-review';P=ROOT/'papers/tais'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def verify():
+    """Require byte-exact protected files, then audit manuscript cells and cross-references.
+
+    The protected set includes source, so annotation-only maintenance fails
+    this historical guard. Preserve its records and diagnose that separately
+    from numerical evidence integrity; never refresh frozen hashes to hide it."""
     protection=json.loads((OUT/'protection.json').read_text())
     for p,h in protection['protected_files'].items():assert sha(ROOT/p)==h,p
     delta=subprocess.check_output(['git','diff','--name-only',protection['base'],'--','src','configs','vendor','results/tais-paper','results/tais-transfer'],cwd=ROOT,text=True).splitlines();assert not delta,delta

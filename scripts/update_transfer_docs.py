@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Incremental G2 entry/summary/reviewer conclusions, literal results preserved."""
+"""Historical G2 document-update writer driven by saved summary and interval cells.
+
+Importing this file edits research reports and paper entry documents. It is not
+a read-only audit tool; current manuscript interpretation should be reviewed
+against the later academic revision rather than regenerated during maintenance."""
 from pathlib import Path
 import pandas as pd
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'results/tais-transfer'

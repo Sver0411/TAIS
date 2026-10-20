@@ -11,6 +11,11 @@ from tais.transfer_signals import generate,counterfactual,scenarios
 from tais.wire_codec import decode,encode
 
 def verify(root,phase,archives):
+    """Verify original source locks before checking G2 data, archives and manuscript bindings.
+
+    Archive modes control how many immutable logs are read, not whether the
+    source freeze is enforced. Comment changes fail exact source identity;
+    separate semantic checks cannot silently substitute for this assertion."""
     check_freeze();base=root/phase;manifest=json.loads((base/'manifest.json').read_text());assert manifest['status']=='COMPLETE'
     for f,h in manifest['outputs'].items():assert sha(base/f)==h,f
     d=pd.read_csv(base/'metrics.csv');e=pd.read_csv(base/'events.csv');f=pd.read_csv(base/'faults.csv')

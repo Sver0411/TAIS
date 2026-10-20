@@ -1,0 +1,422 @@
+{
+  "base_main": "80914638ab1d3d0ccca135a05de76be137779b1a",
+  "original_annotation_commit": "89c7c404a4b7132bfae84239ecdd74b3a37c7b6b",
+  "branch": "docs/code-comments-maintenance",
+  "pr": "https://github.com/Sver0411/TAIS/pull/2",
+  "base_entries": 1357,
+  "own_code_files": 145,
+  "python_files": 144,
+  "c_files": 1,
+  "own_headers": 0,
+  "status_counts": {
+    "protected_unchanged": 1212,
+    "restored_to_base": 82,
+    "retained_annotations": 10,
+    "inspected_unchanged": 53
+  },
+  "directory_counts": {
+    ".": {
+      "restored_to_base": 1
+    },
+    "examples/tais-core": {
+      "restored_to_base": 5
+    },
+    "scripts": {
+      "restored_to_base": 28,
+      "retained_annotations": 10,
+      "inspected_unchanged": 41
+    },
+    "src/tais": {
+      "inspected_unchanged": 1,
+      "restored_to_base": 23
+    },
+    "src/tais_rearm": {
+      "restored_to_base": 5
+    },
+    "src/tais_spatial": {
+      "inspected_unchanged": 1,
+      "restored_to_base": 6
+    },
+    "src/tais_v02": {
+      "restored_to_base": 6
+    },
+    "tests": {
+      "inspected_unchanged": 10,
+      "restored_to_base": 8
+    }
+  },
+  "restored_files": [
+    "conftest.py",
+    "examples/tais-core/historical_review.py",
+    "examples/tais-core/receiver.py",
+    "examples/tais-core/run.py",
+    "examples/tais-core/verify_delivery.py",
+    "examples/tais-core/view_run.py",
+    "scripts/analyze_budget_matched_results.py",
+    "scripts/analyze_paper.py",
+    "scripts/analyze_su.py",
+    "scripts/audit_budget_seeds.py",
+    "scripts/benchmark_joint_optimization.py",
+    "scripts/benchmark_paper.py",
+    "scripts/benchmark_su.py",
+    "scripts/benchmark_transfer.py",
+    "scripts/build_report.py",
+    "scripts/diagnose_joint_history.py",
+    "scripts/greenhouse.py",
+    "scripts/import_joint_csv.py",
+    "scripts/offline_spatial.py",
+    "scripts/paper_metrics.py",
+    "scripts/publish_blocked_branch.py",
+    "scripts/publish_exact_git_objects.py",
+    "scripts/publish_research_branch.py",
+    "scripts/rearm_run.py",
+    "scripts/rearm_verify.py",
+    "scripts/run_budget_matched_experiment.py",
+    "scripts/run_experiments.py",
+    "scripts/summarize_results.py",
+    "scripts/transfer_metrics.py",
+    "scripts/v02_run.py",
+    "scripts/v02_verify.py",
+    "scripts/verify_artifacts.py",
+    "scripts/verify_independent_reference_budget.py",
+    "scripts/verify_su.py",
+    "src/tais/budget_eval.py",
+    "src/tais/config.py",
+    "src/tais/core_stream.py",
+    "src/tais/joint_policy.py",
+    "src/tais/joint_sampling.py",
+    "src/tais/joint_upload.py",
+    "src/tais/metrics.py",
+    "src/tais/observability_eval.py",
+    "src/tais/observability_signals.py",
+    "src/tais/paper_baselines.py",
+    "src/tais/reference_metrics.py",
+    "src/tais/reference_policy.py",
+    "src/tais/reference_signals.py",
+    "src/tais/replay.py",
+    "src/tais/scheduler.py",
+    "src/tais/signals.py",
+    "src/tais/su_policy.py",
+    "src/tais/transfer_signals.py",
+    "src/tais/trust.py",
+    "src/tais/trust_bridge.c",
+    "src/tais/wire_codec.py",
+    "src/tais/wire_link.py",
+    "src/tais/wire_v2.py",
+    "src/tais_rearm/__init__.py",
+    "src/tais_rearm/config.py",
+    "src/tais_rearm/evidence.py",
+    "src/tais_rearm/replay.py",
+    "src/tais_rearm/scheduler.py",
+    "src/tais_spatial/analysis.py",
+    "src/tais_spatial/data.py",
+    "src/tais_spatial/interventions.py",
+    "src/tais_spatial/io.py",
+    "src/tais_spatial/methods.py",
+    "src/tais_spatial/pilot.py",
+    "src/tais_v02/__init__.py",
+    "src/tais_v02/config.py",
+    "src/tais_v02/evidence.py",
+    "src/tais_v02/forensics.py",
+    "src/tais_v02/replay.py",
+    "src/tais_v02/scheduler.py",
+    "tests/test_offline_spatial.py",
+    "tests/test_paper_baselines.py",
+    "tests/test_prototype.py",
+    "tests/test_reference_budget.py",
+    "tests/test_transfer_benchmark.py",
+    "tests/test_transfer_signals.py",
+    "tests/test_wire_codec.py",
+    "tests/test_wire_v2.py"
+  ],
+  "retained_files": [
+    "scripts/analyze_budget_sensitivity.py",
+    "scripts/build_paper.py",
+    "scripts/build_paper_report.py",
+    "scripts/build_transfer_paper.py",
+    "scripts/paper_review_artifacts.py",
+    "scripts/update_transfer_docs.py",
+    "scripts/verify_paper.py",
+    "scripts/verify_paper_references.py",
+    "scripts/verify_paper_revision.py",
+    "scripts/verify_transfer.py"
+  ],
+  "migrations": {
+    "conftest.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "examples/tais-core/historical_review.py": "docs/code-comments-audit/core-stream.md",
+    "examples/tais-core/receiver.py": "docs/code-comments-audit/core-stream.md",
+    "examples/tais-core/run.py": "docs/code-comments-audit/core-stream.md",
+    "examples/tais-core/verify_delivery.py": "docs/code-comments-audit/core-stream.md",
+    "examples/tais-core/view_run.py": "docs/code-comments-audit/core-stream.md",
+    "scripts/analyze_budget_matched_results.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/analyze_paper.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/analyze_su.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/audit_budget_seeds.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/benchmark_joint_optimization.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/benchmark_paper.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/benchmark_su.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/benchmark_transfer.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/build_report.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/diagnose_joint_history.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/greenhouse.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/import_joint_csv.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/offline_spatial.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/paper_metrics.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/publish_blocked_branch.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/publish_exact_git_objects.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/publish_research_branch.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/rearm_run.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/rearm_verify.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/run_budget_matched_experiment.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/run_experiments.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/summarize_results.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/transfer_metrics.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/v02_run.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/v02_verify.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/verify_artifacts.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/verify_independent_reference_budget.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/verify_su.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "src/tais/budget_eval.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/config.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/core_stream.py": "docs/code-comments-audit/core-stream.md",
+    "src/tais/joint_policy.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais/joint_sampling.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais/joint_upload.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais/metrics.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/observability_eval.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/observability_signals.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/paper_baselines.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/reference_metrics.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/reference_policy.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/reference_signals.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/replay.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/scheduler.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais/signals.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/su_policy.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais/transfer_signals.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/trust.py": "docs/code-comments-audit/health-diagnostics.md",
+    "src/tais/trust_bridge.c": "docs/code-comments-audit/health-diagnostics.md",
+    "src/tais/wire_codec.py": "docs/code-comments-audit/wire-protocol.md",
+    "src/tais/wire_link.py": "docs/code-comments-audit/wire-protocol.md",
+    "src/tais/wire_v2.py": "docs/code-comments-audit/wire-protocol.md",
+    "src/tais_rearm/__init__.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais_rearm/config.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais_rearm/evidence.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais_rearm/replay.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais_rearm/scheduler.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais_spatial/analysis.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_spatial/data.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_spatial/interventions.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_spatial/io.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_spatial/methods.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_spatial/pilot.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_v02/__init__.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_v02/config.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_v02/evidence.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais_v02/forensics.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_v02/replay.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_v02/scheduler.py": "docs/code-comments-audit/sampling-policies.md",
+    "tests/test_offline_spatial.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "tests/test_paper_baselines.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "tests/test_prototype.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "tests/test_reference_budget.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "tests/test_transfer_benchmark.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "tests/test_transfer_signals.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "tests/test_wire_codec.py": "docs/code-comments-audit/wire-protocol.md",
+    "tests/test_wire_v2.py": "docs/code-comments-audit/wire-protocol.md"
+  },
+  "active_freeze_expectations": {
+    "results/v0.2/legacy_source_hashes.json": {
+      "affected_annotated_files": 7,
+      "all_current_expected_bytes_match": true
+    },
+    "results/tais-paper/selection.json#sources": {
+      "affected_annotated_files": 27,
+      "all_current_expected_bytes_match": true
+    },
+    "results/tais-paper/historical-protection.json#files": {
+      "affected_annotated_files": 72,
+      "all_current_expected_bytes_match": true
+    },
+    "results/tais-transfer/selection.json#sources": {
+      "affected_annotated_files": 5,
+      "all_current_expected_bytes_match": true
+    },
+    "results/tais-transfer/selection.json#inherited_sources": {
+      "affected_annotated_files": 27,
+      "all_current_expected_bytes_match": true
+    },
+    "results/tais-paper-review/protection.json#protected_files": {
+      "affected_annotated_files": 40,
+      "all_current_expected_bytes_match": true
+    }
+  },
+  "protected_unchanged_regular_files": 1345,
+  "submodules_unchanged": true,
+  "inventory_sha256": "9e25d5af345689a9319dd70e9e2eaf4773faa8db4ead9104f1c458ee97b28637",
+  "freeze_diagnosis_sha256": "ef2d933c0e49229b53bc51b22e03c8ed04d68b5855ce302ef7e6756056b4c32e",
+  "new_documents": [
+    "docs/code-comments-audit/core-stream.md",
+    "docs/code-comments-audit/experiment-evaluation.md",
+    "docs/code-comments-audit/frozen-source-contracts.md",
+    "docs/code-comments-audit/health-diagnostics.md",
+    "docs/code-comments-audit/sampling-policies.md",
+    "docs/code-comments-audit/wire-protocol.md"
+  ],
+  "scope": "Original main entries only in inventory; new audit/migration files listed separately to avoid self-referential inventory hashes.",
+  "historical_failures": {
+    "commit": "89c7c404a4b7132bfae84239ecdd74b3a37c7b6b",
+    "pytest_passed": 890,
+    "pytest_failed": 2,
+    "pytest_xfailed": 2,
+    "all_eight_workflow_runs_failed": true,
+    "diagnosis": "Two explicit hash tests; G1 sources; G1 historical files; G2 inherited/new-source lock and tree paths; revision protected files and tree paths. Restored to base, no guard changes."
+  },
+  "validation": {
+    "syntax": {
+      "status": "PASS",
+      "python_files": 144
+    },
+    "strict_c11": {
+      "status": "PASS",
+      "flags": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror"
+      ],
+      "native_tests": 21,
+      "checks": 404
+    },
+    "targeted_tests": {
+      "status": "PASS",
+      "passed": 22,
+      "failed": 0,
+      "command": "pytest tests/test_transfer_benchmark.py::test_old_freeze_is_unchanged tests/test_v02.py::test_disabled_exact_legacy_and_frozen_sources tests/test_prototype.py::test_pinned_sources tests/test_paper_baselines.py -q"
+    },
+    "full_pytest": {
+      "status": "PASS",
+      "passed": 892,
+      "failed": 0,
+      "xfailed": 2,
+      "seconds": 394.55,
+      "new_failures": [],
+      "log_sha256": "2b21876aeb13867182670238ee85128b1378ff21304584ec47446fa46b205451"
+    },
+    "read_only_verifiers": {
+      "verify_paper": {
+        "status": "PASS",
+        "phase": "test",
+        "runs": 73800,
+        "seed_count": 20,
+        "scenarios": 45,
+        "view_methods": {
+          "common": 29,
+          "native": 53
+        },
+        "historical_changes": [
+          "README.md",
+          "results/README.md"
+        ],
+        "archive_hashes_checked": 0,
+        "source_freeze_checked": true,
+        "budget_points_within_5pct": 10,
+        "budget_points": 12,
+        "metrics_sha256": "ab80a348898587f32e0d22cd91be4668fc5a903f058fdbd2e7aa1b758ff8ed6b"
+      },
+      "verify_transfer": {
+        "status": "PASS",
+        "runs": 12880,
+        "event_rows": 26880,
+        "fault_rows": 14868,
+        "archive_digests": 0,
+        "frames_roundtripped": 0,
+        "seed_clusters": 20,
+        "frozen_sources_unchanged": true
+      },
+      "verify_paper_revision": {
+        "status": "PASS",
+        "protected_source_config_result_files": 202,
+        "budget_pairs": 60,
+        "audited_review_cells": 506,
+        "abstract_words": 187,
+        "referenced_figures": 3,
+        "tikz_architecture": true,
+        "tex_input_files": 23,
+        "labels": 19,
+        "references": 7,
+        "new_simulation_campaign": false
+      },
+      "check_paper_artifacts": {
+        "status": "PASS",
+        "cited_references": 8,
+        "summary_cells_checked": 909,
+        "source_fingerprints": 5,
+        "pdf_present": true
+      }
+    },
+    "source_identity": {
+      "status": "PASS",
+      "restored_equal_base": 82,
+      "retained_equal_original_pr": 10,
+      "all_own_code_equal_base_except_retained": true
+    },
+    "behavior_preservation": {
+      "status": "PASS",
+      "original_annotated_diffs_traced": 92,
+      "retained_python_ast_and_tokens_equal_base": 10,
+      "no_runtime_edits": true,
+      "new_effectiveness_experiments": false
+    },
+    "english_code_comments": {
+      "status": "PASS",
+      "scope": "retained additions; no new source annotations added during repair"
+    },
+    "protected_evidence": {
+      "status": "PASS",
+      "unchanged_regular_base_files": 1345,
+      "unchanged_submodules": 2,
+      "configs_results_papers_vendor_readme_workflows_diff_empty": true
+    },
+    "markdown": {
+      "status": "PASS",
+      "files": 7,
+      "local_links": 123,
+      "migrated_sources": 82,
+      "rules": "MD013 disabled; MD024 siblings_only; other defaults"
+    },
+    "diff_check": {
+      "status": "PASS"
+    },
+    "remote_ci": {
+      "status": "NOT_RUN_BEFORE_THIS_COMMIT",
+      "authoritative_latest_head_checks": "https://github.com/Sver0411/TAIS/pull/2/checks",
+      "publication_policy": "Push only after all necessary local checks pass; inspect all four workflows on latest head; mark Ready only if all pass. Do not merge or modify main."
+    },
+    "not_run": [
+      "full G1/G2 campaigns",
+      "parameter search",
+      "historical plot generation",
+      "paper compilation",
+      "exhaustive ignored raw archive verification",
+      "historical verification writers and remote publishers"
+    ]
+  },
+  "limitations": [
+    "Old manifests can target distinct historical snapshots; their identities are preserved rather than replaced by current main.",
+    "No complete G1/G2 campaigns, tuning, historical plot generation, paper compilation, or exhaustive ignored archive rehash.",
+    "All publication checks here are read-only and use stored evidence; no natural field, radio or power validation."
+  ],
+  "new_audit_files": [
+    "docs/CODE_COMMENTS_AUDIT.md",
+    "docs/code-comments-audit/inventory.csv",
+    "docs/code-comments-audit/checks.json",
+    "docs/code-comments-audit/freeze-diagnosis.csv",
+    "docs/code-comments-audit/core-stream.md",
+    "docs/code-comments-audit/experiment-evaluation.md",
+    "docs/code-comments-audit/frozen-source-contracts.md",
+    "docs/code-comments-audit/health-diagnostics.md",
+    "docs/code-comments-audit/sampling-policies.md",
+    "docs/code-comments-audit/wire-protocol.md"
+  ]
+}
