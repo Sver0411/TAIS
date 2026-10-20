@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "changed_jsonl_journals": 45,
+  "jsonl_entries": 76490,
+  "actual_tx_frames_roundtripped": 1343,
+  "changed_gzip_headers_read": 40,
+  "pdf_paths": [
+    "papers/tais/history/g1-manuscript-0170196.pdf",
+    "papers/tais/manuscript.pdf"
+  ],
+  "new_parameter_choices": false
+}

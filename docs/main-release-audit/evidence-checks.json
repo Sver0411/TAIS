@@ -1,0 +1,515 @@
+{
+  "status": "PASS_WITH_DOCUMENTED_HISTORICAL_METADATA_LIMIT",
+  "original_main_files": 118,
+  "original_changes": [
+    "README.md",
+    "docs/LIMITATIONS.md",
+    "results/README.md"
+  ],
+  "study_snapshot_checks": [
+    {
+      "study": "v02",
+      "branch": "research/v0.2-same-channel-recall",
+      "existing_source_config_result_changes": [],
+      "protected": true
+    },
+    {
+      "study": "rearm",
+      "branch": "research/blocked-rearm-fix",
+      "existing_source_config_result_changes": [],
+      "protected": true
+    },
+    {
+      "study": "OSP",
+      "branch": "research/offline-spatial-pilot",
+      "existing_source_config_result_changes": [],
+      "protected": true
+    },
+    {
+      "study": "wire-v1",
+      "branch": "research/wire-payload-v1",
+      "existing_source_config_result_changes": [],
+      "protected": true
+    },
+    {
+      "study": "wire-v2",
+      "branch": "research/wire-payload-v2",
+      "existing_source_config_result_changes": [],
+      "protected": true
+    },
+    {
+      "study": "BM",
+      "branch": "research/budget-matched-policy-eval",
+      "existing_source_config_result_changes": [],
+      "protected": true
+    },
+    {
+      "study": "FO",
+      "branch": "research/fault-event-observability",
+      "existing_source_config_result_changes": [],
+      "protected": true
+    },
+    {
+      "study": "IRB",
+      "branch": "research/independent-reference-budget",
+      "existing_source_config_result_changes": [],
+      "protected": true
+    },
+    {
+      "study": "Core",
+      "branch": "research/tais-core-prototype",
+      "existing_source_config_result_changes": [],
+      "protected": true
+    },
+    {
+      "study": "JO",
+      "branch": "research/tais-joint-optimization",
+      "existing_source_config_result_changes": [],
+      "protected": true
+    },
+    {
+      "study": "SU",
+      "branch": "research/tais-su-optimization",
+      "existing_source_config_result_changes": [],
+      "protected": true
+    },
+    {
+      "study": "G1",
+      "branch": "research/tais-paper-evaluation",
+      "existing_source_config_result_changes": [],
+      "protected": true
+    },
+    {
+      "study": "G2",
+      "branch": "research/tais-cross-generator-validation",
+      "existing_source_config_result_changes": [],
+      "protected": true
+    }
+  ],
+  "manifest_hash_checks": 178,
+  "manifest_hash_failures": [],
+  "historical_self_hash_exceptions": [
+    {
+      "manifest": "results/budget-matched/test/analysis/manifest.json",
+      "recorded": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "5031825db2278451616df8b71447e9cc0e5184d275422efa7ed78d448bca34a7",
+      "classification": "historical self-reference cannot validate its own manifest; preserved unchanged; all other output hashes checked"
+    }
+  ],
+  "unresolved_manifest_targets": [],
+  "raw_archive_samples": [
+    {
+      "manifest": "results/blocked-rearm/development/manifest.json",
+      "declared_archives": 8700,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/blocked-rearm/test/manifest.json",
+      "declared_archives": 26100,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/blocked-rearm/validation/manifest.json",
+      "declared_archives": 8700,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/budget-matched/development/manifest.json",
+      "declared_archives": 10650,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/budget-matched/test/manifest.json",
+      "declared_archives": 13590,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/budget-matched/validation/manifest.json",
+      "declared_archives": 10650,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/development-smoke/manifest.json",
+      "declared_archives": 42,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/development/manifest.json",
+      "declared_archives": 6300,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/fault-event-observability/development/manifest.json",
+      "declared_archives": 10140,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/fault-event-observability/smoke/manifest.json",
+      "declared_archives": 28,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/fault-event-observability/software-smoke-v2/smoke/manifest.json",
+      "declared_archives": 28,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/fault-event-observability/test/manifest.json",
+      "declared_archives": 30420,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/fault-event-observability/validation/manifest.json",
+      "declared_archives": 10140,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/independent-reference-budget/calibrate/manifest.json",
+      "declared_archives": 2520,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/independent-reference-budget/development/manifest.json",
+      "declared_archives": 29100,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/independent-reference-budget/test/manifest.json",
+      "declared_archives": 87300,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/independent-reference-budget/validation/manifest.json",
+      "declared_archives": 29100,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/offline-spatial-pilot/development/manifest.json",
+      "declared_archives": 9,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/offline-spatial-pilot/test/manifest.json",
+      "declared_archives": 9,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/offline-spatial-pilot/validation/manifest.json",
+      "declared_archives": 9,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/tais-joint/development/manifest.json",
+      "declared_archives": 1620,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/tais-joint/test/manifest.json",
+      "declared_archives": 8100,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/tais-joint/validation/manifest.json",
+      "declared_archives": 2700,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/tais-paper/checks/frozen-smoke-manifest.json",
+      "declared_archives": 660,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/tais-paper/development/manifest.json",
+      "declared_archives": 42270,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/tais-paper/smoke/manifest.json",
+      "declared_archives": 660,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/tais-paper/test/manifest.json",
+      "declared_archives": 84540,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/tais-su/development/manifest.json",
+      "declared_archives": 4020,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/tais-su/engineering/manifest.json",
+      "declared_archives": 402,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/tais-su/test/manifest.json",
+      "declared_archives": 12060,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/tais-su/validation/manifest.json",
+      "declared_archives": 4020,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/tais-transfer/smoke/manifest.json",
+      "declared_archives": 592,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/tais-transfer/test/manifest.json",
+      "declared_archives": 14920,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/test/manifest.json",
+      "declared_archives": 18900,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/v0.2/development/manifest.json",
+      "declared_archives": 10140,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/v0.2/forensics/manifest.json",
+      "declared_archives": 4050,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/v0.2/test/manifest.json",
+      "declared_archives": 50700,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/v0.2/validation/manifest.json",
+      "declared_archives": 10140,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    },
+    {
+      "manifest": "results/validation/manifest.json",
+      "declared_archives": 6300,
+      "sample_verified": 6,
+      "sample_missing": 0,
+      "scope": "deterministic first/middle/last compressed-byte sample, not complete archive replay"
+    }
+  ],
+  "archive_samples_verified": 234,
+  "archive_samples_missing": 0,
+  "python_ast_files": 127,
+  "python_paths": [
+    "conftest.py",
+    "examples/tais-core/historical_review.py",
+    "examples/tais-core/receiver.py",
+    "examples/tais-core/run.py",
+    "examples/tais-core/verify_delivery.py",
+    "examples/tais-core/view_run.py",
+    "scripts/analyze_budget_matched_results.py",
+    "scripts/analyze_budget_sensitivity.py",
+    "scripts/analyze_fault_event_observability.py",
+    "scripts/analyze_independent_reference_budget.py",
+    "scripts/analyze_joint_optimization.py",
+    "scripts/analyze_paper.py",
+    "scripts/analyze_su.py",
+    "scripts/analyze_transfer.py",
+    "scripts/audit_budget_seeds.py",
+    "scripts/audit_observability_seeds.py",
+    "scripts/audit_reference_budget.py",
+    "scripts/audit_transfer_seeds.py",
+    "scripts/audit_wire_health.py",
+    "scripts/benchmark_joint_optimization.py",
+    "scripts/benchmark_paper.py",
+    "scripts/benchmark_su.py",
+    "scripts/benchmark_transfer.py",
+    "scripts/benchmark_wire_codec.py",
+    "scripts/benchmark_wire_v2.py",
+    "scripts/build_paper.py",
+    "scripts/build_paper_report.py",
+    "scripts/build_transfer_paper.py",
+    "scripts/build_transfer_report.py",
+    "scripts/check_paper_artifacts.py",
+    "scripts/diagnose_joint_history.py",
+    "scripts/import_joint_csv.py",
+    "scripts/inspect_joint_cases.py",
+    "scripts/inspect_v02_results.py",
+    "scripts/joint_secondary_audit.py",
+    "scripts/offline_spatial.py",
+    "scripts/paper_metrics.py",
+    "scripts/paper_publication_figures.py",
+    "scripts/paper_review_artifacts.py",
+    "scripts/publish_blocked_branch.py",
+    "scripts/publish_research_branch.py",
+    "scripts/rearm_audit_seeds.py",
+    "scripts/rearm_diagnose.py",
+    "scripts/rearm_plot.py",
+    "scripts/rearm_report.py",
+    "scripts/rearm_run.py",
+    "scripts/rearm_summarize.py",
+    "scripts/rearm_verify.py",
+    "scripts/replay_joint_frozen.py",
+    "scripts/report_fault_event_observability.py",
+    "scripts/report_independent_reference_budget.py",
+    "scripts/report_offline_spatial.py",
+    "scripts/reproduce_paper.py",
+    "scripts/reproduce_transfer.py",
+    "scripts/run_budget_matched_experiment.py",
+    "scripts/run_fault_event_observability.py",
+    "scripts/run_independent_reference_budget.py",
+    "scripts/transfer_figures.py",
+    "scripts/transfer_metrics.py",
+    "scripts/update_transfer_docs.py",
+    "scripts/v02_forensics.py",
+    "scripts/v02_identifiability.py",
+    "scripts/v02_report.py",
+    "scripts/v02_run.py",
+    "scripts/v02_seed_audit.py",
+    "scripts/v02_summarize.py",
+    "scripts/v02_verify.py",
+    "scripts/verify_budget_matched_experiment.py",
+    "scripts/verify_fault_event_observability.py",
+    "scripts/verify_independent_reference_budget.py",
+    "scripts/verify_joint_delivery.py",
+    "scripts/verify_offline_spatial.py",
+    "scripts/verify_paper.py",
+    "scripts/verify_paper_references.py",
+    "scripts/verify_paper_revision.py",
+    "scripts/verify_su.py",
+    "scripts/verify_transfer.py",
+    "scripts/verify_wire_v2_results.py",
+    "src/tais/budget_eval.py",
+    "src/tais/core_stream.py",
+    "src/tais/joint_policy.py",
+    "src/tais/joint_sampling.py",
+    "src/tais/joint_upload.py",
+    "src/tais/observability_eval.py",
+    "src/tais/observability_signals.py",
+    "src/tais/paper_baselines.py",
+    "src/tais/reference_metrics.py",
+    "src/tais/reference_policy.py",
+    "src/tais/reference_signals.py",
+    "src/tais/su_policy.py",
+    "src/tais/transfer_signals.py",
+    "src/tais/wire_codec.py",
+    "src/tais/wire_link.py",
+    "src/tais/wire_v2.py",
+    "src/tais_rearm/__init__.py",
+    "src/tais_rearm/config.py",
+    "src/tais_rearm/evidence.py",
+    "src/tais_rearm/replay.py",
+    "src/tais_rearm/scheduler.py",
+    "src/tais_spatial/__init__.py",
+    "src/tais_spatial/analysis.py",
+    "src/tais_spatial/data.py",
+    "src/tais_spatial/interventions.py",
+    "src/tais_spatial/io.py",
+    "src/tais_spatial/methods.py",
+    "src/tais_spatial/pilot.py",
+    "src/tais_v02/__init__.py",
+    "src/tais_v02/config.py",
+    "src/tais_v02/evidence.py",
+    "src/tais_v02/forensics.py",
+    "src/tais_v02/replay.py",
+    "src/tais_v02/scheduler.py",
+    "tests/test_budget_matched.py",
+    "tests/test_core_stream.py",
+    "tests/test_joint_policy.py",
+    "tests/test_observability.py",
+    "tests/test_offline_spatial.py",
+    "tests/test_paper_baselines.py",
+    "tests/test_paper_revision.py",
+    "tests/test_rearm.py",
+    "tests/test_reference_budget.py",
+    "tests/test_su_policy.py",
+    "tests/test_transfer_benchmark.py",
+    "tests/test_transfer_signals.py",
+    "tests/test_v02.py",
+    "tests/test_wire_codec.py",
+    "tests/test_wire_v2.py"
+  ],
+  "changed_csv_files": 289,
+  "changed_csv_data_rows": 1202826,
+  "changed_json_files": 306,
+  "changed_png_files": 105,
+  "portfolio_frozen_source_checks": 58,
+  "portfolio_sources_unchanged": true,
+  "full_historical_simulation_rerun": false,
+  "full_raw_archive_replay": false
+}

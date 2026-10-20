@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "tracked_files": 1343,
+  "secret_pattern_matches": [],
+  "accidental_ignored_payloads": [],
+  "scope": "Limited token/private-key patterns, not a formal security review"
+}

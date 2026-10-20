@@ -1,0 +1,151 @@
+{
+  "base": "68af4b6d9df7ed145a237defc4ab920600823373",
+  "candidate": "3fb89beaa7dd5aa64cb5c17f6088905b99f1709e",
+  "merge_base": "68af4b6d9df7ed145a237defc4ab920600823373",
+  "behind": 0,
+  "ahead": 53,
+  "changed_files": 1226,
+  "categories": {
+    ".github": 3,
+    "root": 3,
+    "configs": 10,
+    "docs": 46,
+    "examples": 7,
+    "papers": 68,
+    "results": 967,
+    "scripts": 73,
+    "src": 34,
+    "tests": 15
+  },
+  "statuses": {
+    "A": 1223,
+    "M": 3
+  },
+  "total_new_file_bytes": 503185310,
+  "full_local_diff_bytes": 471331260,
+  "full_local_diff_sha256": "99f943d274d93adde3ec9068819be2f9812b6eaf1515801a851f1ceebaf24098",
+  "source": "local Git complete history/diff/tree, no GitHub compare-file pagination",
+  "changed_gitlinks": [],
+  "largest_files": [
+    {
+      "path": "results/tais-paper/test/metrics.csv",
+      "status": "A",
+      "category": "results",
+      "old_oid": "",
+      "new_oid": "ffc80d364c2cef9e4154a2931c3d84d174543e85",
+      "old_size": "",
+      "new_size": 55642219,
+      "added_lines": "73801",
+      "deleted_lines": "0",
+      "sha256": "ab80a348898587f32e0d22cd91be4668fc5a903f058fdbd2e7aa1b758ff8ed6b"
+    },
+    {
+      "path": "results/independent-reference-budget/test/metrics.csv",
+      "status": "A",
+      "category": "results",
+      "old_oid": "",
+      "new_oid": "112dea85f08bd93b3e0f30b0439b9f4baaf1c66a",
+      "old_size": "",
+      "new_size": 45196191,
+      "added_lines": "46981",
+      "deleted_lines": "0",
+      "sha256": "cf97177d75ce5db483b962cf87ceb8967a4ec566625779f2190fa753feffc261"
+    },
+    {
+      "path": "results/tais-paper/development/metrics.csv",
+      "status": "A",
+      "category": "results",
+      "old_oid": "",
+      "new_oid": "9f6d1ee331e2fcd96ffa4b9b45d7d60d2224d1d1",
+      "old_size": "",
+      "new_size": 27806633,
+      "added_lines": "36901",
+      "deleted_lines": "0",
+      "sha256": "85befcf877fabb38864dd8e764293f7acb8c90703c7c45073330f77583823f19"
+    },
+    {
+      "path": "results/fault-event-observability/test/metrics.csv",
+      "status": "A",
+      "category": "results",
+      "old_oid": "",
+      "new_oid": "243e0fac7036cd3cfc2b85d6d0d6e982b3ef7bcc",
+      "old_size": "",
+      "new_size": 17001200,
+      "added_lines": "16741",
+      "deleted_lines": "0",
+      "sha256": "3eada58191cbd63bf4050136ab77f764af1bebce6afc8f27aad1fcca68db1471"
+    },
+    {
+      "path": "results/independent-reference-budget/development/metrics.csv",
+      "status": "A",
+      "category": "results",
+      "old_oid": "",
+      "new_oid": "1fc0e559646aee85ef2d6f32e82c220f84c0fdcf",
+      "old_size": "",
+      "new_size": 15068327,
+      "added_lines": "15661",
+      "deleted_lines": "0",
+      "sha256": "bd330c6a9e10a23d75498523dd2970e1084499edcc8518bb757d86c620c02750"
+    },
+    {
+      "path": "results/independent-reference-budget/validation/metrics.csv",
+      "status": "A",
+      "category": "results",
+      "old_oid": "",
+      "new_oid": "0ea5dfe2f9a6587c5dadb8be1c223b65a314ea2d",
+      "old_size": "",
+      "new_size": 15065060,
+      "added_lines": "15661",
+      "deleted_lines": "0",
+      "sha256": "c3be577c1746a5b1d0c238d510752f3895b11ee93801db71afa4f0cd98a37c7b"
+    },
+    {
+      "path": "results/independent-reference-budget/test/manifest.json",
+      "status": "A",
+      "category": "results",
+      "old_oid": "",
+      "new_oid": "bfdb54692f976d6e1b00911f2d51153fffbd1a87",
+      "old_size": "",
+      "new_size": 13253895,
+      "added_lines": "87530",
+      "deleted_lines": "0",
+      "sha256": "fb18e56418c203ff95cb1fa20d001c10fda1b35499761d9206498c8c5e72b07e"
+    },
+    {
+      "path": "results/v0.2/test/metrics.csv",
+      "status": "A",
+      "category": "results",
+      "old_oid": "",
+      "new_oid": "bc189b249079281fd454c1e58519d91ffda34252",
+      "old_size": "",
+      "new_size": 11996104,
+      "added_lines": "42751",
+      "deleted_lines": "0",
+      "sha256": "405e116ec11e5211eaaa3c1307127f2a0cf9b652e288f9c52f89338be336dc31"
+    },
+    {
+      "path": "results/tais-paper/test/manifest.json",
+      "status": "A",
+      "category": "results",
+      "old_oid": "",
+      "new_oid": "26a513f30e39a2f3aeb70d173cc427ace6c6136d",
+      "old_size": "",
+      "new_size": 10818327,
+      "added_lines": "84816",
+      "deleted_lines": "0",
+      "sha256": "f261f57bd72a0422575035de2012a0bd5d2982186ed2a3e3ffcaa20b569d5459"
+    },
+    {
+      "path": "results/tais-transfer/test/metrics.csv",
+      "status": "A",
+      "category": "results",
+      "old_oid": "",
+      "new_oid": "c033284bf884180d79cd7c0a08e7125ddccf7517",
+      "old_size": "",
+      "new_size": 10763588,
+      "added_lines": "12881",
+      "deleted_lines": "0",
+      "sha256": "da5dd5ebef3026974e1c0c734baa9c93f16cc326f590112662634d7ee9dc577b"
+    }
+  ]
+}

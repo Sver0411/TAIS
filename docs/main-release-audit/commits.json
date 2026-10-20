@@ -1,0 +1,426 @@
+[
+  {
+    "sha": "dccf2f0c7b5cc848a3a2f762889a28c5aa0443f4",
+    "parents": [
+      "68af4b6d9df7ed145a237defc4ab920600823373"
+    ],
+    "author_date": "2026-10-17T15:21:28+08:00",
+    "subject": "analysis: trace v0.1 failures and prove observation-erasing event pairs"
+  },
+  {
+    "sha": "8222873239ffa89a62a2d90aa46407928dbcdcb0",
+    "parents": [
+      "dccf2f0c7b5cc848a3a2f762889a28c5aa0443f4"
+    ],
+    "author_date": "2026-10-17T15:21:28+08:00",
+    "subject": "design: preregister bounded persistent evidence and fresh v0.2 validation"
+  },
+  {
+    "sha": "1dbc102a70e44011941fd2358af4f485f8f457ac",
+    "parents": [
+      "8222873239ffa89a62a2d90aa46407928dbcdcb0"
+    ],
+    "author_date": "2026-10-17T15:24:20+08:00",
+    "subject": "feat: implement bounded persistent candidates with causal legacy-compatible replay"
+  },
+  {
+    "sha": "2fd083790b4565498ea1cdb625946270b750859d",
+    "parents": [
+      "1dbc102a70e44011941fd2358af4f485f8f457ac"
+    ],
+    "author_date": "2026-10-17T15:26:26+08:00",
+    "subject": "test: make legacy immutability check portable to shallow CI; retain failed run"
+  },
+  {
+    "sha": "14af61952229a6da6cda40c8ee7257f9582b4b40",
+    "parents": [
+      "2fd083790b4565498ea1cdb625946270b750859d"
+    ],
+    "author_date": "2026-10-17T15:28:31+08:00",
+    "subject": "experiment: retain dev-validation results and freeze untouched final seeds 50-99"
+  },
+  {
+    "sha": "96170fcb5df0534ca58e44827b2fcb214e7892ef",
+    "parents": [
+      "14af61952229a6da6cda40c8ee7257f9582b4b40"
+    ],
+    "author_date": "2026-10-17T15:47:13+08:00",
+    "subject": "experiment: publish fresh v0.2 test, conditional gains, costs and retained failure"
+  },
+  {
+    "sha": "b43e34c35ab8fd4a1219adcceec578a0aa3f16f7",
+    "parents": [
+      "96170fcb5df0534ca58e44827b2fcb214e7892ef"
+    ],
+    "author_date": "2026-10-17T16:04:42+08:00",
+    "subject": "design: reproduce blocked rearm failure and preregister minimal return-reset repair"
+  },
+  {
+    "sha": "4958b6ef0869302620b40c052f428353c79870ef",
+    "parents": [
+      "b43e34c35ab8fd4a1219adcceec578a0aa3f16f7"
+    ],
+    "author_date": "2026-10-17T16:10:10+08:00",
+    "subject": "fix: rearm verified reference returns without changing frozen scheduling policies"
+  },
+  {
+    "sha": "8a735930883cd1a2dc6e6a0f0860bc3d2f91440e",
+    "parents": [
+      "4958b6ef0869302620b40c052f428353c79870ef"
+    ],
+    "author_date": "2026-10-17T16:15:46+08:00",
+    "subject": "experiment: retain repair dev-validation tradeoffs and freeze fresh final seeds"
+  },
+  {
+    "sha": "93e50cb90ecfea187a6f212d4ffa7c97a61d0e80",
+    "parents": [
+      "8a735930883cd1a2dc6e6a0f0860bc3d2f91440e"
+    ],
+    "author_date": "2026-10-17T19:29:16+08:00",
+    "subject": "results: report independent rearm gains, drift costs and reproducible limits"
+  },
+  {
+    "sha": "01ea1874a82ae8fd3a76fb7ec7df316457094472",
+    "parents": [
+      "93e50cb90ecfea187a6f212d4ffa7c97a61d0e80"
+    ],
+    "author_date": "2026-10-18T00:27:57+08:00",
+    "subject": "docs: audit drift identifiability and prioritize real-trace information evidence"
+  },
+  {
+    "sha": "b191fce65bda1dbb0297d925e2fdd042a3599b0b",
+    "parents": [
+      "01ea1874a82ae8fd3a76fb7ec7df316457094472"
+    ],
+    "author_date": "2026-10-18T00:29:47+08:00",
+    "subject": "docs: record successful automatic checks separately from local audit"
+  },
+  {
+    "sha": "89e1d8606c95100789e568e922ce1e7d3a6978ff",
+    "parents": [
+      "b191fce65bda1dbb0297d925e2fdd042a3599b0b"
+    ],
+    "author_date": "2026-10-18T00:53:28+08:00",
+    "subject": "docs: audit official multisite data intake and time-quality limits"
+  },
+  {
+    "sha": "7872d5401ced7cf7806adbffe21a1b515dcb79d3",
+    "parents": [
+      "89e1d8606c95100789e568e922ce1e7d3a6978ff"
+    ],
+    "author_date": "2026-10-18T01:34:09+08:00",
+    "subject": "docs: audit real-data time semantics and draft C1 protocol [skip ci]"
+  },
+  {
+    "sha": "66f4270d1649bc14ffe53911cbf4d219f55f4080",
+    "parents": [
+      "7872d5401ced7cf7806adbffe21a1b515dcb79d3"
+    ],
+    "author_date": "2026-10-18T01:52:54+08:00",
+    "subject": "docs: assess alternative spatial sensor datasets for C1.1 [skip ci]"
+  },
+  {
+    "sha": "6feafb25b475324991db3b9876ab4ada2c939501",
+    "parents": [
+      "66f4270d1649bc14ffe53911cbf4d219f55f4080"
+    ],
+    "author_date": "2026-10-18T12:15:05+08:00",
+    "subject": "docs: freeze assumptions and scope for offline spatial pilot [skip ci]"
+  },
+  {
+    "sha": "ba46b819367bede6014756a007cd87bbd8247fb7",
+    "parents": [
+      "6feafb25b475324991db3b9876ab4ada2c939501"
+    ],
+    "author_date": "2026-10-18T12:23:57+08:00",
+    "subject": "feat: add isolated fixed-plan spatial pilot with provenance and causality tests [skip ci]"
+  },
+  {
+    "sha": "f2fcbbbff5ea07706da8485e43f6560a0947f831",
+    "parents": [
+      "ba46b819367bede6014756a007cd87bbd8247fb7"
+    ],
+    "author_date": "2026-10-18T12:30:43+08:00",
+    "subject": "research: record pilot development and validation; freeze before held-out evaluation [skip ci]"
+  },
+  {
+    "sha": "f21bc2f0e1d01d0670ce1c1bd4ab5a2aab7e171d",
+    "parents": [
+      "f2fcbbbff5ea07706da8485e43f6560a0947f831"
+    ],
+    "author_date": "2026-10-18T12:41:46+08:00",
+    "subject": "research: archive offline spatial pilot and held-out coverage failure"
+  },
+  {
+    "sha": "bc9c00e739921bbcb3a7d1607a7386322a738e5d",
+    "parents": [
+      "f21bc2f0e1d01d0670ce1c1bd4ab5a2aab7e171d"
+    ],
+    "author_date": "2026-10-18T14:05:01+08:00",
+    "subject": "docs: specify lossless wire v1 and fixed historical engineering comparison [skip ci]"
+  },
+  {
+    "sha": "615a47b96ad3e106e0b85922c1656c02b6969fe7",
+    "parents": [
+      "bc9c00e739921bbcb3a7d1607a7386322a738e5d"
+    ],
+    "author_date": "2026-10-18T14:12:13+08:00",
+    "subject": "feat: add stateless lossless wire v1 and archive-only encoding benchmark [skip ci]"
+  },
+  {
+    "sha": "b184240226025d86c5e77a74f124c5c788564613",
+    "parents": [
+      "615a47b96ad3e106e0b85922c1656c02b6969fe7"
+    ],
+    "author_date": "2026-10-18T14:18:01+08:00",
+    "subject": "research: verify lossless wire costs on every frozen historical upload"
+  },
+  {
+    "sha": "0da15d6dba09a5b375fdba87c89d40a31d491ef5",
+    "parents": [
+      "b184240226025d86c5e77a74f124c5c788564613"
+    ],
+    "author_date": "2026-10-18T14:48:27+08:00",
+    "subject": "research: audit uploaded health repetition and freeze wire v2 recovery experiment [skip ci]"
+  },
+  {
+    "sha": "9121945b53d447f68a4dd85af75de90bcca33bdd",
+    "parents": [
+      "0da15d6dba09a5b375fdba87c89d40a31d491ef5"
+    ],
+    "author_date": "2026-10-18T14:53:57+08:00",
+    "subject": "feat: add wire v2 health deltas, per-device recovery and controlled-link benchmark [skip ci]"
+  },
+  {
+    "sha": "97feccb36acb6790b40be31e3cee1661e8811a61",
+    "parents": [
+      "9121945b53d447f68a4dd85af75de90bcca33bdd"
+    ],
+    "author_date": "2026-10-18T15:07:57+08:00",
+    "subject": "research: archive wire v2 costs, loss amplification and recovery limits"
+  },
+  {
+    "sha": "9ab0b1212ac5e777491491183880039db6a74fcf",
+    "parents": [
+      "97feccb36acb6790b40be31e3cee1661e8811a61"
+    ],
+    "author_date": "2026-10-18T22:30:45+08:00",
+    "subject": "research: audit unused seeds and preregister budget-matched confirmation evaluation [skip ci]"
+  },
+  {
+    "sha": "d22fb50097037ac1913d3bac163c6a31a907716f",
+    "parents": [
+      "9ab0b1212ac5e777491491183880039db6a74fcf"
+    ],
+    "author_date": "2026-10-18T22:43:44+08:00",
+    "subject": "research: freeze budget-only calibration, paired statistics and original-policy runner [skip ci]"
+  },
+  {
+    "sha": "7600f2c1d0093bfe840d9c35d3ae1d3bfe7433ce",
+    "parents": [
+      "d22fb50097037ac1913d3bac163c6a31a907716f"
+    ],
+    "author_date": "2026-10-18T22:49:38+08:00",
+    "subject": "research: lock all three resource-matched pairs before final seeds [skip ci]"
+  },
+  {
+    "sha": "5b06d2feae44db2b3503697d246f51c43e5d8f2e",
+    "parents": [
+      "7600f2c1d0093bfe840d9c35d3ae1d3bfe7433ce"
+    ],
+    "author_date": "2026-10-18T23:08:32+08:00",
+    "subject": "research: report confirmation NO-GO under frozen budget matching"
+  },
+  {
+    "sha": "02c67a7293be1480cb99cd7f6dd19a6c82898235",
+    "parents": [
+      "5b06d2feae44db2b3503697d246f51c43e5d8f2e"
+    ],
+    "author_date": "2026-10-18T23:37:27+08:00",
+    "subject": "research: preregister FO-1 timing matrix and reserve unused seeds [skip ci]"
+  },
+  {
+    "sha": "4b85e94ca9d266c8031ca55c1b5165e878635337",
+    "parents": [
+      "02c67a7293be1480cb99cd7f6dd19a6c82898235"
+    ],
+    "author_date": "2026-10-18T23:43:37+08:00",
+    "subject": "research: freeze FO-1 generator, causal replay and paired timing analysis [skip ci]"
+  },
+  {
+    "sha": "b7551fb87934f31048861264d7a8e71e3f45ee55",
+    "parents": [
+      "4b85e94ca9d266c8031ca55c1b5165e878635337"
+    ],
+    "author_date": "2026-10-18T23:43:58+08:00",
+    "subject": "test: record completed pre-development suite, 499 passed and two existing xfails [skip ci]"
+  },
+  {
+    "sha": "1030868705e0ca004392ad1a5d3c597f66478a23",
+    "parents": [
+      "b7551fb87934f31048861264d7a8e71e3f45ee55"
+    ],
+    "author_date": "2026-10-18T23:49:50+08:00",
+    "subject": "research: lock verified FO-1 calibration before final timing cohort [skip ci]"
+  },
+  {
+    "sha": "89aa8341181aa42791f9a4de80739bb7c10fa9e5",
+    "parents": [
+      "1030868705e0ca004392ad1a5d3c597f66478a23"
+    ],
+    "author_date": "2026-10-19T00:03:15+08:00",
+    "subject": "research: report FO-1 timing interactions and observational ambiguity"
+  },
+  {
+    "sha": "38c481c1aecb3c3dc63f7c3e409019d3e8b0f065",
+    "parents": [
+      "89aa8341181aa42791f9a4de80739bb7c10fa9e5"
+    ],
+    "author_date": "2026-10-19T00:36:59+08:00",
+    "subject": "research: preregister IRB-1 conservative reference and shared hard budgets [skip ci]"
+  },
+  {
+    "sha": "539b65c185dc3ba192a209dbcd24d4b7fa2539c0",
+    "parents": [
+      "38c481c1aecb3c3dc63f7c3e409019d3e8b0f065"
+    ],
+    "author_date": "2026-10-19T00:39:48+08:00",
+    "subject": "research: clarify undecided versus environmental error before any new data [skip ci]"
+  },
+  {
+    "sha": "150b3f838824427a6e939c439fdee3f2274ca5aa",
+    "parents": [
+      "539b65c185dc3ba192a209dbcd24d4b7fa2539c0"
+    ],
+    "author_date": "2026-10-19T00:48:54+08:00",
+    "subject": "research: freeze IRB-1 conservative policy and verified hard-budget executor [skip ci]"
+  },
+  {
+    "sha": "243b05779b5aa936504c1c49bcbd090846dd020c",
+    "parents": [
+      "150b3f838824427a6e939c439fdee3f2274ca5aa"
+    ],
+    "author_date": "2026-10-19T00:51:51+08:00",
+    "subject": "research: lock verified development mean budgets for all IRB-1 policies [skip ci]"
+  },
+  {
+    "sha": "425d6324582b5aa03eff530b401bebff610aba93",
+    "parents": [
+      "243b05779b5aa936504c1c49bcbd090846dd020c"
+    ],
+    "author_date": "2026-10-19T01:06:17+08:00",
+    "subject": "research: freeze verified IRB-1 development and validation before final test [skip ci]"
+  },
+  {
+    "sha": "fe032a4a09542e35021a4ec0486af4f0cb697f12",
+    "parents": [
+      "425d6324582b5aa03eff530b401bebff610aba93"
+    ],
+    "author_date": "2026-10-19T01:37:30+08:00",
+    "subject": "research: complete hard-budget reference evaluation and retain NO-GO evidence"
+  },
+  {
+    "sha": "2ea17b39a502e32136333b0987d72c613cccbd70",
+    "parents": [
+      "fe032a4a09542e35021a4ec0486af4f0cb697f12"
+    ],
+    "author_date": "2026-10-19T13:12:50+08:00",
+    "subject": "test: fetch exact provenance commit for shallow CI checkouts"
+  },
+  {
+    "sha": "48b68655f95eaefbcdb7624e9de0e75a030ddf95",
+    "parents": [
+      "2ea17b39a502e32136333b0987d72c613cccbd70"
+    ],
+    "author_date": "2026-10-19T14:03:12+08:00",
+    "subject": "feat: integrate frozen GateOnly C11 and stateless v1 streaming prototype"
+  },
+  {
+    "sha": "4cd19c37f3848cadf3f5510bcdec68cdaf6abd71",
+    "parents": [
+      "48b68655f95eaefbcdb7624e9de0e75a030ddf95"
+    ],
+    "author_date": "2026-10-19T14:42:26+08:00",
+    "subject": "research: freeze JO-1 layers, development selection and adverse validation before held-out test"
+  },
+  {
+    "sha": "8928fb133cad4b9352fb96db79b79ff40cc4d7c7",
+    "parents": [
+      "4cd19c37f3848cadf3f5510bcdec68cdaf6abd71"
+    ],
+    "author_date": "2026-10-19T14:56:12+08:00",
+    "subject": "research: retain JO-1 held-out results, end-to-end runs and joint-policy NO-GO"
+  },
+  {
+    "sha": "ee4df83b728a26889d58920727a9ddcde874507b",
+    "parents": [
+      "8928fb133cad4b9352fb96db79b79ff40cc4d7c7"
+    ],
+    "author_date": "2026-10-19T15:38:40+08:00",
+    "subject": "research: freeze SU-1 composition, cap30 selection and validation before final test"
+  },
+  {
+    "sha": "8b991530b77a3c7197bb998f0f4b49c1405ed96c",
+    "parents": [
+      "ee4df83b728a26889d58920727a9ddcde874507b"
+    ],
+    "author_date": "2026-10-19T15:52:40+08:00",
+    "subject": "research: retain SU-1 final tradeoffs, receiver evidence and balanced NO-GO"
+  },
+  {
+    "sha": "269185d97ec24ec3761303a60eb742b63f7509ea",
+    "parents": [
+      "8b991530b77a3c7197bb998f0f4b49c1405ed96c"
+    ],
+    "author_date": "2026-10-19T17:53:41+08:00",
+    "subject": "research: freeze independent paper baselines and development-selected budgets before held-out test"
+  },
+  {
+    "sha": "0170196dda10f78b85d5e4b685d56331a0021083",
+    "parents": [
+      "269185d97ec24ec3761303a60eb742b63f7509ea"
+    ],
+    "author_date": "2026-10-19T18:18:49+08:00",
+    "subject": "research: retain held-out independent comparisons and deliver audited simulation paper draft"
+  },
+  {
+    "sha": "3f3991aa26cf1ac7f8f8cd0fe188136b0311c9bd",
+    "parents": [
+      "0170196dda10f78b85d5e4b685d56331a0021083"
+    ],
+    "author_date": "2026-10-19T18:45:27+08:00",
+    "subject": "Freeze independent G2 generator and zero-retuning evaluation protocol"
+  },
+  {
+    "sha": "db23a95ef95fd025553b70754625af7b42b5682e",
+    "parents": [
+      "3f3991aa26cf1ac7f8f8cd0fe188136b0311c9bd"
+    ],
+    "author_date": "2026-10-19T19:07:07+08:00",
+    "subject": "Report frozen cross-generator results and revise simulation paper with adverse findings"
+  },
+  {
+    "sha": "94a80a194fdee8d6d4b58c6aeafccaf349d8a976",
+    "parents": [
+      "db23a95ef95fd025553b70754625af7b42b5682e"
+    ],
+    "author_date": "2026-10-20T11:44:03+08:00",
+    "subject": "Revise TAIS paper around conditional synthetic-task tradeoffs and transparent budget sensitivity"
+  },
+  {
+    "sha": "d238e8cad6416fe75d4b90a840ad81070518795f",
+    "parents": [
+      "94a80a194fdee8d6d4b58c6aeafccaf349d8a976"
+    ],
+    "author_date": "2026-10-20T14:02:13+08:00",
+    "subject": "docs: improve README and repository navigation"
+  },
+  {
+    "sha": "3fb89beaa7dd5aa64cb5c17f6088905b99f1709e",
+    "parents": [
+      "d238e8cad6416fe75d4b90a840ad81070518795f"
+    ],
+    "author_date": "2026-10-20T14:04:51+08:00",
+    "subject": "docs: explain historical index checksum without rewriting frozen evidence"
+  }
+]

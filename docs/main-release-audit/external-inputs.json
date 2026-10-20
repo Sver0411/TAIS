@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "C0_raw_files": 5,
+  "files": [
+    {
+      "path": "hull-v1/raw/Training Set.csv",
+      "exists": true,
+      "sha256_matches": true
+    },
+    {
+      "path": "hull-v1/raw/Test Set.csv",
+      "exists": true,
+      "sha256_matches": true
+    },
+    {
+      "path": "hull-v1/raw/Full Data Set.csv",
+      "exists": true,
+      "sha256_matches": true
+    },
+    {
+      "path": "intel-berkeley/raw/mote_locs.txt",
+      "exists": true,
+      "sha256_matches": true
+    },
+    {
+      "path": "intel-berkeley/raw/data.txt.gz",
+      "exists": true,
+      "sha256_matches": true
+    }
+  ],
+  "raw_data_not_added_to_git": true,
+  "C1_1_workbooks": [
+    {
+      "path": "Greenhouse-1.xlsx",
+      "exists": true,
+      "sha256_matches": true,
+      "sha256": "9b5f48b5f37ebc90052658649de7471b298da7dd4581bf47d0d8ec404cadff19"
+    },
+    {
+      "path": "Greenhouse-2.xlsx",
+      "exists": true,
+      "sha256_matches": true,
+      "sha256": "82a882d0dce0044458c1ac3d787b62c9434fbce48f2ebaa3c55d9330e6c810eb"
+    }
+  ]
+}

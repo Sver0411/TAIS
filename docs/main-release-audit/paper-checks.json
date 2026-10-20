@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "pages": 17,
+  "scratch_compile": true,
+  "canonical_pdf_unchanged": true,
+  "page_text_identical": true,
+  "render_matches_previous_17page_visual_audit": {
+    "page-01.png": true,
+    "page-02.png": true,
+    "page-03.png": true,
+    "page-04.png": true,
+    "page-05.png": true,
+    "page-06.png": true,
+    "page-07.png": true,
+    "page-08.png": true,
+    "page-09.png": true,
+    "page-10.png": true,
+    "page-11.png": true,
+    "page-12.png": true,
+    "page-13.png": true,
+    "page-14.png": true,
+    "page-15.png": true,
+    "page-16.png": true,
+    "page-17.png": true
+  },
+  "render_identical_pages": 17,
+  "latex_warnings": [],
+  "author_placeholder_retained": true
+}

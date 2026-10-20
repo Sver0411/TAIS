@@ -34,10 +34,10 @@ Values are read only when due; sparse input cannot supply missing samples. Hardw
 
 ## Quick start
 
-Use **Python 3.14** and a C11 compiler (`cc`, Clang or GCC); the bridge compiles on first use. Run from the checkout root. No hardware or data download is needed. This branch includes the latest paper revision; `main` is an earlier snapshot.
+Use **Python 3.14** and a C11 compiler (`cc`, Clang or GCC); the bridge compiles on first use. Run from the checkout root. No hardware or external dataset is needed. The [main-release audit](docs/MAIN_RELEASE_AUDIT.md) records the integrated scope, checks and remaining limits.
 
 ```sh
-git clone --branch docs/repository-readme-and-structure --recurse-submodules https://github.com/Sver0411/TAIS.git
+git clone --recurse-submodules https://github.com/Sver0411/TAIS.git
 cd TAIS
 python3.14 -m venv .venv
 source .venv/bin/activate

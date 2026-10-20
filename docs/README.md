@@ -2,6 +2,8 @@
 
 New reader: [project home](../README.md) → [Quick start](QUICKSTART.md) → [Core interface](TAIS_CORE_PROTOTYPE.md) → [current paper summary / 中文](TAIS_PAPER_SUMMARY_ZH.md). Use the [source map](REPOSITORY_GUIDE.md), [script index](../scripts/README.md) and [result index](../results/README.md) for implementation and reproduction.
 
+The [main-release audit / 主分支整合审计](MAIN_RELEASE_AUDIT.md) records the complete accumulated scope, branch classification, evidence checks and publication gates. It includes the historical BM-1 manifest self-hash limitation without changing its experimental results.
+
 **Status key:** **Current** = current interface or interpretation; **Frozen** = completed, version-specific evidence/protocol; **Exploratory** = limited or reused-data investigation; **Historical** = an earlier design/report; **Blocked / NO-GO** = the stated evidence gate failed or formal work could not start. A frozen study can have a negative decision. Neither a document's filename nor a branch name implies it is the current default.
 
 ## Getting started and system use

@@ -1,0 +1,31 @@
+{
+  "status": "PASS_WITH_ONE_UNVALIDATABLE_HISTORICAL_SELF_HASH",
+  "original_manifest": "results/budget-matched/test/analysis/manifest.json",
+  "original_manifest_sha256": "5031825db2278451616df8b71447e9cc0e5184d275422efa7ed78d448bca34a7",
+  "unchanged_since": "5b06d2feae44db2b3503697d246f51c43e5d8f2e",
+  "cause": "analyze_budget_matched_results.py opens manifest with mode x before enumerating outputs; the new file is still empty, so the recorded self-hash is SHA256(empty)",
+  "all_nonself_outputs": {
+    "absolute_intervals.csv": "d2fc3e8043247cb44be5ba142a192cb12bb85b2ff9208a7acf4f5f56b0972097",
+    "budget_tradeoff.png": "11887710f92b484e88d7405e893c678561f1cf4afc757fc174f730741f18e984",
+    "common_matched_delay.csv": "c36c0d3293e066b27612213b6cfd95cd9aa057f24f0b059ebc4006c2a6c691da",
+    "common_matched_event_pairs.csv": "2f9cbdefe1a4fe11ab7f4a24387611a6cfc8d75e6669f9072403d2f789cfee19",
+    "decision.json": "a58c3500ecee907e8dc5f880ebd9381f1cb3ffe2b0a93b4dab6ac8eabfb42504",
+    "decisions.csv": "8fed3cff8d370ee2591b54d8ed1172afa7b1d2fc6402ce00515640e306dce0db",
+    "paired_intervals.csv": "279c0c85b50c199418ee5461513480c765ff58f5aeee4813adc6bf624a70f418",
+    "robustness_deletions.csv": "3af11c510d708ccc3c6348308cdf5653ac0df7587f8b18bca1cf53b80390d5a9",
+    "summary.csv": "a14f9279a7e2873b45c14650d926dd646153d936064b512420108540678eacfb"
+  },
+  "independent_saved_run_verification": {
+    "phase": {
+      "phase": "test",
+      "verified_rows": 10800,
+      "verified_artifacts": 13590,
+      "input_pairs_identical": true,
+      "every_original_metric_recomputed_from_saved_artifacts": true,
+      "no_policy_rerun": true,
+      "metrics_sha256": "015809a2a4a1f9c38edee899abeabd0cb1209b8f53d3b23cb3932b8fe27a74bd"
+    },
+    "verifier_sha256": "1c2ccbf8703446668398ef7fda4b7a7822eb6c5fc941dff91acacb8d48cfa680"
+  },
+  "old_manifest_not_rewritten": true
+}
