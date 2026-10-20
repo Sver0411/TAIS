@@ -19,8 +19,8 @@ These are **writers**. Full phases can take minutes to hours and create large tr
 
 | Entry | Important interface | Inputs → outputs / caution |
 | --- | --- | --- |
-| [benchmark_paper.py](benchmark_paper.py) | Positional `smoke`/`test`, `--workers`, `--output-root`, `--archive-root`; also historical `thresholds/calibrate/bounds/development/freeze` | Frozen G1 configuration/operating points → phase metrics/events/manifests and gzip archives; full final73,800 scored runs |
-| [benchmark_transfer.py](benchmark_transfer.py) | Positional `smoke`/`test`, `--workers`, `--output-root`, `--archive-root`; historical `freeze` | Same frozen policies on G2 → metrics/events/faults/age data and archives; full final12,880 runs |
+| [benchmark_paper.py](benchmark_paper.py) | Positional `smoke`/`test`, `--workers`, `--output-root`, `--archive-root`; also historical `thresholds/calibrate/bounds/development/freeze` | Frozen G1 configuration/operating points → phase metrics/events/manifests and gzip archives; full final 73,800 scored runs |
+| [benchmark_transfer.py](benchmark_transfer.py) | Positional `smoke`/`test`, `--workers`, `--output-root`, `--archive-root`; historical `freeze` | Same frozen policies on G2 → metrics/events/faults/age data and archives; full final 12,880 runs |
 | [benchmark_su.py](benchmark_su.py) | Required `--phase engineering/development/validation/test`, both root overrides, `--workers` | Seven fixed SU-1 systems → phase metrics, actual frames and archives; not Core CLI selection |
 | [benchmark_joint_optimization.py](benchmark_joint_optimization.py) | Required `--phase development/validation/test`, `--workers` | Frozen JO plan → fixed `results/tais-joint` and local trace destinations; do not rerun in place |
 | [run_experiments.py](run_experiments.py) | Required `--split development/validation/test`, optional `--smoke` | Original v0.1 matrix → **fixed** `results/<split>` or `<split>-smoke` and `results/traces`; may overwrite files, no output-root flag |
@@ -47,7 +47,7 @@ These commands read saved runs but **write derived artifacts**; they are not pas
 | [analyze_transfer.py](analyze_transfer.py) | `--phase smoke/test`, `--root` | G2 metrics/events/faults/age → grouped summaries and seed-paired intervals |
 | [analyze_su.py](analyze_su.py) | `--phase`, `--root`; historical `--select` | SU-1 metrics → new analysis directory; selection option writes a lock and is not part of reproduction |
 | [summarize_results.py](summarize_results.py) | Required `--split` | Original v0.1 metrics → fixed summary/CI/budget CSVs and plots under that split |
-| [analyze_budget_sensitivity.py](analyze_budget_sensitivity.py) | No arguments | Frozen G1/G2 totals →60 qualification rows/manifest under fixed `results/tais-paper-review`; post-hoc2/5/10%, not parameter matching |
+| [analyze_budget_sensitivity.py](analyze_budget_sensitivity.py) | No arguments | Frozen G1/G2 totals →60 qualification rows/manifest under fixed `results/tais-paper-review`; post-hoc 2/5/10%, not parameter matching |
 | [analyze_joint_optimization.py](analyze_joint_optimization.py) | Study-specific entry in [JO results](../results/tais-joint/README.md) | JO phase results → selection/analysis; retain original decisions |
 
 [paper_metrics.py](paper_metrics.py) and [transfer_metrics.py](transfer_metrics.py) are shared scoring helpers, not top-level experiment commands. Figure/report builders (`paper_publication_figures.py`, `transfer_figures.py`, `build_paper_report.py`, `build_transfer_report.py`, `build_report.py`) regenerate presentation at their fixed study paths; use their campaign instructions before invoking them.

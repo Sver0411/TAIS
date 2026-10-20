@@ -21,7 +21,7 @@ New reader: [project home](../README.md) → [Quick start](QUICKSTART.md) → [C
 | [Original executable specification](ALGORITHM_SPEC.md) | Per-channel scheduler, scores, thresholds and original confirmation behavior; not a universal description of every later mode | Historical v0.1 contract |
 | [Implementation audit](IMPLEMENTATION_DECISIONS.md) | Reuse/attribution and original engineering decisions | Historical |
 | [JO protocol](TAIS_JO_PROTOCOL.md) and [results](TAIS_JO_RESULTS.md) | H/S/U decomposition; full replacement failed, H costs remain visible | Frozen / NO-GO for default replacement |
-| [SU protocol](TAIS_SU_PROTOCOL.md) and [results](TAIS_SU_RESULTS.md) | Frozen JO-S+U, Gate+U and cap20/30/40; balanced replacement failed | Frozen; Current supported options |
+| [SU protocol](TAIS_SU_PROTOCOL.md) and [results](TAIS_SU_RESULTS.md) | Frozen JO-S+U, Gate+U and cap 20/30/40; balanced replacement failed | Frozen; Current supported options |
 
 ## Core interfaces and payloads
 
@@ -37,8 +37,8 @@ New reader: [project home](../README.md) → [Quick start](QUICKSTART.md) → [C
 | --- | --- | --- |
 | [Research question](RESEARCH_QUESTION.md) and [original protocol](EXPERIMENT_PROTOCOL.md) | Original hypothesis, truth and metric definitions; definitions are study-specific | Historical / Frozen v0.1 |
 | [Original report](RESEARCH_REPORT.md) | v0.1 results and ablations; [original evidence](../results/README.md#original-v01-evidence) | Frozen, not current test status |
-| [JO results](TAIS_JO_RESULTS.md) → [JO evidence](../results/tais-joint/README.md) | Seeds520–549, full H/S/U costs and failures | Frozen |
-| [SU results](TAIS_SU_RESULTS.md) → [SU evidence](../results/tais-su/README.md) | Seeds570–599, seven methods, all caps and receiver-edge diagnostics | Frozen |
+| [JO results](TAIS_JO_RESULTS.md) → [JO evidence](../results/tais-joint/README.md) | Seeds 520–549, full H/S/U costs and failures | Frozen |
+| [SU results](TAIS_SU_RESULTS.md) → [SU evidence](../results/tais-su/README.md) | Seeds 570–599, seven methods, all caps and receiver-edge diagnostics | Frozen |
 | [Resource cost model](TAIS_RESOURCE_COST_MODEL.md) | Conditional sensitivity on software counts; no measured joules/battery life | Exploratory model |
 
 ## Independent baselines and cross-task evaluation
@@ -49,7 +49,7 @@ New reader: [project home](../README.md) → [Quick start](QUICKSTART.md) → [C
 | [Paper evidence](TAIS_PAPER_EVIDENCE.md) | Full G1/G2 tables and provenance; read its revision notice before older stage ratings | Frozen results with revision pointer |
 | [G2 protocol](TAIS_CROSS_GENERATOR_PROTOCOL.md) and [report](TAIS_CROSS_GENERATOR_REPORT.md) | Zero-retuning second synthetic task; [G2 results](../results/tais-transfer/README.md) | Frozen; final wording in paper revision |
 | [Current Chinese interpretation](TAIS_PAPER_SUMMARY_ZH.md) | G1/G2 truth differences, CI crossing zero, Fixed20/Variance and shared U | Current |
-| [Budget sensitivity](../results/tais-paper-review/budget_sensitivity.csv) | All60 saved control-target pairs at2/5/10%; no point reselection | Current post-hoc analysis |
+| [Budget sensitivity](../results/tais-paper-review/budget_sensitivity.csv) | All 60 saved control-target pairs at2/5/10%; no point reselection | Current post-hoc analysis |
 
 G1 and G2 are project-defined synthetic tasks with different truth windows as well as different dynamics/faults/timing. They are not two field populations, and their totals must not be pooled. Delta/Variance are original engineering controls; Rao-inspired is an explicitly incomplete literature adaptation. The common-detector view compares schedules and is not an independent full-system comparison.
 
@@ -57,7 +57,7 @@ G1 and G2 are project-defined synthetic tasks with different truth windows as we
 
 | Read | Purpose / result entry | Status |
 | --- | --- | --- |
-| [Initial data-access note](../data/README.md) → [C0 intake audit](REAL_DATA_INTAKE_AUDIT.md) | The initial403 is historical; C0 later obtained five files outside Git and audited their semantics | Historical access failure → Frozen intake |
+| [Initial data-access note](../data/README.md) → [C0 intake audit](REAL_DATA_INTAKE_AUDIT.md) | The initial 403 is historical; C0 later obtained five files outside Git and audited their semantics | Historical access failure → Frozen intake |
 | [C1 time-semantics draft](REAL_DATA_EXPERIMENT_PREREGISTRATION.md) | Unresolved availability clocks prevent the proposed formal online experiment; not a completed preregistration | Blocked / NO-GO |
 | [C1.1 dataset selection](C1_1_DATASET_SELECTION.md) | Conditional candidate assessment; not effectiveness evidence | Historical feasibility decision |
 | [Offline pilot protocol](OFFLINE_SPATIAL_PILOT_PROTOCOL.md) and [report](OFFLINE_SPATIAL_PILOT_REPORT.md) | Real-background controlled interventions under explicit proxy-clock assumptions; [pilot evidence](../results/offline-spatial-pilot/README.md) | Exploratory / held-out coverage NO-GO |
@@ -68,7 +68,7 @@ The offline pilot does not repair C1's formal online validity gap. It is not nat
 
 | Read | Purpose | Status |
 | --- | --- | --- |
-| [Manuscript and build guide](../papers/tais/README.md) | Current17-page [PDF](../papers/tais/manuscript.pdf), [LaTeX](../papers/tais/manuscript.tex), tables and figures | Current major revision |
+| [Manuscript and build guide](../papers/tais/README.md) | Current 17-page [PDF](../papers/tais/manuscript.pdf), [LaTeX](../papers/tais/manuscript.tex), tables and figures | Current major revision |
 | [中文概要](TAIS_PAPER_SUMMARY_ZH.md) | Research question, three systems contributions, adverse results and limits | Current |
 | [Novelty and related work](PAPER_NOVELTY_AND_RELATED_WORK.md) | Verified literature scope and known-technology attribution; old [related work](RELATED_WORK.md) is background | Current synthesis |
 | [Revision changelog](TAIS_PAPER_REVISION_CHANGELOG.md) | Exact wording changes and reviewer responses | Current |
