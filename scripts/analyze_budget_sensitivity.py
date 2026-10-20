@@ -8,6 +8,10 @@ OUT=ROOT/'results/tais-paper-review'
 INPUTS={'G1':'results/tais-paper/test/analysis/summary.csv','G2':'results/tais-transfer/test/analysis/summary.csv'}
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 def analyze():
+    """Write post-hoc 2/5/10% eligibility for all existing control-target totals.
+
+    Changing the displayed tolerance never selects new parameters or new data.
+    The original frozen qualification band remains 5%; this is a writer."""
     rows=[]
     for generator,path in INPUTS.items():
         d=pd.read_csv(ROOT/path);d=d[d.group=='overall']

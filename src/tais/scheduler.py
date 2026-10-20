@@ -9,6 +9,11 @@ from simulator.adaptive import transition,next_rung,hysteresis_bounds
 
 @dataclass
 class Decision:
+    """Sample-time policy output; interval is seconds until the next requested read.
+
+    Health is C11 diagnostic metadata, active is detected event state and
+    onsets are local rising edges. Neither is physical ground truth.
+    Upload expresses sender intent; it carries no delivery guarantee."""
     t: float
     interval: float
     state: str
@@ -25,6 +30,11 @@ class Decision:
 class Scheduler:
     """Receives current sampled values only. No trace, labels or truth input."""
     def __init__(self,cfg,confirmation=True,multiplier=1.0):
+        """Allocate per-channel C11 diagnostics and upstream ChangeAnalyzer state.
+
+        confirmation=False selects GateOnly. With confirmation enabled, degraded
+        channels can open bounded persistence candidates. Thresholds and ladders
+        come from the vendored baseline plus the supplied TAIS configuration."""
         self.cfg=cfg;self.b=baseline(cfg,multiplier);self.confirmation=confirmation
         self.names=tuple(cfg['channels'])
         self.trust={n:SensorTrust(cfg['channels'][n]['trust']) for n in self.names}
@@ -42,6 +52,14 @@ class Scheduler:
         self.last_t=-1;self.last_upload=None;self.upload_values={}
 
     def update(self,t,values):
+        """Mutate policy state using only this actual sample at time t in seconds.
+
+        Timestamps must be finite, nonnegative and strictly increasing. Missing
+        or nonfinite values and FAULT channels request diagnostic sampling.
+        Recovery reseeds the affected analyzer instead of replaying hidden data.
+        Per-channel requests compete by minimum interval, bounded by configuration;
+        a faulty channel does not veto a usable channel. Returned upload reasons
+        refer to this policy, and may later be replaced by an explicit U wrapper."""
         if not math.isfinite(t) or t<0 or t<=self.last_t:raise ValueError('Nonmonotonic timestamp')
         self.last_t=t
         cfg=self.cfg;tr=cfg['trust'];lo=cfg['sampling']['min_interval_s'];hi=cfg['sampling']['max_interval_s']
@@ -59,6 +77,7 @@ class Scheduler:
                 score=0.0;event=False
                 intervals.append(tr['diagnostic_interval_s']);diagnostic=True
             else:
+                # Recovered values start new evidence; a fault-hidden event cannot be reconstructed.
                 rewarming=self.bad[n]
                 if rewarming:
                     self.analyzers[n]=ChangeAnalyzer(analyzer_config(self.b))
@@ -120,6 +139,7 @@ class Scheduler:
             if allowed:intervals.append(interval)
             scores[n]=score;active[n]=bool(event and allowed)
             if active[n] and not self.previous_active[n]:onsets.append(n)
+        # Honor the fastest usable/diagnostic request without exceeding configured bounds.
         interval=max(lo,min(hi,min(intervals,default=hi)))
         if changed:reasons.append('scheduler_state')
         if interval!=getattr(self,'last_interval',None):reasons.append('interval')

@@ -1,8 +1,8 @@
-"""Narrow fork of v0.1 update: only candidate policy and its demand change.
+"""Historical v0.2 scheduler fork with explicit persistence evidence.
 
-Legacy scheduler.py remains byte-identical. AdaptiveSense scoring, transition,
-ladders and real C11 SensorTrust are imported unchanged. See V02_DESIGN.md.
-"""
+Runtime equations retain the legacy scoring, transitions, ladders and C11
+components. Later annotation-only maintenance may change source bytes; the
+frozen experiment records remain the authority for original source hashes."""
 from dataclasses import dataclass, asdict
 import math
 from tais.scheduler import Scheduler as LegacyScheduler, Decision
@@ -15,15 +15,22 @@ from .evidence import Evidence
 
 @dataclass
 class DecisionV02(Decision):
+    """Legacy sampled decision extended with per-channel evidence lifecycle diagnostics."""
     evidence: dict
 
 class Scheduler(LegacyScheduler):
+    """Replace legacy candidate logic with Evidence and optional faster confirmation reads."""
     def __init__(self,cfg,confirmation=True,multiplier=1.0):
         super().__init__(cfg,confirmation=True,multiplier=multiplier)
         self.accelerated=confirmation
         self.evidence={n:Evidence(cfg['v02']) for n in self.names}
 
     def update(self,t,values):
+        """Update health/scoring on actual samples, then combine evidence interval requests.
+
+        Capture the pre-update EMA reference before scoring. A displacement-return
+        cancellation reseeds the analyzer; accelerated=False removes the fast
+        confirmation request but preserves evidence and deadline handling."""
         if not math.isfinite(t) or t<0 or t<=self.last_t:raise ValueError('Nonmonotonic timestamp')
         self.last_t=t
         cfg=self.cfg;tr=cfg['v02'];lo=cfg['sampling']['min_interval_s'];hi=cfg['sampling']['max_interval_s']
@@ -46,6 +53,7 @@ class Scheduler(LegacyScheduler):
                     self.level[n]='STABLE';self.pos[n]=self.count[n]=0
                     self.evidence[n].episode=None;self.evidence[n].blocked=False
                     reset.append(n);self.bad[n]=False
+                # Preserve the pre-sample baseline before the scorer updates its EMA.
                 reference=self.analyzers[n].baseline(n)
                 if reference is None:reference=v
                 raw_score,_,candidate=self.analyzers[n].update(t,{n:v})

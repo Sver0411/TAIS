@@ -1,3 +1,6 @@
+"""Engineering fixtures for independent sampled decisions, adapters and actual wire counts.
+
+Used seeds exercise causality and recovery; they are not new held-out evidence."""
 import sys
 from pathlib import Path
 from copy import deepcopy

@@ -16,6 +16,10 @@ from tais.wire_codec import LAYOUTS
 
 
 def main():
+    """Consume inspection hex lines into a fresh receiver and exclusively write outputs.
+
+    Invalid hex text is counted separately from invalid binary frames. No
+    sender journal or truth is available to reconstruct omitted transitions."""
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--layout', type=int, choices=LAYOUTS, default=1)
     p.add_argument('--out', type=Path, required=True)

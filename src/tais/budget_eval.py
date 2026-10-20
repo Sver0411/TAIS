@@ -33,6 +33,10 @@ def numeric_rows(rows):
 
 
 def aggregate(rows):
+    """Sum counts first, then compute micro ratios and duration-weighted errors.
+
+    Undefined denominators return None. Mean conditional delay excludes misses;
+    raw sample/upload/byte totals are software counts, not measured energy."""
     out={k:sum(float(r.get(k) or 0) for r in rows) for k in COUNT_FIELDS}
     out['runs']=len(rows)
     def ratio(n,d):return n/d if d else None
@@ -109,6 +113,7 @@ def choose_pairs(dev,val,plan):
 
 
 def paired_rows(rows,gm,tm):
+    """Pair by seed/scenario and reject unequal keys or unequal input fingerprints."""
     gate={(r['seed'],r['scenario']):r for r in rows if r['method']=='GateOnly' and r['multiplier']==gm}
     tais={(r['seed'],r['scenario']):r for r in rows if r['method']=='TAIS' and r['multiplier']==tm}
     if gate.keys()!=tais.keys():raise ValueError('Unpaired scenario/seed keys')
@@ -122,6 +127,12 @@ def paired_rows(rows,gm,tm):
 
 
 def paired_bootstrap(pairs,replicates,seed,alpha=.05,family=3):
+    """Resample paired whole seeds, keeping all scenarios within each seed together.
+
+    Recompute micro ratios from resampled counts. Return TAIS-minus-Gate point
+    estimates, percentile intervals and the supplied family-size adjustment.
+    Finite draws only are used for undefined ratios; seconds within a run are
+    not independent replicates. Results depend on this synthetic seed population."""
     if not pairs:return []
     seeds=sorted({g['seed'] for g,t in pairs});by_seed={s:(aggregate([g for g,t in pairs if g['seed']==s]),aggregate([t for g,t in pairs if g['seed']==s])) for s in seeds}
     rng=np.random.default_rng(seed);idx=rng.integers(0,len(seeds),size=(replicates,len(seeds)))
@@ -159,6 +170,7 @@ def paired_bootstrap(pairs,replicates,seed,alpha=.05,family=3):
 
 
 def robustness(pairs):
+    """Recompute the declared fault/recall rule after deleting each cluster or group."""
     deletions=[('seed',s) for s in sorted({g['seed'] for g,t in pairs})]
     deletions += [('scenario',s) for s in sorted({g['scenario'] for g,t in pairs})]
     deletions += [('fault_kind',s) for s in sorted({g['fault_kind'] for g,t in pairs})]
@@ -176,6 +188,10 @@ def robustness(pairs):
 
 
 def decision(choice,pairs,intervals,robust,plan):
+    """Apply the saved calibration, test-budget, uncertainty and robustness gates.
+
+    A fallback point remains a failed calibration even if a later metric looks
+    favorable; this function cannot select a new operating point from test truth."""
     g,t=aggregate([g for g,t in pairs]),aggregate([t for g,t in pairs])
     matched=all(gap(g,t,k)<=plan['pair_relative_tolerance'] for k in ('samples','uploads'))
     ci={r['metric']:r for r in intervals};recall=ci['recall'];fault=ci['fault_induced_false_relative_difference']
@@ -190,6 +206,9 @@ def decision(choice,pairs,intervals,robust,plan):
 
 
 def absolute_bootstrap(rows,replicates,seed):
+    """Compute descriptive whole-seed percentile intervals for one operating point.
+
+    These are pointwise intervals without a multiple-comparison correction."""
     seeds=sorted({r['seed'] for r in rows});summaries=[aggregate([r for r in rows if r['seed']==s]) for s in seeds]
     rng=np.random.default_rng(seed);idx=rng.integers(0,len(seeds),size=(replicates,len(seeds)))
     point=aggregate(rows);values={k:np.array([s[k] for s in summaries])[idx].sum(axis=1) for k in COUNT_FIELDS}

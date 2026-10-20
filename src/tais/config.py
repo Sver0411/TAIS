@@ -5,6 +5,11 @@ from . import ROOT
 from simulator.config import load_config as load_upstream
 
 def load(path=None):
+    """Read a pathlib.Path YAML input or the default experiment configuration.
+
+    Validate sampling bounds in seconds, confirmation constraints and disjoint
+    seed partitions; malformed bounds raise ValueError. This is not a full
+    schema validator and ordinary missing-key errors are allowed to propagate."""
     cfg = yaml.safe_load((path or ROOT/'configs/experiment.yaml').read_text())
     lo,hi=cfg['sampling']['min_interval_s'],cfg['sampling']['max_interval_s']
     if not 0 < lo <= cfg['sampling']['default_interval_s'] <= hi:
@@ -20,6 +25,10 @@ def load(path=None):
     return cfg
 
 def baseline(cfg, multiplier=1.0):
+    """Copy the vendored AdaptiveSense configuration without modifying its files.
+
+    Enable configured channels and scale three decision thresholds for an
+    explicit operating point; noise floors and remaining upstream rules persist."""
     b=deepcopy(load_upstream())
     for name,c in b['adaptive']['channels'].items():c['use']=name in cfg['channels']
     # Operating-point sweeps change thresholds explicitly, never baseline files.

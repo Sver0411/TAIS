@@ -19,6 +19,10 @@ SEED_KEY=re.compile(r'(^seed$|seeds$|random_seed$|bootstrap_seed$|link_seed$)',r
 
 
 def extract(obj):
+    """Collect declared seed values recursively from recognized metadata key conventions.
+
+    This is an inventory heuristic, not proof that arbitrary opaque logs contain
+    no seeds; coverage must be read together with the audit file lists."""
     out=set()
     def values(v):
         if type(v) is int:out.add(v)
@@ -38,6 +42,9 @@ def extract(obj):
 
 
 def parse_text(data,suffix):
+    """Parse accessible JSON/YAML/CSV metadata and report seed-bearing content.
+
+    Unsupported or unparseable text cannot establish an unused random stream."""
     if suffix=='.json':return extract(json.loads(data))
     if suffix in ('.yaml','.yml'):return extract(yaml.safe_load(data))
     if suffix=='.csv':

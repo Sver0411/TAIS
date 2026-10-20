@@ -24,10 +24,15 @@ def specs():
 def policy(trace,cfg,spec):
     # Strong interface: policy cannot access labels, hidden parameters, scenario,
     # seed, latent/noisy arrays or even the original Trace object.
+    """Expose observed rows only, excluding truth, seed, scenario and hidden process state."""
     r=native(SimpleNamespace(observed=trace.observed),cfg,spec)
     return r if spec['kind']=='TAIS' else decorate(r,cfg)
 def name(spec):return spec['id']+('' if spec['kind']=='TAIS' else '+C11')
 def inherited():
+    """Require exact byte identity for every G1 pre-test source-lock entry.
+
+    Comments/docstrings alter these hashes even when executable behavior matches;
+    this historical guard intentionally does not accept semantic equivalence."""
     lock=json.loads((ROOT/'results/tais-paper/selection.json').read_text())
     # This freeze predates the G1 final test; all old runtime/config sources are
     # still verified. G2 lives in separate files and is excluded from that list.
@@ -41,6 +46,7 @@ def freeze():
     sources={p:sha(ROOT/p) for p in NEW_FILES}
     dump(OUT/'selection.json',dict(status='FROZEN_BEFORE_G2',base=BASE,inherited_sources=inherited(),sources=sources,specs=specs(),operating_points_sha256=sha(ROOT/'results/tais-paper/operating-points.json'),engineering_metrics_sha256=sha(OUT/'smoke/metrics.csv'),seed_audit_sha256=sha(OUT/'seed-audit.json')))
 def check_freeze():
+    """Require inherited/new source hashes, operating points and committed G2 lock to match."""
     p=OUT/'selection.json';lock=json.loads(p.read_text())
     assert inherited()==lock['inherited_sources']
     assert {k:sha(ROOT/k) for k in lock['sources']}==lock['sources']
@@ -49,6 +55,10 @@ def check_freeze():
     return lock
 
 def worker(seed,phase,selected,cases,archive):
+    """Run one seed with exact counterfactual identities and independent receiver scoring.
+
+    Cache keys include clean observations and event labels, avoiding G1-style
+    relationship/profile assumptions under independently timed G2 interventions."""
     cfg=load();p=plan();path=Path(archive)/phase;cache={};rows=[];events=[];faults=[];artifacts={};ages={name(s):np.zeros(p['duration_s'],dtype=np.int64) for s in selected}
     def store(rel,x):
         h=save(path/rel,x);artifacts[str(rel)]=h;return h
@@ -70,6 +80,10 @@ def worker(seed,phase,selected,cases,archive):
     return seed,rows,events,faults,artifacts,{k:v.tolist() for k,v in ages.items()}
 
 def execute(phase,workers,output=OUT,archive=RAW):
+    """Write G2 engineering or held-out outputs under fixed inherited operating points.
+
+    Formal test checks the original source freeze. Artifact directories are
+    exclusive; a new source annotation is not permission to overwrite a campaign."""
     if phase=='test':check_freeze()
     p=plan();selected=specs();seeds=p['final_seeds'] if phase=='test' else p['engineering_seeds']
     cases=scenarios() if phase=='test' else ['clean_none','clean_both']+[f'{k}_{c}_same' for k in ['range','spike','stuck','drift','missing','invalid','stable_offset'] for c in ['temperature','humidity']]

@@ -18,6 +18,9 @@ def scenarios():
 
 
 def specification(scenario):
+    """Resolve registered fault/event timing offsets without duplicating defaults.
+
+    Offsets are seconds from fault onset to planned environmental onset."""
     if scenario in historical_scenarios():
         return scenario, 60, 'original'
     match = re.fullmatch(r'(spike|drift)_(same|cross)_(short|long)_dt_([mp])(\d+)', scenario)
@@ -31,6 +34,7 @@ def specification(scenario):
 
 
 def generate(cfg, seed, scenario):
+    """Reuse G1 injection and truth rules with only the registered event delay changed."""
     base, offset, _ = specification(scenario)
     if base == scenario:
         return historical_generate(cfg, seed, base)
@@ -55,6 +59,9 @@ def overlap(event, fault):
 
 
 def metadata(trace, cfg):
+    """Describe offline injection timing and actual truth-window overlap.
+
+    Planned event onset may differ from amplitude-qualified scoring onset."""
     base, offset, cohort = specification(trace.scenario)
     spec = cfg['synthetic']
     f = trace.faults[0] if trace.faults else None

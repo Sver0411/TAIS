@@ -90,6 +90,9 @@ def test_no_hidden_truth_future_or_overbudget_access(method):
 
 
 def fake_scheduler(*args,**kwargs):
+    """Supply deterministic candidate activity to isolate reference-support bookkeeping.
+
+    This test double does not replace SensorTrust in production policy execution."""
     from tais.scheduler import Decision
     class Fake:
         def update(self,t,values):

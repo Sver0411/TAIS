@@ -1,3 +1,6 @@
+"""G2 engineering parity, hidden-input guards, receiver metrics and exact freeze checks.
+
+The byte-freeze assertion also rejects annotation-only source changes."""
 import json,sys
 from pathlib import Path
 from copy import deepcopy

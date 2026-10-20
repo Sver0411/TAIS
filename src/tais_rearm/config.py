@@ -6,6 +6,7 @@ from tais_v02.config import load as v02_load
 from tais.signals import scenarios
 
 def load():
+ """Load the repair overlay and preserve its declared split and multiplier grid."""
  cfg,_=v02_load();spec=yaml.safe_load((ROOT/'configs/blocked_rearm.yaml').read_text());cfg['rearm']=spec['rearm']
  seeds=[s for group in spec['splits'].values() for s in group]
  if len(seeds)!=len(set(seeds)):raise ValueError('Overlapping splits')
@@ -13,6 +14,7 @@ def load():
  return cfg,spec
 
 def suite_config(cfg,spec,suite):
+ """Copy configuration with only the named suite synthetic overrides and case list."""
  out=deepcopy(cfg);s=spec['suites'][suite]
  out['synthetic'].update(s['synthetic_overrides'])
  return out,scenarios() if s['scenarios']=='all' else list(s['scenarios'])

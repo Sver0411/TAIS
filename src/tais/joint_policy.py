@@ -20,12 +20,20 @@ from simulator.config import analyzer_config
 APP_SUSPECT_DRIFT=32
 
 class Trend:
+    """Bounded robust sampled-history predictor for the experimental H layer.
+
+    Trend suspicion is heuristic ambiguity, not a physical fault diagnosis.
+    Forecasts use past samples only; missing values erase the fit history."""
     def __init__(self, noise, slope):
         self.history=deque(maxlen=9)
         self.noise=noise;self.threshold=slope
         self.suspect=False;self.prediction=None
 
     def update(self,t,v):
+        """Return (previous suspicion, current suspicion, causal forecast).
+
+        Time is in seconds; configured slope is measurement units per second.
+        The current value is appended only after fitting the past history."""
         old=self.suspect
         if not finite(v):
             self.history.clear();self.suspect=False;self.prediction=None
@@ -47,11 +55,17 @@ class Trend:
         return old,self.suspect,prediction
 
 class JointPolicy:
+    """Compose GateOnly with bounded rechecks and optional H/U layers.
+
+    JO-S disables H and U; JO-HS enables H; JO-Full also replaces emission
+    with Upload. These historical variants remain available independently
+    of their experimental performance."""
     def __init__(self,cfg,options,variant='JO-Full'):
         self.cfg=deepcopy(cfg);self.options=deepcopy(options);self.variant=variant
         self.base=Scheduler(cfg,confirmation=False,multiplier=1.)
         self.trust=self.base.trust
         self.names=tuple(cfg['channels']);self.b=self.base.b
+        # JO-S is the sampling-only ancestor used by SU; do not re-enable H here.
         self.health_layer=variant!='JO-S';self.upload_layer=variant=='JO-Full'
         self.noise={n:self.b['adaptive']['channels'][n]['noise_floor'] for n in self.names}
         self.trend={n:Trend(self.noise[n],options['trend_slope']) for n in self.names}
@@ -64,6 +78,11 @@ class JointPolicy:
         self.last_diagnostics={}
 
     def update(self,t,values):
+        """Update the shared gate, then refine interval, event state and emission.
+
+        Idle cap is an upper bound, not a fixed period: diagnostic and recheck
+        requests can be faster. H may suppress smooth-trend event evidence and
+        sets application bit 32 separately from raw C11 flags in diagnostics."""
         d=self.base.update(t,values)
         intervals=[];app={};diagnostics={};raw=deepcopy(d.health)
         lo=self.cfg['sampling']['min_interval_s'];cap=self.options['idle_interval_s']
@@ -116,6 +135,7 @@ class JointPolicy:
         return d
 
 class JointSender(CoreSender):
+    """Reuse CoreSender framing while exposing experimental JO diagnostics."""
     def __init__(self,cfg,options,layout_id=1,variant='JO-Full'):
         super().__init__(cfg,layout_id)
         self.close()

@@ -18,6 +18,11 @@ def code_hashes():
 
 
 def main():
+    """Dispatch preparation, fixed-plan pilot, analysis or gated test-freeze creation.
+
+    Freeze requires both development and validation exploration gates; a NO-GO
+    must not open held-out evaluation. Code hashes include annotation bytes,
+    so later maintenance does not match the original frozen experiment source."""
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("command", choices=["prepare", "run", "analyze", "freeze"])
     p.add_argument("--workbook", type=Path)

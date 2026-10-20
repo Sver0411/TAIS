@@ -47,6 +47,9 @@ def unmatched(a, b, tolerance):
 
 
 def packet_residual(target, refs, target_median, ref_medians, minimum):
+    """Center target/reference values by calibration medians and require a quorum.
+
+    Return residual and finite reference count; absent quorum yields NaN."""
     finite = np.isfinite(refs) & np.isfinite(ref_medians[:, None])
     count = finite.sum(axis=0)
     centered = np.where(finite, refs - ref_medians[:, None], np.nan)
@@ -69,6 +72,9 @@ def donor_values(dataset, node, variable, date, query, config, median):
 
 
 def episode_inputs(dataset, config, node, variable, day, shift, age, medians):
+    """Assemble target/reference as-of rows and calibration-only negative controls.
+
+    Availability masks are shared across real and null reference conditions."""
     query = np.arange(day+config["episode_hours"][0]*3600,
                       day+config["episode_hours"][1]*3600+1, config["poll_seconds"], dtype=np.int64)
     x, rows, arrival = dataset.asof(node, variable, query, config["target_max_age_seconds"])
@@ -85,6 +91,10 @@ def episode_inputs(dataset, config, node, variable, day, shift, age, medians):
 
 
 def materialize(inputs, label, config):
+    """Apply label-defined perturbations offline, then clip to declared physical bounds.
+
+    Clipping can remove a requested observation opportunity; labels are kept
+    separate from detector features and are never passed to detect()."""
     variable = label["variable"]; lo, hi = config["variables"][variable]["bounds"]
     # Physical support of a requested controlled perturbation is explicitly bounded.
     # This preserves identical drift/local_slow observations, including saturation.
@@ -98,6 +108,11 @@ def materialize(inputs, label, config):
 
 
 def costs(inputs, x, real, null, method, reports):
+    """Count assumed polling/RPC requests and modeled application bytes.
+
+    Reference replies are assumed 36 bytes and event reports 18 bytes. These
+    are conditional payload assumptions, not encoded Binary frames, measured
+    wireless traffic, physical fresh reads or measured electrical energy."""
     use_ref = method in ("Spatial", "NullSpatial"); refs = null if method == "NullSpatial" else real
     valid = np.isfinite(x); rows = inputs["target_rows"][valid]
     ref_valid = np.isfinite(refs) if use_ref else np.zeros_like(refs, dtype=bool)
@@ -112,6 +127,12 @@ def costs(inputs, x, real, null, method, reports):
 
 
 def run_split(dataset, config, split, output, source_root, smoke=False):
+    """Exclusively write fixed-plan paired interventions, metrics and provenance.
+
+    Calibration medians and donors never read held-out values. Smoke is
+    development-only. Scoring uses controlled window/counterfactual outcomes
+    on an unlabeled real background; it is not natural event precision.
+    No adaptive Core runtime, live network or actual energy validation occurs."""
     output = Path(output); output.mkdir(parents=True, exist_ok=False)
     day_list = dates(config, split)
     nodes = config["nodes"]

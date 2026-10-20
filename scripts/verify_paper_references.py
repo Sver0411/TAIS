@@ -1,8 +1,16 @@
+"""Fetch/cache registered DOI metadata and regenerate paper references and the audit.
+
+Despite its historical verify name, this script writes bibliography/evidence
+files and performs work at import time. It verifies registration metadata,
+not every scientific claim or a faithful algorithm reproduction."""
 import urllib.request,json,concurrent.futures,hashlib
 from pathlib import Path
 r=Path(__file__).resolve().parents[1];out=r/'results/tais-paper/literature';out.mkdir(exist_ok=True)
 items={'rao2019adaptive':'10.3390/s19122654','masoum2012quality':'10.1109/UIC-ATC.2012.156','harb2024clara':'10.1016/j.iot.2024.101345','algabroun2020dsra':'10.1007/s00542-019-04631-9','sharma2010faults':'10.1145/1754414.1754419','dias2017dual':'10.1016/j.comcom.2017.08.002','arnaiz2024energy':'10.1016/j.vlsi.2023.102097','yim2010fault':'10.3390/s100302332'}
 def get(item):
+ """Return cached or fetched Crossref bytes as metadata plus a content hash.
+
+ Retry network errors before failing; the stored cache is reused unchanged."""
  key,doi=item;url='https://api.crossref.org/works/'+doi
  req=urllib.request.Request(url,headers={'User-Agent':'TAIS-research-literature-audit/1.0'})
  cache=out/(key+'.json')

@@ -7,6 +7,7 @@ from pathlib import Path
 
 
 def main():
+    """Read a bounded tail of recorded receiver transitions without replaying the policy."""
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('run', type=Path)
     p.add_argument('--tail', type=int, default=50)

@@ -13,6 +13,15 @@ from simulator.events import Event
 def finite(v):return v is not None and math.isfinite(v)
 
 def run(trace,cfg,method,multiplier=1.0):
+    """Replay one observed trace through a named policy at actual sample times.
+
+    Fixed-N reads at its requested N-second interval and uploads every sample.
+    AdaptiveSense+TrustLog adds C11 metadata without gating baseline decisions;
+    TAIS and GateOnly use the trust gate with and without confirmation.
+    Detectors see sampled usable values only; labels are unused here.
+    Return local episodes, first-upload reports and sampled records. Reports
+    are sender intentions, not decoded receiver edges. payload_bytes counts
+    serialized JSON envelope bytes; Binary studies encode records separately."""
     names=tuple(cfg['channels']);b=baseline(cfg,multiplier)
     gated=method in ('TAIS','GateOnly')
     fixed=float(method.split('-')[1]) if method.startswith('Fixed-') else None

@@ -1,9 +1,10 @@
-"""Independent causal samplers for the paper; frozen TAIS code is not imported.
+"""Independent causal sampling decisions with explicit shared experiment adapters.
 
-Only sampled (t, values) enter these policies. Units are normalized by the
-public detector noise floors, not by latent observations or fault/event labels.
-Rao-inspired is an engineering adaptation, NOT a reproduction of CS+prediction.
-"""
+IndependentSampler does not inherit TAIS gating or JO-SU state machines.
+The adapters below reuse fixed replay, ChangeAnalyzer, C11 and optional U;
+those decorated versions must not be described as unmodified external systems.
+Only sampled (t, values) enter decisions, normalized by public noise floors.
+Rao-inspired is an engineering adaptation, not a reproduction of CS+prediction."""
 from collections import deque
 from dataclasses import asdict
 import math
@@ -16,6 +17,13 @@ from simulator.config import analyzer_config
 from simulator.events import Event
 
 class IndependentSampler:
+    """Bounded Delta, elapsed-time EWMA Variance or Rao-inspired mode switching.
+
+    Intervals are seconds, constrained to minimum..cap within 5..60. Delta
+    uses normalized displacement/rate; Variance uses a 60-second EWMA timescale;
+    Rao-inspired fits up to four sampled points against configured center bands.
+    All restore sparse sampling by doubling after sampled stable periods.
+    No health labels, event labels or unsampled values enter these decisions."""
     def __init__(self,kind,noise,cap=60,threshold=4,center=None,minimum=5):
         if kind not in ('Delta','Variance','Rao-inspired'):raise ValueError(kind)
         if not 5<=minimum<=cap<=60 or threshold<=0:raise ValueError('invalid operating point')
@@ -23,6 +31,12 @@ class IndependentSampler:
         self.center=center or {};self.last_t=None;self.previous={};self.interval=cap
         self.stable_since=None;self.mean={};self.var={};self.history={n:deque(maxlen=4) for n in noise}
     def update(self,t,values):
+        """Advance sampled history and return the next requested interval in seconds.
+
+        Reject nonfinite, negative or nonincreasing timestamps. A validity change
+        can trigger fast sampling; missing values do not update volatility/history.
+        The 20-second rate normalization, 60-second stability period and band
+        hysteresis are implementation choices, not claimed Rao paper parameters."""
         if not math.isfinite(t) or t<0 or (self.last_t is not None and t<=self.last_t):raise ValueError('nonmonotonic timestamp')
         dt=t-self.last_t if self.last_t is not None else 0
         trigger=False
@@ -31,11 +45,13 @@ class IndependentSampler:
             if self.last_t is not None and finite(v)!=finite(old):trigger=True
             if not finite(v):continue
             if self.kind=='Delta' and finite(old) and dt>0:
+                # Separate displacement and rate evidence; dt is actual sampled elapsed time.
                 change=abs(v-old)/nf
                 trigger|=max(change,20*change/dt)>=self.threshold
             elif self.kind=='Variance':
                 if n not in self.mean:self.mean[n]=v;self.var[n]=0.
                 else:
+                    # Elapsed-time decay keeps irregular sample gaps meaningful.
                     a=-math.expm1(-dt/60);d=v-self.mean[n]
                     self.mean[n]+=a*d;self.var[n]=(1-a)*(self.var[n]+a*d*d)
                 trigger|=math.sqrt(max(0,self.var[n]))/nf>=self.threshold
@@ -63,6 +79,9 @@ class IndependentSampler:
         return self.interval
 
 def episodes(records,names):
+    """Reconstruct local active episodes and their first requested-upload reports.
+
+    These reports describe emission intent, not independent receiver decoding."""
     detections=[];reports=[]
     for n in names:
         start=last=None;sent=False
@@ -76,6 +95,10 @@ def episodes(records,names):
     return dict(records=records,detections=detections,reports=sorted(reports,key=lambda e:(e.start_s,e.channel)))
 
 def run_independent(trace,cfg,spec):
+    """Replay one independent schedule; fixed periods delegate to frozen replay.
+
+    Read values only when due, run the shared detector on those values and
+    request every-sample uploads. Resource/receiver accounting is added later."""
     if spec['kind']=='Fixed':
         # Exactly reuse existing scheduling / detection / upload semantics.
         return frozen_run(trace,cfg,'Fixed-'+str(spec['cap']))

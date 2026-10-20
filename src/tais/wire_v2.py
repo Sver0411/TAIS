@@ -27,6 +27,11 @@ def _pack(layout, control, device, session, sequence, payload):
 
 
 def _delta(envelope, previous, names):
+    """Pack current measurements/events and changed health fields only.
+
+    Health presence bits are separate from changed-field bits: an absent
+    entry removes health, whereas present unchanged fields depend on continuity.
+    Timestamp values retain v1 numeric types and units; they are not time deltas."""
     kind, time_data = v1._number(envelope['timestamp'], timestamp=True)
     control = kind << 6
     bitmap = 0
@@ -66,6 +71,9 @@ class Sender:
         self.last_accounting=None
 
     def restart(self, session_id):
+        """Start a greater persisted session and force the next emission to be a key.
+
+        A receiver cannot infer reboot continuity from sequence wraparound."""
         _id(session_id,64,'session')
         if session_id <= self.session_id:
             raise WireError('Restart requires a strictly greater persisted session ID')
@@ -75,6 +83,11 @@ class Sender:
         self.last_accounting=None
 
     def encode(self, envelope):
+        """Validate against v1, return one frame and advance local emission history.
+
+        A periodic key embeds an intact v1 snapshot. Other frames omit unchanged
+        health fields, so dropping the returned frame can invalidate later deltas.
+        Sequence exhaustion raises WireError rather than wrapping."""
         if self._seq >= 1 << 32:
             raise WireError('Sequence exhausted; allocate a fresh session, never wrap')
         full=v1.encode(envelope,self.layout_id)  # exact original contract validation
@@ -95,6 +108,10 @@ class Sender:
 
 @dataclass(frozen=True)
 class Parsed:
+    """Structurally validated packet independent of any receiver history.
+
+    self_contained means all present health fields can be reconstructed without
+    a predecessor; this can hold for a full-health delta as well as a key."""
     device_id: int
     session_id: int
     sequence: int
@@ -169,6 +186,9 @@ def parse(frame):
 
 @dataclass(frozen=True)
 class Received:
+    """Receiver outcome; envelope=None means no complete business state was restored.
+
+    gap counts missing sequence positions, not lost environmental events."""
     status: str
     device_id: int
     session_id: int
@@ -203,9 +223,16 @@ class Receiver:
         self._cache={}
 
     def reset(self):
+        """Erase volatile continuity and replay high-water marks for every device."""
         self._cache.clear()
 
     def receive(self, wire):
+        """Parse first, then update only the provisioned device continuity cache.
+
+        Stale/duplicate packets do not advance applied state. A conflicting sequence
+        invalidates cached health; after a gap, dependent deltas wait for a
+        self-contained packet. Recovery restores current state only. Malformed or
+        unprovisioned packets raise WireError; CRC is not authentication."""
         p=parse(wire)  # corruption/config rejection cannot poison a known stream
         if p.device_id not in self.layouts or p.layout_id!=self.layouts[p.device_id]:
             raise WireError('Unprovisioned device or frame/config layout mismatch')
@@ -224,6 +251,7 @@ class Receiver:
             if p.wire==cache.last_wire:return result('DUPLICATE')
             cache.synced=False;cache.health=None;cache.applied=None
             return result('CONFLICT')
+        # Emission continuity, not matching timestamps, authorizes cached health reuse.
         gap=p.sequence-cache.highest-1
         usable=cache.synced and cache.applied==p.sequence-1 and gap==0
         had_dependency_loss=not usable and (cache.highest>=0 or p.sequence>0 or was_known)

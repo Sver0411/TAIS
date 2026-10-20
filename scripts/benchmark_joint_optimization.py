@@ -35,6 +35,10 @@ def write_csv(p,rows):
  with p.open('x',newline='') as f:
   w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
 def replay(trace,cfg,method,options):
+ """Run JO senders through CoreSender; delegate other methods to legacy replay.
+
+ Always release native health contexts and derive local episodes from sampled
+ activity. This replay returns sender reports; receiver scoring is separate."""
  if not method.startswith('JO-'):return run(trace,cfg,method)
  s=JointSender(cfg,options,variant=method);rows=[];reports=[]
  try:
@@ -54,6 +58,12 @@ def replay(trace,cfg,method,options):
  return dict(records=rows,reports=reports,detections=detections)
 def metrics(trace,result,cfg,cf):
  # Auxiliary bit must never count as raw C11 fault detection.
+ """Encode every requested upload and compute offline sender/cost diagnostics.
+
+ Raw C11 health is separated from application trend bit 32. Frame lengths
+ are actual Binary v1 bytes; age/errors assume ideal delivery on the dense
+ 1-Hz grid. Edge delay here means first subsequent frame time; later SU/paper
+ metrics additionally require the received signature to preserve the edge."""
  raw=dict(result,records=[dict(r,health={n:r.get('joint',{}).get(n,{}).get('raw_c11',h) for n,h in r['health'].items()}) for r in result['records']])
  out=evaluate(trace,raw,cfg,cf);rows=result['records'];frames=[]
  for r in rows:

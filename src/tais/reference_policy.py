@@ -12,15 +12,23 @@ def json_bytes(envelope):return json.dumps(envelope,sort_keys=True,separators=('
 
 
 class Budget:
+    """Admission ledger for individual sensor reads, uploads and exact JSON bytes.
+
+    Each A/B read costs one unit. Rejected operations are logged but uncharged;
+    these hard caps do not model radio packets or actual electrical energy."""
     def __init__(self,caps):
         if set(caps)!=set(('reads','uploads','bytes')) or any(type(v)is not int or v<0 for v in caps.values()):raise ValueError('Invalid hard caps')
         self.caps=dict(caps);self.used=dict.fromkeys(caps,0);self.ledger=[]
     def read(self,t,sensor):
+        """Admit and charge one sensor read if capacity remains, then log the decision."""
         accepted=self.used['reads']<self.caps['reads']
         if accepted:self.used['reads']+=1
         self.ledger.append(dict(time=t,operation='read',sensor=sensor,accepted=accepted,cost=1 if accepted else 0,used=dict(self.used)))
         return accepted
     def upload(self,t,envelope):
+        """Return (accepted, proposed JSON size); charge upload/bytes only if admitted.
+
+        Even a denied proposal reports its would-be size for accounting diagnostics."""
         cost=len(json_bytes(envelope))
         accepted=self.used['uploads']<self.caps['uploads'] and self.used['bytes']+cost<=self.caps['bytes']
         if accepted:self.used['uploads']+=1;self.used['bytes']+=cost
@@ -30,6 +38,13 @@ class Budget:
 
 
 def run(trace,cfg,method,caps):
+    """Replay hard-budget main sensing with optional sampled reference support.
+
+    A reference baseline, candidate read and delayed follow-up must all fit
+    the same read budget. Missing/flat/inconsistent B leaves the candidate
+    undecided rather than claiming a physical fault or erasing the candidate.
+    Only admitted envelopes generate reports; support is a separate label.
+    The link here is ideal admitted JSON transport, not Binary v1 or radio."""
     if method not in ('GateOnly','TAIS','ReferenceGate'):raise ValueError('Unknown policy')
     cfg=main_config(cfg);scheduler=Scheduler(cfg,confirmation=method=='TAIS',multiplier=1.)
     budget=Budget(caps);rules=baseline(cfg)['adaptive'];threshold=rules['event_threshold']*rules['channels'][A]['noise_floor'];delay=rules['event_min_duration_s']

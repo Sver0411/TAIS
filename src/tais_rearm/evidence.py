@@ -3,7 +3,13 @@ import math
 from tais_v02.evidence import Evidence as FrozenEvidence
 
 class ReturnedReferenceEvidence(FrozenEvidence):
+    """Clear the legacy latch only on an observed unconfirmed return to its reference."""
     def step(self,t,value,state,score,raw_active,reference,threshold,floor):
+        """Delegate persistence, then synchronize reference-return cancellation with reseeding.
+
+        Require a prior PENDING episode and a later finite usable sample. The
+        cancellation sample itself stays inactive: its old raw debounce must not
+        be mistaken for a newly confirmed event. Other block/release paths persist."""
         prior=self.episode
         prior_pending=prior is not None and prior.phase=='PENDING' and t>prior.start
         event,pending,actions=super().step(t,value,state,score,raw_active,reference,threshold,floor)

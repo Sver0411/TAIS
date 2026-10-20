@@ -1,8 +1,8 @@
-"""Publish exact local Git objects through official GitHub Git Data API.
+"""Historical publisher targeting main through the GitHub Git Data API.
 
-gh supplies existing authentication; no tokens are read or printed. Ref update
-is non-forcing and only after every created SHA equals the local Git object.
-"""
+Executing or importing this file can update remote main without a PR. It is
+not a generic maintenance upload helper. Object identities and non-forcing
+ancestry are checked, but release authorization must come from the caller."""
 import base64,datetime,json,re,subprocess,time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];REPO='repos/Sver0411/TAIS'

@@ -9,6 +9,10 @@ IRB_BASE = '89aa8341181aa42791f9a4de80739bb7c10fa9e5'
 
 def pytest_sessionstart(session):
     # No network in ordinary local tests, and no fallback to a different base.
+    """Ensure the exact provenance commit exists only in shallow GitHub Actions runs.
+
+    Ordinary local tests never fetch. A full CI checkout missing this object is
+    an error; no alternate historical base may silently replace the pinned one."""
     if os.environ.get('GITHUB_ACTIONS') != 'true':
         return
     root = Path(__file__).resolve().parent

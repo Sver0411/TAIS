@@ -4,6 +4,11 @@ import argparse,csv,hashlib,json,math
 from pathlib import Path
 
 def main():
+ """Import explicitly verified numeric-second columns and write a provenance sidecar.
+
+ Refuse existing outputs and unsorted/duplicate/nonfinite time. Supplied
+ time-semantics text records caller evidence; it cannot validate that
+ evidence automatically. No natural event/fault labels are invented."""
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('--input',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--time-column',default='timestamp');p.add_argument('--temperature-column',default='temperature');p.add_argument('--humidity-column',default='humidity');p.add_argument('--time-semantics',required=True,help='document the independently verified timestamp meaning; not a timezone guess');a=p.parse_args()
  if a.output.exists():raise FileExistsError('Never overwrite source or existing imports')
  with a.input.open(newline='',encoding='utf-8-sig') as f:

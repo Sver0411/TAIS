@@ -5,6 +5,9 @@ from tais_v02.replay import run as frozen_run
 from .scheduler import Scheduler
 
 def run(trace,cfg,method,multiplier=1.0):
+    """Use the repair only for V02-Rearm; preserve comparator dispatch and disabled fallback.
+
+    The temporary scheduler patch is process-local and requires serial use."""
     if method!='V02-Rearm':return frozen_run(trace,cfg,method,multiplier)
     if not cfg.get('rearm',{}).get('enabled',True):return frozen_run(trace,cfg,'V02',multiplier)
     with patch('tais.replay.Scheduler',Scheduler):

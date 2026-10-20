@@ -24,6 +24,10 @@ def table(frame,columns):
 
 
 def main():
+    """Verify recorded metric digests and replace only the report results-marker section.
+
+    This is a report writer, not a read-only validator; do not invoke it merely
+    to inspect historical numbers during maintenance."""
     sections=[];total=0
     for split in ['development','validation','test']:
         dest=ROOT/'results'/split;manifest=json.loads((dest/'manifest.json').read_text())

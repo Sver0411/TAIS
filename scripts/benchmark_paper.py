@@ -44,6 +44,7 @@ def pool_trials(seeds,specs,out,workers):
     return rows
 
 def select_thresholds(workers):
+    """Choose each independent threshold on development micro F1 at cap 40 only."""
     plan=json.loads((ROOT/'configs/tais-paper.json').read_text());seeds=plan['seeds']['development']
     specs=[dict(id=f'{k}-t{t}',kind=k,cap=40,threshold=t) for k in KINDS for t in ([4,8,12] if k=='Rao-inspired' else [2,4,8])]
     rows=pool_trials(seeds,specs,OUT/'threshold-development',workers)
@@ -57,6 +58,10 @@ def select_thresholds(workers):
     dump(OUT/'threshold-selection.json',dict(rule='at cap40 maximize development micro F1, then recall, fewer samples, smaller threshold',chosen=chosen,candidates=totals))
 
 def calibrate(workers):
+    """Choose closest development sample totals and retain all native schedule points.
+
+    This initial cap-only search is historical; calibrate_bounds records the
+    subsequent development-only minimum-bound search without test reselection."""
     plan=json.loads((ROOT/'configs/tais-paper.json').read_text());thresholds=json.loads((OUT/'threshold-selection.json').read_text())['chosen']
     specs=[dict(id=f'{k}-c{c}',kind=k,cap=c,threshold=thresholds[k]) for k in KINDS for c in CAPS]+[dict(id=m,kind='TAIS') for m in ['GateOnly','JO-SU-40']]
     rows=pool_trials(plan['seeds']['development'],specs,OUT/'budget-development',workers)
@@ -72,6 +77,11 @@ def calibrate(workers):
     dump(OUT/'operating-points.json',dict(thresholds=thresholds,budget_selection=selected,schedules=schedules,rule='closest development sample total; tie larger cap. No test adjustment. Native caps20/40/60 and all fixed periods retained.'))
 
 def calibrate_bounds(workers):
+    """Search independent interval bounds on development data and preserve the earlier plan.
+
+    Within the 5% development budget band prefer F1, then gap and declared
+    ties; if infeasible choose closest budget. This does not guarantee matching
+    on held-out data. Write selected points for a separate pre-test freeze."""
     plan=json.loads((ROOT/'configs/tais-paper.json').read_text());thresholds=json.loads((OUT/'threshold-selection.json').read_text())['chosen']
     specs=[dict(id=f'{k}-c{c}-min{lo}',kind=k,cap=c,minimum=lo,threshold=thresholds[k]) for k in KINDS for c in CAPS for lo in [10,15,20,25,30,35] if lo<=c]+[dict(id=m,kind='TAIS') for m in ['GateOnly','JO-SU-40']]
     rows=pool_trials(plan['seeds']['development'],specs,OUT/'budget-bound-development',workers)
@@ -93,6 +103,11 @@ def calibrate_bounds(workers):
     dump(OUT/'operating-points.json',dict(thresholds=thresholds,budget_selection=selected,schedules=schedules,rule='Cap-only matching failed on DEVELOPMENT (retained). Search independent minimum bound10/15/20/25/30/35 and cap20..60 step5 at selected threshold. Among development gaps within5% maximize F1, then closest budget, larger cap, smaller minimum. No test adjustment. All native points retained.'))
 
 def views(trace,cfg,spec):
+    """Return labeled native/decorated/common views without feeding changes into schedules.
+
+    +C11 adds raw diagnostics; +C11+U also shares TAIS emission. Common view
+    shares detector/emission at each schedule actual sample time, isolating
+    scheduling rather than comparing fully independent end-to-end systems."""
     r=native(trace,cfg,spec);out={('native',spec['id']):r}
     if spec['kind']!='TAIS':
         out['native',spec['id']+'+C11']=decorate(r,cfg)
@@ -125,6 +140,10 @@ def worker(seed,phase,schedules,archive,cases):
     return seed,rows,events,artifacts,{'|'.join(k):v.tolist() for k,v in ages.items()}
 
 def execute(phase,workers,output=OUT,archive=RAW):
+    """Write a fresh phase directory using saved schedules and actual encoded frames.
+
+    Formal test requires the committed source/parameter lock byte for byte.
+    Output overrides redirect artifacts but do not bypass that freeze check."""
     plan=json.loads((ROOT/'configs/tais-paper.json').read_text());schedules=json.loads((OUT/'operating-points.json').read_text())['schedules']
     seeds=plan['seeds'].get(phase,[20]);cases=scenarios() if phase!='smoke' else ['clean_none','clean_short','missing_cross_long','drift_same_long']
     if phase=='test':

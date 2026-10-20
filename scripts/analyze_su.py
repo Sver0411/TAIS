@@ -24,6 +24,10 @@ def aggregate(rows):
  return a
 
 def select(root):
+ """Freeze the development-selected balanced candidate, retaining qualification status.
+
+ If no candidate meets quality gates, the fallback still receives a balanced
+ cap for interface continuity. The name is not evidence that gates passed."""
  rows=read(root,'development');by={m:aggregate([r for r in rows if r['method']==m]) for m in {r['method'] for r in rows}};g=by['GateOnly'];s=by['JO-SU-20'];den=s['recall']-g['recall'];candidates=[]
  for cap in [30,40]:
   a=by[f'JO-SU-{cap}'];gain=(a['recall']-g['recall'])/den if den>0 else None;eligible=bool(gain is not None and gain>=.8 and a['recall']>=g['recall']+.05 and a['f1']>=g['f1']+.03)
@@ -35,6 +39,10 @@ def select(root):
  print(json.dumps({k:lock[k] for k in ['balanced_cap','development_quality_qualified']}))
 
 def analysis(root,phase):
+ """Write all fixed-mode summaries, whole-seed intervals and explicit GO/NO-GO checks.
+
+ Receiver metrics and age remain separate from sender outcomes. Common-hit
+ delay compares only events detected by both methods; misses stay separate."""
  rows=read(root,phase);out=root/phase/'analysis';out.mkdir(exist_ok=False);by={}
  for r in rows:
   for group in groups(r):by.setdefault((r['method'],group),[]).append(r)

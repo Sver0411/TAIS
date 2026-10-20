@@ -28,6 +28,10 @@ def read_phase(root,phase):
 
 
 def select(root,plan):
+    """Freeze pairs using development/validation resource fields only, never test outcomes.
+
+    Preserve fallback and calibration-qualified status when no pair meets the
+    declared bands. This writes an exclusive selection, not a validation report."""
     dm,dev=read_phase(root,'development');vm,val=read_phase(root,'validation')
     for phase,m in [('development',dm),('validation',vm)]:
         if m['seeds']!=plan['seeds'][phase] or m['frozen_files']!=fingerprints():raise ValueError('Calibration/code/split changed')
@@ -47,6 +51,10 @@ def select(root,plan):
 
 
 def common_delays(event_rows,gm,tm,seed):
+    """Compare delay only for events matched by both methods, resampling whole seeds.
+
+    Conditional delay omits events missed by either method; report those misses
+    separately rather than interpreting this as unconditional detection speed."""
     def index(method,m):return {(int(r['seed']),r['scenario'],r['channel'],r['truth_start'],r['truth_end']):r for r in event_rows if r['method']==method and float(r['multiplier'])==m}
     g,t=index('GateOnly',gm),index('TAIS',tm)
     if g.keys()!=t.keys():raise ValueError('Event truths differ between selected methods')

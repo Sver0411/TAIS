@@ -21,6 +21,10 @@ DEST = ROOT/'results/tais-core'
 
 
 def verify_run(path):
+    """Recompute recorded frames, byte totals and receiver outcomes from a saved journal.
+
+    Require the exact source bytes recorded by that run, including comments.
+    A source-hash mismatch is a provenance difference, not a metric comparison."""
     manifest=json.loads((path/'manifest.json').read_text())
     for rel,digest in manifest['source_sha256'].items():
         assert sha(ROOT/rel)==digest, rel
@@ -65,6 +69,10 @@ def verify_run(path):
 
 
 def protect():
+    """Compare inherited tracked blobs, vendor commits and local archives byte for byte.
+
+    This historical freeze deliberately rejects annotation-only source edits too;
+    it does not distinguish source equivalence from original source identity."""
     files=0;submodules=0
     for entry in subprocess.check_output(['git','ls-tree','-rz',BASE],cwd=ROOT).split(b'\0'):
         if not entry:continue

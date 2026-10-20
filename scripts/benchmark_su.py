@@ -21,6 +21,7 @@ OUT=ROOT/'results/tais-su';RAW=ROOT/'results/traces/tais-su'
 FILES=['src/tais/su_policy.py','scripts/benchmark_su.py','scripts/analyze_su.py','tests/test_su_policy.py','configs/tais-su.json','docs/TAIS_SU_PROTOCOL.md','examples/tais-core/run.py','src/tais/scheduler.py','src/tais/joint_policy.py','src/tais/joint_sampling.py','src/tais/joint_upload.py','src/tais/core_stream.py','src/tais/config.py','src/tais/replay.py','src/tais/metrics.py','src/tais/signals.py','src/tais/trust.py','src/tais/trust_bridge.c','src/tais/wire_codec.py','configs/experiment.yaml','scripts/benchmark_joint_optimization.py','scripts/analyze_joint_optimization.py','vendor/SensorTrust/core/sensor_trust.c','vendor/SensorTrust/core/sensor_trust.h','vendor/AdaptiveSense/simulator/scoring.py','vendor/AdaptiveSense/simulator/adaptive.py']
 def fingerprints():return {p:sha(ROOT/p) for p in FILES}
 def build_sender(cfg,method,layout=1):
+ """Map public research mode names to GateOnly, JO-S or SU sender adapters."""
  if method=='GateOnly':return CoreSender(cfg,layout)
  if method=='JO-S':return JointSender(cfg,dict(idle_interval_s=20,trend_slope=.005,heartbeat_s=120),layout,'JO-S')
  if method=='GateOnly+U':return SUSender(cfg,layout_id=layout,sampling='gateonly')
@@ -47,6 +48,11 @@ def replay(trace,cfg,method):
  return dict(records=records,reports=reports,detections=detections)
 
 def receiver_result(result,frames):
+ """Decode emitted frames independently and report only received false-to-true edges.
+
+ Assume ordered ideal delivery and require every frame to update receiver
+ state. Return a scoring view replacing reports, plus the decoded history;
+ health/local diagnostics remain the original sampled records."""
  rx=CoreReceiver();previous={n:False for n in ('temperature','humidity')};reports=[];history=[]
  for frame in frames:
   data=bytes.fromhex(frame['frame_hex']);x=rx.receive(data);assert x['status']=='updated'
@@ -58,6 +64,12 @@ def receiver_result(result,frames):
  return dict(result,reports=reports),history
 
 def extended_metrics(trace,result,cfg,counterfactual,cf_frames):
+ """Keep sender and decoded-receiver scores separate and check sampled edge delivery.
+
+ The first later snapshot must carry the same edge signature; later return
+ to that state cannot recover a missed intermediate edge. Zero edge delay
+ is sample-to-upload software delay, not physical event latency. Age counts
+ seconds since the latest decoded sample timestamp, even for null values."""
  out,frames=old_metrics(trace,result,cfg,counterfactual)
  rx_result,rxlog=receiver_result(result,frames);rx_cf,_=receiver_result(counterfactual,cf_frames)
  rxeval=evaluate(trace,rx_result,cfg,rx_cf)

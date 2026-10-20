@@ -11,6 +11,11 @@ EXTRA_COUNTS = ('fault_flagged_event_missed','event_detected_no_fault_flag',
 
 
 def extra_metrics(trace, result, cfg, metrics, counterfactual=None):
+    """Add offline health/event joint outcomes and clean-world cost differences.
+
+    Any health flag and a correct fault-type bit are separate outcomes; neither
+    is an environmental detection. Event support is inclusive, fault support
+    half-open. Missing counterfactual counts default to zero in this helper."""
     rows = result['records']
     in_event = lambda t: any(e.start_s <= t <= e.end_s for e in trace.events)
     in_fault = lambda t: any(f.start_s <= t < f.end_s for f in trace.faults)
@@ -59,6 +64,9 @@ def groups(row):
 
 
 def event_rows(trace, result, cfg):
+    """Return per-truth-event sender matching and sampled opportunity diagnostics.
+
+    Delays are conditional on matched reports and never fill missed events."""
     match = match_events(trace.events, result['reports'], cfg['evaluation']['event_match_tolerance_s'])
     by_truth = {m.ground_truth:m.detected for m in match.matches}
     rows=result['records'];output=[]

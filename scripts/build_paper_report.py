@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Chinese evidence index and reviewer audit, generated from actual final results."""
+"""Generate Chinese evidence/reviewer documents from saved G1 results.
+
+Importing this historical writer also updates document and result entry files.
+Use dedicated read-only verifiers to inspect existing publication artifacts."""
 from pathlib import Path
 import json,shutil
 import pandas as pd

@@ -6,6 +6,11 @@ from tais.metrics import evaluate
 from simulator.events import match_events
 
 def metrics(trace,result,cfg,cf,cf_frames):
+    """Add independent receiver matching, edge preservation and pooled age histograms.
+
+    Counterfactual receiver reports come from separately decoded clean frames.
+    No-health methods have unavailable diagnostic metrics rather than implied
+    zero-error health capability. Event delays condition on detected events."""
     out,frames=base_metrics(trace,result,cfg,cf)
     rr,rx=receiver_result(result,frames);rcf,_=receiver_result(cf,cf_frames)
     ev=evaluate(trace,rr,cfg,rcf)

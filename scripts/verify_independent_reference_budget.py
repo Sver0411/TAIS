@@ -17,6 +17,10 @@ from analyze_independent_reference_budget import read_phase
 
 
 def check_ledger(trace,result):
+    """Recompute admitted individual reads and exact JSON upload charges from the ledger.
+
+    Verify observed values correspond to charged A/B reads and never exceed caps.
+    No scheduler or physical power model is run during this accounting check."""
     used=dict(reads=0,uploads=0,bytes=0);a=[];b=[];frames=iter(result['envelopes']);uploads=0
     for x in result['ledger']:
         if x['accepted']:
@@ -34,6 +38,9 @@ def check_ledger(trace,result):
 
 
 def verify_chunk(task):
+    """Read bounded cached archive chunks and independently recompute offline metrics.
+
+    Restore event objects for matching; no online policy is rerun or tuned."""
     rows,archive,phase=task;archive=Path(archive);cfg=load()
     @lru_cache(maxsize=256)
     def raw(rel):return json.loads(gzip.decompress((archive/rel).read_bytes()))
@@ -92,6 +99,10 @@ def verify(root,phase,plan):
 
 
 def history():
+    """Require archived tracked/ignored byte hashes and external raw-file stat signatures.
+
+    Source files are included, so comments can fail this guard without changing
+    experiment data. Preserve the guard as the original identity record."""
     p=RAW/'history-guard.json.gz';pointer=json.loads((DEST/'history-protection.json').read_text());assert sha(p)==pointer['guard_sha256'];guard=json.loads(gzip.decompress(p.read_bytes()))
     for name in ('tracked','ignored'):
         for rel,h in guard[name].items():

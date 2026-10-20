@@ -20,6 +20,9 @@ CASES = {
 
 
 def schedule(case, day, node, variable, refs, config):
+    """Describe a controlled intervention on unlabeled real background in proxy seconds.
+
+    These labels identify imposed perturbations, not natural field faults/events."""
     fault, event, ref = CASES[case]; spec = config["variables"][variable]
     label = {"case": case, "day": day, "target": node, "variable": variable, "references": refs,
              "target_fault": fault, "event": event, "reference_intervention": ref,
@@ -46,6 +49,10 @@ def event_delta(times, label):
 
 
 def apply_target(values, recorded_times, label):
+    """Apply synthetic target perturbations on source-row times, preserving NaNs.
+
+    local_slow intentionally shares drift-only observations despite a different
+    physical interpretation; no detector can recover that distinction alone."""
     out = np.array(values, copy=True)
     if label["target_fault"] == "drift":
         out += drift(recorded_times, label)
@@ -57,6 +64,10 @@ def apply_target(values, recorded_times, label):
 
 
 def apply_references(values, recorded_times, query, label, negative=False):
+    """Apply common events or reference interventions before detector evaluation.
+
+    Negative controls omit common-event response; missingness follows query
+    time while value perturbations use the recorded source-row proxy time."""
     out = np.array(values, copy=True)
     if label["event"] == "common_fast" and not negative:
         out += event_delta(recorded_times, label)

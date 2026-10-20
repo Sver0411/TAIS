@@ -55,6 +55,11 @@ def number(text):
 
 
 def csv_rows(path, names):
+    """Yield parsed rows plus original CSV line provenance without sorting or filling.
+
+    Numeric seconds and all configured channel columns are required. Blank/null
+    cells become None; parsing errors identify the source line. Sender-side
+    validation subsequently enforces time ordering and sampled value constraints."""
     with path.open(newline='', encoding='utf-8-sig') as f:
         reader = csv.DictReader(f)
         if not set(('timestamp', *names)) <= set(reader.fieldnames or ()):
@@ -68,6 +73,9 @@ def csv_rows(path, names):
 
 
 def stdin_rows(stream, names):
+    """Yield one current JSON object and its line number, rejecting nonfinite JSON tokens.
+
+    Do not infer event/fault labels from user-provided stream fields."""
     for line, text in enumerate(stream, 1):
         if not text.strip():
             continue
@@ -81,6 +89,10 @@ def stdin_rows(stream, names):
 
 def evaluation(trace, records, reports, cfg):
     # Offline only, after EOF. Unlabeled user inputs never enter this function.
+    """Score synthetic sender reports after EOF; never called for unlabeled user data.
+
+    Any C11 flag during an injected fault is a diagnostic hit, not type proof.
+    Receiver event performance must be computed independently from decoded frames."""
     from simulator.events import Event, match_events
     result = match_events(trace.events, [Event(**x) for x in reports],
                           cfg['evaluation']['event_match_tolerance_s'])
@@ -135,6 +147,12 @@ def verify(out, trace, cfg, layout, policy="gateonly", options=None, variant="JO
 
 
 def main():
+    """Run the selected sender, local byte link and receiver, writing an exclusive journal.
+
+    Synthetic truth is confined to optional offline evaluation/verification.
+    CSV/JSONL streams retain unknown truth metrics. Pace changes wall time only;
+    source timestamps drive scheduling. Always flush held frames and close C
+    contexts; failures are retained in the journal and summary."""
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--policy', choices=['gateonly','tais-jo','tais-su','gateonly-u'], default='gateonly')
     p.add_argument('--su-mode',choices=['high','balanced'],default='high',help='frozen SU20 or development-selected SU30/40; never H')
@@ -176,6 +194,8 @@ def main():
         selection=ROOT/'results/tais-su/selection.json'
         if a.su_mode=='balanced' and not selection.exists():
             p.error('balanced mode requires the committed development selection')
+        # balanced is the saved candidate (currently SU30), not a claim its quality gate passed.
+        # SU40 remains available via SUSender/API and benchmarks, not a separate CLI choice.
         cap=20 if a.su_mode=='high' else json.loads(selection.read_text())['balanced_cap']
         options=dict(idle_interval_s=cap,heartbeat_s=120,health_layer=False)
     trace = None

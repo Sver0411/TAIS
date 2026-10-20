@@ -1,3 +1,7 @@
+"""Inspect selected archived BM-1 reports to diagnose JO development bottlenecks.
+
+Runs at import time and writes bottlenecks/upload-reasons outputs relative to
+the working directory. These used historical seeds are not new validation."""
 import sys,gzip,json,csv,collections
 from pathlib import Path
 sys.path.insert(0,'src')

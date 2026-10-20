@@ -39,6 +39,10 @@ def fingerprints():return {p:sha(ROOT/p) for p in FROZEN_FILES}
 
 
 def protect_original_sources():
+    """Require original blob identities and clean pinned submodules before the historical campaign.
+
+    This is a byte freeze, not a semantic-equivalence test; comments change its
+    source identity. Do not weaken it or refresh recorded experiments for maintenance."""
     entries=subprocess.check_output(['git','ls-tree','-rz',BASE,'--','src','configs','vendor'],cwd=ROOT)
     for entry in entries.split(b'\0'):
         if not entry:continue
@@ -64,6 +68,10 @@ def csv_write(path,rows):
 
 
 def worker(seed,cases,points,archive):
+    """Archive one seed policy matrix and score against paired clean observations.
+
+    Record independent input/result fingerprints, actual Binary lengths and
+    sender event matches. TrustLog must preserve the raw baseline schedule."""
     cfg=load();archive=Path(archive);artifacts={};metrics=[];events=[];counterfactuals={}
     def save(relative,obj):
         artifacts[relative]=write_gzip(archive/relative,obj);return artifacts[relative]

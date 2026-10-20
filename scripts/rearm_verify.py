@@ -10,6 +10,10 @@ from run_experiments import canonical
 
 def sha(b):return hashlib.sha256(b).hexdigest()
 def main():
+ """Audit exact source/CSV identities and optional archive hashes or representative replays.
+
+ The source byte guard runs even when no replay is requested; annotation
+ changes alone therefore invalidate original-source identity."""
  p=argparse.ArgumentParser();p.add_argument('--split',required=True);p.add_argument('--traces',action='store_true');p.add_argument('--replay-one',action='store_true');a=p.parse_args();dest=ROOT/f'results/blocked-rearm/{a.split}';m=json.loads((dest/'manifest.json').read_text())
  for name in ['metrics','events']:assert sha((dest/(name+'.csv')).read_bytes())==m[name+'_sha256']
  assert len(list(csv.DictReader((dest/'metrics.csv').open())))==m['runs']
