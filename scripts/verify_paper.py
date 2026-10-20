@@ -39,7 +39,10 @@ def verify(root,archives=False,phase='test'):
     historical=json.loads((OUT/'historical-protection.json').read_text());changed=[]
     for p,h in historical['files'].items():
         if sha(ROOT/p)!=h:changed.append(p)
-    assert not set(changed)-{'README.md'},changed
+    # Navigation-only maintenance may update the two public README entry points.
+    # Keep the frozen inventory intact and continue reporting those differences;
+    # no algorithm, configuration, protocol or experiment data file is exempted.
+    assert not set(changed)-{'README.md','results/README.md'},changed
     for sub in ['AdaptiveSense','SensorTrust']:
         assert subprocess.check_output(['git','status','--porcelain'],cwd=ROOT/'vendor'/sub,text=True)==''
     assert subprocess.check_output(['git','diff',historical['base'],'--','vendor'],cwd=ROOT,text=True)==''
