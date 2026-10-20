@@ -26,10 +26,6 @@ def aggregate(rows):
     return a
 
 def paired(rows,contrasts,out):
-    """Compute descriptive pointwise differences with paired whole-seed resampling.
-
-    Recompute ratios from cluster counts; these intervals are unadjusted across
-    the displayed methods/groups/endpoints and do not establish universal superiority."""
     rng=np.random.default_rng(2026101917);seeds=sorted({r['seed'] for r in rows});draw=rng.integers(0,len(seeds),(5000,len(seeds)));result=[]
     gs=['overall','profile:short','profile:long','relation:same','relation:cross','fault:drift','fault:stable_offset','no_events']
     keys=['precision','recall','f1','rx_precision','rx_recall','rx_f1','samples','uploads','binary_v1_bytes','fault_induced_false','rx_fault_induced_false','fault_detection_rate','event_delay_s','rx_event_delay_s']
@@ -80,11 +76,6 @@ def figures(summary,out):
         plt.close(fig)
 
 def resource(summary,out):
-    """Write a dimensionless additive cost sensitivity surface from measured software counts.
-
-    Byte cost is the reference unit; sample/fixed-send weights are swept and
-    processing is assumed equal. Break-even processing is an allowable extra
-    cost, not measured CPU energy. A real radio need not have linear byte cost."""
     import matplotlib;matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     d={r['method']:r for r in summary if r['view']=='native' and r['group']=='overall'}
@@ -100,10 +91,6 @@ def resource(summary,out):
     fig.suptitle('Conditional additive cost, equal processing assumed; dimensionless, NOT measured energy');fig.tight_layout();fig.savefig(out/'resource_sensitivity.png',dpi=180);plt.close(fig);write(out/'resource_sensitivity.csv',rows)
 
 def main(root,phase):
-    """Write summaries/figures and qualify saved budget pairs without reselecting points.
-
-    This mutates analysis and root summary files; use separate maintenance
-    outputs instead of running it against a frozen result directory."""
     rows=read(root,phase);out=root/phase/'analysis';out.mkdir(parents=True,exist_ok=True);by={}
     for r in rows:
         for group in groups(r):by.setdefault((r['view'],r['method'],group),[]).append(r)

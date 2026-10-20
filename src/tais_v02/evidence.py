@@ -3,7 +3,6 @@ from dataclasses import dataclass
 
 @dataclass
 class Episode:
-    """Signed displacement candidate retaining its creation-time reference in native units."""
     start: float
     reference: float
     sign: int
@@ -11,21 +10,10 @@ class Episode:
     phase: str = 'PENDING'
 
 class Evidence:
-    """One bounded persistence candidate plus a post-cancellation BLOCKED latch.
-
-    Persistence is sampled evidence, not proof that a change is environmental.
-    The legacy latch can remain through health recovery until score falls."""
     def __init__(self, params):
         self.params=params;self.episode=None;self.blocked=False
 
     def step(self,t,value,state,score,raw_active,reference,threshold,floor):
-        """Return (event, pending, lifecycle actions) and mutate candidate/latch state.
-
-        Time uses seconds; threshold is noise-normalized and floor has measurement
-        units. Missing/FAULT input cancels and clears the latch. A degraded change
-        can create a candidate whose sign/reference stay fixed. Confirmation needs
-        sample count, duration and raw detector activity; expiry/return/release
-        can block recreation. HEALTHY raw activity is admitted only when unblocked."""
         events=[];event=False
         def log(action,reason):
             e=self.episode

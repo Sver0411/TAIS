@@ -10,11 +10,6 @@ from .config import baseline
 
 @dataclass
 class Trace:
-    """Offline experiment container separating latent, noisy and observed streams.
-
-    latent includes environmental interventions, noisy adds observation noise,
-    and observed additionally applies faults. events/faults are scoring labels
-    and must not enter online policy decisions."""
     scenario: str
     relationship: str
     profile: str
@@ -27,7 +22,6 @@ class Trace:
 
 @dataclass(frozen=True)
 class Fault:
-    """Synthetic channel intervention on the half-open interval [start_s, end_s)."""
     channel: str
     start_s: float
     end_s: float
@@ -40,13 +34,6 @@ def scenarios():
     return ['clean_none','clean_event','clean_short']+[f'{k}_{r}_{p}' for k in KINDS for r in RELATIONS for p in ['short','long']]
 
 def generate(cfg,seed,scenario):
-    """Build the G1 one-second grid and return observations plus separate truth.
-
-    Noise and fault timing have separate seeded RNGs. Event timing is prescribed
-    relative to fault start, so this is not independent natural event timing.
-    Upstream label_events scores the driven physical deviation rather than
-    detector output; its inclusive event endpoints differ from fault support.
-    Fault replacement affects observed only, preserving noisy for counterfactuals."""
     spec=cfg['synthetic'];n=spec['duration_s'];base=spec['baseline']
     names=list(cfg['channels'])
     if scenario.startswith('clean_'):

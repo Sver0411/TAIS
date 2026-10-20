@@ -1,8 +1,4 @@
-"""Call the pinned SensorTrust C11 implementation through an opaque ctypes context.
-
-The adapter builds a source-hashed shared library under build/ on demand.
-Health outputs are heuristic diagnostics, not calibrated fault probabilities;
-a stable in-range offset need not receive a dedicated fault flag."""
+"""ctypes calls a small opaque-context C adapter, never a Python detector."""
 from dataclasses import dataclass
 import ctypes as C
 import hashlib
@@ -15,10 +11,6 @@ from . import ROOT
 
 @dataclass(frozen=True)
 class Health:
-    """Immutable C11 output: score 0..100, categorical state and fault bitmask.
-
-    Flags RANGE/STUCK/SPIKE/DRIFT/MISSING describe diagnostic evidence,
-    not verified physical causes or environmental event labels."""
     score: int
     state: str
     flags: int
@@ -26,11 +18,6 @@ class Health:
 _lib = None
 
 def library():
-    """Load and cache the native adapter, compiling it if its source hash is new.
-
-    Requires initialized vendor/SensorTrust and a C11 compiler selected by CC
-    or cc. The three source files determine the cached library name. Compiler
-    failures propagate; no Python approximation replaces a failed C build."""
     global _lib
     if _lib is not None:
         return _lib
@@ -55,14 +42,7 @@ def library():
     return lib
 
 class SensorTrust:
-    """Own one native context for one sampled channel; call close() when finished.
-
-    No synchronization is supplied for concurrent updates of the same context."""
     def __init__(self, config):
-        """Copy configured thresholds into a newly allocated C context.
-
-        Invalid C configuration or allocation failure yields ValueError. Native
-        window parameters count observations; they are not elapsed-time periods."""
         self.lib = library()
         self.ctx = self.lib.tais_new(*(config[k] for k in ['min_value','max_value','stuck_epsilon','stuck_window','spike_threshold','drift_window','drift_threshold','missing_limit']))
         if not self.ctx:
@@ -70,11 +50,6 @@ class SensorTrust:
         self.last_t = -1
 
     def update(self, t, value):
-        """Advance diagnostics at strictly increasing nonnegative times in seconds.
-
-        Finite values become C float; None/nonfinite values pass valid=0 with
-        a placeholder zero. Timestamps are rounded to uint64 milliseconds.
-        Callers must keep time in that range and must not update after close()."""
         if not math.isfinite(t) or t < 0 or t <= self.last_t:
             raise ValueError('SensorTrust timestamps must increase and be nonnegative')
         self.last_t = t
@@ -84,7 +59,6 @@ class SensorTrust:
         return Health(score.value,('HEALTHY','DEGRADED','FAULT')[state.value],flags.value)
 
     def close(self):
-        """Free this owned context once; subsequent calls are harmless."""
         if self.ctx:
             self.lib.tais_free(self.ctx)
             self.ctx = None

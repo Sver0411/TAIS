@@ -15,11 +15,6 @@ from tais.config import baseline
 
 
 def inspect_run(trace, cfg, method, multiplier=1):
-    """Observe legacy analyzer calls and candidate lifecycle without changing returns.
-
-    Return (original replay result, offline evidence). Temporary module patches
-    are restored on exit and require single-threaded use. Baseline-only methods
-    are instrumented after replay at their actual sampled times."""
     evidence = []
     calls = []
 

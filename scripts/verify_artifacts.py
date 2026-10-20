@@ -9,11 +9,6 @@ from tais.replay import run
 
 
 def main():
-    """Verify a legacy split, optionally checking archives and replaying one case.
-
-    The source check requires original bytes, including comments, for current
-    TAIS source paths. It is stricter than runtime behavior equivalence and
-    can fail after source additions or annotation-only maintenance."""
     p=argparse.ArgumentParser();p.add_argument('--split',required=True);p.add_argument('--traces',action='store_true');p.add_argument('--replay-one',action='store_true');args=p.parse_args()
     dest=ROOT/'results'/args.split;manifest=json.loads((dest/'manifest.json').read_text())
     assert hashlib.sha256((dest/'metrics.csv').read_bytes()).hexdigest()==manifest['metrics_sha256']

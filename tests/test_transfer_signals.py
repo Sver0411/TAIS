@@ -1,4 +1,3 @@
-"""G2 fixture checks separating reproducible process streams, injection and truth support."""
 import json,math
 from copy import deepcopy
 from pathlib import Path

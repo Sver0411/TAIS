@@ -10,11 +10,6 @@ import pandas as pd
 
 
 def audit(path,out,mapping=None,time_format=None):
-    """Write a source audit and optional explicit-mapping fixed-period reconstruction.
-
-    Require supplied time format and monotonic unique source timestamps. Never
-    interpolate within gaps or treat control state as event/fault ground truth.
-    Reconstruction error compares available observations, not a latent field."""
     data=pd.read_csv(path)
     report={'file':path.name,'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'rows':len(data),'columns':list(data),
             'missing_per_column':data.isna().sum().to_dict(),'duplicate_rows':int(data.duplicated().sum()),'status':'header_audit_only'}

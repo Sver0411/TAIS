@@ -16,7 +16,6 @@ EVENT_COLUMNS = ('index','timestamp','device','session','sequence','kind','v1_by
 
 
 def exact(a,b):
-    """Compare envelopes recursively, including exact binary64 bit patterns."""
     if type(a) is not type(b):return False
     if isinstance(a,float):return struct.pack('>d',a)==struct.pack('>d',b)
     if isinstance(a,dict):return a.keys()==b.keys() and all(exact(a[k],b[k]) for k in a)
@@ -24,10 +23,6 @@ def exact(a,b):
 
 
 def discarded(profile, seed, scenario, index, timestamp):
-    """Choose deterministic synthetic losses keyed by scenario, seed and timestamp.
-
-    Hash-based profiles do not consume generator randomness or inspect labels;
-    burst losses use emission indices rather than elapsed-time outages."""
     if profile=='burst':return 5<=index<9 or 21<=index<25
     if profile in ('loss1','loss5','loss10'):
         percent=int(profile[4:])
@@ -50,9 +45,6 @@ class Packet:
 
 
 def encode_stream(envelopes, period, restart=False):
-    """Encode already emitted envelopes, optionally restarting before index 20.
-
-    This transport study cannot change the original sampling/upload policy."""
     sender=Sender(period=period)
     packets=[]
     for i,e in enumerate(envelopes):
@@ -64,7 +56,6 @@ def encode_stream(envelopes, period, restart=False):
 
 
 class _Waits:
-    """Track unrestored-state episodes with an explicit right-censored EOF tail."""
     def __init__(self):self.start=None;self.episodes=[]
     def update(self, index, timestamp, missing):
         if missing and self.start is None:self.start=index,timestamp

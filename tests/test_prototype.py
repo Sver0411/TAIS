@@ -1,4 +1,3 @@
-"""Legacy gate engineering regression against pinned upstream behavior and synthetic fixtures."""
 from copy import deepcopy
 from dataclasses import asdict
 import csv,inspect,math,random,subprocess

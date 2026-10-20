@@ -1,1 +1,1 @@
-"""Minimal reference-return rearm variant; historical policy behavior is otherwise reused."""
+"""Minimal reference-return rearm repair; frozen v0.1/v0.2 stay unchanged."""

@@ -1,938 +1,422 @@
 {
-  "base": "80914638ab1d3d0ccca135a05de76be137779b1a",
-  "baseline_git_tree": "2c43a395f648dfb362b0178e33ddd1146b7571c7",
-  "baseline_tracked_entries": 1357,
+  "base_main": "80914638ab1d3d0ccca135a05de76be137779b1a",
+  "original_annotation_commit": "89c7c404a4b7132bfae84239ecdd74b3a37c7b6b",
+  "branch": "docs/code-comments-maintenance",
+  "pr": "https://github.com/Sver0411/TAIS/pull/2",
+  "base_entries": 1357,
   "own_code_files": 145,
   "python_files": 144,
   "c_files": 1,
   "own_headers": 0,
-  "changed_code_files": 92,
-  "inspected_unchanged_code": 53,
-  "incomplete_code_reviews": [],
-  "protected_unchanged_files": 1263,
-  "third_party_submodules": [
-    {
-      "path": "vendor/SensorTrust",
-      "commit": "2ce98dd043bb01ea99052eda218c68a172499a4c",
-      "clean": true
-    },
-    {
-      "path": "vendor/AdaptiveSense",
-      "commit": "f7ec30fd4721aa1a7c308f879050a83936e60067",
-      "clean": true
-    }
-  ],
-  "directory_status": {
+  "status_counts": {
+    "protected_unchanged": 1212,
+    "restored_to_base": 82,
+    "retained_annotations": 10,
+    "inspected_unchanged": 53
+  },
+  "directory_counts": {
     ".": {
-      "skipped_protected": 11,
-      "modified": 1
-    },
-    ".github/workflows": {
-      "skipped_protected": 4
-    },
-    "configs": {
-      "skipped_protected": 11
-    },
-    "data": {
-      "skipped_protected": 1
-    },
-    "docs": {
-      "skipped_protected": 54
-    },
-    "docs/evidence": {
-      "skipped_protected": 4
-    },
-    "docs/main-release-audit": {
-      "skipped_protected": 13
+      "restored_to_base": 1
     },
     "examples/tais-core": {
-      "skipped_protected": 2,
-      "modified": 5
-    },
-    "papers/tais": {
-      "skipped_protected": 4
-    },
-    "papers/tais/figures": {
-      "skipped_protected": 14
-    },
-    "papers/tais/history": {
-      "skipped_protected": 3
-    },
-    "papers/tais/tables": {
-      "skipped_protected": 47
-    },
-    "results": {
-      "skipped_protected": 26
-    },
-    "results/baseline": {
-      "skipped_protected": 11
-    },
-    "results/blocked-rearm": {
-      "skipped_protected": 21
-    },
-    "results/blocked-rearm/development": {
-      "skipped_protected": 4
-    },
-    "results/blocked-rearm/development/aligned_recovery": {
-      "skipped_protected": 10
-    },
-    "results/blocked-rearm/development/main": {
-      "skipped_protected": 10
-    },
-    "results/blocked-rearm/diagnosis": {
-      "skipped_protected": 19
-    },
-    "results/blocked-rearm/test": {
-      "skipped_protected": 4
-    },
-    "results/blocked-rearm/test/aligned_recovery": {
-      "skipped_protected": 10
-    },
-    "results/blocked-rearm/test/main": {
-      "skipped_protected": 10
-    },
-    "results/blocked-rearm/validation": {
-      "skipped_protected": 4
-    },
-    "results/blocked-rearm/validation/aligned_recovery": {
-      "skipped_protected": 10
-    },
-    "results/blocked-rearm/validation/main": {
-      "skipped_protected": 10
-    },
-    "results/budget-matched": {
-      "skipped_protected": 4
-    },
-    "results/budget-matched/checks": {
-      "skipped_protected": 16
-    },
-    "results/budget-matched/development": {
-      "skipped_protected": 4
-    },
-    "results/budget-matched/development/analysis": {
-      "skipped_protected": 2
-    },
-    "results/budget-matched/test": {
-      "skipped_protected": 4
-    },
-    "results/budget-matched/test/analysis": {
-      "skipped_protected": 10
-    },
-    "results/budget-matched/validation": {
-      "skipped_protected": 4
-    },
-    "results/budget-matched/validation/analysis": {
-      "skipped_protected": 2
-    },
-    "results/development": {
-      "skipped_protected": 9
-    },
-    "results/development-smoke": {
-      "skipped_protected": 9
-    },
-    "results/fault-event-observability": {
-      "skipped_protected": 5
-    },
-    "results/fault-event-observability/checks": {
-      "skipped_protected": 10
-    },
-    "results/fault-event-observability/development": {
-      "skipped_protected": 6
-    },
-    "results/fault-event-observability/development/analysis": {
-      "skipped_protected": 3
-    },
-    "results/fault-event-observability/interpretation": {
-      "skipped_protected": 6
-    },
-    "results/fault-event-observability/smoke": {
-      "skipped_protected": 6
-    },
-    "results/fault-event-observability/smoke/analysis": {
-      "skipped_protected": 1
-    },
-    "results/fault-event-observability/software-smoke-v2/smoke": {
-      "skipped_protected": 6
-    },
-    "results/fault-event-observability/software-smoke-v2/smoke/analysis": {
-      "skipped_protected": 2
-    },
-    "results/fault-event-observability/test": {
-      "skipped_protected": 6
-    },
-    "results/fault-event-observability/test/analysis": {
-      "skipped_protected": 10
-    },
-    "results/fault-event-observability/validation": {
-      "skipped_protected": 6
-    },
-    "results/fault-event-observability/validation/analysis": {
-      "skipped_protected": 3
-    },
-    "results/independent-reference-budget": {
-      "skipped_protected": 5
-    },
-    "results/independent-reference-budget/calibrate": {
-      "skipped_protected": 4
-    },
-    "results/independent-reference-budget/checks": {
-      "skipped_protected": 19
-    },
-    "results/independent-reference-budget/development": {
-      "skipped_protected": 5
-    },
-    "results/independent-reference-budget/development/analysis": {
-      "skipped_protected": 3
-    },
-    "results/independent-reference-budget/interpretation": {
-      "skipped_protected": 11
-    },
-    "results/independent-reference-budget/test": {
-      "skipped_protected": 5
-    },
-    "results/independent-reference-budget/test/analysis": {
-      "skipped_protected": 9
-    },
-    "results/independent-reference-budget/validation": {
-      "skipped_protected": 5
-    },
-    "results/independent-reference-budget/validation/analysis": {
-      "skipped_protected": 3
-    },
-    "results/offline-spatial-pilot": {
-      "skipped_protected": 4
-    },
-    "results/offline-spatial-pilot/audit": {
-      "skipped_protected": 6
-    },
-    "results/offline-spatial-pilot/checks": {
-      "skipped_protected": 6
-    },
-    "results/offline-spatial-pilot/development": {
-      "skipped_protected": 10
-    },
-    "results/offline-spatial-pilot/test": {
-      "skipped_protected": 10
-    },
-    "results/offline-spatial-pilot/validation": {
-      "skipped_protected": 10
-    },
-    "results/setup-failures": {
-      "skipped_protected": 2
-    },
-    "results/tais-core": {
-      "skipped_protected": 3
-    },
-    "results/tais-core/acceptance/csv-stream": {
-      "skipped_protected": 4
-    },
-    "results/tais-core/acceptance/drift-failure": {
-      "skipped_protected": 4
-    },
-    "results/tais-core/acceptance/fault-event": {
-      "skipped_protected": 5
-    },
-    "results/tais-core/acceptance/known-failure": {
-      "skipped_protected": 5
-    },
-    "results/tais-core/acceptance/link-failures": {
-      "skipped_protected": 4
-    },
-    "results/tais-core/acceptance/normal": {
-      "skipped_protected": 6
-    },
-    "results/tais-core/acceptance/spike": {
-      "skipped_protected": 4
-    },
-    "results/tais-core/acceptance/standalone-receiver": {
-      "skipped_protected": 3
-    },
-    "results/tais-core/acceptance/stdin-stream": {
-      "skipped_protected": 4
-    },
-    "results/tais-core/bm1-review": {
-      "skipped_protected": 5
-    },
-    "results/tais-core/checks": {
-      "skipped_protected": 8
-    },
-    "results/tais-core/csv-stream": {
-      "skipped_protected": 3
-    },
-    "results/tais-core/drift-failure": {
-      "skipped_protected": 3
-    },
-    "results/tais-core/fault-event": {
-      "skipped_protected": 3
-    },
-    "results/tais-core/known-failure": {
-      "skipped_protected": 3
-    },
-    "results/tais-core/link-failures": {
-      "skipped_protected": 3
-    },
-    "results/tais-core/normal": {
-      "skipped_protected": 3
-    },
-    "results/tais-core/normal-stream": {
-      "skipped_protected": 3
-    },
-    "results/tais-core/spike": {
-      "skipped_protected": 3
-    },
-    "results/tais-core/standalone-receiver": {
-      "skipped_protected": 2
-    },
-    "results/tais-core/stdin-stream": {
-      "skipped_protected": 3
-    },
-    "results/tais-joint": {
-      "skipped_protected": 9
-    },
-    "results/tais-joint/checks": {
-      "skipped_protected": 9
-    },
-    "results/tais-joint/core": {
-      "skipped_protected": 12
-    },
-    "results/tais-joint/core/clean_none-gateonly": {
-      "skipped_protected": 3
-    },
-    "results/tais-joint/core/clean_none-tais-jo": {
-      "skipped_protected": 3
-    },
-    "results/tais-joint/core/clean_short-gateonly": {
-      "skipped_protected": 3
-    },
-    "results/tais-joint/core/clean_short-tais-jo": {
-      "skipped_protected": 3
-    },
-    "results/tais-joint/core/drift_none_long-gateonly": {
-      "skipped_protected": 3
-    },
-    "results/tais-joint/core/drift_none_long-tais-jo": {
-      "skipped_protected": 3
-    },
-    "results/tais-joint/core/drift_same_long-gateonly": {
-      "skipped_protected": 3
-    },
-    "results/tais-joint/core/drift_same_long-tais-jo": {
-      "skipped_protected": 3
-    },
-    "results/tais-joint/core/missing_cross_long-gateonly": {
-      "skipped_protected": 3
-    },
-    "results/tais-joint/core/missing_cross_long-tais-jo": {
-      "skipped_protected": 3
-    },
-    "results/tais-joint/core/range_same_long-gateonly": {
-      "skipped_protected": 3
-    },
-    "results/tais-joint/core/range_same_long-tais-jo": {
-      "skipped_protected": 3
-    },
-    "results/tais-joint/development": {
-      "skipped_protected": 4
-    },
-    "results/tais-joint/development-attempt1": {
-      "skipped_protected": 2
-    },
-    "results/tais-joint/development/analysis": {
-      "skipped_protected": 1
-    },
-    "results/tais-joint/history": {
-      "skipped_protected": 2
-    },
-    "results/tais-joint/test": {
-      "skipped_protected": 4
-    },
-    "results/tais-joint/test/analysis": {
-      "skipped_protected": 6
-    },
-    "results/tais-joint/validation": {
-      "skipped_protected": 4
-    },
-    "results/tais-joint/validation/analysis": {
-      "skipped_protected": 3
-    },
-    "results/tais-paper": {
-      "skipped_protected": 9
-    },
-    "results/tais-paper-review": {
-      "skipped_protected": 16
-    },
-    "results/tais-paper/budget-bound-development": {
-      "skipped_protected": 2
-    },
-    "results/tais-paper/budget-development": {
-      "skipped_protected": 2
-    },
-    "results/tais-paper/checks": {
-      "skipped_protected": 25
-    },
-    "results/tais-paper/development": {
-      "skipped_protected": 4
-    },
-    "results/tais-paper/development/analysis": {
-      "skipped_protected": 16
-    },
-    "results/tais-paper/literature": {
-      "skipped_protected": 10
-    },
-    "results/tais-paper/smoke": {
-      "skipped_protected": 4
-    },
-    "results/tais-paper/test": {
-      "skipped_protected": 4
-    },
-    "results/tais-paper/test/analysis": {
-      "skipped_protected": 16
-    },
-    "results/tais-paper/threshold-development": {
-      "skipped_protected": 2
-    },
-    "results/tais-su": {
-      "skipped_protected": 6
-    },
-    "results/tais-su/checks": {
-      "skipped_protected": 8
-    },
-    "results/tais-su/core": {
-      "skipped_protected": 14
-    },
-    "results/tais-su/core/clean_none-balanced": {
-      "skipped_protected": 3
-    },
-    "results/tais-su/core/clean_none-high": {
-      "skipped_protected": 3
-    },
-    "results/tais-su/core/clean_short-balanced": {
-      "skipped_protected": 3
-    },
-    "results/tais-su/core/clean_short-high": {
-      "skipped_protected": 3
-    },
-    "results/tais-su/core/drift_none_long-balanced": {
-      "skipped_protected": 3
-    },
-    "results/tais-su/core/drift_none_long-high": {
-      "skipped_protected": 3
-    },
-    "results/tais-su/core/drift_same_long-balanced": {
-      "skipped_protected": 3
-    },
-    "results/tais-su/core/drift_same_long-high": {
-      "skipped_protected": 3
-    },
-    "results/tais-su/core/missing_cross_long-balanced": {
-      "skipped_protected": 3
-    },
-    "results/tais-su/core/missing_cross_long-gate-u": {
-      "skipped_protected": 3
-    },
-    "results/tais-su/core/missing_cross_long-high": {
-      "skipped_protected": 3
-    },
-    "results/tais-su/core/range_same_long-high": {
-      "skipped_protected": 3
-    },
-    "results/tais-su/core/stable_offset_same_long-balanced": {
-      "skipped_protected": 3
-    },
-    "results/tais-su/core/stable_offset_same_long-high": {
-      "skipped_protected": 3
-    },
-    "results/tais-su/development": {
-      "skipped_protected": 5
-    },
-    "results/tais-su/development/analysis": {
-      "skipped_protected": 1
-    },
-    "results/tais-su/engineering": {
-      "skipped_protected": 5
-    },
-    "results/tais-su/engineering/analysis": {
-      "skipped_protected": 1
-    },
-    "results/tais-su/test": {
-      "skipped_protected": 6
-    },
-    "results/tais-su/test/analysis": {
-      "skipped_protected": 6
-    },
-    "results/tais-su/validation": {
-      "skipped_protected": 5
-    },
-    "results/tais-su/validation/analysis": {
-      "skipped_protected": 6
-    },
-    "results/tais-su/validation/analysis-attempt1": {
-      "skipped_protected": 5
-    },
-    "results/tais-transfer": {
-      "skipped_protected": 4
-    },
-    "results/tais-transfer/checks": {
-      "skipped_protected": 13
-    },
-    "results/tais-transfer/figures": {
-      "skipped_protected": 10
-    },
-    "results/tais-transfer/smoke": {
-      "skipped_protected": 6
-    },
-    "results/tais-transfer/smoke/analysis": {
-      "skipped_protected": 8
-    },
-    "results/tais-transfer/test": {
-      "skipped_protected": 6
-    },
-    "results/tais-transfer/test/analysis": {
-      "skipped_protected": 8
-    },
-    "results/test": {
-      "skipped_protected": 9
-    },
-    "results/v0.2": {
-      "skipped_protected": 35
-    },
-    "results/v0.2/baseline": {
-      "skipped_protected": 10
-    },
-    "results/v0.2/cases": {
-      "skipped_protected": 6
-    },
-    "results/v0.2/development": {
-      "skipped_protected": 13
-    },
-    "results/v0.2/forensics": {
-      "skipped_protected": 32
-    },
-    "results/v0.2/test": {
-      "skipped_protected": 13
-    },
-    "results/v0.2/validation": {
-      "skipped_protected": 13
-    },
-    "results/validation": {
-      "skipped_protected": 9
-    },
-    "results/wire-payload": {
-      "skipped_protected": 1
-    },
-    "results/wire-payload-v2": {
-      "skipped_protected": 1
-    },
-    "results/wire-payload-v2/audit": {
-      "skipped_protected": 4
-    },
-    "results/wire-payload-v2/checks": {
-      "skipped_protected": 11
-    },
-    "results/wire-payload-v2/test": {
-      "skipped_protected": 14
-    },
-    "results/wire-payload/checks": {
-      "skipped_protected": 9
-    },
-    "results/wire-payload/test": {
-      "skipped_protected": 10
+      "restored_to_base": 5
     },
     "scripts": {
-      "skipped_protected": 1,
-      "modified": 38,
+      "restored_to_base": 28,
+      "retained_annotations": 10,
       "inspected_unchanged": 41
     },
     "src/tais": {
       "inspected_unchanged": 1,
-      "modified": 23
+      "restored_to_base": 23
     },
     "src/tais_rearm": {
-      "modified": 5
+      "restored_to_base": 5
     },
     "src/tais_spatial": {
       "inspected_unchanged": 1,
-      "modified": 6
+      "restored_to_base": 6
     },
     "src/tais_v02": {
-      "modified": 6
+      "restored_to_base": 6
     },
     "tests": {
       "inspected_unchanged": 10,
-      "modified": 8
-    },
-    "vendor": {
-      "skipped_protected": 2
+      "restored_to_base": 8
     }
   },
-  "inventory_sha256": "602a8e5f6e4077d4e1d91192f4f2f87825945dc678883f4353fa6d7367d77210",
-  "review_depth": "All own code: syntax/AST, module/interface and entry-point review. Core/state/protocol/metric contracts: detailed source and test review. This is not a formal proof of every research-tool equation.",
-  "english_audit": "All added/modified comments and docstrings contain English prose; no newly introduced CJK in these tokens.",
-  "semantic_scope": "AST with leading docstrings removed; executable Python tokens; C non-comment/preprocessed tokens. __doc__, help text and source hashes intentionally differ.",
-  "scratch_scope": "All maintenance outputs under results/scratch/code-comments-20261021, pytest temporary directories or ignored build caches. Ignored historical raw archives were not exhaustively rehashed.",
+  "restored_files": [
+    "conftest.py",
+    "examples/tais-core/historical_review.py",
+    "examples/tais-core/receiver.py",
+    "examples/tais-core/run.py",
+    "examples/tais-core/verify_delivery.py",
+    "examples/tais-core/view_run.py",
+    "scripts/analyze_budget_matched_results.py",
+    "scripts/analyze_paper.py",
+    "scripts/analyze_su.py",
+    "scripts/audit_budget_seeds.py",
+    "scripts/benchmark_joint_optimization.py",
+    "scripts/benchmark_paper.py",
+    "scripts/benchmark_su.py",
+    "scripts/benchmark_transfer.py",
+    "scripts/build_report.py",
+    "scripts/diagnose_joint_history.py",
+    "scripts/greenhouse.py",
+    "scripts/import_joint_csv.py",
+    "scripts/offline_spatial.py",
+    "scripts/paper_metrics.py",
+    "scripts/publish_blocked_branch.py",
+    "scripts/publish_exact_git_objects.py",
+    "scripts/publish_research_branch.py",
+    "scripts/rearm_run.py",
+    "scripts/rearm_verify.py",
+    "scripts/run_budget_matched_experiment.py",
+    "scripts/run_experiments.py",
+    "scripts/summarize_results.py",
+    "scripts/transfer_metrics.py",
+    "scripts/v02_run.py",
+    "scripts/v02_verify.py",
+    "scripts/verify_artifacts.py",
+    "scripts/verify_independent_reference_budget.py",
+    "scripts/verify_su.py",
+    "src/tais/budget_eval.py",
+    "src/tais/config.py",
+    "src/tais/core_stream.py",
+    "src/tais/joint_policy.py",
+    "src/tais/joint_sampling.py",
+    "src/tais/joint_upload.py",
+    "src/tais/metrics.py",
+    "src/tais/observability_eval.py",
+    "src/tais/observability_signals.py",
+    "src/tais/paper_baselines.py",
+    "src/tais/reference_metrics.py",
+    "src/tais/reference_policy.py",
+    "src/tais/reference_signals.py",
+    "src/tais/replay.py",
+    "src/tais/scheduler.py",
+    "src/tais/signals.py",
+    "src/tais/su_policy.py",
+    "src/tais/transfer_signals.py",
+    "src/tais/trust.py",
+    "src/tais/trust_bridge.c",
+    "src/tais/wire_codec.py",
+    "src/tais/wire_link.py",
+    "src/tais/wire_v2.py",
+    "src/tais_rearm/__init__.py",
+    "src/tais_rearm/config.py",
+    "src/tais_rearm/evidence.py",
+    "src/tais_rearm/replay.py",
+    "src/tais_rearm/scheduler.py",
+    "src/tais_spatial/analysis.py",
+    "src/tais_spatial/data.py",
+    "src/tais_spatial/interventions.py",
+    "src/tais_spatial/io.py",
+    "src/tais_spatial/methods.py",
+    "src/tais_spatial/pilot.py",
+    "src/tais_v02/__init__.py",
+    "src/tais_v02/config.py",
+    "src/tais_v02/evidence.py",
+    "src/tais_v02/forensics.py",
+    "src/tais_v02/replay.py",
+    "src/tais_v02/scheduler.py",
+    "tests/test_offline_spatial.py",
+    "tests/test_paper_baselines.py",
+    "tests/test_prototype.py",
+    "tests/test_reference_budget.py",
+    "tests/test_transfer_benchmark.py",
+    "tests/test_transfer_signals.py",
+    "tests/test_wire_codec.py",
+    "tests/test_wire_v2.py"
+  ],
+  "retained_files": [
+    "scripts/analyze_budget_sensitivity.py",
+    "scripts/build_paper.py",
+    "scripts/build_paper_report.py",
+    "scripts/build_transfer_paper.py",
+    "scripts/paper_review_artifacts.py",
+    "scripts/update_transfer_docs.py",
+    "scripts/verify_paper.py",
+    "scripts/verify_paper_references.py",
+    "scripts/verify_paper_revision.py",
+    "scripts/verify_transfer.py"
+  ],
+  "migrations": {
+    "conftest.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "examples/tais-core/historical_review.py": "docs/code-comments-audit/core-stream.md",
+    "examples/tais-core/receiver.py": "docs/code-comments-audit/core-stream.md",
+    "examples/tais-core/run.py": "docs/code-comments-audit/core-stream.md",
+    "examples/tais-core/verify_delivery.py": "docs/code-comments-audit/core-stream.md",
+    "examples/tais-core/view_run.py": "docs/code-comments-audit/core-stream.md",
+    "scripts/analyze_budget_matched_results.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/analyze_paper.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/analyze_su.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/audit_budget_seeds.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/benchmark_joint_optimization.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/benchmark_paper.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/benchmark_su.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/benchmark_transfer.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/build_report.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/diagnose_joint_history.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/greenhouse.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/import_joint_csv.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/offline_spatial.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/paper_metrics.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/publish_blocked_branch.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/publish_exact_git_objects.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/publish_research_branch.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/rearm_run.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/rearm_verify.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/run_budget_matched_experiment.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/run_experiments.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/summarize_results.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/transfer_metrics.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/v02_run.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/v02_verify.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/verify_artifacts.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/verify_independent_reference_budget.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "scripts/verify_su.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "src/tais/budget_eval.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/config.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/core_stream.py": "docs/code-comments-audit/core-stream.md",
+    "src/tais/joint_policy.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais/joint_sampling.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais/joint_upload.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais/metrics.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/observability_eval.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/observability_signals.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/paper_baselines.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/reference_metrics.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/reference_policy.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/reference_signals.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/replay.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/scheduler.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais/signals.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/su_policy.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais/transfer_signals.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais/trust.py": "docs/code-comments-audit/health-diagnostics.md",
+    "src/tais/trust_bridge.c": "docs/code-comments-audit/health-diagnostics.md",
+    "src/tais/wire_codec.py": "docs/code-comments-audit/wire-protocol.md",
+    "src/tais/wire_link.py": "docs/code-comments-audit/wire-protocol.md",
+    "src/tais/wire_v2.py": "docs/code-comments-audit/wire-protocol.md",
+    "src/tais_rearm/__init__.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais_rearm/config.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais_rearm/evidence.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais_rearm/replay.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais_rearm/scheduler.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais_spatial/analysis.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_spatial/data.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_spatial/interventions.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_spatial/io.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_spatial/methods.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_spatial/pilot.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_v02/__init__.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_v02/config.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_v02/evidence.py": "docs/code-comments-audit/sampling-policies.md",
+    "src/tais_v02/forensics.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_v02/replay.py": "docs/code-comments-audit/experiment-evaluation.md",
+    "src/tais_v02/scheduler.py": "docs/code-comments-audit/sampling-policies.md",
+    "tests/test_offline_spatial.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "tests/test_paper_baselines.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "tests/test_prototype.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "tests/test_reference_budget.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "tests/test_transfer_benchmark.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "tests/test_transfer_signals.py": "docs/code-comments-audit/frozen-source-contracts.md",
+    "tests/test_wire_codec.py": "docs/code-comments-audit/wire-protocol.md",
+    "tests/test_wire_v2.py": "docs/code-comments-audit/wire-protocol.md"
+  },
+  "active_freeze_expectations": {
+    "results/v0.2/legacy_source_hashes.json": {
+      "affected_annotated_files": 7,
+      "all_current_expected_bytes_match": true
+    },
+    "results/tais-paper/selection.json#sources": {
+      "affected_annotated_files": 27,
+      "all_current_expected_bytes_match": true
+    },
+    "results/tais-paper/historical-protection.json#files": {
+      "affected_annotated_files": 72,
+      "all_current_expected_bytes_match": true
+    },
+    "results/tais-transfer/selection.json#sources": {
+      "affected_annotated_files": 5,
+      "all_current_expected_bytes_match": true
+    },
+    "results/tais-transfer/selection.json#inherited_sources": {
+      "affected_annotated_files": 27,
+      "all_current_expected_bytes_match": true
+    },
+    "results/tais-paper-review/protection.json#protected_files": {
+      "affected_annotated_files": 40,
+      "all_current_expected_bytes_match": true
+    }
+  },
+  "protected_unchanged_regular_files": 1345,
+  "submodules_unchanged": true,
+  "inventory_sha256": "9e25d5af345689a9319dd70e9e2eaf4773faa8db4ead9104f1c458ee97b28637",
+  "freeze_diagnosis_sha256": "ef2d933c0e49229b53bc51b22e03c8ed04d68b5855ce302ef7e6756056b4c32e",
+  "new_documents": [
+    "docs/code-comments-audit/core-stream.md",
+    "docs/code-comments-audit/experiment-evaluation.md",
+    "docs/code-comments-audit/frozen-source-contracts.md",
+    "docs/code-comments-audit/health-diagnostics.md",
+    "docs/code-comments-audit/sampling-policies.md",
+    "docs/code-comments-audit/wire-protocol.md"
+  ],
+  "scope": "Original main entries only in inventory; new audit/migration files listed separately to avoid self-referential inventory hashes.",
+  "historical_failures": {
+    "commit": "89c7c404a4b7132bfae84239ecdd74b3a37c7b6b",
+    "pytest_passed": 890,
+    "pytest_failed": 2,
+    "pytest_xfailed": 2,
+    "all_eight_workflow_runs_failed": true,
+    "diagnosis": "Two explicit hash tests; G1 sources; G1 historical files; G2 inherited/new-source lock and tree paths; revision protected files and tree paths. Restored to base, no guard changes."
+  },
   "validation": {
-    "python_syntax": {
+    "syntax": {
       "status": "PASS",
-      "files": 144
+      "python_files": 144
     },
-    "python_ast_and_executable_tokens": {
+    "strict_c11": {
       "status": "PASS",
-      "modified_files": 91
-    },
-    "c_noncomment_and_preprocessed_tokens": {
-      "status": "PASS",
-      "preprocessing_whitespace_ignored": true
-    },
-    "english_comments_and_docstrings": {
-      "status": "PASS",
-      "scope": "new/modified comment and docstring tokens; CJK exclusion plus prose review"
-    },
-    "protected_files_and_submodules": {
-      "status": "PASS",
-      "unchanged_regular_files": 1263,
-      "unchanged_gitlinks": 2
-    },
-    "c_tests": {
-      "status": "PASS",
-      "tests": 21,
+      "flags": [
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror"
+      ],
+      "native_tests": 21,
       "checks": 404
     },
-    "pytest_final": {
-      "status": "FAIL_HISTORICAL_BYTE_IDENTITY",
-      "passed": 890,
-      "failed": 2,
+    "targeted_tests": {
+      "status": "PASS",
+      "passed": 22,
+      "failed": 0,
+      "command": "pytest tests/test_transfer_benchmark.py::test_old_freeze_is_unchanged tests/test_v02.py::test_disabled_exact_legacy_and_frozen_sources tests/test_prototype.py::test_pinned_sources tests/test_paper_baselines.py -q"
+    },
+    "full_pytest": {
+      "status": "PASS",
+      "passed": 892,
+      "failed": 0,
       "xfailed": 2,
-      "seconds": 276.26,
-      "failures": [
-        "tests/test_transfer_benchmark.py::test_old_freeze_is_unchanged",
-        "tests/test_v02.py::test_disabled_exact_legacy_and_frozen_sources"
-      ],
-      "log_sha256": "5e68ca4cd61875cdd71e2f2bffb2c0ea5fa4bc454bf0495edc0b176feee6af13"
+      "seconds": 394.55,
+      "new_failures": [],
+      "log_sha256": "2b21876aeb13867182670238ee85128b1378ff21304584ec47446fa46b205451"
     },
-    "pytest_initial": {
-      "passed": 889,
-      "failed": 3,
-      "xfailed": 2,
-      "note": "One extra FO-1 source-fingerprint failure occurred during concurrent annotation writes; stable final run passes that test."
-    },
-    "behavior_comparison": {
-      "status": "PASS",
-      "runs": 88,
-      "input_traces": 8,
-      "digests": 96,
-      "before": {
-        "G1:clean_none:source": "c4372163380b5a0bf6756795aa8bde5d84582ae4987aad4cc1b4b8eebe858072",
-        "G1:clean_none:GateOnly": "691111fbb30c5518a3dd287d3f84e3bee65a71613e1a91e3b65a93b5f04282c3",
-        "G1:clean_none:GateOnly+U": "a03401951959f819626ce75cac8f0f26283a396237d1c1f1ad250324859aa875",
-        "G1:clean_none:JO-S": "e0e9eba5f670c4a48d1a16bc180c00adbc65372fb9004ba491e3510f0195c1ad",
-        "G1:clean_none:JO-SU-20": "a7d48c3c1a22a988635b58b0eb82cad63b8315a13df3e64450273dd5a20be8f4",
-        "G1:clean_none:JO-SU-30": "bc2bf7c50829a4dda2343bdf102602cc27234e7dfa4c08efc43274a6084d9354",
-        "G1:clean_none:JO-SU-40": "5eb0760a6f0bd661f5060e7d87269fde3d4873329d9bb327195c282e71d575fe",
-        "G1:clean_none:AdaptiveSense+TrustLog": "690cb3b6ccfe75f8495c00794f490f059ab0009a7143aa5ef87883d9138d0de6",
-        "G1:clean_none:Fixed-20": "8647d6238b78c66043197842c7b323ee4b7746a7c05a2a2dffe3ab34f2b04e12",
-        "G1:clean_none:Delta": "30a6c9a1b50302365e88cfc539a207f410fcd4f5565e5d65be5b0a1ca62fa761",
-        "G1:clean_none:Variance": "3962587a04a811cc6744d5641b7d2e38646a249fa4caaedc78e85693e7c73b59",
-        "G1:clean_none:Rao-inspired": "a861394c8d8665b56c53801c42e87e283cb9bc551b25c1ce539c573ca619659a",
-        "G1:clean_short:source": "630052c132bfe07b3e9388d79f5c7de1f18fed0357ad42005365c5e4297bbfd7",
-        "G1:clean_short:GateOnly": "55c704528caa71d65cf0107f9a7e59c519353ab4405df8b6365b53d14eb47d1b",
-        "G1:clean_short:GateOnly+U": "7850eaac07d44265202078c089a673bc12e7b43c4aef3eda43efbba629d92d51",
-        "G1:clean_short:JO-S": "35dd0b3d91ea775971a61cd37a874fa8914fe41c6a00ada6b0bc5dda2b3fd4d9",
-        "G1:clean_short:JO-SU-20": "09c7360b246e201823b36978d71829f6e4446fefdb5a4e980e9c7bee50248858",
-        "G1:clean_short:JO-SU-30": "e0711671fee1bde4e269618fde440d8dc272977b1622dfab9c4b906879a15369",
-        "G1:clean_short:JO-SU-40": "d0e9a017c8fe0602cf6a3ac425a6955f0e11fd799891018911cb8e7f7c087851",
-        "G1:clean_short:AdaptiveSense+TrustLog": "20245ec67b9e73d6bda4dcadd150cd99f0af8d99e81c3b01b1aba27cd12dd56d",
-        "G1:clean_short:Fixed-20": "e67c366be5c3786755f3b9d42a5b4e6776f98ed8eea466554605d8be593e79f9",
-        "G1:clean_short:Delta": "4eac368cb83ac7cf35375f178143058394ef4bc7364bb8ea47ea67caf78be731",
-        "G1:clean_short:Variance": "57d282abffe16616378407ca0dd5054adf0a760bcc21017e039c90163d1fbf80",
-        "G1:clean_short:Rao-inspired": "8035c9f25320763cd2014a6d42a410751d13ce1b4db4e6bc26ca5b865aa76985",
-        "G1:drift_same_long:source": "8a021731f61e073c2b66c3113e309e0da83937f25830e0d95aa3a5e83083120a",
-        "G1:drift_same_long:GateOnly": "2d5deba67b676f12cbd39a70e73314e19988af29f2098700d5120641a90e2a9c",
-        "G1:drift_same_long:GateOnly+U": "a2b74cdf2c43150c92de440db2f7898e26b12543a9d4a0f0912f9205b73ea6d8",
-        "G1:drift_same_long:JO-S": "5ce05d697b72872e3473158ea76385c6f34af7086ee7fefc8178f57e609dcaab",
-        "G1:drift_same_long:JO-SU-20": "c82cab59feadc8600fc8d0aefdbd15d7fc35d5932df3c97e648eff5f00e0acf0",
-        "G1:drift_same_long:JO-SU-30": "5ab03373240ec07469a0c264aeb267784308c76fa88a4b284fda7c1c19c3feff",
-        "G1:drift_same_long:JO-SU-40": "d5cea74918cfdb530b825cd2e55767c09e85dd39eadd803c37ec2689de5954b7",
-        "G1:drift_same_long:AdaptiveSense+TrustLog": "3eaefa7c76284da3343a17a8c9ce6efd9be6664fe31edade410498bc8fa8b8c8",
-        "G1:drift_same_long:Fixed-20": "1c1cc6368a58f376160966d8f0d9dd59ad3a7caba586fdb96f703be11a766a41",
-        "G1:drift_same_long:Delta": "9834bc8be573edbb94014da577706048f97e74f9ec3fd8a5aa027bbfe6c2e984",
-        "G1:drift_same_long:Variance": "1c6e943a3a90ef0f75da634bbb89636a02b9069f06640d617572d463ee14c484",
-        "G1:drift_same_long:Rao-inspired": "536f256e267bc45ac02f304676cb2cc0ff5eefc70360836ab6d67c101f87d532",
-        "G1:missing_cross_long:source": "f66a8cd1aa864c67b9e8a9860116c7892119bfb4aead4e2f448ea7b3b98437d8",
-        "G1:missing_cross_long:GateOnly": "970a97a075ae97287a6cbc2f82adafafcde6c5c998b23586d3857d87586eb8a7",
-        "G1:missing_cross_long:GateOnly+U": "900a18a80951b2c02cfa59c1bfab141fa49221d04832feda5d4b1d9c023c743d",
-        "G1:missing_cross_long:JO-S": "968ea29a6efbf13937a8e2b2b749ecf748a4bebdfcac58b8fef96852b1eb81d9",
-        "G1:missing_cross_long:JO-SU-20": "a08b98e44a0ae515d781e44c6f28a7f6fc482249d3b6dd1c95d6892483ba17b0",
-        "G1:missing_cross_long:JO-SU-30": "f2f2f1aa7b26fa938e1482773678889320075bf12b6c2e925597f4a1c64c7cd9",
-        "G1:missing_cross_long:JO-SU-40": "a70b730da337ca832147154098ded7c62af04ea32a0e071a89cda10ba4e696e2",
-        "G1:missing_cross_long:AdaptiveSense+TrustLog": "65f97e54db679765ea87294d8facccfe78667530e253eac832a168650c3bf394",
-        "G1:missing_cross_long:Fixed-20": "5c62d7ac590b36530828900b1dc3592d4c0eb9cffd5c67817b85ecb5260b13c1",
-        "G1:missing_cross_long:Delta": "66f2c1814625890075009770373f23421600bab9f21ca82226ea5578571bf9d2",
-        "G1:missing_cross_long:Variance": "45b8416ab9713d5608a79813cf9197dec91af9564ca1326738489a3c5cefcb1b",
-        "G1:missing_cross_long:Rao-inspired": "37f0f30264fadceceb91b72d711f96ee2118cd12df34755c3e9d9eb7d56b0f3e",
-        "G2:clean_none:source": "3b7cb3ec6b94254847f701ada9af17bd306cff76f0d21dd32f569317a4d4530f",
-        "G2:clean_none:GateOnly": "9f04a099727b2837a7224cb694dde533636f9886cdb57236a1716216351b4f92",
-        "G2:clean_none:GateOnly+U": "3be066f7a1453a29987cc6e21fa7290af99d3b1f960aae719e5c8a673df4fe1e",
-        "G2:clean_none:JO-S": "ef3ccf2522f4dcaabbcca57cbf4e5ff0a6a60eb11cd10ad4cbdd5106a5887ab6",
-        "G2:clean_none:JO-SU-20": "dcb7a010bd03e0959b3f4bd84b4434ab7686b064ada869c400adc4e254641cba",
-        "G2:clean_none:JO-SU-30": "594ee47ebd206b14fdc48383cd795384cbebd30f9976b081777e68621785b338",
-        "G2:clean_none:JO-SU-40": "877cb469f3e63c2eec00466747cb5d8d4e21f7f60c69b340cc50c32b3524afa1",
-        "G2:clean_none:AdaptiveSense+TrustLog": "12e52c19b65b01b9ce18ef01b9c4d40051ccc955523f5a2a816d037066a9c33d",
-        "G2:clean_none:Fixed-20": "f0e5b824a2cab34ceb8a6dd01a0f7edb6fd0d4229b289588ac4f814c5843b3b4",
-        "G2:clean_none:Delta": "50342416c21882062411c1dc9b3104ff85bea770a2d8dd57ff9d04b83f76bab0",
-        "G2:clean_none:Variance": "f284dd745001e35a40c850f5774573c472902ebf651e5cbda400850d93f87e5f",
-        "G2:clean_none:Rao-inspired": "db8b392b44726e873f325bdbe4d890ed0b2fd1213c6480a041059c4deca4af64",
-        "G2:clean_both:source": "4daa651abbb155ac2ebf6b0617e76d59e9389603f2f387378c2578c1cff96754",
-        "G2:clean_both:GateOnly": "e13c7a482432ea88fa20023b737e7cf9349bba9ced8548b64e0bc7e5fddcb7d6",
-        "G2:clean_both:GateOnly+U": "37bb55926fa9cfe7ff893c2deb5209dbc25e13fcbd3734d83f5f4245de1a3908",
-        "G2:clean_both:JO-S": "d4831f4bea4d9f0d7ecd6defa34f9a22da7d58df52be63416733492dced4186e",
-        "G2:clean_both:JO-SU-20": "8d37ec820206c409d7451cc5a5fbc7bc28d7f7486e1c7dafd596d5b1c711ede3",
-        "G2:clean_both:JO-SU-30": "56ba5bf723f5ce05307ea73bcafe87ef29c42fab177641c4e8b1c6cb8ee33710",
-        "G2:clean_both:JO-SU-40": "605338c11979f47b7d9326f5c068049d4d268810e375f9cc13ff8dcc2d8ef173",
-        "G2:clean_both:AdaptiveSense+TrustLog": "1ae76a3632ab74f454ce1228be8f072aff5efeb61a2af135956fff936861543d",
-        "G2:clean_both:Fixed-20": "1aa8b4e600b31456951f9202dd07b1a2ed2805be68b40cf29473c35df7061dcf",
-        "G2:clean_both:Delta": "6cf228d25dc2751062013f28e83e9af3f4e0767ed2e1d08a8617514ad22d90be",
-        "G2:clean_both:Variance": "61fc9f59e0622e16505666aacfa694727d296dd5a779650c3559d72632f244b4",
-        "G2:clean_both:Rao-inspired": "12bee8eceb5ce15d67f7d57f1ad2e4a06f1ce7d714c15df92dbf7fe66dfd115b",
-        "G2:drift_humidity_cross:source": "fd27c1547c5660f7a3b3cbf722bdcd82502ac03d63d002891ea013447c0d476d",
-        "G2:drift_humidity_cross:GateOnly": "e691ff14149163452914f87b7ea7d38a65d0de086c6b89b0cb6a7584875f0433",
-        "G2:drift_humidity_cross:GateOnly+U": "e370dfae3932bddebea3fdad68e4cf7c77e11e92992c09253d4b640d39a080c3",
-        "G2:drift_humidity_cross:JO-S": "54ac1c06bd89997f07f0aa439596391e76d782507b8cd8e8a3b8161650b811e2",
-        "G2:drift_humidity_cross:JO-SU-20": "310380ec32d004e7a75b933a843f30d7a76852c27d32f0055d130597b9fc005e",
-        "G2:drift_humidity_cross:JO-SU-30": "384b0a7599c3f819cbc037e0cbc865ca877db253c72296712e0dc3d704cb84ce",
-        "G2:drift_humidity_cross:JO-SU-40": "d685dc99fb8718ae85dfe678ebb49a1636c4a0ed565d7041be9602f375b97dc4",
-        "G2:drift_humidity_cross:AdaptiveSense+TrustLog": "3fc0ecaa0a9ccd60369dccda1a322f8d964f46b7644a896a5761d20cdc4de625",
-        "G2:drift_humidity_cross:Fixed-20": "7a14fca417ecd346ac2da62b77680fb96b1b7cd611f8db6135804e6bfb56049f",
-        "G2:drift_humidity_cross:Delta": "e4f143fdc97b8397793a400feb0ab7ddfd6fe90e489522d425b924b175cc736e",
-        "G2:drift_humidity_cross:Variance": "9ddc64b89524ff9d6d695905c722d294ecde852e11cac95509dc5c82df1aee9d",
-        "G2:drift_humidity_cross:Rao-inspired": "b821f88a9cb93a8113ccaff5615e222151d08518e51352c92f6a61fe16951e9c",
-        "G2:range_temperature_same:source": "82b540e83103654f012a4520a4b89154fbdf58e91844586bd0477940871fb28e",
-        "G2:range_temperature_same:GateOnly": "2098edc226368cbbe531d46fe5dc004c7767e63ff2935ee5c7e5000a25081896",
-        "G2:range_temperature_same:GateOnly+U": "e6ae358e84405517ac5303513eff1beb02bf34fee1b0560a9b033fa084ca4ede",
-        "G2:range_temperature_same:JO-S": "ab1c118fbe4a4648bdf4da987122d4819d3ff783e9dbe4d8af883a0a1fd4bd43",
-        "G2:range_temperature_same:JO-SU-20": "e47a683151f63a8494fdf1ff51b381caf543b38a5ca81f5edc639f42cea24d14",
-        "G2:range_temperature_same:JO-SU-30": "3169ad805ae19c709816655d810a15066263acfc2963199df23390021947acdb",
-        "G2:range_temperature_same:JO-SU-40": "dfb8ae672cb28ffce38d6540774619478e870cca923f09b5791d31c2924bfac4",
-        "G2:range_temperature_same:AdaptiveSense+TrustLog": "8333c69e14f0fa0dc62b0f8d7de57a386d54955a7f9e901b7bf87d8b9f9f44a7",
-        "G2:range_temperature_same:Fixed-20": "def4ddc91ec676592329e75afc2c3ed22f583b3f39fa1eeef81b2235b257bc47",
-        "G2:range_temperature_same:Delta": "735ef28ffff19d628b9543c1cf25340cc7b8e69681d6cd798b66a973a506d8fd",
-        "G2:range_temperature_same:Variance": "c5d91ad236111a796f4cd6dfe3c44ead07e3cc790f47b6e3e3d31d56075023d7",
-        "G2:range_temperature_same:Rao-inspired": "3672ce71169b451e59155fcba54506d358210e5031ffc48de545b9e5406e9035"
+    "read_only_verifiers": {
+      "verify_paper": {
+        "status": "PASS",
+        "phase": "test",
+        "runs": 73800,
+        "seed_count": 20,
+        "scenarios": 45,
+        "view_methods": {
+          "common": 29,
+          "native": 53
+        },
+        "historical_changes": [
+          "README.md",
+          "results/README.md"
+        ],
+        "archive_hashes_checked": 0,
+        "source_freeze_checked": true,
+        "budget_points_within_5pct": 10,
+        "budget_points": 12,
+        "metrics_sha256": "ab80a348898587f32e0d22cd91be4668fc5a903f058fdbd2e7aa1b758ff8ed6b"
       },
-      "after_equals_before": true
-    },
-    "core_cli_smoke": {
-      "status": "PASS",
-      "modes": [
-        "gateonly",
-        "gateonly-u",
-        "JO-S",
-        "JO-HS",
-        "JO-Full",
-        "tais-su high",
-        "tais-su balanced"
-      ],
-      "results": [
-        {
-          "name": "gate",
-          "status": "COMPLETE",
-          "sender": {
-            "source_rows": 1800,
-            "samples": 32,
-            "uploads": 30,
-            "binary_bytes": 1077
-          },
-          "verification": {
-            "frozen_gateonly_records_and_reports_identical": true,
-            "selected_policy_records_and_reports_identical": true,
-            "tx_frames": 30,
-            "actual_binary_bytes_recomputed": 1077,
-            "received_valid_frames_exact": 30,
-            "all_valid_received_envelopes_match_sender": true
-          }
-        },
-        {
-          "name": "gate-u",
-          "status": "COMPLETE",
-          "sender": {
-            "source_rows": 1800,
-            "samples": 32,
-            "uploads": 15,
-            "binary_bytes": 538
-          },
-          "verification": {
-            "frozen_gateonly_records_and_reports_identical": null,
-            "selected_policy_records_and_reports_identical": true,
-            "tx_frames": 15,
-            "actual_binary_bytes_recomputed": 538,
-            "received_valid_frames_exact": 15,
-            "all_valid_received_envelopes_match_sender": true
-          }
-        },
-        {
-          "name": "jo-s",
-          "status": "COMPLETE",
-          "sender": {
-            "source_rows": 1800,
-            "samples": 105,
-            "uploads": 40,
-            "binary_bytes": 1437
-          },
-          "verification": {
-            "frozen_gateonly_records_and_reports_identical": null,
-            "selected_policy_records_and_reports_identical": true,
-            "tx_frames": 40,
-            "actual_binary_bytes_recomputed": 1437,
-            "received_valid_frames_exact": 40,
-            "all_valid_received_envelopes_match_sender": true
-          }
-        },
-        {
-          "name": "jo-hs",
-          "status": "COMPLETE",
-          "sender": {
-            "source_rows": 1800,
-            "samples": 105,
-            "uploads": 44,
-            "binary_bytes": 1581
-          },
-          "verification": {
-            "frozen_gateonly_records_and_reports_identical": null,
-            "selected_policy_records_and_reports_identical": true,
-            "tx_frames": 44,
-            "actual_binary_bytes_recomputed": 1581,
-            "received_valid_frames_exact": 44,
-            "all_valid_received_envelopes_match_sender": true
-          }
-        },
-        {
-          "name": "jo-full",
-          "status": "COMPLETE",
-          "sender": {
-            "source_rows": 1800,
-            "samples": 105,
-            "uploads": 23,
-            "binary_bytes": 826
-          },
-          "verification": {
-            "frozen_gateonly_records_and_reports_identical": null,
-            "selected_policy_records_and_reports_identical": true,
-            "tx_frames": 23,
-            "actual_binary_bytes_recomputed": 826,
-            "received_valid_frames_exact": 23,
-            "all_valid_received_envelopes_match_sender": true
-          }
-        },
-        {
-          "name": "su20",
-          "status": "COMPLETE",
-          "sender": {
-            "source_rows": 1800,
-            "samples": 105,
-            "uploads": 21,
-            "binary_bytes": 754
-          },
-          "verification": {
-            "frozen_gateonly_records_and_reports_identical": null,
-            "selected_policy_records_and_reports_identical": true,
-            "tx_frames": 21,
-            "actual_binary_bytes_recomputed": 754,
-            "received_valid_frames_exact": 21,
-            "all_valid_received_envelopes_match_sender": true
-          }
-        },
-        {
-          "name": "su-balanced",
-          "status": "COMPLETE",
-          "sender": {
-            "source_rows": 1800,
-            "samples": 83,
-            "uploads": 22,
-            "binary_bytes": 791
-          },
-          "verification": {
-            "frozen_gateonly_records_and_reports_identical": null,
-            "selected_policy_records_and_reports_identical": true,
-            "tx_frames": 22,
-            "actual_binary_bytes_recomputed": 791,
-            "received_valid_frames_exact": 22,
-            "all_valid_received_envelopes_match_sender": true
-          }
-        }
-      ]
-    },
-    "paper_cell_check": {
-      "status": "PASS",
-      "references": 8,
-      "audited_cells": 909,
-      "source_fingerprints": 5
-    },
-    "historical_source_verifiers": [
-      {
-        "check": "paper",
-        "returncode": 1,
-        "tail": [
-          "                                                                                                                                                                                                                                                 ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^",
-          "  File \"/Users/mac/Documents/TAIS/scripts/verify_paper.py\", line 22, in verify",
-          "    current=fingerprints();assert all(current.get(p)==h for p,h in lock['sources'].items())",
-          "                                  ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
-          "AssertionError"
-        ]
+      "verify_transfer": {
+        "status": "PASS",
+        "runs": 12880,
+        "event_rows": 26880,
+        "fault_rows": 14868,
+        "archive_digests": 0,
+        "frames_roundtripped": 0,
+        "seed_clusters": 20,
+        "frozen_sources_unchanged": true
       },
-      {
-        "check": "transfer",
-        "returncode": 1,
-        "tail": [
-          "           ~~~~~~~~~^^",
-          "  File \"/Users/mac/Documents/TAIS/scripts/benchmark_transfer.py\", line 39, in inherited",
-          "    files=lock['sources'];assert all(sha(ROOT/p)==h for p,h in files.items())",
-          "                                 ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
-          "AssertionError"
-        ]
+      "verify_paper_revision": {
+        "status": "PASS",
+        "protected_source_config_result_files": 202,
+        "budget_pairs": 60,
+        "audited_review_cells": 506,
+        "abstract_words": 187,
+        "referenced_figures": 3,
+        "tikz_architecture": true,
+        "tex_input_files": 23,
+        "labels": 19,
+        "references": 7,
+        "new_simulation_campaign": false
       },
-      {
-        "check": "revision",
-        "returncode": 1,
-        "tail": [
-          "                            ~~~~~~^^",
-          "  File \"/Users/mac/Documents/TAIS/scripts/verify_paper_revision.py\", line 17, in verify",
-          "    for p,h in protection['protected_files'].items():assert sha(ROOT/p)==h,p",
-          "                                                            ^^^^^^^^^^^^^^",
-          "AssertionError: src/tais/budget_eval.py"
-        ]
-      },
-      {
-        "check": "paper_cells",
-        "returncode": 0,
-        "tail": [
-          "  \"cited_references\": 8,",
-          "  \"summary_cells_checked\": 909,",
-          "  \"source_fingerprints\": 5,",
-          "  \"pdf_present\": true",
-          "}"
-        ]
+      "check_paper_artifacts": {
+        "status": "PASS",
+        "cited_references": 8,
+        "summary_cells_checked": 909,
+        "source_fingerprints": 5,
+        "pdf_present": true
       }
-    ],
+    },
+    "source_identity": {
+      "status": "PASS",
+      "restored_equal_base": 82,
+      "retained_equal_original_pr": 10,
+      "all_own_code_equal_base_except_retained": true
+    },
+    "behavior_preservation": {
+      "status": "PASS",
+      "original_annotated_diffs_traced": 92,
+      "retained_python_ast_and_tokens_equal_base": 10,
+      "no_runtime_edits": true,
+      "new_effectiveness_experiments": false
+    },
+    "english_code_comments": {
+      "status": "PASS",
+      "scope": "retained additions; no new source annotations added during repair"
+    },
+    "protected_evidence": {
+      "status": "PASS",
+      "unchanged_regular_base_files": 1345,
+      "unchanged_submodules": 2,
+      "configs_results_papers_vendor_readme_workflows_diff_empty": true
+    },
     "markdown": {
       "status": "PASS",
-      "explicit_documents": 1,
-      "rules": "markdownlint 0.41.1; MD013 disabled",
-      "local_links": 2,
-      "inventory_entries_checked": 1357
+      "files": 7,
+      "local_links": 123,
+      "migrated_sources": 82,
+      "rules": "MD013 disabled; MD024 siblings_only; other defaults"
     },
     "diff_check": {
       "status": "PASS"
     },
-    "github_ci": {
-      "status": "NOT_RUN_BEFORE_COMMIT",
-      "note": "Final push/PR runs are linked and diagnosed in the PR. Unchanged workflows enforce historical byte freezes and are expected to fail on source annotations."
+    "remote_ci": {
+      "status": "NOT_RUN_BEFORE_THIS_COMMIT",
+      "authoritative_latest_head_checks": "https://github.com/Sver0411/TAIS/pull/2/checks",
+      "publication_policy": "Push only after all necessary local checks pass; inspect all four workflows on latest head; mark Ready only if all pass. Do not merge or modify main."
     },
     "not_run": [
-      "full G1/G2 research campaigns",
-      "parameter selection",
-      "historical plot regeneration",
-      "full ignored raw archive rehash",
-      "paper recompilation",
-      "field/radio/current measurement"
+      "full G1/G2 campaigns",
+      "parameter search",
+      "historical plot generation",
+      "paper compilation",
+      "exhaustive ignored raw archive verification",
+      "historical verification writers and remote publishers"
     ]
-  }
+  },
+  "limitations": [
+    "Old manifests can target distinct historical snapshots; their identities are preserved rather than replaced by current main.",
+    "No complete G1/G2 campaigns, tuning, historical plot generation, paper compilation, or exhaustive ignored archive rehash.",
+    "All publication checks here are read-only and use stored evidence; no natural field, radio or power validation."
+  ],
+  "new_audit_files": [
+    "docs/CODE_COMMENTS_AUDIT.md",
+    "docs/code-comments-audit/inventory.csv",
+    "docs/code-comments-audit/checks.json",
+    "docs/code-comments-audit/freeze-diagnosis.csv",
+    "docs/code-comments-audit/core-stream.md",
+    "docs/code-comments-audit/experiment-evaluation.md",
+    "docs/code-comments-audit/frozen-source-contracts.md",
+    "docs/code-comments-audit/health-diagnostics.md",
+    "docs/code-comments-audit/sampling-policies.md",
+    "docs/code-comments-audit/wire-protocol.md"
+  ]
 }

@@ -66,7 +66,6 @@ def test_presence_add_remove_and_no_internal_or_mutable_history():
 
 
 def stream(period=8,count=40):
-    """Construct emitted envelopes and frames for loss/restart tests, without a live link."""
     s=Sender(period=period);es=[env(i) for i in range(count)]
     for i,e in enumerate(es):e['health']['temperature']['score']=100-i
     return es,[s.encode(e) for e in es]

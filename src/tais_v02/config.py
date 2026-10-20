@@ -6,10 +6,6 @@ from tais import ROOT
 from tais.config import load as legacy_load
 
 def load():
-    """Load the v0.2 overlay, validate time/sample bounds and reject overlapping seed sets.
-
-    Return (merged runtime configuration, experiment specification). No file is
-    rewritten; this interface does not select parameters from experiment outcomes."""
     spec=yaml.safe_load((ROOT/'configs/v02.yaml').read_text())
     cfg=legacy_load(ROOT/spec['legacy_config'])
     cfg['v02']=spec['v02']

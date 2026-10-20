@@ -11,11 +11,6 @@ from .joint_upload import Upload
 from .core_stream import CoreSender,render
 
 class SUPolicy:
-    """Wrap frozen JO-S or GateOnly sampling with the common Upload module.
-
-    JO-S caps 20/30/40 are maximum idle intervals in seconds, not fixed
-    periods. The GateOnly variant keeps its original sampling schedule.
-    H remains disabled and U never feeds back into the underlying scheduler."""
     def __init__(self,cfg,cap=20,sampling='jo-s'):
         if sampling not in ('jo-s','gateonly') or cap not in (20,30,40):
             raise ValueError('SU supports frozen sampling and caps20/30/40 only')
@@ -30,7 +25,6 @@ class SUPolicy:
         self.last_diagnostics={}
 
     def update(self,t,values):
-        """Replace only the final upload decision; retain original reasons for audit."""
         d=self.base.update(t,values)
         self.last_diagnostics=deepcopy(getattr(self.base,'last_diagnostics',{}))
         original=dict(upload=d.upload,reasons=list(d.reasons))
@@ -40,7 +34,6 @@ class SUPolicy:
         return d
 
 class SUSender(CoreSender):
-    """CoreSender adapter exposing SU bookkeeping alongside unchanged v1 frames."""
     def __init__(self,cfg,cap=20,layout_id=1,sampling='jo-s'):
         super().__init__(cfg,layout_id)
         self.close()

@@ -17,10 +17,6 @@ def restore(x):
  x['reports']=[Event(**e) for e in x['reports']];x['detections']=[Event(**e) for e in x['detections']];return x
 
 def main():
- """Check exact frozen sources and archived SU frames/metrics, then write a new proof.
-
- The final proof uses exclusive creation. This archival tool is not a
- read-only smoke command and must not overwrite an existing verification."""
  all_runs=frames_checked=0;phases=[];cf_checked=set();signal_checked=set();cfg=load()
  lock=json.loads((OUT/'selection.json').read_text());assert lock['sources']==fingerprints()
  for phase in ['engineering','development','validation','test']:

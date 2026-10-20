@@ -52,10 +52,6 @@ def writecsv(p,rows):
   w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
 
 def main():
- """Run the two declared repair suites without overwriting an existing split directory.
-
- Require committed inputs; formal test checks original source/config hashes.
- Those byte identities include comments, separately from behavior equivalence."""
  p=argparse.ArgumentParser();p.add_argument('--split',choices=['development','validation','test'],required=True);p.add_argument('--workers',type=int,default=4);a=p.parse_args()
  cfg,spec=load();seeds=spec['splits'][a.split];dest=ROOT/f'results/blocked-rearm/{a.split}'
  assert not subprocess.check_output(['git','status','--porcelain','--','src','scripts','configs','tests'],text=True),'Commit executable inputs first'

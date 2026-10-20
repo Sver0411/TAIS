@@ -70,10 +70,6 @@ def _map(value, allowed, exact, field):
 
 
 def _number(value, timestamp=False):
-    """Encode null, binary64 or signed ZigZag integer while preserving numeric type.
-
-    Timestamp integers are unsigned and retain caller units; this codec never
-    rescales seconds to milliseconds. Booleans and nonfinite floats are rejected."""
     if type(value) is int:
         if timestamp:
             _integer(value, 0, (1 << 64)-1, "timestamp")
@@ -88,19 +84,13 @@ def _number(value, timestamp=False):
 
 
 def encode(envelope, layout_id=1):
-    """Encode the complete four-field envelope as an independent v1 byte frame.
-
-    Channel order is provisioned by layout_id. Values and event booleans must
-    cover every channel; health may omit channels, distinctly from a null
-    measurement. Invalid types, ranges or schema raise WireError. len(return)
-    is the measured application byte cost, excluding real network overhead."""
+    """Encode all four business fields, retaining absent health and numeric types."""
     names = _layout(layout_id)
     _map(envelope, ("timestamp", "values", "environment_active", "health"), True, "envelope")
     values = _map(envelope["values"], names, True, "values")
     active = _map(envelope["environment_active"], names, True, "environment_active")
     health = _map(envelope["health"], names, False, "health")
     time_kind, time_data = _number(envelope["timestamp"], timestamp=True)
-    # Two type bits per value; independent masks retain event and health presence.
     kinds = active_mask = health_mask = 0
     value_data = bytearray()
     health_data = bytearray()
@@ -143,9 +133,6 @@ class _Reader:
         return self.take(1)[0]
 
     def varint(self, bits):
-        """Read a bounded canonical unsigned base-128 integer or raise WireError.
-
-        Reject redundant high zero groups so one integer has one wire encoding."""
         value = 0
         for i in range((bits+6)//7):
             byte = self.byte()
@@ -164,12 +151,7 @@ class _Reader:
 
 
 def decode(frame, expected_layout_id=1):
-    """Validate framing, schema and CRC, then return a complete business object.
-
-    No previous frame or sender object is needed. Reject unknown layouts,
-    noncanonical integers, truncation and trailing data with WireError. A valid
-    later snapshot restores only its current state; the format has no sequence
-    numbers, retransmission or mechanism to reconstruct lost event history."""
+    """Validate complete framing/schema/integrity and recover the business object."""
     _layout(expected_layout_id)
     if not isinstance(frame, (bytes, bytearray, memoryview)):
         raise WireError("Frame must be bytes-like")

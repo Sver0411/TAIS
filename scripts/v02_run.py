@@ -54,10 +54,6 @@ def writecsv(path,rows):
         w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
 
 def main():
-    """Write a versioned split matrix with recorded source identities and separate archives.
-
-    Require committed executable inputs and exact frozen bytes for final test.
-    Smoke cannot preview test seeds; existing completed manifests are protected."""
     p=argparse.ArgumentParser();p.add_argument('--split',choices=['development','validation','test'],required=True)
     p.add_argument('--workers',type=int,default=4);p.add_argument('--smoke',action='store_true');a=p.parse_args()
     cfg,spec=load();seeds=spec['splits'][a.split];cases=scenarios();label=a.split+('-smoke' if a.smoke else '')

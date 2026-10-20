@@ -5,19 +5,6 @@ from simulator.events import match_events
 from .replay import finite
 
 def evaluate(trace,result,cfg,counterfactual=None):
-    """Score sender reports and local episodes against synthetic trace truth.
-
-    Use the upstream one-to-one event matcher and configured tolerance in
-    seconds. Recall is None without true events; conditional latency excludes
-    misses. Fault-induced false reports are unmatched reports in a fault/recovery
-    window absent from the optional clean counterfactual, an operational
-    attribution rather than proof of physical causation. With no counterfactual,
-    the comparison list is empty. Stable offset has no dedicated type bit.
-
-    Resource counts are sample cycles, requested uploads and recorded JSON
-    bytes. Reconstruction errors hold sampled/uploaded values offline only;
-    that reconstruction is not a source of online observations. Duration uses
-    the generator one-second grid length, not arbitrary irregular CSV time."""
     ev=cfg['evaluation'];tol=ev['event_match_tolerance_s']
     match=match_events(trace.events,result['reports'],tol)
     local=match_events(trace.events,result['detections'],tol)

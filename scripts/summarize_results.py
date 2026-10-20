@@ -14,10 +14,6 @@ from tais.config import load
 COUNTS=['n_events','tp','missed','local_tp','false_reports','redundant_reports','fault_induced_false','fault_associated_false','samples','uploads','payload_bytes','fault_episodes','fault_detected','fault_type_detected','confirmation_samples','diagnostic_samples','diagnostic_only_samples','duration_s','latency_sum_s','latency_n','fault_latency_sum_s']
 
 def aggregate(df,keys):
-    """Sum detection/resource counts by group; undefined recall becomes NaN.
-
-    This legacy summary averages per-run MAE/RMSE, unlike later duration-
-    weighted budget_eval aggregation. Do not silently mix those estimands."""
     counts=df.groupby(keys,dropna=False)[COUNTS].sum()
     means=df.groupby(keys,dropna=False)[[c for c in df if '_mae_' in c or '_rmse_' in c]].mean()
     a=counts.join(means).reset_index()
@@ -30,11 +26,6 @@ def aggregate(df,keys):
     return a
 
 def paired(df,cfg):
-    """Bootstrap paired per-seed metric differences, retaining scenarios within seeds.
-
-    These legacy intervals average seed-level ratios; later paper tools also
-    report ratios recomputed from pooled counts. Both are descriptive, and
-    neither treats individual seconds as independent experiments."""
     output=[];rng=np.random.default_rng(cfg['evaluation']['bootstrap_seed'])
     for relation in ['all','clean','none','cross','same','cross_sequential','same_sequential']:
         sub=df if relation=='all' else df[df.relationship==relation]

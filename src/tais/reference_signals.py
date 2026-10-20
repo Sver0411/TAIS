@@ -18,7 +18,6 @@ def main_config(cfg):
 
 
 def scenario_specs():
-    """Enumerate the fixed IRB same-quantity reference and stress interventions."""
     specs=[]
     def add(cohort,alpha=None,shape=None,duration=None,offset=None,reference='normal'):
         event=cohort in ('mixed','event_only','missing','bias_stress')
@@ -44,19 +43,12 @@ def scenario_specs():
 
 
 def equivalence_pairs():
-    """Identify worlds with identical observations but different physical event labels."""
     specs=scenario_specs()
     return [(next(s['id'] for s in specs if s['cohort']=='drift_only' and s['duration_s']==d),
              next(s['id'] for s in specs if s['cohort']=='event_only' and s['alpha']==0 and s['shape']=='matched_ramp' and s['duration_s']==d)) for d in (240,600)]
 
 
 def generate(cfg,seed,scenario):
-    """Return an IRB trace and offline metadata for main/reference temperature.
-
-    Reference B responds to environmental displacement by alpha and has its
-    own seeded noise and modeled bias/missingness. Alpha=0 matched-ramp twins
-    deliberately expose nonidentifiability: observations alone cannot decide
-    which physical cause produced them. Labels never enter ReferenceGate."""
     spec=next((s for s in scenario_specs() if s['id']==scenario),None)
     if spec is None:raise ValueError('Unknown IRB-1 case')
     syn=cfg['synthetic'];n=syn['duration_s'];duration=spec['duration_s']

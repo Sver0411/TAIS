@@ -1,7 +1,8 @@
-"""Historical exact-object publisher pinned to research/blocked-rearm-fix.
+"""Publish exact objects to the authorized v0.2 research branch only.
 
-Execution/import performs remote writes with gh authentication. Branch and
-object checks protect that target; this is not a generic publishing API."""
+gh supplies existing authentication; no tokens are read or printed. Ref update
+is non-forcing and only after every created SHA equals the local Git object.
+"""
 import base64,datetime,json,re,subprocess,time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];REPO='repos/Sver0411/TAIS';BRANCH='research/blocked-rearm-fix'

@@ -29,7 +29,6 @@ def canonical(value):
 
 
 def exact(original, recovered):
-    """Assert semantic equality plus numeric type, signed zero and binary64 bit identity."""
     assert recovered == original
     assert type(recovered["timestamp"]) is type(original["timestamp"])
     for n,v in original["values"].items():
@@ -207,9 +206,6 @@ def benchmark_module():
 
 
 def audit_fixture():
-    """Build a tiny archival scoring fixture with explicit episodes and upload intent.
-
-    These constructed counts validate the auditor, not field detection quality."""
     from simulator.events import Event
     records=[]
     for t,active,upload in [(0,False,True),(1,True,True),(2,True,False),(3,False,True)]:

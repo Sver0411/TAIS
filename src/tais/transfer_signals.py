@@ -15,7 +15,6 @@ class TransferTrace(Trace):
     metadata: dict=field(default_factory=dict)
 
 def stream(seed,name):
-    """Derive an independent reproducible RNG stream from the seed and stream name."""
     digest=hashlib.sha256(f'tais-transfer-v1:{seed}:{name}'.encode()).digest()
     return random.Random(int.from_bytes(digest[:16],'big'))
 
@@ -37,15 +36,6 @@ def shape(name,u):
     return u*(1-u)**4/(.2*.8**4)
 
 def generate(spec,seed,case):
-    """Build G2 mean-reverting background, correlated noise, events and faults.
-
-    Environment/noise/event/fault RNG names isolate their random draws. Events
-    have independently placed exogenous support, represented as inclusive
-    1-Hz truth endpoints [start, end-1]; faults use half-open intervals.
-    latent includes noise-free events; noisy adds noise; observed applies
-    fault replacement. Hidden schedules and parameters are offline metadata,
-    never online inputs. This generator differs from G1 in truth rules as well
-    as signal dynamics, so comparisons do not isolate a single distribution shift."""
     kind,channel,relation,family=scenario_spec(case);n=spec['duration_s'];bg=spec['background'];ns=spec['noise'];es=spec['events'];fs=spec['faults']
     env=stream(seed,'environment');noise=stream(seed,'noise');er=stream(seed,'events:'+family)
     centers=[env.uniform(*bg[c+'_center']) for c in CHANNELS];state=list(centers);targets=list(centers);rho=0;change=0;eta=[0.,0.];noise_rho=[noise.uniform(*ns['rho']) for _ in CHANNELS];scales=[1.,1.]

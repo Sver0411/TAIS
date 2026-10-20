@@ -6,10 +6,6 @@ BITS={'range':1,'stuck':2,'spike':4,'drift':8,'missing':16,'invalid':16,'stable_
 OVERWRITES={'range','stuck','missing','invalid'}
 
 def diagnostics(trace,result):
-    """Score any-flag and type-bit fault hits separately on half-open injected episodes.
-
-    Stable offset has no supported C11 type bit; a coincident flag is not
-    correct type identification. Delay is undefined for undetected episodes."""
     rows=result['records'];out=[]
     for i,f in enumerate(trace.faults):
         sampled=[r for r in rows if f.start_s<=r['timestamp']<f.end_s]
@@ -20,10 +16,6 @@ def diagnostics(trace,result):
     return out
 
 def event_details(trace,result,events):
-    """Attach offline support/overlap and finite sampling opportunities to event rows.
-
-    Replacement support identifies lost information, not successful reconstruction
-    when an unrelated report happens to match an overwritten event label."""
     by={(e['channel'],e['start_s']):e for e in trace.metadata['event_schedule']}
     for row in events:
         s=by[row['channel'],row['truth_start']];fs=trace.faults;a=s['start_s'];b=s['end_exclusive_s'];c=s['channel']
@@ -39,7 +31,6 @@ def event_details(trace,result,events):
     return events
 
 def metrics(trace,result,cfg,cf,cf_frames):
-    """Extend frozen paper scoring with G2 fault/channel and clearing-edge diagnostics."""
     out,frames,rx,events,hist=frozen_metrics(trace,result,cfg,cf,cf_frames)
     events=event_details(trace,result,events);faults=diagnostics(trace,result)
     assert out['fault_detected']==sum(f['any_detected'] for f in faults)

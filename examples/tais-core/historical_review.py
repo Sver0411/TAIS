@@ -22,11 +22,6 @@ def csv_write(path, rows):
 
 
 def main():
-    """Audit archived BM-1 encodings and write historical descriptive comparisons.
-
-    All selected original seed/scenario rows are retained. GateOnly threshold
-    points are not resource-matched to TrustLog; no policy is replayed or tuned.
-    Raw archives must already exist and output directories must be new."""
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--archive', type=Path)
     p.add_argument('--out', type=Path, required=True)

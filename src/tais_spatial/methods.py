@@ -5,9 +5,6 @@ import numpy as np
 
 
 def trailing_median(x, fresh, length):
-    """Use past fresh values only; require three finite entries for a reference.
-
-    The current sample is excluded to avoid absorbing its own displacement."""
     source = np.where(fresh, x, np.nan)
     windows = np.lib.stride_tricks.sliding_window_view(np.pad(source, (length, 0), constant_values=np.nan), length)[:-1]
     n = np.isfinite(windows).sum(axis=1)
@@ -43,10 +40,6 @@ def trend(series, fresh, poll, duration, minimum_points, minimum_span):
 
 
 def features(values, rows, real_residual, null_residual, config):
-    """Build causal displacement, fresh-row jumps and trailing trend evidence.
-
-    Repeated cached rows do not become new observations. All trend arrays use
-    current/past polls only; no intervention labels enter this function."""
     values = np.asarray(values, dtype=float); rows = np.asarray(rows)
     valid = np.isfinite(values) & (rows >= 0)
     previous = np.full(len(rows), -1, dtype=np.int64)
@@ -72,11 +65,6 @@ def features(values, rows, real_residual, null_residual, config):
 
 
 def detect(feature, threshold, method, config):
-    """Emit onset-only reports with sampled hysteresis and optional trend suppression.
-
-    Missing/stale samples leave active unchanged. HistoryExtended, Spatial and
-    NullSpatial choose different trend features; a fresh large jump bypasses
-    suppression. A report is detector output, not verified physical truth."""
     active = False; raw = np.zeros(len(feature["score"]), dtype=bool)
     for i, score in enumerate(feature["score"]):
         if not feature["fresh"][i] or not np.isfinite(score):

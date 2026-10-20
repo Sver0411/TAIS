@@ -9,10 +9,6 @@ from tais.signals import generate
 from run_experiments import canonical
 
 def main():
-    """Verify saved v0.2 bytes and optionally perform one deterministic replay.
-
-    Original source hashes include comments/docstrings; preserving experiment
-    artifacts does not imply the annotated source still has its original hash."""
     p=argparse.ArgumentParser();p.add_argument('--split',required=True);p.add_argument('--traces',action='store_true');p.add_argument('--replay-one',action='store_true');a=p.parse_args()
     dest=ROOT/'results/v0.2'/a.split;m=json.loads((dest/'manifest.json').read_text())
     sha=lambda b:hashlib.sha256(b).hexdigest()

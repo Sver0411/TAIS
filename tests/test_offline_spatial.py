@@ -41,9 +41,6 @@ def workbook(path):
 
 
 def fake_dataset(cfg):
-    """Construct a dense artificial calibration/development cache for engineering tests.
-
-    This fixture is not the source workbook and does not establish field coverage."""
     prefix = np.arange(seconds(cfg["calibration"][0]), seconds(cfg["calibration"][1]), 600)
     day = seconds(cfg["splits"]["development"][0])
     times = np.concatenate([prefix, np.arange(day+4*3600, day+20*3600+1, 600)])

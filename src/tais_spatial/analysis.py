@@ -15,7 +15,6 @@ METRICS = ["reports", "event_incremental_hit", "event_window_hit", "drift_extra_
 
 
 def bootstrap(differences, repetitions, seed):
-    """Return a mean and percentile interval over independent date-level differences."""
     differences = np.asarray(differences, dtype=float)
     rng = np.random.default_rng(seed)
     means = differences[rng.integers(0, len(differences), size=(repetitions, len(differences)))].mean(axis=1)
@@ -23,11 +22,6 @@ def bootstrap(differences, repetitions, seed):
 
 
 def summarize(directory):
-    """Write fixed-plan summaries and date-cluster paired comparisons, then plot.
-
-    Average paired node differences within each date before bootstrap sampling.
-    The coverage gate admits informative exploration, including harm; passing
-    it alone is not evidence of superiority. Refuse an existing summary.csv."""
     directory = Path(directory)
     if (directory/"summary.csv").exists():
         raise FileExistsError("Analysis outputs already exist; do not silently replace")
@@ -164,9 +158,6 @@ def plot(directory):
 
 
 def update_checksums(directory):
-    """Refresh this output directory manifest after artifact generation.
-
-    This mutates the manifest; it is not a read-only historical verifier."""
     directory = Path(directory); p = directory/"manifest.json"; manifest = json.loads(p.read_text())
     manifest["artifacts"] = {f.name: hashlib.sha256(f.read_bytes()).hexdigest()
                              for f in sorted(directory.iterdir()) if f.is_file() and f.name != "manifest.json"}

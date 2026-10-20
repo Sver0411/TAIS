@@ -12,12 +12,6 @@ EXTRA=('main_reads','reference_reads','local_episodes','received_candidates','re
 
 
 def evaluate_reference(trace,result,cfg,counterfactual):
-    """Score candidate and reference-supported reports separately under synthetic truth.
-
-    ReferenceGate environmental metrics use support; comparators use candidates.
-    Any health flag is a run-level fault claim for confusion counts, not a
-    verified fault mechanism. Check ledger equality including both A and B reads.
-    The received terminology assumes ideal admitted-envelope delivery here."""
     cfg=main_config(cfg);m=evaluate(trace,result,cfg,counterfactual);tol=cfg['evaluation']['event_match_tolerance_s']
     match=match_events(trace.events,result['reports'],tol)
     sr=result['supported_reports'];support=match_events(trace.events,sr,tol)
@@ -49,10 +43,6 @@ def evaluate_reference(trace,result,cfg,counterfactual):
 
 
 def aggregate(rows):
-    """Aggregate support, unresolved coverage, fault claims and resource counts.
-
-    Use None for undefined ratios and unsupported comparator-only capabilities;
-    absence of support must not silently become a successful negative diagnosis."""
     from .budget_eval import aggregate as base
     m=base(rows);m.pop('binary_v1_bytes',None)
     m.update({k:sum(float(r.get(k) or 0) for r in rows) for k in EXTRA})

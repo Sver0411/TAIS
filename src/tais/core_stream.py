@@ -27,9 +27,6 @@ def flags_text(flags):
 
 
 def timestamp(value):
-    """Validate source time in seconds against the C11 millisecond range.
-
-    Reject booleans, nonfinite values and negatives; ordering is checked by push()."""
     if (type(value) not in (int, float) or not math.isfinite(value)
             or value < 0 or not math.isfinite(value * 1000)
             or round(value * 1000) > (1 << 64) - 1):
@@ -55,14 +52,6 @@ class CoreSender:
         self._sent = dict.fromkeys(self.names, False)
 
     def push(self, row):
-        """Consume one strictly increasing source row; return None before sampling is due.
-
-        Only timestamps are read on skipped rows. On a sampled row, update health
-        and event state, then optionally encode a complete Binary v1 snapshot.
-        The result contains the local record, first-upload reports and optional
-        frame/envelope; these local reports do not prove receiver delivery.
-        Sparse inputs use the first row at or after the deadline, without filling.
-        Invalid time or unsupported measurement types raise ValueError."""
         t = timestamp(row['timestamp'])
         if t <= self.last_source:
             raise ValueError('source timestamps must strictly increase; no sorting or filling')
@@ -109,7 +98,6 @@ class CoreSender:
         return dict(record=record, reports=reports, envelope=envelope, frame=frame)
 
     def close(self):
-        """Release owned C health contexts; safe to call repeatedly."""
         for trust in self.scheduler.trust.values():
             trust.close()
 
@@ -127,13 +115,6 @@ class CoreReceiver:
         self.timeline = deque(maxlen=12)
 
     def receive(self, frame):
-        """Decode a frame and apply it only if its timestamp advances receiver state.
-
-        Return status, decoded envelope and sampled state transitions. Invalid
-        frames produce an error result; stale, duplicate or conflicting frames
-        never roll back latest. A new snapshot restores current state only,
-        not intermediate events lost in transit. Score-only changes are retained
-        in latest but are not entries in the bounded transition timeline."""
         self.counts['received'] += 1
         self.counts['received_bytes'] += len(frame)
         try:
@@ -189,10 +170,6 @@ class LocalLink:
         self.emit(dict(kind='rx', harness_tx_id=tx_id, frame_bytes=len(frame), **outcome))
 
     def send(self, frame):
-        """Count an emission and apply configured loss, corruption or pair reversal.
-
-        Deliveries call the receiver and emit journal records synchronously.
-        There is no acknowledgement, retry or feedback into the sampling policy."""
         self.counts['sent'] += 1
         self.counts['sent_bytes'] += len(frame)
         tx_id = self.counts['sent']
@@ -215,7 +192,6 @@ class LocalLink:
             self.pending = None
 
     def flush(self):
-        """Deliver the held tail frame after pair reversal at end of input."""
         if self.pending is not None:
             self._deliver(self.pending)
             self.pending = None

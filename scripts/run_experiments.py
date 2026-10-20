@@ -14,10 +14,6 @@ from tais.metrics import evaluate
 
 def canonical(value):
     # Canonical gzip (mtime=0) makes archived trace hashes reproducible.
-    """Serialize dataclasses and nonfinite observations deterministically for archives.
-
-    Nonfinite floats become null; canonical JSON bytes are separate from gzip
-    container hashes and from actual encoded communication costs."""
     def clean(v):
         if hasattr(v,'__dataclass_fields__'):return clean(asdict(v))
         if isinstance(v,dict):return {k:clean(x) for k,x in v.items()}
@@ -31,11 +27,6 @@ def save(path,value):
     return hashlib.sha256(data).hexdigest()
 
 def main():
-    """Write the configured split matrix, sampled replays and clean counterfactual scores.
-
-    Legacy output paths are reused if present; run in an isolated checkout or
-    redirect ROOT explicitly for maintenance checks to avoid replacing evidence.
-    Smoke reduces seeds/cases but retains the same policy interfaces."""
     p=argparse.ArgumentParser();p.add_argument('--split',choices=['development','validation','test'],required=True)
     p.add_argument('--smoke',action='store_true');args=p.parse_args()
     cfg=load();key={'development':'development_seeds','validation':'validation_seeds','test':'held_out_test_seeds'}[args.split]

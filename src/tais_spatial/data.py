@@ -38,10 +38,6 @@ def neighbors(node: int, count: int = 4) -> list[int]:
 
 
 def proxy_timestamp(date, time, date1904=False):
-    """Parse workbook date/time into rounded seconds on a naive proxy axis.
-
-    This deterministic axis has no verified acquisition/arrival-time semantics;
-    no timezone inference or interpolation is performed."""
     if date is None or time is None:
         return None
     origin = datetime(1904, 1, 1) if date1904 else datetime(1899, 12, 30)
@@ -65,12 +61,7 @@ def number(value):
 
 
 def prepare(workbook: Path, output: Path, config: dict) -> dict:
-    """Verify the source hash and exclusively create a provenance ledger/cache.
-
-    Keep every nonempty source row in the ledger, including unusable cells.
-    Sort cache rows stably on the explicit proxy axis and quarantine all values
-    sharing duplicate timestamps. Invalid measurements become NaN; no gaps are
-    filled. Existing output directories and substituted workbooks are rejected."""
+    """Exclusive outputs; preserve every nonempty original AF row in a ledger."""
     sha = hashlib.sha256(workbook.read_bytes()).hexdigest()
     if sha != config["workbook_sha256"]:
         raise ValueError("Workbook SHA-256 mismatch; refusing substitution")
@@ -175,13 +166,11 @@ def prepare(workbook: Path, output: Path, config: dict) -> dict:
 
 
 class Dataset:
-    """Verified cached source rows queried under explicit reception-clock assumptions."""
     def __init__(self, arrays, config):
         self.arrays, self.config = arrays, config
 
     @classmethod
     def open(cls, directory, config):
-        """Verify workbook identity and cache bytes before loading non-pickle arrays."""
         directory = Path(directory); report = json.loads((directory / "quality.json").read_text())
         if report["workbook_sha256"] != config["workbook_sha256"]:
             raise ValueError("Source mismatch")
@@ -192,12 +181,6 @@ class Dataset:
         return cls(arrays, config)
 
     def asof(self, node, variable, query, max_age, shift=0):
-        """Return (value, source row, assumed arrival) for past available rows only.
-
-        query/max_age/shift use proxy seconds; shift changes assumed availability.
-        Rows beyond max_age or preceding the first arrival return NaN/-1/-1.
-        An available row can itself contain NaN; availability is not measurement
-        validity. No interpolation or future-row lookup is allowed."""
         query = np.asarray(query, dtype=np.int64)
         t = self.arrays[f"time_{node}"] + shift
         index = np.searchsorted(t, query, side="right") - 1
@@ -211,9 +194,6 @@ class Dataset:
         return value, row, arrival
 
     def calibration(self, variable):
-        """Return per-node finite medians from the declared half-open calibration period.
-
-        Fewer than 100 values yields NaN rather than a validation/test-derived fill."""
         start, end = map(seconds, self.config["calibration"])
         medians = {}
         for node in self.config["nodes"]:
