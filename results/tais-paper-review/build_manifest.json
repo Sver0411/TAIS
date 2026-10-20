@@ -1,0 +1,29 @@
+{
+  "inputs": {
+    "results/tais-paper/test/analysis/summary.csv": "d9d38cf647ad73b5ce3ef804ad5f3ee5d1c38d18c7b8d0610e4d32a0d587acd2",
+    "results/tais-transfer/test/analysis/summary.csv": "f147b19229943661c835f95119ca7fe5d66eeaaf45d315de355f6017f3c8c2f9",
+    "results/tais-transfer/test/analysis/paired_intervals.csv": "284382f10bc11e5ef5f5121105d6e5244f3e2d762dbad3a317af02b607032d01",
+    "results/tais-paper/test/analysis/paired_intervals.csv": "8e23a1f79130f890cd89371902da36f38734a3f0b303231f38bac5bbcb5816fc",
+    "results/tais-transfer/test/analysis/events_grouped.csv": "66c408b25c6c042a665e992e3f0bfac49a934f8735e6fd18f3ce2c4254b9800f",
+    "results/tais-paper-review/budget_sensitivity.csv": "090e863af836180077d339adf7379c29945a0ebfb4abce68f3e0c0b08a9e6ddf"
+  },
+  "abstract_words": 187,
+  "generated_tex": {
+    "review_abstract.tex": "6499aca95fdaab702924ca92e3658a8c024ea851d09b6166328348a728361dee",
+    "review_contrasts.tex": "c7796c56ee915fc2fef0c320b0c219c445265b5eca10b1708cf99c3de362ba82",
+    "review_failures.tex": "65af0455948082e4493a526ef8d571d23d1a0f709a075301cbc5c8524c518003",
+    "review_fixed_tradeoff.tex": "e94b9e1302347b5e15bc0eb3676ff3ca5d158758babffe9ff5b061db0b1a896d",
+    "review_intervals.tex": "69aaf38322a126c597223faa024d1822ca5f7e0f93ca83e8b8e31ea89fa4f895",
+    "review_modes.tex": "4fd925e088fbdc5198d9e3cd6f6fc18b667108e863ad5374beeeb2ab2da761e7",
+    "review_quality.tex": "4f9e392bbc7d89686232d99ca12d6972a76eeda61618e0e0b595126ba7554a80",
+    "review_receiver.tex": "f970ad7096ce10ff970e805e75e599ef20914dd749b4a102bbb3071b24bdd257",
+    "review_resources.tex": "e3fb0e4c40a15bf38fd86c4cfdce185e600ebe14cbf259f9badadadccc6ae88e",
+    "review_sensitivity.tex": "5b00e65e2a5f9ecd5cbfbefd76698329203847cf4fa9ff9ba3c94f86047902b9",
+    "review_task_interpretation.tex": "396f568032adb37d6bfbd85157c6c0f2904e731f869044602b171484845ab52d",
+    "review_upload.tex": "5217e2674b4a15352640824b4fda6b8e6bf5f7456fde0f30e9fe875976a92b7f"
+  },
+  "figures": {
+    "review_fixed20_tradeoff.png": "d839aadc51b77b286a2612e8a0f1fa9b29d3128b4fa9db89a105618f040435f9",
+    "review_task_quality.png": "4bfd6f5632045e913153edfba14b44fe280d12fa96146b36fa7625135b0a4283"
+  }
+}

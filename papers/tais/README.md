@@ -1,54 +1,43 @@
-# English manuscript draft
+# TAIS manuscript: final academic revision
 
-## Current revision: frozen cross-generator evaluation
+The current source incrementally revises the G1/G2 study at `db23a95ef95fd025553b70754625af7b42b5682e` on branch `docs/tais-paper-major-revision`. Scientific scope is **conditional tradeoffs across two differently defined synthetic tasks**, including different event-truth windows. No algorithm, generator, old result, protocol or archive changes in this revision. The maturity judgment A means venue selection and submission preparation can begin; it is not an acceptance prediction. Human author details/approval and venue-specific requirements remain pending.
 
-The current manuscript incrementally adds G2 to the original G1 study. Both remain simulation evidence. All14 selected methods ran20 new seeds ×46 scenarios without retuning; G2 source/analysis were frozen at `3f3991aa26cf1ac7f8f8cd0fe188136b0311c9bd`. The G1 near-budget quality advantage over Variance did not transfer; Fixed20 also has higher point F1 at similar acquisition cost. These negative results are explicit in the abstract, transfer results and discussion. The title and systems-study contribution scope remain unchanged. Current maturity is B, with distribution-dependent results; planned supplemental experiments are complete.
+The main text has one quality table, one resource/qualification table, the implemented architecture, and two grayscale-safe result figures. Full operating points, adverse diagnostics and post-hoc budget sensitivity remain in readable appendices and the frozen CSV artifacts. The generated abstract has 187 words. Rao-inspired remains an explicitly incomplete adaptation; +C11 and public +U extensions are distinguished.
 
-The historical twelve-page G1-only PDF/root source are preserved in [history](history/README.md), and the complete original source tree at `0170196dda10f78b85d5e4b685d56331a0021083`. Old experiment/result directories are unchanged. The final revised page count and rendering evidence are in `results/tais-transfer/checks/pdf-validation.json`.
+## Build without new simulations
 
-G2 results/figures and literal numerical bindings:
+From the repository root, after installing the locked dependencies and editable project:
 
 ```sh
-.venv/bin/python scripts/transfer_figures.py
-.venv/bin/python scripts/build_transfer_report.py
-.venv/bin/python scripts/update_transfer_docs.py
 .venv/bin/python scripts/build_paper.py
-.venv/bin/python scripts/verify_transfer.py
+cd papers/tais
+tectonic manuscript.tex --keep-logs
+```
+
+Then, from the repository root:
+
+```sh
 .venv/bin/python scripts/check_paper_artifacts.py
-cd papers/tais
-tectonic manuscript.tex --keep-logs
+.venv/bin/python scripts/verify_paper_revision.py
+.venv/bin/python scripts/verify_paper.py
+.venv/bin/python scripts/verify_transfer.py
+.venv/bin/python -m pytest -q
 ```
 
-G2 tables/numerical paragraphs have separate `tables/transfer_data_audit.csv` and `transfer_source_fingerprints.json`; the original G1 bindings are retained. Eight previously verified DOI references remain unchanged. Author names/affiliations are still an explicit placeholder requiring completion before submission.
+`build_paper.py` preserves the G1/G2 numerical bindings and invokes `paper_review_artifacts.py`. That script calls `analyze_budget_sensitivity.py`, reads only saved summaries/intervals/event groups, and writes new outputs under `results/tais-paper-review/` plus presentation files in this directory. It does not replay data, calibrate parameters or rewrite old results. The 2/5/10% sensitivity analysis is post hoc; 5% reproduces the historical qualification rule. All 60 existing independent+C11 control-target pairs remain, without choosing a new operating point.
 
-Full G2 replay and byte-for-byte CSV/analysis verification:
+Numerical provenance: original `tables/data_audit.csv` and `transfer_data_audit.csv`, plus new `review_data_audit.csv` and `review_source_fingerprints.json`. New source/data protection, build-repeatability, regression and PDF evidence live in `results/tais-paper-review/`; old `results/tais-paper/` and `results/tais-transfer/` checks remain historical and immutable. The G2 verifier selects the new current-PDF evidence instead of rewriting its historical PDF fingerprint. This changes no experimental scoring.
 
-```sh
-.venv/bin/python scripts/reproduce_transfer.py --workers 4
-```
+## Review and submission materials
 
-This writes a new scratch directory and does not overwrite official data. `--check-only` verifies committed evidence without the full replica. Full G1 reproduction below belongs to the original G1 snapshot/branch: run it at `0170196...`, where its exact-module-list freeze is defined. The current branch's new G2 module is intentionally outside that old module inventory. The read-only legacy verifier was adjusted only to validate all old pinned sources despite this additional file; no old policy/scorer/config or historical outcome changed.
+- `docs/TAIS_PAPER_REVISION_CHANGELOG.md`: responses and exact old/new wording.
+- `docs/TAIS_PAPER_LAYOUT_AUDIT.md`: actual rendered-page review and suspect-defect verdicts.
+- `docs/TAIS_PAPER_QUALITY_REVIEW.md`: final fourteen-question review.
+- `docs/TAIS_PAPER_SUMMARY_ZH.md`: current Chinese synopsis.
+- `docs/TAIS_SUBMISSION_CHECKLIST.md`: real author/affiliation/funding, human verification, AI-use rules, anonymity, template and venue checks.
 
-## Original G1 artifact instructions (historical scope)
+Eight verified scientific DOI entries are retained; only acronym casing protection is corrected. AI tool assistance is transparently identified as a draft disclosure requiring human verification and venue adaptation, not a fabricated approval. Figures are deterministic plots of saved data and a code-based architecture diagram.
 
-`manuscript.tex` is the complete article; `references.bib` contains eight individually verified DOI records. Empirical tables/macros/paragraphs are generated by `scripts/build_paper.py` from the held-out CSVs, never from the task prompt's historical numbers. `tables/data_audit.csv` maps each table cell to its source metric/group. Source bibliography remains untouched.
+## Historical materials
 
-Build after the full frozen test and analysis:
-
-```sh
-python scripts/build_paper.py
-cd papers/tais
-tectonic manuscript.tex --keep-logs
-```
-
-Tectonic may download public TeX packages on its first run. The delivered PDF's compilation and visual checks are recorded in `results/tais-paper/checks/`. The English paper is an initial draft with author affiliations to fill before submission; it is not peer reviewed.
-
-Full experiment reproduction, from the repository root after dependency installation:
-
-```sh
-python scripts/reproduce_paper.py --output results/scratch/paper-reproduction-01
-```
-
-This uses the committed final points and20 held-out seeds, refuses existing outputs, performs real encoding/decoding, regenerates all45 scenarios, verifies archives and requires exact per-run metrics fingerprint equality. It never retunes using final labels. Raw archives are intentionally outside Git under ignored output paths.
-
-Publication figure layout is exported by `scripts/paper_publication_figures.py` from the frozen summaries and sensitivity grid. It changes labels, fonts and layout only; original frozen analysis figures and every numerical result remain preserved.
+The original G1-only twelve-page PDF/root source are retained in `history/` and commit `0170196...`. The G1+G2 nineteen-page draft and complete original figure/table layout remain at `db23a95...`. Original replay/reproduction commands remain documented in those snapshots; they are not invoked for this paper-only revision. Raw archives and frozen outcomes remain available with their existing fingerprints. No new simulation campaign is required to reproduce this revision's statistical or presentation changes.

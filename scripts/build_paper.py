@@ -17,7 +17,7 @@ def val(m,k,g='overall',v='native',fmt='pct'):
     return f'{x:.2f}'
 def esc(x):return str(x).replace('_',r'\_').replace('%',r'\%').replace('&',r'\&')
 def label(m):
-    m=m.replace('AdaptiveSense+TrustLog','AS+C11').replace('AdaptiveSense','AS').replace('JO-SU-','SU').replace('JO-S','S').replace('GateOnly','Gate').replace('Variance','Var').replace('Rao-inspired','Rao').replace('-budget-SU40','-bS40').replace('-budget-Gate','-bGate').replace('-c','-')
+    m=m.replace('AdaptiveSense+TrustLog','AS+C11').replace('AdaptiveSense','AS').replace('JO-SU-','SU').replace('JO-S','S').replace('GateOnly','Gate').replace('Variance','Var').replace('-budget-SU40','-bS40').replace('-budget-Gate','-bGate').replace('-c','-')
     return esc(m)
 def write(name,text):(TABLES/name).write_text(text.rstrip()+'\n')
 def table(name,headers,rows,align=None):
@@ -42,10 +42,12 @@ table('native_main.tex',['Method','P','R','F1','Samples','Bytes','FI'],[[label(m
 # Complete data, including health-free payloads, duplicate matches, and diagnostics.
 for view in ['native','common']:
     rr=s[(s['view']==view)&(s.group=='overall')]
-    text=r'\begin{scriptsize}\setlength{\tabcolsep}{3pt}\begin{longtable}{lrrrrrrr}'+'\n'+r'\toprule Method & P & R & F1 & RxF1 & Samples & Bytes & FI \\\midrule\endhead'+'\n'
+    text=r'\begin{small}\setlength{\tabcolsep}{3pt}\begin{longtable}{lrrrrrrr}'+('\n'+r'\caption{Complete G1 '+view+r' operating points; all source scenarios and final seeds.}\label{tab:'+view+r'complete}\\')+'\n'+r'\toprule Method & P & R & F1 & RxF1 & Samples & Bytes & FI \\\midrule\endfirsthead\multicolumn{8}{l}{\textit{Table \thetable{} (continued)}}\\\toprule Method & P & R & F1 & RxF1 & Samples & Bytes & FI \\\midrule\endhead'+'\n'
     for _,r in rr.iterrows():
-        m=r.method;text+=' & '.join([label(m)]+[val(m,k,v=view,fmt=f) for k,f in [('precision','pct'),('recall','pct'),('f1','pct'),('rx_f1','pct'),('samples','int'),('binary_v1_bytes','int'),('fault_induced_false','int')]])+r' \\'+'\n'
-    text+=r'\bottomrule\end{longtable}\end{scriptsize}';write(view+'_complete.tex',text)
+        m=r.method;family=m.split('-')[0];next_m=rr.loc[rr.index[rr.index.get_loc(r.name)+1],'method'] if rr.index.get_loc(r.name)+1<len(rr) else None
+        continuation=next_m is not None and next_m.split('-')[0]==family
+        text+=' & '.join([label(m)]+[val(m,k,v=view,fmt=f) for k,f in [('precision','pct'),('recall','pct'),('f1','pct'),('rx_f1','pct'),('samples','int'),('binary_v1_bytes','int'),('fault_induced_false','int')]])+(r' \\*' if continuation else r' \\')+'\n'
+    text+=r'\bottomrule\end{longtable}\end{small}';write(view+'_complete.tex',text)
 
 brows=[]
 for _,b in budget[budget['view']=='native'].iterrows():
@@ -118,3 +120,7 @@ print('generated',len(audit),'audited numeric cells and all empirical paragraphs
 if (ROOT/'results/tais-transfer/test/analysis/manifest.json').exists():
     from build_transfer_paper import main as build_transfer
     build_transfer()
+
+# Major revision: regenerate presentation and post-hoc qualification from frozen CSVs.
+from paper_review_artifacts import main as build_review
+build_review()

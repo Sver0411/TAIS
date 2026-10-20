@@ -1,5 +1,7 @@
 # TAIS 论文证据入口与完整实验报告
 
+> **当前学术大修入口**：基于db23a95的文稿现在统一按不同标签/机制的跨合成任务解释，G2 F1跨零不代表已证明总体劣势。未改变以下历史性能数据。当前成熟度A仅表示可开始选渠道/模板准备；此前B是研究阶段判断。见[修改记录](TAIS_PAPER_REVISION_CHANGELOG.md)、[质量审查](TAIS_PAPER_QUALITY_REVIEW.md)、[布局审计](TAIS_PAPER_LAYOUT_AUDIT.md)和[预算敏感性](../results/tais-paper-review/budget_sensitivity.csv)。
+
 <!-- TRANSFER_CURRENT_START -->
 ## 最新：第二生成机制冻结迁移（G2）
 

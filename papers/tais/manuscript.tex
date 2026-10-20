@@ -4,9 +4,14 @@
 \usepackage{lmodern,amsmath,booktabs,longtable,graphicx,array,microtype}
 \usepackage[colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
 \usepackage[numbers,sort&compress]{natbib}
+\usepackage[section]{placeins}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning}
 \setlength{\parskip}{3pt}
+\renewcommand{\topfraction}{.95}
+\renewcommand{\bottomfraction}{.85}
+\renewcommand{\textfraction}{.05}
+\renewcommand{\floatpagefraction}{.6}
 \setlength{\parindent}{1em}
 \makeatletter
 \setlength{\@fptop}{0pt}
@@ -19,31 +24,36 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-Sensor faults can resemble environmental changes, while sparse acquisition can conceal short events. We evaluate a bounded single-node integration of existing health diagnostics, event-aware schedules and snapshot emission as a simulation-based systems study. The original mechanism (G1) compares frozen internal modes with six fixed periods, independent delta/variance schedules and a clearly labeled Rao-inspired control, using ten development and twenty held-out seeds over 45 scenarios. Native behavior and shared-detector schedule isolation are distinguished. A separately specified stochastic generator (G2) transfers 14 selected systems without retuning to twenty new seeds and 46 scenarios, adding correlated noise, variable-duration events, independent event/fault timing and both-channel faults. In G1, SU40 achieved F1 \SUFone{} and Recall \SURecall{}; its near-budget advantage over Variance was conditional. \input{tables/transfer_abstract.tex} All communication counts use actual stateless Binary v1 encoding and independent receiver decoding. Lower transmission counts and fault-induced reports coexist with missed events and increased ordinary-data age; neither a universally superior mode nor equal-budget quality superiority is established. Two project-defined synthetic mechanisms and ideal local delivery provide stress evidence, without natural-fault, field-effectiveness or measured-energy validation.
+\input{tables/review_abstract.tex}
 \end{abstract}
 
 \section{Introduction}
-Resource-constrained agricultural monitoring must allocate acquisition and communication effort while retaining useful environmental changes. A sensor may report an out-of-range value, become stuck, drift, or disappear. Responding to every apparent change can waste resources and produce environmental false reports; suppressing questionable readings can discard real events. Sampling and emission introduce distinct losses: an unobserved event cannot be recovered from a correct transmitter, and an observed state transition may remain absent from receiver history if it is not emitted.
+Single-node IoT monitoring faces a three-way allocation problem: sparse sampling can miss environmental events, frequent observations can expose sensor artifacts, and transmission suppression can leave the receiver with old information. This matters in resource-constrained agricultural monitoring, but an application motivation does not itself provide evidence from agricultural deployments. The present study evaluates a two-channel software prototype under explicitly synthetic conditions.
 
-Adaptive sampling, fault-aware event detection, predictive transmission, and their coordination have substantial precedents \citep{rao2019adaptive,masoum2012quality,yim2010fault,dias2017dual,arnaiz2024energy}. We therefore ask a narrower empirical question: across two independently specified two-channel simulation mechanisms, what detection, acquisition, communication, and information-age tradeoffs result from integrating existing health diagnostics with causal sampling and explicit emission rules? Are apparent gains retained against independent schedules at nearby acquisition budgets, and which conclusions survive a change of signal, noise, event and fault distributions without retuning?
+Here, \emph{trust-aware} means that decisions use the heuristic state, flags and score supplied by SensorTrust C11. Trust is neither a calibrated fault probability nor a Bayesian reliability model, and it provides no formal guarantee of device trustworthiness. \emph{Resource cost} means software counts of sample cycles, uploads and encoded application bytes; it is not measured energy or battery lifetime. These definitions delimit the research question: \emph{what detection-quality, resource and information-age tradeoffs arise when health-aware sampling and upload rules operate under sensor faults, and which tradeoffs remain under two different synthetic task settings?}
 
-The contribution is threefold. First, we expose an executable integration with full business fields, missing-value semantics, and independently decoded receiver edges. Second, we compare frozen internal modes with independent fixed, delta, variance, and literature-inspired schedules under both native and shared-detector views, retaining adverse operating points. Third, we transfer frozen systems without recalibration to a separately specified stochastic generator with both-channel faults and independently timed variable-duration events, and provide seed-level paired uncertainty, budget requalification, counterfactual fault attribution, and an explicit account of observability and modeling limits. These are systems-evaluation contributions. We do not claim first invention of trust-aware sensing, joint sampling and communication, health diagnostics, deadband transmission, or binary compression.
+Adaptive acquisition, fault-aware event decisions, predictive communication and their coordination already have substantial precedents \citep{rao2019adaptive,masoum2012quality,yim2010fault,dias2017dual,arnaiz2024energy}. The goal is therefore not to establish an optimal SU40 algorithm. The contributions are:
+\begin{enumerate}
+\item An executable integration of existing health diagnostics and change analysis with bounded sampling, explicit upload control, complete binary snapshots and independently decoded receiver evaluation.
+\item A reproducible comparison against fixed-period, Delta, Variance and Rao-inspired schedules, separating native-system behavior, shared-detector diagnostics and actual nearby-budget qualification.
+\item Evidence of conditional tradeoffs and failure boundaries across two synthetic tasks, including adverse independent-baseline comparisons, short-event misses, diagnostic blind spots and information-age costs.
+\end{enumerate}
+The second task changes event-label definitions as well as signal and fault processes. A contrast across these tasks cannot identify the effect of distribution change alone, and neither task validates real-field generalization.
 
 \section{Related Work}
-\paragraph{Adaptive and event-driven acquisition.}
-Rao et al. combine compressed sensing with prediction-based acquisition and adapt switching around critical regions \citep{rao2019adaptive}. Masoum et al. exploit correlation and predictions in decentralized quality-aware sampling \citep{masoum2012quality}. DSRA changes acquisition according to signal changes within an adaptive software architecture \citep{algabroun2020dsra}. These establish both adaptation and architectural integration as prior work. Our Delta and Variance controls are simple independently implemented engineering samplers; they are not reproductions of those papers.
+\paragraph{Adaptive acquisition.}
+Rao et al. combine compressed sensing, prediction and switching around critical-sensing regions \citep{rao2019adaptive}. Masoum et al. study decentralized quality-aware sampling using correlation and prediction \citep{masoum2012quality}. DSRA adapts acquisition to signal changes within a self-adaptive software architecture \citep{algabroun2020dsra}. These precedents rule out claims that adaptation or its architectural integration originates here. Delta and Variance are independently implemented lightweight engineering controls, not reproductions of those papers.
 
 \paragraph{Faults and environmental events.}
-Sharma et al. compare fault-detection families on real deployment datasets \citep{sharma2010faults}; this evidential scope is stronger than injected-fault simulation. Yim and Choi use neighboring readings and confidence to adapt fault-tolerant event decisions \citep{yim2010fault}. CLARA uses cluster correlation for sampling and reconstructs missing readings at the sink \citep{harb2024clara}. TAIS has no spatial redundancy or reconstruction of erased environmental truth. Its SensorTrust C11 health rules are an unchanged separately pinned dependency.
+Sharma et al. evaluate fault-detection methods and fault prevalence in real deployment datasets \citep{sharma2010faults}; those data have a different evidential scope from our injected faults. Yim and Choi use neighboring readings and confidence for fault-tolerant event decisions \citep{yim2010fault}. CLARA uses cluster correlation for sampling adaptation and missing-reading reconstruction \citep{harb2024clara}. TAIS has no spatial reference or reconstruction of erased physical truth. Its C11 diagnostic rules and AdaptiveSense change analyzer are separately pinned software dependencies, not newly introduced fault classifiers.
 
-\paragraph{Communication and coordinated control.}
-Dias et al. analyze dual prediction and aggregation \citep{dias2017dual}. Arnaiz et al. coordinate dynamic sampling and dual prediction under energy constraints \citep{arnaiz2024energy}. Thus coordinated acquisition and communication, multi-mode tradeoffs, and resource objectives are not new concepts here. TAIS emits complete last-sent-deadband snapshots with heartbeat and mandatory state edges. It has no synchronized predictor, network-level optimization, or demonstrated hard energy guarantee. The repository's related-work matrix distinguishes inspected abstracts from detailed method inspection; no cross-paper performance numbers are treated as directly comparable benchmark results.
+\paragraph{Communication and joint control.}
+Dual prediction reduces transmissions through synchronized models \citep{dias2017dual}, and relevance-aware monitoring coordinates acquisition and prediction under energy constraints \citep{arnaiz2024energy}. TAIS instead uses a last-sent deadband, heartbeat and explicit state edges, without a synchronized predictor, network optimizer or validated energy guarantee. The related-work artifact distinguishes detailed Rao-method inspection from abstract-level scope checks for other sources. No cross-paper performance numbers are treated as directly comparable results. Our Rao-inspired control omits compressed-sensing reconstruction and major prediction components; the original method's guarantees do not apply.
 
-\section{System Architecture}
-\begin{figure}[htbp]
-\centering
+\section{System and Evaluation Interface}
+\begin{figure}[tbp]\centering
 \begin{tikzpicture}[node distance=4mm,box/.style={draw,rounded corners,align=center,font=\footnotesize,text width=50mm,minimum height=8mm},>=Stealth]
-\node[box] (input) {Timestamped source stream\\\texttt{signals.py} or external records};
+\node[box] (input) {Timestamped source stream\\G1 / G2 synthetic observations};
 \node[box,below=of input] (due) {Due-time sample selection\\\texttt{replay.py / core\_stream.py}};
 \node[box,below=of due] (policy) {Native policy: C11 + ChangeAnalyzer\\GateOnly / JO-S / SU20,30,40};
 \node[box,right=9mm of policy] (ind) {Independent schedule + ChangeAnalyzer\\Delta / Variance / Rao-inspired / Fixed};
@@ -53,191 +63,163 @@ Dias et al. analyze dual prediction and aggregation \citep{dias2017dual}. Arnaiz
 \draw[->] (input)--(due);\draw[->] (due)--(policy);\draw[->] (due.east)-|(ind.north);
 \draw[->] (policy)--(up);\draw[->] (ind.south)|-(up.east);\draw[->] (up)--(wire);\draw[->] (wire)--(rx);
 \end{tikzpicture}
-\caption{Implemented data path. The common-detector view reuses actual native sample times and replaces detection and emission downstream; it never feeds its outputs back into the schedule. Optional C11 logging on independent methods does not gate their observations.}
+\caption{Implemented causal data path. The receiver observes decoded snapshots only. Independent +C11 versions attach diagnostics without health gating; optional U is an explicitly shared component. A separate G1 common-detector view preserves actual sample times and replaces only downstream detection and emission.}
 \label{fig:architecture}
 \end{figure}
 
-SensorTrust C11 supplies per-channel state, score, and flags. These are heuristic diagnostics, not calibrated fault probabilities. AdaptiveSense provides the original change analyzer and scheduler. GateOnly uses causal health gating and recovery reseeding without the later confirmation mode. JO-S adds bounded rechecks. JO-SU-20/30/40 retain that sampling design with different idle caps and attach U. U compares current sampled values with the last sent snapshot, emits on event or health state/flag edges and validity changes, applies a two-noise-floor deadband, and has a 120-second heartbeat evaluated at sample times. Health score is retained in every emitted snapshot even when score-only changes do not trigger emission.
+The input contains timestamped temperature and humidity observations. Each policy reads values only when its sample is due; hidden generator parameters, event labels, faults and future observations are unavailable to decisions. SensorTrust C11 emits per-channel state, flags and score. AdaptiveSense supplies the original scheduler and ChangeAnalyzer. GateOnly applies health gating and recovery reseeding. JO-S adds bounded rechecks; JO-SU-20/30/40 retain that sampling design with different idle caps and attach upload module U. The historical default and prior NO-GO decisions are unchanged.
 
-Binary v1 preserves timestamps, two values including null, two event booleans, and all available health state/score/flags. We measure encoded byte length, excluding hexadecimal logging representation. Every frame is stateless and independently decodable; CRC checks accidental corruption and provides no authentication. Layout provisioning is shared configuration. There is no ACK, retransmission, packet fragmentation, or deployed LoRaWAN/MQTT stack. The evaluated link delivers every emitted complete frame locally. The receiver only sees decoded frames and detects event starts from received false-to-true transitions. Local cleared states are not implicitly transmitted.
+U compares a sampled value with the last transmitted snapshot, using a two-noise-floor deadband, a 120-second heartbeat evaluated at sample times, and emission on event, health state/flag and validity transitions. Score remains in every emitted health record, although a score-only change need not trigger transmission. Binary v1 retains timestamps, both values including null, event booleans and available health fields. Actual encoded length excludes hexadecimal log representation. Stateless frames decode independently; CRC checks accidental corruption, not authentication. The evaluated transport is ideal local delivery, without radio headers, loss, ACKs or retransmission.
 
-The historical H layer added trend-based health suspicion but lost true events and increased other false reports. It is excluded from the present frozen SU modes; its negative findings remain in the historical evidence rather than being presented as a new successful contribution. GateOnly remains the historical default; this paper does not retroactively reverse prior NO-GO decisions.
+Three outcome levels remain distinct. A \emph{local detection} is an active sampled episode; a \emph{sender report} is its first requested upload; a \emph{receiver report} is a false-to-true event transition reconstructed from decoded frames. A local clearing edge does not automatically reach the receiver. Exact sampled event and health transitions, including clears, are audited separately from environmental-event-to-report delays.
 
-\section{Methodology}
-\subsection{Synthetic data and split}
-Each run contains 1,800 one-second source rows with temperature and humidity, a smooth low-amplitude background, independent Gaussian observation noise, and trapezoidal environmental interventions. The generator separates latent environmental values, noisy pre-fault observations, and faulted observations. Labels use physical intervention definitions rather than a method's detection score. Three clean controls and seven fault classes (range, spike, stuck, drift, missing, invalid, stable offset), each crossed with no event, same-channel event, or cross-channel event and short/long profiles, yield 45 scenarios. The actual labeled event window can differ from the injected trapezoid support. In G1, faults affect temperature; cross-channel events affect humidity. This asymmetry is retained in the original results and is separately stress-tested by G2, rather than retrospectively changing G1.
+\section{Methods}
+\subsection{Two synthetic tasks, including different truth definitions}
+Both tasks supply 1,800 one-second source rows and separately retain latent physics, noisy pre-fault observations, faulted observations, event truth and fault schedules. All methods use identical instances within a task. The seven fault semantics are range, spike, stuck, drift, missing, invalid and stable offset. These are engineering stress distributions, not empirically fitted agricultural populations.
 
-We audited accessible local structured artifacts, Git-ref histories, and archive seed identities before allocating development seeds 600--609 and final seeds 610--629. Seeds 0--599 were reserved. Fresh seeds change noise and timing jitter within the same generator; they are not external data generalization. All methods share the identical observed trace for each seed/scenario, verified by fingerprints. No external greenhouse record is included in the effectiveness experiment; unresolved source-clock semantics from prior work are not repaired by interpolation.
+\paragraph{G1.}
+The original mechanism uses a low-amplitude sinusoidal background, independent Gaussian noise and trapezoidal interventions with 26- or 180-second injected support. Physical-amplitude and duration rules determine interior event-label windows, which need not equal full injected support. Temperature carries the faults; same-channel events affect temperature and cross-channel events affect humidity. Event onset has a prescribed fault-relative delay. Three clean controls and seven fault kinds crossed with no/same/cross event arrangements and short/long profiles yield 45 scenarios. Development seeds 600--609 selected external operating points; final seeds 610--629 were evaluated after the committed freeze.
 
-\subsection{Independent transfer generator and zero-retuning protocol}
-G2 is specified in a separate module and configuration; it does not call G1 generation or use detector output to accept instances. The background is a discrete mean-reverting process,
+\paragraph{G2.}
+The independently specified second mechanism uses piecewise random targets and a mean-reverting background,
 \begin{equation}
-b_{c,t}=b_{c,t-1}+0.003(\mu_{c,t}-b_{c,t-1})+s_c z_{c,t},
+b_{c,t}=b_{c,t-1}+0.003(\mu_{c,t}-b_{c,t-1})+s_cz_{c,t}.
 \end{equation}
-with piecewise random targets lasting 180--360s. Centers are uniform 22--28$^\circ$C and 40--60\%RH; target standard deviations are0.35$^\circ$C/1.75\%RH and innovation scales 0.006$^\circ$C/0.03\%RH. Temperature/humidity innovation correlation changes between segments within $[-0.65,0.2]$. Separate observation noise is AR(1) with channel-specific coefficient 0.65--0.9, base scales 0.08$^\circ$C/0.4\%RH, and amplitude multipliers 0.6--1.8 changing every 120 s. With probability 0.002, an innovation adds a scaled Student-$t_3$ perturbation. These are declared stress distributions, not fitted agricultural estimates.
+Target durations are 180--360 seconds. Hidden centers vary within 22--28$^\circ$C and 40--60\%RH; channel-innovation correlation changes between segments. Observation noise is AR(1), with coefficients 0.65--0.9, amplitude changes every 120 seconds and occasional Student-$t_3$ perturbations. Event-enabled channels receive short (12--40s), medium (41--100s) and long (101--240s) interventions with step/recovery, smooth or asymmetric shapes. Fault onset, duration, signed magnitude and recovery vary; both channels can be faulty. Drift integrates piecewise slopes, stuck retains the actual onset reading, and missing/invalid preserve their declared semantics. Event and fault schedules use independent SHA256-derived random streams; before/after/overlap relations are classified offline, not selected by detector outcomes.
 
-Each event-enabled channel receives one short 12--40s, medium 41--100s and long 101--240s intervention, permuted among independently sampled onset strata 180--300,660--780 and 1140--1260s. Step/exponential-recovery, smooth sine-squared and asymmetric beta-shaped pulses replace G1's fixed trapezoid. Signed magnitudes are1.8--4.8$^\circ$C/6--18\%RH. G2 truth is the complete exogenous support $[t_0,t_0+d)$, represented by inclusive scoring window $[t_0,t_0+d-1]$ on the 1 Hz grid; it is never thresholded using ChangeAnalyzer. This differs from G1's physical-amplitude-derived interior labels. Consequently, absolute G1/G2 rates describe different tasks; we compare within-generator contrasts and direction stability, not pooled superiority.
+G2 labels the \emph{complete exogenous support} $[t_0,t_0+d)$, represented on the source grid by inclusive window $[t_0,t_0+d-1]$. This is not G1's amplitude-defined interior window. Thus G1/G2 differ jointly in dynamics, noise, fault processes, event shapes, timing and \textbf{ground-truth interval definitions}. We compare within-task contrasts and their stability; we neither pool task outcomes nor attribute a contrast change to a single factor.
 
-All seven fault kinds occur on either channel. Fault starts are independently drawn from 150--1300s, core durations 120--360s. Range replacements are explicitly outside physical limits; missing and invalid mean None and NaN; stuck holds the actual onset reading. Spikes comprise three independently placed 1--3s bursts, scored as separate episodes. Signed offsets and three-segment random drift slopes have 30--100s linear recovery tails. The 46-case matrix contains four clean controls and seven kinds $\times$ two fault channels $\times$ no/same/cross event arrangements. Event-enabled fault runs contain three events; the clean both-channel control contains six. Before/after/overlap/nonoverlap relations are classified from independent schedules, not prescribed by a fault-relative delay. All difficult and fully overwritten events remain in the denominators.
+G2 includes four clean controls and seven fault kinds crossed with two faulty channels and no/same/cross event arrangements, yielding 46 scenarios. Engineering seeds 690/691 checked software only; the committed specification and analysis preceded final seeds 700--719. Fourteen frozen native systems were applied without retuning, generating the archived 12,880 system runs. G1 and G2 protocols, configuration, source hashes, complete schedules and all adverse instances remain available in the artifact. This revision uses stored outputs only and adds no simulation campaign.
 
-Independent SHA256-derived RNG streams generate environment, noise, event family and fault channel. Fault-kind comparisons share the exact background/noise/event stream when intended. Counterfactuals copy the same noisy physical sequence and remove only faults; cache identity hashes the complete clean observations and labels, preventing old relation/profile cache collisions. Online replay receives only an observation facade, without scenario, seed, labels, latent/noisy arrays or hidden parameters. Unsampled-value replacement and future-truncation tests verify causal decisions.
+\subsection{Controls, shared components and selection history}
+Fixed5/10/20/30/40/60 reuse the original periodic replay, sample only due-time values and upload every sample. Delta responds to consecutive sampled amplitude and timestamp-normalized rate. Variance uses elapsed-time EWMA dispersion. Both increase sampling when their sampled statistic crosses a selected threshold and double the interval after sustained sampled stability, within fixed bounds. Rao-inspired uses at most four sampled points for linear trend/boundary prediction, with critical bands around fixed public priors and hysteresis. Its four-point fit is inspired by Rao's Eqs.~11--13, but it omits CS reconstruction, previous-day tolerance estimation, synchronized dual prediction and substitution of predictions for observations. All engineering departures are documented; this is \emph{not a faithful reproduction}.
 
-Engineering seeds 690/691 validate software only. The specification, source/analysis hashes, scenarios, metrics and unchanged operating points were committed before the single formal 20-seed campaign (700--719), yielding 12,880 native-system runs across 14 methods. The five frozen TAIS modes, six fixed +C11 periods and three frozen SU40-targeted independent+C11 controls are transferred without selection or tuning. In particular Rao-inspired retains 24$^\circ$C/45\%RH priors despite G2's different hidden centers. A favorable or adverse result does not trigger recalibration. G2 has its own 5,000-draw whole-seed paired bootstrap (RNG seed 2026101923), with no G1/G2 pooling. Actual G2 budget gaps independently determine the original $\pm5\%$ qualification. Per-event coverage/duration/masking and raw any-flag versus correct-type diagnostics supplement the unchanged matcher; stable offset has no C11 type bit and typed detection is N/A.
+Independent native schedules use the same sampled-only ChangeAnalyzer and every-sample emission. Explicit +C11 versions add unchanged diagnostics without affecting their schedules or event decisions. Selected +C11+U versions attach the public upload module as a diagnostic ablation. These extensions must not be mistaken for original external algorithms containing TAIS components. In G1, an additional common-detector view preserves each native sample schedule and applies identical downstream ChangeAnalyzer, metadata-only C11 and per-sample emission. It isolates sample-time consequences; native-system comparisons additionally contain gating, resets and upload effects.
 
-\subsection{Independent schedules and explicit shared components}
-Fixed5/10/20/30/40/60 reuse the frozen replay implementation, sample the first available source row at or after due time, and upload every sample. On the dense integer grid this gives strict periodic times. They read only due-time values and have no native health diagnostic. The common event analyzer sees only actual sampled points.
+G1 selected Delta/Variance thresholds from 2/4/8 and Rao-inspired thresholds from 4/8/12 at cap40 by development micro F1, then Recall, fewer samples and smaller threshold. An initial cap-only matching attempt failed; the retained, disclosed development refinement searched minimum intervals 10--35s and caps20--60s at the selected thresholds. Within the development qualification band, selection prioritized F1 and then closeness of sample totals. All fixed periods and original adaptive curve points remain in the held-out evidence. The final SU40-targeted controls use minimum/cap intervals of 10/50s (Delta), 10/60s (Variance) and 10/35s (Rao-inspired), with thresholds 2, 2 and 4 noise-floor units, respectively. G2 changes none of these choices: in particular, Rao-inspired retains 24$^\circ$C/45\%RH priors despite different hidden centers.
 
-For Delta, with channel noise scale $\sigma_c$, consecutive finite observations define
+\subsection{Metrics and operational definitions}
+The channel-aware one-to-one event matcher retains its 5-second tolerance. Precision, Recall and F1 use pooled TP/FP/FN within each task; no-event Recall is undefined, not zero. Local, sender and receiver counts remain separate. Coverage means at least one actual sample inside the truth support; covered-event success is conditional and does not replace Recall. Event delays exclude misses and are accompanied by FN and archived matched-in-both delay differences.
+
+A \emph{fault-induced false report} is an operational attribution: an unmatched report on the fault channel during its fault or 120-second recovery window, without a coincident same-policy clean-counterfactual report within 5 seconds. The clean counterfactual preserves the exact physical sequence and noise, removing faults only; G2 cache identity hashes the full clean observations and labels. This statistic depends on attribution windows and matching tolerance and is not proof of strict physical causation. Health evaluation separately counts any raw C11 flag and the corresponding type bit. Stable offset has no dedicated C11 bit, so correct-type detection is N/A; another flag does not count as the right type.
+
+Resource outcomes count actual sample cycles, uploads, $\sum\mathrm{len}(\mathrm{encode}(\mathrm{envelope}))$, and bytes/upload. Receiver age is current source time minus the timestamp of the latest decoded snapshot; null remains null. P95 pools all source-second age histograms rather than averaging per-run percentiles. Sampled-edge delivery and physical-event delay are different quantities.
+
+\emph{Budget qualification} is an approximate count comparison, not exact equal-cost control. For target sample total $N_T$ and independent total $N_C$, the relative gap is
 \begin{equation}
-D_t=\max_c\left\{\frac{|x_{c,t}-x_{c,t^-}|}{\sigma_c},\;\frac{20|x_{c,t}-x_{c,t^-}|}{\sigma_c(t-t^-)}\right\}.
+g=(N_C/N_T)-1,\qquad \text{qualified if } |g|\leq\epsilon.
 \end{equation}
-Crossing a development-selected threshold requests the minimum interval. Variance uses elapsed-time EWMA statistics, with $\alpha=1-\exp[-(t-t^-)/60]$, residual $d=x_t-m_{t^-}$, $m_t=m_{t^-}+\alpha d$, and $v_t=(1-\alpha)(v_{t^-}+\alpha d^2)$. It triggers on $\max_c\sqrt{v_{c,t}}/\sigma_c$. Both restore the interval by doubling after 60 seconds of sampled stability, up to the cap. They use constant bounded state; invalidity transitions trigger a dense period without classifying a physical fault.
+The original frozen rule used $\epsilon=0.05$ on actual totals. This revision's post-hoc sensitivity uses 0.02, 0.05 and 0.10 on the same saved points. It changes eligibility labels only, never parameters, samples or quality outcomes.
 
-Rao-inspired uses at most four sampled timestamp/value pairs per channel for least-squares trend fitting and predicts entry into a prior critical band. This is inspired by Rao's line fitting and boundary-time reasoning (their Eqs.~11--13), but is not their full algorithm. Bands are centered on public configured priors (24$^\circ$C,45\%RH), with width set by selected noise-floor multiples. A sampled excursion or a predicted crossing within one cap requests dense observations; an inner 75\% band and stable dwell govern return. There is no CS reconstruction, previous-day Student-$t$ tolerance, dual-end prediction, model training/synchronization, or prediction-based substitution. The original paper's performance and guarantees cannot be transferred to this adaptation.
+\subsection{Uncertainty and the status of the analyses}
+Each task uses paired whole-seed bootstrap resampling (5,000 draws), retaining all scenarios of a resampled seed and recomputing micro rates. There are 20 final seed clusters per task; source seconds and scenario rows are not independent replicates. G1 and G2 use their separately frozen analysis seeds and are never combined for inference.
 
-All three native independent samplers use the same sampled-only ChangeAnalyzer for event decisions and upload every sample. Explicit ``+C11'' versions add unchanged diagnostics without affecting schedules/detection. Three cap 40 ``+C11+U'' versions add the same TAIS emission component as a diagnostic ablation and are not completely independent original systems. The \emph{common} view applies identical per-channel ChangeAnalyzer, metadata-only C11, and every-sample emission to every native schedule, including TAIS. It isolates the consequences of sample times, not a complete independent-system comparison. Native TAIS sampling decisions still originate from its native internal health and event states.
+The repository protocols defined metric families, contrast lists, seed splits and the 5\% budget rule before their final runs. G1 development selection and the G2 no-retuning condition were likewise frozen. These are repository-frozen evaluation plans, not independently registered confirmatory trials or a design with one unique primary endpoint. Emphasizing F1, Variance and Fixed20 in the present narrative is a \emph{post-outcome editorial choice}. The fixed-point discussion and three-tolerance sensitivity are explicitly exploratory.
 
-\subsection{Development selection and budget matching}
-At cap 40, thresholds 2/4/8 for Delta and Variance and 4/8/12 for Rao-inspired are ranked by development micro F1, then Recall, fewer samples, and smaller threshold. Selected thresholds are \DeltaThreshold, \VarianceThreshold, and \RaoThreshold, respectively. Native minimum 5~s and caps 20/40/60 remain in the final tradeoff curves. All fixed periods remain.
+All reported intervals are pointwise, unadjusted, descriptive 95\% intervals. Many baselines, metrics and subgroups were examined. No family-wise error or false-discovery control is claimed; no new confirmatory test or adjusted $p$-value is retrofitted. An interval excluding zero describes that contrast under its seed-resampling assumptions and does not establish global superiority. An interval including zero establishes neither equivalence nor the direction of an overall effect.
 
-An initial cap-only development search failed to match either target; those results are retained. A disclosed development-only refinement searches independent minimum intervals 10/15/20/25/30/35s and caps 20--60~s in 5~s steps, requiring minimum $\leq$cap, at the already selected quality thresholds. Among points within 5\% of the GateOnly or SU40 development sample total, the rule selects highest F1, then closest budget, larger cap, and smaller minimum; if none qualify, it retains the closest failure. These bounds impose explicit acquisition budgets and can reduce short-event observability. Frozen TAIS points are unchanged. Actual final gaps determine whether a comparison qualifies as approximately matched; final data never adjust parameters. All code/configuration/points were committed before final execution.
-
-\subsection{Outcomes and uncertainty}
-The frozen one-to-one channel-aware event matcher uses a 5~s tolerance. A report may therefore precede a label boundary by up to 5~s; this tolerance does not imply forecasting or future access. We report TP/FP/FN and derived Precision/Recall/F1 separately for sender-on-upload and receiver-edge reports, with local detection counts also retained. Recall is undefined, not zero, in no-event runs. Short/long and same/cross groups remain separate. Conditional event delays must be read together with misses; matched-in-both delay differences are separately available. The operational ``fault-induced'' count is an unmatched fault-channel report within the fault or 120~s recovery window that lacks a coincident report (within 5~s) in the same-policy clean counterfactual. This is a simulator attribution definition, not proof of physical causal diagnosis.
-
-Costs count actual sampled cycles, uploads, encoded bytes, mean bytes/upload, source-second pooled P95/maximum age, and sample-to-emission delay for exact sampled event/health signatures. Physical-event-to-report delay is distinct. No receiver carries a future value backward in time, and decoded null remains null. Health detection uses raw C11 flags; capability and rate are N/A for methods without health metadata.
-
-We resample whole random seeds in paired fashion (5,000 bootstrap draws, fixed RNG2026101917); scenario rows and source seconds within a seed are not independent replicates. Intervals describe uncertainty within the synthetic family, and many contrasts/endpoints prohibit a broad significance claim from one favorable comparison. All per-run metrics, grouped summaries, candidate results, fingerprints, and frame archives are retained or deterministically reproducible.
-
-\section{Experimental Results}
-The following original-generator results are G1 only. G2 is reported separately in Section~\ref{sec:transfer}.
-\input{tables/results_overview.tex}
-\begin{table}[htbp]\centering\footnotesize
-\caption{Representative native modes on the final split. P/R/F1 are sender percentages; FI is the operational fault-induced false-report count. ``AS'' lacks health information. Every other listed mode carries full C11 metadata. Full native operating points appear in the appendix. Var and Rao abbreviate Variance and Rao-inspired; S denotes JO-S.}
-\input{tables/native_main.tex}\label{tab:native}
+\section{Results}
+\subsection{Quality and resource tradeoffs within each task}
+Table~\ref{tab:quality} places the same 14 native health-information systems side by side, keeping task-specific denominators separate. The full G1 native/common points, G2 receiver outcomes and adverse fault groups are in Appendices~\ref{app:complete}--\ref{app:diagnostics}. Figure~\ref{fig:quality} uses separate task panels and discrete markers; it does not depict a causal distribution-shift trajectory.
+\begin{table}[tbp]\centering
+\caption{Sender Precision, Recall and F1 (\%), separately for G1 and G2. All listed methods carry C11 information. B denotes the G1-selected SU40-targeted independent budget point, not guaranteed matching on G2. ``AS+C11'' is AdaptiveSense+TrustLog; ``Var'' is Variance. The full name Rao-inspired is retained.}
+\input{tables/review_quality.tex}\label{tab:quality}
 \end{table}
-
-\subsection{Nearby acquisition budgets}
-\input{tables/budget_text.tex}
-\begin{table}[htbp]\centering\footnotesize
-\caption{Development-selected independent +C11 budget points. Differences are TAIS target minus independent method in percentage points; intervals are descriptive seed-paired95\% F1 intervals. Gap is independent samples relative to target. Bounds are minimum/cap in seconds. Qualification is based on final actual samples.}
-\input{tables/budgets.tex}\label{tab:budgets}
-\end{table}
-The complete table includes comparisons that favor independent methods. Higher Recall at higher sample totals is not evidence of equal-budget superiority. The common-detector view is reported in Figure~\ref{fig:common} and the appendix; differences from native outcomes show the contribution of gating and state resets as well as scheduling.
-
-\begin{figure}[htbp]\centering\includegraphics[width=\linewidth]{figures/native_tradeoffs.png}
-\caption{Native operating points with full health metadata. Labels on independent/fixed points denote caps/periods; their native minimum is 5~s. Points are discrete, with no smoothing or interpolated operating points. Budget-bound variants are tabulated separately.}\label{fig:native}
+\begin{figure}[tbp]\centering\includegraphics[width=\linewidth]{figures/review_task_quality.png}
+\caption{Discrete sender quality under two different synthetic tasks. Open circles denote Recall and crosses denote F1, distinguishable in grayscale. Methods and parameters are frozen, but signal/fault/timing and truth definitions differ. Absolute task rates are not pooled or interpreted as an isolated distribution effect.}\label{fig:quality}
 \end{figure}
-\begin{figure}[htbp]\centering\includegraphics[width=\linewidth]{figures/common_tradeoffs.png}
-\caption{Actual native sample schedules under identical detection, C11 logging and every-sample emission. This is schedule isolation. It is not a claim that external original methods contain TAIS health gates.}\label{fig:common}
-\end{figure}
+\input{tables/review_contrasts.tex}
+\input{tables/review_modes.tex}
 
-\subsection{Faults, short events, and receiver state}
-\input{tables/fault_text.tex}
-\begin{table}[htbp]\centering\footnotesize
-\caption{All fault classes, retaining adverse groups. R is sender Recall (\%); FI is operational fault-induced reports. No-event runs remain in false-report totals; their individual Recall is N/A.}
-\input{tables/faults.tex}\label{tab:faults}
-\end{table}
-\begin{table}[htbp]\centering\footnotesize
-\caption{Selected mode boundaries. Short/long/same/cross are sender Recall percentages. FD is raw C11 any-flag detection rate; event delay is conditional on sender hits. P95/max age pools all source seconds for that method.}
-\input{tables/boundaries.tex}\label{tab:boundaries}
-\end{table}
-\input{tables/receiver_text.tex}
-
-\begin{table}[htbp]\centering\footnotesize
-\caption{Communication and exact sampled-edge delivery. E/H denote event/health. Edge lags concern detected sampled transitions, not physical occurrence. U rows on independent methods explicitly reuse a TAIS component.}
-\input{tables/communication.tex}\label{tab:communication}
+\subsection{Actual acquisition budgets and receiver age}
+Table~\ref{tab:resources} reports measured software counts and original-rule qualification. A gap compares the displayed method with SU40 \emph{within the same task}; identical labels do not imply identical counts across tasks. Counts across G1/G2 should not be ratioed as if event/fault mixtures were the same. GateOnly+U remains a lower-cost option with the same sender quality as GateOnly; no mode is removed for being competitive.
+\begin{table}[htbp]\centering
+\caption{Native software resource counts, operationally attributed FI reports, pooled P95 source-data age and sample-gap qualification relative to each task's SU40. A ``yes'' marks $|g|\leq5\%$, not exact equal budgets. Fixed periods and all three independent budget controls are retained. Upload counts, mean bytes/upload and maximum age remain in the appendix/artifact.}
+\input{tables/review_resources.tex}\label{tab:resources}
 \end{table}
 
-\subsection{Conditional resource sensitivity}
-\begin{equation}
-C=N_{\rm sample}a+N_{\rm upload}b+B_{\rm v1}+P .
-\end{equation}
-Byte cost is normalized to1; sample-to-byte and fixed-upload-to-byte ratios vary independently over 0.01--10,000. Figure~\ref{fig:cost} assumes equal processing cost ($P$ cancels), not measured equivalence. The accompanying grid also gives the extra-processing break-even allowance. No device energy coefficients are inferred. These plots illustrate conditional software-cost rankings and cannot support battery-life percentages.
-\begin{figure}[htbp]\centering\includegraphics[width=\linewidth]{figures/resource_sensitivity.png}
-\caption{SU40 modeled cost divided by each named comparator. Ratios below1 favor SU40 only under the displayed coefficients and equal-processing assumption. No current, radio airtime or joules were measured.}\label{fig:cost}
-\end{figure}
+The complete post-hoc sensitivity table (Appendix~\ref{app:sensitivity}) includes all existing independent +C11 native control--target pairs at 2\%, 5\% and 10\%. Five percent reproduces the historical rule; the three-way sensitivity analysis itself is new and post hoc. Threshold changes qualify or disqualify some existing comparisons without changing any performance value. In particular, fixed-period and development-named controls are not reselected to obtain a favorable match.
+\input{tables/review_receiver.tex}
 
-\subsection{Cross-Generator Evaluation}\label{sec:transfer}
-The formal G2 campaign completed all predeclared seeds, scenarios and methods. Table~\ref{tab:transfer} retains all six fixed periods and all selected native systems. The G1 tables above are unchanged. Figure~\ref{fig:transferquality} places the two tasks side by side; it does not combine their event counts or uncertainty. The declared input example and duration view are in Figures~\ref{fig:transfertrace} and~\ref{fig:transferduration}.
-\input{tables/transfer_results.tex}
-\begin{table}[htbp]\centering\footnotesize
-\caption{G2 native systems only, all 20 seeds and 46 scenarios. P/R/F1 and RxF1 are percentages; FI is the operational fault-induced report count. All methods carry full unchanged C11 metadata and use actual Binary v1. Independent budget names retain G1-selected parameters, not an assertion of G2 budget equality.}
-\input{tables/transfer_main.tex}\label{tab:transfer}
-\end{table}
-\begin{table}[htbp]\centering\footnotesize
-\caption{G2 actual budget qualification. Gap is independent samples relative to SU40. Differences/intervals are SU40 minus control; intervals use paired whole-seed resampling and are descriptive. All six fixed periods also receive literal gap checks; their unplanned fixed-point intervals were not estimated.}
-\input{tables/transfer_budgets.tex}\label{tab:transferbudget}
-\end{table}
-\begin{figure}[htbp]\centering\includegraphics[width=\linewidth]{figures/transfer_quality_comparison.png}
-\caption{Separate G1/G2 Recall and F1 for the same frozen methods. Label ``B'' denotes a G1-selected budget control; AS+Trust is AdaptiveSense+TrustLog. Each generator has a different event/fault distribution and truth geometry. No pooled inference or interpolated operating point is shown.}\label{fig:transferquality}
-\end{figure}
-\input{tables/transfer_failures.tex}
-\begin{table}[htbp]\centering\footnotesize
-\caption{G2 event boundaries (percentages). Short/medium/long refer to actual injected durations 12--40/41--100/101--240s. Coverage is at least one actual sample within full support; Hit/covered is conditional sender success. Masked denotes dynamic support fully replaced by range/stuck/missing/invalid faults, not a claim of recoverability.}
-\input{tables/transfer_boundaries.tex}\label{tab:transferboundary}
-\end{table}
-\input{tables/transfer_receiver.tex}
-\begin{table}[htbp]\centering\footnotesize
-\caption{G2 actual uploads, bytes/upload, ordinary source-data age and missed sampled event/health edges. Age mean pools equal-duration source grids; P95 pools complete integer-age histograms. Clearing and rising edges are both checked against decoded snapshots.}
-\input{tables/transfer_communication.tex}\label{tab:transfercommunication}
-\end{table}
-\begin{figure}[htbp]\centering\includegraphics[width=\linewidth]{figures/transfer_duration_recall.png}
-\caption{Actual injected durations: G1 has two fixed supports; G2 uses the displayed discrete ranges. No smoothing or cross-bin interpolation. G1's labels cover interior amplitude-defined windows, while G2 labels full exogenous support.}\label{fig:transferduration}
-\end{figure}
+\subsection{Failure boundaries}
+\input{tables/review_failures.tex}
+Raw health detection also depends on when the frozen C11 rule receives observations. A sampled flag need not identify the physical cause, and conditional flag delays omit undetected episodes. Full-support replacement and no-sample coverage are retained in all overall denominators; finite-valued coverage is separately archived. These findings delimit the information available to a single node, rather than validating recovery of hidden events.
 
 \section{Discussion}
-The original-generator findings below remain scoped to G1. The transfer discussion follows separately.
-\input{tables/discussion_results.tex}
-More frequent observations can increase short-event coverage and allow a debounced detector to confirm events before they disappear. They also expose more sensor artifacts, and the health detector itself receives a different sequence. Consequently, acquisition counts and fault-induced false reports must accompany Recall. A sampled raw health flag can be wrong or delayed; it is not evidence of a uniquely identified physical failure.
+\subsection{What the G1/G2 comparison establishes}
+\input{tables/review_task_interpretation.tex}
+Both tasks were specified within this project. Their differences provide a useful stress test of a broad superiority claim, but do not isolate the causes of a changed contrast or simulate an external-field validation. The lower Recall interval against Variance must be read as one descriptive endpoint among many, alongside the F1 interval spanning zero. Likewise, Fixed20's higher observed F1 is important adverse evidence, not a new confirmatory global ranking.
 
-Emission U changes a different objective: it can preserve sampled event and health edges while reducing ordinary snapshots, thereby increasing normal-data age. Its diagnostic use on independent samplers is important: any similar gain there is evidence for a reusable communication rule, not exclusive novelty of the TAIS schedule. Joint sampling and communication effects must not be inferred by deleting health fields or comparing binary bytes against JSON on a competitor.
+\subsection{Fixed20 versus SU40: conflicting objectives}
+\input{tables/review_fixed_tradeoff.tex}
+\begin{figure}[tbp]\centering\includegraphics[width=\linewidth]{figures/review_fixed20_tradeoff.png}
+\caption{G2 tradeoff at nearby acquisition totals: filled bars are SU40 and hatched bars Fixed20+C11. Panels show actual values on their own scales; higher is preferable for F1, whereas other objectives depend on the application's cost and freshness requirements. No single aggregated utility or hardware-energy model is imposed.}\label{fig:fixedtradeoff}
+\end{figure}
+\input{tables/review_upload.tex}
+Accordingly, the native comparison measures complete system choices, not the isolated originality of a sampling rule. A deployment selecting a mode would need to specify acceptable misses, attributed false reports, age and transmission overhead. The data do not supply a universal weighting or an optimal default.
 
-The historical H failure warns against interpreting a trend as a physical fault: slow environmental changes and stable offsets can resemble sensor drift, and added suspicion can suppress true events. Historical SU20 prioritizes detection with extra sampling; SU40 is a different resource operating point, not a universal improvement. The present comparison retains both, as well as GateOnly and the simpler GateOnly+U option. The study offers evidence for choosing a mode under explicit objectives, not a theorem that all objectives can be optimized simultaneously.
+\subsection{Implications of the negative cases}
+More samples can expose an event often enough to confirm it, but can also expose additional sensor artifacts. The historical H layer illustrates the risk of treating a slow trend as fault evidence: it lost true events and added other false reports. Its NO-GO finding and the unchanged historical default remain part of the research record; they are not new successful contributions. Stable offsets, slow physical changes and drift can remain ambiguous without independent references. Sampling cannot restore values overwritten by a fault or events never observed between samples.
 
-\subsection*{Transfer interpretation}
-\input{tables/transfer_discussion.tex}
+Communication suppression addresses a different objective. The measured byte reduction is useful software evidence, but it excludes packet headers, receive windows, airtime, modulation, contention and retries. Even an additive model $C=aN_{\rm sample}+bN_{\rm upload}+B+P$ is conditional on weights and processing cost. The archived dimensionless sensitivity grid assumes equal processing when comparing ratios; it is not a measured joule model. In particular, byte ratios cannot establish equal energy ratios or battery-life gains.
+
 \section{Limitations and Threats to Validity}
-\paragraph{Observability and identifiability.}
-An event entirely between samples is unavailable to every sampled-only method. A fault that completely overwrites the true same-channel signal removes recoverable information. Without independent references, stable offsets and some drift/environmental-change combinations are ambiguous. More samples cannot reconstruct information that is absent from the sensor output. Greater Recall can coexist with greater fault-induced false reporting.
+\paragraph{Task validity and identifiability.}
+The evidence consists of two project-defined synthetic tasks, not natural-fault or agricultural-event ground truth. G1 has temperature-only faults and prescribed timing; G2 broadens mechanisms and faulty channels but changes label geometry too. These factors are confounded, so no individual shift effect is identified. The source distributions, amplitudes, timing strata and pulse definitions may favor particular detector behaviors. No claim of representativeness or external-field robustness follows.
 
-\paragraph{Synthetic scope and tuning.}
-Outcomes come from two independently specified synthetic mechanisms, both designed within this project. G1 retains fixed profile families, temperature-only faults and narrow fault-relative timing. G2 adds stochastic background/noise, variable physical durations, independent fault/event schedules and both-channel faults; it is not an independently collected deployment dataset. Seeds are paired process replicates, not farms or sensor technologies. Event truth geometry differs: G1 uses interior amplitude labels, G2 full exogenous support. G2 is a zero-retuning stress test, not proof that its distribution is representative of agriculture. Rao-inspired retains public 24$^\circ$C/45\%RH priors, exposing prior mismatch rather than receiving a private G2 recalibration. The two-stage threshold and interval-bound grid is not an exhaustive search for each independent algorithm. Development threshold and budget searches introduce selection within that family; uncertainty intervals do not account for model misspecification. The extra bound search was disclosed during development, before any held-out test, and does not establish general optimality. No natural-fault labels or agricultural field events were evaluated. Previously obtained greenhouse files are not used to invent a source time axis.
+\paragraph{Comparison and statistical validity.}
+Independent schedules share an external event analyzer; metadata extensions and public U variants are explicitly distinguished. Delta and Variance are simple engineering controls, and Rao-inspired is an incomplete adaptation rather than a faithful full-method benchmark. G1 development searches constrain generality; seed-bootstrap intervals do not account for model misspecification, developer choices or all selection effects. Numerous unadjusted endpoints and post-outcome editorial emphasis prohibit confirmatory global superiority claims. Budget qualification depends on tolerance and total counts, not identical per-scenario acquisition opportunities.
 
-\paragraph{Baseline and implementation scope.}
-Delta and Variance are original lightweight engineering controls, not state-of-the-art literature reproductions. Rao-inspired omits major components of Rao's method. Shared ChangeAnalyzer limits detector diversity, and public-component variants must not be confused with external original methods. A faithful suitable literature reproduction remains absent. The completed second independently specified mechanism broadens synthetic coverage but does not substitute for that comparison or for independently collected natural-fault evidence. The current systems-study framing remains narrower than an algorithm-innovation claim.
-
-\paragraph{Transport, hardware, and metrics.}
-The main link is ideal local byte delivery. Application bytes exclude radio headers, receive windows, contention, spreading factor effects, loss and retries. LoRa airtime is modulation- and packet-dependent; neither byte ratios nor the additive sensitivity model measure actual wireless energy. There is no MCU timing, RAM characterization, current measurement or battery-lifetime validation. A sample cycle is a software processing opportunity, not measured sensor power gating. Conditional delays exclude misses; fault-induced attribution depends on the selected counterfactual coincidence window. The label matcher, pulse shapes and generator-specific channel arrangements may favor some event geometries. Multiple contrasts remain descriptive, and no global field effectiveness is established.
+\paragraph{Transport, hardware and measurement validity.}
+Local ideal delivery omits real wireless behavior. There are no MCU timing/RAM benchmarks, measured currents, energy coefficients or battery trials. A sample cycle is a processing opportunity, not measured sensor power gating. A fresh timestamp may contain null and is not equivalent to accurate usable data. Conditional delays exclude misses; fault-induced attribution and event matching depend on the declared windows. Full-support replacement marks overwritten dynamic support; a stuck onset reading can still contain prior physical information. No calibrated reliability probability or guarantee of recovering erased events is offered.
 
 \section{Conclusion}
-The following original-generator conclusion is restricted to G1.
-\input{tables/conclusion_results.tex}
-\input{tables/transfer_conclusion.tex}
-TAIS is best understood here as an auditable prototype and design/tradeoff study. The integration enables explicit sender/receiver analysis and conditional resource comparisons, but known techniques and synthetic evidence do not justify a claim of a universally superior new sensing algorithm. Independent near-budget controls, adverse cases, and information-age costs are necessary parts of the conclusion.
+TAIS provides an auditable integration for examining quality, acquisition, transmission and receiver-age tradeoffs under sensor faults. Independent controls, actual budget qualification and decoded receiver checks prevent a favorable internal comparison from becoming a universal-optimality claim. The nearby-budget F1 advantage observed in G1 is not established under the differently defined G2 task; its F1 point estimate favors Variance while the interval includes zero. Fixed20 also exposes a quality-versus-communication tradeoff at similar sample totals. The defensible contribution is reproducible systems evaluation with explicit negative evidence and failure boundaries. These simulation results support conditional design analysis, not a new trust theory, field validation or measured energy savings.
 
-\section*{Artifact and attribution statement}
-Source, exact branch, freeze commit, complete tables, configuration and one-command reproduction are documented at \url{https://github.com/Sver0411/TAIS/tree/research/tais-cross-generator-validation}. AdaptiveSense commit\texttt{f7ec30fd} and SensorTrust commit\texttt{2ce98dd0} are preserved unmodified. Manuscript tables and numerical paragraphs are generated from final CSV files, with a cell-level audit CSV. The G1-only manuscript is preserved in an archive and at its original Git commit. G2 source/analysis freeze commit is \texttt{3f3991aa26cf}. Full compressed traces remain in ignored local archives and can be regenerated; committed manifests enumerate hashes. This draft has not undergone peer review and makes no publication guarantee.
+\section*{Artifact, attribution and AI-use disclosure}
+The revision and complete frozen evidence are at \href{https://github.com/Sver0411/TAIS/tree/docs/tais-paper-major-revision}{the TAIS revision artifact repository}. AdaptiveSense commit\texttt{f7ec30fd} and SensorTrust commit\texttt{2ce98dd0} are unmodified, separately attributed MIT-licensed components. Original G1/G2 results, protocols and negative conclusions remain unchanged. Tables and plots are generated from frozen CSVs with source/cell audits; compressed traces are enumerated by hashes and deterministically reproducible. This paper revision adds only read-only budget sensitivity and presentation changes, not new simulation outcomes.
 
+\textit{Draft disclosure for author verification:} OpenAI Codex assisted implementation, analysis scripting, checking and manuscript preparation. Figures are deterministic plots of saved numerical outputs or a code-based architecture diagram. Human authors must independently review the outputs, confirm the precise tool-use scope and approve the submission; this draft does not assert that such approval has occurred. The final disclosure location and wording must follow the selected venue's current rules. Author identities, affiliations and funding have not been supplied and are not invented here.
 \bibliographystyle{unsrtnat}
 \bibliography{references}
 \clearpage
 \appendix
-\section{Complete native operating points}
-\small Common analyzer and per-sample emission apply to independent native schedules. +C11 adds health metadata only; +C11+U adds the public TAIS upload component. Health-free native payloads are functionally unequal. Budget names denote development-selected points, not guaranteed equality. All45 scenarios and all 20 final seeds are included in each row.
+\section{Complete operating points and comparison views}\label{app:complete}
+All G1 native points below are retained, including health-free payloads (functionally unequal), +C11 metadata versions, +U diagnostics and budget points. P/R/F1 and receiver F1 are percentages; all source scenarios and final seeds are retained. SU abbreviates JO-SU; S denotes JO-S; G/B denote points targeted during G1 development to GateOnly/SU40, not guarantees of final equality. Complete per-run, fault, channel, duration, timing and no-event groups are linked from the artifact evidence report.
+\subsection{G1 native systems}
 \input{tables/native_complete.tex}
-\clearpage
-\section{Complete common-detector schedules}
-\small Every row uses full C11 metadata and every-sample emission, with no health gating in this view. Different TAIS native schedules can be identical (e.g., with and without U); duplicate outcomes are retained for explicit ablation.
+\subsection{G1 common-detector schedules}
+Every common-view row applies the same downstream analyzer, C11 logging and every-sample emission to its actual native schedule. This is schedule isolation, not a claim that external original algorithms contain TAIS gates. Duplicate native schedules are retained as explicit ablations.
 \input{tables/common_complete.tex}
+
 \clearpage
-\section{Transfer input example and diagnostic detail}
-\begin{figure}[htbp]\centering\includegraphics[width=\linewidth]{figures/transfer_generator_traces.png}
-\caption{Predeclared illustrative inputs (not selected by performance): G1 seed610 drift\_same\_long and G2 seed700 drift\_temperature\_same. Green shading marks event scoring support and red fault support. G2's example contains independently timed, variable-duration events and a piecewise drift.}\label{fig:transfertrace}
-\end{figure}
+\section{Additional receiver and fault diagnostics}\label{app:diagnostics}
+\subsection{G1 fault groups and mode boundaries}
+These tables preserve the original selected G1 group summaries. R/short/long/same/cross are sender Recall percentages; FI is operational attribution; FD is any raw C11 flag. Conditional delay excludes misses; P95/max age concerns ordinary received timestamps.
+\begin{table}[htbp]\centering\small\caption{Retained G1 fault-class summaries.}
+\input{tables/faults.tex}\label{tab:faults}\end{table}
+\begin{table}[htbp]\centering\small\caption{G1 event/health boundaries and receiver age.}
+\input{tables/boundaries.tex}\label{tab:boundaries}\end{table}
+\begin{table}[htbp]\centering\small\caption{G1 communication diagnostics, including public U on independent schedules. E/H denote event/health sampled edges; missing edges and lag are separate outcomes.}
+\input{tables/communication.tex}\label{tab:communication}\end{table}
+\clearpage
+\subsection{G2 local, sender and decoded receiver counts}
+FP/FN refer to reports matched against exogenous event labels, rather than physical fault-type classifications. Complete task counts remain separate.
 \input{tables/transfer_counts.tex}
+\subsection{G2 coverage and age}
+Short/medium/long refer to actual duration bins12--40/41--100/101--240s. Coverage, conditional success and masked-support Recall are percentages. Ordinary receiver age does not imply accuracy or finite-value availability.
+\begin{table}[htbp]\centering\small\caption{G2 event support coverage and success.}
+\input{tables/transfer_boundaries.tex}\label{tab:transferboundary}\end{table}
+\begin{table}[htbp]\centering\small\caption{G2 uploads, bytes/upload, mean and pooled P95/max age, and missed event/health edges.}
+\input{tables/transfer_communication.tex}\label{tab:transfercommunication}\end{table}
 \clearpage
-\section{G2 raw health diagnostics}
-Any-flag detection is separate from correct-type detection; delays are conditional on detected episodes, not censored averages over misses. Spike bursts are separate fault episodes. Offset has no corresponding type bit, so type detection/delay are N/A even if another flag activates. T/H denote fault channel. All 14 methods and full per-episode records are in the artifact; representative native modes are printed here.
+\subsection{G2 raw health diagnostics}
+Any-flag detection differs from correct-type detection; delays are conditional on detected episodes. Spike bursts are separate episodes. T/H denote fault channel. Offset has no type bit, so correct-type rate/delay is N/A even when another flag activates. Missing and invalid share the existing invalid bit; no claim of distinguishing them is made. Repeated numbers for these categories are actual frozen outcomes, not duplicated table content. All14 methods remain in the machine-readable per-episode records; representative native systems are printed below.
 \input{tables/transfer_health.tex}
+
+\section{Budget sensitivity and descriptive intervals}\label{app:sensitivity}
+This revision's three-tolerance comparison is post hoc. Five percent reproduces the original frozen rule; 2\% and10\% are additional eligibility checks. Every existing independent +C11 native control is compared with both GateOnly and SU40, without parameter reselection. Identical gaps remain separate when they refer to distinct named points. No tolerance changes actual quality, samples, bytes or reports.
+\input{tables/review_sensitivity.tex}
+\begin{table}[htbp]\centering\small\caption{Selected existing seed-paired, pointwise, unadjusted intervals. These descriptive endpoints do not constitute a multiplicity-controlled confirmatory test.}
+\input{tables/review_intervals.tex}\label{tab:intervals}\end{table}
 \end{document}

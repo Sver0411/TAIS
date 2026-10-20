@@ -10,6 +10,8 @@ The [paper evidence and complete independent-baseline results](https://github.co
 
 The [frozen cross-generator supplement](https://github.com/Sver0411/TAIS/blob/research/tais-cross-generator-validation/docs/TAIS_CROSS_GENERATOR_REPORT.md) tests the same policies on a separately specified stochastic mechanism without retuning. The G1 near-budget quality advantage does not transfer uniformly; all adverse results and the revised [English draft](https://github.com/Sver0411/TAIS/tree/research/tais-cross-generator-validation/papers/tais) are retained. This remains synthetic systems evidence.
 
+The [final academic revision](https://github.com/Sver0411/TAIS/tree/docs/tais-paper-major-revision/papers/tais) clarifies the different G1/G2 event-truth definitions, descriptive uncertainty and conditional quality/resource/age tradeoffs. Its [revision record](https://github.com/Sver0411/TAIS/blob/docs/tais-paper-major-revision/docs/TAIS_PAPER_REVISION_CHANGELOG.md) and [layout audit](https://github.com/Sver0411/TAIS/blob/docs/tais-paper-major-revision/docs/TAIS_PAPER_LAYOUT_AUDIT.md) preserve the frozen experiments and adverse results; only read-only budget sensitivity and presentation are added.
+
 ## Offline spatial pilot (separate research branch)
 
 **这是基于真实温室背景和受控干预的离线探索性实验，不是实际在线 LoRaWAN 系统或自然故障诊断的确认性验证。**

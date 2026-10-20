@@ -84,7 +84,10 @@ def verify(root,phase,archives):
         fig=json.loads(figures.read_text())
         for p,h in fig['inputs'].items():assert sha(ROOT/p)==h
         for p,h in fig['figures'].items():assert sha(root/'figures'/p)==h
-    pdf_check=root/'checks/pdf-validation.json'
+    # Historical PDF evidence remains immutable; a paper-only revision binds
+    # its current PDF separately without rewriting the G2 experiment record.
+    revision_pdf=ROOT/'results/tais-paper-review/pdf-validation.json'
+    pdf_check=revision_pdf if revision_pdf.exists() else root/'checks/pdf-validation.json'
     if pdf_check.exists():
         pdf=json.loads(pdf_check.read_text());assert sha(ROOT/'papers/tais/manuscript.pdf')==pdf['pdf_sha256']
         for p,h in pdf['source_sha256'].items():assert sha(ROOT/p)==h

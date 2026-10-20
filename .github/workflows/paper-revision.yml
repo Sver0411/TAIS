@@ -1,0 +1,19 @@
+name: Academic paper revision checks
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  revision:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - run: python -m pip install -r requirements-lock.txt
+      - run: python -m pip install -e . --no-build-isolation
+      - run: python -m pytest tests/test_paper_revision.py -q
+      - run: python scripts/check_paper_artifacts.py
+      - run: python scripts/verify_paper_revision.py
+      - run: python scripts/verify_transfer.py
