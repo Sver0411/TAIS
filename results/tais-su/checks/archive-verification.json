@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "runs": 16065,
+  "frames": 447301,
+  "signals": 2295,
+  "counterfactuals": 2142,
+  "phases": [
+    {
+      "phase": "engineering",
+      "runs": 315,
+      "input_and_bytes_and_receiver_exact": true,
+      "counterfactual_metrics_recomputed": true,
+      "upload_only_parity": true
+    },
+    {
+      "phase": "development",
+      "runs": 3150,
+      "input_and_bytes_and_receiver_exact": true,
+      "counterfactual_metrics_recomputed": true,
+      "upload_only_parity": true
+    },
+    {
+      "phase": "validation",
+      "runs": 3150,
+      "input_and_bytes_and_receiver_exact": true,
+      "counterfactual_metrics_recomputed": true,
+      "upload_only_parity": true
+    },
+    {
+      "phase": "test",
+      "runs": 9450,
+      "input_and_bytes_and_receiver_exact": true,
+      "counterfactual_metrics_recomputed": true,
+      "upload_only_parity": true
+    }
+  ],
+  "original_tracked_files_unchanged": 939,
+  "upstream_unchanged": {
+    "vendor/AdaptiveSense": "f7ec30fd4721aa1a7c308f879050a83936e60067",
+    "vendor/SensorTrust": "2ce98dd043bb01ea99052eda218c68a172499a4c"
+  },
+  "only_existing_file_changed": "examples/tais-core/run.py explicit opt-in SU; default GateOnly intact",
+  "source_freeze_unchanged": true
+}

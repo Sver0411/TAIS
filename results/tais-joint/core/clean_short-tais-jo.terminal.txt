@@ -1,0 +1,2494 @@
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["first"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=0s rows=1 | SENDER sampled=0s next_due=20.0s
+samples=1 uploads=1 sample_upload=True sample_frame=35B last_tx=0s last_frame=35B total_application_bytes=35
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.101020121831503 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.659693627999175 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=1 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=0s age=0s (no filling of dropped frames)
+  temperature: value=24.101020121831503 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.659693627999175 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=20s rows=21 | SENDER sampled=20s next_due=40.0s
+samples=2 uploads=1 sample_upload=False sample_frame=0B last_tx=0s last_frame=35B total_application_bytes=35
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.9616135274287 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.74329252322458 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=1 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=0s age=20s (no filling of dropped frames)
+  temperature: value=24.101020121831503 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.659693627999175 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=40s rows=41 | SENDER sampled=40s next_due=60s
+samples=3 uploads=1 sample_upload=False sample_frame=0B last_tx=0s last_frame=35B total_application_bytes=35
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.00468008860595 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.19016247074236 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=1 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=0s age=40s (no filling of dropped frames)
+  temperature: value=24.101020121831503 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.659693627999175 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=60s rows=61 | SENDER sampled=60s next_due=80s
+samples=4 uploads=1 sample_upload=False sample_frame=0B last_tx=0s last_frame=35B total_application_bytes=35
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.888356046452277 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.49438905938533 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=1 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=0s age=60s (no filling of dropped frames)
+  temperature: value=24.101020121831503 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.659693627999175 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":true,"candidate_start":null,"forecast":45.77911956439261,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.845865531967906,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["health_edge:humidity"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=80s rows=81 | SENDER sampled=80s next_due=100s
+samples=5 uploads=2 sample_upload=True sample_frame=35B last_tx=80s last_frame=35B total_application_bytes=70
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.08454913601757 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.018456278352126 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVER decoded=2 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=80s age=0s (no filling of dropped frames)
+  temperature: value=24.08454913601757 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.018456278352126 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":true,"candidate_start":null,"forecast":45.55208281070111,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.94356035819341,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=100s rows=101 | SENDER sampled=100s next_due=120s
+samples=6 uploads=2 sample_upload=False sample_frame=0B last_tx=80s last_frame=35B total_application_bytes=70
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.93498483165472 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.57192348781648 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVER decoded=2 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=80s age=20s (no filling of dropped frames)
+  temperature: value=24.08454913601757 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.018456278352126 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":true,"candidate_start":null,"forecast":45.17347053407728,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.911753079337643,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=120s rows=121 | SENDER sampled=120s next_due=140s
+samples=7 uploads=2 sample_upload=False sample_frame=0B last_tx=80s last_frame=35B total_application_bytes=70
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.103271501396726 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.952796600027 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVER decoded=2 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=80s age=40s (no filling of dropped frames)
+  temperature: value=24.08454913601757 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.018456278352126 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.994697415387485,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.00655623824364,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["health_edge:humidity"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=140s rows=141 | SENDER sampled=140s next_due=160s
+samples=8 uploads=3 sample_upload=True sample_frame=36B last_tx=140s last_frame=36B total_application_bytes=106
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.175836874464796 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.25004449471797 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=3 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=140s age=0s (no filling of dropped frames)
+  temperature: value=24.175836874464796 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.25004449471797 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.227502461303125,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.14990028659917,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=160s rows=161 | SENDER sampled=160s next_due=180s
+samples=9 uploads=3 sample_upload=False sample_frame=0B last_tx=140s last_frame=36B total_application_bytes=106
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.17016130802786 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.383747058153915 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=3 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=140s age=20s (no filling of dropped frames)
+  temperature: value=24.175836874464796 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.25004449471797 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.41797922804606,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.187478286127327,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=180s rows=181 | SENDER sampled=180s next_due=200s
+samples=10 uploads=3 sample_upload=False sample_frame=0B last_tx=140s last_frame=36B total_application_bytes=106
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.04338090726982 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.58915818164349 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=3 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=140s age=40s (no filling of dropped frames)
+  temperature: value=24.175836874464796 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.25004449471797 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.97358192062948,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.212629945678245,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=200s rows=201 | SENDER sampled=200s next_due=220s
+samples=11 uploads=3 sample_upload=False sample_frame=0B last_tx=140s last_frame=36B total_application_bytes=106
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.180163836775307 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.18512836915552 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=3 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=140s age=60s (no filling of dropped frames)
+  temperature: value=24.175836874464796 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.25004449471797 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.99321048129042,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.22948482639827,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=220s rows=221 | SENDER sampled=220s next_due=240s
+samples=12 uploads=3 sample_upload=False sample_frame=0B last_tx=140s last_frame=36B total_application_bytes=106
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.94266826869651 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.22928589526891 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=3 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=140s age=80s (no filling of dropped frames)
+  temperature: value=24.175836874464796 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.25004449471797 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.18424739275001,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.208748103309528,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=240s rows=241 | SENDER sampled=240s next_due=260s
+samples=13 uploads=3 sample_upload=False sample_frame=0B last_tx=140s last_frame=36B total_application_bytes=106
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.037527851896975 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.1901464871446 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=3 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=140s age=100s (no filling of dropped frames)
+  temperature: value=24.175836874464796 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.25004449471797 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.289643615988524,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.081532130739646,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["heartbeat"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=260s rows=261 | SENDER sampled=260s next_due=280s
+samples=14 uploads=4 sample_upload=True sample_frame=36B last_tx=260s last_frame=36B total_application_bytes=142
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.142015921322592 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.73311259171169 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=4 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=260s age=0s (no filling of dropped frames)
+  temperature: value=24.142015921322592 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.73311259171169 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.52278621081861,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.1141630758386,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=280s rows=281 | SENDER sampled=280s next_due=300s
+samples=15 uploads=4 sample_upload=False sample_frame=0B last_tx=260s last_frame=36B total_application_bytes=142
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.02793531327892 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.85647893759799 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=4 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=260s age=20s (no filling of dropped frames)
+  temperature: value=24.142015921322592 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.73311259171169 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.7049483860523,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.035354846614254,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=300s rows=301 | SENDER sampled=300s next_due=320s
+samples=16 uploads=4 sample_upload=False sample_frame=0B last_tx=260s last_frame=36B total_application_bytes=142
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.146349738282947 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.15079862871133 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=4 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=260s age=40s (no filling of dropped frames)
+  temperature: value=24.142015921322592 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.73311259171169 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.52722026763035,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.12637790134747,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=320s rows=321 | SENDER sampled=320s next_due=340s
+samples=17 uploads=4 sample_upload=False sample_frame=0B last_tx=260s last_frame=36B total_application_bytes=142
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.091484689283607 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.92686909534894 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=4 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=260s age=60s (no filling of dropped frames)
+  temperature: value=24.142015921322592 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.73311259171169 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.788512226287466,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.088239303474165,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=340s rows=341 | SENDER sampled=340s next_due=360s
+samples=18 uploads=4 sample_upload=False sample_frame=0B last_tx=260s last_frame=36B total_application_bytes=142
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.14667706608187 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.136524612102015 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=4 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=260s age=80s (no filling of dropped frames)
+  temperature: value=24.142015921322592 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.73311259171169 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.79638230271742,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.132408856467602,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=360s rows=361 | SENDER sampled=360s next_due=380s
+samples=19 uploads=4 sample_upload=False sample_frame=0B last_tx=260s last_frame=36B total_application_bytes=142
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.019985533674856 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.36896465739914 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=4 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=260s age=100s (no filling of dropped frames)
+  temperature: value=24.142015921322592 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.73311259171169 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.390431479852246,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.088749017781275,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["heartbeat"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=380s rows=381 | SENDER sampled=380s next_due=400s
+samples=20 uploads=5 sample_upload=True sample_frame=36B last_tx=380s last_frame=36B total_application_bytes=178
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.02539623916375 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.692122004164396 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=5 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=380s age=0s (no filling of dropped frames)
+  temperature: value=24.02539623916375 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.692122004164396 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.45319301290067,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.050856630576966,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=400s rows=401 | SENDER sampled=400s next_due=420s
+samples=21 uploads=5 sample_upload=False sample_frame=0B last_tx=380s last_frame=36B total_application_bytes=178
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.034613898212772 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.07611822773254 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=5 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=380s age=20s (no filling of dropped frames)
+  temperature: value=24.02539623916375 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.692122004164396 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.32791042954274,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.032753631995604,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=420s rows=421 | SENDER sampled=420s next_due=440s
+samples=22 uploads=5 sample_upload=False sample_frame=0B last_tx=380s last_frame=36B total_application_bytes=178
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.991404397755442 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.43009156328305 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=5 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=380s age=40s (no filling of dropped frames)
+  temperature: value=24.02539623916375 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.692122004164396 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":true,"candidate_start":null,"forecast":44.83412181344479,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.98973743009542,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["health_edge:humidity"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=440s rows=441 | SENDER sampled=440s next_due=460s
+samples=23 uploads=6 sample_upload=True sample_frame=36B last_tx=440s last_frame=36B total_application_bytes=214
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.968953746948884 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.64127715741274 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVER decoded=6 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=440s age=0s (no filling of dropped frames)
+  temperature: value=23.968953746948884 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.64127715741274 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":true,"candidate_start":null,"forecast":44.61230393844906,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.952574175378185,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=460s rows=461 | SENDER sampled=460s next_due=480s
+samples=24 uploads=6 sample_upload=False sample_frame=0B last_tx=440s last_frame=36B total_application_bytes=214
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.0850973807339 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.957134621840645 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVER decoded=6 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=440s age=20s (no filling of dropped frames)
+  temperature: value=23.968953746948884 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.64127715741274 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":true,"candidate_start":null,"forecast":44.71328723163344,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.936163799774587,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=480s rows=481 | SENDER sampled=480s next_due=500s
+samples=25 uploads=6 sample_upload=False sample_frame=0B last_tx=440s last_frame=36B total_application_bytes=214
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.959897766778198 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.031191836336575 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVER decoded=6 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=440s age=40s (no filling of dropped frames)
+  temperature: value=23.968953746948884 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.64127715741274 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":true,"candidate_start":null,"forecast":44.63043263829873,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.94456473523776,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=500s rows=501 | SENDER sampled=500s next_due=520s
+samples=26 uploads=6 sample_upload=False sample_frame=0B last_tx=440s last_frame=36B total_application_bytes=214
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.945837962238496 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.619223136764184 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVER decoded=6 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=440s age=60s (no filling of dropped frames)
+  temperature: value=23.968953746948884 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.64127715741274 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":true,"candidate_start":null,"forecast":44.63503215314576,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.9331383136208,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=520s rows=521 | SENDER sampled=520s next_due=540s
+samples=27 uploads=6 sample_upload=False sample_frame=0B last_tx=440s last_frame=36B total_application_bytes=214
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.045123649531497 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.54230223918923 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVER decoded=6 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=440s age=80s (no filling of dropped frames)
+  temperature: value=23.968953746948884 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.64127715741274 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":true,"candidate_start":null,"forecast":44.44494632895428,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.9327793783877,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=540s rows=541 | SENDER sampled=540s next_due=560s
+samples=28 uploads=6 sample_upload=False sample_frame=0B last_tx=440s last_frame=36B total_application_bytes=214
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.91779169083124 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.87693813301897 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVER decoded=6 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=440s age=100s (no filling of dropped frames)
+  temperature: value=23.968953746948884 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.64127715741274 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.86719630332847,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.90677890632281,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["health_edge:humidity","heartbeat"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=560s rows=561 | SENDER sampled=560s next_due=580s
+samples=29 uploads=7 sample_upload=True sample_frame=36B last_tx=560s last_frame=36B total_application_bytes=250
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.075594917795573 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.82752034760205 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=7 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=560s age=0s (no filling of dropped frames)
+  temperature: value=24.075594917795573 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.82752034760205 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.85426168104178,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.91965370658081,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=580s rows=581 | SENDER sampled=580s next_due=600s
+samples=30 uploads=7 sample_upload=False sample_frame=0B last_tx=560s last_frame=36B total_application_bytes=250
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.950161067508393 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.73958389878057 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=7 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=560s age=20s (no filling of dropped frames)
+  temperature: value=24.075594917795573 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.82752034760205 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.89724742123745,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.945319364325282,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=600s rows=601 | SENDER sampled=600s next_due=620s
+samples=31 uploads=7 sample_upload=False sample_frame=0B last_tx=560s last_frame=36B total_application_bytes=250
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.863863569977074 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.226142852921626 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=7 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=560s age=40s (no filling of dropped frames)
+  temperature: value=24.075594917795573 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.82752034760205 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.9271728124935,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.867284794616893,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=620s rows=621 | SENDER sampled=620s next_due=640s
+samples=32 uploads=7 sample_upload=False sample_frame=0B last_tx=560s last_frame=36B total_application_bytes=250
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.022397077380454 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.096639606225146 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=7 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=560s age=60s (no filling of dropped frames)
+  temperature: value=24.075594917795573 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.82752034760205 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.12793061952595,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":true,"app_suspect_drift":false,"candidate_start":640,"forecast":23.90913949835175,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["deadband:temperature"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=640s rows=641 | SENDER sampled=640s next_due=645s
+samples=33 uploads=8 sample_upload=True sample_frame=36B last_tx=640s last_frame=36B total_application_bytes=286
+SENDER (local state; not automatically known by receiver):
+  temperature: value=27.982447732359095 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.43205824983095 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=8 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=640s age=0s (no filling of dropped frames)
+  temperature: value=27.982447732359095 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.43205824983095 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.73165768926626,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":true,"app_suspect_drift":false,"candidate_start":640,"forecast":24.0473216013654,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=645s rows=646 | SENDER sampled=645s next_due=650s
+samples=34 uploads=8 sample_upload=False sample_frame=0B last_tx=640s last_frame=36B total_application_bytes=286
+SENDER (local state; not automatically known by receiver):
+  temperature: value=27.83114008530085 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.21022737434956 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=8 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=640s age=5s (no filling of dropped frames)
+  temperature: value=27.982447732359095 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.43205824983095 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.13170450042394,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":true,"app_suspect_drift":false,"candidate_start":640,"forecast":24.243476675194955,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["event_edge:temperature"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=650s rows=651 | SENDER sampled=650s next_due=655s
+samples=35 uploads=9 sample_upload=True sample_frame=36B last_tx=650s last_frame=36B total_application_bytes=322
+SENDER (local state; not automatically known by receiver):
+  temperature: value=27.977678105620406 HEALTHY score=100 flags=0(NONE) event=True
+  humidity: value=45.28152591039474 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=9 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=650s age=0s (no filling of dropped frames)
+  temperature: value=27.977678105620406 HEALTHY score=100 flags=0(NONE) event=True
+  humidity: value=45.28152591039474 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.25443878542973,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":640,"forecast":27.342378010853164,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["deadband:temperature","event_edge:temperature"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=655s rows=656 | SENDER sampled=655s next_due=660s
+samples=36 uploads=10 sample_upload=True sample_frame=36B last_tx=655s last_frame=36B total_application_bytes=358
+SENDER (local state; not automatically known by receiver):
+  temperature: value=26.29720164734276 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.02840983422111 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=10 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=655s age=0s (no filling of dropped frames)
+  temperature: value=26.29720164734276 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.02840983422111 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.05057761904796,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":true,"app_suspect_drift":false,"candidate_start":null,"forecast":27.10566884088072,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["deadband:temperature"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=660s rows=661 | SENDER sampled=660s next_due=665s
+samples=37 uploads=11 sample_upload=True sample_frame=36B last_tx=660s last_frame=36B total_application_bytes=394
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.93038423167601 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.1324583756399 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=11 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=660s age=0s (no filling of dropped frames)
+  temperature: value=23.93038423167601 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.1324583756399 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.1897909671303,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.586555137686524,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=665s rows=666 | SENDER sampled=665s next_due=670s
+samples=38 uploads=11 sample_upload=False sample_frame=0B last_tx=660s last_frame=36B total_application_bytes=394
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.79336131426249 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.23216535255837 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=11 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=660s age=5s (no filling of dropped frames)
+  temperature: value=23.93038423167601 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.1324583756399 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.24932209186934,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.983356758335816,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["event_edge:temperature"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=670s rows=671 | SENDER sampled=670s next_due=675s
+samples=39 uploads=12 sample_upload=True sample_frame=36B last_tx=670s last_frame=36B total_application_bytes=430
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.04812277614071 HEALTHY score=100 flags=0(NONE) event=True
+  humidity: value=45.12645996870009 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=12 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=670s age=0s (no filling of dropped frames)
+  temperature: value=24.04812277614071 HEALTHY score=100 flags=0(NONE) event=True
+  humidity: value=45.12645996870009 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.137626333815376,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.029647764222073,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=675s rows=676 | SENDER sampled=675s next_due=680s
+samples=40 uploads=12 sample_upload=False sample_frame=0B last_tx=670s last_frame=36B total_application_bytes=430
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.89538102251982 HEALTHY score=100 flags=0(NONE) event=True
+  humidity: value=45.02800041867229 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=12 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=670s age=5s (no filling of dropped frames)
+  temperature: value=24.04812277614071 HEALTHY score=100 flags=0(NONE) event=True
+  humidity: value=45.12645996870009 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=680s rows=681 | SENDER sampled=680s next_due=685s
+samples=41 uploads=12 sample_upload=False sample_frame=0B last_tx=670s last_frame=36B total_application_bytes=430
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.895565230764618 HEALTHY score=100 flags=0(NONE) event=True
+  humidity: value=44.924367489726414 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=12 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=670s age=10s (no filling of dropped frames)
+  temperature: value=24.04812277614071 HEALTHY score=100 flags=0(NONE) event=True
+  humidity: value=45.12645996870009 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["event_edge:temperature"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=685s rows=686 | SENDER sampled=685s next_due=690s
+samples=42 uploads=13 sample_upload=True sample_frame=36B last_tx=685s last_frame=36B total_application_bytes=466
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.929752257569326 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.9705688971 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=13 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=685s age=0s (no filling of dropped frames)
+  temperature: value=23.929752257569326 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.9705688971 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=690s rows=691 | SENDER sampled=690s next_due=695s
+samples=43 uploads=13 sample_upload=False sample_frame=0B last_tx=685s last_frame=36B total_application_bytes=466
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.98782320214693 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.526754550995946 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=13 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=685s age=5s (no filling of dropped frames)
+  temperature: value=23.929752257569326 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.9705688971 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=695s rows=696 | SENDER sampled=695s next_due=700s
+samples=44 uploads=13 sample_upload=False sample_frame=0B last_tx=685s last_frame=36B total_application_bytes=466
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.102186048706105 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.0137085403646 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=13 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=685s age=10s (no filling of dropped frames)
+  temperature: value=23.929752257569326 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.9705688971 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=700s rows=701 | SENDER sampled=700s next_due=705s
+samples=45 uploads=13 sample_upload=False sample_frame=0B last_tx=685s last_frame=36B total_application_bytes=466
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.98894711987317 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.109547535387755 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=13 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=685s age=15s (no filling of dropped frames)
+  temperature: value=23.929752257569326 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.9705688971 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=705s rows=706 | SENDER sampled=705s next_due=710s
+samples=46 uploads=13 sample_upload=False sample_frame=0B last_tx=685s last_frame=36B total_application_bytes=466
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.955543752169252 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.813403738804055 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=13 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=685s age=20s (no filling of dropped frames)
+  temperature: value=23.929752257569326 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.9705688971 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=710s rows=711 | SENDER sampled=710s next_due=715s
+samples=47 uploads=13 sample_upload=False sample_frame=0B last_tx=685s last_frame=36B total_application_bytes=466
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.95812942352408 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.39631376044989 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=13 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=685s age=25s (no filling of dropped frames)
+  temperature: value=23.929752257569326 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.9705688971 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=715s rows=716 | SENDER sampled=715s next_due=720s
+samples=48 uploads=13 sample_upload=False sample_frame=0B last_tx=685s last_frame=36B total_application_bytes=466
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.905934094957228 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.83270600679806 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=13 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=685s age=30s (no filling of dropped frames)
+  temperature: value=23.929752257569326 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.9705688971 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=720s rows=721 | SENDER sampled=720s next_due=735.0s
+samples=49 uploads=13 sample_upload=False sample_frame=0B last_tx=685s last_frame=36B total_application_bytes=466
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.11634467838243 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.74492791188965 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=13 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=685s age=35s (no filling of dropped frames)
+  temperature: value=23.929752257569326 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.9705688971 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=735s rows=736 | SENDER sampled=735s next_due=740s
+samples=50 uploads=13 sample_upload=False sample_frame=0B last_tx=685s last_frame=36B total_application_bytes=466
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.012962663691575 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.809319299183834 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=13 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=685s age=50s (no filling of dropped frames)
+  temperature: value=23.929752257569326 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.9705688971 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=740s rows=741 | SENDER sampled=740s next_due=745s
+samples=51 uploads=13 sample_upload=False sample_frame=0B last_tx=685s last_frame=36B total_application_bytes=466
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.952785739519907 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=46.47862475182448 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=13 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=685s age=55s (no filling of dropped frames)
+  temperature: value=23.929752257569326 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.9705688971 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=745s rows=746 | SENDER sampled=745s next_due=750s
+samples=52 uploads=13 sample_upload=False sample_frame=0B last_tx=685s last_frame=36B total_application_bytes=466
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.996036619610795 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.53102861494295 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=13 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=685s age=60s (no filling of dropped frames)
+  temperature: value=23.929752257569326 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.9705688971 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=750s rows=751 | SENDER sampled=750s next_due=770.0s
+samples=53 uploads=13 sample_upload=False sample_frame=0B last_tx=685s last_frame=36B total_application_bytes=466
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.126871044516342 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.006549375547245 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=13 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=685s age=65s (no filling of dropped frames)
+  temperature: value=23.929752257569326 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.9705688971 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":null,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=770s rows=771 | SENDER sampled=770s next_due=790.0s
+samples=54 uploads=13 sample_upload=False sample_frame=0B last_tx=685s last_frame=36B total_application_bytes=466
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.05787214021643 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.19984458291572 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=13 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=685s age=85s (no filling of dropped frames)
+  temperature: value=23.929752257569326 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.9705688971 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":true,"candidate_start":null,"forecast":45.30597440407558,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.09958719928593,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["health_edge:humidity"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=790s rows=791 | SENDER sampled=790s next_due=810s
+samples=55 uploads=14 sample_upload=True sample_frame=36B last_tx=790s last_frame=36B total_application_bytes=502
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.039433626525913 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.90267149705883 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVER decoded=14 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=790s age=0s (no filling of dropped frames)
+  temperature: value=24.039433626525913 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.90267149705883 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":true,"candidate_start":null,"forecast":45.34544212856061,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.105404749136543,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=810s rows=811 | SENDER sampled=810s next_due=830s
+samples=56 uploads=14 sample_upload=False sample_frame=0B last_tx=790s last_frame=36B total_application_bytes=502
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.035319896684634 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.44953562114166 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVER decoded=14 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=790s age=20s (no filling of dropped frames)
+  temperature: value=24.039433626525913 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.90267149705883 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":true,"candidate_start":null,"forecast":44.65332984803434,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.070808347331422,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=830s rows=831 | SENDER sampled=830s next_due=850s
+samples=57 uploads=14 sample_upload=False sample_frame=0B last_tx=790s last_frame=36B total_application_bytes=502
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.99518900972014 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.60815460844416 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVER decoded=14 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=790s age=40s (no filling of dropped frames)
+  temperature: value=24.039433626525913 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.90267149705883 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":true,"candidate_start":null,"forecast":44.68084961697566,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.016348849115147,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=850s rows=851 | SENDER sampled=850s next_due=870s
+samples=58 uploads=14 sample_upload=False sample_frame=0B last_tx=790s last_frame=36B total_application_bytes=502
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.979928540249766 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.93632964026423 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVER decoded=14 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=790s age=60s (no filling of dropped frames)
+  temperature: value=24.039433626525913 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.90267149705883 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.934917357270166,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.98733345799014,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["health_edge:humidity"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=870s rows=871 | SENDER sampled=870s next_due=890s
+samples=59 uploads=15 sample_upload=True sample_frame=36B last_tx=870s last_frame=36B total_application_bytes=538
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.08700006803474 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.954386516936644 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=15 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=870s age=0s (no filling of dropped frames)
+  temperature: value=24.08700006803474 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.954386516936644 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.89721092588416,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.044791130798284,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=890s rows=891 | SENDER sampled=890s next_due=910s
+samples=60 uploads=15 sample_upload=False sample_frame=0B last_tx=870s last_frame=36B total_application_bytes=538
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.834342030640247 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.93081676627163 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=15 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=870s age=20s (no filling of dropped frames)
+  temperature: value=24.08700006803474 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.954386516936644 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.96160229263077,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.920947147124195,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=910s rows=911 | SENDER sampled=910s next_due=930s
+samples=61 uploads=15 sample_upload=False sample_frame=0B last_tx=870s last_frame=36B total_application_bytes=538
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.013694327253067 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.55083188798477 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=15 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=870s age=40s (no filling of dropped frames)
+  temperature: value=24.08700006803474 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.954386516936644 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.97965916930318,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.90181037589958,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=930s rows=931 | SENDER sampled=930s next_due=950s
+samples=62 uploads=15 sample_upload=False sample_frame=0B last_tx=870s last_frame=36B total_application_bytes=538
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.977614178264446 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.87210296263825 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=15 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=870s age=60s (no filling of dropped frames)
+  temperature: value=24.08700006803474 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.954386516936644 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.9201317105442,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.96074061215,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=950s rows=951 | SENDER sampled=950s next_due=970s
+samples=63 uploads=15 sample_upload=False sample_frame=0B last_tx=870s last_frame=36B total_application_bytes=538
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.954054477195285 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.41030356534539 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=15 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=870s age=80s (no filling of dropped frames)
+  temperature: value=24.08700006803474 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.954386516936644 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.87652386172128,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.948128566212294,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=970s rows=971 | SENDER sampled=970s next_due=990s
+samples=64 uploads=15 sample_upload=False sample_frame=0B last_tx=870s last_frame=36B total_application_bytes=538
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.989479136839854 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.0195182353374 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=15 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=870s age=100s (no filling of dropped frames)
+  temperature: value=24.08700006803474 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.954386516936644 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.880978617485844,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.958735402662334,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["heartbeat"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=990s rows=991 | SENDER sampled=990s next_due=1010s
+samples=65 uploads=16 sample_upload=True sample_frame=36B last_tx=990s last_frame=36B total_application_bytes=574
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.84723243849908 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.8460519122024 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=16 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=990s age=0s (no filling of dropped frames)
+  temperature: value=23.84723243849908 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.8460519122024 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.77782395997821,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.91905617778312,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1010s rows=1011 | SENDER sampled=1010s next_due=1030s
+samples=66 uploads=16 sample_upload=False sample_frame=0B last_tx=990s last_frame=36B total_application_bytes=574
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.924204720112954 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.413571675775266 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=16 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=990s age=20s (no filling of dropped frames)
+  temperature: value=23.84723243849908 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.8460519122024 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.89077634460942,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.899488463349705,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1030s rows=1031 | SENDER sampled=1030s next_due=1050s
+samples=67 uploads=16 sample_upload=False sample_frame=0B last_tx=990s last_frame=36B total_application_bytes=574
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.93248846739694 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.20064520875378 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=16 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=990s age=40s (no filling of dropped frames)
+  temperature: value=23.84723243849908 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.8460519122024 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.08992165723058,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.89277248870891,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1050s rows=1051 | SENDER sampled=1050s next_due=1070s
+samples=68 uploads=16 sample_upload=False sample_frame=0B last_tx=990s last_frame=36B total_application_bytes=574
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.053043541953443 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.00880655446226 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=16 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=990s age=60s (no filling of dropped frames)
+  temperature: value=23.84723243849908 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.8460519122024 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.732434023685215,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.988715864215703,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1070s rows=1071 | SENDER sampled=1070s next_due=1090s
+samples=69 uploads=16 sample_upload=False sample_frame=0B last_tx=990s last_frame=36B total_application_bytes=574
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.037062727197682 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.46039199595082 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=16 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=990s age=80s (no filling of dropped frames)
+  temperature: value=23.84723243849908 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.8460519122024 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.0402875050771,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.01178364377983,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1090s rows=1091 | SENDER sampled=1090s next_due=1110s
+samples=70 uploads=16 sample_upload=False sample_frame=0B last_tx=990s last_frame=36B total_application_bytes=574
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.03604775191316 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.96753646391489 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=16 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=990s age=100s (no filling of dropped frames)
+  temperature: value=23.84723243849908 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.8460519122024 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.43948144426679,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.045052435872744,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["heartbeat"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1110s rows=1111 | SENDER sampled=1110s next_due=1130s
+samples=71 uploads=17 sample_upload=True sample_frame=36B last_tx=1110s last_frame=36B total_application_bytes=610
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.93604883278572 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.72368664491759 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=17 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1110s age=0s (no filling of dropped frames)
+  temperature: value=23.93604883278572 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.72368664491759 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.00744014764924,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.03415657129527,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1130s rows=1131 | SENDER sampled=1130s next_due=1150s
+samples=72 uploads=17 sample_upload=False sample_frame=0B last_tx=1110s last_frame=36B total_application_bytes=610
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.84854691487081 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.62312825746348 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=17 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1110s age=20s (no filling of dropped frames)
+  temperature: value=23.93604883278572 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.72368664491759 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.2860217681448,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.937126706471734,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1150s rows=1151 | SENDER sampled=1150s next_due=1170s
+samples=73 uploads=17 sample_upload=False sample_frame=0B last_tx=1110s last_frame=36B total_application_bytes=610
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.103392761578636 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.34157358395857 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=17 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1110s age=40s (no filling of dropped frames)
+  temperature: value=23.93604883278572 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.72368664491759 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.37118508760384,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.049745684018333,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1170s rows=1171 | SENDER sampled=1170s next_due=1190s
+samples=74 uploads=17 sample_upload=False sample_frame=0B last_tx=1110s last_frame=36B total_application_bytes=610
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.110958068573446 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.06596722962402 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=17 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1110s age=60s (no filling of dropped frames)
+  temperature: value=23.93604883278572 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.72368664491759 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.22193053556878,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.09817003241364,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1190s rows=1191 | SENDER sampled=1190s next_due=1210s
+samples=75 uploads=17 sample_upload=False sample_frame=0B last_tx=1110s last_frame=36B total_application_bytes=610
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.92337924606946 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.789180461011554 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=17 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1110s age=80s (no filling of dropped frames)
+  temperature: value=23.93604883278572 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.72368664491759 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.063100972343264,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.035673100101175,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1210s rows=1211 | SENDER sampled=1210s next_due=1230s
+samples=76 uploads=17 sample_upload=False sample_frame=0B last_tx=1110s last_frame=36B total_application_bytes=610
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.964874408083727 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.40550565133251 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=17 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1110s age=100s (no filling of dropped frames)
+  temperature: value=23.93604883278572 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.72368664491759 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.24352235567514,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.961820679051996,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["heartbeat"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1230s rows=1231 | SENDER sampled=1230s next_due=1250s
+samples=77 uploads=18 sample_upload=True sample_frame=36B last_tx=1230s last_frame=36B total_application_bytes=646
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.0916062945109 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.0495107257572 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=18 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1230s age=0s (no filling of dropped frames)
+  temperature: value=24.0916062945109 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.0495107257572 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.03073797107115,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.086379995808173,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1250s rows=1251 | SENDER sampled=1250s next_due=1270s
+samples=78 uploads=18 sample_upload=False sample_frame=0B last_tx=1230s last_frame=36B total_application_bytes=646
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.01975735519214 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.97814179354977 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=18 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1230s age=20s (no filling of dropped frames)
+  temperature: value=24.0916062945109 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.0495107257572 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.47816467660931,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.027508476017957,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1270s rows=1271 | SENDER sampled=1270s next_due=1290s
+samples=79 uploads=18 sample_upload=False sample_frame=0B last_tx=1230s last_frame=36B total_application_bytes=646
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.091264350756344 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.05194205626256 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=18 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1230s age=40s (no filling of dropped frames)
+  temperature: value=24.0916062945109 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.0495107257572 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.17901965906844,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.113437375829285,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1290s rows=1291 | SENDER sampled=1290s next_due=1310s
+samples=80 uploads=18 sample_upload=False sample_frame=0B last_tx=1230s last_frame=36B total_application_bytes=646
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.995019208528838 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.760783225653725 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=18 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1230s age=60s (no filling of dropped frames)
+  temperature: value=24.0916062945109 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.0495107257572 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.831888119626235,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.04240961585127,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1310s rows=1311 | SENDER sampled=1310s next_due=1330s
+samples=81 uploads=18 sample_upload=False sample_frame=0B last_tx=1230s last_frame=36B total_application_bytes=646
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.013464759302693 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.14582676114597 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=18 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1230s age=80s (no filling of dropped frames)
+  temperature: value=24.0916062945109 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.0495107257572 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.0351946337218,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.010022079137514,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1330s rows=1331 | SENDER sampled=1330s next_due=1350s
+samples=82 uploads=18 sample_upload=False sample_frame=0B last_tx=1230s last_frame=36B total_application_bytes=646
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.955633912850168 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.21296628357073 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=18 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1230s age=100s (no filling of dropped frames)
+  temperature: value=24.0916062945109 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.0495107257572 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.74111138966013,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.993784017898133,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["heartbeat"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1350s rows=1351 | SENDER sampled=1350s next_due=1370s
+samples=83 uploads=19 sample_upload=True sample_frame=36B last_tx=1350s last_frame=36B total_application_bytes=682
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.040787619230546 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.23788550349333 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=19 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1350s age=0s (no filling of dropped frames)
+  temperature: value=24.040787619230546 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.23788550349333 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.97787910006965,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.031680773779758,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1370s rows=1371 | SENDER sampled=1370s next_due=1390s
+samples=84 uploads=19 sample_upload=False sample_frame=0B last_tx=1350s last_frame=36B total_application_bytes=682
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.94145882020749 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.19566390147136 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=19 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1350s age=20s (no filling of dropped frames)
+  temperature: value=24.040787619230546 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.23788550349333 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.00892311963675,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.946821371284486,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1390s rows=1391 | SENDER sampled=1390s next_due=1410s
+samples=85 uploads=19 sample_upload=False sample_frame=0B last_tx=1350s last_frame=36B total_application_bytes=682
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.064977168734423 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.91828252772717 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=19 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1350s age=40s (no filling of dropped frames)
+  temperature: value=24.040787619230546 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.23788550349333 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.916561661312116,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.961367627940085,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1410s rows=1411 | SENDER sampled=1410s next_due=1430s
+samples=86 uploads=19 sample_upload=False sample_frame=0B last_tx=1350s last_frame=36B total_application_bytes=682
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.147976556747317 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.295350713961504 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=19 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1350s age=60s (no filling of dropped frames)
+  temperature: value=24.040787619230546 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.23788550349333 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.24931507686814,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.069911053382906,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1430s rows=1431 | SENDER sampled=1430s next_due=1450s
+samples=87 uploads=19 sample_upload=False sample_frame=0B last_tx=1350s last_frame=36B total_application_bytes=682
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.028784862402823 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.02179890059634 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=19 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1350s age=80s (no filling of dropped frames)
+  temperature: value=24.040787619230546 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.23788550349333 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.318473203426954,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.058703689235173,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1450s rows=1451 | SENDER sampled=1450s next_due=1470s
+samples=88 uploads=19 sample_upload=False sample_frame=0B last_tx=1350s last_frame=36B total_application_bytes=682
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.095127440024815 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.626321528095566 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=19 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1350s age=100s (no filling of dropped frames)
+  temperature: value=24.040787619230546 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.23788550349333 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.05756635086086,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.114447103977202,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["heartbeat"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1470s rows=1471 | SENDER sampled=1470s next_due=1490s
+samples=89 uploads=20 sample_upload=True sample_frame=36B last_tx=1470s last_frame=36B total_application_bytes=718
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.03861018338141 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.326571184315114 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=20 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1470s age=0s (no filling of dropped frames)
+  temperature: value=24.03861018338141 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.326571184315114 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.30296625226493,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.118647290203864,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1490s rows=1491 | SENDER sampled=1490s next_due=1510s
+samples=90 uploads=20 sample_upload=False sample_frame=0B last_tx=1470s last_frame=36B total_application_bytes=718
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.916899888059422 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.62606440010192 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=20 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1470s age=20s (no filling of dropped frames)
+  temperature: value=24.03861018338141 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.326571184315114 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.45091785315619,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.04315993789585,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1510s rows=1511 | SENDER sampled=1510s next_due=1530s
+samples=91 uploads=20 sample_upload=False sample_frame=0B last_tx=1470s last_frame=36B total_application_bytes=718
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.009333096597576 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.01497440431699 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=20 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1470s age=40s (no filling of dropped frames)
+  temperature: value=24.03861018338141 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.326571184315114 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.2964149824907,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.006394620379513,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1530s rows=1531 | SENDER sampled=1530s next_due=1550s
+samples=92 uploads=20 sample_upload=False sample_frame=0B last_tx=1470s last_frame=36B total_application_bytes=718
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.138738585747866 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.09060760160187 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=20 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1470s age=60s (no filling of dropped frames)
+  temperature: value=24.03861018338141 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.326571184315114 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.111430059494566,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.045356180693517,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1550s rows=1551 | SENDER sampled=1550s next_due=1570s
+samples=93 uploads=20 sample_upload=False sample_frame=0B last_tx=1470s last_frame=36B total_application_bytes=718
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.03245481701653 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.89103098500531 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=20 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1470s age=80s (no filling of dropped frames)
+  temperature: value=24.03861018338141 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.326571184315114 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.05225134843112,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.013431073681385,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1570s rows=1571 | SENDER sampled=1570s next_due=1590s
+samples=94 uploads=20 sample_upload=False sample_frame=0B last_tx=1470s last_frame=36B total_application_bytes=718
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.997577456508484 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.27383084996665 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=20 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1470s age=100s (no filling of dropped frames)
+  temperature: value=24.03861018338141 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.326571184315114 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.08401344099808,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.98720692152036,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["heartbeat"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1590s rows=1591 | SENDER sampled=1590s next_due=1610s
+samples=95 uploads=21 sample_upload=True sample_frame=36B last_tx=1590s last_frame=36B total_application_bytes=754
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.017577332670605 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.2577296947333 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=21 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1590s age=0s (no filling of dropped frames)
+  temperature: value=24.017577332670605 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.2577296947333 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.290477651464734,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.0126261070295,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1610s rows=1611 | SENDER sampled=1610s next_due=1630s
+samples=96 uploads=21 sample_upload=False sample_frame=0B last_tx=1590s last_frame=36B total_application_bytes=754
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.142858532230846 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.506751767059065 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=21 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1590s age=20s (no filling of dropped frames)
+  temperature: value=24.017577332670605 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.2577296947333 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":45.01298916319458,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.03863690829453,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1630s rows=1631 | SENDER sampled=1630s next_due=1650s
+samples=97 uploads=21 sample_upload=False sample_frame=0B last_tx=1590s last_frame=36B total_application_bytes=754
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.995663765291486 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.47785167187673 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=21 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1590s age=40s (no filling of dropped frames)
+  temperature: value=24.017577332670605 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.2577296947333 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":true,"candidate_start":null,"forecast":44.40434408351333,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.018165466993224,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["health_edge:humidity"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1650s rows=1651 | SENDER sampled=1650s next_due=1670s
+samples=98 uploads=22 sample_upload=True sample_frame=36B last_tx=1650s last_frame=36B total_application_bytes=790
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.063162223716795 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.33599364685968 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVER decoded=22 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1650s age=0s (no filling of dropped frames)
+  temperature: value=24.063162223716795 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.33599364685968 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+  1650s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":true,"candidate_start":null,"forecast":44.6158723240484,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.07263315259903,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1670s rows=1671 | SENDER sampled=1670s next_due=1690s
+samples=99 uploads=22 sample_upload=False sample_frame=0B last_tx=1650s last_frame=36B total_application_bytes=790
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.98381903699062 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.943176755837406 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVER decoded=22 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1650s age=20s (no filling of dropped frames)
+  temperature: value=24.063162223716795 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.33599364685968 HEALTHY score=100 flags=32(APP_SUSPECT_DRIFT) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s humidity HEALTHY NONE event=False
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+  1650s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.930638825190755,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.99980782230252,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":["health_edge:humidity"]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1690s rows=1691 | SENDER sampled=1690s next_due=1710s
+samples=100 uploads=23 sample_upload=True sample_frame=36B last_tx=1690s last_frame=36B total_application_bytes=826
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.035808962071325 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.882594159947004 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=23 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1690s age=0s (no filling of dropped frames)
+  temperature: value=24.035808962071325 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.882594159947004 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+  1650s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  1690s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.87882306839385,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.970943216138767,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1710s rows=1711 | SENDER sampled=1710s next_due=1730s
+samples=101 uploads=23 sample_upload=False sample_frame=0B last_tx=1690s last_frame=36B total_application_bytes=826
+SENDER (local state; not automatically known by receiver):
+  temperature: value=23.97611940887078 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.156762484193614 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=23 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1690s age=20s (no filling of dropped frames)
+  temperature: value=24.035808962071325 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.882594159947004 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+  1650s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  1690s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.7293161483709,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.979747746275976,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1730s rows=1731 | SENDER sampled=1730s next_due=1750s
+samples=102 uploads=23 sample_upload=False sample_frame=0B last_tx=1690s last_frame=36B total_application_bytes=826
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.034409711513685 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.56317682066105 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=23 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1690s age=40s (no filling of dropped frames)
+  temperature: value=24.035808962071325 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.882594159947004 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+  1650s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  1690s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.5823368124011,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":23.994308855549054,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1750s rows=1751 | SENDER sampled=1750s next_due=1770s
+samples=103 uploads=23 sample_upload=False sample_frame=0B last_tx=1690s last_frame=36B total_application_bytes=826
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.031788118456646 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.28989610579937 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=23 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1690s age=60s (no filling of dropped frames)
+  temperature: value=24.035808962071325 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.882594159947004 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+  1650s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  1690s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.80635495315821,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.01833715574113,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1770s rows=1771 | SENDER sampled=1770s next_due=1790s
+samples=104 uploads=23 sample_upload=False sample_frame=0B last_tx=1690s last_frame=36B total_application_bytes=826
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.008572387345026 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.81104982834421 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=23 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1690s age=80s (no filling of dropped frames)
+  temperature: value=24.035808962071325 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.882594159947004 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+  1650s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  1690s humidity HEALTHY NONE event=False RECOVERED
+
+JO diagnostics: {"channels":{"humidity":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":44.82428443102281,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}},"temperature":{"abrupt_residual":false,"app_suspect_drift":false,"candidate_start":null,"forecast":24.00531599906517,"raw_c11":{"flags":0,"score":100,"state":"HEALTHY"}}},"upload_reasons":[]}
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1790s rows=1791 | SENDER sampled=1790s next_due=1810s
+samples=105 uploads=23 sample_upload=False sample_frame=0B last_tx=1690s last_frame=36B total_application_bytes=826
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.006457964319225 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.551059956998174 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=23 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1690s age=100s (no filling of dropped frames)
+  temperature: value=24.035808962071325 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.882594159947004 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+  1650s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  1690s humidity HEALTHY NONE event=False RECOVERED
+
+TAIS CORE | TAIS-JO experimental | Stateless Binary v1 | SYNTHETIC DEMO clean_short seed=20 | not device measurements
+SOURCE clock=1799s rows=1800 | SENDER sampled=1790s next_due=1810s
+samples=105 uploads=23 sample_upload=False sample_frame=0B last_tx=1690s last_frame=36B total_application_bytes=826
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.006457964319225 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.551059956998174 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=23 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1690s age=109s (no filling of dropped frames)
+  temperature: value=24.035808962071325 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.882594159947004 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  80s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  140s humidity HEALTHY NONE event=False RECOVERED
+  440s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  560s humidity HEALTHY NONE event=False RECOVERED
+  650s temperature HEALTHY NONE event=True
+  655s temperature HEALTHY NONE event=False
+  670s temperature HEALTHY NONE event=True
+  685s temperature HEALTHY NONE event=False
+  790s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  870s humidity HEALTHY NONE event=False RECOVERED
+  1650s humidity HEALTHY APP_SUSPECT_DRIFT event=False
+  1690s humidity HEALTHY NONE event=False RECOVERED
+
+{
+  "status": "COMPLETE",
+  "error": null,
+  "input_label": "SYNTHETIC DEMO clean_short seed=20 | not device measurements",
+  "sender": {
+    "source_rows": 1800,
+    "samples": 105,
+    "uploads": 23,
+    "binary_bytes": 826
+  },
+  "health_sample_counts": {
+    "temperature:HEALTHY": 105,
+    "humidity:HEALTHY": 105
+  },
+  "link": {
+    "sent": 23,
+    "sent_bytes": 826,
+    "dropped": 0,
+    "altered": 0
+  },
+  "receiver": {
+    "received": 23,
+    "received_bytes": 826,
+    "decoded": 23,
+    "updates": 23,
+    "corrupt": 0,
+    "out_of_order": 0,
+    "duplicate": 0,
+    "conflict": 0
+  },
+  "truth_metrics": {
+    "source": "synthetic independent intervention labels; offline only",
+    "truth": [
+      {
+        "channel": "temperature",
+        "start_s": 634.0,
+        "end_s": 656.0,
+        "event_type": "sudden_change"
+      }
+    ],
+    "faults": [],
+    "tp": 1,
+    "unmatched": 1,
+    "missed": 0,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6666666666666666,
+    "fault_episodes": 0,
+    "flagged_during_fault": 0
+  },
+  "truth_metrics_reason": "offline synthetic truth; not available to sender or receiver",
+  "verification": {
+    "frozen_gateonly_records_and_reports_identical": null,
+    "selected_policy_records_and_reports_identical": true,
+    "tx_frames": 23,
+    "actual_binary_bytes_recomputed": 826,
+    "received_valid_frames_exact": 23,
+    "all_valid_received_envelopes_match_sender": true
+  },
+  "journal_sha256": "fc014d7f6ee32a1c03e1ebe700164dc8cda0d20cf2d9107d5aa0acee6ddfd1f3"
+}

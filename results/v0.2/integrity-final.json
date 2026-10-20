@@ -1,0 +1,21 @@
+{
+  "frozen_experiment_sources_match": true,
+  "baseline_commit": "68af4b6d9df7ed145a237defc4ab920600823373",
+  "modified_legacy_files": [
+    "README.md",
+    "docs/LIMITATIONS.md"
+  ],
+  "legacy_policy_configs_scripts_metrics_reports_unchanged": true,
+  "upstream_submodules_clean": true,
+  "original_AdaptiveSense_worktree_clean": true,
+  "local_main_unchanged": true,
+  "final_matrix_runs": 42750,
+  "final_event_rows": 28500,
+  "final_archive_hashes_verified": 50700,
+  "tests": {
+    "passed": 125,
+    "known_expected_failure": 1,
+    "unexpected_failure": 0
+  },
+  "checked_utc": "2026-10-17T07:47:12.363810+00:00"
+}

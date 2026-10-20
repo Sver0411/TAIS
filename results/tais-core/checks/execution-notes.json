@@ -1,0 +1,13 @@
+{
+  "initial_new_tests": "51 passed,3 failed: inspect.py shadowed stdlib inspect; renamed view_run.py; failures retained",
+  "corrected_first_suite": "54 passed; standalone receiver test added thereafter",
+  "final_full_suite": "664 passed,2 unchanged strict xfails; 55 new tests",
+  "acceptance": "8 final-code input-stream runs plus separate receiver replay; all output paths exclusive",
+  "initial_probes": "retained development engineering runs, not extra independent algorithm evidence",
+  "detection": "only frozen GateOnly confirmation=False multiplier1; no algorithm/config/threshold edits",
+  "metrics": "synthetic truth scored offline on sender reports; user CSV/JSONL truth metrics N/A",
+  "source_commit": "2ea17b39a502e32136333b0987d72c613cccbd70 was the parent while new code developed; per-run source hashes pin executed new files",
+  "ci": "will be checked after push; this file makes no advance CI claim",
+  "markdown_links_checked": 19,
+  "raw_output_preservation": "Scoped .gitattributes marks actual PTY and verbatim initial pytest failure as byte records (-text,-diff); CR/escape/traceback whitespace retained. Text timeline exports remove trailing padding only; no measurements or metrics changed."
+}

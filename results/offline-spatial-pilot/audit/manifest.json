@@ -1,0 +1,25 @@
+{
+  "purpose": "Post-replay descriptive audit only; no model, sampling, or data selection",
+  "python": "3.14.7",
+  "platform": "macOS-15.7.7-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2",
+    "pytest": "9.1.1"
+  },
+  "source_artifact_sha256": {
+    "development/node-metrics.csv.gz": "680ae97b0f80f3776ce0eb4b4bb94cd55521a7c498a79124b3d7687b94d45f5f",
+    "development/summary.csv": "da4cd678f8bf22a13641acfa573cb1e398ab76dcda8a620a904a7791184e8ffd",
+    "development/paired-differences.csv": "fe9b30f42cd06e1b8166482c84bbc9f9d82b490cad80877b5e29bc5255003eb6",
+    "development/gate.json": "6ee77537e0852741b220f45532b08eff30d416d3e0bb6789e4c95328c6d58c47",
+    "validation/node-metrics.csv.gz": "cef7cfd8ff3896d5dc078ab7eb8fa407985d5e474ceb6c9dfa0b6df8d603e647",
+    "validation/summary.csv": "2665e77e5dfffb94be996d09cbd2a566021c9982f86182bfe7a027dec7062930",
+    "validation/paired-differences.csv": "11d94a859b76688cd3051ecdbec8cca17171e92576e42086c12b6bb3d48bb366",
+    "validation/gate.json": "0d65f52049ecb7b0e4dfaa0cf2c908a9a71e2c10ce5f7e99ff6d7ccc8b1c4f7c",
+    "test/node-metrics.csv.gz": "5854225b7dfd1bf86db8f0b94ea861679bd53b53aff33930f6cd13a166ca5912",
+    "test/summary.csv": "54a0bcde8f51b349a9ec5df1cc9b024554066d423ce18ef7387791a9f609ff4e",
+    "test/paired-differences.csv": "a80ec8128a1b78e130b3afa4648127cccbde2a70ae56531804a5a3c5abc8f4ab",
+    "test/gate.json": "5f08c73a26672dc61dbc92a6f7dd044715005a39a024187087de33085f919019"
+  }
+}

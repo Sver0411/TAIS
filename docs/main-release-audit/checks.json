@@ -1,0 +1,36 @@
+{
+  "assessed_candidate": "3fb89beaa7dd5aa64cb5c17f6088905b99f1709e",
+  "pytest": "892 passed, 2 xfailed; full suite newly executed in this audit",
+  "upstream_python": {
+    "AdaptiveSense": 235,
+    "SensorTrust": 27
+  },
+  "upstream_config_parity": 69,
+  "standalone_C11": {
+    "tests": 21,
+    "checks": 404,
+    "failed": 0
+  },
+  "source_submodules_imported": 37,
+  "core_modes": "PASS; see core-checks.json",
+  "paper": "PASS; see paper-checks.json",
+  "paper_existing_checks": [
+    "check_paper_artifacts.py",
+    "verify_paper_revision.py",
+    "verify_paper.py",
+    "verify_transfer.py --archives sample"
+  ],
+  "static_code": "127 added Python files parsed plus all scripts/examples/tests; no import-all of remote writers",
+  "all_existing_markdown": {
+    "files": 82,
+    "links": 759,
+    "status": "PASS"
+  },
+  "final_PR_CI": "must be checked on final release head; historical run success is not sufficient",
+  "large_campaigns_rerun": false,
+  "final_markdown": {
+    "files": 83,
+    "local_links": 777,
+    "status": "PASS"
+  }
+}

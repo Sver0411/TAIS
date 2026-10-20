@@ -1,0 +1,15 @@
+A,B,view,matched_in_both,mean_delay_difference_s
+JO-SU-40,GateOnly,sender,531,-10.009416195856874
+JO-SU-40,GateOnly,receiver,531,-10.009416195856874
+JO-SU-40,AdaptiveSense+TrustLog,sender,543,-10.05524861878453
+JO-SU-40,AdaptiveSense+TrustLog,receiver,543,-10.05524861878453
+JO-SU-40,Delta-budget-SU40+C11,sender,675,3.7185185185185183
+JO-SU-40,Delta-budget-SU40+C11,receiver,675,3.7185185185185183
+JO-SU-40,Variance-budget-SU40+C11,sender,607,-6.1532125205930805
+JO-SU-40,Variance-budget-SU40+C11,receiver,607,-6.1532125205930805
+JO-SU-40,Rao-inspired-budget-SU40+C11,sender,731,9.54172366621067
+JO-SU-40,Rao-inspired-budget-SU40+C11,receiver,731,9.54172366621067
+JO-SU-20,JO-SU-40,sender,754,-6.730769230769231
+JO-SU-20,JO-SU-40,receiver,754,-6.730769230769231
+GateOnly+U,GateOnly,sender,665,0.0
+GateOnly+U,GateOnly,receiver,665,0.0

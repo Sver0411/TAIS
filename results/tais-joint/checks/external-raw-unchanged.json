@@ -1,0 +1,27 @@
+[
+  {
+    "file": "/Users/mac/Documents/TAIS-external-data/C0-20261018/hull-v1/raw/Training Set.csv",
+    "sha256": "5663ee2f6dfa114d1d647f5d8de08ea659589c42be6f81edccbed063cddeb09c",
+    "unchanged": true
+  },
+  {
+    "file": "/Users/mac/Documents/TAIS-external-data/C0-20261018/hull-v1/raw/Test Set.csv",
+    "sha256": "81624b3bd95f7cc996d205b914798c7230b98e30b816e8bbcf13c7f022867542",
+    "unchanged": true
+  },
+  {
+    "file": "/Users/mac/Documents/TAIS-external-data/C0-20261018/hull-v1/raw/Full Data Set.csv",
+    "sha256": "e4051527575af636c0e9be940ec6f8b084ed31743d1441371d69647455c4191a",
+    "unchanged": true
+  },
+  {
+    "file": "/Users/mac/Documents/TAIS-external-data/C0-20261018/intel-berkeley/raw/mote_locs.txt",
+    "sha256": "3865c0263110c24c40e3377690cecaa552e0575cf56cdb9f5f8bd17130b6bf04",
+    "unchanged": true
+  },
+  {
+    "file": "/Users/mac/Documents/TAIS-external-data/C0-20261018/intel-berkeley/raw/data.txt.gz",
+    "sha256": "d99288c8f406ca6604d359ceaa0d8adfffa79e7095061a1e27dc4399f48c7225",
+    "unchanged": true
+  }
+]

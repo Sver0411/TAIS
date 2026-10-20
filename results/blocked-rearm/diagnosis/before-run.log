@@ -1,0 +1,20 @@
+{
+  "TAIS": {
+    "tp": 1,
+    "reports": [
+      675,
+      870
+    ],
+    "samples": 78,
+    "uploads": 40
+  },
+  "V02": {
+    "tp": 0,
+    "reports": [
+      870
+    ],
+    "samples": 78,
+    "uploads": 39
+  }
+}
+Key V02 samples [(600, 'DEGRADED', 160.26773460688338, 'PENDING', False, True), (605, 'DEGRADED', 79.59928422013101, 'BLOCKED', False, True), (665, 'HEALTHY', 26.094365842161032, 'BLOCKED', False, True), (670, 'HEALTHY', 14.514306846597975, 'BLOCKED', False, False), (675, 'HEALTHY', 11.87865932438425, 'BLOCKED', True, False), (680, 'HEALTHY', 10.49836203628414, 'BLOCKED', True, False)]

@@ -1,0 +1,33 @@
+{
+  "status": "PASS_WITH_DISCLOSED_ANALYSIS_MANIFEST_SELF_HASH_DEFECT",
+  "original_analysis_manifest_retained": true,
+  "defect": "Frozen analyzer opens its manifest before enumerating output hashes, so its own entry records SHA256(empty). This entry cannot verify the completed manifest. All other listed output hashes match.",
+  "scope": "Supplementary checksums only; no numerical artifact, source, lock, statistical rule or policy execution changed.",
+  "frozen_sources_match_selection": true,
+  "calibration_artifacts_match_lock": true,
+  "selection_matches_pretest_commit": true,
+  "checksums_sha256": {
+    "results/budget-matched/test/analysis/absolute_intervals.csv": "d2fc3e8043247cb44be5ba142a192cb12bb85b2ff9208a7acf4f5f56b0972097",
+    "results/budget-matched/test/analysis/budget_tradeoff.png": "11887710f92b484e88d7405e893c678561f1cf4afc757fc174f730741f18e984",
+    "results/budget-matched/test/analysis/common_matched_delay.csv": "c36c0d3293e066b27612213b6cfd95cd9aa057f24f0b059ebc4006c2a6c691da",
+    "results/budget-matched/test/analysis/common_matched_event_pairs.csv": "2f9cbdefe1a4fe11ab7f4a24387611a6cfc8d75e6669f9072403d2f789cfee19",
+    "results/budget-matched/test/analysis/decision.json": "a58c3500ecee907e8dc5f880ebd9381f1cb3ffe2b0a93b4dab6ac8eabfb42504",
+    "results/budget-matched/test/analysis/decisions.csv": "8fed3cff8d370ee2591b54d8ed1172afa7b1d2fc6402ce00515640e306dce0db",
+    "results/budget-matched/test/analysis/manifest.json": "5031825db2278451616df8b71447e9cc0e5184d275422efa7ed78d448bca34a7",
+    "results/budget-matched/test/analysis/paired_intervals.csv": "279c0c85b50c199418ee5461513480c765ff58f5aeee4813adc6bf624a70f418",
+    "results/budget-matched/test/analysis/robustness_deletions.csv": "3af11c510d708ccc3c6348308cdf5653ac0df7587f8b18bca1cf53b80390d5a9",
+    "results/budget-matched/test/analysis/summary.csv": "a14f9279a7e2873b45c14650d926dd646153d936064b512420108540678eacfb",
+    "results/budget-matched/development/event_matches.csv": "62c41931c037103d66e478a402f5356179c21163b91ae983baba6bf6d321b36f",
+    "results/budget-matched/development/manifest.json": "fdeedef924bc2381c18a91abbdaf6c422e2c9bc6d057312565a45738eff75a86",
+    "results/budget-matched/development/metrics.csv": "8011adb4e26fe1f8658b3a84535f2c5d6a410aeb04732e95162cac76479f64b2",
+    "results/budget-matched/development/run_started.json": "6df0bc87065b9f97c3101ef021b6f59c859c1d84fa8135d50d1af4155280357e",
+    "results/budget-matched/validation/event_matches.csv": "43a39e9fa2a72d00162f5e1dd275b650c4ccfcf2e27b13ee309156c5d6299bb5",
+    "results/budget-matched/validation/manifest.json": "4f3f7f90dcd09b258da4d52e5cd63bd1b1503bccdad36a82596f75b661766c36",
+    "results/budget-matched/validation/metrics.csv": "83f210ef1a3ff93120857a18cade7700d5ff7603d931d6fd9d92a20d86716231",
+    "results/budget-matched/validation/run_started.json": "45be1d5157b24e62ffef76fa82fb629c222fd488c112d3137b4e7b6a5b281d84",
+    "results/budget-matched/test/event_matches.csv": "aec3efd7f7c812e33c6a39abf5579fcd3d61c1b797364e2b0517abd6c0284a50",
+    "results/budget-matched/test/manifest.json": "3b1e9e8c7b60cb9b75ac821f5e27a77a95aabbf684c533881a4424979dcd891a",
+    "results/budget-matched/test/metrics.csv": "015809a2a4a1f9c38edee899abeabd0cb1209b8f53d3b23cb3932b8fe27a74bd",
+    "results/budget-matched/test/run_started.json": "bdd3ed6d3b1a102d9bd84ed34408858ec0d4d83743a5dd29655d254ba01762c1"
+  }
+}

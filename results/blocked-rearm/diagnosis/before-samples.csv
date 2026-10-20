@@ -1,0 +1,313 @@
+method,t,channel,value,health_state,health_score,fault_flags,raw_score,raw_active,phase,blocked,actions,environment_active,interval,upload,reasons
+TAIS,0,temperature,24.04258869408978,HEALTHY,100,0,0.0,False,STABLE,False,"""none""",False,20.0,True,"[""interval"", ""first""]"
+TAIS,0,humidity,45.12327713095717,HEALTHY,100,0,0.0,False,STABLE,False,"""none""",False,20.0,True,"[""interval"", ""first""]"
+TAIS,20,temperature,23.96367571289561,HEALTHY,100,0,0.5260865412944564,False,STABLE,False,"""none""",False,20.0,False,[]
+TAIS,20,humidity,45.17173059884133,HEALTHY,100,0,0.06056683485519798,False,STABLE,False,"""none""",False,20.0,False,[]
+TAIS,40,temperature,23.979822142533955,HEALTHY,100,0,0.28692204171522445,False,STABLE,False,"""none""",False,40.0,True,"[""interval""]"
+TAIS,40,humidity,45.15622717845795,HEALTHY,100,0,0.02604585066216636,False,STABLE,False,"""none""",False,40.0,True,"[""interval""]"
+TAIS,80,temperature,24.08740809504866,HEALTHY,100,0,0.5020481521449465,False,STABLE,False,"""none""",False,40.0,False,[]
+TAIS,80,humidity,45.25826072161044,HEALTHY,100,0,0.14707631693724466,False,STABLE,False,"""none""",False,40.0,False,[]
+TAIS,120,temperature,23.94390976366078,HEALTHY,100,0,0.655426651298896,False,STABLE,False,"""none""",False,60,True,"[""interval"", ""heartbeat""]"
+TAIS,120,humidity,45.53369932148715,HEALTHY,100,0,0.43254404000823143,False,STABLE,False,"""none""",False,60,True,"[""interval"", ""heartbeat""]"
+TAIS,180,temperature,24.005155434552535,HEALTHY,100,0,0.015048481832356705,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,180,humidity,45.15567750110626,HEALTHY,100,0,0.2130008514711701,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,240,temperature,23.999641622441697,HEALTHY,100,0,0.029234506489406918,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,240,humidity,45.14800011914604,HEALTHY,100,0,0.11609715318585678,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,300,temperature,23.921984778139517,HEALTHY,100,0,0.5323295485925665,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,300,humidity,45.03286048699852,HEALTHY,100,0,0.20197311677732976,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,360,temperature,23.936988290743937,HEALTHY,100,0,0.16614135693347504,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,360,humidity,44.95147045082398,HEALTHY,100,0,0.20272410360683502,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,420,temperature,24.06218877920964,HEALTHY,100,0,0.751599244637949,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,420,humidity,45.019859415624474,HEALTHY,100,0,0.01587584580280854,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,480,temperature,23.931569006184635,HEALTHY,100,0,0.4949988645144051,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,480,humidity,44.66620281271816,HEALTHY,100,0,0.45000867653429033,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,540,temperature,23.866835466580003,HEALTHY,100,0,0.6790563629547582,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,540,humidity,45.2986601162572,HEALTHY,100,0,0.5655672911566523,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,600,temperature,47.957924884834114,DEGRADED,75,4,160.26773460688338,False,STABLE,False,"""created""",False,5,True,"[""health:temperature"", ""interval"", ""heartbeat""]"
+TAIS,600,humidity,44.821352236132086,HEALTHY,100,0,0.313851204578075,False,STABLE,False,"""none""",False,5,True,"[""health:temperature"", ""interval"", ""heartbeat""]"
+TAIS,605,temperature,24.07813961879481,DEGRADED,75,4,79.59928422013101,False,STABLE,True,"""cancelled""",False,60,True,"[""interval""]"
+TAIS,605,humidity,44.53370201866586,HEALTHY,100,0,0.5164883741218151,False,STABLE,False,"""none""",False,60,True,"[""interval""]"
+TAIS,665,temperature,27.992294495118966,HEALTHY,100,0,26.094365842161032,False,ALERT,False,"""none""",False,5,True,"[""health:temperature"", ""scheduler_state"", ""interval"", ""heartbeat"", ""trusted_delta:temperature""]"
+TAIS,665,humidity,45.182848461328696,HEALTHY,100,0,0.3346745541391716,False,STABLE,False,"""none""",False,5,True,"[""health:temperature"", ""scheduler_state"", ""interval"", ""heartbeat"", ""trusted_delta:temperature""]"
+TAIS,670,temperature,28.212363083946585,HEALTHY,100,0,14.514306846597975,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,670,humidity,44.815860559963,HEALTHY,100,0,0.29139759963753065,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,675,temperature,27.984488726921427,HEALTHY,100,0,11.87865932438425,True,ALERT,False,"""none""",True,5,True,"[""environment_event""]"
+TAIS,675,humidity,45.66228651353811,HEALTHY,100,0,0.789050042303483,False,STABLE,False,"""none""",False,5,True,"[""environment_event""]"
+TAIS,680,temperature,27.914505587449305,HEALTHY,100,0,10.49836203628414,True,ALERT,False,"""none""",True,5,False,[]
+TAIS,680,humidity,44.96338471739388,HEALTHY,100,0,0.40011830441937657,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,685,temperature,27.86968543553421,HEALTHY,100,0,9.391994713033423,True,ALERT,False,"""none""",True,5,False,[]
+TAIS,685,humidity,44.95274995294486,HEALTHY,100,0,0.3720390227874882,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,690,temperature,28.009278656053418,HEALTHY,100,0,9.600155051389692,True,ALERT,False,"""none""",True,5,False,[]
+TAIS,690,humidity,44.93953382676591,HEALTHY,100,0,0.3493682677467172,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,695,temperature,28.087339892157086,HEALTHY,100,0,9.382089826589304,True,ALERT,False,"""none""",True,5,False,[]
+TAIS,695,humidity,45.05252601581044,HEALTHY,100,0,0.3237855856717176,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,700,temperature,27.965638462645305,HEALTHY,100,0,7.849047745747484,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,700,humidity,45.324015881969785,HEALTHY,100,0,0.33973383416571856,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,705,temperature,27.943649944155425,HEALTHY,100,0,7.0986847189625735,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,705,humidity,44.87461814251036,HEALTHY,100,0,0.32896390759421945,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,710,temperature,27.944039071873963,HEALTHY,100,0,6.555226233063394,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,710,humidity,45.511120680313,HEALTHY,100,0,0.5665696688525657,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,715,temperature,27.991427365964398,HEALTHY,100,0,6.366900021892192,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,715,humidity,44.83733517310164,HEALTHY,100,0,0.31924449738105487,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,720,temperature,27.901084391010123,HEALTHY,100,0,5.274851982051464,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,720,humidity,44.99067386901464,HEALTHY,100,0,0.2892459997057652,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,725,temperature,27.99616137907576,HEALTHY,100,0,5.5029407243825315,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,725,humidity,45.44378011884687,HEALTHY,100,0,0.47129309678828335,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,730,temperature,28.115507860027403,HEALTHY,100,0,5.875280798081993,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,730,humidity,44.517552403631385,HEALTHY,100,0,0.7227448623686339,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,735,temperature,28.02094311705918,HEALTHY,100,0,4.792904501518294,False,ALERT,False,"""none""",False,5,True,"[""heartbeat""]"
+TAIS,735,humidity,44.80947533979037,HEALTHY,100,0,0.4144364264031323,False,STABLE,False,"""none""",False,5,True,"[""heartbeat""]"
+TAIS,740,temperature,27.97841793276216,HEALTHY,100,0,4.140718311216247,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,740,humidity,45.00685061746131,HEALTHY,100,0,0.40967259602077244,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,745,temperature,27.97106123748404,HEALTHY,100,0,3.773156882858307,False,ACTIVE,False,"""none""",False,15.0,True,"[""scheduler_state"", ""interval""]"
+TAIS,745,humidity,44.78431003468709,HEALTHY,100,0,0.3293496647528395,False,STABLE,False,"""none""",False,15.0,True,"[""scheduler_state"", ""interval""]"
+TAIS,760,temperature,28.085345706230704,HEALTHY,100,0,4.244810504026452,False,ACTIVE,False,"""none""",False,10.0,True,"[""interval""]"
+TAIS,760,humidity,45.92826585629269,HEALTHY,100,0,1.1456651517380578,False,STABLE,False,"""none""",False,10.0,True,"[""interval""]"
+TAIS,770,temperature,27.851395264698432,HEALTHY,100,0,1.8361787930060085,False,ACTIVE,False,"""none""",False,5,True,"[""interval""]"
+TAIS,770,humidity,45.439743928055286,HEALTHY,100,0,0.5469026025551119,False,STABLE,False,"""none""",False,5,True,"[""interval""]"
+TAIS,775,temperature,28.12028623942526,HEALTHY,100,0,3.3664740350411413,False,ACTIVE,False,"""none""",False,5,False,[]
+TAIS,775,humidity,45.31721491211447,HEALTHY,100,0,0.5086427260639512,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,780,temperature,27.874170051993374,HEALTHY,100,0,1.4667399110048982,False,STABLE,False,"""none""",False,20.0,True,"[""scheduler_state"", ""interval""]"
+TAIS,780,humidity,44.68815215547415,HEALTHY,100,0,0.6856933631085216,False,STABLE,False,"""none""",False,20.0,True,"[""scheduler_state"", ""interval""]"
+TAIS,800,temperature,27.960836103664203,HEALTHY,100,0,1.9316874418100365,False,STABLE,False,"""none""",False,20.0,False,[]
+TAIS,800,humidity,44.945117102659395,HEALTHY,100,0,0.3730112583698307,False,STABLE,False,"""none""",False,20.0,False,[]
+TAIS,820,temperature,27.97050879792259,HEALTHY,100,0,1.5132502097467675,False,STABLE,False,"""none""",False,40.0,True,"[""interval""]"
+TAIS,820,humidity,44.584120448179,HEALTHY,100,0,0.6850519699586943,False,STABLE,False,"""none""",False,40.0,True,"[""interval""]"
+TAIS,860,temperature,24.124377894401736,HEALTHY,100,0,24.50593503282896,False,ALERT,False,"""none""",False,5,True,"[""scheduler_state"", ""interval"", ""trusted_delta:temperature""]"
+TAIS,860,humidity,44.20642634240542,HEALTHY,100,0,0.9859066096859959,False,STABLE,False,"""none""",False,5,True,"[""scheduler_state"", ""interval"", ""trusted_delta:temperature""]"
+TAIS,865,temperature,23.931659101055597,HEALTHY,100,0,15.988352975338293,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,865,humidity,44.737028446982514,HEALTHY,100,0,0.33162631536068243,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,870,temperature,23.887026122385514,HEALTHY,100,0,15.056032860676941,True,ALERT,False,"""none""",True,5,True,"[""environment_event""]"
+TAIS,870,humidity,44.63825029381955,HEALTHY,100,0,0.2880030749313924,False,STABLE,False,"""none""",False,5,True,"[""environment_event""]"
+TAIS,875,temperature,23.933139894509765,HEALTHY,100,0,13.590451339283714,True,ALERT,False,"""none""",True,5,False,[]
+TAIS,875,humidity,44.7521269149058,HEALTHY,100,0,0.2775367031839782,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,880,temperature,24.11736016568128,HEALTHY,100,0,11.316896864349223,True,ALERT,False,"""none""",True,5,False,[]
+TAIS,880,humidity,45.36103453785868,HEALTHY,100,0,0.8437239365274163,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,885,temperature,24.01277335249856,HEALTHY,100,0,11.143611757540508,True,ALERT,False,"""none""",True,5,False,[]
+TAIS,885,humidity,44.51672405287039,HEALTHY,100,0,0.4336288992734713,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,890,temperature,23.85206449589967,HEALTHY,100,0,11.357803230440265,True,ALERT,False,"""none""",True,5,False,[]
+TAIS,890,humidity,45.10362878281953,HEALTHY,100,0,0.4783392099940009,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,895,temperature,23.915480901360404,HEALTHY,100,0,10.061350022463031,True,ALERT,False,"""none""",True,5,False,[]
+TAIS,895,humidity,44.613970692872776,HEALTHY,100,0,0.35104104796749597,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,900,temperature,24.006746279085164,HEALTHY,100,0,8.678964169236707,True,ALERT,False,"""none""",True,5,False,[]
+TAIS,900,humidity,45.07522214525256,HEALTHY,100,0,0.4191531835192208,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,905,temperature,24.048904643174005,HEALTHY,100,0,7.7302957802416,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,905,humidity,44.67306447332785,HEALTHY,100,0,0.3600723087261609,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,910,temperature,23.967690601367497,HEALTHY,100,0,7.677084588676664,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,910,humidity,44.978671693135034,HEALTHY,100,0,0.35702496080253066,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,915,temperature,24.02679154647989,HEALTHY,100,0,6.69253331956765,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,915,humidity,45.44950294308672,HEALTHY,100,0,0.8425044930397885,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,920,temperature,23.86199297847622,HEALTHY,100,0,7.276380184240736,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,920,humidity,44.730087975824,HEALTHY,100,0,0.3431349869605717,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,925,temperature,23.993855292721992,HEALTHY,100,0,5.837576536635018,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,925,humidity,44.962601312648374,HEALTHY,100,0,0.3341288493778103,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,930,temperature,24.029492472971388,HEALTHY,100,0,5.150950986000448,False,ALERT,False,"""none""",False,5,True,"[""heartbeat""]"
+TAIS,930,humidity,44.94936210498084,HEALTHY,100,0,0.2939733123219497,False,STABLE,False,"""none""",False,5,True,"[""heartbeat""]"
+TAIS,935,temperature,23.900449371800256,HEALTHY,100,0,5.6150113282182215,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,935,humidity,44.55040857663968,HEALTHY,100,0,0.36194044848709694,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,940,temperature,24.01831922715945,HEALTHY,100,0,4.397288344165797,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,940,humidity,45.26951954843451,HEALTHY,100,0,0.5647898392169814,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,945,temperature,23.87369065761808,HEALTHY,100,0,5.023225858223697,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,945,humidity,44.3665095470111,HEALTHY,100,0,0.6074180348097435,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,950,temperature,23.894634040917314,HEALTHY,100,0,4.497201313801351,False,ALERT,False,"""none""",False,5,False,[]
+TAIS,950,humidity,45.11087932714516,HEALTHY,100,0,0.36976865457397423,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,955,temperature,23.927961398935434,HEALTHY,100,0,3.929080364413788,False,ACTIVE,False,"""none""",False,15.0,True,"[""scheduler_state"", ""interval""]"
+TAIS,955,humidity,44.549657740650076,HEALTHY,100,0,0.3881949768389741,False,STABLE,False,"""none""",False,15.0,True,"[""scheduler_state"", ""interval""]"
+TAIS,970,temperature,23.82128218692186,HEALTHY,100,0,4.338038160062207,False,ACTIVE,False,"""none""",False,10.0,True,"[""interval""]"
+TAIS,970,humidity,45.32733647982343,HEALTHY,100,0,0.6396042043933825,False,STABLE,False,"""none""",False,10.0,True,"[""interval""]"
+TAIS,980,temperature,23.969951767727803,HEALTHY,100,0,2.4792999893434837,False,ACTIVE,False,"""none""",False,5,True,"[""interval""]"
+TAIS,980,humidity,45.04008177256443,HEALTHY,100,0,0.35557101978170724,False,STABLE,False,"""none""",False,5,True,"[""interval""]"
+TAIS,985,temperature,24.015198537959325,HEALTHY,100,0,1.8234691417033133,False,ACTIVE,False,"""none""",False,5,False,[]
+TAIS,985,humidity,44.91657148556643,HEALTHY,100,0,0.34888544454784876,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,990,temperature,23.886412971756513,HEALTHY,100,0,2.541772726001289,False,ACTIVE,False,"""none""",False,5,False,[]
+TAIS,990,humidity,44.86155366265502,HEALTHY,100,0,0.2249893265651586,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,995,temperature,23.991460354412,HEALTHY,100,0,1.6459358627082092,False,ACTIVE,False,"""none""",False,5,False,[]
+TAIS,995,humidity,45.42823802249279,HEALTHY,100,0,0.6247857560908976,False,STABLE,False,"""none""",False,5,False,[]
+TAIS,1000,temperature,24.06931564049443,HEALTHY,100,0,1.0002901711811063,False,STABLE,False,"""none""",False,20.0,True,"[""scheduler_state"", ""interval""]"
+TAIS,1000,humidity,45.053067834561475,HEALTHY,100,0,0.25799579352726953,False,STABLE,False,"""none""",False,20.0,True,"[""scheduler_state"", ""interval""]"
+TAIS,1020,temperature,23.863435189740354,HEALTHY,100,0,2.295881111758457,False,STABLE,False,"""none""",False,20.0,False,[]
+TAIS,1020,humidity,45.80581100953297,HEALTHY,100,0,1.0404021180071599,False,STABLE,False,"""none""",False,20.0,False,[]
+TAIS,1040,temperature,23.947228645208853,HEALTHY,100,0,1.1632877973621922,False,STABLE,False,"""none""",False,40.0,True,"[""interval""]"
+TAIS,1040,humidity,45.05305260578051,HEALTHY,100,0,0.4704740023452868,False,STABLE,False,"""none""",False,40.0,True,"[""interval""]"
+TAIS,1080,temperature,24.0223609606388,HEALTHY,100,0,0.37158374515532466,False,STABLE,False,"""none""",False,40.0,False,[]
+TAIS,1080,humidity,45.12339358389048,HEALTHY,100,0,0.03255858950143242,False,STABLE,False,"""none""",False,40.0,False,[]
+TAIS,1120,temperature,24.088238694564804,HEALTHY,100,0,0.21623464574683265,False,STABLE,False,"""none""",False,60,True,"[""interval"", ""heartbeat""]"
+TAIS,1120,humidity,44.979824125770016,HEALTHY,100,0,0.19899697635143987,False,STABLE,False,"""none""",False,60,True,"[""interval"", ""heartbeat""]"
+TAIS,1180,temperature,24.070462210047943,HEALTHY,100,0,0.011230890669011728,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1180,humidity,45.42442016796098,HEALTHY,100,0,0.43634686692784364,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1240,temperature,23.931688068832297,HEALTHY,100,0,0.9195454961031402,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1240,humidity,44.59358989806091,HEALTHY,100,0,0.8203644039111602,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1300,temperature,24.01839085383522,HEALTHY,100,0,0.11824581863460064,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1300,humidity,45.298014402299415,HEALTHY,100,0,0.47034842834254853,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1360,temperature,24.039114902167036,HEALTHY,100,0,0.19728323152939709,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1360,humidity,45.16903350656483,HEALTHY,100,0,0.07394809450303796,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1420,temperature,23.902993603465685,HEALTHY,100,0,0.8088337089109862,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1420,humidity,44.9627645522142,HEALTHY,100,0,0.22086214568676432,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1480,temperature,23.97876491838765,HEALTHY,100,0,0.10072524502426461,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1480,humidity,44.7737674873036,HEALTHY,100,0,0.34667740398163005,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1540,temperature,23.971615339685176,HEALTHY,100,0,0.0026987644956240806,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1540,humidity,45.05046688589793,HEALTHY,100,0,0.17253554625209944,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1600,temperature,24.16664418669222,HEALTHY,100,0,1.301541695628122,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1600,humidity,44.60976265734371,HEALTHY,100,0,0.4646125125667311,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1660,temperature,24.02813573411193,HEALTHY,100,0,0.27261883605454784,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1660,humidity,45.907228129490896,HEALTHY,100,0,1.3895255839006193,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1720,temperature,24.05029492255663,HEALTHY,100,0,0.011418504937381613,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1720,humidity,44.737924245084564,HEALTHY,100,0,0.7668670635576103,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1780,temperature,23.891648814500922,HEALTHY,100,0,1.0519314679027048,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+TAIS,1780,humidity,44.64994867600923,HEALTHY,100,0,0.49340299312296665,False,STABLE,False,"""none""",False,60,True,"[""heartbeat""]"
+V02,0,temperature,24.04258869408978,HEALTHY,100,0,0.0,False,IDLE,False,[],False,20.0,True,"[""interval"", ""first""]"
+V02,0,humidity,45.12327713095717,HEALTHY,100,0,0.0,False,IDLE,False,[],False,20.0,True,"[""interval"", ""first""]"
+V02,20,temperature,23.96367571289561,HEALTHY,100,0,0.5260865412944564,False,IDLE,False,[],False,20.0,False,[]
+V02,20,humidity,45.17173059884133,HEALTHY,100,0,0.06056683485519798,False,IDLE,False,[],False,20.0,False,[]
+V02,40,temperature,23.979822142533955,HEALTHY,100,0,0.28692204171522445,False,IDLE,False,[],False,40.0,True,"[""interval""]"
+V02,40,humidity,45.15622717845795,HEALTHY,100,0,0.02604585066216636,False,IDLE,False,[],False,40.0,True,"[""interval""]"
+V02,80,temperature,24.08740809504866,HEALTHY,100,0,0.5020481521449465,False,IDLE,False,[],False,40.0,False,[]
+V02,80,humidity,45.25826072161044,HEALTHY,100,0,0.14707631693724466,False,IDLE,False,[],False,40.0,False,[]
+V02,120,temperature,23.94390976366078,HEALTHY,100,0,0.655426651298896,False,IDLE,False,[],False,60,True,"[""interval"", ""heartbeat""]"
+V02,120,humidity,45.53369932148715,HEALTHY,100,0,0.43254404000823143,False,IDLE,False,[],False,60,True,"[""interval"", ""heartbeat""]"
+V02,180,temperature,24.005155434552535,HEALTHY,100,0,0.015048481832356705,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,180,humidity,45.15567750110626,HEALTHY,100,0,0.2130008514711701,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,240,temperature,23.999641622441697,HEALTHY,100,0,0.029234506489406918,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,240,humidity,45.14800011914604,HEALTHY,100,0,0.11609715318585678,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,300,temperature,23.921984778139517,HEALTHY,100,0,0.5323295485925665,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,300,humidity,45.03286048699852,HEALTHY,100,0,0.20197311677732976,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,360,temperature,23.936988290743937,HEALTHY,100,0,0.16614135693347504,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,360,humidity,44.95147045082398,HEALTHY,100,0,0.20272410360683502,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,420,temperature,24.06218877920964,HEALTHY,100,0,0.751599244637949,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,420,humidity,45.019859415624474,HEALTHY,100,0,0.01587584580280854,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,480,temperature,23.931569006184635,HEALTHY,100,0,0.4949988645144051,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,480,humidity,44.66620281271816,HEALTHY,100,0,0.45000867653429033,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,540,temperature,23.866835466580003,HEALTHY,100,0,0.6790563629547582,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,540,humidity,45.2986601162572,HEALTHY,100,0,0.5655672911566523,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,600,temperature,47.957924884834114,DEGRADED,75,4,160.26773460688338,False,PENDING,False,"[{""t"": 600, ""action"": ""created"", ""reason"": ""degraded_change"", ""episode_start"": 600, ""reference"": 23.917764693801608, ""count"": 1, ""phase"": ""PENDING""}, {""t"": 600, ""action"": ""retained"", ""reason"": ""sampled_persistence"", ""episode_start"": 600, ""reference"": 23.917764693801608, ""count"": 1, ""phase"": ""PENDING""}]",False,5,True,"[""health:temperature"", ""interval"", ""heartbeat""]"
+V02,600,humidity,44.821352236132086,HEALTHY,100,0,0.313851204578075,False,IDLE,False,[],False,5,True,"[""health:temperature"", ""interval"", ""heartbeat""]"
+V02,605,temperature,24.07813961879481,DEGRADED,75,4,79.59928422013101,False,BLOCKED,True,"[{""t"": 605, ""action"": ""cancelled"", ""reason"": ""displacement_returned"", ""episode_start"": 600, ""reference"": 23.917764693801608, ""count"": 1, ""phase"": ""PENDING""}]",False,60,True,"[""interval""]"
+V02,605,humidity,44.53370201866586,HEALTHY,100,0,0.5164883741218151,False,IDLE,False,[],False,60,True,"[""interval""]"
+V02,665,temperature,27.992294495118966,HEALTHY,100,0,26.094365842161032,False,BLOCKED,True,[],False,5,True,"[""health:temperature"", ""scheduler_state"", ""interval"", ""heartbeat"", ""trusted_delta:temperature""]"
+V02,665,humidity,45.182848461328696,HEALTHY,100,0,0.3346745541391716,False,IDLE,False,[],False,5,True,"[""health:temperature"", ""scheduler_state"", ""interval"", ""heartbeat"", ""trusted_delta:temperature""]"
+V02,670,temperature,28.212363083946585,HEALTHY,100,0,14.514306846597975,False,BLOCKED,True,[],False,5,False,[]
+V02,670,humidity,44.815860559963,HEALTHY,100,0,0.29139759963753065,False,IDLE,False,[],False,5,False,[]
+V02,675,temperature,27.984488726921427,HEALTHY,100,0,11.87865932438425,True,BLOCKED,True,[],False,5,False,[]
+V02,675,humidity,45.66228651353811,HEALTHY,100,0,0.789050042303483,False,IDLE,False,[],False,5,False,[]
+V02,680,temperature,27.914505587449305,HEALTHY,100,0,10.49836203628414,True,BLOCKED,True,[],False,5,False,[]
+V02,680,humidity,44.96338471739388,HEALTHY,100,0,0.40011830441937657,False,IDLE,False,[],False,5,False,[]
+V02,685,temperature,27.86968543553421,HEALTHY,100,0,9.391994713033423,True,BLOCKED,True,[],False,5,False,[]
+V02,685,humidity,44.95274995294486,HEALTHY,100,0,0.3720390227874882,False,IDLE,False,[],False,5,False,[]
+V02,690,temperature,28.009278656053418,HEALTHY,100,0,9.600155051389692,True,BLOCKED,True,[],False,5,False,[]
+V02,690,humidity,44.93953382676591,HEALTHY,100,0,0.3493682677467172,False,IDLE,False,[],False,5,False,[]
+V02,695,temperature,28.087339892157086,HEALTHY,100,0,9.382089826589304,True,BLOCKED,True,[],False,5,False,[]
+V02,695,humidity,45.05252601581044,HEALTHY,100,0,0.3237855856717176,False,IDLE,False,[],False,5,False,[]
+V02,700,temperature,27.965638462645305,HEALTHY,100,0,7.849047745747484,False,IDLE,False,"[{""t"": 700, ""action"": ""rearmed"", ""reason"": ""score_low"", ""episode_start"": null, ""reference"": null, ""count"": 0, ""phase"": ""IDLE""}]",False,5,False,[]
+V02,700,humidity,45.324015881969785,HEALTHY,100,0,0.33973383416571856,False,IDLE,False,[],False,5,False,[]
+V02,705,temperature,27.943649944155425,HEALTHY,100,0,7.0986847189625735,False,IDLE,False,[],False,5,False,[]
+V02,705,humidity,44.87461814251036,HEALTHY,100,0,0.32896390759421945,False,IDLE,False,[],False,5,False,[]
+V02,710,temperature,27.944039071873963,HEALTHY,100,0,6.555226233063394,False,IDLE,False,[],False,5,False,[]
+V02,710,humidity,45.511120680313,HEALTHY,100,0,0.5665696688525657,False,IDLE,False,[],False,5,False,[]
+V02,715,temperature,27.991427365964398,HEALTHY,100,0,6.366900021892192,False,IDLE,False,[],False,5,False,[]
+V02,715,humidity,44.83733517310164,HEALTHY,100,0,0.31924449738105487,False,IDLE,False,[],False,5,False,[]
+V02,720,temperature,27.901084391010123,HEALTHY,100,0,5.274851982051464,False,IDLE,False,[],False,5,False,[]
+V02,720,humidity,44.99067386901464,HEALTHY,100,0,0.2892459997057652,False,IDLE,False,[],False,5,False,[]
+V02,725,temperature,27.99616137907576,HEALTHY,100,0,5.5029407243825315,False,IDLE,False,[],False,5,True,"[""heartbeat""]"
+V02,725,humidity,45.44378011884687,HEALTHY,100,0,0.47129309678828335,False,IDLE,False,[],False,5,True,"[""heartbeat""]"
+V02,730,temperature,28.115507860027403,HEALTHY,100,0,5.875280798081993,False,IDLE,False,[],False,5,False,[]
+V02,730,humidity,44.517552403631385,HEALTHY,100,0,0.7227448623686339,False,IDLE,False,[],False,5,False,[]
+V02,735,temperature,28.02094311705918,HEALTHY,100,0,4.792904501518294,False,IDLE,False,[],False,5,False,[]
+V02,735,humidity,44.80947533979037,HEALTHY,100,0,0.4144364264031323,False,IDLE,False,[],False,5,False,[]
+V02,740,temperature,27.97841793276216,HEALTHY,100,0,4.140718311216247,False,IDLE,False,[],False,5,False,[]
+V02,740,humidity,45.00685061746131,HEALTHY,100,0,0.40967259602077244,False,IDLE,False,[],False,5,False,[]
+V02,745,temperature,27.97106123748404,HEALTHY,100,0,3.773156882858307,False,IDLE,False,[],False,15.0,True,"[""scheduler_state"", ""interval""]"
+V02,745,humidity,44.78431003468709,HEALTHY,100,0,0.3293496647528395,False,IDLE,False,[],False,15.0,True,"[""scheduler_state"", ""interval""]"
+V02,760,temperature,28.085345706230704,HEALTHY,100,0,4.244810504026452,False,IDLE,False,[],False,10.0,True,"[""interval""]"
+V02,760,humidity,45.92826585629269,HEALTHY,100,0,1.1456651517380578,False,IDLE,False,[],False,10.0,True,"[""interval""]"
+V02,770,temperature,27.851395264698432,HEALTHY,100,0,1.8361787930060085,False,IDLE,False,[],False,5,True,"[""interval""]"
+V02,770,humidity,45.439743928055286,HEALTHY,100,0,0.5469026025551119,False,IDLE,False,[],False,5,True,"[""interval""]"
+V02,775,temperature,28.12028623942526,HEALTHY,100,0,3.3664740350411413,False,IDLE,False,[],False,5,False,[]
+V02,775,humidity,45.31721491211447,HEALTHY,100,0,0.5086427260639512,False,IDLE,False,[],False,5,False,[]
+V02,780,temperature,27.874170051993374,HEALTHY,100,0,1.4667399110048982,False,IDLE,False,[],False,20.0,True,"[""scheduler_state"", ""interval""]"
+V02,780,humidity,44.68815215547415,HEALTHY,100,0,0.6856933631085216,False,IDLE,False,[],False,20.0,True,"[""scheduler_state"", ""interval""]"
+V02,800,temperature,27.960836103664203,HEALTHY,100,0,1.9316874418100365,False,IDLE,False,[],False,20.0,False,[]
+V02,800,humidity,44.945117102659395,HEALTHY,100,0,0.3730112583698307,False,IDLE,False,[],False,20.0,False,[]
+V02,820,temperature,27.97050879792259,HEALTHY,100,0,1.5132502097467675,False,IDLE,False,[],False,40.0,True,"[""interval""]"
+V02,820,humidity,44.584120448179,HEALTHY,100,0,0.6850519699586943,False,IDLE,False,[],False,40.0,True,"[""interval""]"
+V02,860,temperature,24.124377894401736,HEALTHY,100,0,24.50593503282896,False,IDLE,False,[],False,5,True,"[""scheduler_state"", ""interval"", ""trusted_delta:temperature""]"
+V02,860,humidity,44.20642634240542,HEALTHY,100,0,0.9859066096859959,False,IDLE,False,[],False,5,True,"[""scheduler_state"", ""interval"", ""trusted_delta:temperature""]"
+V02,865,temperature,23.931659101055597,HEALTHY,100,0,15.988352975338293,False,IDLE,False,[],False,5,False,[]
+V02,865,humidity,44.737028446982514,HEALTHY,100,0,0.33162631536068243,False,IDLE,False,[],False,5,False,[]
+V02,870,temperature,23.887026122385514,HEALTHY,100,0,15.056032860676941,True,IDLE,False,[],True,5,True,"[""environment_event""]"
+V02,870,humidity,44.63825029381955,HEALTHY,100,0,0.2880030749313924,False,IDLE,False,[],False,5,True,"[""environment_event""]"
+V02,875,temperature,23.933139894509765,HEALTHY,100,0,13.590451339283714,True,IDLE,False,[],True,5,False,[]
+V02,875,humidity,44.7521269149058,HEALTHY,100,0,0.2775367031839782,False,IDLE,False,[],False,5,False,[]
+V02,880,temperature,24.11736016568128,HEALTHY,100,0,11.316896864349223,True,IDLE,False,[],True,5,False,[]
+V02,880,humidity,45.36103453785868,HEALTHY,100,0,0.8437239365274163,False,IDLE,False,[],False,5,False,[]
+V02,885,temperature,24.01277335249856,HEALTHY,100,0,11.143611757540508,True,IDLE,False,[],True,5,False,[]
+V02,885,humidity,44.51672405287039,HEALTHY,100,0,0.4336288992734713,False,IDLE,False,[],False,5,False,[]
+V02,890,temperature,23.85206449589967,HEALTHY,100,0,11.357803230440265,True,IDLE,False,[],True,5,False,[]
+V02,890,humidity,45.10362878281953,HEALTHY,100,0,0.4783392099940009,False,IDLE,False,[],False,5,False,[]
+V02,895,temperature,23.915480901360404,HEALTHY,100,0,10.061350022463031,True,IDLE,False,[],True,5,False,[]
+V02,895,humidity,44.613970692872776,HEALTHY,100,0,0.35104104796749597,False,IDLE,False,[],False,5,False,[]
+V02,900,temperature,24.006746279085164,HEALTHY,100,0,8.678964169236707,True,IDLE,False,[],True,5,False,[]
+V02,900,humidity,45.07522214525256,HEALTHY,100,0,0.4191531835192208,False,IDLE,False,[],False,5,False,[]
+V02,905,temperature,24.048904643174005,HEALTHY,100,0,7.7302957802416,False,IDLE,False,[],False,5,False,[]
+V02,905,humidity,44.67306447332785,HEALTHY,100,0,0.3600723087261609,False,IDLE,False,[],False,5,False,[]
+V02,910,temperature,23.967690601367497,HEALTHY,100,0,7.677084588676664,False,IDLE,False,[],False,5,False,[]
+V02,910,humidity,44.978671693135034,HEALTHY,100,0,0.35702496080253066,False,IDLE,False,[],False,5,False,[]
+V02,915,temperature,24.02679154647989,HEALTHY,100,0,6.69253331956765,False,IDLE,False,[],False,5,False,[]
+V02,915,humidity,45.44950294308672,HEALTHY,100,0,0.8425044930397885,False,IDLE,False,[],False,5,False,[]
+V02,920,temperature,23.86199297847622,HEALTHY,100,0,7.276380184240736,False,IDLE,False,[],False,5,False,[]
+V02,920,humidity,44.730087975824,HEALTHY,100,0,0.3431349869605717,False,IDLE,False,[],False,5,False,[]
+V02,925,temperature,23.993855292721992,HEALTHY,100,0,5.837576536635018,False,IDLE,False,[],False,5,False,[]
+V02,925,humidity,44.962601312648374,HEALTHY,100,0,0.3341288493778103,False,IDLE,False,[],False,5,False,[]
+V02,930,temperature,24.029492472971388,HEALTHY,100,0,5.150950986000448,False,IDLE,False,[],False,5,True,"[""heartbeat""]"
+V02,930,humidity,44.94936210498084,HEALTHY,100,0,0.2939733123219497,False,IDLE,False,[],False,5,True,"[""heartbeat""]"
+V02,935,temperature,23.900449371800256,HEALTHY,100,0,5.6150113282182215,False,IDLE,False,[],False,5,False,[]
+V02,935,humidity,44.55040857663968,HEALTHY,100,0,0.36194044848709694,False,IDLE,False,[],False,5,False,[]
+V02,940,temperature,24.01831922715945,HEALTHY,100,0,4.397288344165797,False,IDLE,False,[],False,5,False,[]
+V02,940,humidity,45.26951954843451,HEALTHY,100,0,0.5647898392169814,False,IDLE,False,[],False,5,False,[]
+V02,945,temperature,23.87369065761808,HEALTHY,100,0,5.023225858223697,False,IDLE,False,[],False,5,False,[]
+V02,945,humidity,44.3665095470111,HEALTHY,100,0,0.6074180348097435,False,IDLE,False,[],False,5,False,[]
+V02,950,temperature,23.894634040917314,HEALTHY,100,0,4.497201313801351,False,IDLE,False,[],False,5,False,[]
+V02,950,humidity,45.11087932714516,HEALTHY,100,0,0.36976865457397423,False,IDLE,False,[],False,5,False,[]
+V02,955,temperature,23.927961398935434,HEALTHY,100,0,3.929080364413788,False,IDLE,False,[],False,15.0,True,"[""scheduler_state"", ""interval""]"
+V02,955,humidity,44.549657740650076,HEALTHY,100,0,0.3881949768389741,False,IDLE,False,[],False,15.0,True,"[""scheduler_state"", ""interval""]"
+V02,970,temperature,23.82128218692186,HEALTHY,100,0,4.338038160062207,False,IDLE,False,[],False,10.0,True,"[""interval""]"
+V02,970,humidity,45.32733647982343,HEALTHY,100,0,0.6396042043933825,False,IDLE,False,[],False,10.0,True,"[""interval""]"
+V02,980,temperature,23.969951767727803,HEALTHY,100,0,2.4792999893434837,False,IDLE,False,[],False,5,True,"[""interval""]"
+V02,980,humidity,45.04008177256443,HEALTHY,100,0,0.35557101978170724,False,IDLE,False,[],False,5,True,"[""interval""]"
+V02,985,temperature,24.015198537959325,HEALTHY,100,0,1.8234691417033133,False,IDLE,False,[],False,5,False,[]
+V02,985,humidity,44.91657148556643,HEALTHY,100,0,0.34888544454784876,False,IDLE,False,[],False,5,False,[]
+V02,990,temperature,23.886412971756513,HEALTHY,100,0,2.541772726001289,False,IDLE,False,[],False,5,False,[]
+V02,990,humidity,44.86155366265502,HEALTHY,100,0,0.2249893265651586,False,IDLE,False,[],False,5,False,[]
+V02,995,temperature,23.991460354412,HEALTHY,100,0,1.6459358627082092,False,IDLE,False,[],False,5,False,[]
+V02,995,humidity,45.42823802249279,HEALTHY,100,0,0.6247857560908976,False,IDLE,False,[],False,5,False,[]
+V02,1000,temperature,24.06931564049443,HEALTHY,100,0,1.0002901711811063,False,IDLE,False,[],False,20.0,True,"[""scheduler_state"", ""interval""]"
+V02,1000,humidity,45.053067834561475,HEALTHY,100,0,0.25799579352726953,False,IDLE,False,[],False,20.0,True,"[""scheduler_state"", ""interval""]"
+V02,1020,temperature,23.863435189740354,HEALTHY,100,0,2.295881111758457,False,IDLE,False,[],False,20.0,False,[]
+V02,1020,humidity,45.80581100953297,HEALTHY,100,0,1.0404021180071599,False,IDLE,False,[],False,20.0,False,[]
+V02,1040,temperature,23.947228645208853,HEALTHY,100,0,1.1632877973621922,False,IDLE,False,[],False,40.0,True,"[""interval""]"
+V02,1040,humidity,45.05305260578051,HEALTHY,100,0,0.4704740023452868,False,IDLE,False,[],False,40.0,True,"[""interval""]"
+V02,1080,temperature,24.0223609606388,HEALTHY,100,0,0.37158374515532466,False,IDLE,False,[],False,40.0,False,[]
+V02,1080,humidity,45.12339358389048,HEALTHY,100,0,0.03255858950143242,False,IDLE,False,[],False,40.0,False,[]
+V02,1120,temperature,24.088238694564804,HEALTHY,100,0,0.21623464574683265,False,IDLE,False,[],False,60,True,"[""interval"", ""heartbeat""]"
+V02,1120,humidity,44.979824125770016,HEALTHY,100,0,0.19899697635143987,False,IDLE,False,[],False,60,True,"[""interval"", ""heartbeat""]"
+V02,1180,temperature,24.070462210047943,HEALTHY,100,0,0.011230890669011728,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1180,humidity,45.42442016796098,HEALTHY,100,0,0.43634686692784364,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1240,temperature,23.931688068832297,HEALTHY,100,0,0.9195454961031402,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1240,humidity,44.59358989806091,HEALTHY,100,0,0.8203644039111602,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1300,temperature,24.01839085383522,HEALTHY,100,0,0.11824581863460064,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1300,humidity,45.298014402299415,HEALTHY,100,0,0.47034842834254853,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1360,temperature,24.039114902167036,HEALTHY,100,0,0.19728323152939709,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1360,humidity,45.16903350656483,HEALTHY,100,0,0.07394809450303796,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1420,temperature,23.902993603465685,HEALTHY,100,0,0.8088337089109862,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1420,humidity,44.9627645522142,HEALTHY,100,0,0.22086214568676432,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1480,temperature,23.97876491838765,HEALTHY,100,0,0.10072524502426461,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1480,humidity,44.7737674873036,HEALTHY,100,0,0.34667740398163005,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1540,temperature,23.971615339685176,HEALTHY,100,0,0.0026987644956240806,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1540,humidity,45.05046688589793,HEALTHY,100,0,0.17253554625209944,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1600,temperature,24.16664418669222,HEALTHY,100,0,1.301541695628122,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1600,humidity,44.60976265734371,HEALTHY,100,0,0.4646125125667311,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1660,temperature,24.02813573411193,HEALTHY,100,0,0.27261883605454784,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1660,humidity,45.907228129490896,HEALTHY,100,0,1.3895255839006193,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1720,temperature,24.05029492255663,HEALTHY,100,0,0.011418504937381613,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1720,humidity,44.737924245084564,HEALTHY,100,0,0.7668670635576103,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1780,temperature,23.891648814500922,HEALTHY,100,0,1.0519314679027048,False,IDLE,False,[],False,60,True,"[""heartbeat""]"
+V02,1780,humidity,44.64994867600923,HEALTHY,100,0,0.49340299312296665,False,IDLE,False,[],False,60,True,"[""heartbeat""]"

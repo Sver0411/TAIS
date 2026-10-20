@@ -1,0 +1,23 @@
+{
+  "inputs": {
+    "results/tais-transfer/summary.csv": "85e898726b9ac7a94edff8fcd155aeabc1446b60c58af8e3a4a173ff808ed3d4",
+    "results/tais-transfer/test/analysis/summary.csv": "f147b19229943661c835f95119ca7fe5d66eeaaf45d315de355f6017f3c8c2f9",
+    "results/tais-transfer/test/analysis/events_grouped.csv": "66c408b25c6c042a665e992e3f0bfac49a934f8735e6fd18f3ce2c4254b9800f",
+    "results/tais-paper/summary.csv": "d0bb4f5ef71ae213cf0d4963e53951cf551e1e6bb3af90616376eeb4a6562742",
+    "results/tais-paper/test/analysis/summary.csv": "d9d38cf647ad73b5ce3ef804ad5f3ee5d1c38d18c7b8d0610e4d32a0d587acd2",
+    "configs/tais-transfer.json": "597735cfc5df885a9e5db08954472a951c2e8cc75c74bda9bbe95ec4caa2bf76",
+    "src/tais/transfer_signals.py": "7c4446d084ac7e758811ec9ac3790cce7ba4ff08fa4157d3c58c10f5932c21a0",
+    "src/tais/signals.py": "6b60b254b2653dc00079bc71c37a97496030f800326273580d1bfab9ce1ed4d0"
+  },
+  "figures": {
+    "bytes_f1.png": "bc4f5ea8aa46468666367c72c3a93ca08b0e7e1d8d9d5069ee16d886e5912934",
+    "duration_recall.png": "39fc6c51b6aeee684f27b812fa8c64283942df6ec6152d2692128553162369d6",
+    "fault_false_reports.png": "272431241af5a930a7f4d36cc433b1fbbba43d4870757de11fef7a2a6a1d250b",
+    "fault_timelines.png": "e2d5bb7dbaa16bcfc2dccd7ed331f1b3922ac5c2b089e879fcf7109efa234243",
+    "generator_traces.png": "015045ba2623149bb21ad5f063069640c0557cab2691805e7b3e6810e96a2314",
+    "quality_comparison.png": "f5e44db860d226d3cf179b696fcd3b48c63a95b639f0aac37a49701fafcb7d95",
+    "samples_f1.png": "46d3f07c2ba91f8c0503835fbadf7b99e9b8d27f8415a442e6f28ca38e9d725e",
+    "samples_recall.png": "90cb9e81154100905f7b3c547d09d08e1995388a327a3200a5523fd25b2f7e82",
+    "tradeoffs.png": "e946030dcd21ada401756f6b37b27a01beef00b2fe63bf776c1d8f8021ac6f2d"
+  }
+}

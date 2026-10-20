@@ -1,0 +1,359 @@
+{
+  "audited_head": "68af4b6d9df7ed145a237defc4ab920600823373",
+  "records": [
+    {
+      "blob": "55df60d4277c22cb194d8c3805f8daec2ee41c64",
+      "path": "results/baseline/manifest.json",
+      "seeds": []
+    },
+    {
+      "blob": "3c4b198648185f22b5f07a2e5bd29b35ae9f57d2",
+      "path": "results/development-smoke/manifest.json",
+      "seeds": [
+        0
+      ]
+    },
+    {
+      "blob": "6380b8d7731fbd72f4ee72e759c64be541a36cef",
+      "path": "results/development-smoke/metrics.csv",
+      "seeds": [
+        0
+      ]
+    },
+    {
+      "blob": "4042317d1ef64f0452d4f678bdceb37f137c69f9",
+      "path": "results/development/manifest.json",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "blob": "08d7aa730535decad39fd787adb28aeaa4d1c9c2",
+      "path": "results/development/metrics.csv",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "blob": "a4eb09c61445b2c86b8fa9e9586366ba87042784",
+      "path": "results/test/manifest.json",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "blob": "538e930cc4f73347c787c5758c2fb0b36f8263fc",
+      "path": "results/test/metrics.csv",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "blob": "0c0f103ef41a9fe8d39cf20e03d9f816697a98da",
+      "path": "results/validation/manifest.json",
+      "seeds": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "blob": "f597e3b6d87c07ae977360826c13ae56d4009a7f",
+      "path": "results/validation/metrics.csv",
+      "seeds": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "blob": "5dfcfe8c5887155d888da6fe27608390f3500149",
+      "path": "results/development-smoke/manifest.json",
+      "seeds": [
+        0
+      ]
+    },
+    {
+      "blob": "866bdd49afaa710a472f930b097fad37a2d64e9f",
+      "path": "results/development-smoke/metrics.csv",
+      "seeds": [
+        0
+      ]
+    }
+  ],
+  "used_experiment_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "fresh_final_seeds": [
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99
+  ],
+  "intersection": [],
+  "scope": "All reachable committed v0.1 manifest/metrics blobs; current ignored traces also inventoried below. No claim about external/unrecorded runs.",
+  "local_archives": [
+    {
+      "path": "results/traces/v02-forensics",
+      "seed_directories": [
+        20
+      ]
+    },
+    {
+      "path": "results/traces/test",
+      "seed_directories": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "path": "results/traces/development",
+      "seed_directories": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "path": "results/traces/development-smoke",
+      "seed_directories": [
+        0
+      ]
+    },
+    {
+      "path": "results/traces/validation",
+      "seed_directories": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    }
+  ]
+}

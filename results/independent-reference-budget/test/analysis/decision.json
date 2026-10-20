@@ -1,0 +1,115 @@
+{
+  "decision": "NO-GO",
+  "budgets": [
+    {
+      "budget": 0.75,
+      "group": "alpha0.5",
+      "hard_caps_respected": true,
+      "candidate_noninferior": true,
+      "environment_noninferior": false,
+      "false_benefit": true,
+      "robust": true,
+      "go": false,
+      "gate_environment_false": 869.0,
+      "reference_environment_false": 0.0
+    },
+    {
+      "budget": 0.75,
+      "group": "alpha1",
+      "hard_caps_respected": true,
+      "candidate_noninferior": true,
+      "environment_noninferior": false,
+      "false_benefit": true,
+      "robust": true,
+      "go": false,
+      "gate_environment_false": 869.0,
+      "reference_environment_false": 12.0
+    },
+    {
+      "budget": 0.75,
+      "group": "responsive",
+      "hard_caps_respected": true,
+      "candidate_noninferior": true,
+      "environment_noninferior": false,
+      "false_benefit": true,
+      "robust": true,
+      "go": false,
+      "gate_environment_false": 1738.0,
+      "reference_environment_false": 12.0
+    },
+    {
+      "budget": 1.0,
+      "group": "alpha0.5",
+      "hard_caps_respected": true,
+      "candidate_noninferior": true,
+      "environment_noninferior": false,
+      "false_benefit": true,
+      "robust": true,
+      "go": false,
+      "gate_environment_false": 1157.0,
+      "reference_environment_false": 0.0
+    },
+    {
+      "budget": 1.0,
+      "group": "alpha1",
+      "hard_caps_respected": true,
+      "candidate_noninferior": true,
+      "environment_noninferior": false,
+      "false_benefit": true,
+      "robust": true,
+      "go": false,
+      "gate_environment_false": 1157.0,
+      "reference_environment_false": 12.0
+    },
+    {
+      "budget": 1.0,
+      "group": "responsive",
+      "hard_caps_respected": true,
+      "candidate_noninferior": true,
+      "environment_noninferior": false,
+      "false_benefit": true,
+      "robust": true,
+      "go": false,
+      "gate_environment_false": 2314.0,
+      "reference_environment_false": 12.0
+    },
+    {
+      "budget": 1.5,
+      "group": "alpha0.5",
+      "hard_caps_respected": true,
+      "candidate_noninferior": true,
+      "environment_noninferior": false,
+      "false_benefit": true,
+      "robust": true,
+      "go": false,
+      "gate_environment_false": 1187.0,
+      "reference_environment_false": 0.0
+    },
+    {
+      "budget": 1.5,
+      "group": "alpha1",
+      "hard_caps_respected": true,
+      "candidate_noninferior": true,
+      "environment_noninferior": false,
+      "false_benefit": true,
+      "robust": true,
+      "go": false,
+      "gate_environment_false": 1187.0,
+      "reference_environment_false": 12.0
+    },
+    {
+      "budget": 1.5,
+      "group": "responsive",
+      "hard_caps_respected": true,
+      "candidate_noninferior": true,
+      "environment_noninferior": false,
+      "false_benefit": true,
+      "robust": true,
+      "go": false,
+      "gate_environment_false": 2374.0,
+      "reference_environment_false": 12.0
+    }
+  ],
+  "family": 27,
+  "prior_confirmation_nogo_preserved": true
+}

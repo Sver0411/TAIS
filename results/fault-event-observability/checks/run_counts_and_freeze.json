@@ -1,0 +1,21 @@
+{
+  "final_lock_commit": "1030868705e0ca004392ad1a5d3c597f66478a23",
+  "policy_executions_per_seed_case_method": 1,
+  "frozen_files_unchanged": true,
+  "actual_counts": {
+    "development": {
+      "runs": 5580,
+      "counterfactual_runs": 2700
+    },
+    "validation": {
+      "runs": 5580,
+      "counterfactual_runs": 2700
+    },
+    "test": {
+      "runs": 16740,
+      "counterfactual_runs": 8100
+    }
+  },
+  "total_scored": 27900,
+  "total_offline_counterfactual": 13500
+}

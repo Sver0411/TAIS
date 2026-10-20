@@ -1,0 +1,13 @@
+{
+  "rao_fulltext_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6631566/fullTextXML",
+  "retrieval_date": "2026-10-19",
+  "scope_read": "Sections3.1\u20133.3 equations1\u201315, Section4 experimental conditions, Section5 scope and future sensor-failure work",
+  "not_reproduced": [
+    "compressed sensing/SL0",
+    "previous-day APDT",
+    "dual prediction/model synchronization"
+  ],
+  "initial_publisher_fetch": "MDPI429; EuropePMC XML succeeded",
+  "other_sources": "publisher abstracts/method summaries plus DOI registration metadata, no full reproduction claims",
+  "fulltext_sha256": "f93e03999eeb866c76d9c784d6262a33b40b0be723ecdb64829dcc7313482f75"
+}

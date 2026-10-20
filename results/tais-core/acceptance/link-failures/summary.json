@@ -1,0 +1,68 @@
+{
+  "status": "COMPLETE",
+  "error": null,
+  "input_label": "SYNTHETIC DEMO missing_cross_long seed=20 | not device measurements",
+  "sender": {
+    "source_rows": 1800,
+    "samples": 77,
+    "uploads": 40,
+    "binary_bytes": 1285
+  },
+  "health_sample_counts": {
+    "temperature:HEALTHY": 27,
+    "humidity:HEALTHY": 77,
+    "temperature:FAULT": 50
+  },
+  "link": {
+    "sent": 40,
+    "sent_bytes": 1285,
+    "dropped": 5,
+    "altered": 3
+  },
+  "receiver": {
+    "received": 35,
+    "received_bytes": 1129,
+    "decoded": 32,
+    "updates": 18,
+    "corrupt": 3,
+    "out_of_order": 14,
+    "duplicate": 0,
+    "conflict": 0
+  },
+  "truth_metrics": {
+    "source": "synthetic independent intervention labels; offline only",
+    "truth": [
+      {
+        "channel": "humidity",
+        "start_s": 635.0,
+        "end_s": 809.0,
+        "event_type": "sudden_change"
+      }
+    ],
+    "faults": [
+      {
+        "channel": "temperature",
+        "start_s": 572,
+        "end_s": 1172,
+        "kind": "missing"
+      }
+    ],
+    "tp": 1,
+    "unmatched": 1,
+    "missed": 0,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6666666666666666,
+    "fault_episodes": 1,
+    "flagged_during_fault": 1
+  },
+  "truth_metrics_reason": "offline synthetic truth; not available to sender or receiver",
+  "verification": {
+    "frozen_gateonly_records_and_reports_identical": true,
+    "tx_frames": 40,
+    "actual_binary_bytes_recomputed": 1285,
+    "received_valid_frames_exact": 32,
+    "all_valid_received_envelopes_match_sender": true
+  },
+  "journal_sha256": "c3ba5c1c59a78e7ebb6bd7ecf4ec869f6847c0a12bc528d542c8f2958fda4c38"
+}

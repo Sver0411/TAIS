@@ -1,0 +1,12 @@
+{
+  "phase": {
+    "phase": "smoke",
+    "verified_rows": 12,
+    "verified_artifacts": 27,
+    "input_pairs_identical": true,
+    "every_original_metric_recomputed_from_saved_artifacts": true,
+    "no_policy_rerun": true,
+    "metrics_sha256": "e15ba28746f750c543e5c74c641c0488eff33f7c90bc6d6ab6d0caa0c233cc39"
+  },
+  "verifier_sha256": "1c2ccbf8703446668398ef7fda4b7a7822eb6c5fc941dff91acacb8d48cfa680"
+}

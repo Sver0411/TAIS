@@ -1,0 +1,6057 @@
+[
+  {
+    "key": [
+      "586",
+      "stable_offset_same_long",
+      "temperature",
+      "676.0"
+    ],
+    "JO-S": {
+      "seed": "586",
+      "scenario": "stable_offset_same_long",
+      "method": "JO-S",
+      "channel": "temperature",
+      "truth_start": "676.0",
+      "truth_end": "852.0",
+      "covered": "True",
+      "padded_covered": "True",
+      "matched": "True",
+      "rx_matched": "False",
+      "report_time": "675",
+      "rx_report_time": ""
+    },
+    "JO-SU-20": {
+      "seed": "586",
+      "scenario": "stable_offset_same_long",
+      "method": "JO-SU-20",
+      "channel": "temperature",
+      "truth_start": "676.0",
+      "truth_end": "852.0",
+      "covered": "True",
+      "padded_covered": "True",
+      "matched": "True",
+      "rx_matched": "True",
+      "report_time": "675",
+      "rx_report_time": "675"
+    },
+    "context": {
+      "JO-S": [
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 20,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.2639179429208838,
+            "temperature": 0.10331223305348895
+          },
+          "state": "STABLE",
+          "t": 540,
+          "timestamp": 540,
+          "upload": false,
+          "values": {
+            "humidity": 44.833946525089196,
+            "temperature": 24.06354635161059
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 20,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 271,
+          "reasons": [
+            "heartbeat"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.40358322507286104,
+            "temperature": 0.5396595652133603
+          },
+          "state": "STABLE",
+          "t": 560,
+          "timestamp": 560,
+          "upload": true,
+          "values": {
+            "humidity": 45.315163870900015,
+            "temperature": 23.973845928350354
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 20,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.6983385934640207,
+            "temperature": 0.23556972104351814
+          },
+          "state": "STABLE",
+          "t": 580,
+          "timestamp": 580,
+          "upload": false,
+          "values": {
+            "humidity": 45.63168481062751,
+            "temperature": 23.99922217128033
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 20,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 1.4092955901833815,
+            "temperature": 0.48624114761589493
+          },
+          "state": "STABLE",
+          "t": 600,
+          "timestamp": 600,
+          "upload": false,
+          "values": {
+            "humidity": 44.085245182402396,
+            "temperature": 24.09865993704011
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 269,
+          "reasons": [
+            "scheduler_state",
+            "interval",
+            "heartbeat",
+            "trusted_delta:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.4241990563590914,
+            "temperature": 19.336620099038296
+          },
+          "state": "ALERT",
+          "t": 620,
+          "timestamp": 620,
+          "upload": true,
+          "values": {
+            "humidity": 44.76396367257694,
+            "temperature": 26.94445082278907
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.5700063517733681,
+            "temperature": 15.267149203198638
+          },
+          "state": "ALERT",
+          "t": 625,
+          "timestamp": 625,
+          "upload": false,
+          "values": {
+            "humidity": 45.19287440775696,
+            "temperature": 27.059153442127055
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [
+            "temperature"
+          ],
+          "payload_bytes": 268,
+          "reasons": [
+            "environment_event"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.564236514169918,
+            "temperature": 13.906958721054394
+          },
+          "state": "ALERT",
+          "t": 630,
+          "timestamp": 630,
+          "upload": true,
+          "values": {
+            "humidity": 45.18558645901252,
+            "temperature": 27.03128428368848
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.21713121799759788,
+            "temperature": 12.789985772082726
+          },
+          "state": "ALERT",
+          "t": 635,
+          "timestamp": 635,
+          "upload": false,
+          "values": {
+            "humidity": 45.0359719854254,
+            "temperature": 27.024203249662587
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.44672800481659003,
+            "temperature": 11.681252011807265
+          },
+          "state": "ALERT",
+          "t": 640,
+          "timestamp": 640,
+          "upload": false,
+          "values": {
+            "humidity": 45.298749259444165,
+            "temperature": 27.005469944529914
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.21233170866061155,
+            "temperature": 10.926356202228197
+          },
+          "state": "ALERT",
+          "t": 645,
+          "timestamp": 645,
+          "upload": false,
+          "values": {
+            "humidity": 45.12558782954347,
+            "temperature": 27.027019250152367
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.8933767975808937,
+            "temperature": 9.349538016541981
+          },
+          "state": "ALERT",
+          "t": 650,
+          "timestamp": 650,
+          "upload": false,
+          "values": {
+            "humidity": 44.26621252703874,
+            "temperature": 26.916569863094377
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.40293786755363603,
+            "temperature": 9.700297086796397
+          },
+          "state": "ALERT",
+          "t": 655,
+          "timestamp": 655,
+          "upload": false,
+          "values": {
+            "humidity": 44.89529249218556,
+            "temperature": 27.07706300843879
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.4101925273067198,
+            "temperature": 7.959939764378372
+          },
+          "state": "ALERT",
+          "t": 660,
+          "timestamp": 660,
+          "upload": false,
+          "values": {
+            "humidity": 44.68251356900528,
+            "temperature": 26.92793591492374
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.796879445957428,
+            "temperature": 8.23963939971255
+          },
+          "state": "ALERT",
+          "t": 665,
+          "timestamp": 665,
+          "upload": false,
+          "values": {
+            "humidity": 45.542539677628575,
+            "temperature": 27.061736319043618
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.4846311226915637,
+            "temperature": 8.117403333435291
+          },
+          "state": "ALERT",
+          "t": 670,
+          "timestamp": 670,
+          "upload": false,
+          "values": {
+            "humidity": 45.06857704938229,
+            "temperature": 27.138473671406405
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [
+            "temperature"
+          ],
+          "payload_bytes": 269,
+          "reasons": [
+            "environment_event",
+            "trusted_delta:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.4751906889639426,
+            "temperature": 11.28880325229268
+          },
+          "state": "ALERT",
+          "t": 675,
+          "timestamp": 675,
+          "upload": true,
+          "values": {
+            "humidity": 44.63258461638762,
+            "temperature": 27.707846005390035
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 269,
+          "reasons": [
+            "trusted_delta:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.4598030711524177,
+            "temperature": 31.870516621569372
+          },
+          "state": "ALERT",
+          "t": 680,
+          "timestamp": 680,
+          "upload": true,
+          "values": {
+            "humidity": 44.80455793902514,
+            "temperature": 30.925358432923378
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.37102020655490603,
+            "temperature": 30.060915358619695
+          },
+          "state": "ALERT",
+          "t": 685,
+          "timestamp": 685,
+          "upload": false,
+          "values": {
+            "humidity": 44.682077576868444,
+            "temperature": 31.021654973729806
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.3867840177101562,
+            "temperature": 27.582202776993796
+          },
+          "state": "ALERT",
+          "t": 690,
+          "timestamp": 690,
+          "upload": false,
+          "values": {
+            "humidity": 45.15210985401057,
+            "temperature": 30.996704802162302
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.36424875709667637,
+            "temperature": 24.380730718829966
+          },
+          "state": "ALERT",
+          "t": 695,
+          "timestamp": 695,
+          "upload": false,
+          "values": {
+            "humidity": 44.96364180829863,
+            "temperature": 30.83474017932612
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.4010381752994707,
+            "temperature": 23.488896854638007
+          },
+          "state": "ALERT",
+          "t": 700,
+          "timestamp": 700,
+          "upload": false,
+          "values": {
+            "humidity": 45.25077733207193,
+            "temperature": 30.98228122337613
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.6900563788234848,
+            "temperature": 21.14505218299989
+          },
+          "state": "ALERT",
+          "t": 705,
+          "timestamp": 705,
+          "upload": false,
+          "values": {
+            "humidity": 44.40258096109968,
+            "temperature": 30.901730255568545
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 269,
+          "reasons": [
+            "trusted_delta:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.3417443494657159,
+            "temperature": 21.702800452575914
+          },
+          "state": "ALERT",
+          "t": 710,
+          "timestamp": 710,
+          "upload": true,
+          "values": {
+            "humidity": 45.06918916176317,
+            "temperature": 31.229373867347256
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 267,
+          "reasons": [
+            "trusted_delta:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.5315746700385215,
+            "temperature": 17.921627081475222
+          },
+          "state": "ALERT",
+          "t": 715,
+          "timestamp": 715,
+          "upload": true,
+          "values": {
+            "humidity": 44.498980405241,
+            "temperature": 30.912614789981106
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.48381758891628657,
+            "temperature": 17.832975991432203
+          },
+          "state": "ALERT",
+          "t": 720,
+          "timestamp": 720,
+          "upload": false,
+          "values": {
+            "humidity": 45.27858192501786,
+            "temperature": 31.106105131260904
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.39717234915596883,
+            "temperature": 14.482769811372645
+          },
+          "state": "ALERT",
+          "t": 725,
+          "timestamp": 725,
+          "upload": false,
+          "values": {
+            "humidity": 44.90025277265232,
+            "temperature": 30.80933931184542
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.396371189392995,
+            "temperature": 15.167660982696916
+          },
+          "state": "ALERT",
+          "t": 730,
+          "timestamp": 730,
+          "upload": false,
+          "values": {
+            "humidity": 44.926887872481515,
+            "temperature": 31.079181869982975
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.36107297927646254,
+            "temperature": 13.277347978237728
+          },
+          "state": "ALERT",
+          "t": 735,
+          "timestamp": 735,
+          "upload": false,
+          "values": {
+            "humidity": 44.691035344311935,
+            "temperature": 30.97064639219137
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.2931700182745002,
+            "temperature": 12.571323713588072
+          },
+          "state": "ALERT",
+          "t": 740,
+          "timestamp": 740,
+          "upload": false,
+          "values": {
+            "humidity": 44.79694468208406,
+            "temperature": 31.017942921473587
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 1.3016443007659273,
+            "temperature": 11.482430174535997
+          },
+          "state": "ALERT",
+          "t": 745,
+          "timestamp": 745,
+          "upload": false,
+          "values": {
+            "humidity": 45.9357932470003,
+            "temperature": 30.99966262577256
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.9110316692579001,
+            "temperature": 11.346914802023775
+          },
+          "state": "ALERT",
+          "t": 750,
+          "timestamp": 750,
+          "upload": false,
+          "values": {
+            "humidity": 44.24575365872068,
+            "temperature": 31.111824898832683
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.6141450122569821,
+            "temperature": 9.628233886688284
+          },
+          "state": "ALERT",
+          "t": 755,
+          "timestamp": 755,
+          "upload": false,
+          "values": {
+            "humidity": 44.51868774846343,
+            "temperature": 30.984948701555712
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.6577940492542025,
+            "temperature": 8.733549433475693
+          },
+          "state": "ALERT",
+          "t": 760,
+          "timestamp": 760,
+          "upload": false,
+          "values": {
+            "humidity": 45.393310544796314,
+            "temperature": 30.96184103995869
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.6654949738360706,
+            "temperature": 7.739757489034318
+          },
+          "state": "ALERT",
+          "t": 765,
+          "timestamp": 765,
+          "upload": false,
+          "values": {
+            "humidity": 45.161065674458754,
+            "temperature": 30.913543972524895
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.685734205275938,
+            "temperature": 7.067560349969
+          },
+          "state": "ALERT",
+          "t": 770,
+          "timestamp": 770,
+          "upload": false,
+          "values": {
+            "humidity": 44.514851111540345,
+            "temperature": 30.90201929576934
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": true,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 8,
+              "score": 75,
+              "state": "DEGRADED"
+            }
+          },
+          "interval": 20,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 8,
+                "score": 75,
+                "state": "DEGRADED"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 270,
+          "reasons": [
+            "health:temperature",
+            "scheduler_state",
+            "interval",
+            "heartbeat"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.6858532972412817,
+            "temperature": 0.0
+          },
+          "state": "ACTIVE",
+          "t": 775,
+          "timestamp": 775,
+          "upload": true,
+          "values": {
+            "humidity": 44.79437188569385,
+            "temperature": 30.909493335974112
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": true,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 8,
+              "score": 75,
+              "state": "DEGRADED"
+            }
+          },
+          "interval": 20,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 8,
+                "score": 75,
+                "state": "DEGRADED"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 270,
+          "reasons": [
+            "scheduler_state"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.3455518388468093,
+            "temperature": 0.0
+          },
+          "state": "STABLE",
+          "t": 795,
+          "timestamp": 795,
+          "upload": true,
+          "values": {
+            "humidity": 44.62615613297409,
+            "temperature": 30.942704549160517
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": true,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 8,
+              "score": 75,
+              "state": "DEGRADED"
+            }
+          },
+          "interval": 20,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 8,
+                "score": 75,
+                "state": "DEGRADED"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.2685778699339636,
+            "temperature": 0.0
+          },
+          "state": "STABLE",
+          "t": 815,
+          "timestamp": 815,
+          "upload": false,
+          "values": {
+            "humidity": 44.618624940335,
+            "temperature": 31.116111805515505
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 15.0,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 269,
+          "reasons": [
+            "health:temperature",
+            "scheduler_state",
+            "interval"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.08454508667895322,
+            "temperature": 4.680789190304703
+          },
+          "state": "ACTIVE",
+          "t": 835,
+          "timestamp": 835,
+          "upload": true,
+          "values": {
+            "humidity": 44.75389707902133,
+            "temperature": 31.15750109544216
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 270,
+          "reasons": [
+            "interval",
+            "trusted_delta:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.1916883867765229,
+            "temperature": 3.3628888556912293
+          },
+          "state": "ACTIVE",
+          "t": 850,
+          "timestamp": 850,
+          "upload": true,
+          "values": {
+            "humidity": 44.61995230705565,
+            "temperature": 30.148634438734792
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 270,
+          "reasons": [
+            "scheduler_state",
+            "interval",
+            "trusted_delta:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.19469454935276076,
+            "temperature": 23.863710538253216
+          },
+          "state": "ALERT",
+          "t": 855,
+          "timestamp": 855,
+          "upload": true,
+          "values": {
+            "humidity": 44.89838851407483,
+            "temperature": 26.954900156235283
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.6959894252623933,
+            "temperature": 22.222724163863415
+          },
+          "state": "ALERT",
+          "t": 860,
+          "timestamp": 860,
+          "upload": false,
+          "values": {
+            "humidity": 44.1978225374198,
+            "temperature": 26.92569760618314
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [
+            "temperature"
+          ],
+          "payload_bytes": 269,
+          "reasons": [
+            "environment_event"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.31034994831756907,
+            "temperature": 20.027305789195466
+          },
+          "state": "ALERT",
+          "t": 865,
+          "timestamp": 865,
+          "upload": true,
+          "values": {
+            "humidity": 44.82541226950791,
+            "temperature": 26.998594314338753
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.5636118126532796,
+            "temperature": 19.29326825446317
+          },
+          "state": "ALERT",
+          "t": 870,
+          "timestamp": 870,
+          "upload": false,
+          "values": {
+            "humidity": 45.171414048532796,
+            "temperature": 26.877615646980956
+          }
+        }
+      ],
+      "JO-SU-20": [
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 20,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.2639179429208838,
+            "temperature": 0.10331223305348895
+          },
+          "state": "STABLE",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": null
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 540,
+          "timestamp": 540,
+          "upload": false,
+          "values": {
+            "humidity": 44.833946525089196,
+            "temperature": 24.06354635161059
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 20,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.40358322507286104,
+            "temperature": 0.5396595652133603
+          },
+          "state": "STABLE",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": null
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [
+                "heartbeat"
+              ],
+              "upload": true
+            },
+            "sampling": "jo-s"
+          },
+          "t": 560,
+          "timestamp": 560,
+          "upload": false,
+          "values": {
+            "humidity": 45.315163870900015,
+            "temperature": 23.973845928350354
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 20,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.6983385934640207,
+            "temperature": 0.23556972104351814
+          },
+          "state": "STABLE",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": null
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 580,
+          "timestamp": 580,
+          "upload": false,
+          "values": {
+            "humidity": 45.63168481062751,
+            "temperature": 23.99922217128033
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 20,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 270,
+          "reasons": [
+            "heartbeat"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 1.4092955901833815,
+            "temperature": 0.48624114761589493
+          },
+          "state": "STABLE",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": null
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 600,
+          "timestamp": 600,
+          "upload": true,
+          "values": {
+            "humidity": 44.085245182402396,
+            "temperature": 24.09865993704011
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 269,
+          "reasons": [
+            "deadband:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.4241990563590914,
+            "temperature": 19.336620099038296
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 620
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [
+                "scheduler_state",
+                "interval",
+                "heartbeat",
+                "trusted_delta:temperature"
+              ],
+              "upload": true
+            },
+            "sampling": "jo-s"
+          },
+          "t": 620,
+          "timestamp": 620,
+          "upload": true,
+          "values": {
+            "humidity": 44.76396367257694,
+            "temperature": 26.94445082278907
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.5700063517733681,
+            "temperature": 15.267149203198638
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 620
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 625,
+          "timestamp": 625,
+          "upload": false,
+          "values": {
+            "humidity": 45.19287440775696,
+            "temperature": 27.059153442127055
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [
+            "temperature"
+          ],
+          "payload_bytes": 268,
+          "reasons": [
+            "event_edge:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.564236514169918,
+            "temperature": 13.906958721054394
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 620
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [
+                "environment_event"
+              ],
+              "upload": true
+            },
+            "sampling": "jo-s"
+          },
+          "t": 630,
+          "timestamp": 630,
+          "upload": true,
+          "values": {
+            "humidity": 45.18558645901252,
+            "temperature": 27.03128428368848
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.21713121799759788,
+            "temperature": 12.789985772082726
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 620
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 635,
+          "timestamp": 635,
+          "upload": false,
+          "values": {
+            "humidity": 45.0359719854254,
+            "temperature": 27.024203249662587
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.44672800481659003,
+            "temperature": 11.681252011807265
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 620
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 640,
+          "timestamp": 640,
+          "upload": false,
+          "values": {
+            "humidity": 45.298749259444165,
+            "temperature": 27.005469944529914
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.21233170866061155,
+            "temperature": 10.926356202228197
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 620
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 645,
+          "timestamp": 645,
+          "upload": false,
+          "values": {
+            "humidity": 45.12558782954347,
+            "temperature": 27.027019250152367
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.8933767975808937,
+            "temperature": 9.349538016541981
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 620
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 650,
+          "timestamp": 650,
+          "upload": false,
+          "values": {
+            "humidity": 44.26621252703874,
+            "temperature": 26.916569863094377
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.40293786755363603,
+            "temperature": 9.700297086796397
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 620
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 655,
+          "timestamp": 655,
+          "upload": false,
+          "values": {
+            "humidity": 44.89529249218556,
+            "temperature": 27.07706300843879
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 269,
+          "reasons": [
+            "event_edge:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.4101925273067198,
+            "temperature": 7.959939764378372
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": null
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 660,
+          "timestamp": 660,
+          "upload": true,
+          "values": {
+            "humidity": 44.68251356900528,
+            "temperature": 26.92793591492374
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.796879445957428,
+            "temperature": 8.23963939971255
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 665,
+          "timestamp": 665,
+          "upload": false,
+          "values": {
+            "humidity": 45.542539677628575,
+            "temperature": 27.061736319043618
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.4846311226915637,
+            "temperature": 8.117403333435291
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 670,
+          "timestamp": 670,
+          "upload": false,
+          "values": {
+            "humidity": 45.06857704938229,
+            "temperature": 27.138473671406405
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [
+            "temperature"
+          ],
+          "payload_bytes": 269,
+          "reasons": [
+            "deadband:temperature",
+            "event_edge:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.4751906889639426,
+            "temperature": 11.28880325229268
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [
+                "environment_event",
+                "trusted_delta:temperature"
+              ],
+              "upload": true
+            },
+            "sampling": "jo-s"
+          },
+          "t": 675,
+          "timestamp": 675,
+          "upload": true,
+          "values": {
+            "humidity": 44.63258461638762,
+            "temperature": 27.707846005390035
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 269,
+          "reasons": [
+            "deadband:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.4598030711524177,
+            "temperature": 31.870516621569372
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [
+                "trusted_delta:temperature"
+              ],
+              "upload": true
+            },
+            "sampling": "jo-s"
+          },
+          "t": 680,
+          "timestamp": 680,
+          "upload": true,
+          "values": {
+            "humidity": 44.80455793902514,
+            "temperature": 30.925358432923378
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.37102020655490603,
+            "temperature": 30.060915358619695
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 685,
+          "timestamp": 685,
+          "upload": false,
+          "values": {
+            "humidity": 44.682077576868444,
+            "temperature": 31.021654973729806
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.3867840177101562,
+            "temperature": 27.582202776993796
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 690,
+          "timestamp": 690,
+          "upload": false,
+          "values": {
+            "humidity": 45.15210985401057,
+            "temperature": 30.996704802162302
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.36424875709667637,
+            "temperature": 24.380730718829966
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 695,
+          "timestamp": 695,
+          "upload": false,
+          "values": {
+            "humidity": 44.96364180829863,
+            "temperature": 30.83474017932612
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.4010381752994707,
+            "temperature": 23.488896854638007
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 700,
+          "timestamp": 700,
+          "upload": false,
+          "values": {
+            "humidity": 45.25077733207193,
+            "temperature": 30.98228122337613
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.6900563788234848,
+            "temperature": 21.14505218299989
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 705,
+          "timestamp": 705,
+          "upload": false,
+          "values": {
+            "humidity": 44.40258096109968,
+            "temperature": 30.901730255568545
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 269,
+          "reasons": [
+            "deadband:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.3417443494657159,
+            "temperature": 21.702800452575914
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [
+                "trusted_delta:temperature"
+              ],
+              "upload": true
+            },
+            "sampling": "jo-s"
+          },
+          "t": 710,
+          "timestamp": 710,
+          "upload": true,
+          "values": {
+            "humidity": 45.06918916176317,
+            "temperature": 31.229373867347256
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 267,
+          "reasons": [
+            "deadband:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.5315746700385215,
+            "temperature": 17.921627081475222
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [
+                "trusted_delta:temperature"
+              ],
+              "upload": true
+            },
+            "sampling": "jo-s"
+          },
+          "t": 715,
+          "timestamp": 715,
+          "upload": true,
+          "values": {
+            "humidity": 44.498980405241,
+            "temperature": 30.912614789981106
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.48381758891628657,
+            "temperature": 17.832975991432203
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 720,
+          "timestamp": 720,
+          "upload": false,
+          "values": {
+            "humidity": 45.27858192501786,
+            "temperature": 31.106105131260904
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.39717234915596883,
+            "temperature": 14.482769811372645
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 725,
+          "timestamp": 725,
+          "upload": false,
+          "values": {
+            "humidity": 44.90025277265232,
+            "temperature": 30.80933931184542
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.396371189392995,
+            "temperature": 15.167660982696916
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 730,
+          "timestamp": 730,
+          "upload": false,
+          "values": {
+            "humidity": 44.926887872481515,
+            "temperature": 31.079181869982975
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.36107297927646254,
+            "temperature": 13.277347978237728
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 735,
+          "timestamp": 735,
+          "upload": false,
+          "values": {
+            "humidity": 44.691035344311935,
+            "temperature": 30.97064639219137
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.2931700182745002,
+            "temperature": 12.571323713588072
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 740,
+          "timestamp": 740,
+          "upload": false,
+          "values": {
+            "humidity": 44.79694468208406,
+            "temperature": 31.017942921473587
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 1.3016443007659273,
+            "temperature": 11.482430174535997
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 745,
+          "timestamp": 745,
+          "upload": false,
+          "values": {
+            "humidity": 45.9357932470003,
+            "temperature": 30.99966262577256
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.9110316692579001,
+            "temperature": 11.346914802023775
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 750,
+          "timestamp": 750,
+          "upload": false,
+          "values": {
+            "humidity": 44.24575365872068,
+            "temperature": 31.111824898832683
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.6141450122569821,
+            "temperature": 9.628233886688284
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 755,
+          "timestamp": 755,
+          "upload": false,
+          "values": {
+            "humidity": 44.51868774846343,
+            "temperature": 30.984948701555712
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.6577940492542025,
+            "temperature": 8.733549433475693
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 665
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 760,
+          "timestamp": 760,
+          "upload": false,
+          "values": {
+            "humidity": 45.393310544796314,
+            "temperature": 30.96184103995869
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 271,
+          "reasons": [
+            "event_edge:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.6654949738360706,
+            "temperature": 7.739757489034318
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": null
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 765,
+          "timestamp": 765,
+          "upload": true,
+          "values": {
+            "humidity": 45.161065674458754,
+            "temperature": 30.913543972524895
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.685734205275938,
+            "temperature": 7.067560349969
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": null
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 770,
+          "timestamp": 770,
+          "upload": false,
+          "values": {
+            "humidity": 44.514851111540345,
+            "temperature": 30.90201929576934
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": true,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 8,
+              "score": 75,
+              "state": "DEGRADED"
+            }
+          },
+          "interval": 20,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 8,
+                "score": 75,
+                "state": "DEGRADED"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 270,
+          "reasons": [
+            "health_edge:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.6858532972412817,
+            "temperature": 0.0
+          },
+          "state": "ACTIVE",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": null
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [
+                "health:temperature",
+                "scheduler_state",
+                "interval",
+                "heartbeat"
+              ],
+              "upload": true
+            },
+            "sampling": "jo-s"
+          },
+          "t": 775,
+          "timestamp": 775,
+          "upload": true,
+          "values": {
+            "humidity": 44.79437188569385,
+            "temperature": 30.909493335974112
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": true,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 8,
+              "score": 75,
+              "state": "DEGRADED"
+            }
+          },
+          "interval": 20,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 8,
+                "score": 75,
+                "state": "DEGRADED"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.3455518388468093,
+            "temperature": 0.0
+          },
+          "state": "STABLE",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": null
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [
+                "scheduler_state"
+              ],
+              "upload": true
+            },
+            "sampling": "jo-s"
+          },
+          "t": 795,
+          "timestamp": 795,
+          "upload": false,
+          "values": {
+            "humidity": 44.62615613297409,
+            "temperature": 30.942704549160517
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": true,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 8,
+              "score": 75,
+              "state": "DEGRADED"
+            }
+          },
+          "interval": 20,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 8,
+                "score": 75,
+                "state": "DEGRADED"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.2685778699339636,
+            "temperature": 0.0
+          },
+          "state": "STABLE",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": null
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 815,
+          "timestamp": 815,
+          "upload": false,
+          "values": {
+            "humidity": 44.618624940335,
+            "temperature": 31.116111805515505
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 15.0,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 269,
+          "reasons": [
+            "health_edge:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.08454508667895322,
+            "temperature": 4.680789190304703
+          },
+          "state": "ACTIVE",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": null
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [
+                "health:temperature",
+                "scheduler_state",
+                "interval"
+              ],
+              "upload": true
+            },
+            "sampling": "jo-s"
+          },
+          "t": 835,
+          "timestamp": 835,
+          "upload": true,
+          "values": {
+            "humidity": 44.75389707902133,
+            "temperature": 31.15750109544216
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 270,
+          "reasons": [
+            "deadband:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.1916883867765229,
+            "temperature": 3.3628888556912293
+          },
+          "state": "ACTIVE",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": null
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [
+                "interval",
+                "trusted_delta:temperature"
+              ],
+              "upload": true
+            },
+            "sampling": "jo-s"
+          },
+          "t": 850,
+          "timestamp": 850,
+          "upload": true,
+          "values": {
+            "humidity": 44.61995230705565,
+            "temperature": 30.148634438734792
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 270,
+          "reasons": [
+            "deadband:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.19469454935276076,
+            "temperature": 23.863710538253216
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 855
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [
+                "scheduler_state",
+                "interval",
+                "trusted_delta:temperature"
+              ],
+              "upload": true
+            },
+            "sampling": "jo-s"
+          },
+          "t": 855,
+          "timestamp": 855,
+          "upload": true,
+          "values": {
+            "humidity": 44.89838851407483,
+            "temperature": 26.954900156235283
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": false
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.6959894252623933,
+            "temperature": 22.222724163863415
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 855
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 860,
+          "timestamp": 860,
+          "upload": false,
+          "values": {
+            "humidity": 44.1978225374198,
+            "temperature": 26.92569760618314
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [
+            "temperature"
+          ],
+          "payload_bytes": 269,
+          "reasons": [
+            "event_edge:temperature"
+          ],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.31034994831756907,
+            "temperature": 20.027305789195466
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 855
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [
+                "environment_event"
+              ],
+              "upload": true
+            },
+            "sampling": "jo-s"
+          },
+          "t": 865,
+          "timestamp": 865,
+          "upload": true,
+          "values": {
+            "humidity": 44.82541226950791,
+            "temperature": 26.998594314338753
+          }
+        },
+        {
+          "active": {
+            "humidity": false,
+            "temperature": true
+          },
+          "confirmation": false,
+          "diagnostic": false,
+          "health": {
+            "humidity": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            },
+            "temperature": {
+              "flags": 0,
+              "score": 100,
+              "state": "HEALTHY"
+            }
+          },
+          "interval": 5,
+          "joint": {
+            "humidity": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            },
+            "temperature": {
+              "abrupt_residual": false,
+              "app_suspect_drift": false,
+              "candidate_start": null,
+              "forecast": null,
+              "raw_c11": {
+                "flags": 0,
+                "score": 100,
+                "state": "HEALTHY"
+              }
+            }
+          },
+          "onsets": [],
+          "payload_bytes": 0,
+          "reasons": [],
+          "recovery_reset": [],
+          "scores": {
+            "humidity": 0.5636118126532796,
+            "temperature": 19.29326825446317
+          },
+          "state": "ALERT",
+          "su": {
+            "candidate_starts": {
+              "humidity": null,
+              "temperature": 855
+            },
+            "health_layer": false,
+            "original_upload": {
+              "reasons": [],
+              "upload": false
+            },
+            "sampling": "jo-s"
+          },
+          "t": 870,
+          "timestamp": 870,
+          "upload": false,
+          "values": {
+            "humidity": 45.171414048532796,
+            "temperature": 26.877615646980956
+          }
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "all_output_source_implementation_hashes_match": true,
+  "archive_index_identical_to_v1": true,
+  "full_gzip_trace_events_checked": 8047116,
+  "all_trace_group_counts_and_bytes_reconcile": true,
+  "independently_replayed_received_frames": 14736,
+  "independent_replay_all_statuses_and_envelope_hashes_match": true,
+  "protected_baseline_files_rechecked": 484,
+  "all_relative_document_links_valid": true,
+  "verifier_sha256": "45e4bac87ec8c697c1f2bfc96e6678e3e3c10f3a057c4116b0c60e5e24fd67f0"
+}

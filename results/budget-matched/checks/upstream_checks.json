@@ -1,0 +1,61 @@
+[
+  {
+    "project": "AdaptiveSense",
+    "command": [
+      "/Users/mac/Documents/TAIS/.venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/",
+      "-q"
+    ],
+    "returncode": 0,
+    "log": "AdaptiveSense-0.txt"
+  },
+  {
+    "project": "AdaptiveSense",
+    "command": [
+      "/Users/mac/Documents/TAIS/.venv/bin/python",
+      "scripts/check_config_parity.py"
+    ],
+    "returncode": 0,
+    "log": "AdaptiveSense-1.txt"
+  },
+  {
+    "project": "SensorTrust",
+    "command": [
+      "/Users/mac/Documents/TAIS/.venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/",
+      "-q"
+    ],
+    "returncode": 0,
+    "log": "SensorTrust-0.txt"
+  },
+  {
+    "project": "SensorTrust",
+    "command": [
+      "cc",
+      "-std=c11",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Icore",
+      "core/sensor_trust.c",
+      "tests/test_core.c",
+      "-lm",
+      "-o",
+      "test_core"
+    ],
+    "returncode": 0,
+    "log": "SensorTrust-1.txt"
+  },
+  {
+    "project": "SensorTrust",
+    "command": [
+      "./test_core"
+    ],
+    "returncode": 0,
+    "log": "SensorTrust-2.txt"
+  }
+]

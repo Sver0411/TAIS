@@ -1,0 +1,186 @@
+{
+  "split": "development",
+  "smoke": false,
+  "rows": 185328,
+  "dates": [
+    "2020-04-26",
+    "2020-05-03",
+    "2020-05-10",
+    "2020-05-17",
+    "2020-05-24",
+    "2020-05-31"
+  ],
+  "nodes": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42
+  ],
+  "source_sha256": "9b5f48b5f37ebc90052658649de7471b298da7dd4581bf47d0d8ec404cadff19",
+  "config": {
+    "version": "offline-spatial-pilot-1",
+    "workbook_sha256": "9b5f48b5f37ebc90052658649de7471b298da7dd4581bf47d0d8ec404cadff19",
+    "nodes": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "calibration": [
+      "2020-04-18",
+      "2020-04-25"
+    ],
+    "splits": {
+      "development": [
+        "2020-04-26",
+        "2020-06-01"
+      ],
+      "validation": [
+        "2020-06-02",
+        "2020-07-01"
+      ],
+      "test": [
+        "2020-07-02",
+        "2020-09-01"
+      ]
+    },
+    "episode_stride_days": 7,
+    "episode_hours": [
+      4,
+      20
+    ],
+    "scoring_start_hour": 6,
+    "poll_seconds": 600,
+    "target_max_age_seconds": 900,
+    "reference_count": 4,
+    "minimum_references": 2,
+    "reference_shift_seconds": [
+      -600,
+      0,
+      600
+    ],
+    "reference_max_age_seconds": [
+      300,
+      900,
+      1800
+    ],
+    "primary_shift_seconds": 0,
+    "primary_reference_max_age_seconds": 900,
+    "multipliers": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "sensitivity_multiplier": 1.0,
+    "variables": {
+      "temperature": {
+        "bounds": [
+          -40,
+          85
+        ],
+        "threshold": 1.0,
+        "drift_amplitude": 6.0,
+        "event_amplitude": 3.0
+      },
+      "humidity": {
+        "bounds": [
+          0,
+          100
+        ],
+        "threshold": 4.0,
+        "drift_amplitude": 24.0,
+        "event_amplitude": 12.0
+      }
+    },
+    "short_history_seconds": 3600,
+    "trend_history_seconds": 5400,
+    "trend_minimum_points": 6,
+    "trend_minimum_span_seconds": 3000,
+    "trend_r2": 0.8,
+    "trend_displacement_threshold_factor": 2.0,
+    "release_threshold_factor": 0.5,
+    "event_deadline_seconds": 5400,
+    "counterfactual_match_tolerance_seconds": 600,
+    "negative_control_seed": 2026101801,
+    "bootstrap_seed": 2026101802,
+    "bootstrap_repetitions": 10000,
+    "development_gate": {
+      "minimum_days": 4,
+      "minimum_target_coverage": 0.5,
+      "minimum_reference_coverage": 0.5
+    },
+    "methods": [
+      "HistoryShort",
+      "HistoryExtended",
+      "Spatial",
+      "NullSpatial"
+    ]
+  },
+  "code_sha256": {
+    "src/tais_spatial/__init__.py": "6d35b211f6ddac64b8dd09559c972deae2a94c20af5525dae9519409cd1222b4",
+    "src/tais_spatial/analysis.py": "c7681cee956271030c400bff66a5a504863e25e88fc9b99a715f8d4b6ee3a77c",
+    "src/tais_spatial/data.py": "ab7e33906a6c68d45db8bfa3d2da3b43e8e0dfd7e4755495eaa905847250e497",
+    "src/tais_spatial/interventions.py": "ce84f5575b65192e42b3723f98d6bec6b397405549a34df8886befc41f43621b",
+    "src/tais_spatial/io.py": "d4e8473cbf8d6b01977461ca597c8c6e3d9f866a4b92a7240c1ea6556489d3f7",
+    "src/tais_spatial/methods.py": "bdcf709f91cf50ef03552be7141101b807274b22f97b78adff8027dfefe2e3eb",
+    "src/tais_spatial/pilot.py": "3f5ba72ef57c55a13df90ac346231bb510fa6e8946884c9d4ca488f857ad0c2e"
+  },
+  "artifacts": {
+    "cost-recall.png": "8955b657f224b0b49a32dacbd4b61104e9120798f2393d2fde4487072b0a89ae",
+    "example-traces.jsonl.gz": "d5ae50f6d0af4799835affcbea22cf527a9830354132137ecb41f7cc48805e8d",
+    "example-trajectories.png": "7e1e1fdaf1ea59251a8b2cf6e87e4596d42806d7cd3c62db381e2535c30ebed0",
+    "gate.json": "6ee77537e0852741b220f45532b08eff30d416d3e0bb6789e4c95328c6d58c47",
+    "interventions.jsonl.gz": "0e9e25dd31412dde96f9b34569572dfe2478bb115655f8f65589c9bad641c2df",
+    "node-metrics.csv.gz": "680ae97b0f80f3776ce0eb4b4bb94cd55521a7c498a79124b3d7687b94d45f5f",
+    "paired-differences.csv": "fe9b30f42cd06e1b8166482c84bbc9f9d82b490cad80877b5e29bc5255003eb6",
+    "summary.csv": "da4cd678f8bf22a13641acfa573cb1e398ab76dcda8a620a904a7791184e8ffd",
+    "time-sensitivity.png": "6ad648620b1b075a948cba3bc77bdcbd0e6e2348054ca9234b56e0fd5487cb6c"
+  },
+  "claims": "offline exploratory controlled interventions; no natural-fault or online/energy validation"
+}

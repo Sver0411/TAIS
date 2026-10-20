@@ -1,0 +1,42 @@
+{
+  "version": "offline-spatial-pilot-1",
+  "workbook_sha256": "9b5f48b5f37ebc90052658649de7471b298da7dd4581bf47d0d8ec404cadff19",
+  "nodes": [16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42],
+  "calibration": ["2020-04-18", "2020-04-25"],
+  "splits": {
+    "development": ["2020-04-26", "2020-06-01"],
+    "validation": ["2020-06-02", "2020-07-01"],
+    "test": ["2020-07-02", "2020-09-01"]
+  },
+  "episode_stride_days": 7,
+  "episode_hours": [4,20],
+  "scoring_start_hour": 6,
+  "poll_seconds": 600,
+  "target_max_age_seconds": 900,
+  "reference_count": 4,
+  "minimum_references": 2,
+  "reference_shift_seconds": [-600,0,600],
+  "reference_max_age_seconds": [300,900,1800],
+  "primary_shift_seconds": 0,
+  "primary_reference_max_age_seconds": 900,
+  "multipliers": [0.5,1.0,2.0],
+  "sensitivity_multiplier": 1.0,
+  "variables": {
+    "temperature": {"bounds": [-40,85], "threshold": 1.0, "drift_amplitude": 6.0, "event_amplitude": 3.0},
+    "humidity": {"bounds": [0,100], "threshold": 4.0, "drift_amplitude": 24.0, "event_amplitude": 12.0}
+  },
+  "short_history_seconds": 3600,
+  "trend_history_seconds": 5400,
+  "trend_minimum_points": 6,
+  "trend_minimum_span_seconds": 3000,
+  "trend_r2": 0.8,
+  "trend_displacement_threshold_factor": 2.0,
+  "release_threshold_factor": 0.5,
+  "event_deadline_seconds": 5400,
+  "counterfactual_match_tolerance_seconds": 600,
+  "negative_control_seed": 2026101801,
+  "bootstrap_seed": 2026101802,
+  "bootstrap_repetitions": 10000,
+  "development_gate": {"minimum_days": 4, "minimum_target_coverage": 0.5, "minimum_reference_coverage": 0.5},
+  "methods": ["HistoryShort","HistoryExtended","Spatial","NullSpatial"]
+}

@@ -1,0 +1,1034 @@
+{
+  "seeds": [
+    600,
+    601,
+    602,
+    603,
+    604,
+    605,
+    606,
+    607,
+    608,
+    609
+  ],
+  "specs": [
+    {
+      "id": "Delta-c20-min10",
+      "kind": "Delta",
+      "cap": 20,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c20-min15",
+      "kind": "Delta",
+      "cap": 20,
+      "minimum": 15,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c20-min20",
+      "kind": "Delta",
+      "cap": 20,
+      "minimum": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c25-min10",
+      "kind": "Delta",
+      "cap": 25,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c25-min15",
+      "kind": "Delta",
+      "cap": 25,
+      "minimum": 15,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c25-min20",
+      "kind": "Delta",
+      "cap": 25,
+      "minimum": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c25-min25",
+      "kind": "Delta",
+      "cap": 25,
+      "minimum": 25,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c30-min10",
+      "kind": "Delta",
+      "cap": 30,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c30-min15",
+      "kind": "Delta",
+      "cap": 30,
+      "minimum": 15,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c30-min20",
+      "kind": "Delta",
+      "cap": 30,
+      "minimum": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c30-min25",
+      "kind": "Delta",
+      "cap": 30,
+      "minimum": 25,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c30-min30",
+      "kind": "Delta",
+      "cap": 30,
+      "minimum": 30,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c35-min10",
+      "kind": "Delta",
+      "cap": 35,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c35-min15",
+      "kind": "Delta",
+      "cap": 35,
+      "minimum": 15,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c35-min20",
+      "kind": "Delta",
+      "cap": 35,
+      "minimum": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c35-min25",
+      "kind": "Delta",
+      "cap": 35,
+      "minimum": 25,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c35-min30",
+      "kind": "Delta",
+      "cap": 35,
+      "minimum": 30,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c35-min35",
+      "kind": "Delta",
+      "cap": 35,
+      "minimum": 35,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c40-min10",
+      "kind": "Delta",
+      "cap": 40,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c40-min15",
+      "kind": "Delta",
+      "cap": 40,
+      "minimum": 15,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c40-min20",
+      "kind": "Delta",
+      "cap": 40,
+      "minimum": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c40-min25",
+      "kind": "Delta",
+      "cap": 40,
+      "minimum": 25,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c40-min30",
+      "kind": "Delta",
+      "cap": 40,
+      "minimum": 30,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c40-min35",
+      "kind": "Delta",
+      "cap": 40,
+      "minimum": 35,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c45-min10",
+      "kind": "Delta",
+      "cap": 45,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c45-min15",
+      "kind": "Delta",
+      "cap": 45,
+      "minimum": 15,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c45-min20",
+      "kind": "Delta",
+      "cap": 45,
+      "minimum": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c45-min25",
+      "kind": "Delta",
+      "cap": 45,
+      "minimum": 25,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c45-min30",
+      "kind": "Delta",
+      "cap": 45,
+      "minimum": 30,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c45-min35",
+      "kind": "Delta",
+      "cap": 45,
+      "minimum": 35,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c50-min10",
+      "kind": "Delta",
+      "cap": 50,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c50-min15",
+      "kind": "Delta",
+      "cap": 50,
+      "minimum": 15,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c50-min20",
+      "kind": "Delta",
+      "cap": 50,
+      "minimum": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c50-min25",
+      "kind": "Delta",
+      "cap": 50,
+      "minimum": 25,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c50-min30",
+      "kind": "Delta",
+      "cap": 50,
+      "minimum": 30,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c50-min35",
+      "kind": "Delta",
+      "cap": 50,
+      "minimum": 35,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c55-min10",
+      "kind": "Delta",
+      "cap": 55,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c55-min15",
+      "kind": "Delta",
+      "cap": 55,
+      "minimum": 15,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c55-min20",
+      "kind": "Delta",
+      "cap": 55,
+      "minimum": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c55-min25",
+      "kind": "Delta",
+      "cap": 55,
+      "minimum": 25,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c55-min30",
+      "kind": "Delta",
+      "cap": 55,
+      "minimum": 30,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c55-min35",
+      "kind": "Delta",
+      "cap": 55,
+      "minimum": 35,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c60-min10",
+      "kind": "Delta",
+      "cap": 60,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c60-min15",
+      "kind": "Delta",
+      "cap": 60,
+      "minimum": 15,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c60-min20",
+      "kind": "Delta",
+      "cap": 60,
+      "minimum": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c60-min25",
+      "kind": "Delta",
+      "cap": 60,
+      "minimum": 25,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c60-min30",
+      "kind": "Delta",
+      "cap": 60,
+      "minimum": 30,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-c60-min35",
+      "kind": "Delta",
+      "cap": 60,
+      "minimum": 35,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c20-min10",
+      "kind": "Variance",
+      "cap": 20,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c20-min15",
+      "kind": "Variance",
+      "cap": 20,
+      "minimum": 15,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c20-min20",
+      "kind": "Variance",
+      "cap": 20,
+      "minimum": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c25-min10",
+      "kind": "Variance",
+      "cap": 25,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c25-min15",
+      "kind": "Variance",
+      "cap": 25,
+      "minimum": 15,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c25-min20",
+      "kind": "Variance",
+      "cap": 25,
+      "minimum": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c25-min25",
+      "kind": "Variance",
+      "cap": 25,
+      "minimum": 25,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c30-min10",
+      "kind": "Variance",
+      "cap": 30,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c30-min15",
+      "kind": "Variance",
+      "cap": 30,
+      "minimum": 15,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c30-min20",
+      "kind": "Variance",
+      "cap": 30,
+      "minimum": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c30-min25",
+      "kind": "Variance",
+      "cap": 30,
+      "minimum": 25,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c30-min30",
+      "kind": "Variance",
+      "cap": 30,
+      "minimum": 30,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c35-min10",
+      "kind": "Variance",
+      "cap": 35,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c35-min15",
+      "kind": "Variance",
+      "cap": 35,
+      "minimum": 15,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c35-min20",
+      "kind": "Variance",
+      "cap": 35,
+      "minimum": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c35-min25",
+      "kind": "Variance",
+      "cap": 35,
+      "minimum": 25,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c35-min30",
+      "kind": "Variance",
+      "cap": 35,
+      "minimum": 30,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c35-min35",
+      "kind": "Variance",
+      "cap": 35,
+      "minimum": 35,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c40-min10",
+      "kind": "Variance",
+      "cap": 40,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c40-min15",
+      "kind": "Variance",
+      "cap": 40,
+      "minimum": 15,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c40-min20",
+      "kind": "Variance",
+      "cap": 40,
+      "minimum": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c40-min25",
+      "kind": "Variance",
+      "cap": 40,
+      "minimum": 25,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c40-min30",
+      "kind": "Variance",
+      "cap": 40,
+      "minimum": 30,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c40-min35",
+      "kind": "Variance",
+      "cap": 40,
+      "minimum": 35,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c45-min10",
+      "kind": "Variance",
+      "cap": 45,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c45-min15",
+      "kind": "Variance",
+      "cap": 45,
+      "minimum": 15,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c45-min20",
+      "kind": "Variance",
+      "cap": 45,
+      "minimum": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c45-min25",
+      "kind": "Variance",
+      "cap": 45,
+      "minimum": 25,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c45-min30",
+      "kind": "Variance",
+      "cap": 45,
+      "minimum": 30,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c45-min35",
+      "kind": "Variance",
+      "cap": 45,
+      "minimum": 35,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c50-min10",
+      "kind": "Variance",
+      "cap": 50,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c50-min15",
+      "kind": "Variance",
+      "cap": 50,
+      "minimum": 15,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c50-min20",
+      "kind": "Variance",
+      "cap": 50,
+      "minimum": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c50-min25",
+      "kind": "Variance",
+      "cap": 50,
+      "minimum": 25,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c50-min30",
+      "kind": "Variance",
+      "cap": 50,
+      "minimum": 30,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c50-min35",
+      "kind": "Variance",
+      "cap": 50,
+      "minimum": 35,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c55-min10",
+      "kind": "Variance",
+      "cap": 55,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c55-min15",
+      "kind": "Variance",
+      "cap": 55,
+      "minimum": 15,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c55-min20",
+      "kind": "Variance",
+      "cap": 55,
+      "minimum": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c55-min25",
+      "kind": "Variance",
+      "cap": 55,
+      "minimum": 25,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c55-min30",
+      "kind": "Variance",
+      "cap": 55,
+      "minimum": 30,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c55-min35",
+      "kind": "Variance",
+      "cap": 55,
+      "minimum": 35,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c60-min10",
+      "kind": "Variance",
+      "cap": 60,
+      "minimum": 10,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c60-min15",
+      "kind": "Variance",
+      "cap": 60,
+      "minimum": 15,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c60-min20",
+      "kind": "Variance",
+      "cap": 60,
+      "minimum": 20,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c60-min25",
+      "kind": "Variance",
+      "cap": 60,
+      "minimum": 25,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c60-min30",
+      "kind": "Variance",
+      "cap": 60,
+      "minimum": 30,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-c60-min35",
+      "kind": "Variance",
+      "cap": 60,
+      "minimum": 35,
+      "threshold": 2
+    },
+    {
+      "id": "Rao-inspired-c20-min10",
+      "kind": "Rao-inspired",
+      "cap": 20,
+      "minimum": 10,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c20-min15",
+      "kind": "Rao-inspired",
+      "cap": 20,
+      "minimum": 15,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c20-min20",
+      "kind": "Rao-inspired",
+      "cap": 20,
+      "minimum": 20,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c25-min10",
+      "kind": "Rao-inspired",
+      "cap": 25,
+      "minimum": 10,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c25-min15",
+      "kind": "Rao-inspired",
+      "cap": 25,
+      "minimum": 15,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c25-min20",
+      "kind": "Rao-inspired",
+      "cap": 25,
+      "minimum": 20,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c25-min25",
+      "kind": "Rao-inspired",
+      "cap": 25,
+      "minimum": 25,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c30-min10",
+      "kind": "Rao-inspired",
+      "cap": 30,
+      "minimum": 10,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c30-min15",
+      "kind": "Rao-inspired",
+      "cap": 30,
+      "minimum": 15,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c30-min20",
+      "kind": "Rao-inspired",
+      "cap": 30,
+      "minimum": 20,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c30-min25",
+      "kind": "Rao-inspired",
+      "cap": 30,
+      "minimum": 25,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c30-min30",
+      "kind": "Rao-inspired",
+      "cap": 30,
+      "minimum": 30,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c35-min10",
+      "kind": "Rao-inspired",
+      "cap": 35,
+      "minimum": 10,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c35-min15",
+      "kind": "Rao-inspired",
+      "cap": 35,
+      "minimum": 15,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c35-min20",
+      "kind": "Rao-inspired",
+      "cap": 35,
+      "minimum": 20,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c35-min25",
+      "kind": "Rao-inspired",
+      "cap": 35,
+      "minimum": 25,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c35-min30",
+      "kind": "Rao-inspired",
+      "cap": 35,
+      "minimum": 30,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c35-min35",
+      "kind": "Rao-inspired",
+      "cap": 35,
+      "minimum": 35,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c40-min10",
+      "kind": "Rao-inspired",
+      "cap": 40,
+      "minimum": 10,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c40-min15",
+      "kind": "Rao-inspired",
+      "cap": 40,
+      "minimum": 15,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c40-min20",
+      "kind": "Rao-inspired",
+      "cap": 40,
+      "minimum": 20,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c40-min25",
+      "kind": "Rao-inspired",
+      "cap": 40,
+      "minimum": 25,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c40-min30",
+      "kind": "Rao-inspired",
+      "cap": 40,
+      "minimum": 30,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c40-min35",
+      "kind": "Rao-inspired",
+      "cap": 40,
+      "minimum": 35,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c45-min10",
+      "kind": "Rao-inspired",
+      "cap": 45,
+      "minimum": 10,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c45-min15",
+      "kind": "Rao-inspired",
+      "cap": 45,
+      "minimum": 15,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c45-min20",
+      "kind": "Rao-inspired",
+      "cap": 45,
+      "minimum": 20,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c45-min25",
+      "kind": "Rao-inspired",
+      "cap": 45,
+      "minimum": 25,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c45-min30",
+      "kind": "Rao-inspired",
+      "cap": 45,
+      "minimum": 30,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c45-min35",
+      "kind": "Rao-inspired",
+      "cap": 45,
+      "minimum": 35,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c50-min10",
+      "kind": "Rao-inspired",
+      "cap": 50,
+      "minimum": 10,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c50-min15",
+      "kind": "Rao-inspired",
+      "cap": 50,
+      "minimum": 15,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c50-min20",
+      "kind": "Rao-inspired",
+      "cap": 50,
+      "minimum": 20,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c50-min25",
+      "kind": "Rao-inspired",
+      "cap": 50,
+      "minimum": 25,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c50-min30",
+      "kind": "Rao-inspired",
+      "cap": 50,
+      "minimum": 30,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c50-min35",
+      "kind": "Rao-inspired",
+      "cap": 50,
+      "minimum": 35,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c55-min10",
+      "kind": "Rao-inspired",
+      "cap": 55,
+      "minimum": 10,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c55-min15",
+      "kind": "Rao-inspired",
+      "cap": 55,
+      "minimum": 15,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c55-min20",
+      "kind": "Rao-inspired",
+      "cap": 55,
+      "minimum": 20,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c55-min25",
+      "kind": "Rao-inspired",
+      "cap": 55,
+      "minimum": 25,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c55-min30",
+      "kind": "Rao-inspired",
+      "cap": 55,
+      "minimum": 30,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c55-min35",
+      "kind": "Rao-inspired",
+      "cap": 55,
+      "minimum": 35,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c60-min10",
+      "kind": "Rao-inspired",
+      "cap": 60,
+      "minimum": 10,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c60-min15",
+      "kind": "Rao-inspired",
+      "cap": 60,
+      "minimum": 15,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c60-min20",
+      "kind": "Rao-inspired",
+      "cap": 60,
+      "minimum": 20,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c60-min25",
+      "kind": "Rao-inspired",
+      "cap": 60,
+      "minimum": 25,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c60-min30",
+      "kind": "Rao-inspired",
+      "cap": 60,
+      "minimum": 30,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-c60-min35",
+      "kind": "Rao-inspired",
+      "cap": 60,
+      "minimum": 35,
+      "threshold": 4
+    },
+    {
+      "id": "GateOnly",
+      "kind": "TAIS"
+    },
+    {
+      "id": "JO-SU-40",
+      "kind": "TAIS"
+    }
+  ],
+  "runs": 65700,
+  "metrics_sha256": "c655eec45dc0576f489837e22b27faea7cd5b394375fddb205ec3ce233bb3ddf"
+}

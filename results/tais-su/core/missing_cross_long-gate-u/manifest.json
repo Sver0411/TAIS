@@ -1,0 +1,71 @@
+{
+  "policy": "GateOnly+U",
+  "joint_options": {
+    "idle_interval_s": 20,
+    "heartbeat_s": 120,
+    "health_layer": false
+  },
+  "multiplier": 1.0,
+  "wire_version": 1,
+  "input_label": "SYNTHETIC DEMO missing_cross_long seed=20 | not device measurements",
+  "source_commit": "ee4df83b728a26889d58920727a9ddcde874507b",
+  "command": [
+    "examples/tais-core/run.py",
+    "--policy",
+    "gateonly-u",
+    "--scenario",
+    "missing_cross_long",
+    "--seed",
+    "20",
+    "--pace",
+    "0",
+    "--ui",
+    "quiet",
+    "--verify",
+    "--out",
+    "results/tais-su/core/missing_cross_long-gate-u"
+  ],
+  "layout": {
+    "channels": [
+      "temperature",
+      "humidity"
+    ],
+    "layout_id": 1,
+    "version": 1
+  },
+  "mapping_preprovisioned": true,
+  "descriptor_bytes_not_transmitted": 65,
+  "source_csv_sha256": null,
+  "config_sha256": "1be38a7b47e5e0104435086587d543dfbaa74c320389971aa2f9ecf96779dae2",
+  "transport": "local bounded Python frame link; no ACK, radio or network headers",
+  "failures": {
+    "drop_every": 0,
+    "corrupt_every": 0,
+    "reorder_pairs": false
+  },
+  "source_sha256": {
+    "src/tais/core_stream.py": "9e2788136c26d415b2b9088cbe33e85f31ac9ee5d6e3dba7bbcce288a3c882af",
+    "examples/tais-core/run.py": "41f6e1e2edd45702d9a5c86cd0d521b236eefb13435bdf5150a224655f09b616",
+    "src/tais/scheduler.py": "9ab0b073e7fdb6d1293e3b6fc6cbae7f6de1cb55363bb48986335c8c602f5609",
+    "src/tais/replay.py": "59508d037fb153e2df242f81eca509f70128f536a8efd655889c466ba3f35dd1",
+    "src/tais/trust.py": "7dda86dd97fc435863368a3dbdb65610ed412b8d529821ecd9959608ccdd645e",
+    "src/tais/trust_bridge.c": "2bc01e19185922291d39a89aee9941a10eaf1b9ba1b15dffab308d7acb58c68e",
+    "src/tais/wire_codec.py": "944522828d4562dffe21d7f522d382f7e105eceaed7aa9ceeec1d05acdc0030f",
+    "configs/experiment.yaml": "1be38a7b47e5e0104435086587d543dfbaa74c320389971aa2f9ecf96779dae2",
+    "vendor/SensorTrust/core/sensor_trust.c": "84ff663157edb012af0290cf9f0f1d6400cee382f47ea272e8ec2089e59a2b90",
+    "vendor/SensorTrust/core/sensor_trust.h": "d81eba8192d60dbdf480ffaa8280d0ec46d5c2463c1ca7035c52a87aeff15089",
+    "vendor/AdaptiveSense/simulator/scoring.py": "e914d6d81faff710b3599f5f45e6a7db333a5e8fe2e250519d00c5cfd21d0837",
+    "vendor/AdaptiveSense/simulator/adaptive.py": "12bb92dac735ed699c7aeac23b23823d7ab93be78917fe8de3c96cb7102b8661"
+  },
+  "joint_source_sha256": {
+    "src/tais/joint_policy.py": "6f63386da1e4f1143572eab51b958724d7d962c65b03aaf070e2d0ee21050be1",
+    "src/tais/joint_sampling.py": "62ceca08b5d02fe20ac282e15b929ba0203ebe03e06faaa10f429dd318db4db6",
+    "src/tais/joint_upload.py": "7212610cbf2c5acff40c0890dd99e37df21d13e480fe8f26e0f494432a71597d",
+    "configs/tais-joint.yaml": "9c68278decef2eebc189c26b7156d524c3f7102cde5bea0b4f48af83f14f3798"
+  },
+  "su_source_sha256": {
+    "src/tais/su_policy.py": "92f679e66560f89c16086d9f51127f6b787d6ff6aeebdbd3b35eaba24b17e3fc",
+    "configs/tais-su.json": "86ddae276b483a73020aff008385b9bbd972f597864724706ff008181251994a"
+  },
+  "su_selection_sha256": "0fed17cbc17134892c6f2d9fe1e61f587bec2d0a78bc82764ba520fd9d318348"
+}

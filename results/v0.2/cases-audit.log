@@ -1,0 +1,19 @@
+ seed          scenario  multiplier  event_id   reference  reference_matched  v02_matched  truth_start  truth_end  report  delay_s fault_only_onsets same_onset_without_event
+   50   drift_same_long        0.75         0        TAIS              False         True        634.0      810.0   805.0    171.0        [625, 830]                    False
+   64   drift_same_long        0.75         0        TAIS              False         True        688.0      864.0   860.0    172.0        [675, 890]                    False
+   71   drift_same_long        0.75         0        TAIS              False         True        691.0      867.0   865.0    174.0        [675, 890]                    False
+   74   drift_same_long        0.75         0        TAIS              False         True        692.0      868.0   865.0    173.0        [685, 890]                    False
+   75   drift_same_long        0.75         0        TAIS              False         True        641.0      817.0   810.0    169.0        [635, 835]                    False
+   89   drift_same_long        0.75         0        TAIS              False         True        633.0      809.0   805.0    172.0        [625, 830]                    False
+   91  spike_same_short        0.75         0        TAIS               True        False        662.0      684.0     NaN      NaN               NaN                      NaN
+   91  spike_same_short        1.00         0        TAIS               True        False        662.0      684.0     NaN      NaN               NaN                      NaN
+   91   spike_same_long        0.75         0        TAIS               True        False        662.0      838.0     NaN      NaN               NaN                      NaN
+   91   spike_same_long        1.00         0        TAIS               True        False        662.0      838.0     NaN      NaN               NaN                      NaN
+   50   drift_same_long        0.75         0 V02-Passive              False         True        634.0      810.0   805.0    171.0        [625, 830]                    False
+   64   drift_same_long        0.75         0 V02-Passive              False         True        688.0      864.0   860.0    172.0        [675, 890]                    False
+   71   drift_same_long        0.75         0 V02-Passive              False         True        691.0      867.0   865.0    174.0        [675, 890]                    False
+   74   drift_same_long        0.75         0 V02-Passive              False         True        692.0      868.0   865.0    173.0        [685, 890]                    False
+   75   drift_same_long        0.75         0 V02-Passive              False         True        641.0      817.0   810.0    169.0        [635, 835]                    False
+   89   drift_same_long        0.75         0 V02-Passive              False         True        633.0      809.0   805.0    172.0        [625, 830]                    False
+   91 spike_cross_short        0.75         0 V02-Passive              False         True        663.0      683.0   675.0     12.0                []                    False
+   91 spike_cross_short        1.00         0 V02-Passive              False         True        663.0      683.0   675.0     12.0                []                    False

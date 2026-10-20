@@ -1,0 +1,83 @@
+{
+  "base": "8b991530b77a3c7197bb998f0f4b49c1405ed96c",
+  "seeds": {
+    "development": [
+      600,
+      601,
+      602,
+      603,
+      604,
+      605,
+      606,
+      607,
+      608,
+      609
+    ],
+    "test": [
+      610,
+      611,
+      612,
+      613,
+      614,
+      615,
+      616,
+      617,
+      618,
+      619,
+      620,
+      621,
+      622,
+      623,
+      624,
+      625,
+      626,
+      627,
+      628,
+      629
+    ]
+  },
+  "threshold_candidates": {
+    "Delta": [
+      2,
+      4,
+      8
+    ],
+    "Variance": [
+      2,
+      4,
+      8
+    ],
+    "Rao-inspired": [
+      4,
+      8,
+      12
+    ]
+  },
+  "budget_caps": [
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55,
+    60
+  ],
+  "native_caps": [
+    20,
+    40,
+    60
+  ],
+  "bootstrap_replicates": 5000,
+  "bootstrap_seed": 2026101917,
+  "scope": "same-generator simulation; ideal local Binary v1 link; no power measurement",
+  "budget_minimum_intervals": [
+    10,
+    15,
+    20,
+    25,
+    30,
+    35
+  ]
+}

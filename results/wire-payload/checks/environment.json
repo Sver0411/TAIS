@@ -1,0 +1,6 @@
+{
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "platform": "macOS-15.7.7-arm64-arm-64bit-Mach-O",
+  "dependencies": "contourpy==1.4.0\ncycler==0.12.1\nfonttools==4.67.0\niniconfig==2.3.1\nkiwisolver==1.5.1\nmatplotlib==3.11.2\nnumpy==2.5.4\npackaging==26.3\npandas==3.0.6\npillow==13.0.0\npluggy==1.7.0\nPygments==2.21.0\npyparsing==3.3.3\npytest==9.1.1\npython-dateutil==2.9.0.post0\nPyYAML==6.0.3\nsetuptools==84.0.0\nsix==1.17.0\n-e git+https://github.com/Sver0411/TAIS.git@615a47b96ad3e106e0b85922c1656c02b6969fe7#egg=tais_research\n",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)\nTarget: arm64-apple-darwin24.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n"
+}

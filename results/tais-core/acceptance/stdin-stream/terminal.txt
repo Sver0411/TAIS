@@ -1,0 +1,163 @@
+
+TAIS CORE | GateOnly | Stateless Binary v1 | USER JSONL | provenance unverified | no truth metrics
+SOURCE clock=0s rows=1 | SENDER sampled=0s next_due=20.0s
+samples=1 uploads=1 sample_upload=True sample_frame=35B last_tx=0s last_frame=35B total_application_bytes=35
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.0 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.0 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=1 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=0s age=0s (no filling of dropped frames)
+  temperature: value=24.0 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.0 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+
+TAIS CORE | GateOnly | Stateless Binary v1 | USER JSONL | provenance unverified | no truth metrics
+SOURCE clock=20s rows=2 | SENDER sampled=20s next_due=40.0s
+samples=2 uploads=1 sample_upload=False sample_frame=0B last_tx=0s last_frame=35B total_application_bytes=35
+SENDER (local state; not automatically known by receiver):
+  temperature: value=None HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.1 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=1 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=0s age=20s (no filling of dropped frames)
+  temperature: value=24.0 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.0 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+
+TAIS CORE | GateOnly | Stateless Binary v1 | USER JSONL | provenance unverified | no truth metrics
+SOURCE clock=80s rows=3 | SENDER sampled=80s next_due=120.0s
+samples=3 uploads=2 sample_upload=True sample_frame=27B last_tx=80s last_frame=27B total_application_bytes=62
+SENDER (local state; not automatically known by receiver):
+  temperature: value=None HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.2 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=2 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=80s age=0s (no filling of dropped frames)
+  temperature: value=None HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.2 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+
+
+TAIS CORE | GateOnly | Stateless Binary v1 | USER JSONL | provenance unverified | no truth metrics
+SOURCE clock=140s rows=4 | SENDER sampled=140s next_due=180.0s
+samples=4 uploads=3 sample_upload=True sample_frame=28B last_tx=140s last_frame=28B total_application_bytes=90
+SENDER (local state; not automatically known by receiver):
+  temperature: value=None FAULT score=45 flags=16(MISSING) event=False
+  humidity: value=45.1 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=3 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=140s age=0s (no filling of dropped frames)
+  temperature: value=None FAULT score=45 flags=16(MISSING) event=False
+  humidity: value=45.1 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  140s temperature FAULT MISSING event=False
+
+
+TAIS CORE | GateOnly | Stateless Binary v1 | USER JSONL | provenance unverified | no truth metrics
+SOURCE clock=200s rows=5 | SENDER sampled=200s next_due=220.0s
+samples=5 uploads=4 sample_upload=True sample_frame=36B last_tx=200s last_frame=36B total_application_bytes=126
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.2 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.0 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=4 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=200s age=0s (no filling of dropped frames)
+  temperature: value=24.2 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.0 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  140s temperature FAULT MISSING event=False
+  200s temperature HEALTHY NONE event=False RECOVERED
+
+
+TAIS CORE | GateOnly | Stateless Binary v1 | USER JSONL | provenance unverified | no truth metrics
+SOURCE clock=260s rows=6 | SENDER sampled=260s next_due=280.0s
+samples=6 uploads=5 sample_upload=True sample_frame=36B last_tx=260s last_frame=36B total_application_bytes=162
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.1 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.2 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=5 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=260s age=0s (no filling of dropped frames)
+  temperature: value=24.1 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.2 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  140s temperature FAULT MISSING event=False
+  200s temperature HEALTHY NONE event=False RECOVERED
+
+
+TAIS CORE | GateOnly | Stateless Binary v1 | USER JSONL | provenance unverified | no truth metrics
+SOURCE clock=320s rows=7 | SENDER sampled=320s next_due=360.0s
+samples=7 uploads=6 sample_upload=True sample_frame=36B last_tx=320s last_frame=36B total_application_bytes=198
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.3 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.1 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=6 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=320s age=0s (no filling of dropped frames)
+  temperature: value=24.3 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.1 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  140s temperature FAULT MISSING event=False
+  200s temperature HEALTHY NONE event=False RECOVERED
+
+TAIS CORE | GateOnly | Stateless Binary v1 | USER JSONL | provenance unverified | no truth metrics
+SOURCE clock=320s rows=7 | SENDER sampled=320s next_due=360.0s
+samples=7 uploads=6 sample_upload=True sample_frame=36B last_tx=320s last_frame=36B total_application_bytes=198
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.3 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.1 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=6 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=320s age=0s (no filling of dropped frames)
+  temperature: value=24.3 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.1 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  140s temperature FAULT MISSING event=False
+  200s temperature HEALTHY NONE event=False RECOVERED
+
+{
+  "status": "COMPLETE",
+  "error": null,
+  "input_label": "USER JSONL | provenance unverified | no truth metrics",
+  "sender": {
+    "source_rows": 7,
+    "samples": 7,
+    "uploads": 6,
+    "binary_bytes": 198
+  },
+  "health_sample_counts": {
+    "temperature:HEALTHY": 6,
+    "humidity:HEALTHY": 7,
+    "temperature:FAULT": 1
+  },
+  "link": {
+    "sent": 6,
+    "sent_bytes": 198,
+    "dropped": 0,
+    "altered": 0
+  },
+  "receiver": {
+    "received": 6,
+    "received_bytes": 198,
+    "decoded": 6,
+    "updates": 6,
+    "corrupt": 0,
+    "out_of_order": 0,
+    "duplicate": 0,
+    "conflict": 0
+  },
+  "truth_metrics": null,
+  "truth_metrics_reason": "user data has no verified event/fault labels",
+  "journal_sha256": "22d679f1c4a667a485c7389e1d5ffd7eb1220f0beb754efbb300c1260be29d4b"
+}

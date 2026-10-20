@@ -1,0 +1,32 @@
+{
+  "frozen_files": {
+    "src/tais/budget_eval.py": "49f555d01407869545ff8de18fdfcd68666235f5bedab668131faa950fb024a0",
+    "scripts/run_budget_matched_experiment.py": "bec71a36eb32127361713ac492a49a0b616c5b619573e83eedb1f61f4f559c6a",
+    "scripts/analyze_budget_matched_results.py": "5690b75555fdecf8f699ee3cdd43e3f5d3fae2bc823db7d266e0b744bd258bfa",
+    "scripts/verify_budget_matched_experiment.py": "1c2ccbf8703446668398ef7fda4b7a7822eb6c5fc941dff91acacb8d48cfa680",
+    "tests/test_budget_matched.py": "a311238e0cca43348dc63dd1a5cfd33b18c643f4b55b94a6f89096eccb52a97a",
+    "configs/budget-matched.json": "3d935344040ab3b39ad1e38022a72ec35672d4a938af6c162184d788bc0936b8",
+    "docs/BUDGET_MATCHED_EXPERIMENT_PREREGISTRATION.md": "ac0bf5cf6e48353e8f516fd476151b49666b3090833dc6f622dc1bfced6450b3",
+    "configs/experiment.yaml": "1be38a7b47e5e0104435086587d543dfbaa74c320389971aa2f9ecf96779dae2",
+    "src/tais/scheduler.py": "9ab0b073e7fdb6d1293e3b6fc6cbae7f6de1cb55363bb48986335c8c602f5609",
+    "src/tais/replay.py": "59508d037fb153e2df242f81eca509f70128f536a8efd655889c466ba3f35dd1",
+    "src/tais/metrics.py": "607e589983f9831e9f18d93cc89e39f241dede25ede1eeb52ca58217cf1acdef",
+    "src/tais/signals.py": "6b60b254b2653dc00079bc71c37a97496030f800326273580d1bfab9ce1ed4d0",
+    "src/tais/trust.py": "7dda86dd97fc435863368a3dbdb65610ed412b8d529821ecd9959608ccdd645e",
+    "src/tais/trust_bridge.c": "2bc01e19185922291d39a89aee9941a10eaf1b9ba1b15dffab308d7acb58c68e",
+    "src/tais/config.py": "c7d57e3750eacc5f97de846b583f04153db964b7c40346260bec25a640336e7a",
+    "src/tais/wire_codec.py": "944522828d4562dffe21d7f522d382f7e105eceaed7aa9ceeec1d05acdc0030f"
+  },
+  "outputs": {
+    "absolute_intervals.csv": "d2fc3e8043247cb44be5ba142a192cb12bb85b2ff9208a7acf4f5f56b0972097",
+    "budget_tradeoff.png": "11887710f92b484e88d7405e893c678561f1cf4afc757fc174f730741f18e984",
+    "common_matched_delay.csv": "c36c0d3293e066b27612213b6cfd95cd9aa057f24f0b059ebc4006c2a6c691da",
+    "common_matched_event_pairs.csv": "2f9cbdefe1a4fe11ab7f4a24387611a6cfc8d75e6669f9072403d2f789cfee19",
+    "decision.json": "a58c3500ecee907e8dc5f880ebd9381f1cb3ffe2b0a93b4dab6ac8eabfb42504",
+    "decisions.csv": "8fed3cff8d370ee2591b54d8ed1172afa7b1d2fc6402ce00515640e306dce0db",
+    "manifest.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "paired_intervals.csv": "279c0c85b50c199418ee5461513480c765ff58f5aeee4813adc6bf624a70f418",
+    "robustness_deletions.csv": "3af11c510d708ccc3c6348308cdf5653ac0df7587f8b18bca1cf53b80390d5a9",
+    "summary.csv": "a14f9279a7e2873b45c14650d926dd646153d936064b512420108540678eacfb"
+  }
+}

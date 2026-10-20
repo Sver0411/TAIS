@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "analysis": "Post-hoc tolerance sensitivity of existing operating points; no algorithm/parameter selection and no new observations",
+  "definition": "gap=control samples/target samples-1; absolute gap <= tolerance",
+  "thresholds": [
+    0.02,
+    0.05,
+    0.1
+  ],
+  "historical_rule": "5% reproduces the original frozen rule; the three-threshold comparison is post hoc, not a new preregistration",
+  "inputs": {
+    "results/tais-paper/test/analysis/summary.csv": "d9d38cf647ad73b5ce3ef804ad5f3ee5d1c38d18c7b8d0610e4d32a0d587acd2",
+    "results/tais-transfer/test/analysis/summary.csv": "f147b19229943661c835f95119ca7fe5d66eeaaf45d315de355f6017f3c8c2f9"
+  },
+  "output_sha256": "090e863af836180077d339adf7379c29945a0ebfb4abce68f3e0c0b08a9e6ddf",
+  "rows": 60
+}

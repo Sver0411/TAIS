@@ -1,0 +1,27 @@
+{
+  "status": "NO-GO",
+  "scope": "final same-generator test",
+  "balanced_method": "JO-SU-30",
+  "retained_gain": 0.5638297872340424,
+  "checks": {
+    "retention_at_least_80pct": false,
+    "recall_plus_5pp": true,
+    "f1_plus_3pp": true,
+    "recall_ci_positive": true,
+    "f1_ci_positive": true,
+    "receiver_recall_better": true,
+    "receiver_f1_better": true,
+    "bytes_below_gate": true,
+    "samples_near_trust": false,
+    "fault_false_point_noninferior": false,
+    "fault_false_ci_noninferior": false,
+    "c11_not_materially_worse": true,
+    "every_edge_uploaded": true,
+    "edges_immediate": true,
+    "age_p95_limit": true,
+    "age_max_limit": true
+  },
+  "default": "GateOnly",
+  "high_detection_optional": true,
+  "samples_actually_below_trust": false
+}

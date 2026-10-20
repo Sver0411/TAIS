@@ -1,0 +1,13 @@
+{
+  "baseline_commit": "66f4270d1649bc14ffe53911cbf4d219f55f4080",
+  "protected_existing_files": 400,
+  "only_authorized_existing_change": [
+    "README.md"
+  ],
+  "original_algorithms_configs_tests_results_unchanged": true,
+  "new_tests_passed": 23,
+  "all_tests_passed": 215,
+  "legacy_expected_failures": 2,
+  "unexpected_failures": 0,
+  "test_not_run_before_this_check": true
+}

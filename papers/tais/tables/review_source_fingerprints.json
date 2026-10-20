@@ -1,0 +1,8 @@
+{
+  "results/tais-paper/test/analysis/summary.csv": "d9d38cf647ad73b5ce3ef804ad5f3ee5d1c38d18c7b8d0610e4d32a0d587acd2",
+  "results/tais-transfer/test/analysis/summary.csv": "f147b19229943661c835f95119ca7fe5d66eeaaf45d315de355f6017f3c8c2f9",
+  "results/tais-transfer/test/analysis/paired_intervals.csv": "284382f10bc11e5ef5f5121105d6e5244f3e2d762dbad3a317af02b607032d01",
+  "results/tais-paper/test/analysis/paired_intervals.csv": "8e23a1f79130f890cd89371902da36f38734a3f0b303231f38bac5bbcb5816fc",
+  "results/tais-transfer/test/analysis/events_grouped.csv": "66c408b25c6c042a665e992e3f0bfac49a934f8735e6fd18f3ce2c4254b9800f",
+  "results/tais-paper-review/budget_sensitivity.csv": "090e863af836180077d339adf7379c29945a0ebfb4abce68f3e0c0b08a9e6ddf"
+}

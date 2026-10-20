@@ -1,0 +1,37 @@
+........................................................................ [ 65%]
+.........................FF...........                                   [100%]
+=================================== FAILURES ===================================
+____ test_unbounded_wrapper_preserves_original_one_channel_replay[GateOnly] ____
+
+method = 'GateOnly'
+
+    @pytest.mark.parametrize('method',('GateOnly','TAIS'))
+    def test_unbounded_wrapper_preserves_original_one_channel_replay(method):
+        from tais.replay import run as original
+        spec=next(s for s in scenario_specs() if s['cohort']=='mixed' and s['shape']=='plateau' and s['alpha']==1 and s['duration_s']==600 and s['offset_s']==60)
+        trace,_=generate(load(),20,spec['id']);a=original(trace,main_config(load()),method);b=run(trace,load(),method,dict(reads=100000,uploads=100000,bytes=100000000))
+        for ra,rb in zip(a['records'],b['records']):
+>           for k,v in ra.items():assert canonical(v)==canonical(rb[k]),k
+                                                                 ^^^^^
+E           KeyError: 't'
+
+tests/test_reference_budget.py:55: KeyError
+______ test_unbounded_wrapper_preserves_original_one_channel_replay[TAIS] ______
+
+method = 'TAIS'
+
+    @pytest.mark.parametrize('method',('GateOnly','TAIS'))
+    def test_unbounded_wrapper_preserves_original_one_channel_replay(method):
+        from tais.replay import run as original
+        spec=next(s for s in scenario_specs() if s['cohort']=='mixed' and s['shape']=='plateau' and s['alpha']==1 and s['duration_s']==600 and s['offset_s']==60)
+        trace,_=generate(load(),20,spec['id']);a=original(trace,main_config(load()),method);b=run(trace,load(),method,dict(reads=100000,uploads=100000,bytes=100000000))
+        for ra,rb in zip(a['records'],b['records']):
+>           for k,v in ra.items():assert canonical(v)==canonical(rb[k]),k
+                                                                 ^^^^^
+E           KeyError: 't'
+
+tests/test_reference_budget.py:55: KeyError
+=========================== short test summary info ============================
+FAILED tests/test_reference_budget.py::test_unbounded_wrapper_preserves_original_one_channel_replay[GateOnly]
+FAILED tests/test_reference_budget.py::test_unbounded_wrapper_preserves_original_one_channel_replay[TAIS]
+2 failed, 108 passed in 30.68s

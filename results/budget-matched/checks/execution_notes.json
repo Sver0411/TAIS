@@ -1,0 +1,15 @@
+{
+  "protocol_commit": "9ab0b12",
+  "implementation_commit": "d22fb50",
+  "selection_commit": "7600f2c",
+  "final_policy_run_count_per_unique_config": 1,
+  "operational_notes": [
+    "Initial normal Git HTTPS branch check failed after75s; a second attempt timed out after25s. No repository content was overwritten.",
+    "GitHub REST API was accessible. A command-scoped Git DNS override to140.82.112.3 completed an authenticated TLS Git remote check; certificate verification remained enabled and global Git configuration was unchanged.",
+    "The pre-calibration full software run passed434 tests with2existing strict xfails. A one-line relative-path normalization correction was made before implementation freeze, followed by14passing experiment tests.",
+    "An initial full seed-path inventory was compacted for Git, retaining the complete compressed inventory outside tracked outputs and its SHA256. No collision150-199 was found.",
+    "No development/validation/test outcome metric entered pair selection; all81real grid pairs per budget were checked using resource fields only.",
+    "Command-scoped Git DNS overrides still failed on push, and a temporary curl smart-HTTP attempt returned an empty response without updating any ref.",
+    "GitHub Git Data REST APIs then reproduced each local tree/commit exactly, preserving the original SHA, author/committer dates and parent chain; the research ref was published at7600f2c and verified. No forced update or history rewrite occurred."
+  ]
+}

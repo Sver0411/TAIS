@@ -1,0 +1,98 @@
+[
+  {
+    "key": "rao2019adaptive",
+    "doi": "10.3390/s19122654",
+    "title": "Adaptive Data Acquisition with Energy Efficiency and Critical-Sensing Guarantee for Wireless Sensor Networks",
+    "authors": "Rao, Yuan and Zhao, Gang and Wang, Wen and Zhang, Jingyao and Jiang, Zhaohui and Wang, Ruchuan",
+    "year": 2019,
+    "venue": "Sensors",
+    "metadata_url": "https://api.crossref.org/works/10.3390/s19122654",
+    "metadata_sha256": "a8ad21074c28d1aa13ab56d0d8e5cde5f9a234b7677caa07c3f4c75ca03952e1",
+    "status": "DOI_REGISTRATION_METADATA_VERIFIED",
+    "checked": "2026-10-19"
+  },
+  {
+    "key": "masoum2012quality",
+    "doi": "10.1109/UIC-ATC.2012.156",
+    "title": "A Decentralized Quality Aware Adaptive Sampling Strategy in Wireless Sensor Networks",
+    "authors": "Masoum, Alireza and Meratnia, Nirvana and Havinga, Paul J. M.",
+    "year": 2012,
+    "venue": "2012 9th International Conference on Ubiquitous Intelligence and Computing and 9th International Conference on Autonomic and Trusted Computing",
+    "metadata_url": "https://api.crossref.org/works/10.1109/UIC-ATC.2012.156",
+    "metadata_sha256": "ad31a2fab1d91f995c33761eb5f06045b9cdcdcc3e531d98271fa084102a649f",
+    "status": "DOI_REGISTRATION_METADATA_VERIFIED",
+    "checked": "2026-10-19"
+  },
+  {
+    "key": "harb2024clara",
+    "doi": "10.1016/j.iot.2024.101345",
+    "title": "CLARA: A cluster-based node correlation for sampling rate adaptation and fault tolerance in sensor networks",
+    "authors": "Harb, Hassan and {Abou Nader}, Clara and Jaber, Ali and Hakem, Mourad and Charr, Jean-Claude and {Abou Jaoude}, Chady and Zaki, Chamseddine",
+    "year": 2024,
+    "venue": "Internet of Things",
+    "metadata_url": "https://api.crossref.org/works/10.1016/j.iot.2024.101345",
+    "metadata_sha256": "0b31d09f5967acfe97020e82eba3d1f34bc04f8b4164442612731f0e23218ed8",
+    "status": "DOI_REGISTRATION_METADATA_VERIFIED",
+    "checked": "2026-10-19"
+  },
+  {
+    "key": "algabroun2020dsra",
+    "doi": "10.1007/s00542-019-04631-9",
+    "title": "Dynamic sampling rate algorithm (DSRA) implemented in self-adaptive software architecture: a way to reduce the energy consumption of wireless sensors through event-based sampling",
+    "authors": "Algabroun, Hatem",
+    "year": 2020,
+    "venue": "Microsystem Technologies",
+    "metadata_url": "https://api.crossref.org/works/10.1007/s00542-019-04631-9",
+    "metadata_sha256": "b2a77975898c9cc1b46b9736ae0fe4430e01f291d4dfe2f76a2f9476ab269b82",
+    "status": "DOI_REGISTRATION_METADATA_VERIFIED",
+    "checked": "2026-10-19"
+  },
+  {
+    "key": "sharma2010faults",
+    "doi": "10.1145/1754414.1754419",
+    "title": "Sensor faults: Detection methods and prevalence in real-world datasets",
+    "authors": "Sharma, Abhishek B. and Golubchik, Leana and Govindan, Ramesh",
+    "year": 2010,
+    "venue": "ACM Transactions on Sensor Networks",
+    "metadata_url": "https://api.crossref.org/works/10.1145/1754414.1754419",
+    "metadata_sha256": "c77f6e1833cd68551651250941916061e493c5f7b6b3b1a5f78a2cea867ace21",
+    "status": "DOI_REGISTRATION_METADATA_VERIFIED",
+    "checked": "2026-10-19"
+  },
+  {
+    "key": "dias2017dual",
+    "doi": "10.1016/j.comcom.2017.08.002",
+    "title": "The impact of dual prediction schemes on the reduction of the number of transmissions in sensor networks",
+    "authors": "Dias, Gabriel Martins and Bellalta, Boris and Oechsner, Simon",
+    "year": 2017,
+    "venue": "Computer Communications",
+    "metadata_url": "https://api.crossref.org/works/10.1016/j.comcom.2017.08.002",
+    "metadata_sha256": "a56c95a07915873649e49bfe809b5ffd906998e20d53461c69a490353dd675a9",
+    "status": "DOI_REGISTRATION_METADATA_VERIFIED",
+    "checked": "2026-10-19"
+  },
+  {
+    "key": "arnaiz2024energy",
+    "doi": "10.1016/j.vlsi.2023.102097",
+    "title": "Energy and relevance-aware adaptive monitoring method for wireless sensor nodes with hard energy constraints",
+    "authors": "Arnaiz, David and Moll, Francesc and Alarc\u00f3n, Eduard and Vilajosana, Xavier",
+    "year": 2024,
+    "venue": "Integration",
+    "metadata_url": "https://api.crossref.org/works/10.1016/j.vlsi.2023.102097",
+    "metadata_sha256": "250979fb15e92ea2aaf062c26cefa2b7559311fbd597e885daa9fcaf20fdf1e2",
+    "status": "DOI_REGISTRATION_METADATA_VERIFIED",
+    "checked": "2026-10-19"
+  },
+  {
+    "key": "yim2010fault",
+    "doi": "10.3390/s100302332",
+    "title": "An Adaptive Fault-Tolerant Event Detection Scheme for Wireless Sensor Networks",
+    "authors": "Yim, Sung-Jib and Choi, Yoon-Hwa",
+    "year": 2010,
+    "venue": "Sensors",
+    "metadata_url": "https://api.crossref.org/works/10.3390/s100302332",
+    "metadata_sha256": "dffe8f782d93207895be2c461c8eadf1d5fb2f2632959ad801ef33dad5f076f1",
+    "status": "DOI_REGISTRATION_METADATA_VERIFIED",
+    "checked": "2026-10-19"
+  }
+]

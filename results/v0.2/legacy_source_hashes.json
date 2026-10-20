@@ -1,0 +1,10 @@
+{
+  "src/tais/__init__.py": "767a02952c53ff2fdf442b5c5301323ba41c93fad431c50548e1e8997d55e9d8",
+  "src/tais/config.py": "c7d57e3750eacc5f97de846b583f04153db964b7c40346260bec25a640336e7a",
+  "src/tais/metrics.py": "607e589983f9831e9f18d93cc89e39f241dede25ede1eeb52ca58217cf1acdef",
+  "src/tais/replay.py": "59508d037fb153e2df242f81eca509f70128f536a8efd655889c466ba3f35dd1",
+  "src/tais/scheduler.py": "9ab0b073e7fdb6d1293e3b6fc6cbae7f6de1cb55363bb48986335c8c602f5609",
+  "src/tais/signals.py": "6b60b254b2653dc00079bc71c37a97496030f800326273580d1bfab9ce1ed4d0",
+  "src/tais/trust.py": "7dda86dd97fc435863368a3dbdb65610ed412b8d529821ecd9959608ccdd645e",
+  "src/tais/trust_bridge.c": "2bc01e19185922291d39a89aee9941a10eaf1b9ba1b15dffab308d7acb58c68e"
+}

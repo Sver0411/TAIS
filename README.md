@@ -1,74 +1,102 @@
 # TAIS — Trust-Aware Importance Scheduler
 
-**A reproducible Python research prototype using the real SensorTrust C11 core.**
+TAIS studies event detection, sampling and communication under sensor faults in single-node IoT monitoring. It integrates **SensorTrust C11** health diagnosis, **AdaptiveSense** change analysis, selectable sampling and upload control as separate functions.
 
-Working title: **Trust-Gated Event-Aware Adaptive Sampling under Sensor Faults for Resource-Constrained Agricultural IoT**.
+This is a tested local software prototype and reproducible systems study. Its primarily synthetic evidence includes conditional tradeoffs and documented failures; field reliability and energy savings remain unvalidated.
 
-When one agricultural IoT sensor becomes unreliable, can health-aware scheduling reduce false environmental reports while retaining real events on healthy channels and controlling sampling/application-upload costs? TAIS investigates this question with independent environmental and fault labels. Effectiveness is a hypothesis tested by the results, not assumed by the design.
+**Start here:** [Quick start](#quick-start) · [Choose a mode](#running-modes) · [Documentation](docs/README.md) · [Paper and 中文概要](docs/README.md#paper-and-review)
+
+## What is implemented
+
+- Real C11 health state, flags and heuristic scores via ctypes.
+- GateOnly, JO/SU combinations; fixed-period, Delta, Variance and **Rao-inspired** research controls.
+- CSV/JSONL/synthetic input → Stateless Binary v1 → independent local receiver and history.
+- Separate local/sender/receiver metrics, actual sample/upload/byte counts, data age and seed-paired uncertainty.
+
+## Data flow
+
+```mermaid
+flowchart TD
+    A["Timestamped input: synthetic, CSV or JSONL"] --> B{"Sample due?"}
+    B -->|No| W["Wait for next source row"]
+    W --> A
+    B -->|Yes| C["Read current sample only"]
+    C --> D["SensorTrust C11 health + AdaptiveSense change analysis"]
+    D --> E["Selected policy: event state and next sample time"]
+    E -.->|Schedule next read| B
+    E --> F["Upload decision: native rule or optional U"]
+    F -->|Send| G["Stateless Binary v1: actual bytes"]
+    G --> H["Local byte link and independent decoder"]
+    H --> I["Timestamped receiver state, terminal view and journal"]
+```
+
+Values are read only when due; sparse input cannot supply missing samples. Hardware acquisition and a real wireless transport are not implemented. [Architecture and source map](docs/REPOSITORY_GUIDE.md#source-map).
 
 ## Quick start
 
-Reference environment: Python 3.14.7, macOS arm64, Apple Clang 17. A C11 compiler (`cc`, Clang or GCC) is required. No hardware or credentials are needed after cloning the public sources.
+Use **Python 3.14** and a C11 compiler (`cc`, Clang or GCC); the bridge compiles on first use. Run from the checkout root. No hardware or external dataset is needed. The [main-release audit](docs/MAIN_RELEASE_AUDIT.md) records the integrated scope, checks and remaining limits.
 
-```bash
+```sh
 git clone --recurse-submodules https://github.com/Sver0411/TAIS.git
 cd TAIS
-python3 -m venv .venv
+python3.14 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements-lock.txt
 python -m pip install -e . --no-build-isolation
-python -m pytest -q
-python scripts/run_experiments.py --split development --smoke
-python scripts/summarize_results.py --split development-smoke
+python -m pytest tests/test_core_stream.py tests/test_wire_codec.py -q
+python examples/tais-core/run.py --scenario missing_cross_long --seed 20 \
+  --pace 0 --ui quiet --verify --out results/scratch/quickstart-01
+python examples/tais-core/view_run.py results/scratch/quickstart-01 --tail 12
 ```
 
-The lock records the tested Python 3.14 environment; older Python versions may need compatible dependency resolution with `pip install -e .` and are not claimed as verified. Scripts and pytest explicitly locate checkout source. On macOS, hidden editable `.pth` files can prevent interactive imports; see [validation history](docs/VALIDATION_HISTORY.md).
+Use a **new** output directory each time. Expect `status: COMPLETE`, frozen-policy parity, TX/RX counts and three files: `manifest.json`, `summary.json`, `journal.jsonl`. Seed 20 is demonstration data. [Live display, input formats, troubleshooting and evidence checks](docs/QUICKSTART.md).
 
-Full reproduction, without changing configuration or selecting a favorable point:
+## Running modes
 
-```bash
-python scripts/reproduce_baseline.py
-python scripts/run_experiments.py --split development
-python scripts/run_experiments.py --split validation
-python scripts/run_experiments.py --split test
-python scripts/summarize_results.py --split development
-python scripts/summarize_results.py --split validation
-python scripts/summarize_results.py --split test
-```
+GateOnly remains default. SU numbers are **idle interval caps**, not fixed periods. U suppresses ordinary updates while sending sampled event/health edges and heartbeats.
 
-Upstream reproduction runs tests/generation/analysis in temporary copies; vendored source and historical results stay unchanged. Full synthetic execution retains all 50 seeds and all 45 scenarios, with 13 operating points each (29,250 scored runs). Allow tens of minutes and several hundred MB of local trace storage; manifests enumerate each trace hash. Signals/labels and sampled decisions are regenerated under ignored `results/traces/`. Committed CSVs, plots, configuration, logs and manifests are the reviewable evidence.
+| Mode | Behavior / useful property | Cost or limitation | Existing entry |
+| --- | --- | --- | --- |
+| GateOnly | Health-gated baseline | Can miss short or fault-masked events | Default, or `--policy gateonly` |
+| GateOnly + U | Same sampling and local detection, fewer uploads | Older ordinary receiver data; receiver edges can differ | `--policy gateonly-u` |
+| JO-SU-20 | JO-S sampling plus U; higher-detection option in the reported tests | More samples and potentially more fault-induced reports | `--policy tais-su --su-mode high` |
+| JO-SU-30 | Lower acquisition count than SU20 in SU-1 | Lost detections; failed the balanced-replacement gate | `--policy tais-su --su-mode balanced` |
+| JO-SU-40 | Retained lower-sampling operating point | Recall loss versus SU20; no general near-budget quality advantage | Python API / frozen benchmark only |
 
-## Implementation and evidence
+[Mode commands / SU40 API](docs/QUICKSTART.md#mode-selection) · [SU-1 results](docs/TAIS_SU_RESULTS.md). `balanced` means the frozen **SU30** candidate, not a passed qualification. Independent baselines are benchmark controls, not Core CLI modes.
 
-- Per-channel health and change history; healthy-channel priority cannot be vetoed by another channel's fault.
-- Actual pinned AdaptiveSense scorer, hysteresis, ladder primitives and original scheduler baseline.
-- Actual pinned SensorTrust C11 through a small opaque-context ctypes adapter; comparison against its original C replay CLI on every upstream dataset fixture.
-- Bounded suspicious-reading confirmation, diagnostic sampling, explicit recovery reseeding, health/flag changes and heartbeat uploads.
-- Independent latent, noisy and faulted streams; physical-unit event labels and scheduled fault labels; no hidden/future observations in scheduler inputs.
-- Fixed 5/10/20/40/60 s, unchanged AdaptiveSense, diagnostic-only trust logging, GateOnly and full TAIS; all three threshold multipliers are reported.
-- Channel-aware report matching, local detection counts, false reports, fault attribution, latency, samples, uploads, serialized payload estimates, causal reconstruction and fault diagnosis metrics. Whole-seed paired bootstrap confidence intervals and upload/recall plots.
+## What the experiments show
 
-See [results and actual run status](results/README.md), [research report](docs/RESEARCH_REPORT.md), [protocol](docs/EXPERIMENT_PROTOCOL.md), [algorithm contract](docs/ALGORITHM_SPEC.md), [implementation audit](docs/IMPLEMENTATION_DECISIONS.md) and [validation history](docs/VALIDATION_HISTORY.md). The report is the source for outcome claims.
+The [paper](papers/tais/README.md) compares independent baselines and conditional tradeoffs. This adverse comparison comes from **G2 only** (20 seeds, 46 scenarios):
 
-## Dependencies and attribution
+| G2 sender/system metric | JO-SU-40 | Fixed-20+C11 |
+| --- | ---: | ---: |
+| F1 | 46.31% | 55.10% |
+| Sample cycles | 85,055 | 82,800 |
+| Binary v1 application bytes | 959,129 | 2,940,838 |
+| Operational fault-induced false reports | 157 | 353 |
+| Receiver P95 data age | 113 s | 18 s |
 
-| Dependency | Pinned commit | Use |
-| --- | --- | --- |
-| [AdaptiveSense](https://github.com/Sver0411/AdaptiveSense) | `f7ec30fd4721aa1a7c308f879050a83936e60067` | Score, state/ladder primitives, baseline and event matcher/physical labels |
-| [SensorTrust](https://github.com/Sver0411/SensorTrust) | `2ce98dd043bb01ea99052eda218c68a172499a4c` | Unmodified real C11 health detector |
+Fixed20 has higher point F1 at nearby sample totals; SU40 sends fewer bytes with fewer attributed false reports and older data. Shared U explains part of the communication benefit. G1's near-budget F1 advantage over Variance was not retained in G2, whose difference interval includes zero.
 
-Both upstream projects and TAIS are MIT licensed. Original licenses and notices remain in submodules. This is an independent sibling repository; AdaptiveSense and SensorTrust are not modified. [Smart-Agriculture-Edge-AI](https://github.com/Sver0411/Smart-Agriculture-Edge-AI) was inspected as an eventual integration reference, not a TAIS dependency or source of performance results. Academic references are in [related work](docs/RELATED_WORK.md) and [BibTeX](references.bib).
+G1/G2 differ in signals, faults, timing **and event-truth definitions**; their totals cannot be pooled or differences attributed solely to distribution shift. [Full evidence](docs/TAIS_PAPER_EVIDENCE.md) · [中文概要](docs/TAIS_PAPER_SUMMARY_ZH.md) · [Results](results/README.md).
 
-## Main limitations
+## Scope and maturity
 
-Simulation does not establish field reliability, radio delivery or energy savings. SensorTrust health is heuristic, not a calibrated probability. Valid stable offsets and same-channel event/fault overlap remain ambiguous. Confirmation can cost samples and still miss short events. Reported application requests do not establish successful transport. Diagnostic-demand counts are not automatically additional samples. The synthetic benchmark uses two channels and jointly varied profiles; it is not a complete agriculture fault model.
+| Status | What it means |
+| --- | --- |
+| Implemented and tested | C11 integration, causal due-time processing, local bytes/receiver, codecs and deterministic software checks |
+| Condition-specific evidence | Synthetic quality/cost tradeoffs; independent controls and negative findings, not universal superiority |
+| Separate exploration | Real greenhouse background with controlled offline interventions; coverage failed its held-out gate |
+| Unvalidated | Natural-fault diagnosis, agricultural field event performance, hardware timing/RAM, real wireless delivery, current draw and battery life |
 
-The [Hull greenhouse dataset](data/README.md) has nominal 5-minute stored resolution. Its DOI/license/publication description were checked, but raw API access returned 403 and no real file was validated in this environment. No actual missingness statistics, real-greenhouse TAIS experiment, sub-minute detection result, firmware integration, threshold-proximity ablation or measured energy result is claimed. See [limitations](docs/LIMITATIONS.md).
+Trust scores are heuristic, not calibrated probabilities. Events entirely between samples or erased by faults may be unrecoverable. Application-byte reductions are not proportional energy savings. [Failure boundaries and research history](docs/README.md#history-and-negative-results).
 
-To verify recorded hashes and one fresh held-out replay after full reproduction:
+## Find your next step
 
-```bash
-python scripts/verify_artifacts.py --split test --traces --replay-one
-```
+- **Run or integrate:** [Quick start](docs/QUICKSTART.md), [Core input contract](examples/tais-core/README.md), [source and directory map](docs/REPOSITORY_GUIDE.md).
+- **Inspect or reproduce evidence:** [document navigation](docs/README.md), [script navigation](scripts/README.md), [result navigation](results/README.md).
+- **Read the paper:** [LaTeX/PDF and build instructions](papers/tais/README.md), [中文概要](docs/TAIS_PAPER_SUMMARY_ZH.md), [submission checklist](docs/TAIS_SUBMISSION_CHECKLIST.md).
+- **Contribute:** [contribution rules](CONTRIBUTING.md), [MIT license](LICENSE), [third-party notices](THIRD_PARTY_NOTICES.md).
 
-After all three summary commands, regenerate the report tables with `python scripts/build_report.py`.
+Pinned upstreams: AdaptiveSense `f7ec30f…`, SensorTrust `2ce98dd…`; source/licenses remain in [vendor/](vendor). Adaptive sampling, health heuristics, deadbands and binary encoding are established techniques.

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/mac/Documents/TAIS/scripts/joint_secondary_audit.py", line 7, in <module>
+    from simulator.events import Event,match_events
+ModuleNotFoundError: No module named 'simulator'

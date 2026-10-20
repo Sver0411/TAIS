@@ -1,0 +1,9 @@
+.venv/bin/python - <<'PY'
+from pathlib import Path
+path=Path('scripts/reproduce_baseline.py').resolve()
+source=path.read_text()
+assert source.count("out=ROOT/'results/baseline'")==1
+# Change only evidence destination in the unchanged audit script.
+source=source.replace("out=ROOT/'results/baseline'", "out=ROOT/'results/v0.2/baseline'")
+exec(compile(source,str(path),'exec'),{'__file__':str(path),'__name__':'__main__'})
+PY

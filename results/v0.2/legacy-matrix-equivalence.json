@@ -1,0 +1,10 @@
+{
+  "development": {
+    "exact_legacy_metric_rows": 5850,
+    "passed": true
+  },
+  "validation": {
+    "exact_legacy_metric_rows": 5850,
+    "passed": true
+  }
+}

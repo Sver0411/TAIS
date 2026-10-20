@@ -1,0 +1,8 @@
+Transcribed from the actual command tool result (not a newly executed push):
+Command: git push origin research/v0.2-same-channel-recall
+Local HEAD: 2fd083790b4565498ea1cdb625946270b750859d
+Exit status: 128
+stderr:
+fatal: unable to access 'https://github.com/Sver0411/TAIS.git/': Failed to connect to github.com port 443 after 75013 ms: Couldn't connect to server
+
+Remote branch remained at1dbc102, verified through GitHub API. Later exact-object publication used scripts/publish_research_branch.py. It verified all blob/tree/commit SHAs, updated only the research branch without force, and read back unchanged main68af4b6. Full API publication transcript is publication-pretest.log.

@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "baseline": "66f4270d1649bc14ffe53911cbf4d219f55f4080",
+  "c0_original_files_unchanged": 5,
+  "c0_existing_evidence_files_unchanged": 47,
+  "local_markdown_links_checked": 54,
+  "whitespace_check": "PASS",
+  "no_original_workbook_or_full_ledger_in_git": true,
+  "formal_online_no_go_unchanged": true
+}

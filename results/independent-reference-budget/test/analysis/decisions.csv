@@ -1,0 +1,10 @@
+budget,group,hard_caps_respected,candidate_noninferior,environment_noninferior,false_benefit,robust,go,gate_environment_false,reference_environment_false
+0.75,alpha0.5,True,True,False,True,True,False,869.0,0.0
+0.75,alpha1,True,True,False,True,True,False,869.0,12.0
+0.75,responsive,True,True,False,True,True,False,1738.0,12.0
+1.0,alpha0.5,True,True,False,True,True,False,1157.0,0.0
+1.0,alpha1,True,True,False,True,True,False,1157.0,12.0
+1.0,responsive,True,True,False,True,True,False,2314.0,12.0
+1.5,alpha0.5,True,True,False,True,True,False,1187.0,0.0
+1.5,alpha1,True,True,False,True,True,False,1187.0,12.0
+1.5,responsive,True,True,False,True,True,False,2374.0,12.0

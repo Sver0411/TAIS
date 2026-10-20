@@ -1,0 +1,5709 @@
+{
+  "base": "5b06d2feae44db2b3503697d246f51c43e5d8f2e",
+  "status": "PASS",
+  "reserved_0_199": true,
+  "scope_roots": [
+    "/Users/mac/Documents/TAIS",
+    "/Users/mac/Documents/TAIS-external-data"
+  ],
+  "structured_files": 565,
+  "historical_blobs": 261,
+  "gzip_paths": 185039,
+  "inventory_sha256": "f840cdd963ec94b023651c27c415c34c8e3df14e627b2f6cb14460f9ef71e66d",
+  "inventory_path": "/Users/mac/Documents/TAIS/results/traces/fault-event-observability/before-run-path-inventory.json.gz",
+  "proposed_200_299_collisions": [],
+  "allocated": {
+    "development": [
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219
+    ],
+    "validation": [
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239
+    ],
+    "test": [
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296,
+      297,
+      298,
+      299
+    ]
+  },
+  "all_observed_seed_values": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    731,
+    2026101802,
+    2026101807,
+    2026101809,
+    2026101810
+  ],
+  "evidence": [
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/192/event_matches.csv",
+      "seeds": [
+        192
+      ],
+      "sha256": "fbdcb8fab5c465e81e07d3bdc97b459775126603a8191b4a7af52287d85c745c"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/192/metrics.csv",
+      "seeds": [
+        192
+      ],
+      "sha256": "f69253075a9f9e53b36ebd4267d02dcebb5088e786f853aec611366651b79588"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/195/event_matches.csv",
+      "seeds": [
+        195
+      ],
+      "sha256": "5a8c913e6198d4329eb68f21fe70be9a2e866262e53ac36e2ee657d3d4d97aef"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/195/metrics.csv",
+      "seeds": [
+        195
+      ],
+      "sha256": "8685d0faf981110efe86832b401c0498b0d923752e8017e7030db36b67c0f676"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/194/event_matches.csv",
+      "seeds": [
+        194
+      ],
+      "sha256": "7f98abf5b1d850f8639d0df8676f3aee90077e24d8edc7a6169fc7e511f8bf93"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/194/metrics.csv",
+      "seeds": [
+        194
+      ],
+      "sha256": "83681c4b5def37b7fb86ea57a14cf288650a1ba2e33a1e5fd6c92cab7d8e8dba"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/193/event_matches.csv",
+      "seeds": [
+        193
+      ],
+      "sha256": "7e057ec22738a91e6977a689830faae5a13466fba45eec0cd809f619cc9b27bd"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/193/metrics.csv",
+      "seeds": [
+        193
+      ],
+      "sha256": "c19c33f214a801477473f4ab8c4e8f702263f175447aa71e35fce0604953a3d9"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/174/event_matches.csv",
+      "seeds": [
+        174
+      ],
+      "sha256": "01eacd605dd19f6900a3f41749e9db4fd991bc97fac67deefcacd29a88cd8aed"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/174/metrics.csv",
+      "seeds": [
+        174
+      ],
+      "sha256": "73e410fbc9db3764df35292911ec4629f8e521c79335a37db2b499e4948a1965"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/180/event_matches.csv",
+      "seeds": [
+        180
+      ],
+      "sha256": "ae2da89db1578175aaf4b6273548ba9688bfa5e6665f0936238e40fa78f42ef2"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/180/metrics.csv",
+      "seeds": [
+        180
+      ],
+      "sha256": "2c3c15a1e20390b8230138c88f126a4c1a1997c8139c81cd3784d03e17f591a6"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/187/event_matches.csv",
+      "seeds": [
+        187
+      ],
+      "sha256": "008494b5dd9e9e62442062421c6df0b9ed1bdd47d73dd33b8b1283b8f820ca8a"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/187/metrics.csv",
+      "seeds": [
+        187
+      ],
+      "sha256": "d8b9dee098e38f6e334f844e713892feed677a704f8363f1d7f8169a03fb913c"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/173/event_matches.csv",
+      "seeds": [
+        173
+      ],
+      "sha256": "e94bc7807373b6ffde4cb3ccef4bcb185a02ba6b5c07be872fc5f5bda255551a"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/173/metrics.csv",
+      "seeds": [
+        173
+      ],
+      "sha256": "6c2f6152ee0136c527a53d088c035b446d15f9d55375663a4abb0b288a2cd4c5"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/189/event_matches.csv",
+      "seeds": [
+        189
+      ],
+      "sha256": "c86786ff5a598a3a5f3d37aaf9742386d122910edb294ed7c169240beb2f4c7d"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/189/metrics.csv",
+      "seeds": [
+        189
+      ],
+      "sha256": "a191b2339193e60cb34611ea442705cd528cad6f8b5697f7ea259eababde30b1"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/188/event_matches.csv",
+      "seeds": [
+        188
+      ],
+      "sha256": "84e1af3903932483e41ac6579550f55d394838aaaf7e76dc4526f88514130a0f"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/188/metrics.csv",
+      "seeds": [
+        188
+      ],
+      "sha256": "ba4b16c88aeb08d73dbe5f744885311740c7b93c4fd09bc075e2e4a6f7a5ce6f"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/172/event_matches.csv",
+      "seeds": [
+        172
+      ],
+      "sha256": "6a216e330e04224daafeac99dbb8daffd73ed7ae0042c81b854f5e65b91b2383"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/172/metrics.csv",
+      "seeds": [
+        172
+      ],
+      "sha256": "b74e1fe8995ec19b78d84bb4d3cdebb8578c120c40bb75c52beaa279fcfcb7ff"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/186/event_matches.csv",
+      "seeds": [
+        186
+      ],
+      "sha256": "e1e54292132ca06e0442c9297ef7e7930202d1221baf312eb667650b97ee83f6"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/186/metrics.csv",
+      "seeds": [
+        186
+      ],
+      "sha256": "fa8c6420315f7dcd7ce5432dab08ba16a2bba83897da38c3cdfb298388d7ce89"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/181/event_matches.csv",
+      "seeds": [
+        181
+      ],
+      "sha256": "e76ac5db85ecc400bccdec650044b612ab1f49259563a6430f8133e8f5dc0f2d"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/181/metrics.csv",
+      "seeds": [
+        181
+      ],
+      "sha256": "060d579c85a0b064bd75ea18b7f3f0e887114b46be1b268b5c127ec6404e8eb0"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/175/event_matches.csv",
+      "seeds": [
+        175
+      ],
+      "sha256": "9a4722ed7d6b2b6042d9230379d25dfa1020a8f369a7bf72e9d3898758d2e9d1"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/175/metrics.csv",
+      "seeds": [
+        175
+      ],
+      "sha256": "ecb9028e9ded01cd3f47c77f6614cd95f9380151c8dc628624d66fda8fed611e"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/198/event_matches.csv",
+      "seeds": [
+        198
+      ],
+      "sha256": "8cf9f913b08a0d83932b41ef287360e3d5b87368d3da583d3b4cd0b15761e42c"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/198/metrics.csv",
+      "seeds": [
+        198
+      ],
+      "sha256": "320a3a37cc9f7d723ab69f11674dfe802a818e5b17ac073271db70e592834860"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/196/event_matches.csv",
+      "seeds": [
+        196
+      ],
+      "sha256": "8ee384c5b201f6738fc019b5830e67d933f704f0dea5c732c8c27a630f15f57f"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/196/metrics.csv",
+      "seeds": [
+        196
+      ],
+      "sha256": "2a92a21578c62604930a7ee7eca133008e3bebfc000def343fb49b5f7784910b"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/191/event_matches.csv",
+      "seeds": [
+        191
+      ],
+      "sha256": "66387de46f9bc49a4e9fb7e8a593c742fb1469c6f5a6540acf1e0ecb0ee4a62a"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/191/metrics.csv",
+      "seeds": [
+        191
+      ],
+      "sha256": "744ffede488699389bba886b45fe0a9918b437ef92d5942e7e228ecb713cd97c"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/190/event_matches.csv",
+      "seeds": [
+        190
+      ],
+      "sha256": "4a48e01b7aebf4ac1a1e54ce62770263375c57e330569c8b266446ca4de65b47"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/190/metrics.csv",
+      "seeds": [
+        190
+      ],
+      "sha256": "6090c53811cef12d7499e9fc2219462e0262876b0407b1eb5791aacc4c79c8cc"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/197/event_matches.csv",
+      "seeds": [
+        197
+      ],
+      "sha256": "c5448cdcf57f85650832dfc7480def13d98ef168d2f86b395be49a2561e8fa13"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/197/metrics.csv",
+      "seeds": [
+        197
+      ],
+      "sha256": "cc54fd683754cac05afba69ac14df5ca2ee9af19c31838d25c7d1f85f6961437"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/199/event_matches.csv",
+      "seeds": [
+        199
+      ],
+      "sha256": "71f1128812137da89d67a0901d68e367cc10d72aea5fa4ea022cfa4fdc0e0910"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/199/metrics.csv",
+      "seeds": [
+        199
+      ],
+      "sha256": "3be6588c314dac39d82ae7cba8c99fe3e772e9a090e97925f4d3c47dfc1a4ae2"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/184/event_matches.csv",
+      "seeds": [
+        184
+      ],
+      "sha256": "2beff0472f51ba89e34a84870b096ed87f0c3562446b08dea0bf4f5681ae5fd2"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/184/metrics.csv",
+      "seeds": [
+        184
+      ],
+      "sha256": "4ada5b6ef9df46ebf28981ce77033c975ac0d5a717630bdf4925aebcc019ea8b"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/170/event_matches.csv",
+      "seeds": [
+        170
+      ],
+      "sha256": "9a3be01085371f6f37c2c957e7851b67ecfff33ff337c855e5613f5ae2ffee7e"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/170/metrics.csv",
+      "seeds": [
+        170
+      ],
+      "sha256": "412e2c3327b65d38d9b80f52ec61187391c859c6b9e0aebfbbfea21e4597304b"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/177/event_matches.csv",
+      "seeds": [
+        177
+      ],
+      "sha256": "ba735b1e5e724d9828f9bf1f90513647ecd4be786f5701b7a988f1f04d2e8290"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/177/metrics.csv",
+      "seeds": [
+        177
+      ],
+      "sha256": "6a3071babd7eaffe554c5eafdd14644c3aa6b8571c74a3768c826c12d3b6c75d"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/183/event_matches.csv",
+      "seeds": [
+        183
+      ],
+      "sha256": "f9264c7ab5b4fdb3686420ade806d9089f3072a569c472fa4a7b26a68a67659d"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/183/metrics.csv",
+      "seeds": [
+        183
+      ],
+      "sha256": "15d405b7a92828b31b98c3e0ca2a505f0f03a93e4a638f2866642d9fe136d7f1"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/179/event_matches.csv",
+      "seeds": [
+        179
+      ],
+      "sha256": "a71b15b301aae2cfe002a54911af8531af90723bba09b60a405dd202943789c7"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/179/metrics.csv",
+      "seeds": [
+        179
+      ],
+      "sha256": "a71621de4c9acb6277e9b80f20ff69cb0b0919c49ad50e393e5a843cfe0af794"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/178/event_matches.csv",
+      "seeds": [
+        178
+      ],
+      "sha256": "19415e0a46c55c26db71455fb483f2e95bfb25cd17213f359dd52f9ac8accd87"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/178/metrics.csv",
+      "seeds": [
+        178
+      ],
+      "sha256": "bf9a943af9e73df732edd81b698c807b8defd38dcc50d06e47c56e2a40e82b20"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/182/event_matches.csv",
+      "seeds": [
+        182
+      ],
+      "sha256": "1d7a55fe5cd3d0432cda0e44d2579836bea1f73d76bde5c88c65ce3c3cdcf607"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/182/metrics.csv",
+      "seeds": [
+        182
+      ],
+      "sha256": "c995fd81aafe42d6213a4c0c6ebdb6b69e76866f29df4a80faa518dbc9bfac2a"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/176/event_matches.csv",
+      "seeds": [
+        176
+      ],
+      "sha256": "42848266f7096132051fb9c64fc8647703bed0ee46449331ed9f5bd7258001de"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/176/metrics.csv",
+      "seeds": [
+        176
+      ],
+      "sha256": "d854be3bfd7f135f96cea1085e98763256eef9af731cecf4406042fe9bbbd418"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/171/event_matches.csv",
+      "seeds": [
+        171
+      ],
+      "sha256": "0edff90be366ec3d155538a2d2ccb5c5df21e1b1d34e699db595c1787f3e4436"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/171/metrics.csv",
+      "seeds": [
+        171
+      ],
+      "sha256": "d7f2f7760b20cc73b4f0ae01d3857f72903c1436fbfa94ecf00b6a6182c8a220"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/185/event_matches.csv",
+      "seeds": [
+        185
+      ],
+      "sha256": "01f02f4a0b5a57fe4ca737f32c3eeb4f9e29d217460ce4b650da7921a7a7e9dd"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/test/185/metrics.csv",
+      "seeds": [
+        185
+      ],
+      "sha256": "0d1a46c854631f0475b8b86df59764aec438fbc7a7e2dde59e741e92518a410b"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/157/event_matches.csv",
+      "seeds": [
+        157
+      ],
+      "sha256": "cdac9f0638d553d2a4563da2d33bd70997344a3912599b14b08e4d6bf5897224"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/157/metrics.csv",
+      "seeds": [
+        157
+      ],
+      "sha256": "e5e9311ff8c7f68937a327ff6cee72c1c2c6db05769c4d3cda07f74bd00fac9e"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/150/event_matches.csv",
+      "seeds": [
+        150
+      ],
+      "sha256": "6014f66380cc7887f704dd3acf97f36982ace1ac90c9c5bfa1c3194883d606ef"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/150/metrics.csv",
+      "seeds": [
+        150
+      ],
+      "sha256": "16e6df9ae987bb4d5643ef31f748a5eb90701db1b5335cbbe08aef8436c3b0ee"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/159/event_matches.csv",
+      "seeds": [
+        159
+      ],
+      "sha256": "b1a1a66da98d929c4032eafd56f2589e87407830aa9f34305165f9fdd391acb2"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/159/metrics.csv",
+      "seeds": [
+        159
+      ],
+      "sha256": "1f172765e8a30d3e6bf10d790f6938409d2f3ad85e8bde050304093802f428f9"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/158/event_matches.csv",
+      "seeds": [
+        158
+      ],
+      "sha256": "be4db04090b69c1ba7efe8b97362b997f717ccf300727c5203262047ae5abfde"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/158/metrics.csv",
+      "seeds": [
+        158
+      ],
+      "sha256": "adf479ec46234955853773ed376bd3da8aa0dcbbaea563b84e6f8b5fdde7ac44"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/151/event_matches.csv",
+      "seeds": [
+        151
+      ],
+      "sha256": "3c32712dc67121ddacd944f761a17391db08947f49b8340b7b3662906c42fa5f"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/151/metrics.csv",
+      "seeds": [
+        151
+      ],
+      "sha256": "691ca1fd5db84e822a91a453dcf84e34fad05d161af40fec3cf0607b3e52d2d3"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/156/event_matches.csv",
+      "seeds": [
+        156
+      ],
+      "sha256": "2cfe8be8cca2934f40102a7ac8874bbe41d4ed228b7f2f7545bae386ee430a0c"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/156/metrics.csv",
+      "seeds": [
+        156
+      ],
+      "sha256": "03ca1c37b0d740cebdee5b01541bedbe44d8f3f0b5eee3ac00b62ec91b204288"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/153/event_matches.csv",
+      "seeds": [
+        153
+      ],
+      "sha256": "636d31fe38207e78d51f6ca064f5a95548ab8cc02d5247a76ceca1b5201cebeb"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/153/metrics.csv",
+      "seeds": [
+        153
+      ],
+      "sha256": "17a52bc0ac9d7d1d9ff1bfd292e924be693eb49a76b67ad96fcb6e3f733798e3"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/154/event_matches.csv",
+      "seeds": [
+        154
+      ],
+      "sha256": "24891a668c183c0d60d8a074ec808096157c60432d5cdf936dcfca2fb175f4a1"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/154/metrics.csv",
+      "seeds": [
+        154
+      ],
+      "sha256": "4753c26de565816bbe3e637993282c7b691788b58d83cfa0727a9c37693458fd"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/155/event_matches.csv",
+      "seeds": [
+        155
+      ],
+      "sha256": "532734335c1246ebfca05a4edceeb0f978fa93972c53dbdfbf5d6c795d0ce8ba"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/155/metrics.csv",
+      "seeds": [
+        155
+      ],
+      "sha256": "6eeb92fd59ed51ba023ea2f31fe6a69403d7dfd96e43a740bd8e88ea8453e18c"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/152/event_matches.csv",
+      "seeds": [
+        152
+      ],
+      "sha256": "1f37ff943aae025058e8b55e52c3eba389036fc7dc318adaaca3f61a93616755"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/development/152/metrics.csv",
+      "seeds": [
+        152
+      ],
+      "sha256": "e929e3a083f974bbecde048a44d924349dcaedb078d466230edd70ec1949c8fe"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/168/event_matches.csv",
+      "seeds": [
+        168
+      ],
+      "sha256": "edceb6b0332fb6c94eff2d32c42134976fcd4f91c5a4e62937ec634ddb2c9a20"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/168/metrics.csv",
+      "seeds": [
+        168
+      ],
+      "sha256": "5a57e251ba7bb710c599440c8988d6089c57f57b3c4cc49a8b535472f81fe673"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/166/event_matches.csv",
+      "seeds": [
+        166
+      ],
+      "sha256": "1b6c71c9e84168d1865adad043d3b5e2ef18bf53112fa5e921776216a59edf5f"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/166/metrics.csv",
+      "seeds": [
+        166
+      ],
+      "sha256": "4f5763f73bdc11c1c2dbd54dd1385c765c69bd85635e05be396f71d85a0ca8e3"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/161/event_matches.csv",
+      "seeds": [
+        161
+      ],
+      "sha256": "994a5a2840200a372464b37fd10b74900adb89a27720fd794cb82196f565b559"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/161/metrics.csv",
+      "seeds": [
+        161
+      ],
+      "sha256": "0b1f45992d9f3676d58c34ccbab979fda92525b38bbc87c0e4fdfdb9419e7d29"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/160/event_matches.csv",
+      "seeds": [
+        160
+      ],
+      "sha256": "e228ffe7dba880987f97aafe0175ccd9f1d49faaa8d09f94e409eaec8052f4fb"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/160/metrics.csv",
+      "seeds": [
+        160
+      ],
+      "sha256": "32a42fe96a7622ec815808d713fe0e388cf59df1d0f4f256bada88ee7913ced4"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/167/event_matches.csv",
+      "seeds": [
+        167
+      ],
+      "sha256": "307269af2b4f7686a9dc501983d99180d518f8638515a3425bf67c3aa810e8a1"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/167/metrics.csv",
+      "seeds": [
+        167
+      ],
+      "sha256": "1bd96bb13378f231d0dae00d5dfd81c51940f2cb54653ad6c8402b31799e1200"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/169/event_matches.csv",
+      "seeds": [
+        169
+      ],
+      "sha256": "124c274ef831df84ec355337f6a3e923963be1bcbe159f15db16ea85d68f9a28"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/169/metrics.csv",
+      "seeds": [
+        169
+      ],
+      "sha256": "e2cc58f06aaea68bae12ead36c33195d29ea38c62acf3dbc7e26b59db74efb37"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/162/event_matches.csv",
+      "seeds": [
+        162
+      ],
+      "sha256": "a187267a62961950c89d260872d3ada3a055066b4ee266671f2129b6a9a00f55"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/162/metrics.csv",
+      "seeds": [
+        162
+      ],
+      "sha256": "980b8d0d277e9b0044072e13021575a7fc655c17c0554cb8dbe66d03926b05aa"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/165/event_matches.csv",
+      "seeds": [
+        165
+      ],
+      "sha256": "4437ec3dc084bd9ebd5f32b7afd024d90bd0ccacb19777b0e8961ff62b1c8732"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/165/metrics.csv",
+      "seeds": [
+        165
+      ],
+      "sha256": "42b6533ab5516c7aaa2e97db0a1684e444dc766289b869d2ca561dd50cabb4a7"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/164/event_matches.csv",
+      "seeds": [
+        164
+      ],
+      "sha256": "1c9e971ba45b674d9535238a2920ad4c32647a689a801ea82e7a20a4145e9fc6"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/164/metrics.csv",
+      "seeds": [
+        164
+      ],
+      "sha256": "efea0ef7ee9f9ca7aaf22fae5029e8711e62c4021b8e0e362e9e9cf16574b120"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/163/event_matches.csv",
+      "seeds": [
+        163
+      ],
+      "sha256": "745a29d6a3efebfbf3fd3d100bd426856c000ef9d53cadd5a82e303d3d7f9c82"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/validation/163/metrics.csv",
+      "seeds": [
+        163
+      ],
+      "sha256": "8af447955c33f4d75f4875a27035403d7bb357bd265cd94911b368cc57686e0d"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/traces/wire-payload-v2/test/link_events.jsonl.gz",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        2026101807
+      ],
+      "sha256": "655cd5cff8ee36872f6787ba49b47b4c0280577b0a464ece2ad4b5684606c751"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/test/metrics.csv",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "sha256": "6bf5d5c18e7c49e262d18d4a1e308f223790053e98e93b1f2d384c35cbc3fc41"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/test/manifest.json",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "sha256": "432bfb6d5bc9179095d831428ae5aeff0793b7dc054462aad6ad81f7edcf7f56"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/test/paired_bootstrap.csv",
+      "seeds": [
+        30
+      ],
+      "sha256": "03e13cd54319bef80e2b071afe7827fd0af57ce1ad6ca74fe681d729e1aac874"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/seed_audit.json",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ],
+      "sha256": "381ce91f6b246a7bfefccab5568ef8abc5e4d0d8b3404776f96d76570196b313"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/FREEZE.json",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ],
+      "sha256": "58aaa034f7bae08f8f9fbb749db5ef72256354ce992bb0fe7f39c612951d2c69"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/test/metrics.csv",
+      "seeds": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ],
+      "sha256": "405e116ec11e5211eaaa3c1307127f2a0cf9b652e288f9c52f89338be336dc31"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/test/manifest.json",
+      "seeds": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ],
+      "sha256": "f5383870d394e6028722909884b2c46940eda20008745929e5734d8c77993aa5"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/test/paired_bootstrap.csv",
+      "seeds": [
+        1,
+        36,
+        37,
+        47,
+        49,
+        50
+      ],
+      "sha256": "721cafba9da08ef2d64d8ba0e5e94664c4d433f1ae9c21a01f8524cfa440bf46"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/test/events.csv",
+      "seeds": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ],
+      "sha256": "af98b521d77af75e7e92a4065050c5af6bb20ff025cb447de8556bd775317c6d"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/development/metrics.csv",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "sha256": "5fbfc2c0db993aa578b506a2f924dc56cb85b4fefe7c7f006c93df61ba9d2197"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/development/manifest.json",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "sha256": "081cac52deeda5d358f3e6518514e008848e66a42c386ff4e66b7f2ca4ef3f58"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/development/paired_bootstrap.csv",
+      "seeds": [
+        6,
+        9,
+        10
+      ],
+      "sha256": "186cb7e035c8519b5cc76e88ca0d37abd3218f737acfe034524de827be8dbc6d"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/development/events.csv",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "sha256": "0d234a4df253b681bad152e87cd89165add0768afecc055b9d410e9ed2c7b693"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/cases/changed_events.csv",
+      "seeds": [
+        50,
+        64,
+        71,
+        74,
+        75,
+        89,
+        91
+      ],
+      "sha256": "33bc3b86892060b3611606eb19cdce68ddd329b4f4d4bc993acfb2fb16635d2a"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/forensics/probe_samples.csv",
+      "seeds": [
+        20
+      ],
+      "sha256": "a61cfa104104f04ba8f8f821db7a2830316bc7bc6e0b5d5ff4f5b2359d66572d"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/forensics/manifest.json",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "sha256": "8a2a31cbf9e30279c23d5b9d1a460191b91a77e140619480f067bdcc1955650c"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/forensics/identifiability.json",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "sha256": "e6bb70ac43f4ad14dce0ad5dd5c5c6183b1fab73af7a982612e6141d9a24eb48"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/forensics/events.csv",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "sha256": "fb2c78a3c39b46afd402cf4ce849dceb00b88285b191fc018ea7567e7534d398"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/validation/metrics.csv",
+      "seeds": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "sha256": "de7647c881bb6b98db793b74abf0d57a5eb35bf233d157eed8936891f92af936"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/validation/manifest.json",
+      "seeds": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "sha256": "d1c575dbcc637270f71cb0cfed56b2973e393f74fc829eb2d573739d47612bba"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/validation/paired_bootstrap.csv",
+      "seeds": [
+        4,
+        9,
+        10
+      ],
+      "sha256": "686976d7364c0ef0adc536cdaaa04fb5def196132301915fa59f74122db8b729"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/v0.2/validation/events.csv",
+      "seeds": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "sha256": "9c5a70445f1835d90736cd6c6113c5f905bf9b9e52ba22ab0729d31325274bf0"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/development/metrics.csv",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "sha256": "debd25cd6dc30acd7ef2655c035d18ca859ea3b6675b4bf4213429d6bd65d6c5"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/development/manifest.json",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "sha256": "b4a3ca381cf241697f1320c9510ce33b1f6ca1625efb84f95917b0dcbd0e1df3"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/development/paired_bootstrap.csv",
+      "seeds": [
+        10
+      ],
+      "sha256": "2f49b93b4fecbf0a5d20ed643606af0f65dfce17d713daac9b4b6e0704119bb1"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/wire-payload/test/manifest.json",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "sha256": "cfc0f1a1ec5752c7448318e58edea2a563898abad69edb8dec4694adf3ad700d"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/wire-payload/test/by_seed.csv",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "sha256": "ff0fa5e12a11426c74de5e1e22b2a6a0be2f8b2a942f806faa0c10f50977d0b2"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/wire-payload/test/per_run.csv",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "sha256": "14bb3d6a8f384a608a6c465518e59bba9af26c258b4572c87c03f37d668b0611"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/offline-spatial-pilot/test/manifest.json",
+      "seeds": [
+        2026101802
+      ],
+      "sha256": "3dd9287000bab348891520745927b4ddae2346d640eebce59776b350a6c6e281"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/offline-spatial-pilot/development/manifest.json",
+      "seeds": [
+        2026101802
+      ],
+      "sha256": "c019b77f4ca02a8f791b78688c5fa15c13a4b756093a25f87a5abd768dc76940"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/offline-spatial-pilot/validation/manifest.json",
+      "seeds": [
+        2026101802
+      ],
+      "sha256": "8b52a1893649ff04b35c604cd23d74bda13ead0bc68c83999986be093730b566"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/offline-spatial-smoke/manifest.json",
+      "seeds": [
+        2026101802
+      ],
+      "sha256": "abd49bd2307f87e54ed9492f30276deb02c290a1089d349f9bca47c280d5c09c"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/budget-smoke-1-traces/smoke/20/event_matches.csv",
+      "seeds": [
+        20
+      ],
+      "sha256": "bf0b022ef9cc2669f1672c0f8ccf7b1c1f0d1594e4779eee584203947db5dac5"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/budget-smoke-1-traces/smoke/20/metrics.csv",
+      "seeds": [
+        20
+      ],
+      "sha256": "e15ba28746f750c543e5c74c641c0488eff33f7c90bc6d6ab6d0caa0c233cc39"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/wire-v2-smoke-1/recovery_episodes.csv.gz",
+      "seeds": [
+        20
+      ],
+      "sha256": "3a1ae97ff2d2a0c505b1534b5842383991f52850b31b25a2445bd30268883e21"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/wire-v2-smoke-1/per_run.csv.gz",
+      "seeds": [
+        20
+      ],
+      "sha256": "037222ead813d358aaf8c6c9b3a424c680e6bf708108fcebd9125c8f9c962a2a"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/wire-v2-smoke-1/invariants.csv.gz",
+      "seeds": [
+        20
+      ],
+      "sha256": "bbfba141e9f5d051224988215629b5bd5d0b394f7bc971b41dbd41dc403daa0d"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/wire-v2-smoke-1/paired_uncertainty.csv",
+      "seeds": [
+        2026101809
+      ],
+      "sha256": "9a593072ef6034275ea85be06a4d83ceb7328ab72e0ae25c249b6125e20b18e5"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/wire-v2-smoke-1/trace_excerpt.csv",
+      "seeds": [
+        20
+      ],
+      "sha256": "f3106d7cb8db02f3f7b34ef701f1295ccfb2a29fc92f2731b599f9ac18bead46"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/wire-v2-smoke-1/manifest.json",
+      "seeds": [
+        2026101807
+      ],
+      "sha256": "3d3255da701d369448ff63eb543446b6b8a949dcfab55088ca18ac8837323eea"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/wire-v2-smoke-1/by_seed.csv",
+      "seeds": [
+        20
+      ],
+      "sha256": "bb72a40d8afdc0aaa55e0dd6c7dc75dd48a9aa6aabfa9178e8bd1b76c87a83f8"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/wire-v2-smoke-1-log/link_events.jsonl.gz",
+      "seeds": [
+        20,
+        2026101807
+      ],
+      "sha256": "5dd095cc806dc8460b746d0ae9e461250c0392d4d725d34bc842cb90f9b40ecb"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/wire-smoke-v1/manifest.json",
+      "seeds": [
+        20
+      ],
+      "sha256": "28ea96dd3fbe5bb08cd4be7a436b2f22297140cc73f9143f1a7b6916c146c461"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/wire-smoke-v1/by_seed.csv",
+      "seeds": [
+        20
+      ],
+      "sha256": "e72101b088990a2e1eb983c74d4b1a12ca65bdfe8a529a8a037ccb6cf0597020"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/wire-smoke-v1/per_run.csv",
+      "seeds": [
+        20
+      ],
+      "sha256": "829ba61ee34db39b8d2765be1e299390b5061498d8d54fe3580b5194ff5e6bc3"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/budget-smoke-1/smoke/event_matches.csv",
+      "seeds": [
+        20
+      ],
+      "sha256": "bf0b022ef9cc2669f1672c0f8ccf7b1c1f0d1594e4779eee584203947db5dac5"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/budget-smoke-1/smoke/metrics.csv",
+      "seeds": [
+        20
+      ],
+      "sha256": "e15ba28746f750c543e5c74c641c0488eff33f7c90bc6d6ab6d0caa0c233cc39"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/budget-smoke-1/smoke/manifest.json",
+      "seeds": [
+        20
+      ],
+      "sha256": "ebd8e03d9a51e921e95f196034e1f2e57bebf08c91a54435fcbf0f9fad46625e"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/budget-smoke-1/smoke/run_started.json",
+      "seeds": [
+        20
+      ],
+      "sha256": "8d192352ba93cf0c23f47abbe4a776bee264700867be3982e3cebecfa2b976eb"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/scratch/budget-smoke-1/smoke/analysis/verification.json",
+      "seeds": [
+        20
+      ],
+      "sha256": "591932b774d469fe3fd58702d6420b248d5c4837b9a9a4ff08a12a190f1ec18d"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/development-smoke/metrics.csv",
+      "seeds": [
+        0
+      ],
+      "sha256": "1ddefc6339301f16f9e2ee9953db699f1a74abbbc3a809591124e77d8071341c"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/development-smoke/manifest.json",
+      "seeds": [
+        0
+      ],
+      "sha256": "774e722a618b93b927a556c6e5d9cf228f9d0bd6557f3e30408c61ce7013b952"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/development-smoke/paired_bootstrap.csv",
+      "seeds": [
+        1
+      ],
+      "sha256": "4222c2670531a6b31812a09ace0f486b19a0556915a686d1db73a4714ceef128"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/selection.json",
+      "seeds": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ],
+      "sha256": "4fda73fa85edc541edc0f4a649279557b957781d2af051d3101365502fd27a75"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/seed-audit.json",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        731,
+        2026101802,
+        2026101807,
+        2026101809
+      ],
+      "sha256": "2ec23461b1727995f87dbeb765115aa9d94b0170d44bcc5a91f1f8b3b1f0d8f7"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/test/event_matches.csv",
+      "seeds": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ],
+      "sha256": "aec3efd7f7c812e33c6a39abf5579fcd3d61c1b797364e2b0517abd6c0284a50"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/test/metrics.csv",
+      "seeds": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ],
+      "sha256": "015809a2a4a1f9c38edee899abeabd0cb1209b8f53d3b23cb3932b8fe27a74bd"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/test/manifest.json",
+      "seeds": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ],
+      "sha256": "3b1e9e8c7b60cb9b75ac821f5e27a77a95aabbf684c533881a4424979dcd891a"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/test/run_started.json",
+      "seeds": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ],
+      "sha256": "bdd3ed6d3b1a102d9bd84ed34408858ec0d4d83743a5dd29655d254ba01762c1"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/test/analysis/paired_intervals.csv",
+      "seeds": [
+        30
+      ],
+      "sha256": "279c0c85b50c199418ee5461513480c765ff58f5aeee4813adc6bf624a70f418"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/test/analysis/absolute_intervals.csv",
+      "seeds": [
+        30
+      ],
+      "sha256": "d2fc3e8043247cb44be5ba142a192cb12bb85b2ff9208a7acf4f5f56b0972097"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/test/analysis/decision.json",
+      "seeds": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ],
+      "sha256": "a58c3500ecee907e8dc5f880ebd9381f1cb3ffe2b0a93b4dab6ac8eabfb42504"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/test/analysis/common_matched_event_pairs.csv",
+      "seeds": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ],
+      "sha256": "2f9cbdefe1a4fe11ab7f4a24387611a6cfc8d75e6669f9072403d2f789cfee19"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/development/event_matches.csv",
+      "seeds": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "sha256": "62c41931c037103d66e478a402f5356179c21163b91ae983baba6bf6d321b36f"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/development/metrics.csv",
+      "seeds": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "sha256": "8011adb4e26fe1f8658b3a84535f2c5d6a410aeb04732e95162cac76479f64b2"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/development/manifest.json",
+      "seeds": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "sha256": "fdeedef924bc2381c18a91abbdaf6c422e2c9bc6d057312565a45738eff75a86"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/development/run_started.json",
+      "seeds": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "sha256": "6df0bc87065b9f97c3101ef021b6f59c859c1d84fa8135d50d1af4155280357e"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/development/analysis/verification.json",
+      "seeds": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "sha256": "00fff05d0acd40d7d14e0f79a31ef61286e9e28b37766dff321394bd53577c97"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/validation/event_matches.csv",
+      "seeds": [
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169
+      ],
+      "sha256": "43a39e9fa2a72d00162f5e1dd275b650c4ccfcf2e27b13ee309156c5d6299bb5"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/validation/metrics.csv",
+      "seeds": [
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169
+      ],
+      "sha256": "83f210ef1a3ff93120857a18cade7700d5ff7603d931d6fd9d92a20d86716231"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/validation/manifest.json",
+      "seeds": [
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169
+      ],
+      "sha256": "4f3f7f90dcd09b258da4d52e5cd63bd1b1503bccdad36a82596f75b661766c36"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/validation/run_started.json",
+      "seeds": [
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169
+      ],
+      "sha256": "45be1d5157b24e62ffef76fa82fb629c222fd488c112d3137b4e7b6a5b281d84"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/budget-matched/validation/analysis/verification.json",
+      "seeds": [
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169
+      ],
+      "sha256": "bfffde7fe55bcd870efd55c86e4acaaf4d4ff3cd985bc2551cd513594d088ae0"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/seed_audit.json",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ],
+      "sha256": "6d41d923183ea749695669adf740969b2c5ff354fb88bc6ca323029f7a4b9d6e"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/test/changed_events.csv",
+      "seeds": [
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149
+      ],
+      "sha256": "d5592c39ed1ec6d94c895603b4222519c640399bcf8dd37c4d6d0ebb1f4977d5"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/test/metrics.csv",
+      "seeds": [
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149
+      ],
+      "sha256": "39e2c7c4838d9c808df4fb6f319697ffa99df7638fe19a8a7cc2ae3d4a7151b0"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/test/manifest.json",
+      "seeds": [
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149
+      ],
+      "sha256": "024df266c514eff29fbee917661073cb13327befcaf0cc03d61d7597acc94710"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/test/events.csv",
+      "seeds": [
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149
+      ],
+      "sha256": "33c7d0ed16ee003f975f5001213716a1d16a0e11402360c375c9779c6c62faf1"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/test/aligned_recovery/paired_bootstrap.csv",
+      "seeds": [
+        4,
+        6,
+        22,
+        29,
+        30
+      ],
+      "sha256": "1f346c805b2ccb07b9e3bd7ff26c60daed18647ffd8c7067b1f50ed69c643585"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/test/main/paired_bootstrap.csv",
+      "seeds": [
+        1,
+        2,
+        17,
+        19,
+        28,
+        29,
+        30
+      ],
+      "sha256": "eb689e7d4abbe348adf23c2292058c31f1124d5f1a0a7ef3acd5d2109cee1ff5"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/development/changed_events.csv",
+      "seeds": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "sha256": "2cd8a358467798063523ce0a3bba29e2072efd923b2fa6865a6097053ee549a0"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/development/metrics.csv",
+      "seeds": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "sha256": "a6ded1b62e890ea8f7ddf3f62334a006a68334ff56d3981e49c2cb17445437c4"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/development/manifest.json",
+      "seeds": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "sha256": "e5d49f91d382bddc85373e43133e63023d7dda54630d0c1da87e3df4e1a01976"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/development/events.csv",
+      "seeds": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "sha256": "c328e9439cf334f7b1b5bb1b936bc35bee75aeb4699a629b191c278d92d5f7de"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/development/aligned_recovery/paired_bootstrap.csv",
+      "seeds": [
+        2,
+        7,
+        9,
+        10
+      ],
+      "sha256": "4f7f0ca84c0b6c0d5174fbfeeb62d8b68a59e6b9936f2c9c592351863650171f"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/development/main/paired_bootstrap.csv",
+      "seeds": [
+        8,
+        10
+      ],
+      "sha256": "a8fdc08e990770f3206e0d6bb50daa5b8801f745f33d966dc9b769912c0e1169"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/validation/changed_events.csv",
+      "seeds": [
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "sha256": "de92c4caaefd1c2e25643f43f9b75addab850e64e681811a23640763b8e3dd34"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/validation/metrics.csv",
+      "seeds": [
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "sha256": "b41b60a8a25f104b447dcdf19787b7f558f486213480d313d04064cd4c5b8b20"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/validation/manifest.json",
+      "seeds": [
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "sha256": "cc5c4aec9209d552ed25f3ade042abffec29bbffbd784b534d14bbe57dd3273d"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/validation/events.csv",
+      "seeds": [
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "sha256": "9b896b88449e3ebfba08ee7e523788e3fa728f92f26f08d461b85afbd61db6d0"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/validation/aligned_recovery/paired_bootstrap.csv",
+      "seeds": [
+        2,
+        7,
+        9,
+        10
+      ],
+      "sha256": "d86c3b12264efa8c23e0b4f842634f2b8d2bf9946252854e4c2fb55bc6d9af54"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/blocked-rearm/validation/main/paired_bootstrap.csv",
+      "seeds": [
+        2,
+        5,
+        7,
+        8,
+        9,
+        10
+      ],
+      "sha256": "34fb917e63d5dd3c57d38183f5d480f73f9946ef4c20325eac72bafd18f943d0"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/validation/metrics.csv",
+      "seeds": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "sha256": "c6e2783ed721603db9ebb518956d7ad2dca7fefccb230eb8748b702dc444532f"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/validation/manifest.json",
+      "seeds": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "sha256": "3fdd4977034e0b57b883c3112112a1cf58df0d459d06d937733a7fd65900e2c1"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/validation/paired_bootstrap.csv",
+      "seeds": [
+        10
+      ],
+      "sha256": "cc708a0c8b56854b604ba5ded8785f5703b3b3876c83702317e7f58c09c614e6"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/wire-payload-v2/test/recovery_episodes.csv.gz",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "sha256": "19432acf3847d8c3f8c22fb32596a4a329f17c66dd6d6a00667719fbf13af888"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/wire-payload-v2/test/per_run.csv.gz",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "sha256": "b1e0d086a5ac00ade9c60dbedf8892e0baa7a0e4a42562e796134f5d1fcbfe0d"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/wire-payload-v2/test/invariants.csv.gz",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "sha256": "7df0809f823104b0ed43b2a469f2295c509f84a58b46d28d26d3ddb2ae6b3d45"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/wire-payload-v2/test/paired_uncertainty.csv",
+      "seeds": [
+        2026101809
+      ],
+      "sha256": "84f2f68e67d5cd41986b7e153278aeea96f6ad3271007f40de32865c7883134f"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/wire-payload-v2/test/trace_excerpt.csv",
+      "seeds": [
+        20
+      ],
+      "sha256": "f3106d7cb8db02f3f7b34ef701f1295ccfb2a29fc92f2731b599f9ac18bead46"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/wire-payload-v2/test/manifest.json",
+      "seeds": [
+        2026101807
+      ],
+      "sha256": "033036a6658313cb2d392d370c987ce7c01f3f0e3cc9388ad1ef2bab2d62bb79"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/wire-payload-v2/test/by_seed.csv",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "sha256": "17d8bd09b3488c25dfce71fa3bb179c62ddab03856eac50b0e20589d72df2949"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/results/wire-payload-v2/audit/per_run.csv",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "sha256": "b7d2dce459e0577ade783b761b11642c9f866a8810f9d2f206a71270e9a883f1"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/configs/offline_spatial_pilot.json",
+      "seeds": [
+        2026101802
+      ],
+      "sha256": "8c7dc926bdead4f9ea9a4c0f154fa7304dd6d2bd0fb701d512dc49197665e412"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/configs/blocked_rearm.yaml",
+      "seeds": [
+        731
+      ],
+      "sha256": "849d5e34aa9eb7bff953a8a12e19964cc54839eb3aaad06074ba17ab406702bb"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/configs/experiment.yaml",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        731
+      ],
+      "sha256": "1be38a7b47e5e0104435086587d543dfbaa74c320389971aa2f9ecf96779dae2"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/configs/v02.yaml",
+      "seeds": [
+        731
+      ],
+      "sha256": "46385c602734fd8c59a28652a94401cc396d8f166cb23700d2f06a7a64ea2fae"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/configs/budget-matched.json",
+      "seeds": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        2026101810
+      ],
+      "sha256": "3d935344040ab3b39ad1e38022a72ec35672d4a938af6c162184d788bc0936b8"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/vendor/SensorTrust/firmware/experiment_config.json",
+      "seeds": [
+        0
+      ],
+      "sha256": "9a1461beb37f50ae4958950222feea186b1f3509c4fcf60de19f5c3606c1da6e"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/vendor/SensorTrust/results/v0.2/hardware_metadata.json",
+      "seeds": [
+        0
+      ],
+      "sha256": "1d4e8ca970518bed7131de8e39a7b99bbc6f52ec4f48159521112dde08878c9f"
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS/vendor/AdaptiveSense/experiments/experiment_config.yaml",
+      "seeds": [
+        42
+      ],
+      "sha256": "424fd368a4b7434b6411c47035a88c11b221d7991aaa54e01707c4a981cd669b"
+    },
+    {
+      "path": "git:2f41ed10996e33e71dd3a411d235a8a63a3b4733 configs/blocked_rearm.yaml",
+      "seeds": [
+        731
+      ]
+    },
+    {
+      "path": "git:2b4455c80c772b8186da3178757bdcb394206197 configs/budget-matched.json",
+      "seeds": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        2026101810
+      ]
+    },
+    {
+      "path": "git:f664fdb76048e8ced56158902a14aa9e9d05e785 configs/experiment.yaml",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        731
+      ]
+    },
+    {
+      "path": "git:d3b3885648b5879fd5358a4b1e921895b797b8c7 configs/offline_spatial_pilot.json",
+      "seeds": [
+        2026101802
+      ]
+    },
+    {
+      "path": "git:bcc5bc3ce8949f521748cc060b554b93f6677fa0 configs/v02.yaml",
+      "seeds": [
+        731
+      ]
+    },
+    {
+      "path": "git:38edc7bf3fbab4b017d2d189115f3e4a8afad293 results/blocked-rearm/development/aligned_recovery/paired_bootstrap.csv",
+      "seeds": [
+        2,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "path": "git:d379220497b404f5f44a6bdebaf37aa5b2145af1 results/blocked-rearm/development/changed_events.csv",
+      "seeds": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ]
+    },
+    {
+      "path": "git:008a09b58dd701edd33c89d8871abb10846d1f6a results/blocked-rearm/development/events.csv",
+      "seeds": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ]
+    },
+    {
+      "path": "git:7d54d85e4310f05900787e6dfa25bbfbb2f20eca results/blocked-rearm/development/main/paired_bootstrap.csv",
+      "seeds": [
+        8,
+        10
+      ]
+    },
+    {
+      "path": "git:d53273a45966a6a59e411b4d0979461208b90ff7 results/blocked-rearm/development/manifest.json",
+      "seeds": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ]
+    },
+    {
+      "path": "git:bf564a742d093f84c86c0560269270c168974ab6 results/blocked-rearm/development/metrics.csv",
+      "seeds": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ]
+    },
+    {
+      "path": "git:27e0b508319ac3713d02c4ea51078ca7c1cf3c5a results/blocked-rearm/seed_audit.json",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ]
+    },
+    {
+      "path": "git:9906f6d2365940842ad47ac1dbc0fa2ba2ffedbb results/blocked-rearm/test/aligned_recovery/paired_bootstrap.csv",
+      "seeds": [
+        4,
+        6,
+        22,
+        29,
+        30
+      ]
+    },
+    {
+      "path": "git:57cd3feb4bfe74f17556a3b0b56ed2818d360ede results/blocked-rearm/test/changed_events.csv",
+      "seeds": [
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149
+      ]
+    },
+    {
+      "path": "git:14cd48a0276a6f1fd0dfb9780ca14727b68d6f97 results/blocked-rearm/test/events.csv",
+      "seeds": [
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149
+      ]
+    },
+    {
+      "path": "git:0c21af84ceb3020f8b6bb9520c10e15d69c3d7a8 results/blocked-rearm/test/main/paired_bootstrap.csv",
+      "seeds": [
+        1,
+        2,
+        17,
+        19,
+        28,
+        29,
+        30
+      ]
+    },
+    {
+      "path": "git:e7e1a6a98024775879bd789ff9167163bee533fe results/blocked-rearm/test/manifest.json",
+      "seeds": [
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149
+      ]
+    },
+    {
+      "path": "git:fb3a51205545008d14a09c09e6cbe60a38a33116 results/blocked-rearm/test/metrics.csv",
+      "seeds": [
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149
+      ]
+    },
+    {
+      "path": "git:60c305ecd6f613d61840107a4dde4052ec8a3324 results/blocked-rearm/validation/aligned_recovery/paired_bootstrap.csv",
+      "seeds": [
+        2,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "path": "git:6f36df64101bc721a3ca319a7e3026d981bbee74 results/blocked-rearm/validation/changed_events.csv",
+      "seeds": [
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ]
+    },
+    {
+      "path": "git:253bf7df177f3f852815ef3ca73b78baddc65699 results/blocked-rearm/validation/events.csv",
+      "seeds": [
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ]
+    },
+    {
+      "path": "git:cba8f73b7ca60cc3c19a76ee548a02217b20f0b5 results/blocked-rearm/validation/main/paired_bootstrap.csv",
+      "seeds": [
+        2,
+        5,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "path": "git:f12ac345be37e8ca65a5bd5d1ddf7a0e2a312dfb results/blocked-rearm/validation/manifest.json",
+      "seeds": [
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ]
+    },
+    {
+      "path": "git:937ca73517a8e09b76c8622e7b69ea91ff83cd05 results/blocked-rearm/validation/metrics.csv",
+      "seeds": [
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ]
+    },
+    {
+      "path": "git:72c74638f6217d5874f546d56947afbc81907c26 results/budget-matched/development/analysis/verification.json",
+      "seeds": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ]
+    },
+    {
+      "path": "git:496ced4490f9d8029d366c5b506da3075919e2c4 results/budget-matched/development/event_matches.csv",
+      "seeds": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ]
+    },
+    {
+      "path": "git:f7af562fa9f6c9365a7b07b9ae54fcf09398a749 results/budget-matched/development/manifest.json",
+      "seeds": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ]
+    },
+    {
+      "path": "git:111cbdeacc43aacf1c305d0d07a54f830b8c005c results/budget-matched/development/metrics.csv",
+      "seeds": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ]
+    },
+    {
+      "path": "git:5c3f1e765f7709a2c789bea381356345dd99b872 results/budget-matched/development/run_started.json",
+      "seeds": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ]
+    },
+    {
+      "path": "git:9ac6498e961d4c1162b65066f1e70353bc99a1f7 results/budget-matched/seed-audit.json",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        731,
+        2026101802,
+        2026101807,
+        2026101809
+      ]
+    },
+    {
+      "path": "git:fa3a7132fce017fb71bc084821f23858163d6262 results/budget-matched/selection.json",
+      "seeds": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ]
+    },
+    {
+      "path": "git:0083614321e246823eda6875593c8063871dc861 results/budget-matched/test/analysis/absolute_intervals.csv",
+      "seeds": [
+        30
+      ]
+    },
+    {
+      "path": "git:583c72a3315f7942c2424de92dccef6579de0ada results/budget-matched/test/analysis/common_matched_event_pairs.csv",
+      "seeds": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ]
+    },
+    {
+      "path": "git:c003a29c2d6ebb4bd2cb7873b3c0fb2cf5232494 results/budget-matched/test/analysis/decision.json",
+      "seeds": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ]
+    },
+    {
+      "path": "git:e8144bb1256c1ffe600f6a5e28e58a2119fb47c2 results/budget-matched/test/analysis/paired_intervals.csv",
+      "seeds": [
+        30
+      ]
+    },
+    {
+      "path": "git:8aef4717f43b9e9c87d0ab83b28ed64c131a87f6 results/budget-matched/test/event_matches.csv",
+      "seeds": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ]
+    },
+    {
+      "path": "git:7b23e5eb9bff2bc80aa507607322df46196c248f results/budget-matched/test/manifest.json",
+      "seeds": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ]
+    },
+    {
+      "path": "git:d75d9c959b62fb8642d5834dd969f2548ac16d89 results/budget-matched/test/metrics.csv",
+      "seeds": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ]
+    },
+    {
+      "path": "git:d860196c963763dbe0f751b396efa9d5a69cccda results/budget-matched/test/run_started.json",
+      "seeds": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199
+      ]
+    },
+    {
+      "path": "git:1196dd289fc7b126b69388c2e554125995e5c257 results/budget-matched/validation/analysis/verification.json",
+      "seeds": [
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169
+      ]
+    },
+    {
+      "path": "git:a1ec413e01bd286145dbfee6426c46bff5ac426a results/budget-matched/validation/event_matches.csv",
+      "seeds": [
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169
+      ]
+    },
+    {
+      "path": "git:b234bcfa77238baf99c971a7eba5add2a3ce8510 results/budget-matched/validation/manifest.json",
+      "seeds": [
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169
+      ]
+    },
+    {
+      "path": "git:07d4dc257668a28b744a65531273f98ab740f954 results/budget-matched/validation/metrics.csv",
+      "seeds": [
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169
+      ]
+    },
+    {
+      "path": "git:cf298b8f36671ad974699abb657d628154b722ff results/budget-matched/validation/run_started.json",
+      "seeds": [
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169
+      ]
+    },
+    {
+      "path": "git:3c4b198648185f22b5f07a2e5bd29b35ae9f57d2 results/development-smoke/manifest.json",
+      "seeds": [
+        0
+      ]
+    },
+    {
+      "path": "git:6380b8d7731fbd72f4ee72e759c64be541a36cef results/development-smoke/metrics.csv",
+      "seeds": [
+        0
+      ]
+    },
+    {
+      "path": "git:1af0bc5461cf92bad71450354e4f8f467d2af322 results/development-smoke/paired_bootstrap.csv",
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "path": "git:4042317d1ef64f0452d4f678bdceb37f137c69f9 results/development/manifest.json",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "path": "git:08d7aa730535decad39fd787adb28aeaa4d1c9c2 results/development/metrics.csv",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "path": "git:4013d099b4384fcb1054329a87c4ff11b4964d38 results/development/paired_bootstrap.csv",
+      "seeds": [
+        10
+      ]
+    },
+    {
+      "path": "git:6882cf6d94913c2139943257abd957654f5758c9 results/offline-spatial-pilot/development/manifest.json",
+      "seeds": [
+        2026101802
+      ]
+    },
+    {
+      "path": "git:ed42ebc306e8de36f6cc779ee13dd95481d6c1a9 results/offline-spatial-pilot/test/manifest.json",
+      "seeds": [
+        2026101802
+      ]
+    },
+    {
+      "path": "git:ced714b90e4e0d39302665ef06e23e88dc70e4b4 results/offline-spatial-pilot/validation/manifest.json",
+      "seeds": [
+        2026101802
+      ]
+    },
+    {
+      "path": "git:a4eb09c61445b2c86b8fa9e9586366ba87042784 results/test/manifest.json",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "path": "git:538e930cc4f73347c787c5758c2fb0b36f8263fc results/test/metrics.csv",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "path": "git:e6e4a27303bac44adfa5c4bb32815847d47b4259 results/test/paired_bootstrap.csv",
+      "seeds": [
+        30
+      ]
+    },
+    {
+      "path": "git:3a0017fec77c33487b7c6e3a95654ada05932cda results/v0.2/FREEZE.json",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ]
+    },
+    {
+      "path": "git:369e8663bf48bbfa3001c650116ae3bdb9e77238 results/v0.2/cases/changed_events.csv",
+      "seeds": [
+        50,
+        64,
+        71,
+        74,
+        75,
+        89,
+        91
+      ]
+    },
+    {
+      "path": "git:a680c7d72981a27e869633a7906f1f61638947d8 results/v0.2/development/events.csv",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "path": "git:8b528068a40754aa99f991466e864c0d0d515883 results/v0.2/development/manifest.json",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "path": "git:38207f97315562bdc3cfab74d7efd1b2bb02ff2c results/v0.2/development/metrics.csv",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "path": "git:d807937d6bf15868c33a23ee9662daa428a0f26c results/v0.2/development/paired_bootstrap.csv",
+      "seeds": [
+        6,
+        9,
+        10
+      ]
+    },
+    {
+      "path": "git:b4c4a4ee25f3e1e2180f3222a134eead28ac2a21 results/v0.2/forensics/events.csv",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "path": "git:03e100f30d5fc6810e461a0b2f507df17017947a results/v0.2/forensics/identifiability.json",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "path": "git:9aafcdd480c699370412aa2fcaabf52e3fac37da results/v0.2/forensics/manifest.json",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "path": "git:3aca00d0066dd6d43100afd9cf0b2ba82fb087cb results/v0.2/forensics/probe_samples.csv",
+      "seeds": [
+        20
+      ]
+    },
+    {
+      "path": "git:e91ea3e534f48fff48f20ab8d4aaf83f0e6c133a results/v0.2/test/events.csv",
+      "seeds": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ]
+    },
+    {
+      "path": "git:02524225ec94aa7d9b36f967ac65aee9cfab6096 results/v0.2/test/manifest.json",
+      "seeds": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ]
+    },
+    {
+      "path": "git:bc189b249079281fd454c1e58519d91ffda34252 results/v0.2/test/metrics.csv",
+      "seeds": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ]
+    },
+    {
+      "path": "git:f229fe30c16ba1bf56e0ad6a1bb634dd4ea0f579 results/v0.2/test/paired_bootstrap.csv",
+      "seeds": [
+        1,
+        36,
+        37,
+        47,
+        49,
+        50
+      ]
+    },
+    {
+      "path": "git:3c3f50a1d26be052734c43bb2ed382bfc7f9ffae results/v0.2/validation/events.csv",
+      "seeds": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "path": "git:9228b767bb0d495b93bcd0d2d8906f088d2d6136 results/v0.2/validation/manifest.json",
+      "seeds": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "path": "git:99d0f1a99ae09d65066262e50f85fe310e04f9da results/v0.2/validation/metrics.csv",
+      "seeds": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "path": "git:b532ea18a0885e1b17872fa6760890d03265fad4 results/v0.2/validation/paired_bootstrap.csv",
+      "seeds": [
+        4,
+        9,
+        10
+      ]
+    },
+    {
+      "path": "git:0c0f103ef41a9fe8d39cf20e03d9f816697a98da results/validation/manifest.json",
+      "seeds": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "path": "git:f597e3b6d87c07ae977360826c13ae56d4009a7f results/validation/metrics.csv",
+      "seeds": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "path": "git:449b1aab29292a9bbd02da82d8700c9133022339 results/validation/paired_bootstrap.csv",
+      "seeds": [
+        10
+      ]
+    },
+    {
+      "path": "git:13db90739cc7b75d26a108c0aba46ce704d9d346 results/wire-payload-v2/audit/per_run.csv",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "path": "git:f178056e125135e8248361c5d6ad2a67d210817e results/wire-payload-v2/test/by_seed.csv",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "path": "git:5b14bcb62479d809649aacb0200899061fdb42a1 results/wire-payload-v2/test/manifest.json",
+      "seeds": [
+        2026101807
+      ]
+    },
+    {
+      "path": "git:9b7673af6025e18dc3e917ddb01c36bd029ecf5f results/wire-payload-v2/test/paired_uncertainty.csv",
+      "seeds": [
+        2026101809
+      ]
+    },
+    {
+      "path": "git:d928f49f5504ddb050d6ef99f611563efb230230 results/wire-payload-v2/test/trace_excerpt.csv",
+      "seeds": [
+        20
+      ]
+    },
+    {
+      "path": "git:de6d357efba9cfa97cf8aab080ccf6872ed005ec results/wire-payload/test/by_seed.csv",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "path": "git:42d1c90da421a0e551d88b1d52c68ccf0b8e5507 results/wire-payload/test/manifest.json",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "path": "git:f3f8f659ce29bf840f8244a98af82daff7a54345 results/wire-payload/test/per_run.csv",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "path": "git:bce87685e8ef1a9f4b9c6b69a87130be099761d4 docs/research-portfolio/VERIFIED_RESULTS.json",
+      "seeds": [
+        30,
+        50
+      ]
+    },
+    {
+      "path": "git:6e8a5d38f8eb9a52989a0a8e6f9893fe29966b1c results/v0.2/forensics/manifest.json",
+      "seeds": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "path": "git:5dfcfe8c5887155d888da6fe27608390f3500149 results/development-smoke/manifest.json",
+      "seeds": [
+        0
+      ]
+    },
+    {
+      "path": "git:866bdd49afaa710a472f930b097fad37a2d64e9f results/development-smoke/metrics.csv",
+      "seeds": [
+        0
+      ]
+    },
+    {
+      "path": "git:f972aaf93a96da2f6b2fb9b61d626ff357fac579 results/development-smoke/paired_bootstrap.csv",
+      "seeds": [
+        1
+      ]
+    },
+    {
+      "path": "git:b48344dbabfba73e020049aa2d380c88af69dddc configs/experiment.yaml",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    }
+  ],
+  "raw_file_stat_signatures": [
+    {
+      "path": "/Users/mac/Documents/TAIS-external-data/C0-20261018/intel-berkeley/raw/data.txt.gz",
+      "bytes": 34422518,
+      "mtime_ns": 1792255145306253683
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS-external-data/C1_1-20261018-evidence/A-raw/Greenhouse-2.xlsx",
+      "bytes": 36705010,
+      "mtime_ns": 1792258967570798397
+    },
+    {
+      "path": "/Users/mac/Documents/TAIS-external-data/C1_1-20261018-evidence/A-raw/Greenhouse-1.xlsx",
+      "bytes": 32052236,
+      "mtime_ns": 1792258996098029996
+    }
+  ],
+  "errors": [],
+  "limitations": "All accessible local refs/Git histories, ignored archives and TAIS-external-data. Not inaccessible external machines. Numeric measurements are not seeds; gzip replay directory identities, compressed CSV and full link JSONL seed fields audited."
+}

@@ -1,0 +1,11 @@
+From file:///Users/mac/Documents/TAIS
+ * branch            89aa8341181aa42791f9a4de80739bb7c10fa9e5 -> FETCH_HEAD
+{
+  "status": "PASS",
+  "actual_depth_one_clone": true,
+  "pinned_commit_absent_before": true,
+  "exact_pinned_tree_fetched": true,
+  "second_call_is_noop": true,
+  "all_branch_refs_unchanged": true,
+  "no_policy_or_new_seed_run": true
+}

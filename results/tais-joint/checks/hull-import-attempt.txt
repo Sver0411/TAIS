@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/mac/Documents/TAIS/scripts/import_joint_csv.py", line 21, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/mac/Documents/TAIS/scripts/import_joint_csv.py", line 11, in main
+    if not set(columns)<=set(r.fieldnames or []):raise ValueError('BLOCKED: verified numeric-seconds columns missing; Hull Date/Time is not automatically mapped. Supply authoritative mapping before import.')
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: BLOCKED: verified numeric-seconds columns missing; Hull Date/Time is not automatically mapped. Supply authoritative mapping before import.

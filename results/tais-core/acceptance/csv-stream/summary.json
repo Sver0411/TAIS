@@ -1,0 +1,35 @@
+{
+  "status": "COMPLETE",
+  "error": null,
+  "input_label": "USER CSV | provenance unverified | no truth metrics",
+  "sender": {
+    "source_rows": 7,
+    "samples": 7,
+    "uploads": 6,
+    "binary_bytes": 198
+  },
+  "health_sample_counts": {
+    "temperature:HEALTHY": 6,
+    "humidity:HEALTHY": 7,
+    "temperature:FAULT": 1
+  },
+  "link": {
+    "sent": 6,
+    "sent_bytes": 198,
+    "dropped": 0,
+    "altered": 0
+  },
+  "receiver": {
+    "received": 6,
+    "received_bytes": 198,
+    "decoded": 6,
+    "updates": 6,
+    "corrupt": 0,
+    "out_of_order": 0,
+    "duplicate": 0,
+    "conflict": 0
+  },
+  "truth_metrics": null,
+  "truth_metrics_reason": "user data has no verified event/fault labels",
+  "journal_sha256": "c4690e379f203cc1d4a31853d48484a3a74a928ec0c2025dbe085cf76bc2f277"
+}

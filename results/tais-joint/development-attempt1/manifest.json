@@ -1,0 +1,189 @@
+{
+  "status": "STARTED",
+  "phase": "development",
+  "seeds": [
+    500,
+    501,
+    502,
+    503,
+    504,
+    505,
+    506,
+    507,
+    508,
+    509
+  ],
+  "cases": [
+    "clean_short",
+    "clean_event",
+    "drift_none_long",
+    "drift_same_long",
+    "drift_cross_long",
+    "spike_same_long",
+    "missing_cross_long",
+    "range_same_long",
+    "stable_offset_none_long"
+  ],
+  "points": [
+    [
+      "GateOnly",
+      {
+        "idle_interval_s": 0,
+        "trend_slope": 0.0,
+        "heartbeat_s": 120
+      }
+    ],
+    [
+      "AdaptiveSense+TrustLog",
+      {
+        "idle_interval_s": 0,
+        "trend_slope": 0.0,
+        "heartbeat_s": 120
+      }
+    ],
+    [
+      "AdaptiveSense",
+      {
+        "idle_interval_s": 0,
+        "trend_slope": 0.0,
+        "heartbeat_s": 120
+      }
+    ],
+    [
+      "JO-S",
+      {
+        "idle_interval_s": 20,
+        "trend_slope": 0.005,
+        "heartbeat_s": 120
+      }
+    ],
+    [
+      "JO-S",
+      {
+        "idle_interval_s": 30,
+        "trend_slope": 0.005,
+        "heartbeat_s": 120
+      }
+    ],
+    [
+      "JO-S",
+      {
+        "idle_interval_s": 40,
+        "trend_slope": 0.005,
+        "heartbeat_s": 120
+      }
+    ],
+    [
+      "JO-HS",
+      {
+        "idle_interval_s": 20,
+        "trend_slope": 0.005,
+        "heartbeat_s": 120
+      }
+    ],
+    [
+      "JO-HS",
+      {
+        "idle_interval_s": 20,
+        "trend_slope": 0.01,
+        "heartbeat_s": 120
+      }
+    ],
+    [
+      "JO-HS",
+      {
+        "idle_interval_s": 30,
+        "trend_slope": 0.005,
+        "heartbeat_s": 120
+      }
+    ],
+    [
+      "JO-HS",
+      {
+        "idle_interval_s": 30,
+        "trend_slope": 0.01,
+        "heartbeat_s": 120
+      }
+    ],
+    [
+      "JO-HS",
+      {
+        "idle_interval_s": 40,
+        "trend_slope": 0.005,
+        "heartbeat_s": 120
+      }
+    ],
+    [
+      "JO-HS",
+      {
+        "idle_interval_s": 40,
+        "trend_slope": 0.01,
+        "heartbeat_s": 120
+      }
+    ],
+    [
+      "JO-Full",
+      {
+        "idle_interval_s": 20,
+        "trend_slope": 0.005,
+        "heartbeat_s": 120
+      }
+    ],
+    [
+      "JO-Full",
+      {
+        "idle_interval_s": 20,
+        "trend_slope": 0.01,
+        "heartbeat_s": 120
+      }
+    ],
+    [
+      "JO-Full",
+      {
+        "idle_interval_s": 30,
+        "trend_slope": 0.005,
+        "heartbeat_s": 120
+      }
+    ],
+    [
+      "JO-Full",
+      {
+        "idle_interval_s": 30,
+        "trend_slope": 0.01,
+        "heartbeat_s": 120
+      }
+    ],
+    [
+      "JO-Full",
+      {
+        "idle_interval_s": 40,
+        "trend_slope": 0.005,
+        "heartbeat_s": 120
+      }
+    ],
+    [
+      "JO-Full",
+      {
+        "idle_interval_s": 40,
+        "trend_slope": 0.01,
+        "heartbeat_s": 120
+      }
+    ]
+  ],
+  "sources": {
+    "src/tais/joint_policy.py": "6f63386da1e4f1143572eab51b958724d7d962c65b03aaf070e2d0ee21050be1",
+    "src/tais/joint_sampling.py": "62ceca08b5d02fe20ac282e15b929ba0203ebe03e06faaa10f429dd318db4db6",
+    "src/tais/joint_upload.py": "7212610cbf2c5acff40c0890dd99e37df21d13e480fe8f26e0f494432a71597d",
+    "configs/tais-joint.yaml": "9c68278decef2eebc189c26b7156d524c3f7102cde5bea0b4f48af83f14f3798",
+    "scripts/benchmark_joint_optimization.py": "56a1b30233a8a5d51a7f593b5d9040a0923096064c51ae19b22fbbf921d1efa3",
+    "scripts/analyze_joint_optimization.py": "3b1f05cce7d46293c7a3b66260d9cee2a8c94d6dce7b1f50690a7dc3bbf995de",
+    "docs/TAIS_JO_PROTOCOL.md": "9371cef5e57ffd5ce9aa74050c7f30b36440fe61c11b893d3446078a640f75f4",
+    "src/tais/scheduler.py": "9ab0b073e7fdb6d1293e3b6fc6cbae7f6de1cb55363bb48986335c8c602f5609",
+    "src/tais/signals.py": "6b60b254b2653dc00079bc71c37a97496030f800326273580d1bfab9ce1ed4d0",
+    "src/tais/replay.py": "59508d037fb153e2df242f81eca509f70128f536a8efd655889c466ba3f35dd1",
+    "src/tais/metrics.py": "607e589983f9831e9f18d93cc89e39f241dede25ede1eeb52ca58217cf1acdef",
+    "src/tais/wire_codec.py": "944522828d4562dffe21d7f522d382f7e105eceaed7aa9ceeec1d05acdc0030f",
+    "configs/experiment.yaml": "1be38a7b47e5e0104435086587d543dfbaa74c320389971aa2f9ecf96779dae2"
+  },
+  "source_commit": "48b68655f95eaefbcdb7624e9de0e75a030ddf95"
+}

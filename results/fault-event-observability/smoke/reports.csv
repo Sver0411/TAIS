@@ -1,0 +1,14 @@
+seed,scenario,method,channel,time,preceding_interval_s,report_next_interval_s,health_state,health_flags
+20,range_same_long,AdaptiveSense,temperature,610,5.0,5.0,,
+20,range_same_long,AdaptiveSense,temperature,1230,5.0,5.0,,
+20,drift_cross_long_dt_p650,AdaptiveSense,temperature,660,5.0,5.0,,
+20,drift_cross_long_dt_p650,AdaptiveSense,humidity,1415,5.0,5.0,,
+20,drift_cross_long_dt_p650,GateOnly,temperature,660,5,5,HEALTHY,0
+20,drift_cross_long_dt_p650,GateOnly,temperature,1240,60,5,HEALTHY,0
+20,drift_cross_long_dt_p650,GateOnly,humidity,1250,5,5,HEALTHY,0
+20,drift_cross_long_dt_p650,GateOnly,humidity,1415,5,5,HEALTHY,0
+20,drift_cross_long_dt_p650,TAIS,temperature,660,5,5,HEALTHY,0
+20,drift_cross_long_dt_p650,TAIS,temperature,960,5,5,DEGRADED,8
+20,drift_cross_long_dt_p650,TAIS,temperature,1265,60,5,HEALTHY,0
+20,drift_cross_long_dt_p650,TAIS,humidity,1275,5,5,HEALTHY,0
+20,drift_cross_long_dt_p650,TAIS,humidity,1415,5,5,HEALTHY,0

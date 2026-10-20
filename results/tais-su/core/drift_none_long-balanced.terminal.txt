@@ -1,0 +1,82 @@
+TAIS CORE | JO-SU (H disabled) | Stateless Binary v1 | SYNTHETIC DEMO drift_none_long seed=20 | not device measurements
+SOURCE clock=1799s rows=1800 | SENDER sampled=1790s next_due=1820s
+samples=124 uploads=42 sample_upload=False sample_frame=0B last_tx=1730s last_frame=36B total_application_bytes=1511
+SENDER (local state; not automatically known by receiver):
+  temperature: value=24.006457964319225 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=45.551059956998174 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVER decoded=42 invalid=0 stale_frames=0 duplicate=0
+  latest_received_sample=1730s age=69s (no filling of dropped frames)
+  temperature: value=24.034409711513685 HEALTHY score=100 flags=0(NONE) event=False
+  humidity: value=44.56317682066105 HEALTHY score=100 flags=0(NONE) event=False
+RECEIVED HEALTH TIMELINE (suspected faults/recovery, last 12; full JSONL on disk):
+  0s temperature HEALTHY NONE event=False
+  0s humidity HEALTHY NONE event=False
+  660s temperature HEALTHY NONE event=True
+  800s temperature DEGRADED DRIFT event=False
+  1190s temperature DEGRADED SPIKE|DRIFT event=False
+  1220s temperature DEGRADED DRIFT event=False
+  1250s temperature HEALTHY NONE event=True RECOVERED
+  1340s temperature HEALTHY NONE event=False
+
+{
+  "status": "COMPLETE",
+  "error": null,
+  "input_label": "SYNTHETIC DEMO drift_none_long seed=20 | not device measurements",
+  "sender": {
+    "source_rows": 1800,
+    "samples": 124,
+    "uploads": 42,
+    "binary_bytes": 1511
+  },
+  "health_sample_counts": {
+    "temperature:HEALTHY": 109,
+    "humidity:HEALTHY": 124,
+    "temperature:DEGRADED": 15
+  },
+  "link": {
+    "sent": 42,
+    "sent_bytes": 1511,
+    "dropped": 0,
+    "altered": 0
+  },
+  "receiver": {
+    "received": 42,
+    "received_bytes": 1511,
+    "decoded": 42,
+    "updates": 42,
+    "corrupt": 0,
+    "out_of_order": 0,
+    "duplicate": 0,
+    "conflict": 0
+  },
+  "truth_metrics": {
+    "source": "synthetic independent intervention labels; offline only",
+    "truth": [],
+    "faults": [
+      {
+        "channel": "temperature",
+        "start_s": 572,
+        "end_s": 1172,
+        "kind": "drift"
+      }
+    ],
+    "tp": 0,
+    "unmatched": 2,
+    "missed": 0,
+    "precision": 0.0,
+    "recall": null,
+    "f1": 0.0,
+    "fault_episodes": 1,
+    "flagged_during_fault": 1
+  },
+  "truth_metrics_reason": "offline synthetic truth; not available to sender or receiver",
+  "verification": {
+    "frozen_gateonly_records_and_reports_identical": null,
+    "selected_policy_records_and_reports_identical": true,
+    "tx_frames": 42,
+    "actual_binary_bytes_recomputed": 1511,
+    "received_valid_frames_exact": 42,
+    "all_valid_received_envelopes_match_sender": true
+  },
+  "journal_sha256": "3f5702eafbbe0cd446479ff0789f56e53f73a6d30e974b345ab8c632117843d3"
+}

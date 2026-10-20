@@ -1,0 +1,17 @@
+method,phase,strict_unmatched
+AdaptiveSense,before_raw_drift,127
+AdaptiveSense,recovery_120s,90
+AdaptiveSense+TrustLog,after_raw_drift,53
+AdaptiveSense+TrustLog,before_raw_drift,74
+AdaptiveSense+TrustLog,recovery_120s,90
+GateOnly,before_raw_drift,91
+GateOnly,recovery_120s,179
+JO-Full,after_raw_drift,14
+JO-Full,before_raw_drift,23
+JO-Full,recovery_120s,151
+JO-HS,after_raw_drift,14
+JO-HS,before_raw_drift,23
+JO-HS,recovery_120s,151
+JO-S,after_raw_drift,31
+JO-S,before_raw_drift,68
+JO-S,recovery_120s,180

@@ -1,0 +1,295 @@
+{
+  "retrieved_via": "GitHub branches API, all pages; exact commits verified present in local Git",
+  "retrieved_at_utc": "2026-10-20T06:24:01.625705+00:00",
+  "branches": [
+    {
+      "name": "docs/repository-readme-and-structure",
+      "commit": {
+        "sha": "3fb89beaa7dd5aa64cb5c17f6088905b99f1709e",
+        "url": "https://api.github.com/repos/Sver0411/TAIS/commits/3fb89beaa7dd5aa64cb5c17f6088905b99f1709e"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/Sver0411/TAIS/branches/docs/repository-readme-and-structure/protection"
+    },
+    {
+      "name": "docs/tais-paper-major-revision",
+      "commit": {
+        "sha": "94a80a194fdee8d6d4b58c6aeafccaf349d8a976",
+        "url": "https://api.github.com/repos/Sver0411/TAIS/commits/94a80a194fdee8d6d4b58c6aeafccaf349d8a976"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/Sver0411/TAIS/branches/docs/tais-paper-major-revision/protection"
+    },
+    {
+      "name": "docs/tais-research-portfolio",
+      "commit": {
+        "sha": "2fefb73bf437d63e41599cc159102eea207425ee",
+        "url": "https://api.github.com/repos/Sver0411/TAIS/commits/2fefb73bf437d63e41599cc159102eea207425ee"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/Sver0411/TAIS/branches/docs/tais-research-portfolio/protection"
+    },
+    {
+      "name": "main",
+      "commit": {
+        "sha": "68af4b6d9df7ed145a237defc4ab920600823373",
+        "url": "https://api.github.com/repos/Sver0411/TAIS/commits/68af4b6d9df7ed145a237defc4ab920600823373"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/Sver0411/TAIS/branches/main/protection"
+    },
+    {
+      "name": "research/blocked-rearm-fix",
+      "commit": {
+        "sha": "66f4270d1649bc14ffe53911cbf4d219f55f4080",
+        "url": "https://api.github.com/repos/Sver0411/TAIS/commits/66f4270d1649bc14ffe53911cbf4d219f55f4080"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/Sver0411/TAIS/branches/research/blocked-rearm-fix/protection"
+    },
+    {
+      "name": "research/budget-matched-policy-eval",
+      "commit": {
+        "sha": "5b06d2feae44db2b3503697d246f51c43e5d8f2e",
+        "url": "https://api.github.com/repos/Sver0411/TAIS/commits/5b06d2feae44db2b3503697d246f51c43e5d8f2e"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/Sver0411/TAIS/branches/research/budget-matched-policy-eval/protection"
+    },
+    {
+      "name": "research/fault-event-observability",
+      "commit": {
+        "sha": "89aa8341181aa42791f9a4de80739bb7c10fa9e5",
+        "url": "https://api.github.com/repos/Sver0411/TAIS/commits/89aa8341181aa42791f9a4de80739bb7c10fa9e5"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/Sver0411/TAIS/branches/research/fault-event-observability/protection"
+    },
+    {
+      "name": "research/independent-reference-budget",
+      "commit": {
+        "sha": "2ea17b39a502e32136333b0987d72c613cccbd70",
+        "url": "https://api.github.com/repos/Sver0411/TAIS/commits/2ea17b39a502e32136333b0987d72c613cccbd70"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/Sver0411/TAIS/branches/research/independent-reference-budget/protection"
+    },
+    {
+      "name": "research/offline-spatial-pilot",
+      "commit": {
+        "sha": "f21bc2f0e1d01d0670ce1c1bd4ab5a2aab7e171d",
+        "url": "https://api.github.com/repos/Sver0411/TAIS/commits/f21bc2f0e1d01d0670ce1c1bd4ab5a2aab7e171d"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/Sver0411/TAIS/branches/research/offline-spatial-pilot/protection"
+    },
+    {
+      "name": "research/tais-core-prototype",
+      "commit": {
+        "sha": "48b68655f95eaefbcdb7624e9de0e75a030ddf95",
+        "url": "https://api.github.com/repos/Sver0411/TAIS/commits/48b68655f95eaefbcdb7624e9de0e75a030ddf95"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/Sver0411/TAIS/branches/research/tais-core-prototype/protection"
+    },
+    {
+      "name": "research/tais-cross-generator-validation",
+      "commit": {
+        "sha": "db23a95ef95fd025553b70754625af7b42b5682e",
+        "url": "https://api.github.com/repos/Sver0411/TAIS/commits/db23a95ef95fd025553b70754625af7b42b5682e"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/Sver0411/TAIS/branches/research/tais-cross-generator-validation/protection"
+    },
+    {
+      "name": "research/tais-joint-optimization",
+      "commit": {
+        "sha": "8928fb133cad4b9352fb96db79b79ff40cc4d7c7",
+        "url": "https://api.github.com/repos/Sver0411/TAIS/commits/8928fb133cad4b9352fb96db79b79ff40cc4d7c7"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/Sver0411/TAIS/branches/research/tais-joint-optimization/protection"
+    },
+    {
+      "name": "research/tais-paper-evaluation",
+      "commit": {
+        "sha": "0170196dda10f78b85d5e4b685d56331a0021083",
+        "url": "https://api.github.com/repos/Sver0411/TAIS/commits/0170196dda10f78b85d5e4b685d56331a0021083"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/Sver0411/TAIS/branches/research/tais-paper-evaluation/protection"
+    },
+    {
+      "name": "research/tais-su-optimization",
+      "commit": {
+        "sha": "8b991530b77a3c7197bb998f0f4b49c1405ed96c",
+        "url": "https://api.github.com/repos/Sver0411/TAIS/commits/8b991530b77a3c7197bb998f0f4b49c1405ed96c"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/Sver0411/TAIS/branches/research/tais-su-optimization/protection"
+    },
+    {
+      "name": "research/v0.2-same-channel-recall",
+      "commit": {
+        "sha": "96170fcb5df0534ca58e44827b2fcb214e7892ef",
+        "url": "https://api.github.com/repos/Sver0411/TAIS/commits/96170fcb5df0534ca58e44827b2fcb214e7892ef"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/Sver0411/TAIS/branches/research/v0.2-same-channel-recall/protection"
+    },
+    {
+      "name": "research/wire-payload-v1",
+      "commit": {
+        "sha": "b184240226025d86c5e77a74f124c5c788564613",
+        "url": "https://api.github.com/repos/Sver0411/TAIS/commits/b184240226025d86c5e77a74f124c5c788564613"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/Sver0411/TAIS/branches/research/wire-payload-v1/protection"
+    },
+    {
+      "name": "research/wire-payload-v2",
+      "commit": {
+        "sha": "97feccb36acb6790b40be31e3cee1661e8811a61",
+        "url": "https://api.github.com/repos/Sver0411/TAIS/commits/97feccb36acb6790b40be31e3cee1661e8811a61"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/Sver0411/TAIS/branches/research/wire-payload-v2/protection"
+    }
+  ]
+}

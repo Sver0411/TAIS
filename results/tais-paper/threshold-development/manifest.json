@@ -1,0 +1,72 @@
+{
+  "seeds": [
+    600,
+    601,
+    602,
+    603,
+    604,
+    605,
+    606,
+    607,
+    608,
+    609
+  ],
+  "specs": [
+    {
+      "id": "Delta-t2",
+      "kind": "Delta",
+      "cap": 40,
+      "threshold": 2
+    },
+    {
+      "id": "Delta-t4",
+      "kind": "Delta",
+      "cap": 40,
+      "threshold": 4
+    },
+    {
+      "id": "Delta-t8",
+      "kind": "Delta",
+      "cap": 40,
+      "threshold": 8
+    },
+    {
+      "id": "Variance-t2",
+      "kind": "Variance",
+      "cap": 40,
+      "threshold": 2
+    },
+    {
+      "id": "Variance-t4",
+      "kind": "Variance",
+      "cap": 40,
+      "threshold": 4
+    },
+    {
+      "id": "Variance-t8",
+      "kind": "Variance",
+      "cap": 40,
+      "threshold": 8
+    },
+    {
+      "id": "Rao-inspired-t4",
+      "kind": "Rao-inspired",
+      "cap": 40,
+      "threshold": 4
+    },
+    {
+      "id": "Rao-inspired-t8",
+      "kind": "Rao-inspired",
+      "cap": 40,
+      "threshold": 8
+    },
+    {
+      "id": "Rao-inspired-t12",
+      "kind": "Rao-inspired",
+      "cap": 40,
+      "threshold": 12
+    }
+  ],
+  "runs": 4050,
+  "metrics_sha256": "b229a8441b949a10fb3a95d1a373496fef8d37972f3947e115c202eebc3d6e26"
+}

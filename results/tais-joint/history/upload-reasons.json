@@ -1,0 +1,11 @@
+{
+  "interval": 1230,
+  "first": 90,
+  "heartbeat": 2140,
+  "trusted_delta:temperature": 640,
+  "scheduler_state": 515,
+  "environment_event": 171,
+  "trusted_delta:humidity": 73,
+  "health:temperature": 158,
+  "health:humidity": 8
+}

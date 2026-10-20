@@ -1,0 +1,38 @@
+..........FF........................................................     [100%]
+=================================== FAILURES ===================================
+______________ test_known_spike_then_event_all_points[1.5-short] _______________
+
+cfg = {'project': {'name': 'TAIS', 'version': '0.1.0', 'random_seed': 42}, 'sampling': {'min_interval_s': 5, 'default_interv...1, 12, 13, 14, 15, ...], 'held_out_test_seeds': [20, 21, 22, 23, 24, 25, ...], 'event_match_tolerance_s': 5, ...}, ...}
+profile = 'short', multiplier = 1.5
+
+    @pytest.mark.parametrize('profile',['short','long'])
+    @pytest.mark.parametrize('multiplier',[.75,1,1.5])
+    def test_known_spike_then_event_all_points(cfg,profile,multiplier):
+     tr=generate(cfg,91,'spike_same_'+profile);r=run(tr,cfg,'V02-Rearm',multiplier)
+>    assert match_events(tr.events,r['reports'],5).true_positives==1
+E    AssertionError: assert 0 == 1
+E     +  where 0 = MatchResult(matches=(), unmatched_ground_truth=(Event(channel='temperature', start_s=662.0, end_s=684.0, event_type='s...hed_detections=(Event(channel='temperature', start_s=700, end_s=700, event_type='detected'),), redundant_detections=()).true_positives
+E     +    where MatchResult(matches=(), unmatched_ground_truth=(Event(channel='temperature', start_s=662.0, end_s=684.0, event_type='s...hed_detections=(Event(channel='temperature', start_s=700, end_s=700, event_type='detected'),), redundant_detections=()) = match_events([Event(channel='temperature', start_s=662.0, end_s=684.0, event_type='sudden_change')], [Event(channel='temperature', start_s=700, end_s=700, event_type='detected')], 5)
+E     +      where [Event(channel='temperature', start_s=662.0, end_s=684.0, event_type='sudden_change')] = Trace(scenario='spike_same_short', relationship='same', profile='short', seed=91, latent=[{'timestamp': 0, 'temperatur...end_s=684.0, event_type='sudden_change')], faults=[Fault(channel='temperature', start_s=600, end_s=601, kind='spike')]).events
+
+tests/test_rearm.py:45: AssertionError
+_______________ test_known_spike_then_event_all_points[1.5-long] _______________
+
+cfg = {'project': {'name': 'TAIS', 'version': '0.1.0', 'random_seed': 42}, 'sampling': {'min_interval_s': 5, 'default_interv...1, 12, 13, 14, 15, ...], 'held_out_test_seeds': [20, 21, 22, 23, 24, 25, ...], 'event_match_tolerance_s': 5, ...}, ...}
+profile = 'long', multiplier = 1.5
+
+    @pytest.mark.parametrize('profile',['short','long'])
+    @pytest.mark.parametrize('multiplier',[.75,1,1.5])
+    def test_known_spike_then_event_all_points(cfg,profile,multiplier):
+     tr=generate(cfg,91,'spike_same_'+profile);r=run(tr,cfg,'V02-Rearm',multiplier)
+>    assert match_events(tr.events,r['reports'],5).true_positives==1
+E    AssertionError: assert 0 == 1
+E     +  where 0 = MatchResult(matches=(), unmatched_ground_truth=(Event(channel='temperature', start_s=662.0, end_s=838.0, event_type='s...hed_detections=(Event(channel='temperature', start_s=860, end_s=860, event_type='detected'),), redundant_detections=()).true_positives
+E     +    where MatchResult(matches=(), unmatched_ground_truth=(Event(channel='temperature', start_s=662.0, end_s=838.0, event_type='s...hed_detections=(Event(channel='temperature', start_s=860, end_s=860, event_type='detected'),), redundant_detections=()) = match_events([Event(channel='temperature', start_s=662.0, end_s=838.0, event_type='sudden_change')], [Event(channel='temperature', start_s=860, end_s=860, event_type='detected')], 5)
+E     +      where [Event(channel='temperature', start_s=662.0, end_s=838.0, event_type='sudden_change')] = Trace(scenario='spike_same_long', relationship='same', profile='long', seed=91, latent=[{'timestamp': 0, 'temperature'...end_s=838.0, event_type='sudden_change')], faults=[Fault(channel='temperature', start_s=600, end_s=601, kind='spike')]).events
+
+tests/test_rearm.py:45: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_rearm.py::test_known_spike_then_event_all_points[1.5-short]
+FAILED tests/test_rearm.py::test_known_spike_then_event_all_points[1.5-long]
+2 failed, 66 passed in 3.30s

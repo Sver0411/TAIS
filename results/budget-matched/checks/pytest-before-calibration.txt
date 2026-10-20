@@ -1,0 +1,11 @@
+........................................................................ [ 16%]
+.........................................xx............................. [ 33%]
+........................................................................ [ 49%]
+........................................................................ [ 66%]
+........................................................................ [ 82%]
+........................................................................ [ 99%]
+....                                                                     [100%]
+=========================== short test summary info ============================
+XFAIL tests/test_rearm.py::test_known_spike_then_event_all_points[1.5-short] - Unchanged high-threshold debounce misses this pulse even in v0.1; assertion retained, rearm itself is IDLE
+XFAIL tests/test_rearm.py::test_known_spike_then_event_all_points[1.5-long] - Unchanged high-threshold debounce misses this pulse even in v0.1; assertion retained, rearm itself is IDLE
+434 passed, 2 xfailed in 20.54s

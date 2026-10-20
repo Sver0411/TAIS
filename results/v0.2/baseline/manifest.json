@@ -1,0 +1,95 @@
+{
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "platform": "macOS-15.7.7-arm64-arm-64bit-Mach-O",
+  "commands": [
+    {
+      "project": "AdaptiveSense",
+      "argv": [
+        "/Users/mac/Documents/TAIS/.venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/",
+        "-q"
+      ],
+      "returncode": 0,
+      "log": "AdaptiveSense-0.log"
+    },
+    {
+      "project": "AdaptiveSense",
+      "argv": [
+        "/Users/mac/Documents/TAIS/.venv/bin/python",
+        "scripts/check_config_parity.py"
+      ],
+      "returncode": 0,
+      "log": "AdaptiveSense-1.log"
+    },
+    {
+      "project": "AdaptiveSense",
+      "argv": [
+        "/Users/mac/Documents/TAIS/.venv/bin/python",
+        "dataset/generate_dataset.py"
+      ],
+      "returncode": 0,
+      "log": "AdaptiveSense-2.log"
+    },
+    {
+      "project": "AdaptiveSense",
+      "argv": [
+        "/Users/mac/Documents/TAIS/.venv/bin/python",
+        "analysis/analyze.py"
+      ],
+      "returncode": 0,
+      "log": "AdaptiveSense-3.log"
+    },
+    {
+      "project": "SensorTrust",
+      "argv": [
+        "/Users/mac/Documents/TAIS/.venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/",
+        "-q"
+      ],
+      "returncode": 0,
+      "log": "SensorTrust-0.log"
+    },
+    {
+      "project": "SensorTrust",
+      "argv": [
+        "cc",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-Icore",
+        "core/sensor_trust.c",
+        "tests/test_core.c",
+        "-lm",
+        "-o",
+        "test_core"
+      ],
+      "returncode": 0,
+      "log": "SensorTrust-1.log"
+    },
+    {
+      "project": "SensorTrust",
+      "argv": [
+        "./test_core"
+      ],
+      "returncode": 0,
+      "log": "SensorTrust-2.log"
+    }
+  ],
+  "sha256": {
+    "metrics_all.csv": "46d49bfd7ac606930cccfb11f982ee9bfa578f84f40703fc2b0bfe80f16a7876",
+    "upstream_metrics_all.csv": "46d49bfd7ac606930cccfb11f982ee9bfa578f84f40703fc2b0bfe80f16a7876",
+    "byte_equal_metrics_all.csv": true,
+    "metrics_summary.csv": "2f41f5478e4acabe57a9811246cc144862b7afd5e0315963b3cc5afab0e60bbf",
+    "upstream_metrics_summary.csv": "2f41f5478e4acabe57a9811246cc144862b7afd5e0315963b3cc5afab0e60bbf",
+    "byte_equal_metrics_summary.csv": true
+  },
+  "dependencies": "contourpy==1.4.0\ncycler==0.12.1\nfonttools==4.67.0\niniconfig==2.3.1\nkiwisolver==1.5.1\nmatplotlib==3.11.2\nnumpy==2.5.4\npackaging==26.3\npandas==3.0.6\npillow==13.0.0\npluggy==1.7.0\nPygments==2.21.0\npyparsing==3.3.3\npytest==9.1.1\npython-dateutil==2.9.0.post0\nPyYAML==6.0.3\nsetuptools==84.0.0\nsix==1.17.0\n-e git+https://github.com/Sver0411/TAIS.git@14af61952229a6da6cda40c8ee7257f9582b4b40#egg=tais_research\n",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)\nTarget: arm64-apple-darwin24.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+  "AdaptiveSense": "f7ec30fd4721aa1a7c308f879050a83936e60067",
+  "SensorTrust": "2ce98dd043bb01ea99052eda218c68a172499a4c"
+}

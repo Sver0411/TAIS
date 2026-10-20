@@ -1,0 +1,23 @@
+ok 1 - config_validation
+ok 2 - config_rejects_non_finite_values
+ok 3 - uninitialised_context_is_safe
+ok 4 - reset_on_uninitialised_context_is_safe
+ok 5 - healthy_sequence_stays_healthy
+ok 6 - range_error_both_bounds
+ok 7 - stuck_detected_after_full_window
+ok 8 - stuck_ignores_noisy_signal
+ok 9 - spike_isolated_jump_confirmed
+ok 10 - step_change_is_flagged_once_then_accepted
+ok 11 - spike_uses_last_valid_value_across_gap
+ok 12 - drift_detected_on_sustained_ramp
+ok 13 - drift_not_detected_on_short_ramp
+ok 14 - drift_slope_is_independent_of_sampling_interval
+ok 15 - drift_ignores_non_increasing_timestamps
+ok 16 - missing_detected_after_limit_and_clears_on_recovery
+ok 17 - stuck_and_range_combine_into_fault
+ok 18 - score_from_flags_is_clamped
+ok 19 - state_thresholds_and_names
+ok 20 - format_flags_truncation_is_safe
+ok 21 - reset_clears_detection_state
+
+21 tests, 21 passed, 0 failed (404 checks)

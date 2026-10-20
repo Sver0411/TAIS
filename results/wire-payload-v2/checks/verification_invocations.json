@@ -1,0 +1,9 @@
+{
+  "initial_ad_hoc_invocation": {
+    "exit_code": 1,
+    "error": "ModuleNotFoundError: No module named 'tais'",
+    "stage": "Import before any verification or writes",
+    "cause": "stdin invocation lacked this checkout's src path; local environment relies on script/pytest path setup",
+    "resolution": "Saved reusable verifier explicitly sets checkout src path, like the other project scripts"
+  }
+}

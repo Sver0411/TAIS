@@ -1,0 +1,11 @@
+{
+  "base": "5b06d2feae44db2b3503697d246f51c43e5d8f2e",
+  "guard_sha256": "c19bb113594e1ce32c64d7d0e0a4132aa49c2968c21661797c4a03d67d536649",
+  "guard_path": "/Users/mac/Documents/TAIS/results/traces/fault-event-observability/history-guard.json.gz",
+  "tracked": 576,
+  "ignored": 185135,
+  "submodules": {
+    "vendor/AdaptiveSense": "f7ec30fd4721aa1a7c308f879050a83936e60067",
+    "vendor/SensorTrust": "2ce98dd043bb01ea99052eda218c68a172499a4c"
+  }
+}

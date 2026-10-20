@@ -1,0 +1,18 @@
+{
+  "recorded_after_runs_without_environment_changes": true,
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "platform": "macOS-15.7.7-arm64-arm-64bit-Mach-O",
+  "numpy": "2.5.4",
+  "matplotlib": "3.11.2",
+  "yaml": "6.0.3",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "lock_sha256": "8f344b9d78ea57b44300466d8ce0dc830c58f22787c3e5ff90f0f59808735662",
+  "workers": 4,
+  "commands": [
+    "scripts/benchmark_su.py --phase engineering",
+    "scripts/benchmark_su.py --phase development",
+    "scripts/analyze_su.py --select",
+    "scripts/benchmark_su.py --phase validation",
+    "scripts/benchmark_su.py --phase test"
+  ]
+}

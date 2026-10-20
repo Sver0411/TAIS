@@ -1,0 +1,174 @@
+{
+  "phase": "validation",
+  "seeds": [
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169
+  ],
+  "cases": [
+    "clean_none",
+    "clean_event",
+    "clean_short",
+    "range_none_short",
+    "range_none_long",
+    "range_cross_short",
+    "range_cross_long",
+    "range_same_short",
+    "range_same_long",
+    "spike_none_short",
+    "spike_none_long",
+    "spike_cross_short",
+    "spike_cross_long",
+    "spike_same_short",
+    "spike_same_long",
+    "stuck_none_short",
+    "stuck_none_long",
+    "stuck_cross_short",
+    "stuck_cross_long",
+    "stuck_same_short",
+    "stuck_same_long",
+    "drift_none_short",
+    "drift_none_long",
+    "drift_cross_short",
+    "drift_cross_long",
+    "drift_same_short",
+    "drift_same_long",
+    "missing_none_short",
+    "missing_none_long",
+    "missing_cross_short",
+    "missing_cross_long",
+    "missing_same_short",
+    "missing_same_long",
+    "invalid_none_short",
+    "invalid_none_long",
+    "invalid_cross_short",
+    "invalid_cross_long",
+    "invalid_same_short",
+    "invalid_same_long",
+    "stable_offset_none_short",
+    "stable_offset_none_long",
+    "stable_offset_cross_short",
+    "stable_offset_cross_long",
+    "stable_offset_same_short",
+    "stable_offset_same_long"
+  ],
+  "points": [
+    [
+      "AdaptiveSense",
+      1.0
+    ],
+    [
+      "AdaptiveSense+TrustLog",
+      1.0
+    ],
+    [
+      "GateOnly",
+      0.5
+    ],
+    [
+      "GateOnly",
+      0.625
+    ],
+    [
+      "GateOnly",
+      0.75
+    ],
+    [
+      "GateOnly",
+      0.875
+    ],
+    [
+      "GateOnly",
+      1.0
+    ],
+    [
+      "GateOnly",
+      1.25
+    ],
+    [
+      "GateOnly",
+      1.5
+    ],
+    [
+      "GateOnly",
+      1.75
+    ],
+    [
+      "GateOnly",
+      2.0
+    ],
+    [
+      "TAIS",
+      0.5
+    ],
+    [
+      "TAIS",
+      0.625
+    ],
+    [
+      "TAIS",
+      0.75
+    ],
+    [
+      "TAIS",
+      0.875
+    ],
+    [
+      "TAIS",
+      1.0
+    ],
+    [
+      "TAIS",
+      1.25
+    ],
+    [
+      "TAIS",
+      1.5
+    ],
+    [
+      "TAIS",
+      1.75
+    ],
+    [
+      "TAIS",
+      2.0
+    ]
+  ],
+  "source_commit": "d22fb50097037ac1913d3bac163c6a31a907716f",
+  "plan_sha256": "3d935344040ab3b39ad1e38022a72ec35672d4a938af6c162184d788bc0936b8",
+  "frozen_files": {
+    "src/tais/budget_eval.py": "49f555d01407869545ff8de18fdfcd68666235f5bedab668131faa950fb024a0",
+    "scripts/run_budget_matched_experiment.py": "bec71a36eb32127361713ac492a49a0b616c5b619573e83eedb1f61f4f559c6a",
+    "scripts/analyze_budget_matched_results.py": "5690b75555fdecf8f699ee3cdd43e3f5d3fae2bc823db7d266e0b744bd258bfa",
+    "scripts/verify_budget_matched_experiment.py": "1c2ccbf8703446668398ef7fda4b7a7822eb6c5fc941dff91acacb8d48cfa680",
+    "tests/test_budget_matched.py": "a311238e0cca43348dc63dd1a5cfd33b18c643f4b55b94a6f89096eccb52a97a",
+    "configs/budget-matched.json": "3d935344040ab3b39ad1e38022a72ec35672d4a938af6c162184d788bc0936b8",
+    "docs/BUDGET_MATCHED_EXPERIMENT_PREREGISTRATION.md": "ac0bf5cf6e48353e8f516fd476151b49666b3090833dc6f622dc1bfced6450b3",
+    "configs/experiment.yaml": "1be38a7b47e5e0104435086587d543dfbaa74c320389971aa2f9ecf96779dae2",
+    "src/tais/scheduler.py": "9ab0b073e7fdb6d1293e3b6fc6cbae7f6de1cb55363bb48986335c8c602f5609",
+    "src/tais/replay.py": "59508d037fb153e2df242f81eca509f70128f536a8efd655889c466ba3f35dd1",
+    "src/tais/metrics.py": "607e589983f9831e9f18d93cc89e39f241dede25ede1eeb52ca58217cf1acdef",
+    "src/tais/signals.py": "6b60b254b2653dc00079bc71c37a97496030f800326273580d1bfab9ce1ed4d0",
+    "src/tais/trust.py": "7dda86dd97fc435863368a3dbdb65610ed412b8d529821ecd9959608ccdd645e",
+    "src/tais/trust_bridge.c": "2bc01e19185922291d39a89aee9941a10eaf1b9ba1b15dffab308d7acb58c68e",
+    "src/tais/config.py": "c7d57e3750eacc5f97de846b583f04153db964b7c40346260bec25a640336e7a",
+    "src/tais/wire_codec.py": "944522828d4562dffe21d7f522d382f7e105eceaed7aa9ceeec1d05acdc0030f"
+  },
+  "selection_sha256": null,
+  "command": [
+    "scripts/run_budget_matched_experiment.py",
+    "--phase",
+    "validation",
+    "--workers",
+    "4"
+  ],
+  "created_utc": "2026-10-18T14:45:18.442683+00:00",
+  "workers": 4
+}

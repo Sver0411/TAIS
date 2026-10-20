@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "base": "0170196dda10f78b85d5e4b685d56331a0021083",
+  "g1_pdf_sha256": "84fca9b41dc34262240dcb42de3db0293d4f9eafefb4b2daa82744fd3d001a48",
+  "g1_tex_sha256": "707e8cb9e8839a86f38e5c7b64c6f75ff241cc661c6997a5ac160138702ad5e6",
+  "old_experiment_results_changed": false,
+  "submodules_changed": false
+}

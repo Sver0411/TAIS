@@ -1,0 +1,19 @@
+# Frozen design b43e34c. No fitted parameter; the existing return band is reused.
+rearm:
+  enabled: true
+splits:
+  development: [100,101,102,103,104,105,106,107,108,109]
+  validation: [110,111,112,113,114,115,116,117,118,119]
+  test: [120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149]
+methods: [AdaptiveSense, TAIS, V02, V02-Passive, V02-Rearm]
+threshold_multipliers: [0.75,1.0,1.5]
+suites:
+  main:
+    scenarios: all
+    synthetic_overrides: {}
+  aligned_recovery:
+    scenarios: [spike_none_short,spike_none_long,spike_same_short,spike_same_long,spike_cross_short,spike_cross_long]
+    synthetic_overrides:
+      fault_jitter_s: 0
+bootstrap_replicates: 2000
+bootstrap_seed: 731

@@ -1,0 +1,22 @@
+evaluation.gt_label_min_deviation = {'temperature': 1.5, 'humidity': 8.0, 'pressure': 3.0, 'light': 250.0}
+evaluation.gt_label_min_duration_s = 10.0
+
+scenario                     rows  disturb  labels  channels
+scenario_a_stable            7200        0       0  -
+                           2 h essentially stable run, no injected disturbance
+scenario_b_sudden            1800        1       2  humidity, temperature
+                           one abrupt +5 degC step with slow recovery, onset off any sampling grid
+scenario_c_mixed             7200        2       4  humidity, temperature
+                           mixed workload: wobble, step up with decay, step down and return
+scenario_d_repeated          3600        8      14  humidity, light, temperature
+                           6 irregular temperature steps plus 2 light bursts
+scenario_e_short_event       1800        1       2  humidity, temperature
+                           one short (26 s) spike after 26 min of stability
+scenario_f_noisy_stable      1200        0       0  -
+                           no injected disturbance, noise ~7x the configured temperature floor
+scenario_g_slow_drift        3600        1       2  humidity, temperature
+                           slow +3 degC drift over 30 min, hold, then return
+
+wrote 7 scenarios to /private/var/folders/7y/53t4ynw12dn0c_lj5r7zz5vr0000gn/T/tais-baseline-j95892ld/AdaptiveSense/dataset/raw
+wrote 24 channel-level labels to /private/var/folders/7y/53t4ynw12dn0c_lj5r7zz5vr0000gn/T/tais-baseline-j95892ld/AdaptiveSense/dataset/labels, derived from 13 injected physical disturbances
+  (one injected disturbance can label several channels: humidity is coupled to temperature)

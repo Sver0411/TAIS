@@ -1,0 +1,9 @@
+{
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "platform": "macOS-15.7.7-arm64-arm-64bit-Mach-O",
+  "packages": "contourpy==1.4.0\ncycler==0.12.1\nfonttools==4.67.0\niniconfig==2.3.1\nkiwisolver==1.5.1\nmatplotlib==3.11.2\nnumpy==2.5.4\npackaging==26.3\npandas==3.0.6\npillow==13.0.0\npluggy==1.7.0\nPygments==2.21.0\npyparsing==3.3.3\npytest==9.1.1\npython-dateutil==2.9.0.post0\nPyYAML==6.0.3\nsetuptools==84.0.0\nsix==1.17.0\n-e git+https://github.com/Sver0411/TAIS.git@9ab0b1212ac5e777491491183880039db6a74fcf#egg=tais_research\n",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)\nTarget: arm64-apple-darwin24.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+  "history_guard_path": "/Users/mac/Documents/TAIS/results/traces/budget-matched/history-guard.json.gz",
+  "history_guard_sha256": "d6dbecbf0f066c1fb64bbd9c0bfc8899e5a9737f66791a67f7e8dd161075c94f",
+  "original_base": "97feccb36acb6790b40be31e3cee1661e8811a61"
+}
