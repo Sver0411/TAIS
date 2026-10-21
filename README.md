@@ -32,7 +32,7 @@ The implemented transport is a local byte link. Hardware acquisition and real wi
 
 ## Experimental results
 
-All three figures use **G2 only: 20 held-out seeds × 46 synthetic scenarios**, including all 14 saved operating points with health information. No campaign was rerun. Controls marked `*` transfer frozen G1 development settings without retuning; G2 sampling budgets may differ. Rao-inspired is an engineering adaptation, not a full literature reproduction.
+All four figures use **G2 only: 20 held-out seeds × 46 synthetic scenarios**, including all 14 saved operating points with health information. No campaign was rerun. Controls marked `*` transfer frozen G1 development settings without retuning; G2 sampling budgets may differ. Rao-inspired is an engineering adaptation, not a full literature reproduction.
 
 ### Event detection
 
@@ -45,6 +45,12 @@ Fixed-20+C11 achieves **55.10% sender F1**, compared with **46.31% for JO-SU-40*
 ![G2 sample cycles and Binary v1 application bytes, shown separately for every saved operating point.](docs/assets/readme/g2-resources.png)
 
 At nearby totals of **85,055 versus 82,800 samples**, JO-SU-40 sends **959,129 bytes**, compared with **2,940,838 for Fixed-20+C11**. Upload rules, including shareable U, explain part of the benefit; it is not all due to sampling. [Plot data](results/tais-transfer/summary.csv) · [Evidence](docs/TAIS_PAPER_EVIDENCE.md).
+
+### Detection vs. Communication Trade-off
+
+![G2 sender-report F1 versus Binary v1 communication in decimal MB for all 14 operating points, highlighting GateOnly, GateOnly plus U and the JO-SU series.](docs/assets/readme/g2-detection-communication.png)
+
+**Upper left means higher detection F1 and lower communication cost.** GateOnly+U retains GateOnly's sender F1 with fewer bytes; JO-SU-20 gains detection at additional cost, while some independent controls achieve higher F1 with more communication. These are pooled sender-report point estimates, not a claim of overall superiority. Communication is application-layer Binary v1 volume (1 MB = 10⁶ bytes), not actual energy consumption. Starred controls retain their frozen G1 budget settings; actual G2 sampling budgets may not match.
 
 ### Fault-induced reports and data freshness
 
