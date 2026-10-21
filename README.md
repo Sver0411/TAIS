@@ -1,40 +1,64 @@
 # TAIS — Trust-Aware Importance Scheduler
 
-TAIS studies event detection, sampling and communication under sensor faults in single-node IoT monitoring. It integrates **SensorTrust C11** health diagnosis, **AdaptiveSense** change analysis, selectable sampling and upload control as separate functions.
+TAIS is an open research prototype for monitoring changing environments with unreliable sensors. It combines health checks, event detection, adaptive sampling and selective transmission to study detection quality, sampling effort and communication cost together.
 
-This is a tested local software prototype and reproducible systems study. Its primarily synthetic evidence includes conditional tradeoffs and documented failures; field reliability and energy savings remain unvalidated.
+**The question:** when a reading changes, should the system report an environmental event, investigate a possible sensor fault, or wait for the next sample?
 
-**Start here:** [Quick start](#quick-start) · [Choose a mode](#running-modes) · [Documentation](docs/README.md) · [Paper and 中文概要](docs/README.md#paper-and-review)
+Causal stream processing · Sensor health and event state · Independent byte receiver · Reproducible experiments
 
-## What is implemented
+[Quick start](#quick-start) · [Architecture](#system-architecture) · [Results](#experimental-results) · [Paper](papers/tais/README.md) · [Documentation](docs/README.md)
 
-- Real C11 health state, flags and heuristic scores via ctypes.
-- GateOnly, JO/SU combinations; fixed-period, Delta, Variance and **Rao-inspired** research controls.
-- CSV/JSONL/synthetic input → Stateless Binary v1 → independent local receiver and history.
-- Separate local/sender/receiver metrics, actual sample/upload/byte counts, data age and seed-paired uncertainty.
+## See it run
 
-## Data flow
+![Actual TAIS demo output showing missing-sensor diagnosis, humidity event transitions, recovery, 77 samples and 40 decoded frames.](docs/assets/readme/local-run.png)
 
-```mermaid
-flowchart TD
-    A["Timestamped input: synthetic, CSV or JSONL"] --> B{"Sample due?"}
-    B -->|No| W["Wait for next source row"]
-    W --> A
-    B -->|Yes| C["Read current sample only"]
-    C --> D["SensorTrust C11 health + AdaptiveSense change analysis"]
-    D --> E["Selected policy: event state and next sample time"]
-    E -.->|Schedule next read| B
-    E --> F["Upload decision: native rule or optional U"]
-    F -->|Send| G["Stateless Binary v1: actual bytes"]
-    G --> H["Local byte link and independent decoder"]
-    H --> I["Timestamped receiver state, terminal view and journal"]
-```
+**Real output, reformatted for readability.** GateOnly runs the synthetic `missing_cross_long` scenario, seed 20: temperature data go missing while humidity changes. It finishes with 77 samples, 40 transmitted/decoded frames and 1,285 application bytes. Offline scoring finds one matched and one unmatched report. This is a demonstration, not a benchmark average; [run it below](#quick-start).
 
-Values are read only when due; sparse input cannot supply missing samples. Hardware acquisition and a real wireless transport are not implemented. [Architecture and source map](docs/REPOSITORY_GUIDE.md#source-map).
+## System architecture
+
+![TAIS software architecture: timestamped input, due-time sampling, SensorTrust health gating, AdaptiveSense change analysis, policy and upload decisions, Binary v1 encoding and an independent local receiver.](docs/assets/readme/architecture.png)
+
+Only due samples enter analysis. **SensorTrust C11** supplies health states and flags; **AdaptiveSense** analyzes eligible sampled history. Policy decisions set event state and the next sample time; upload control selects envelopes for Binary v1 encoding. The independent receiver reconstructs state from decoded frames.
+
+The implemented transport is a local byte link. Hardware acquisition and real wireless transport are outside this prototype. [Core interface](examples/tais-core/README.md) · [Architecture and source map](docs/REPOSITORY_GUIDE.md#source-map).
+
+## Core capabilities
+
+- **Sensor health:** actual C11 diagnosis through a Python bridge, with states, flags and heuristic scores.
+- **Environmental events:** per-channel change analysis with separate fault and environmental-event state.
+- **Sampling and uploads:** GateOnly or JO/SU policies; optional U suppresses ordinary updates while retaining sampled event/health edges and heartbeats.
+- **Bytes and receiver state:** Stateless Binary v1, independent decoding, timestamped journals and controlled local link failures.
+- **Metrics:** samples, uploads, bytes, sender reports, receiver events, fault-induced reports, detection delay and data age.
+
+## Experimental results
+
+All three figures use **G2 only: 20 held-out seeds × 46 synthetic scenarios**, including all 14 saved operating points with health information. No campaign was rerun. Controls marked `*` transfer frozen G1 development settings without retuning; G2 sampling budgets may differ. Rao-inspired is an engineering adaptation, not a full literature reproduction.
+
+### Event detection
+
+![G2 sender and receiver F1 for all 14 saved operating points, including every fixed period and the independent adaptive controls.](docs/assets/readme/g2-detection.png)
+
+Fixed-20+C11 achieves **55.10% sender F1**, compared with **46.31% for JO-SU-40**. JO-SU-20 reaches 65.30% with more sampling. Labels are sender point estimates; green bars independently evaluate receiver edges. [Full results and seed-paired uncertainty](docs/TAIS_CROSS_GENERATOR_REPORT.md).
+
+### Sampling and communication
+
+![G2 sample cycles and Binary v1 application bytes, shown separately for every saved operating point.](docs/assets/readme/g2-resources.png)
+
+At nearby totals of **85,055 versus 82,800 samples**, JO-SU-40 sends **959,129 bytes**, compared with **2,940,838 for Fixed-20+C11**. Upload rules, including shareable U, explain part of the benefit; it is not all due to sampling. [Plot data](results/tais-transfer/summary.csv) · [Evidence](docs/TAIS_PAPER_EVIDENCE.md).
+
+### Fault-induced reports and data freshness
+
+![G2 operational fault-induced false reports versus pooled receiver P95 data age, with all 14 operating points labeled.](docs/assets/readme/g2-freshness.png)
+
+JO-SU-40 produces **157 operational fault-induced false reports versus 353 for Fixed-20+C11**, but receiver P95 data age increases from **18 s to 113 s**. GateOnly+U illustrates the upload tradeoff directly: unchanged sampling and sender detection, fewer bytes, older ordinary data.
+
+JO-SU-40's near-budget F1 difference interval against Variance includes zero in G2. G1/G2 also differ in event-truth definitions: totals cannot be pooled or differences attributed solely to distribution shift. [Paper](papers/tais/README.md) · [中文概要](docs/TAIS_PAPER_SUMMARY_ZH.md).
 
 ## Quick start
 
-Use **Python 3.14** and a C11 compiler (`cc`, Clang or GCC); the bridge compiles on first use. Run from the checkout root. No hardware or external dataset is needed. The [main-release audit](docs/MAIN_RELEASE_AUDIT.md) records the integrated scope, checks and remaining limits.
+Use **Python 3.14** and a C11 compiler (`cc`, Clang or GCC). The bridge compiles on first use. Run from the checkout root; no hardware or external dataset is required.
+
+**1. Install and check the Core components**
 
 ```sh
 git clone --recurse-submodules https://github.com/Sver0411/TAIS.git
@@ -44,59 +68,49 @@ source .venv/bin/activate
 python -m pip install -r requirements-lock.txt
 python -m pip install -e . --no-build-isolation
 python -m pytest tests/test_core_stream.py tests/test_wire_codec.py -q
+```
+
+**2. Run the demonstration and inspect its received history**
+
+```sh
 python examples/tais-core/run.py --scenario missing_cross_long --seed 20 \
   --pace 0 --ui quiet --verify --out results/scratch/quickstart-01
 python examples/tais-core/view_run.py results/scratch/quickstart-01 --tail 12
 ```
 
-Use a **new** output directory each time. Expect `status: COMPLETE`, frozen-policy parity, TX/RX counts and three files: `manifest.json`, `summary.json`, `journal.jsonl`. Seed 20 is demonstration data. [Live display, input formats, troubleshooting and evidence checks](docs/QUICKSTART.md).
+Choose a **new output directory** for each run. Expect `status: COMPLETE`, frozen-policy parity and TX/RX counters. The directory contains `manifest.json` for provenance, `summary.json` for results and `journal.jsonl` for the actual sampled and received history. For a live terminal display, replace `--pace 0 --ui quiet` with `--pace .01 --ui live`.
+
+[Installation details, CSV/JSONL input and troubleshooting](docs/QUICKSTART.md) · [Standalone receiver and link examples](examples/tais-core/README.md).
 
 ## Running modes
 
-GateOnly remains default. SU numbers are **idle interval caps**, not fixed periods. U suppresses ordinary updates while sending sampled event/health edges and heartbeats.
+GateOnly remains the default. SU numbers are **idle interval caps**, not fixed sampling periods.
 
-| Mode | Behavior / useful property | Cost or limitation | Existing entry |
-| --- | --- | --- | --- |
-| GateOnly | Health-gated baseline | Can miss short or fault-masked events | Default, or `--policy gateonly` |
-| GateOnly + U | Same sampling and local detection, fewer uploads | Older ordinary receiver data; receiver edges can differ | `--policy gateonly-u` |
-| JO-SU-20 | JO-S sampling plus U; higher-detection option in the reported tests | More samples and potentially more fault-induced reports | `--policy tais-su --su-mode high` |
-| JO-SU-30 | Lower acquisition count than SU20 in SU-1 | Lost detections; failed the balanced-replacement gate | `--policy tais-su --su-mode balanced` |
-| JO-SU-40 | Retained lower-sampling operating point | Recall loss versus SU20; no general near-budget quality advantage | Python API / frozen benchmark only |
+| Mode | Main tradeoff | Select with |
+| --- | --- | --- |
+| GateOnly | Health-gated baseline; short or fault-masked events can be missed | `--policy gateonly` |
+| GateOnly + U | Same sampling and sender detection, fewer uploads, older ordinary receiver data | `--policy gateonly-u` |
+| JO-SU-20 | Higher detection in the reported tests, with more samples and potentially more fault-induced reports | `--policy tais-su --su-mode high` |
+| JO-SU-30 | Lower sampling than SU20, but lost detections and failed the balanced-replacement gate | `--policy tais-su --su-mode balanced` |
+| JO-SU-40 | Lower-sampling operating point; no general near-budget quality advantage | [Python API / frozen benchmark](docs/QUICKSTART.md#mode-selection) |
 
-[Mode commands / SU40 API](docs/QUICKSTART.md#mode-selection) · [SU-1 results](docs/TAIS_SU_RESULTS.md). `balanced` means the frozen **SU30** candidate, not a passed qualification. Independent baselines are benchmark controls, not Core CLI modes.
+`balanced` names the historical SU30 candidate, not a passed qualification. Fixed-period, Delta, Variance and Rao-inspired schedules are research benchmark controls, not Core CLI modes. [Mode details](docs/QUICKSTART.md#mode-selection) · [SU-1 results](docs/TAIS_SU_RESULTS.md).
 
-## What the experiments show
+## Research limitations
 
-The [paper](papers/tais/README.md) compares independent baselines and conditional tradeoffs. This adverse comparison comes from **G2 only** (20 seeds, 46 scenarios):
+- The main evaluations use synthetic data. The separate offline study with real greenhouse background and controlled interventions **failed its predefined held-out coverage gate**.
+- Natural-fault diagnosis accuracy, agricultural field-event performance, real wireless delivery and measured energy consumption remain unvalidated.
+- Trust scores are heuristic. Events entirely between samples, or erased by a same-channel fault, may be unrecoverable.
+- Fewer application bytes do not imply an equal percentage reduction in radio energy or longer measured battery life.
 
-| G2 sender/system metric | JO-SU-40 | Fixed-20+C11 |
-| --- | ---: | ---: |
-| F1 | 46.31% | 55.10% |
-| Sample cycles | 85,055 | 82,800 |
-| Binary v1 application bytes | 959,129 | 2,940,838 |
-| Operational fault-induced false reports | 157 | 353 |
-| Receiver P95 data age | 113 s | 18 s |
+[Failure boundaries, negative results and research history](docs/README.md#history-and-negative-results).
 
-Fixed20 has higher point F1 at nearby sample totals; SU40 sends fewer bytes with fewer attributed false reports and older data. Shared U explains part of the communication benefit. G1's near-budget F1 advantage over Variance was not retained in G2, whose difference interval includes zero.
+## Documentation
 
-G1/G2 differ in signals, faults, timing **and event-truth definitions**; their totals cannot be pooled or differences attributed solely to distribution shift. [Full evidence](docs/TAIS_PAPER_EVIDENCE.md) · [中文概要](docs/TAIS_PAPER_SUMMARY_ZH.md) · [Results](results/README.md).
+- **Use the system:** [Quick start](docs/QUICKSTART.md) · [Core input and receiver contract](examples/tais-core/README.md).
+- **Understand the implementation:** [Repository and source map](docs/REPOSITORY_GUIDE.md) · [Core architecture](docs/TAIS_CORE_PROTOTYPE.md).
+- **Inspect or reproduce evidence:** [Research document index](docs/README.md) · [Results](results/README.md) · [Experiment and verification commands](scripts/README.md).
+- **Read the paper:** [PDF, LaTeX and build guide](papers/tais/README.md) · [中文概要](docs/TAIS_PAPER_SUMMARY_ZH.md) · [Submission checklist](docs/TAIS_SUBMISSION_CHECKLIST.md).
+- **Contribute and reuse:** [Contributing](CONTRIBUTING.md) · [MIT license](LICENSE) · [Third-party notices](THIRD_PARTY_NOTICES.md).
 
-## Scope and maturity
-
-| Status | What it means |
-| --- | --- |
-| Implemented and tested | C11 integration, causal due-time processing, local bytes/receiver, codecs and deterministic software checks |
-| Condition-specific evidence | Synthetic quality/cost tradeoffs; independent controls and negative findings, not universal superiority |
-| Separate exploration | Real greenhouse background with controlled offline interventions; coverage failed its held-out gate |
-| Unvalidated | Natural-fault diagnosis, agricultural field event performance, hardware timing/RAM, real wireless delivery, current draw and battery life |
-
-Trust scores are heuristic, not calibrated probabilities. Events entirely between samples or erased by faults may be unrecoverable. Application-byte reductions are not proportional energy savings. [Failure boundaries and research history](docs/README.md#history-and-negative-results).
-
-## Find your next step
-
-- **Run or integrate:** [Quick start](docs/QUICKSTART.md), [Core input contract](examples/tais-core/README.md), [source and directory map](docs/REPOSITORY_GUIDE.md).
-- **Inspect or reproduce evidence:** [document navigation](docs/README.md), [script navigation](scripts/README.md), [result navigation](results/README.md).
-- **Read the paper:** [LaTeX/PDF and build instructions](papers/tais/README.md), [中文概要](docs/TAIS_PAPER_SUMMARY_ZH.md), [submission checklist](docs/TAIS_SUBMISSION_CHECKLIST.md).
-- **Contribute:** [contribution rules](CONTRIBUTING.md), [MIT license](LICENSE), [third-party notices](THIRD_PARTY_NOTICES.md).
-
-Pinned upstreams: AdaptiveSense `f7ec30f…`, SensorTrust `2ce98dd…`; source/licenses remain in [vendor/](vendor). Adaptive sampling, health heuristics, deadbands and binary encoding are established techniques.
+AdaptiveSense and SensorTrust remain pinned upstream dependencies in [vendor/](vendor). Adaptive sampling, health heuristics, deadbands and binary encoding are established techniques; TAIS contributes a reproducible integration and evaluation of their system-level tradeoffs.
