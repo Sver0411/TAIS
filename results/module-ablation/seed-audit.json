@@ -1,0 +1,480 @@
+{
+  "scope": "current accessible configs and manifests; seeds0..899 reserved; not an audit of inaccessible machines/history",
+  "candidates": [
+    900,
+    901,
+    902,
+    903,
+    904,
+    905,
+    906,
+    907,
+    908,
+    909,
+    910,
+    911,
+    912,
+    913,
+    914,
+    915,
+    916,
+    917,
+    918,
+    919
+  ],
+  "checked": [
+    {
+      "path": "configs/budget-matched.json",
+      "sha256": "3d935344040ab3b39ad1e38022a72ec35672d4a938af6c162184d788bc0936b8"
+    },
+    {
+      "path": "configs/fault-event-observability.json",
+      "sha256": "ef4748bf8288df59968b4856e976be2fbc1877657173c66cea5c22359a77d23c"
+    },
+    {
+      "path": "configs/independent-reference-budget.json",
+      "sha256": "358263dbf0cbd256b73eca40475f9db44a82bff262b2b6e9fca299c64c8f9a3b"
+    },
+    {
+      "path": "configs/offline_spatial_pilot.json",
+      "sha256": "8c7dc926bdead4f9ea9a4c0f154fa7304dd6d2bd0fb701d512dc49197665e412"
+    },
+    {
+      "path": "configs/tais-paper.json",
+      "sha256": "7711f33f2ec53085b449262cfaff2461f50d4de450b34c94e3267f8e3ff579c9"
+    },
+    {
+      "path": "configs/tais-su.json",
+      "sha256": "86ddae276b483a73020aff008385b9bbd972f597864724706ff008181251994a"
+    },
+    {
+      "path": "configs/tais-transfer.json",
+      "sha256": "597735cfc5df885a9e5db08954472a951c2e8cc75c74bda9bbe95ec4caa2bf76"
+    },
+    {
+      "path": "results/baseline/manifest.json",
+      "sha256": "2617fcda6e33e1e266b460b2aafd70ecc678bc88ec8e9cb6acf4733aa9d5b97b"
+    },
+    {
+      "path": "results/blocked-rearm/development/manifest.json",
+      "sha256": "e5d49f91d382bddc85373e43133e63023d7dda54630d0c1da87e3df4e1a01976"
+    },
+    {
+      "path": "results/blocked-rearm/test/manifest.json",
+      "sha256": "024df266c514eff29fbee917661073cb13327befcaf0cc03d61d7597acc94710"
+    },
+    {
+      "path": "results/blocked-rearm/validation/manifest.json",
+      "sha256": "cc5c4aec9209d552ed25f3ade042abffec29bbffbd784b534d14bbe57dd3273d"
+    },
+    {
+      "path": "results/budget-matched/development/manifest.json",
+      "sha256": "fdeedef924bc2381c18a91abbdaf6c422e2c9bc6d057312565a45738eff75a86"
+    },
+    {
+      "path": "results/budget-matched/test/analysis/manifest.json",
+      "sha256": "5031825db2278451616df8b71447e9cc0e5184d275422efa7ed78d448bca34a7"
+    },
+    {
+      "path": "results/budget-matched/test/manifest.json",
+      "sha256": "3b1e9e8c7b60cb9b75ac821f5e27a77a95aabbf684c533881a4424979dcd891a"
+    },
+    {
+      "path": "results/budget-matched/validation/manifest.json",
+      "sha256": "4f3f7f90dcd09b258da4d52e5cd63bd1b1503bccdad36a82596f75b661766c36"
+    },
+    {
+      "path": "results/development/manifest.json",
+      "sha256": "b4a3ca381cf241697f1320c9510ce33b1f6ca1625efb84f95917b0dcbd0e1df3"
+    },
+    {
+      "path": "results/development-smoke/manifest.json",
+      "sha256": "774e722a618b93b927a556c6e5d9cf228f9d0bd6557f3e30408c61ce7013b952"
+    },
+    {
+      "path": "results/fault-event-observability/development/analysis/manifest.json",
+      "sha256": "12eb3201b33b9e2b7129006a53d68f23751b7f226919a4e9141f6c8044ba70af"
+    },
+    {
+      "path": "results/fault-event-observability/development/manifest.json",
+      "sha256": "97b6bac7a01d2e905a7337e0c965c292f536bdcb0ee8edab90b403e81fcc39fb"
+    },
+    {
+      "path": "results/fault-event-observability/interpretation/manifest.json",
+      "sha256": "79848777c1ab9707de88906a2079a98f255b5a1c7cc41811892a03ff9a7d5096"
+    },
+    {
+      "path": "results/fault-event-observability/smoke/manifest.json",
+      "sha256": "3c65d3f88c2a8cf22e46b354c08eb9b87f56fbd07510f1efd6e0bcb56fa11114"
+    },
+    {
+      "path": "results/fault-event-observability/software-smoke-v2/smoke/analysis/manifest.json",
+      "sha256": "078faee4513feb62392498649a6a85d26c7910c81ea5bcdba8d09df903b0d7db"
+    },
+    {
+      "path": "results/fault-event-observability/software-smoke-v2/smoke/manifest.json",
+      "sha256": "bcaa2027f4bb8afeee7810275c37c87b3ebc056c7728c0b3db834de31dc2f281"
+    },
+    {
+      "path": "results/fault-event-observability/test/analysis/manifest.json",
+      "sha256": "50ad3697cd202e563d595cd2f40dbd04da368db1d401d6fb0835c6d39c4c7507"
+    },
+    {
+      "path": "results/fault-event-observability/test/manifest.json",
+      "sha256": "2398f64bef86632c7494da2e81bdaf0aefc61dda429de64b0a73064138755a3b"
+    },
+    {
+      "path": "results/fault-event-observability/validation/analysis/manifest.json",
+      "sha256": "72fbe7de7e067cc3d6a2186a93c6cb5340d007d1237a6eb4e961f6cb84f96074"
+    },
+    {
+      "path": "results/fault-event-observability/validation/manifest.json",
+      "sha256": "24d2a3472bd2e4bbf67a60fc34d01e707341ab3d3edfd426e0c77fb5f521ab75"
+    },
+    {
+      "path": "results/independent-reference-budget/calibrate/manifest.json",
+      "sha256": "ddd68c53a2f5ea17de481f622e2a267fd2094dca771c1efdd1a13f2f4f7d0160"
+    },
+    {
+      "path": "results/independent-reference-budget/development/analysis/manifest.json",
+      "sha256": "8bfb200dcf6f080bec219ab3ce8a1ab5dc4757c8d6e09807a2fbfa9068cb5517"
+    },
+    {
+      "path": "results/independent-reference-budget/development/manifest.json",
+      "sha256": "73d56d8244ecaebd659da1b8faa50ffef660998afdf81c012d3889fda66accb1"
+    },
+    {
+      "path": "results/independent-reference-budget/interpretation/manifest.json",
+      "sha256": "d99a375a6ea4f5f4650c9a2ab8397e74bdaaaf8b8468a12f35a121153b421cde"
+    },
+    {
+      "path": "results/independent-reference-budget/test/analysis/manifest.json",
+      "sha256": "d06ad48eb1e1a2d88b3a73460e869d58f7d2cdd363e0b91459b692c7e0bb01da"
+    },
+    {
+      "path": "results/independent-reference-budget/test/manifest.json",
+      "sha256": "fb18e56418c203ff95cb1fa20d001c10fda1b35499761d9206498c8c5e72b07e"
+    },
+    {
+      "path": "results/independent-reference-budget/validation/analysis/manifest.json",
+      "sha256": "b8a4d6747cea6aaa97754f3c7a5e1088af97e90e0be2240758afb26bee27c48b"
+    },
+    {
+      "path": "results/independent-reference-budget/validation/manifest.json",
+      "sha256": "84209a6b8afb0376cd31e2f48d8e96c4809d7970a8cebbb8c5a3075767f3d948"
+    },
+    {
+      "path": "results/module-ablation-engineering-attempt1/engineering/manifest.json",
+      "sha256": "03752eb7f553f3878e4fa44b2dfdc6ed67872828f11bb4bbbe3791d95c146274"
+    },
+    {
+      "path": "results/offline-spatial-pilot/audit/manifest.json",
+      "sha256": "fba0ce4541ae2dc4346c2427f57169ecd477e18d856938e0fc1e5ff51f919f0c"
+    },
+    {
+      "path": "results/offline-spatial-pilot/development/manifest.json",
+      "sha256": "c019b77f4ca02a8f791b78688c5fa15c13a4b756093a25f87a5abd768dc76940"
+    },
+    {
+      "path": "results/offline-spatial-pilot/test/manifest.json",
+      "sha256": "3dd9287000bab348891520745927b4ddae2346d640eebce59776b350a6c6e281"
+    },
+    {
+      "path": "results/offline-spatial-pilot/validation/manifest.json",
+      "sha256": "8b52a1893649ff04b35c604cd23d74bda13ead0bc68c83999986be093730b566"
+    },
+    {
+      "path": "results/tais-core/acceptance/csv-stream/manifest.json",
+      "sha256": "2c22c09f9afbc7eb7e4855bf6522a8d2b60a379c9c54bbb972c544ad41254ea1"
+    },
+    {
+      "path": "results/tais-core/acceptance/drift-failure/manifest.json",
+      "sha256": "a96856cc902ce0b90a0bfb2ba21cd8818c2cbbe3ea0ef70e23ded3c7126a464e"
+    },
+    {
+      "path": "results/tais-core/acceptance/fault-event/manifest.json",
+      "sha256": "78bcc3c20e69a17641787e30a28e9712a5ef37eb7c42579e8ebe4a9c1c437e93"
+    },
+    {
+      "path": "results/tais-core/acceptance/known-failure/manifest.json",
+      "sha256": "d8edc2e6b06e8a3881e0cad7917e7316f0ce7bb99f354cd3d7513b8b320269e6"
+    },
+    {
+      "path": "results/tais-core/acceptance/link-failures/manifest.json",
+      "sha256": "aef48311c4830a12733788d4d33a3ce87a0a0e5a095bf9c966b92409ba174062"
+    },
+    {
+      "path": "results/tais-core/acceptance/normal/manifest.json",
+      "sha256": "4276e45b0520d1de9b7b6711a6e089b90354fd47759b2b52f31dd03e248d40ef"
+    },
+    {
+      "path": "results/tais-core/acceptance/spike/manifest.json",
+      "sha256": "8218a9d02e78eee3c4f53346f94c85895ab0e93f869d0833ba1b84ab2d5005d5"
+    },
+    {
+      "path": "results/tais-core/acceptance/stdin-stream/manifest.json",
+      "sha256": "fc2328c7abbe6bee0e9d90e4c796f53a64d7eb0c9a1555dc392c865dfc963a72"
+    },
+    {
+      "path": "results/tais-core/bm1-review/manifest.json",
+      "sha256": "58176959ad75d150552e07fb0536a820a60efaf218005e90f174211609ef53a6"
+    },
+    {
+      "path": "results/tais-core/csv-stream/manifest.json",
+      "sha256": "8a9c871ae17cc035eb8493b4874e36056c701f5be14dbf67c7c2488c7399f762"
+    },
+    {
+      "path": "results/tais-core/drift-failure/manifest.json",
+      "sha256": "239722556411974d0cd10341e491b99ae50dbb735eb5897d38efe57ac27b2947"
+    },
+    {
+      "path": "results/tais-core/fault-event/manifest.json",
+      "sha256": "2b64d41f9eaf4c50891eb8057c94f40dcb5714e801da3afabd597668d53139a8"
+    },
+    {
+      "path": "results/tais-core/known-failure/manifest.json",
+      "sha256": "32369561b4f8a3034a9649cea16a43019b63cc7639d011922f6da391bdf6573e"
+    },
+    {
+      "path": "results/tais-core/link-failures/manifest.json",
+      "sha256": "77bccacb680adce1da627eadfd68c81468eac550989d2a6fb04e980c8d9eeca1"
+    },
+    {
+      "path": "results/tais-core/normal/manifest.json",
+      "sha256": "c704ccac8216d55795bc674b9c690673d2b868aa8d8a8934586597997b3688f0"
+    },
+    {
+      "path": "results/tais-core/normal-stream/manifest.json",
+      "sha256": "896b5584c805eb8fbb7821013502362bb67b8813df6553f679692ee9fd507d15"
+    },
+    {
+      "path": "results/tais-core/spike/manifest.json",
+      "sha256": "5e9d168058d2b19e112f2ea1e6e603af933c2ff13a0a55a1687df14f8769a4f3"
+    },
+    {
+      "path": "results/tais-core/stdin-stream/manifest.json",
+      "sha256": "a0af60dcf5fb1659d3fa3c3618c554db4a4ed34dc2e86438e0f2499b5430ba7f"
+    },
+    {
+      "path": "results/tais-joint/core/clean_none-gateonly/manifest.json",
+      "sha256": "003f2ac25cb4a058c78f5e3e0eaf235637fe7f583526af89b7a2ca1f8d27c5e9"
+    },
+    {
+      "path": "results/tais-joint/core/clean_none-tais-jo/manifest.json",
+      "sha256": "452f6652909849c90461b85494fd6c6db44167bbea1cf33b04e69768b520aab3"
+    },
+    {
+      "path": "results/tais-joint/core/clean_short-gateonly/manifest.json",
+      "sha256": "c9913dd27051b09f4b7e44abd69bb2e4cd10a4098c97f92545ba6d6eaed09d8e"
+    },
+    {
+      "path": "results/tais-joint/core/clean_short-tais-jo/manifest.json",
+      "sha256": "2d37c1595edd563fb15c9aee696860ac24732f07fd7604dfefb1dd16b9978533"
+    },
+    {
+      "path": "results/tais-joint/core/drift_none_long-gateonly/manifest.json",
+      "sha256": "3b26edd6132212beef86d0ec722418a25f33abd550a333a52871794427c8e65f"
+    },
+    {
+      "path": "results/tais-joint/core/drift_none_long-tais-jo/manifest.json",
+      "sha256": "e8744956941a1d0d5b814ecb3505cf455cb2508eaa0a8dca55e6d3d3f129fa86"
+    },
+    {
+      "path": "results/tais-joint/core/drift_same_long-gateonly/manifest.json",
+      "sha256": "71dc0e470272a876f3dc1f321896a59c03db4ca4bbc405401805149f9e70b9f9"
+    },
+    {
+      "path": "results/tais-joint/core/drift_same_long-tais-jo/manifest.json",
+      "sha256": "05e0d817aab7a3ba552ddb3bbf09b796762c87409f7d7ac80d59aede72d27145"
+    },
+    {
+      "path": "results/tais-joint/core/missing_cross_long-gateonly/manifest.json",
+      "sha256": "1f86637f266ac52e740ab891c9aff59616dc296062499125633b73e301f9f242"
+    },
+    {
+      "path": "results/tais-joint/core/missing_cross_long-tais-jo/manifest.json",
+      "sha256": "9d7f806bb5ceeef3a61cd56976f346740517068793febe36f14c851b606c5463"
+    },
+    {
+      "path": "results/tais-joint/core/range_same_long-gateonly/manifest.json",
+      "sha256": "d67c70fb3f72e9b9b62c8874935df36481969e0e983abffd274a5a1c4a45e816"
+    },
+    {
+      "path": "results/tais-joint/core/range_same_long-tais-jo/manifest.json",
+      "sha256": "8c842515d62a8861519316cd6afa4c422ff12ceee6dddc3c96da62144092c7f3"
+    },
+    {
+      "path": "results/tais-joint/development/manifest.json",
+      "sha256": "143e5673311d04e34c382f2d43e0d2808d818b67f6f0eb753be9af341c0687d3"
+    },
+    {
+      "path": "results/tais-joint/development-attempt1/manifest.json",
+      "sha256": "50c8d97829a0f7f9c8ef45850bd116f53fdac35f3e0702640c081ee8bd329000"
+    },
+    {
+      "path": "results/tais-joint/test/manifest.json",
+      "sha256": "ca2a187247d5e6fd4e9c8b99c72d749ffef07da8f5d2c6f5893ce76b3618809c"
+    },
+    {
+      "path": "results/tais-joint/validation/manifest.json",
+      "sha256": "4d77500b475bb28f816cc1185d2bb404b48ffe1db4d57c2687f153e132030679"
+    },
+    {
+      "path": "results/tais-paper/budget-bound-development/manifest.json",
+      "sha256": "9258aabcc03aecf7ff56eff08d7f0d2f25eed9ea3b514515338d70b1b40bfa78"
+    },
+    {
+      "path": "results/tais-paper/budget-development/manifest.json",
+      "sha256": "e18cc0dd577a3a0c431834e0804efc70087ebb1632be35c3134fc645de5a6b06"
+    },
+    {
+      "path": "results/tais-paper/development/manifest.json",
+      "sha256": "80ebb61aa5934f4702d90b22cea229bf6e00d26837799cf0c1148edf6eedf8ff"
+    },
+    {
+      "path": "results/tais-paper/smoke/manifest.json",
+      "sha256": "2bb59ae6c1e632ed4735ecb30acc625fd72b88cc8fd9f290100950a6df95663b"
+    },
+    {
+      "path": "results/tais-paper/test/manifest.json",
+      "sha256": "f261f57bd72a0422575035de2012a0bd5d2982186ed2a3e3ffcaa20b569d5459"
+    },
+    {
+      "path": "results/tais-paper/threshold-development/manifest.json",
+      "sha256": "1ba5b7fab1446af4454a179b99b7a0c31a53ded9c3bb2d7bc5e6d4631cd5e7d5"
+    },
+    {
+      "path": "results/tais-su/core/clean_none-balanced/manifest.json",
+      "sha256": "2fea094860198a1c9ec6a2b50a44f141d7badf5dbdd90c5e19484b0a50196cc6"
+    },
+    {
+      "path": "results/tais-su/core/clean_none-high/manifest.json",
+      "sha256": "342bf3cce26ce23ff7f1a93866e8bbe2558a7cd155200d8297dc59ffb74a6f45"
+    },
+    {
+      "path": "results/tais-su/core/clean_short-balanced/manifest.json",
+      "sha256": "feaf483684a5fe7e597b09264d3e5ed8e698644015a59dda1a65e461c79525c9"
+    },
+    {
+      "path": "results/tais-su/core/clean_short-high/manifest.json",
+      "sha256": "3d5bb8f4027765a931b4eca162265cda48c83349cf938a3d6ce229f497a21027"
+    },
+    {
+      "path": "results/tais-su/core/drift_none_long-balanced/manifest.json",
+      "sha256": "8985dc358df199c06bb6dbde982b3bd144789de44dc9cfdb64ffed2d0fbe9aa4"
+    },
+    {
+      "path": "results/tais-su/core/drift_none_long-high/manifest.json",
+      "sha256": "38c598c5daaf6ca73762025d027009d9765f5da69219a71dc55830d759aacf4a"
+    },
+    {
+      "path": "results/tais-su/core/drift_same_long-balanced/manifest.json",
+      "sha256": "865b54440a5522f37f9e5073229ccbaeb29b9140da920d570b1fb4f16c5afffa"
+    },
+    {
+      "path": "results/tais-su/core/drift_same_long-high/manifest.json",
+      "sha256": "33935dde78099b15eb1913d14647529bc6c5c39acb55c948e44e7e2b04ac5ab9"
+    },
+    {
+      "path": "results/tais-su/core/missing_cross_long-balanced/manifest.json",
+      "sha256": "071660b23052600fd53f275676be5c57aa59036baa992900a150ad5b0b35b919"
+    },
+    {
+      "path": "results/tais-su/core/missing_cross_long-gate-u/manifest.json",
+      "sha256": "2204bbf12da0c9bbb24948bd3c6ec30349ad4613dfe11fe2593ae0a8318e5650"
+    },
+    {
+      "path": "results/tais-su/core/missing_cross_long-high/manifest.json",
+      "sha256": "4e637d84e6f73388b2a12fbea296b5c635877db336fc4aacd03aa3cb9907761b"
+    },
+    {
+      "path": "results/tais-su/core/range_same_long-high/manifest.json",
+      "sha256": "3000ca55cf017f1d2922f25474e70f0d8933e3bb30885d64d0db2fda9f29d180"
+    },
+    {
+      "path": "results/tais-su/core/stable_offset_same_long-balanced/manifest.json",
+      "sha256": "927ca1e0b52eba6dc0f8297d15db803f0c36e9491c9c3ee911b8ea95d4252881"
+    },
+    {
+      "path": "results/tais-su/core/stable_offset_same_long-high/manifest.json",
+      "sha256": "9935e4d7174d748af7ff6f4f64e0d96da01f8ba131597e25daad8c8c0732b329"
+    },
+    {
+      "path": "results/tais-su/development/manifest.json",
+      "sha256": "97b10f0a2d31966baa59babc567e936617cd33e2403397cf8913f33871df9911"
+    },
+    {
+      "path": "results/tais-su/engineering/manifest.json",
+      "sha256": "27f7bfdee8783d26fba3d6822b08634981b91767b9aa72e29ab524cbd1b68139"
+    },
+    {
+      "path": "results/tais-su/test/manifest.json",
+      "sha256": "3c3d421d23b86a7625761562d34c78e72c9bcfbf2bc1f452d0d6f575646cee63"
+    },
+    {
+      "path": "results/tais-su/validation/manifest.json",
+      "sha256": "a0a75104ccfab2d9db8e6a4f09e55b96dca020dba86cda0416a185b8001a4920"
+    },
+    {
+      "path": "results/tais-transfer/figures/manifest.json",
+      "sha256": "b3ce3206619432cfee35da8b2d0043cb22ebe257e9595980ecba73cb6cca66a7"
+    },
+    {
+      "path": "results/tais-transfer/smoke/analysis/manifest.json",
+      "sha256": "fac95e8aa7a8de0ea5bfebcc0199fe2bf56012c7a0ff9da5a266b1f0c3f133eb"
+    },
+    {
+      "path": "results/tais-transfer/smoke/manifest.json",
+      "sha256": "1a82aed7abda20fee4f4b744982979c6b5dfc3c0c026038dc07a8fff4c92c645"
+    },
+    {
+      "path": "results/tais-transfer/test/analysis/manifest.json",
+      "sha256": "7a51d06225bdfd1e73d991b17e7bb4534be5391a05f3573dd92ac5b067867023"
+    },
+    {
+      "path": "results/tais-transfer/test/manifest.json",
+      "sha256": "8456631c6b28437afa28c3ba4773d11e9b33d3e170d34466477950ae4c03a6c6"
+    },
+    {
+      "path": "results/test/manifest.json",
+      "sha256": "432bfb6d5bc9179095d831428ae5aeff0793b7dc054462aad6ad81f7edcf7f56"
+    },
+    {
+      "path": "results/v0.2/baseline/manifest.json",
+      "sha256": "9380d2886cd10adf408392599f58612f7345930b39da2e4eca9a83ae20e44f67"
+    },
+    {
+      "path": "results/v0.2/development/manifest.json",
+      "sha256": "081cac52deeda5d358f3e6518514e008848e66a42c386ff4e66b7f2ca4ef3f58"
+    },
+    {
+      "path": "results/v0.2/forensics/manifest.json",
+      "sha256": "8a2a31cbf9e30279c23d5b9d1a460191b91a77e140619480f067bdcc1955650c"
+    },
+    {
+      "path": "results/v0.2/test/manifest.json",
+      "sha256": "f5383870d394e6028722909884b2c46940eda20008745929e5734d8c77993aa5"
+    },
+    {
+      "path": "results/v0.2/validation/manifest.json",
+      "sha256": "d1c575dbcc637270f71cb0cfed56b2973e393f74fc829eb2d573739d47612bba"
+    },
+    {
+      "path": "results/validation/manifest.json",
+      "sha256": "3fdd4977034e0b57b883c3112112a1cf58df0d459d06d937733a7fd65900e2c1"
+    },
+    {
+      "path": "results/wire-payload/test/manifest.json",
+      "sha256": "cfc0f1a1ec5752c7448318e58edea2a563898abad69edb8dec4694adf3ad700d"
+    },
+    {
+      "path": "results/wire-payload-v2/audit/manifest.json",
+      "sha256": "4c8a7019b2601d4565783f017a32277d3d83592edcfc753acef943be74abfed0"
+    },
+    {
+      "path": "results/wire-payload-v2/test/manifest.json",
+      "sha256": "033036a6658313cb2d392d370c987ce7c01f3f0e3cc9388ad1ef2bab2d62bb79"
+    }
+  ],
+  "collisions": []
+}

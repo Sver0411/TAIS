@@ -60,6 +60,44 @@ JO-SU-40 produces **157 operational fault-induced false reports versus 353 for F
 
 JO-SU-40's near-budget F1 difference interval against Variance includes zero in G2. G1/G2 also differ in event-truth definitions: totals cannot be pooled or differences attributed solely to distribution shift. [Paper](papers/tais/README.md) · [中文概要](docs/TAIS_PAPER_SUMMARY_ZH.md).
 
+## Module ablation and unified evaluation (MA-1)
+
+The next-stage study adds the complete SensorTrust × AdaptiveSense sampling ×
+selective-transmission factorial, alongside eight frozen controls. It reuses
+the actual C11 engine, original policy/scorer, G2 generator and Binary v1
+receiver. A7 is GateOnly+U; JO-SU-20/40 remain separately named controls.
+Historical G1/G2 results above retain their original scoring definitions.
+
+[Frozen protocol](docs/MODULE_ABLATION_PROTOCOL.md) ·
+[Results and reproduction](results/module-ablation/README.md) ·
+[Japanese progress report](docs/MODULE_ABLATION_PROGRESS_JA.md) ·
+[Chinese analysis](docs/MODULE_ABLATION_RESULTS_ZH.md).
+
+With the installed environment, one command runs a fresh complete replica using
+the saved freeze (choose a new, unique output-directory name):
+
+```sh
+python scripts/benchmark_ablation.py replicate --out results/scratch/ma1-replica-01 --workers 4
+```
+
+One command regenerates all summary tables and six PNG/vector-PDF figures from
+the saved per-run/per-event observations; no policy replay or raw archive needed:
+
+```sh
+python scripts/analyze_ablation.py
+# For the fresh replica instead:
+python scripts/analyze_ablation.py --root results/scratch/ma1-replica-01
+python scripts/verify_ablation.py
+```
+
+The primary scoring window ends at the earlier of event-end+5 s or onset+120 s.
+Misses remain FNs and count as120 s in a separately named restricted-delay loss.
+Frame age and age of the latest finite received value are distinct. Fixed-grid
+and U comparisons have exact shared sample times; adaptive comparisons report
+actual resources. Bootstrap intervals cluster whole paired seeds, and the
+78 prespecified tests use Holm correction. These are synthetic system-level
+tradeoffs; no natural-fault, wireless-energy or field-performance validation.
+
 ## Quick start
 
 Use **Python 3.14** and a C11 compiler (`cc`, Clang or GCC). The bridge compiles on first use. Run from the checkout root; no hardware or external dataset is required.

@@ -1,0 +1,12 @@
+{
+  "report_generator_sha256": "ce6adb6142957b7329aef6caf0c22f5f69285923467db5e507bb3849dc6d915b",
+  "source_tables": {
+    "summary.csv": "c26cf09b43ea126f948c8d96cf7af207167ba1724c23b095bfd496d6b3552e1c",
+    "paired_effects.csv": "4258b70e116778252302af11bd27ca01e57e1d17d9b1542f3a1a5cbcab90d19f",
+    "fault_summary.csv": "0537b6fb6cea7da83d1dfe14f036bd9c8b3c9e9c24585bcf9b7d6a2294109905"
+  },
+  "reports": {
+    "MODULE_ABLATION_RESULTS_ZH.md": "5a0f87a0564a60fc1c4122f110895345e1566a11a2e68f97b0b734fb36a7865e",
+    "MODULE_ABLATION_PROGRESS_JA.md": "62fb0e26fd828e9f65f988d1e4c199b90ef950cccce5ae24b6af5b534c564aa0"
+  }
+}

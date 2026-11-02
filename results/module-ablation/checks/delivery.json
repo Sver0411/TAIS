@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "runs": 17280,
+  "tests": "906 passed,2 existing xfailed",
+  "new_contract_tests": 14,
+  "verification": {
+    "status": "PASS",
+    "runs": 17280,
+    "seed_clusters": 20,
+    "scenarios": 54,
+    "events_per_side": 2720,
+    "raw_archives_checked": 21560,
+    "deterministic_replays": 3,
+    "frozen_sources_unchanged": true
+  },
+  "figures_png": 6,
+  "figures_vector_pdf": 6,
+  "analysis_regenerates_from_saved_csv": true,
+  "visual_review": "all six final PNG figures inspected",
+  "historical_sources_config_results_unchanged": true,
+  "source_freeze_sha256": "a996b8c4d03603f3ada4e9dd027f30f92e3495b22664d9a5e5df58c0f561b8a2",
+  "final_manifest_sha256": "cccc2f54364e51e99c11290a34c94fb71e7ba0609b06e022469cbaffbb680ea8",
+  "local_raw_archives": "results/traces/module-ablation; ignored; reproducible from saved sources/config",
+  "publication": "local workspace changes; no remote publication requested"
+}

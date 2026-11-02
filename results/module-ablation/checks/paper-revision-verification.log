@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "protected_source_config_result_files": 202,
+  "budget_pairs": 60,
+  "audited_review_cells": 506,
+  "abstract_words": 187,
+  "referenced_figures": 3,
+  "tikz_architecture": true,
+  "tex_input_files": 23,
+  "labels": 19,
+  "references": 7,
+  "new_simulation_campaign": false
+}

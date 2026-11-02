@@ -1,0 +1,34 @@
+{
+  "inputs": {
+    "archives.json": "b70360da7701a67ac341ec68ee65ce500f74c3e506e19a19e2ca58176365d212",
+    "events.csv": "5214599896115db7120252009194aa793185b2d9c77e7a9ccee0987167213af1",
+    "inputs.csv": "96358e41546068f939ffa1cf7c5130ae2c8fc68934a2784f1fe6103f155f7b0c",
+    "metrics.csv": "ccd94b59a1bcb6f7a3761f2bc4b85748e54d70c78936a42c12f3e705518fc292"
+  },
+  "analysis_source_sha256": "e880c9ea1c6d464358a90f21268a509d0c605bb02d7acf8c09a26ca69aad7f61",
+  "bootstrap_draws": 5000,
+  "bootstrap_unit": "whole paired seed",
+  "inference": "mean of seed micro metrics; sign-flip exchangeability assumption; Holm across78 prespecified tests; subgroup CI descriptive",
+  "outputs": {
+    "budget_comparisons.csv": "b605bf541de9ef8583c2c157b2b7e29878f1e29d45441246ef8acafa231ef421",
+    "distributions.csv": "ad40f31c111637086f85f824507e008841ea3e0112e6cf7907feee16a8cb72ee",
+    "fault_summary.csv": "0ae5cf9e1f96bc3bc91603560dad8312cb9fa869dbcd8aff52b111f406b77bfa",
+    "fault_trust_effects.csv": "b7a358a602139a578e0bde1ae558682bfd7f6644820e12014c63292a068cf464",
+    "figures/figure1_detection_cost.pdf": "a52ea486de24fe271403885254ee0e53ea983feefd94a66c145f2c759ab12a67",
+    "figures/figure1_detection_cost.png": "da7f5d9a4031e7b049e2623d2673ebadaaca7244d93c1be7d0b97538a1866ffb",
+    "figures/figure2_ablation.pdf": "da4170b5cf0e40ceb2e8ae04257f4bf0ef8010eb5961da56900d9482077da33b",
+    "figures/figure2_ablation.png": "9f0ba89588bd63e5d8bfc81ebecf52eb7bdba13559c680d999cf8a9c05733c78",
+    "figures/figure3_misses_false.pdf": "fa13a6da6e95214d418b2610d75b456b8235bf72b9fc10ede32b78e351cdf2b4",
+    "figures/figure3_misses_false.png": "be337ba30d0364c245bd9415e41b7f590c040b112fc43cc8fdf9787d6f3a9279",
+    "figures/figure4_delay.pdf": "80c1b1327b366674f2018151300f227037487e24a8c368529c750861606bf1d2",
+    "figures/figure4_delay.png": "2b10f5718ca9818f4383c01ebdd515c28c2aba9eaaa52ec3db3bccdee548ef39",
+    "figures/figure5_freshness_sampling.pdf": "ecf35dfc7e2039c2075c299c4d0db8bb132ab015c5026cac9bec990e5431a0de",
+    "figures/figure5_freshness_sampling.png": "f80cab77289d6226a1f08280d5d0adc71187953860ee9567d43039470558afba",
+    "figures/figure6_contributions.pdf": "20de5974afbef0ee3475d7329b32ebd0dbfdf0a0f8b13f5f6e0a9d2a7c12fef4",
+    "figures/figure6_contributions.png": "97a9f7b7b78d6329a27041c26a015202e4bd136b73ef0df66ea5725fe44e2074",
+    "matched_in_both_delays.csv": "2a4c07b9a77af4a3050ab270e4af50a63c934be0360ce5af24848fbda16b7930",
+    "paired_effects.csv": "0001aee997b32b1da34d72716775dd91a7160f62f454b4f6f1b937d447ef414e",
+    "seed_metrics.csv": "5767b502fef1b7268b1eac771de072899059e19d9a501d2733ce753b8fb0bc0d",
+    "summary.csv": "bfe68d323d70ab84baa777c21ac49c3737d58696a2160792e4978ab5a139d07e"
+  }
+}

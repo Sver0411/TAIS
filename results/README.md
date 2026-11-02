@@ -6,6 +6,7 @@ Start with the [current paper summary / 中文](../docs/TAIS_PAPER_SUMMARY_ZH.md
 
 | Namespace | What it contains | Interpretation and authoritative entry |
 | --- | --- | --- |
+| [module-ablation/](module-ablation/README.md) | MA-1 complete T/S/U factorial, fixed native controls, common deadline scores, saved observations and six figures | Separate54-case synthetic suite; original G1/G2 untouched; [protocol](../docs/MODULE_ABLATION_PROTOCOL.md), [Japanese progress](../docs/MODULE_ABLATION_PROGRESS_JA.md) |
 | [tais-core/](tais-core/README.md) | Actual local input/sample/TX/RX acceptance journals and byte/receiver audits | Software integration, not new effectiveness evidence; [Core contract](../docs/TAIS_CORE_PROTOTYPE.md) |
 | [tais-su/](tais-su/README.md) | SU-1 engineering/development/validation/test; final 570–599, seven methods | All cap 20/30/40 points retained; GateOnly default, balanced replacement NO-GO; [protocol](../docs/TAIS_SU_PROTOCOL.md), [report](../docs/TAIS_SU_RESULTS.md) |
 | [tais-paper/](tais-paper) | G1 independent schedules, native/common views, development selection and held-out 610–629 | 73,800 scored runs include 53 native versions and 29 common views, not 82 independent algorithms; [protocol](../docs/TAIS_PAPER_PROTOCOL.md), [evidence](../docs/TAIS_PAPER_EVIDENCE.md) |

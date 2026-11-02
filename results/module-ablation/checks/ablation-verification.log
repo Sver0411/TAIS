@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "runs": 17280,
+  "seed_clusters": 20,
+  "scenarios": 54,
+  "events_per_side": 2720,
+  "raw_archives_checked": 21560,
+  "deterministic_replays": 3,
+  "frozen_sources_unchanged": true
+}
