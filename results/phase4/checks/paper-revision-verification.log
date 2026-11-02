@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/mac/Documents/TAIS/scripts/verify_paper_revision.py", line 59, in <module>
+    if __name__=='__main__':verify()
+                            ~~~~~~^^
+  File "/Users/mac/Documents/TAIS/scripts/verify_paper_revision.py", line 18, in verify
+    delta=subprocess.check_output(['git','diff','--name-only',protection['base'],'--','src','configs','vendor','results/tais-paper','results/tais-transfer'],cwd=ROOT,text=True).splitlines();assert not delta,delta
+                                                                                                                                                                                                     ^^^^^^^^^
+AssertionError: ['configs/module-ablation.json']

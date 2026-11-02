@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETE",
+  "purpose": "historical diagnosis only; no parameter selection",
+  "event_rows": 43520,
+  "misses": 24844,
+  "outputs": {
+    "timelines.csv": "9582916f17021f15401bc991d0849f247b45d66adf676e683f32a095d9ae4bd8",
+    "timelines.png": "3d164fecdd585c5e95338694c5b7f23154e192b2b6668b93b1712a2511464252",
+    "timelines.pdf": "fa819b25ea2b05da66c7e240e0df94702f090b51939847dd36e498ec2c897b44",
+    "events.csv": "9e5d11c9fbec9b9b7b8d6552ef6722a771ee04fae4b4af553e6dc3d73596ba83",
+    "miss_causes.csv": "1f2251fadba285f4a2347c8213cfdfd559cc3cabd248822dcbd25effb80c77af"
+  }
+}

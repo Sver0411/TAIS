@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "runs": 3168,
+  "seed_clusters": 2,
+  "cases": 66,
+  "methods": 24,
+  "per_event_rows": 9984,
+  "raw_archives_checked": 4356,
+  "deterministic_replays": 0,
+  "historical_files_unchanged": true,
+  "U_sample_and_detection_invariance": true,
+  "fast_budget_bound": true
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "runs": 31680,
+  "seed_clusters": 20,
+  "cases": 66,
+  "methods": 24,
+  "per_event_rows": 99840,
+  "raw_archives_checked": 0,
+  "deterministic_replays": 0,
+  "historical_files_unchanged": true,
+  "U_sample_and_detection_invariance": true,
+  "fast_budget_bound": true
+}
+Generic Chinese report regenerated; personalized content is not authored in this repository

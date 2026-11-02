@@ -1,0 +1,20 @@
+name: Phase4 sampling research checks
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  sampling:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - run: python -m pip install -r requirements-lock.txt
+      - run: python -m pip install -e . --no-build-isolation
+      - run: python -m pytest tests/test_phase4_sampling.py -q
+      - run: python scripts/verify_ablation.py
+      - run: python scripts/verify_phase4.py
+      - run: python scripts/benchmark_phase4.py engineering --out results/scratch/ci-phase4 --workers 2
+      - run: python scripts/analyze_phase4.py --root results/scratch/ci-phase4 --phase engineering

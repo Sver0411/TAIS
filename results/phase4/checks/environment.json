@@ -1,0 +1,8 @@
+{
+  "platform": "macOS-15.7.7-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "python": "3.14.7",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)\nTarget: arm64-apple-darwin24.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+  "git_base": "c71e621a90e3dce0fa925ffaf62402a8579116f0",
+  "frozen_sources_unchanged": true
+}

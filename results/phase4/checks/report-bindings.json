@@ -1,0 +1,11 @@
+{
+  "source_tables": {
+    "results/phase4/test/analysis/summary.csv": "d1476925b5edc0f7448e558a15510999920c3f1293d813020a76e155eb3cd178",
+    "results/phase4/test/analysis/paired_effects.csv": "96154477c839eaba7c144fbebe3276a2227b8ebd97d9fb671dcee0e1d97884ed",
+    "results/phase4/test/analysis/default_gates.csv": "2cca9de9ca823b171523b8c98ae58a8f8a27c7159b55a1357d3efeee44064a19"
+  },
+  "report_sha256": "aabbdebd80e2a32a3ab48daf62955d66dc89fcd19fef70568c19cfc248399465",
+  "generator_sha256": "b6aa1073a8a9d3f63474a5cc000586c950c63e465a8795b3ff0ce0f5e8dfe24f",
+  "decode_table_sha256": "56b0818e43a6ff4f5716bd78d58bb2021bc5bb42b6aaa670532e0a5990834d56",
+  "decode_scope": "All assigned sender frames verified by actual frozen codec/CoreReceiver; missing assignment is N/A, receiver edge matching separate"
+}

@@ -1,0 +1,225 @@
+# =============================================================
+# AdaptiveSense — Central Experiment Configuration
+#
+# This file is the SINGLE SOURCE OF TRUTH for every tunable value.
+# It is mirrored, value for value, into firmware/main/config.example.h.
+# scripts/check_config_parity.py fails the build if the two drift.
+#
+# The normative definition of the behaviour these values drive is
+# docs/change_score_spec.md. Do NOT hardcode tuning values in code.
+# =============================================================
+
+dataset:
+  # Reference sampling rate of the ground-truth datasets (Hz).
+  ground_truth_rate_hz: 1.0
+  raw_dir: dataset/raw
+  # Ground-truth event labels produced by dataset/generate_dataset.py.
+  # These are INDEPENDENT of AdaptiveSense: the generator knows which
+  # interval it drove which channel over. See docs/change_score_spec.md §10.
+  label_dir: dataset/labels
+  # Column used as the time axis. Must be monotonically increasing.
+  time_col: timestamp
+
+sampling:
+  min_interval: 5          # seconds
+  default_interval: 20     # seconds
+  max_interval: 60         # seconds
+
+# Fixed-rate baseline strategies evaluated by the replay simulator.
+# Each entry defines one fixed sampling (== upload) interval in seconds.
+fixed_strategies:
+  - 5
+  - 10
+  - 20
+  - 40
+  - 60
+
+# -------------------------------------------------------------
+# AdaptiveSense scheduler configuration
+# -------------------------------------------------------------
+adaptive:
+  # Instability score = max over channels of the normalized change.
+  # A per-channel change signal is normalized by that channel's
+  # noise floor (typical minute-to-minute noise amplitude) so that
+  # temperature, humidity and pressure can be compared on one scale.
+  # The noise floor is ALSO the normaliser for the upload delta (§8).
+  channels:
+    # These floors are EXPERIMENT parameters, not datasheet figures for any
+    # particular chip. For the three main channels each floor is about twice the
+    # noise sigma the dataset generator injects (0.08 C -> 0.15, 0.4 %RH -> 0.8,
+    # 0.15 hPa -> 0.3), and they sit 10-100x above the noise of the BME280 itself
+    # (0.01 C / 0.012 %RH RMS). They describe the benchmark, and they are
+    # therefore NOT changed when the physical sensor changes: doing so would alter
+    # the policy's sensitivity and invalidate the published simulation results.
+    # The light floor is the one exception to the 2x pattern; it is left as-is for
+    # the same reason. Evidence: docs/hardware_test_log.md.
+    temperature:
+      noise_floor: 0.15        # °C
+      use: true
+    humidity:
+      noise_floor: 0.8         # %RH
+      use: true
+    pressure:
+      noise_floor: 0.3         # hPa
+      use: false
+    light:
+      noise_floor: 30.0        # lux
+      use: true
+
+  analyzer:
+    # Windows expressed in seconds of ground-truth time (NOT in samples).
+    # variety_window_s >= roc_window_s is enforced by the config validator.
+    variety_window_s: 30       # window for the rolling std (STD indicator)
+    roc_window_s: 10           # window for the mean absolute rate of change
+    baseline_tau_s: 60         # EMA time constant for the change baseline
+
+  # State machine thresholds measured in units of "multiples of the
+  # noise floor". Hysteresis is applied RELATIVELY: entry uses
+  # threshold*(1+h), retention uses threshold*(1-h).
+  stable_threshold: 3.0        # score above this leaves STABLE
+  active_threshold: 8.0        # score above this enters ALERT
+
+  hysteresis_fraction: 0.5     # relative hysteresis band on each boundary
+
+  # Interval ladder (seconds) per state, and how many consecutive
+  # evaluations are spent on a rung before advancing to the next one.
+  #
+  #   STABLE ascends (sample less as nothing happens)
+  #   ACTIVE descends (sample faster while the environment is moving)
+  #   ALERT  is fixed at the minimum interval
+  #
+  # v0.1 had active: [60, 30, 15, 5], which made the node WAIT 60 s
+  # immediately after detecting change. Do not restore that ordering.
+  ladders:
+    stable: [20, 40, 60]
+    active: [15, 10, 5]
+    alert: [5]
+  ladder_confirmations:
+    stable: 2                  # evaluations per rung before backing off
+    active: 1                  # evaluations per rung before speeding up
+
+  # Event detection: the score must stay above event_threshold for at
+  # least event_min_duration_s before a sustained event is declared.
+  event_threshold: 8.0
+  event_min_duration_s: 10.0
+
+  # Upload policy (which samples are transmitted to the server).
+  upload:
+    upload_first_sample: true  # the node must report its initial state
+    on_event: true
+    on_state_change: true
+    on_interval_change: true
+    heartbeat_s: 60            # guaranteed periodic report
+    delta_threshold: 2.0       # normalized delta vs the last upload request
+
+  # Communication cost bookkeeping.
+  # These are PROXY constants. No physical energy unit is claimed.
+  energy:
+    # REPRESENTATIVE application payload size, measured with the firmware's own
+    # payload builder (firmware/main/communication_payload.c) for the shipped
+    # configuration: SHT30 + optional BH1750, normal indoor readings, and a
+    # 10-digit millisecond timestamp.
+    #
+    # This is NOT an exact wire length. The JSON is free-form, so its size moves
+    # with the digits in the readings and in the timestamp:
+    #
+    #   dark / low lux        lux=8.3      -> 242 bytes
+    #   normal indoor         lux=141.7    -> 244 bytes   <- the value below
+    #   bright                lux=757.5    -> 244 bytes
+    #   very large lux        lux=12345.6  -> 246 bytes
+    #   a 13-digit timestamp  ...          -> 247 bytes
+    #
+    # That band is narrow (the host test pins it), which is why a single
+    # representative number is good enough for `estimated_payload_bytes` and for
+    # comparing strategies against each other. It would not be good enough for a
+    # byte-exact radio-energy claim, which is not made: see
+    # `upload_energy_units_per_upload` below and docs/change_score_spec.md.
+    #
+    # Which channels are valid is a property of the configuration, and an invalid
+    # channel is sent as JSON `null`, so the length depends on it too. The
+    # expected validity mask is derived from config.example.h by
+    # tests/test_communication_payload.py (currently 1101: temperature, humidity
+    # and light valid, pressure invalid), so the two cannot drift apart.
+    payload_bytes_per_upload: 244
+    upload_energy_units_per_upload: 1.0   # dimensionless proxy
+
+  # Seed for the replay simulator's tie-breaking / noise, kept for
+  # reproducible experiments.
+  random_seed: 42
+
+# -------------------------------------------------------------
+# Firmware-only parameters (no effect on the simulation)
+# -------------------------------------------------------------
+# Kept here anyway so that there is exactly one place where a tunable value
+# lives, and so that scripts/check_config_parity.py can check the constraint
+# below. The firmware mirrors these into firmware/main/config.example.h.
+firmware:
+  # MQTT keepalive. Must be >= 2 x sampling.max_interval so that a sleeping node
+  # is never declared gone by the broker. Note that keepalive is itself traffic:
+  # the client sends PINGREQ and the broker replies, and that activity can wake
+  # the chip out of light sleep. This is one reason the reported upload metric is
+  # an application-payload metric, not a radio-traffic metric.
+  mqtt_keepalive_s: 120
+
+  # Consecutive read failures before a sensor that was working is considered
+  # gone and re-probed (firmware/main/sensor_supervisor.c). Firmware-only: the
+  # simulator replays stored signals and has no live sensor to lose.
+  sensor_failures_before_unavailable: 3
+
+  # Optional light channel: a BH1750 / GY-302 on the same shared I2C bus as the
+  # primary backend. Firmware-only: the simulator replays stored signals and has
+  # no light sensor to read. This is deliberately not a third value of
+  # CONFIG_AS_SENSOR_BACKEND - the light sensor adds the `light` channel
+  # alongside the primary one, and its failure invalidates only that channel.
+  #
+  # meas_time_ms is the one-shot conversion wait (datasheet maximum at the
+  # default MTreg). One-shot is used rather than continuous mode because the node
+  # samples every 5-60 s and the board's 3.3 V rail stays up during light sleep.
+  use_bh1750: 1
+  bh1750_i2c_addr: 0x23
+  bh1750_meas_time_ms: 180
+
+  # Optional soil-moisture telemetry: an analog probe on an ADC1 pin, read as
+  # raw counts + calibrated millivolts + a two-point relative index. Firmware-
+  # only, and deliberately NOT a fifth adaptive channel: the ADC and its
+  # calibration are validated here first.
+  #
+  # dry_raw / wet_raw are proposed endpoints in raw counts. If either is 0,
+  # calibration is incomplete: raw counts are still reported, millivolts are
+  # reported only when ADC calibration succeeds, and the index stays invalid.
+  # See docs/hardware.md for the provisional dry measurement and open issues.
+  #
+  # soil_moisture_norm is a two-point RELATIVE index (0 = dry endpoint,
+  # 1 = wet endpoint), not volumetric water content and not an absolute
+  # soil-moisture percentage.
+  use_soil_sensor: 1
+  soil_adc_gpio: 1
+  soil_adc_atten: 3
+  soil_sample_count: 16
+  soil_dry_raw: 0
+  soil_wet_raw: 0
+
+
+# -------------------------------------------------------------
+# Evaluation configuration (metrics only, not used by the node)
+# -------------------------------------------------------------
+evaluation:
+  # Channel-aware one-to-one event matching tolerance, seconds.
+  event_match_tolerance_s: 5.0
+
+  # Ground-truth labelling rule (docs/change_score_spec.md §10).
+  # This is applied by the DATASET GENERATOR to its own noise-free
+  # driven signal, in ABSOLUTE PHYSICAL UNITS. It deliberately does
+  # not reuse the policy's noise floor, so AdaptiveSense cannot
+  # influence what counts as an event.
+  gt_label_min_duration_s: 10.0
+  gt_label_min_deviation:
+    temperature: 1.5         # °C
+    humidity: 8.0            # %RH
+    pressure: 3.0            # hPa
+    light: 250.0             # lux
+
+results:
+  output_dir: results
+  # Supported chart formats; matplotlib file extension.
+  plot_format: png

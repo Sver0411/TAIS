@@ -1,0 +1,37 @@
+{
+  "status": "COMPLETE",
+  "purpose": "historical diagnosis only; no parameter selection",
+  "source_manifest_sha256": "cccc2f54364e51e99c11290a34c94fb71e7ba0609b06e022469cbaffbb680ea8",
+  "diagnostic_source_sha256": "d667b6179fce642d39c7ac24f62347e1f3c34a4c2ddf01487f2b1b329a9e8dbf",
+  "seeds": [
+    900,
+    901,
+    902,
+    903,
+    904,
+    905,
+    906,
+    907,
+    908,
+    909,
+    910,
+    911,
+    912,
+    913,
+    914,
+    915,
+    916,
+    917,
+    918,
+    919
+  ],
+  "event_rows": 43520,
+  "misses": 24844,
+  "outputs": {
+    "timelines.csv": "9582916f17021f15401bc991d0849f247b45d66adf676e683f32a095d9ae4bd8",
+    "timelines.png": "3d164fecdd585c5e95338694c5b7f23154e192b2b6668b93b1712a2511464252",
+    "timelines.pdf": "7b04f784f55acec2d114a3a94c4f7ecd75e3cfe9ea74873d172ed9fc048a730f",
+    "events.csv": "140272dc4351de1878d0b0c307f2b7fbdc5b74bf7809b24916c2c8b96254d021",
+    "miss_causes.csv": "d6044a3d95e1e172fcec3e6d6f651cd179ed21caa9f444e67b1e68139062be68"
+  }
+}
