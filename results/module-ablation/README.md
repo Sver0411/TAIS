@@ -10,8 +10,7 @@ replicates. Engineering uses exposed seed20 (864 runs); the initial completed
 engineering/schema/plot review remains in [the original set](../module-ablation-engineering-attempt1/README.md).
 
 [Protocol and audit](../../docs/MODULE_ABLATION_PROTOCOL.md) ·
-[Chinese results interpretation](../../docs/MODULE_ABLATION_RESULTS_ZH.md) ·
-[Japanese professor progress draft](../../docs/MODULE_ABLATION_PROGRESS_JA.md).
+[Chinese results interpretation](../../docs/MODULE_ABLATION_RESULTS_ZH.md).
 
 ## Files and definitions
 

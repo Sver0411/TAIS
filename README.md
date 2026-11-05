@@ -70,7 +70,6 @@ Historical G1/G2 results above retain their original scoring definitions.
 
 [Frozen protocol](docs/MODULE_ABLATION_PROTOCOL.md) ·
 [Results and reproduction](results/module-ablation/README.md) ·
-[Japanese progress report](docs/MODULE_ABLATION_PROGRESS_JA.md) ·
 [Chinese analysis](docs/MODULE_ABLATION_RESULTS_ZH.md).
 
 With the installed environment, one command runs a fresh complete replica using

@@ -1457,9 +1457,7 @@
     "scripts/verify_offline_spatial.py": "061d54ea0724251dd816d6c92af5f212232a0358872da2de452dbfffc5ae7ed7",
     "scripts/verify_paper.py": "3e814adb20b7003f7a932c0d550ea904bed54a34aba90bb11598ab68d3c976dc",
     "scripts/verify_paper_references.py": "f9a5a68e59457b53624def44cb7e86ac76f891ea511400ef95ccaf71a9810440",
-    "scripts/verify_paper_revision.py": "ce588fe5e03e56fede95b8c669a2cd086ef094220e8110dbe5a074aa425aaa42",
     "scripts/verify_su.py": "2936b9fcd322217c0357e497f5d37907d969061579c82f125378d8c6e599ce40",
-    "scripts/verify_transfer.py": "d5c578d929659cbab59338aa38b2df941439e120fcbc3fb36df13d00a65f8b58",
     "scripts/verify_wire_v2_results.py": "45e4bac87ec8c697c1f2bfc96e6678e3e3c10f3a057c4116b0c60e5e24fd67f0",
     "src/tais/__init__.py": "767a02952c53ff2fdf442b5c5301323ba41c93fad431c50548e1e8997d55e9d8",
     "src/tais/budget_eval.py": "49f555d01407869545ff8de18fdfcd68666235f5bedab668131faa950fb024a0",
@@ -1523,5 +1521,8 @@
     "tests/test_wire_codec.py": "d35ebddec526c8eb7e6de1d6a96a71c6a3baeb285b8c7a0d94d2872ea3414e26",
     "tests/test_wire_v2.py": "6eb7acdc39c2d007c7d093170026bd4be788d36b122227f75e519a5315994ab5"
   },
-  "submodules": " f7ec30fd4721aa1a7c308f879050a83936e60067 vendor/AdaptiveSense (heads/main)\n 2ce98dd043bb01ea99052eda218c68a172499a4c vendor/SensorTrust (heads/main)\n"
+  "submodules": " f7ec30fd4721aa1a7c308f879050a83936e60067 vendor/AdaptiveSense (heads/main)\n 2ce98dd043bb01ea99052eda218c68a172499a4c vendor/SensorTrust (heads/main)\n",
+  "maintenance_ledger": "maintenance/ci-guards.json",
+  "original_ledger": "maintenance/historical-protection-original.json",
+  "original_ledger_sha256": "7019bcd50abe8e32410b7d51aec20d1637c1915045941f168937b92ecba1c019"
 }

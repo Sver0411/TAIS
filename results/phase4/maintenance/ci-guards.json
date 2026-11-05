@@ -1,0 +1,14 @@
+{
+  "reason": "CI-only maintenance: distinguish additions belonging to later studies from changes to inherited files; frozen runtime, configurations and experimental evidence are unchanged.",
+  "original_commit": "1a09fab48887952402e61c68345c10791b7dab9e",
+  "files": {
+    "scripts/verify_transfer.py": {
+      "original_sha256": "d5c578d929659cbab59338aa38b2df941439e120fcbc3fb36df13d00a65f8b58",
+      "current_sha256": "36efe5a997a4a9e4f193a4c9dce38a6d4cd7096eb654999d7b34d32e2bfb5f37"
+    },
+    "scripts/verify_paper_revision.py": {
+      "original_sha256": "ce588fe5e03e56fede95b8c669a2cd086ef094220e8110dbe5a074aa425aaa42",
+      "current_sha256": "3dfba3b8659bd6d7b8bcfe0a444bac8f2c95929da06beee7b17314d69b8732c5"
+    }
+  }
+}

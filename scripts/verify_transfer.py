@@ -10,6 +10,12 @@ from benchmark_joint_optimization import sha,canon
 from tais.transfer_signals import generate,counterfactual,scenarios
 from tais.wire_codec import decode,encode
 
+def verify_inherited_paths():
+    # Additions belong to later studies; inherited files stay protected.
+    paths=['src','vendor','configs/experiment.yaml','configs/tais-paper.json','results/tais-paper','results/tais-su','src/tais/signals.py']
+    changed=subprocess.check_output(['git','diff','--name-only','--diff-filter=CDMRTUXB',BASE,'--',*paths],cwd=ROOT,text=True).splitlines()
+    assert set(changed)<={'src/tais/transfer_signals.py'},changed
+
 def verify(root,phase,archives):
     """Verify original source locks before checking G2 data, archives and manuscript bindings.
 
@@ -97,9 +103,7 @@ def verify(root,phase,archives):
         pdf=json.loads(pdf_check.read_text());assert sha(ROOT/'papers/tais/manuscript.pdf')==pdf['pdf_sha256']
         for p,h in pdf['source_sha256'].items():assert sha(ROOT/p)==h
     # Existing protected files must retain the exact inherited versions.
-    paths=['src','vendor','configs/experiment.yaml','configs/tais-paper.json','results/tais-paper','results/tais-su','src/tais/signals.py']
-    changed=subprocess.check_output(['git','diff','--name-only',BASE,'--',*paths],cwd=ROOT,text=True).splitlines()
-    assert set(changed)<={'src/tais/transfer_signals.py'},changed
+    verify_inherited_paths()
     print(json.dumps(dict(status='PASS',runs=len(d),event_rows=len(e),fault_rows=len(f),archive_digests=checked,frames_roundtripped=frames,seed_clusters=len(manifest['seeds']),frozen_sources_unchanged=True),indent=2))
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--root',type=Path,default=OUT);p.add_argument('--phase',choices=['smoke','test'],default='test');p.add_argument('--archives',choices=['none','sample','full'],default='none');a=p.parse_args();verify(a.root,a.phase,a.archives)

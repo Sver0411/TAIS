@@ -7,6 +7,12 @@ import pandas as pd
 from PIL import Image
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'results/tais-paper-review';P=ROOT/'papers/tais'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def verify_inherited_paths(base):
+    # Later additive studies are outside this historical revision's scope.
+    # Retain modified/deleted/renamed/type-changed inherited paths in the guard.
+    delta=subprocess.check_output(['git','diff','--name-only','--diff-filter=CDMRTUXB',base,'--','src','configs','vendor','results/tais-paper','results/tais-transfer'],cwd=ROOT,text=True).splitlines()
+    assert not delta,delta
+
 def verify():
     """Require byte-exact protected files, then audit manuscript cells and cross-references.
 
@@ -15,7 +21,7 @@ def verify():
     from numerical evidence integrity; never refresh frozen hashes to hide it."""
     protection=json.loads((OUT/'protection.json').read_text())
     for p,h in protection['protected_files'].items():assert sha(ROOT/p)==h,p
-    delta=subprocess.check_output(['git','diff','--name-only',protection['base'],'--','src','configs','vendor','results/tais-paper','results/tais-transfer'],cwd=ROOT,text=True).splitlines();assert not delta,delta
+    verify_inherited_paths(protection['base'])
     manifest=json.loads((OUT/'budget_sensitivity_manifest.json').read_text())
     for p,h in manifest['inputs'].items():assert sha(ROOT/p)==h
     assert sha(OUT/'budget_sensitivity.csv')==manifest['output_sha256']
