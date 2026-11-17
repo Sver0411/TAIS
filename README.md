@@ -99,14 +99,14 @@ tradeoffs; no natural-fault, wireless-energy or field-performance validation.
 
 ## Quick start
 
-Use **Python 3.14** and a C11 compiler (`cc`, Clang or GCC). The bridge compiles on first use. Run from the checkout root; no hardware or external dataset is required.
+Use **Python 3.10+** and a C11 compiler (`cc`, Clang or GCC). The bridge compiles on first use. Run from the checkout root; no hardware or external dataset is required.
 
 **1. Install and check the Core components**
 
 ```sh
 git clone --recurse-submodules https://github.com/Sver0411/TAIS.git
 cd TAIS
-python3.14 -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements-lock.txt
 python -m pip install -e . --no-build-isolation

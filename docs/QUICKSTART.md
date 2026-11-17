@@ -4,11 +4,11 @@ This guide runs existing software on new scratch paths. It does not recalibrate 
 
 ## Environment and installation
 
-The reference local environment is Python 3.14.7 on macOS arm64 with Apple Clang 17; GitHub Actions uses Python 3.14 on Ubuntu. `pyproject.toml` declares Python >=3.10, but the exact dependency lock is tested on 3.14, not every declared Python version. Use a checkout with initialized submodules and a writable `build/` directory. The C bridge needs a working `cc` (or set `CC=clang` / `CC=gcc`) and compiles a cached shared library on first use. macOS users need Command Line Tools; Linux users need their distribution's C compiler/development tools. Windows/MSVC is not verified.
+Use Python 3.10+ with initialized submodules and a writable `build/` directory. The C bridge requires a working C11 compiler (`cc`, or set `CC=clang` / `CC=gcc`) and compiles a cached shared library on first use.
 
 ```sh
 git submodule update --init --recursive
-python3.14 -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements-lock.txt
 python -m pip install -e . --no-build-isolation

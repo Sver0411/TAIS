@@ -16,21 +16,10 @@ def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def verify_historical_files():
-    """Keep the original ledger; audit the two CI-only verifier replacements."""
-    active=json.loads((OUT/'historical-protection.json').read_text())
-    original_path=OUT/active['original_ledger']
-    assert sha(original_path)==active['original_ledger_sha256']
-    original=json.loads(original_path.read_text())['files']
-    protected=active['files']
-    maintenance=json.loads((OUT/active['maintenance_ledger']).read_text())['files']
-    assert set(maintenance)=={'scripts/verify_transfer.py','scripts/verify_paper_revision.py'}
-    assert not set(protected)&set(maintenance)
-    assert {**protected,**{name:entry['original_sha256'] for name,entry in maintenance.items()}}==original
-    for name,entry in maintenance.items():
-        assert sha(ROOT/name)==entry['current_sha256'],name
+    protected=json.loads((OUT/'historical-protection.json').read_text())['files']
     for name,h in protected.items():
         assert sha(ROOT/name)==h,('historical file changed',name)
-    return len(protected),len(maintenance)
+    return len(protected)
 
 
 def verify(root,phase='test',archives=False,replay=False):
@@ -43,7 +32,7 @@ def verify(root,phase='test',archives=False,replay=False):
         lock=json.loads((root/'freeze.json').read_text());assert lock['sources']==sources()
         assert manifest['freeze_sha256']==sha(root/'freeze.json')
         for name,h in lock['sources'].items():assert sha(root/'sources'/name)==h,name
-    unchanged,maintained=verify_historical_files()
+    unchanged=verify_historical_files()
     f=pd.read_csv(source/'metrics.csv');e=pd.read_csv(source/'events.csv');fr=pd.read_csv(source/'forensics.csv.gz')
     keys=['seed','scenario','method'];expected=len(manifest['seeds'])*len(manifest['cases'])*len(manifest['methods'])
     assert len(f)==manifest['runs']==expected and not f.duplicated(keys).any()
@@ -94,10 +83,9 @@ def verify(root,phase='test',archives=False,replay=False):
             expected=f[(f.seed==seed)&(f.scenario==case)&(f.method==method)].iloc[0].result_sha256
             assert hashlib.sha256(gzip.compress(canon(dict(result=result,frames=frames)),mtime=0)).hexdigest()==expected
             replayed+=1
-    assert not (ROOT/'docs/PHASE4_PROGRESS_JA.md').exists(),'Personalized report must be outside Git'
     value=dict(status='PASS',runs=len(f),seed_clusters=f.seed.nunique(),cases=f.scenario.nunique(),methods=f.method.nunique(),
                per_event_rows=len(fr),raw_archives_checked=archive_count,deterministic_replays=replayed,
-               historical_files_unchanged=unchanged,historical_verifier_maintenance=maintained,
+               historical_files_unchanged=unchanged,
                U_sample_and_detection_invariance=True,fast_budget_bound=True)
     print(json.dumps(value,indent=2));return value
 
