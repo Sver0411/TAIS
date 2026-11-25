@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETE",
+  "sweep_runs": 10500,
+  "final_runs": 10500,
+  "paired_tests": 400,
+  "outputs": {
+    "axis_a_grid_final.csv": "7f503d7101c9c58a01ce002b02d2d1d419d5699c4a35c0f35afd08e33de2e773",
+    "figures/fig01_axis_a_dynamics_phase_map.pdf": "40e70c27e73033f8581f1329d02f9fa6789eb15b9284545c62b251b0a4a9c1ed",
+    "figures/fig01_axis_a_dynamics_phase_map.png": "2a9867d9ef2df16451f963628bbe50f73c49f6d5567b26f5b08b1ea8d6abfb02",
+    "figures/fig02_axis_b_link_degradation_boundary.pdf": "06b69ee02b5cf7593f77cf923980ce42fca51a940ea78fe5cfb51c6b12925127",
+    "figures/fig02_axis_b_link_degradation_boundary.png": "9b620215933c3ea8dfe1f928380010bf659ac7812c9d012fa161229f192befea",
+    "figures/fig03_ablation_and_pareto.pdf": "ddd55f5f21f9079a2bb4533f3c4c416d57fd94f968ad01c3c9e417dce47a7247",
+    "figures/fig03_ablation_and_pareto.png": "29739f01a91010275ac3a3c7ec69656ba701db3e1f0fd8c3f06265130023275e",
+    "figures/fig04_slice_c_noise_fault_nondegradation.pdf": "94c70bc71fd69a061421e15310cb1a6b848012048951a882e01f3ff8779e718c",
+    "figures/fig04_slice_c_noise_fault_nondegradation.png": "be6d37c249184030a7824cf85a7d941d0f68e1190bab74fa0d17c4ad8cd2f6a9",
+    "paired_effects_final.csv": "fe8419b926e24050c49814023f89e716a40d8176de321af5f8891954d0a187b9",
+    "summary_final.csv": "85e4fa01c04b9ffd9bb8d528b6099f0136661b630bbf84eb236d720c9bd829bf",
+    "summary_sweep.csv": "7b6d463e5171653796121bd579dedcef3bd878f9cdfdfee83f1cf576e9288950"
+  }
+}

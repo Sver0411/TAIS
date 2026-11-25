@@ -97,6 +97,43 @@ actual resources. Bootstrap intervals cluster whole paired seeds, and the
 78 prespecified tests use Holm correction. These are synthetic system-level
 tradeoffs; no natural-fault, wireless-energy or field-performance validation.
 
+## Phase 5: 3D Joint Adaptive Closed-Loop & Boundary Analysis
+
+Building on MA-1 and Phase 4 (`src/tais/adaptive/`), the additive `src/tais/closed_loop/` package introduces `TAIS-JALC` — a lean 4+1 state machine (`QUIET_ECO`, `PROBE`, `TRACK`, `SAFE_FALLBACK`, `DIAG_VERIFY`) with five control hyperparameters, strict Binary v1 reuse, AoI-sampling hard reservation, and closed-loop loss/bandwidth link telemetry.
+
+Across 20 held-out validation seeds (`1100–1119`) covering event dynamics (10–600 s × 0.5–2.5× amplitude), degraded links (0–30% loss, Gilbert-Elliott bursts, 600–1200 B/min caps) and high-noise/fault slices:
+
+- **Degraded links & freshness:** under 30% packet loss and burst fading, `JALC-Full` improves receiver F1 by **+10.6 to +11.6 pp** over `A5` (`p_holm < 0.05`) while reducing run-P95 finite-value AoI from **140–175 s** to **42–45 s** (0% violation under lossless transport).
+- **Documented failure boundaries:** ultra-short pulses ($\le 10\text{ s}$), 600 s smooth slow ramps under the unchanged 60 s EMA detector, and 7× high-noise events remain explicit degradation regimes.
+
+[Phase 5 boundary report (ZH)](docs/PHASE5_BOUNDARY_RESULTS_ZH.md) · [Closed-loop source](src/tais/closed_loop/) · [Boundary config](configs/phase5_boundary.json)
+
+## Research Stack & Related Repositories
+
+TAIS sits at the adaptive-observation layer of a four-tier reproducible AIoT systems research stack:
+
+```mermaid
+flowchart TB
+    L1["L1 · Reliable Sensing<br/>SensorTrust (Portable C11 health monitoring)"]
+    L2["L2 · Adaptive Observation & Trust Gating<br/>AdaptiveSense (ESP32-S3 sampling) → TAIS (Joint closed-loop scheduling & boundary analysis)"]
+    L3["L3 · Freshness & Lossy-Link Transport<br/>EventGuard-LoRa (Sub-GHz redundancy) · NetAdapt-IoT (AoI/QoS) · IoT-MPQUIC-Scheduler (Freshness MPQUIC)"]
+    L4["L4 · Fault Resilience, Benchmarks & CPS Validation<br/>EdgeFaultLab (Fault injection) · TinyEdgeBench (ESP32-S3 benchmarks) · Smart-Agriculture-Edge-AI · AgriTwin-CPS"]
+    L1 --> L2 --> L3 --> L4
+```
+
+| Layer | Repository | Focus |
+| :--- | :--- | :--- |
+| L1 | [SensorTrust](https://github.com/Sver0411/SensorTrust) | Zero-allocation C11 sensor health diagnosis (`RANGE`, `STUCK`, `SPIKE`, `DRIFT`, `MISSING`) |
+| L2 | [AdaptiveSense](https://github.com/Sver0411/AdaptiveSense) | Change-aware adaptive sampling primitives and ESP32-S3 firmware |
+| L2 | [TAIS](https://github.com/Sver0411/TAIS) | Trust-aware importance scheduling, ablation studies, and closed-loop boundary analysis |
+| L3 | [EventGuard-LoRa](https://github.com/Sver0411/EventGuard-LoRa) | Event-aware redundancy evaluated on ESP32-S3 + E220 Sub-GHz LoRa links |
+| L3 | [NetAdapt-IoT](https://github.com/Sver0411/NetAdapt-IoT) | Multi-flow IoT resource scheduling balancing AoI, deadlines, and fairness |
+| L3 | [IoT-MPQUIC-Scheduler](https://github.com/Sver0411/IoT-MPQUIC-Scheduler) | Deadline- and freshness-aware multipath QUIC scheduling for IoT traffic |
+| L4 | [EdgeFaultLab](https://github.com/Sver0411/EdgeFaultLab) | Deterministic fault injection and resilience testing for edge/IoT systems |
+| L4 | [TinyEdgeBench](https://github.com/Sver0411/TinyEdgeBench) | Lightweight micro-benchmarks for TinyML / edge kernels on ESP32-class hardware |
+| L4 | [Smart-Agriculture-Edge-AI](https://github.com/Sver0411/Smart-Agriculture-Edge-AI) | Multi-node edge AI smart-agriculture system with LoRa failover and safe actuation |
+| L4 | [AgriTwin-CPS](https://github.com/Sver0411/AgriTwin-CPS) | Greenhouse digital twin and cyber-physical closed-loop fault-resilience simulator |
+
 ## Quick start
 
 Use **Python 3.10+** and a C11 compiler (`cc`, Clang or GCC). The bridge compiles on first use. Run from the checkout root; no hardware or external dataset is required.

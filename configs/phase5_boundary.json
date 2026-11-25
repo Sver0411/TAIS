@@ -1,0 +1,67 @@
+{
+  "version": "phase5-boundary-v1",
+  "engineering_seeds": [1000, 1001, 1002, 1003],
+  "sweep_seeds": [
+    1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029,
+    1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039
+  ],
+  "final_seeds": [
+    1100, 1101, 1102, 1103, 1104, 1105, 1106, 1107, 1108, 1109,
+    1110, 1111, 1112, 1113, 1114, 1115, 1116, 1117, 1118, 1119
+  ],
+  "params": {
+    "fallback_interval_s": 20.0,
+    "diag_interval_s": 15.0,
+    "aoi_cap_quiet_s": 45.0,
+    "aoi_cap_active_s": 20.0,
+    "loss_redundancy_threshold": 0.10
+  },
+  "methods": [
+    "Fixed-20",
+    "A5",
+    "A7",
+    "Risk-T1-U1",
+    "JALC-ObsOnly",
+    "JALC-AoI",
+    "JALC-Full"
+  ],
+  "deadline_s": 120,
+  "aoi_sla_s": 45.0,
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 2026112501,
+  "permutation_draws": 20000,
+  "axis_a": {
+    "durations_s": [10, 20, 45, 120, 600],
+    "amplitude_factors": [0.5, 0.75, 1.0, 1.5, 2.5],
+    "onset_ranges": [[180, 260], [960, 1040]]
+  },
+  "axis_b": {
+    "scenarios": ["clean_both", "high_frequency"],
+    "loss_profiles": [
+      {"id": "loss_0", "loss_rate": 0.0, "burst_mode": false},
+      {"id": "loss_5", "loss_rate": 0.05, "burst_mode": false},
+      {"id": "loss_15", "loss_rate": 0.15, "burst_mode": false},
+      {"id": "loss_30", "loss_rate": 0.30, "burst_mode": false},
+      {"id": "burst_ge", "loss_rate": 0.0, "burst_mode": true}
+    ],
+    "bandwidth_caps_bpm": [600.0, 1200.0, null]
+  },
+  "slice_c": {
+    "scenarios": [
+      "noisy_none",
+      "noisy_events",
+      "range_temperature_same",
+      "range_temperature_cross",
+      "spike_temperature_same",
+      "spike_temperature_cross",
+      "stuck_temperature_same",
+      "drift_temperature_same",
+      "missing_temperature_cross",
+      "multi_range"
+    ],
+    "link_profiles": [
+      {"id": "loss_0", "loss_rate": 0.0, "burst_mode": false, "bandwidth_bpm": null},
+      {"id": "loss_15", "loss_rate": 0.15, "burst_mode": false, "bandwidth_bpm": null}
+    ]
+  }
+}

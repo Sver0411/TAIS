@@ -1,0 +1,45 @@
+{
+  "status": "COMPLETE",
+  "phase": "final",
+  "seeds": [
+    1100,
+    1101,
+    1102,
+    1103,
+    1104,
+    1105,
+    1106,
+    1107,
+    1108,
+    1109,
+    1110,
+    1111,
+    1112,
+    1113,
+    1114,
+    1115,
+    1116,
+    1117,
+    1118,
+    1119
+  ],
+  "runs": 10500,
+  "sources": {
+    "src/tais/closed_loop/__init__.py": "8ebdd4437c7fb5ab85ebd2272286cf0a4962bde4836d6a668363964a7168e980",
+    "src/tais/closed_loop/controller.py": "84a75b22fb5ebf0f27150b718c01598fe1cb5be32cf1d7bf7cf3fb4594081e0a",
+    "src/tais/closed_loop/link_model.py": "7f35a278f2343c3d2d05880af9cde9a1186f318a46765338a3c654c7bdb151d8",
+    "src/tais/closed_loop/state.py": "3dcc90c0444b049bad1f5b0e9f2ec92cf4d2ab5428d954964ef19560dfec611e",
+    "configs/phase5_boundary.json": "0991b047af7d19c8820218cead15b688f4c3269fe7889a13c29e63a5e3657989",
+    "tests/test_closed_loop.py": "437dfd3c95bad52686707698ff06c8e34b6583150d27c2b2e75b8851cbf4717c",
+    "scripts/benchmark_phase5_boundary.py": "ea7455b10138fc4418adfee9028dfdb661bd9578eaf48ddfa287065be822675b",
+    "scripts/analyze_phase5_boundary.py": "8ecdfcddcf3f4d2474d268baf68b23451fc781e4a61a93adaa9e45054c9a91fd"
+  },
+  "metrics_sha256": "c5416f0aa5f6442f86fbd704cf089dd1725b4e55fb00a94940d89eeaee31b4c3",
+  "python": "3.14.7",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2",
+    "PyYAML": "6.0.3"
+  }
+}
