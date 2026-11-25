@@ -6,7 +6,7 @@
 
 TAIS is an open, reproducible AIoT research framework for monitoring dynamic physical environments with fault-prone sensors over constrained, lossy wireless links. It integrates zero-allocation C11 sensor health diagnosis (**SensorTrust**), change-aware adaptive sampling (**AdaptiveSense**), selective binary transmission (**Binary v1**), closed-loop freshness/loss scheduling (**`TAIS-JALC`**), and causal spatial $k$-NN drift disambiguation to study detection quality, sampling effort, communication cost, and data freshness (Age of Information, AoI) under one verifiable architecture.
 
-[Overview](#overview) · [Architecture](#system-architecture) · [Key Results](#experimental-results) · [Embedded C11](#hardware-trace-validation--embedded-c11-kernel) · [Quick Start](#quick-start) · [Paper](papers/tais/README.md)
+[Overview](#overview) · [Architecture](#system-architecture) · [Key Results](#experimental-results) · [Embedded C11](#2-hardware-trace-validation--embedded-c11-kernel) · [Quick Start](#quick-start) · [IEEE Paper (PDF)](papers/tais-closed-loop/manuscript.pdf)
 
 ---
 
@@ -18,6 +18,8 @@ When a sensor reading suddenly shifts, an edge node faces a three-way decision: 
 - **Real ESP32-S3 + E220 hardware traces & pure C11 port:** Evaluated over **24 audited ESP32-S3 + E220-400T22D Sub-GHz LoRa logs** (3,359 physical RF attempts), improving receiver F1 by **+7.74–9.46 pp** (`p_holm <= 0.0175`) and cutting P95 AoI from **225.9 s to 46.4 s** at lower RF airtime than fixed-period sampling; the zero-allocation C11 kernel fits in **1,072 B RAM** and **7,643 B ESP32-S3 flash** with **27/27** bit-exact trajectory parity.
 - **54-mote real-world external validity & causal spatial drift identifiability:** Evaluated on the public **MIT Intel Berkeley 54-mote** dataset (1.82M valid T+RH rows, 12 held-out days at 76.4% mean coverage), reducing real wall-clock P95 AoI by **−912 s** under real E220 loss traces, while causal spatial $k$-NN cuts single-sensor drift false alarms by **−75.0%** and beats an equal-cost `NullSpatial` negative control by **+45.4 pp** on common environmental events.
 - **Transparent tradeoffs & failure boundaries:** Documents exact operating regions alongside honest boundaries (ultra-short pulses $\le 10\text{ s}$, 600 s slow ramps under a 60 s EMA detector, uncalibrated HVAC warming shifts, and single-node local slow events).
+
+![TAIS Graphical Abstract](papers/tais-closed-loop/graphical_abstract.png)
 
 ## See It Run
 
@@ -104,7 +106,7 @@ Across 20 held-out seeds × 46 synthetic scenarios (14 saved operating points wi
 
 - At comparable sampling totals (**85,055 vs. 82,800 samples**), `JO-SU-40` sends **959,129 bytes** vs. **2,940,838 bytes** for `Fixed-20+C11` and lowers fault-induced false reports (**157 vs. 353**), trading off higher receiver P95 ordinary-data age (**113 s vs. 18 s**). `GateOnly+U` retains `GateOnly`'s sender F1 at lower byte volume.
 
-[Cross-generator report](docs/TAIS_CROSS_GENERATOR_REPORT.md) · [Module ablation analysis (ZH)](docs/MODULE_ABLATION_RESULTS_ZH.md) · [Robust-sampling boundary report (ZH)](docs/PHASE4_RESULTS_ZH.md) · [Plot data](results/tais-transfer/summary.csv) · [Paper](papers/tais/README.md)
+[Cross-generator report](docs/TAIS_CROSS_GENERATOR_REPORT.md) · [Module ablation analysis (ZH)](docs/MODULE_ABLATION_RESULTS_ZH.md) · [Robust-sampling boundary report (ZH)](docs/PHASE4_RESULTS_ZH.md) · [Plot data](results/tais-transfer/summary.csv) · [IEEE Paper (PDF)](papers/tais-closed-loop/manuscript.pdf)
 
 ---
 
@@ -167,7 +169,7 @@ python scripts/verify_ablation.py
 ## Documentation & Related Projects
 
 - **Use & extend:** [Quick start](docs/QUICKSTART.md) · [Core prototype contract](docs/TAIS_CORE_PROTOTYPE.md) · [Repository & source map](docs/REPOSITORY_GUIDE.md)
-- **Paper & reports:** [Paper & LaTeX guide](papers/tais/README.md) · [中文概要](docs/TAIS_PAPER_SUMMARY_ZH.md) · [Document index](docs/README.md) · [Results index](results/README.md)
+- **Paper & reports:** [IEEEtran Manuscript (PDF)](papers/tais-closed-loop/manuscript.pdf) · [Paper & LaTeX guide](papers/tais-closed-loop/README.md) · [Document index](docs/README.md) · [Results index](results/README.md)
 - **Part of a 4-layer AIoT systems stack:**
   - **L1 · Reliable Sensing:** [SensorTrust](https://github.com/Sver0411/SensorTrust)
   - **L2 · Adaptive Observation:** [AdaptiveSense](https://github.com/Sver0411/AdaptiveSense) · [TAIS](https://github.com/Sver0411/TAIS)

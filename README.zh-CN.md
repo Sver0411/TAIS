@@ -6,7 +6,7 @@
 
 TAIS 将零分配 C11 传感器健康诊断（**SensorTrust**）、变化感知自适应采样（**AdaptiveSense**）、选择性二进制传输（**Binary v1**）、弱网数据鲜度与丢包闭环控制（**`TAIS-JALC`**）以及多节点因果空间 $k$-NN 漂移辨识整合在同一可复现评测体系中，系统研究检测质量、采样开销、通信字节与数据新鲜度（AoI）之间的权衡与失效边界。
 
-[核心亮点](#核心亮点) · [系统架构](#系统架构) · [实验结果](#实验结果) · [C11 与硬件验证](#2-真实-esp32-s3--e220-硬件丢包验证与纯-c11-内核) · [快速开始](#快速开始) · [论文与文档](papers/tais/README.md)
+[核心亮点](#核心亮点) · [系统架构](#系统架构) · [实验结果](#实验结果) · [C11 与硬件验证](#2-真实-esp32-s3--e220-硬件丢包验证与纯-c11-内核) · [快速开始](#快速开始) · [IEEE 论文 (PDF)](papers/tais-closed-loop/manuscript.pdf)
 
 ---
 
@@ -18,6 +18,8 @@ TAIS 将零分配 C11 传感器健康诊断（**SensorTrust**）、变化感知�
 - **真实 ESP32-S3 + E220 硬件日志与纯 C11 零分配内核**：在 **24 组实测 Sub-GHz LoRa 丢包日志**（3,359 次物理射频尝试）上较 `A5` / `Fixed-20` 提升 F1 **+7.74–9.46 pp**，P95 AoI 从 **225.9 s** 压至 **46.4 s** 且物理射频占空比更低；纯 C11 实现仅占 **1,072 B 静态 RAM** 与 **7,643 B ESP32-S3 Flash**，27 条轨迹 100% 逐帧一致。
 - **54 节点真实传感网外部效度与空间漂移辨识**：在 **MIT Intel Berkeley 54 节点**真实温湿度数据（182 万有效行、12 天连续留出块平均覆盖率 76.4%）上，弱网下将真实 P95 AoI 降低 **−912 s**；因果空间 $k$-NN 将单传感器漂移误报压低 **−75.0%**，并在共同环境事件上以 **+45.4 pp** 显著战胜等成本负对照 `NullSpatial`。
 - **诚实边界披露**：完整记录有效区间与明确退化边界（$\le 10\text{ s}$ 极短脉冲、600 s 平滑缓变、强噪声、未校准暖通晨间升温及单节点局部缓变事件）。
+
+![TAIS 图形摘要](papers/tais-closed-loop/graphical_abstract.png)
 
 ## 系统架构
 
@@ -100,7 +102,7 @@ python examples/tais-core/run.py --scenario missing_cross_long --seed 20 \
 python examples/tais-core/view_run.py results/scratch/quickstart-01 --tail 12
 ```
 
-详细配置见 [快速开始文档](docs/QUICKSTART.md) 与 [论文与构建说明](papers/tais/README.md)。
+详细配置见 [快速开始文档](docs/QUICKSTART.md)、[IEEE 论文 (PDF)](papers/tais-closed-loop/manuscript.pdf) 与 [论文构建说明](papers/tais-closed-loop/README.md)。
 
 ## 相关研究栈与许可证
 
