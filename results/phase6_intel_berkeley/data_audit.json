@@ -1,0 +1,189 @@
+{
+  "source_url": "https://db.csail.mit.edu/labdata/labdata.html",
+  "data_txt_gz_sha256": "d99288c8f406ca6604d359ceaa0d8adfffa79e7095061a1e27dc4399f48c7225",
+  "mote_locs_txt_sha256": "3865c0263110c24c40e3377690cecaa552e0575cf56cdb9f5f8bd17130b6bf04",
+  "n_motes_with_coords": 54,
+  "total_lines": 2313682,
+  "malformed_lines": 93879,
+  "unknown_mote_rows": 9719,
+  "invalid_temp_rows": 384505,
+  "invalid_hum_rows": 289176,
+  "valid_temp_and_hum_rows": 1816504,
+  "n_dates": 29,
+  "daily_summary": [
+    {
+      "date": "2004-02-28",
+      "valid_rows": 83173,
+      "active_motes": 52,
+      "slot_2min_coverage_54motes": 0.8376
+    },
+    {
+      "date": "2004-02-29",
+      "valid_rows": 91649,
+      "active_motes": 52,
+      "slot_2min_coverage_54motes": 0.8927
+    },
+    {
+      "date": "2004-03-01",
+      "valid_rows": 91468,
+      "active_motes": 52,
+      "slot_2min_coverage_54motes": 0.8873
+    },
+    {
+      "date": "2004-03-02",
+      "valid_rows": 87483,
+      "active_motes": 51,
+      "slot_2min_coverage_54motes": 0.8413
+    },
+    {
+      "date": "2004-03-03",
+      "valid_rows": 85982,
+      "active_motes": 51,
+      "slot_2min_coverage_54motes": 0.8449
+    },
+    {
+      "date": "2004-03-04",
+      "valid_rows": 85957,
+      "active_motes": 51,
+      "slot_2min_coverage_54motes": 0.8448
+    },
+    {
+      "date": "2004-03-05",
+      "valid_rows": 88180,
+      "active_motes": 51,
+      "slot_2min_coverage_54motes": 0.876
+    },
+    {
+      "date": "2004-03-06",
+      "valid_rows": 91957,
+      "active_motes": 51,
+      "slot_2min_coverage_54motes": 0.8858
+    },
+    {
+      "date": "2004-03-07",
+      "valid_rows": 95981,
+      "active_motes": 51,
+      "slot_2min_coverage_54motes": 0.8967
+    },
+    {
+      "date": "2004-03-08",
+      "valid_rows": 99156,
+      "active_motes": 51,
+      "slot_2min_coverage_54motes": 0.9049
+    },
+    {
+      "date": "2004-03-09",
+      "valid_rows": 91219,
+      "active_motes": 50,
+      "slot_2min_coverage_54motes": 0.8543
+    },
+    {
+      "date": "2004-03-10",
+      "valid_rows": 36452,
+      "active_motes": 50,
+      "slot_2min_coverage_54motes": 0.314
+    },
+    {
+      "date": "2004-03-11",
+      "valid_rows": 51369,
+      "active_motes": 50,
+      "slot_2min_coverage_54motes": 0.4793
+    },
+    {
+      "date": "2004-03-12",
+      "valid_rows": 82642,
+      "active_motes": 49,
+      "slot_2min_coverage_54motes": 0.7954
+    },
+    {
+      "date": "2004-03-13",
+      "valid_rows": 83097,
+      "active_motes": 49,
+      "slot_2min_coverage_54motes": 0.8065
+    },
+    {
+      "date": "2004-03-14",
+      "valid_rows": 81654,
+      "active_motes": 47,
+      "slot_2min_coverage_54motes": 0.7925
+    },
+    {
+      "date": "2004-03-15",
+      "valid_rows": 50168,
+      "active_motes": 47,
+      "slot_2min_coverage_54motes": 0.5083
+    },
+    {
+      "date": "2004-03-16",
+      "valid_rows": 37428,
+      "active_motes": 45,
+      "slot_2min_coverage_54motes": 0.3734
+    },
+    {
+      "date": "2004-03-17",
+      "valid_rows": 80974,
+      "active_motes": 45,
+      "slot_2min_coverage_54motes": 0.7637
+    },
+    {
+      "date": "2004-03-18",
+      "valid_rows": 57375,
+      "active_motes": 45,
+      "slot_2min_coverage_54motes": 0.5884
+    },
+    {
+      "date": "2004-03-19",
+      "valid_rows": 69115,
+      "active_motes": 45,
+      "slot_2min_coverage_54motes": 0.6925
+    },
+    {
+      "date": "2004-03-20",
+      "valid_rows": 68435,
+      "active_motes": 42,
+      "slot_2min_coverage_54motes": 0.6805
+    },
+    {
+      "date": "2004-03-21",
+      "valid_rows": 58425,
+      "active_motes": 41,
+      "slot_2min_coverage_54motes": 0.5993
+    },
+    {
+      "date": "2004-03-22",
+      "valid_rows": 25952,
+      "active_motes": 38,
+      "slot_2min_coverage_54motes": 0.3696
+    },
+    {
+      "date": "2004-03-23",
+      "valid_rows": 32017,
+      "active_motes": 25,
+      "slot_2min_coverage_54motes": 0.3008
+    },
+    {
+      "date": "2004-03-24",
+      "valid_rows": 8415,
+      "active_motes": 11,
+      "slot_2min_coverage_54motes": 0.0939
+    },
+    {
+      "date": "2004-03-25",
+      "valid_rows": 695,
+      "active_motes": 3,
+      "slot_2min_coverage_54motes": 0.01
+    },
+    {
+      "date": "2004-04-01",
+      "valid_rows": 18,
+      "active_motes": 3,
+      "slot_2min_coverage_54motes": 0.0004
+    },
+    {
+      "date": "2004-04-02",
+      "valid_rows": 68,
+      "active_motes": 2,
+      "slot_2min_coverage_54motes": 0.0012
+    }
+  ]
+}

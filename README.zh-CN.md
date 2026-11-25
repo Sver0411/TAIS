@@ -1,6 +1,6 @@
 # TAIS — 信任感知重要性调度器（Trust-Aware Importance Scheduler）
 
-[English README](README.md) · [快速开始](docs/QUICKSTART.md) · [论文与证据](papers/tais/README.md) · [Phase 5 边界分析报告](docs/PHASE5_BOUNDARY_RESULTS_ZH.md)
+[English README](README.md) · [快速开始](docs/QUICKSTART.md) · [论文与证据](papers/tais/README.md) · [Phase 5 边界分析报告](docs/PHASE5_BOUNDARY_RESULTS_ZH.md) · [Phase 6 真实 54 节点与空间辨识报告](docs/PHASE6_REAL_DATA_SPATIAL_ZH.md)
 
 TAIS 是一个面向不可靠传感器与动态环境监测的开源可复现 AIoT 研究原型，将底层传感器健康诊断（SensorTrust C11）、变化感知自适应采样（AdaptiveSense）、选择性传输与弱网数据鲜度（AoI）闭环控制整合在同一因果评测框架下，系统研究检测质量、采样开销、通信字节与数据新鲜度之间的可复现边界。
 
@@ -13,6 +13,9 @@ TAIS 是一个面向不可靠传感器与动态环境监测的开源可复现 AI
   - **有效区间**：在 20–45 s 中短突发事件下较 `A5` 提升 Rx F1 **+8.6 至 +24.5 pp**；在 30% 丢包与 Gilbert-Elliott 突发丢包下较 `A5` 取得 **+10.6 至 +11.6 pp** 的 Holm 校正显著提升（$p < 0.05$），并将 Run-P95 有限有效值 AoI 从 **140–175 s** 压至 **42–51 s**（无损 0% 违约），操作性 FI 不恶化。
   - **Phase 5.5 真实 E220 硬件轨迹与纯 C11 移植**（[详细报告](docs/PHASE5_5_HW_TRACE_AND_C11_ZH.md)）：在 24 组实测 ESP32-S3 + E220-400T22D 硬件丢包日志（新种子 `1200–1219`）上，`JALC-Full` 较 `A5` 提升 **+7.74 pp**、较 `Fixed-20` 提升 **+9.46 pp**（$p_{\text{Holm}} \le 0.0175$）并将 P95 有限 AoI 由 **225.9 s** 压至 **46.4 s**；纯 C11 零分配实现通过 27 条全轨迹逐帧一致检验，静态 RAM **1,072 B**（含双通道 SensorTrust 共 **3.25 KB**），ESP32-S3 Xtensa `-Os` 交叉编译 `.text` 仅 **7,643 B**（Host 联合耗时 **1.44 µs/次**）。
   - **明确退化边界**：极短脉冲（$\le 10\text{ s}$）、600 s 平滑缓变脉冲（受冻结 60 s EMA 吞噬）以及 7× 强噪声含事件场景仍为明确失效区间。
+- **Phase 6 真实 54 节点外部效度与因果空间参考漂移辨识**（[详细报告](docs/PHASE6_REAL_DATA_SPATIAL_ZH.md)）：在 MIT CSAIL Intel Berkeley 54 节点真实温湿度数据集（231 万原始行审计、12 天连续留出块平均覆盖率 **76.4%** 通过 50% 门控、零未来插值）上开展两项验证：
+  - **实验 A（真实背景 × 真实 E220 硬件丢包，5,400 次运行）**：在 `e220_random_30` 链路下，`JALC-Full` 将真实 P95 有限 AoI 从 `A5` 的 **2,225 s（37.1 分钟）**压至 **1,313 s（21.9 分钟，−912 s，$p_{\text{Holm}}=0.0258$）**、Recall 提升 **+15.6 pp**，并在更少字节下优于 `Fixed-20`；同时坦诚记录固定噪声底座面对真实暖通晨间升温带来的背景误报域偏移。
+  - **实验 B（因果空间 $k$-NN vs. 单通道与等成本负对照 `NullSpatial`，3,600 次运行）**：`SpatialKNN` 将单节点缓漂引发的环境误报压低 **−75.0%**（$p_{\text{Holm}}=0.027$）、实现 **88.3%** 漂移检出（正常日 **96.5%**）；在共同环境事件上以 **0.00 pp** 零损失领先 `NullSpatial` **+45.4 pp**（$p_{\text{Holm}}=0.027$），干净日虚假漂移较 `NullSpatial` 下降 **−63.8%**，并将漂移叠加局部快事件召回率从 `23.3%` 提升至 **88.3%**（**+65.0 pp**）；同时诚实展示单节点局部缓变事件（`local_slow_event`）下降 **−55.0 pp** 的物理不可辨识边界。
 
 ## 四层 AIoT 研究栈与关联仓库
 

@@ -110,6 +110,16 @@ Across 20 held-out validation seeds (`1100–1119`) covering event dynamics (10�
 
 [Phase 5 boundary report (ZH)](docs/PHASE5_BOUNDARY_RESULTS_ZH.md) · [Phase 5.5 E220 hardware-trace & C11 report (ZH)](docs/PHASE5_5_HW_TRACE_AND_C11_ZH.md) · [Closed-loop source](src/tais/closed_loop/) · [Boundary config](configs/phase5_boundary.json)
 
+## Phase 6: 54-Mote Real-World External Validity & Spatial Drift Identifiability
+
+The additive `src/tais/real_data/` package evaluates TAIS on the public MIT CSAIL Intel Berkeley Research Lab 54-mote dataset (2.31M raw lines audited; 1.82M valid T+RH rows; strictly causal replay with zero future interpolation) across a pre-declared chronological split (3-day calibration prefix `2004-02-28..03-01`, 1-day isolation gap, 12-day contiguous held-out block `2004-03-03..03-14` passing the $\ge 50\%$ coverage gate at **76.4%** mean 54-mote coverage, including the real March 10–11 outage):
+
+- **Exp A — Real sensing background × real E220 hardware loss traces (5,400 runs):** under `e220_random_30`, `JALC-Full` reduces real wall-clock P95 finite AoI from **2,225 s (37.1 min)** (`A5`) to **1,313 s (21.9 min)** (`−912 s`, `p_holm = 0.0258`), cuts AoI violation by **−44.2 pp**, beats `Fixed-20` on P95 AoI (`−94.6 s`, `p_holm = 0.0273`) at lower byte cost, and lifts Recall by **+15.6 pp** (`79.4%` vs `63.8%`). Honestly, uncalibrated fixed `noise_floor = 0.15 °C` triggers additional background alarms during real morning HVAC warming, keeping overall F1 close to `A5` (`55.3%` vs `55.8%`).
+- **Exp B — Causal spatial $k$-NN reference vs. SingleChannel & equal-cost NullSpatial (3,600 runs, $k=4$, mean spacing `5.09 m`):** using matched causal differential spatial residuals, `SpatialKNN` cuts drift-induced false environmental alarms by **−75.0%** (`1.58 → 0.40/run`, `p_holm = 0.0270`), identifies **88.3%** of single-mote drifts (**96.5%** on normal-coverage days), preserves `common_env_event` recall with **0.00 pp** loss (**85.8%** vs `NullSpatial` **40.4%**, `+45.4 pp`, `p_holm = 0.0270`), cuts clean-day spurious drift alerts by **−63.8%** vs `NullSpatial` (`p_holm = 0.0258`), and lifts `drift_plus_local_fast` event recall by **+65.0 pp** over `SingleChannel` (`88.3%` vs `23.3%`, `p_holm = 0.0270`).
+- **Honest unidentifiable boundary (H3):** single-mote `local_slow_event` recall drops by **−55.0 pp** (`85.8% → 30.8%`), confirming that a slow single-node local event is fundamentally indistinguishable from single-sensor drift under single-modality spatial comparison alone.
+
+[Phase 6 real-data & spatial report (ZH)](docs/PHASE6_REAL_DATA_SPATIAL_ZH.md) · [Real-data & spatial source](src/tais/real_data/) · [Phase 6 benchmark script](scripts/run_phase6_intel_berkeley.py)
+
 ## Research Stack & Related Repositories
 
 TAIS sits at the adaptive-observation layer of a four-tier reproducible AIoT systems research stack:
@@ -180,8 +190,8 @@ GateOnly remains the default. SU numbers are **idle interval caps**, not fixed s
 
 ## Research limitations
 
-- The main evaluations use synthetic data. The separate offline study with real greenhouse background and controlled interventions **failed its predefined held-out coverage gate**.
-- Natural-fault diagnosis accuracy, agricultural field-event performance, real wireless delivery and measured energy consumption remain unvalidated.
+- The main evaluations use synthetic data. The earlier real-greenhouse background study **failed its predefined held-out coverage gate**; Phase 6 passes the 50% coverage gate on the 54-mote Intel Berkeley indoor dataset with controlled interventions, while agricultural field-event validation remains open.
+- Natural-fault diagnosis accuracy, agricultural field-event performance, live multi-node wireless deployment and measured battery energy consumption remain unvalidated.
 - Trust scores are heuristic. Events entirely between samples, or erased by a same-channel fault, may be unrecoverable.
 - Fewer application bytes do not imply an equal percentage reduction in radio energy or longer measured battery life.
 
