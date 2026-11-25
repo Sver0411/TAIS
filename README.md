@@ -104,9 +104,11 @@ Building on MA-1 and Phase 4 (`src/tais/adaptive/`), the additive `src/tais/clos
 Across 20 held-out validation seeds (`1100–1119`) covering event dynamics (10–600 s × 0.5–2.5× amplitude), degraded links (0–30% loss, Gilbert-Elliott bursts, 600–1200 B/min caps) and high-noise/fault slices:
 
 - **Degraded links & freshness:** under 30% packet loss and burst fading, `JALC-Full` improves receiver F1 by **+10.6 to +11.6 pp** over `A5` (`p_holm < 0.05`) while reducing run-P95 finite-value AoI from **140–175 s** to **42–45 s** (0% violation under lossless transport).
+- **Hardware-trace-driven validation (`1200–1219`):** replaying 24 audited ESP32-S3 + E220-400T22D Sub-GHz LoRa hardware logs (3,359 RF attempts from [EventGuard-LoRa](https://github.com/Sver0411/EventGuard-LoRa)), `JALC-Full` improves receiver F1 by **+7.74 pp** over `A5` and **+9.46 pp** over `Fixed-20` (`p_holm <= 0.0175`), lowers P95 finite AoI from **225.9 s** to **46.4 s**, and uses less physical E220 airtime than `Fixed-20` (`41.6 s` vs `43.8 s/seed`).
+- **Zero-allocation C11 port & ESP32-S3 footprint:** [tais_jalc.c](src/tais/closed_loop/c11/tais_jalc.c) passes 27 full-trajectory bit-exact parity tests against Python (`-std=c11 -Wall -Wextra -Werror`), requires **1,072 B** static RAM (**3,328 B** total with 2× `SensorTrust`), and cross-compiles to **7,643 B** `.text` on Xtensa ESP32-S3 (`-Os`, `0 B .data/.bss`).
 - **Documented failure boundaries:** ultra-short pulses ($\le 10\text{ s}$), 600 s smooth slow ramps under the unchanged 60 s EMA detector, and 7× high-noise events remain explicit degradation regimes.
 
-[Phase 5 boundary report (ZH)](docs/PHASE5_BOUNDARY_RESULTS_ZH.md) · [Closed-loop source](src/tais/closed_loop/) · [Boundary config](configs/phase5_boundary.json)
+[Phase 5 boundary report (ZH)](docs/PHASE5_BOUNDARY_RESULTS_ZH.md) · [Phase 5.5 E220 hardware-trace & C11 report (ZH)](docs/PHASE5_5_HW_TRACE_AND_C11_ZH.md) · [Closed-loop source](src/tais/closed_loop/) · [Boundary config](configs/phase5_boundary.json)
 
 ## Research Stack & Related Repositories
 

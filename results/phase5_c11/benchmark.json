@@ -1,0 +1,56 @@
+{
+  "host_platform": "macOS-15.7.7-arm64-arm-64bit-Mach-O",
+  "host_machine": "arm64",
+  "host_compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+  "host_benchmark": {
+    "sizeof_tais_jalc_t_bytes": 1072,
+    "sizeof_tais_jalc_params_t_bytes": 40,
+    "sizeof_tais_jalc_decision_t_bytes": 88,
+    "sizeof_sensor_trust_t_bytes": 1128,
+    "total_2ch_static_ram_bytes": 3328,
+    "iterations": 100000,
+    "uploads": 62220,
+    "sink": 121107,
+    "host_combined_latency_ns": {
+      "mean": 1440.45,
+      "p50": 1000,
+      "p95": 2000,
+      "p99": 3000,
+      "max": 30000
+    },
+    "host_throughput_updates_per_sec": 694227.5
+  },
+  "host_object_sizes": {
+    "tais_jalc.o": {
+      "text_bytes": 6924,
+      "data_bytes": 0,
+      "other_bytes": 224,
+      "total_bytes": 7148
+    },
+    "sensor_trust.o": {
+      "text_bytes": 3573,
+      "data_bytes": 24,
+      "other_bytes": 352,
+      "total_bytes": 3949
+    }
+  },
+  "esp32s3_cross_compile": {
+    "compiler": "xtensa-esp-elf-gcc (crosstool-NG esp-14.2.0_20241119) 14.2.0",
+    "flags": "-std=c11 -Wall -Wextra -Werror -Os -mlongcalls -ffunction-sections -fdata-sections",
+    "tais_jalc.o": {
+      "text_bytes": 7643,
+      "data_bytes": 0,
+      "bss_bytes": 0,
+      "total_bytes": 7643
+    },
+    "sensor_trust.o": {
+      "text_bytes": 2019,
+      "data_bytes": 0,
+      "bss_bytes": 0,
+      "total_bytes": 2019
+    },
+    "combined_flash_code_bytes": 9662,
+    "combined_static_data_bss_bytes": 0,
+    "note": "Exact ELF section sizes compiled for Xtensa ESP32-S3 (-Os). Runtime latency above is host-measured; physical ESP32-S3 cycle/current measurements remain future work."
+  }
+}

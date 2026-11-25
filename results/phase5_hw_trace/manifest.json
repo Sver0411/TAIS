@@ -1,0 +1,40 @@
+{
+  "status": "COMPLETE",
+  "seeds": [
+    1200,
+    1201,
+    1202,
+    1203,
+    1204,
+    1205,
+    1206,
+    1207,
+    1208,
+    1209,
+    1210,
+    1211,
+    1212,
+    1213,
+    1214,
+    1215,
+    1216,
+    1217,
+    1218,
+    1219
+  ],
+  "scenarios": [
+    "clean_both",
+    "high_frequency",
+    "drift_temperature_same",
+    "range_temperature_cross"
+  ],
+  "regimes": [
+    "e220_random_20",
+    "e220_random_30",
+    "e220_burst_20",
+    "e220_burst_30"
+  ],
+  "runs": 2240,
+  "e220_traces_sha256": "efa55670e6ee6b7ade6de29c25117ddd90db7a4ede93c75051660a9c21f5227d",
+  "metrics_sha256": "c002b1b1d84c5463055e290402953ff09d9a8b338689633e482fdc52eb0cbf3e"
+}
