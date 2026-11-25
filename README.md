@@ -6,7 +6,18 @@ TAIS is an open research prototype for monitoring changing environments with unr
 
 Causal stream processing · Sensor health and event state · Independent byte receiver · Reproducible experiments
 
-[Quick start](#quick-start) · [中文简介](README.zh-CN.md) · [Architecture](#system-architecture) · [Results](#experimental-results) · [Paper](papers/tais/README.md) · [Documentation](docs/README.md)
+[Quick start](#quick-start) · [中文简介](README.zh-CN.md) · [Architecture](#system-architecture) · [G2 Results](#experimental-results) · [Phase 5 & E220/C11](#phase-5-3d-joint-adaptive-closed-loop--boundary-analysis) · [Phase 6 Real 54-Mote & Spatial](#phase-6-54-mote-real-world-external-validity--spatial-drift-identifiability) · [Paper](papers/tais/README.md)
+
+## Research Progression at a Glance
+
+| Stage | Scope & Scale | Key Verified Finding | Report |
+| :--- | :--- | :--- | :--- |
+| **G1/G2 & Core** | 20 seeds × 46 synthetic scenarios | Causal SensorTrust C11 + AdaptiveSense + Binary v1 byte-level tradeoffs | [Paper](papers/tais/README.md) |
+| **MA-1 Ablation** | 20 seeds (`900–919`), 17,280 runs | Full T × S × U factorial disentangling sampling vs. upload gains | [MA-1 (ZH)](docs/MODULE_ABLATION_RESULTS_ZH.md) |
+| **Phase 4** | 20 seeds (`920–939`), 31,680 runs | Bounded robust/risk sampling; honest `NO_GO_DEFAULT` gate outcome | [Phase 4 (ZH)](docs/PHASE4_RESULTS_ZH.md) |
+| **Phase 5** | 20+20 seeds (`1020–1039`, `1100–1119`), 21,000 runs | 3D closed-loop `TAIS-JALC`: **+10.6–11.6 pp** F1 & **42–45 s** P95 AoI under 30%/burst loss | [Phase 5 (ZH)](docs/PHASE5_BOUNDARY_RESULTS_ZH.md) |
+| **Phase 5.5** | 24 real E220 hardware logs (`1200–1219`) + C11 port | **+7.74–9.46 pp** F1 on real E220 traces; **1,072 B RAM / 7,643 B `.text`** on ESP32-S3 | [Phase 5.5 (ZH)](docs/PHASE5_5_HW_TRACE_AND_C11_ZH.md) |
+| **Phase 6** | MIT Intel Berkeley 54 motes (12 held-out days), 9,000 runs | **−912 s** real P95 AoI on E220 traces; Spatial $k$-NN cuts drift false alarms **−75.0%** & beats `NullSpatial` **+45.4 pp** | [Phase 6 (ZH)](docs/PHASE6_REAL_DATA_SPATIAL_ZH.md) |
 
 ## See it run
 
@@ -101,22 +112,57 @@ tradeoffs; no natural-fault, wireless-energy or field-performance validation.
 
 Building on MA-1 and Phase 4 (`src/tais/adaptive/`), the additive `src/tais/closed_loop/` package introduces `TAIS-JALC` — a lean 4+1 state machine (`QUIET_ECO`, `PROBE`, `TRACK`, `SAFE_FALLBACK`, `DIAG_VERIFY`) with five control hyperparameters, strict Binary v1 reuse, AoI-sampling hard reservation, and closed-loop loss/bandwidth link telemetry.
 
-Across 20 held-out validation seeds (`1100–1119`) covering event dynamics (10–600 s × 0.5–2.5× amplitude), degraded links (0–30% loss, Gilbert-Elliott bursts, 600–1200 B/min caps) and high-noise/fault slices:
+### Event dynamics phase map (effective vs. failure boundaries)
 
-- **Degraded links & freshness:** under 30% packet loss and burst fading, `JALC-Full` improves receiver F1 by **+10.6 to +11.6 pp** over `A5` (`p_holm < 0.05`) while reducing run-P95 finite-value AoI from **140–175 s** to **42–45 s** (0% violation under lossless transport).
-- **Hardware-trace-driven validation (`1200–1219`):** replaying 24 audited ESP32-S3 + E220-400T22D Sub-GHz LoRa hardware logs (3,359 RF attempts from [EventGuard-LoRa](https://github.com/Sver0411/EventGuard-LoRa)), `JALC-Full` improves receiver F1 by **+7.74 pp** over `A5` and **+9.46 pp** over `Fixed-20` (`p_holm <= 0.0175`), lowers P95 finite AoI from **225.9 s** to **46.4 s**, and uses less physical E220 airtime than `Fixed-20` (`41.6 s` vs `43.8 s/seed`).
-- **Zero-allocation C11 port & ESP32-S3 footprint:** [tais_jalc.c](src/tais/closed_loop/c11/tais_jalc.c) passes 27 full-trajectory bit-exact parity tests against Python (`-std=c11 -Wall -Wextra -Werror`), requires **1,072 B** static RAM (**3,328 B** total with 2× `SensorTrust`), and cross-compiles to **7,643 B** `.text` on Xtensa ESP32-S3 (`-Os`, `0 B .data/.bss`).
-- **Documented failure boundaries:** ultra-short pulses ($\le 10\text{ s}$), 600 s smooth slow ramps under the unchanged 60 s EMA detector, and 7× high-noise events remain explicit degradation regimes.
+![Phase 5 Axis A: 2D event duration and amplitude phase map comparing A5, A7, and JALC-Full with delta-F1 heatmaps.](results/phase5/analysis/figures/fig01_axis_a_dynamics_phase_map.png)
 
-[Phase 5 boundary report (ZH)](docs/PHASE5_BOUNDARY_RESULTS_ZH.md) · [Phase 5.5 E220 hardware-trace & C11 report (ZH)](docs/PHASE5_5_HW_TRACE_AND_C11_ZH.md) · [Closed-loop source](src/tais/closed_loop/) · [Boundary config](configs/phase5_boundary.json)
+Across 20 sweep seeds (`1020–1039`) and 20 independent held-out validation seeds (`1100–1119`), `JALC-Full` lifts receiver F1 by **+8.6 to +24.5 pp** on short-to-medium events (`20–45 s`), while documenting explicit failure boundaries on ultra-short pulses ($\le 10\text{ s}$), 600 s smooth ramps under the unchanged 60 s EMA detector, and 7× high-noise regimes.
+
+### Degraded wireless links & AoI freshness boundary
+
+![Phase 5 Axis B: Receiver F1 and Run-P95 finite AoI across 0–30% loss, Gilbert-Elliott burst fading, and 600–1200 B/min bandwidth caps.](results/phase5/analysis/figures/fig02_axis_b_link_degradation_boundary.png)
+
+Under 30% packet loss and Gilbert-Elliott burst fading (even under tight `600 B/min` caps), `JALC-Full` improves receiver F1 by **+10.6 to +11.6 pp** over `A5` (`p_holm < 0.05`) while holding Run-P95 finite-value AoI flat at **42–51 s** (vs. **140–190 s** for open-loop baselines; 0% AoI violation under lossless transport).
+
+### Phase 5.5: Real ESP32-S3 + E220 hardware-trace validation & pure C11 port
+
+![Phase 5.5: Detection F1, Run-P95 finite AoI, and measured physical E220 RF airtime across 24 real ESP32-S3 + E220-400T22D hardware loss logs.](results/phase5_hw_trace/fig05_e220_hardware_trace_validation.png)
+
+Replaying 24 audited ESP32-S3 + E220-400T22D Sub-GHz LoRa hardware logs (3,359 RF attempts from [EventGuard-LoRa](https://github.com/Sver0411/EventGuard-LoRa), held-out seeds `1200–1219`), `JALC-Full` improves receiver F1 by **+7.74 pp** over `A5` and **+9.46 pp** over `Fixed-20` (`p_holm <= 0.0175`), cuts P95 finite AoI from **225.9 s** to **46.4 s**, and consumes **less physical E220 RF airtime** than `Fixed-20` (`41.6 s` vs `43.8 s/seed`).
+
+| Embedded C11 Target (`src/tais/closed_loop/c11/tais_jalc.c`) | Measured Value |
+| :--- | :--- |
+| Static controller state RAM (`sizeof(tais_jalc_t)`) | **1,072 B** (`0 B` heap / `malloc`) |
+| Combined RAM with 2× `SensorTrust` channels | **3,328 B** (`3.25 KB` — `< 0.7%` of ESP32-S3 512 KB SRAM) |
+| ESP32-S3 Xtensa LX7 (`-Os`) Flash footprint | **7,643 B `.text`**, `0 B .data`, `0 B .bss` |
+| Host joint step latency (`SensorTrust` + `JALC` + `Binary v1`) | **1.44 µs / step** (bit-exact parity across **27/27** trajectories) |
+
+[Phase 5 boundary report (ZH)](docs/PHASE5_BOUNDARY_RESULTS_ZH.md) · [Phase 5.5 E220 hardware-trace & C11 report (ZH)](docs/PHASE5_5_HW_TRACE_AND_C11_ZH.md) · [Closed-loop source](src/tais/closed_loop/) · [C11 implementation](src/tais/closed_loop/c11/)
 
 ## Phase 6: 54-Mote Real-World External Validity & Spatial Drift Identifiability
 
-The additive `src/tais/real_data/` package evaluates TAIS on the public MIT CSAIL Intel Berkeley Research Lab 54-mote dataset (2.31M raw lines audited; 1.82M valid T+RH rows; strictly causal replay with zero future interpolation) across a pre-declared chronological split (3-day calibration prefix `2004-02-28..03-01`, 1-day isolation gap, 12-day contiguous held-out block `2004-03-03..03-14` passing the $\ge 50\%$ coverage gate at **76.4%** mean 54-mote coverage, including the real March 10–11 outage):
+The additive `src/tais/real_data/` package evaluates TAIS on the public MIT CSAIL Intel Berkeley Research Lab 54-mote dataset (2.31M raw lines audited; 1.82M valid T+RH rows; strictly causal replay with zero future interpolation) across a pre-declared chronological split (3-day calibration prefix `2004-02-28..03-01`, 1-day isolation gap, 12-day contiguous held-out block `2004-03-03..03-14` passing the $\ge 50\%$ coverage gate at **76.4%** mean 54-mote coverage, including the real March 10–11 outage).
 
-- **Exp A — Real sensing background × real E220 hardware loss traces (5,400 runs):** under `e220_random_30`, `JALC-Full` reduces real wall-clock P95 finite AoI from **2,225 s (37.1 min)** (`A5`) to **1,313 s (21.9 min)** (`−912 s`, `p_holm = 0.0258`), cuts AoI violation by **−44.2 pp**, beats `Fixed-20` on P95 AoI (`−94.6 s`, `p_holm = 0.0273`) at lower byte cost, and lifts Recall by **+15.6 pp** (`79.4%` vs `63.8%`). Honestly, uncalibrated fixed `noise_floor = 0.15 °C` triggers additional background alarms during real morning HVAC warming, keeping overall F1 close to `A5` (`55.3%` vs `55.8%`).
-- **Exp B — Causal spatial $k$-NN reference vs. SingleChannel & equal-cost NullSpatial (3,600 runs, $k=4$, mean spacing `5.09 m`):** using matched causal differential spatial residuals, `SpatialKNN` cuts drift-induced false environmental alarms by **−75.0%** (`1.58 → 0.40/run`, `p_holm = 0.0270`), identifies **88.3%** of single-mote drifts (**96.5%** on normal-coverage days), preserves `common_env_event` recall with **0.00 pp** loss (**85.8%** vs `NullSpatial` **40.4%**, `+45.4 pp`, `p_holm = 0.0270`), cuts clean-day spurious drift alerts by **−63.8%** vs `NullSpatial` (`p_holm = 0.0258`), and lifts `drift_plus_local_fast` event recall by **+65.0 pp** over `SingleChannel` (`88.3%` vs `23.3%`, `p_holm = 0.0270`).
-- **Honest unidentifiable boundary (H3):** single-mote `local_slow_event` recall drops by **−55.0 pp** (`85.8% → 30.8%`), confirming that a slow single-node local event is fundamentally indistinguishable from single-sensor drift under single-modality spatial comparison alone.
+### Exp A: Real 54-mote sensing background × real E220 hardware loss traces (5,400 runs)
+
+![Phase 6 Exp A: Intel Berkeley pre-evaluation coverage audit and external validity across lossless, E220 burst 20%, and E220 random 30% links.](results/phase6_intel_berkeley/figures/fig01_intel_berkeley_coverage_and_external_validity.png)
+
+Under `e220_random_30`, `JALC-Full` cuts real wall-clock P95 finite AoI from **2,225 s (37.1 min)** (`A5`) to **1,313 s (21.9 min)** (`−912 s`, `p_holm = 0.0258`), reduces AoI violation by **−44.2 pp**, beats `Fixed-20` on P95 AoI (`−94.6 s`, `p_holm = 0.0273`) at lower byte cost, and lifts Recall by **+15.6 pp** (`79.4%` vs `63.8%`). Honestly, uncalibrated fixed `noise_floor = 0.15 °C` triggers additional background alarms during real morning HVAC warming (`+5–9 °C`), keeping overall F1 close to `A5` (`55.3%` vs `55.8%`).
+
+### Exp B: Causal spatial $k$-NN drift identifiability & equal-cost NullSpatial control (3,600 runs)
+
+![Phase 6 Exp B: False alarm suppression, clean-day noise, drift identification, NullSpatial negative control, and honest local-slow unidentifiable boundary.](results/phase6_intel_berkeley/figures/fig02_spatial_identifiability_drift_vs_events.png)
+
+Using matched causal differential spatial residuals against the $k=4$ nearest physical motes (mean spacing `5.09 m`), `SpatialKNN` separates single-sensor drift from common environmental ramps while proving via an equal-cost `NullSpatial` negative control that real physical neighbor correlation drives the gain:
+
+| Scenario (240 held-out runs each) | Metric | `SingleChannel` | `SpatialKNN` | `NullSpatial` | Date-Cluster Paired Effect (`p_holm`) |
+| :--- | :--- | :---: | :---: | :---: | :--- |
+| **`single_drift`** (H1) | False env alarms / run ↓ | `1.58` | **`0.40`** | `0.61` | **−75.0%** vs `SingleChannel` (`p = 0.0270` ✓) |
+| **`single_drift`** (H1) | Drift correctly identified ↑ | `0.0%` | **`88.3%`** (`96.5%` normal) | `87.5%` | **+88.3 pp** vs `SingleChannel` (`p = 0.0270` ✓) |
+| **Clean unperturbed days** | Spurious drift / run ↓ | `0.00` | **`0.78`** | `2.17` | **−63.8%** vs `NullSpatial` (`p = 0.0258` ✓) |
+| **`common_env_event`** (H1 + Control) | Common event recall ↑ | `85.8%` | **`85.8%`** | `40.4%` | **0.0 pp** loss; **+45.4 pp** vs `NullSpatial` (`p = 0.0270` ✓) |
+| **`drift_plus_local_fast`** (H2) | Event recall during drift ↑ | `23.3%` | **`88.3%`** | `88.3%` | **+65.0 pp** vs `SingleChannel` (`p = 0.0270` ✓) |
+| **`local_slow_event`** (**H3 Boundary**) | Single-node slow recall | `85.8%` | **`30.8%`** | `40.4%` | **−55.0 pp** honest unidentifiable boundary (`p = 0.0270`) |
 
 [Phase 6 real-data & spatial report (ZH)](docs/PHASE6_REAL_DATA_SPATIAL_ZH.md) · [Real-data & spatial source](src/tais/real_data/) · [Phase 6 benchmark script](scripts/run_phase6_intel_berkeley.py)
 
