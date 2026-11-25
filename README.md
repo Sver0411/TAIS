@@ -1,202 +1,118 @@
 # TAIS — Trust-Aware Importance Scheduler
 
-TAIS is an open research prototype for monitoring changing environments with unreliable sensors. It combines health checks, event detection, adaptive sampling and selective transmission to study detection quality, sampling effort and communication cost together.
+**English** | [简体中文](README.zh-CN.md)
 
-**The question:** when a reading changes, should the system report an environmental event, investigate a possible sensor fault, or wait for the next sample?
+**Closed-loop trust-aware sensing, adaptive scheduling, and spatial drift identifiability for unreliable IoT sensor networks.**
 
-Causal stream processing · Sensor health and event state · Independent byte receiver · Reproducible experiments
+TAIS is an open, reproducible AIoT research framework for monitoring dynamic physical environments with fault-prone sensors over constrained, lossy wireless links. It integrates zero-allocation C11 sensor health diagnosis (**SensorTrust**), change-aware adaptive sampling (**AdaptiveSense**), selective binary transmission (**Binary v1**), closed-loop freshness/loss scheduling (**`TAIS-JALC`**), and causal spatial $k$-NN drift disambiguation to study detection quality, sampling effort, communication cost, and data freshness (Age of Information, AoI) under one verifiable architecture.
 
-[Quick start](#quick-start) · [中文简介](README.zh-CN.md) · [Architecture](#system-architecture) · [G2 Results](#experimental-results) · [Phase 5 & E220/C11](#phase-5-3d-joint-adaptive-closed-loop--boundary-analysis) · [Phase 6 Real 54-Mote & Spatial](#phase-6-54-mote-real-world-external-validity--spatial-drift-identifiability) · [Paper](papers/tais/README.md)
+[Overview](#overview) · [Architecture](#system-architecture) · [Key Results](#experimental-results) · [Embedded C11](#hardware-trace-validation--embedded-c11-kernel) · [Quick Start](#quick-start) · [Paper](papers/tais/README.md)
 
-## Research Progression at a Glance
+---
 
-| Stage | Scope & Scale | Key Verified Finding | Report |
-| :--- | :--- | :--- | :--- |
-| **G1/G2 & Core** | 20 seeds × 46 synthetic scenarios | Causal SensorTrust C11 + AdaptiveSense + Binary v1 byte-level tradeoffs | [Paper](papers/tais/README.md) |
-| **MA-1 Ablation** | 20 seeds (`900–919`), 17,280 runs | Full T × S × U factorial disentangling sampling vs. upload gains | [MA-1 (ZH)](docs/MODULE_ABLATION_RESULTS_ZH.md) |
-| **Phase 4** | 20 seeds (`920–939`), 31,680 runs | Bounded robust/risk sampling; honest `NO_GO_DEFAULT` gate outcome | [Phase 4 (ZH)](docs/PHASE4_RESULTS_ZH.md) |
-| **Phase 5** | 20+20 seeds (`1020–1039`, `1100–1119`), 21,000 runs | 3D closed-loop `TAIS-JALC`: **+10.6–11.6 pp** F1 & **42–45 s** P95 AoI under 30%/burst loss | [Phase 5 (ZH)](docs/PHASE5_BOUNDARY_RESULTS_ZH.md) |
-| **Phase 5.5** | 24 real E220 hardware logs (`1200–1219`) + C11 port | **+7.74–9.46 pp** F1 on real E220 traces; **1,072 B RAM / 7,643 B `.text`** on ESP32-S3 | [Phase 5.5 (ZH)](docs/PHASE5_5_HW_TRACE_AND_C11_ZH.md) |
-| **Phase 6** | MIT Intel Berkeley 54 motes (12 held-out days), 9,000 runs | **−912 s** real P95 AoI on E220 traces; Spatial $k$-NN cuts drift false alarms **−75.0%** & beats `NullSpatial` **+45.4 pp** | [Phase 6 (ZH)](docs/PHASE6_REAL_DATA_SPATIAL_ZH.md) |
+## Overview
 
-## See it run
+When a sensor reading suddenly shifts, an edge node faces a three-way decision: report a genuine environmental event, diagnose a faulty or drifting sensor, or conserve sampling and radio budget. TAIS addresses this end-to-end across synthetic stress regimes, real Sub-GHz LoRa hardware loss logs, and real 54-mote wireless sensor network deployments:
+
+- **Closed-loop freshness & loss control (`TAIS-JALC`):** A lean 4+1 state machine (`QUIET_ECO`, `PROBE`, `TRACK`, `SAFE_FALLBACK`, `DIAG_VERIFY`) with five control hyperparameters, hard AoI-sampling reservation, and closed-loop link-loss telemetry—lifting receiver F1 by **+10.6 to +11.6 pp** under 30% and Gilbert-Elliott burst loss while keeping Run-P95 finite AoI flat at **42–51 s** (vs. 140–190 s for open-loop baselines).
+- **Real ESP32-S3 + E220 hardware traces & pure C11 port:** Evaluated over **24 audited ESP32-S3 + E220-400T22D Sub-GHz LoRa logs** (3,359 physical RF attempts), improving receiver F1 by **+7.74–9.46 pp** (`p_holm <= 0.0175`) and cutting P95 AoI from **225.9 s to 46.4 s** at lower RF airtime than fixed-period sampling; the zero-allocation C11 kernel fits in **1,072 B RAM** and **7,643 B ESP32-S3 flash** with **27/27** bit-exact trajectory parity.
+- **54-mote real-world external validity & causal spatial drift identifiability:** Evaluated on the public **MIT Intel Berkeley 54-mote** dataset (1.82M valid T+RH rows, 12 held-out days at 76.4% mean coverage), reducing real wall-clock P95 AoI by **−912 s** under real E220 loss traces, while causal spatial $k$-NN cuts single-sensor drift false alarms by **−75.0%** and beats an equal-cost `NullSpatial` negative control by **+45.4 pp** on common environmental events.
+- **Transparent tradeoffs & failure boundaries:** Documents exact operating regions alongside honest boundaries (ultra-short pulses $\le 10\text{ s}$, 600 s slow ramps under a 60 s EMA detector, uncalibrated HVAC warming shifts, and single-node local slow events).
+
+## See It Run
 
 ![Actual TAIS demo output showing missing-sensor diagnosis, humidity event transitions, recovery, 77 samples and 40 decoded frames.](docs/assets/readme/local-run.png)
 
-**Real output, reformatted for readability.** GateOnly runs the synthetic `missing_cross_long` scenario, seed 20: temperature data go missing while humidity changes. It finishes with 77 samples, 40 transmitted/decoded frames and 1,285 application bytes. Offline scoring finds one matched and one unmatched report. This is a demonstration, not a benchmark average; [run it below](#quick-start).
+*Demonstration on `missing_cross_long` (seed 20): temperature readings drop out while humidity shifts. `GateOnly` finishes with 77 samples, 40 decoded Binary v1 frames, and 1,285 application bytes. [Run it yourself below](#quick-start).*
 
-## System architecture
+## System Architecture
 
 ![TAIS software architecture: timestamped input, due-time sampling, SensorTrust health gating, AdaptiveSense change analysis, policy and upload decisions, Binary v1 encoding and an independent local receiver.](docs/assets/readme/architecture.png)
 
-Only due samples enter analysis. **SensorTrust C11** supplies health states and flags; **AdaptiveSense** analyzes eligible sampled history. Policy decisions set event state and the next sample time; upload control selects envelopes for Binary v1 encoding. The independent receiver reconstructs state from decoded frames.
+Only due samples enter analysis strictly causally (zero lookahead):
 
-The implemented transport is a local byte link. Hardware acquisition and real wireless transport are outside this prototype. [Core interface](examples/tais-core/README.md) · [Architecture and source map](docs/REPOSITORY_GUIDE.md#source-map).
+1. **Sensor health (`SensorTrust` C11):** Zero-allocation C11 diagnosis through a Python/C bridge emitting health states, flags (`RANGE`, `STUCK`, `SPIKE`, `DRIFT`, `MISSING`), and heuristic trust scores.
+2. **Environmental change & spatial disambiguation:** Per-channel change analysis (`AdaptiveSense`) with separate fault and environmental-event states, optionally paired with causal spatial $k$-NN differential residuals against the $k=4$ nearest physical neighbors (`src/tais/real_data/`).
+3. **Adaptive sampling & selective upload (`TAIS-JALC` / `GateOnly` / `JO-SU`):** Jointly controls next sample intervals, event/health edge reporting, heartbeat AoI protection, and selective suppression (`U`) of ordinary updates.
+4. **Stateless wire codec & independent receiver:** Binary v1 encoding with an independent local receiver, timestamped journals, and controlled or hardware-trace wireless link impairment.
 
-## Core capabilities
+[Core interface](examples/tais-core/README.md) · [Architecture & source map](docs/REPOSITORY_GUIDE.md#source-map) · [Closed-loop source](src/tais/closed_loop/)
 
-- **Sensor health:** actual C11 diagnosis through a Python bridge, with states, flags and heuristic scores.
-- **Environmental events:** per-channel change analysis with separate fault and environmental-event state.
-- **Sampling and uploads:** GateOnly or JO/SU policies; optional U suppresses ordinary updates while retaining sampled event/health edges and heartbeats.
-- **Bytes and receiver state:** Stateless Binary v1, independent decoding, timestamped journals and controlled local link failures.
-- **Metrics:** samples, uploads, bytes, sender reports, receiver events, fault-induced reports, detection delay and data age.
+---
 
-## Experimental results
+## Experimental Results
 
-All four figures use **G2 only: 20 held-out seeds × 46 synthetic scenarios**, including all 14 saved operating points with health information. No campaign was rerun. Controls marked `*` transfer frozen G1 development settings without retuning; G2 sampling budgets may differ. Rao-inspired is an engineering adaptation, not a full literature reproduction.
+### 1. Event Dynamics & Wireless Link Degradation Boundaries
 
-### Event detection
+Across 20 sweep seeds (`1020–1039`) and 20 independent held-out seeds (`1100–1119`, 21,000 runs total), `TAIS-JALC` (`JALC-Full`) maps both its high-gain regime and explicit failure boundaries:
 
-![G2 sender and receiver F1 for all 14 saved operating points, including every fixed period and the independent adaptive controls.](docs/assets/readme/g2-detection.png)
+![2D event duration and amplitude phase map comparing A5, A7, and JALC-Full with delta-F1 heatmaps.](results/phase5/analysis/figures/fig01_axis_a_dynamics_phase_map.png)
 
-Fixed-20+C11 achieves **55.10% sender F1**, compared with **46.31% for JO-SU-40**. JO-SU-20 reaches 65.30% with more sampling. Labels are sender point estimates; green bars independently evaluate receiver edges. [Full results and seed-paired uncertainty](docs/TAIS_CROSS_GENERATOR_REPORT.md).
+- **Event dynamics:** `JALC-Full` lifts receiver F1 by **+8.6 to +24.5 pp** on short-to-medium events (`20–45 s`), while transparently documenting failure boundaries on ultra-short pulses ($\le 10\text{ s}$), 600 s smooth ramps under the fixed 60 s EMA detector, and 7× high-noise regimes.
 
-### Sampling and communication
+![Receiver F1 and Run-P95 finite AoI across 0–30% loss, Gilbert-Elliott burst fading, and 600–1200 B/min bandwidth caps.](results/phase5/analysis/figures/fig02_axis_b_link_degradation_boundary.png)
 
-![G2 sample cycles and Binary v1 application bytes, shown separately for every saved operating point.](docs/assets/readme/g2-resources.png)
+- **Lossy & bandwidth-capped links:** Under 30% packet loss and Gilbert-Elliott burst fading (even under tight `600 B/min` caps), `JALC-Full` improves receiver F1 by **+10.6 to +11.6 pp** over `A5` (`p_holm < 0.05`) while holding Run-P95 finite-value AoI flat at **42–51 s** (vs. **140–190 s** for open-loop baselines, with 0% AoI violation under lossless transport).
 
-At nearby totals of **85,055 versus 82,800 samples**, JO-SU-40 sends **959,129 bytes**, compared with **2,940,838 for Fixed-20+C11**. Upload rules, including shareable U, explain part of the benefit; it is not all due to sampling. [Plot data](results/tais-transfer/summary.csv) · [Evidence](docs/TAIS_PAPER_EVIDENCE.md).
+[Boundary analysis report (ZH)](docs/PHASE5_BOUNDARY_RESULTS_ZH.md)
 
-### Detection vs. Communication Trade-off
+### 2. Hardware-Trace Validation & Embedded C11 Kernel
 
-![G2 sender-report F1 versus Binary v1 communication in decimal MB for all 14 operating points, highlighting GateOnly, GateOnly plus U and the JO-SU series.](docs/assets/readme/g2-detection-communication.png)
+![Detection F1, Run-P95 finite AoI, and measured physical E220 RF airtime across 24 real ESP32-S3 + E220-400T22D hardware loss logs.](results/phase5_hw_trace/fig05_e220_hardware_trace_validation.png)
 
-**Upper left means higher detection F1 and lower communication cost.** GateOnly+U retains GateOnly's sender F1 with fewer bytes; JO-SU-20 gains detection at additional cost, while some independent controls achieve higher F1 with more communication. These are pooled sender-report point estimates, not a claim of overall superiority. Communication is application-layer Binary v1 volume (1 MB = 10⁶ bytes), not actual energy consumption. Starred controls retain their frozen G1 budget settings; actual G2 sampling budgets may not match.
+Replaying **24 audited ESP32-S3 + E220-400T22D Sub-GHz LoRa hardware logs** (3,359 RF attempts from [EventGuard-LoRa](https://github.com/Sver0411/EventGuard-LoRa), held-out seeds `1200–1219`), `JALC-Full` improves receiver F1 by **+7.74 pp** over `A5` and **+9.46 pp** over `Fixed-20` (`p_holm <= 0.0175`), cuts P95 finite AoI from **225.9 s** to **46.4 s**, and consumes **less physical E220 RF airtime** than `Fixed-20` (`41.6 s` vs. `43.8 s/seed`).
 
-### Fault-induced reports and data freshness
-
-![G2 operational fault-induced false reports versus pooled receiver P95 data age, with all 14 operating points labeled.](docs/assets/readme/g2-freshness.png)
-
-JO-SU-40 produces **157 operational fault-induced false reports versus 353 for Fixed-20+C11**, but receiver P95 data age increases from **18 s to 113 s**. GateOnly+U illustrates the upload tradeoff directly: unchanged sampling and sender detection, fewer bytes, older ordinary data.
-
-JO-SU-40's near-budget F1 difference interval against Variance includes zero in G2. G1/G2 also differ in event-truth definitions: totals cannot be pooled or differences attributed solely to distribution shift. [Paper](papers/tais/README.md) · [中文概要](docs/TAIS_PAPER_SUMMARY_ZH.md).
-
-## Module ablation and unified evaluation (MA-1)
-
-The next-stage study adds the complete SensorTrust × AdaptiveSense sampling ×
-selective-transmission factorial, alongside eight frozen controls. It reuses
-the actual C11 engine, original policy/scorer, G2 generator and Binary v1
-receiver. A7 is GateOnly+U; JO-SU-20/40 remain separately named controls.
-Historical G1/G2 results above retain their original scoring definitions.
-
-[Frozen protocol](docs/MODULE_ABLATION_PROTOCOL.md) ·
-[Results and reproduction](results/module-ablation/README.md) ·
-[Chinese analysis](docs/MODULE_ABLATION_RESULTS_ZH.md).
-
-With the installed environment, one command runs a fresh complete replica using
-the saved freeze (choose a new, unique output-directory name):
-
-```sh
-python scripts/benchmark_ablation.py replicate --out results/scratch/ma1-replica-01 --workers 4
-```
-
-One command regenerates all summary tables and six PNG/vector-PDF figures from
-the saved per-run/per-event observations; no policy replay or raw archive needed:
-
-```sh
-python scripts/analyze_ablation.py
-# For the fresh replica instead:
-python scripts/analyze_ablation.py --root results/scratch/ma1-replica-01
-python scripts/verify_ablation.py
-```
-
-The primary scoring window ends at the earlier of event-end+5 s or onset+120 s.
-Misses remain FNs and count as120 s in a separately named restricted-delay loss.
-Frame age and age of the latest finite received value are distinct. Fixed-grid
-and U comparisons have exact shared sample times; adaptive comparisons report
-actual resources. Bootstrap intervals cluster whole paired seeds, and the
-78 prespecified tests use Holm correction. These are synthetic system-level
-tradeoffs; no natural-fault, wireless-energy or field-performance validation.
-
-## Phase 5: 3D Joint Adaptive Closed-Loop & Boundary Analysis
-
-Building on MA-1 and Phase 4 (`src/tais/adaptive/`), the additive `src/tais/closed_loop/` package introduces `TAIS-JALC` — a lean 4+1 state machine (`QUIET_ECO`, `PROBE`, `TRACK`, `SAFE_FALLBACK`, `DIAG_VERIFY`) with five control hyperparameters, strict Binary v1 reuse, AoI-sampling hard reservation, and closed-loop loss/bandwidth link telemetry.
-
-### Event dynamics phase map (effective vs. failure boundaries)
-
-![Phase 5 Axis A: 2D event duration and amplitude phase map comparing A5, A7, and JALC-Full with delta-F1 heatmaps.](results/phase5/analysis/figures/fig01_axis_a_dynamics_phase_map.png)
-
-Across 20 sweep seeds (`1020–1039`) and 20 independent held-out validation seeds (`1100–1119`), `JALC-Full` lifts receiver F1 by **+8.6 to +24.5 pp** on short-to-medium events (`20–45 s`), while documenting explicit failure boundaries on ultra-short pulses ($\le 10\text{ s}$), 600 s smooth ramps under the unchanged 60 s EMA detector, and 7× high-noise regimes.
-
-### Degraded wireless links & AoI freshness boundary
-
-![Phase 5 Axis B: Receiver F1 and Run-P95 finite AoI across 0–30% loss, Gilbert-Elliott burst fading, and 600–1200 B/min bandwidth caps.](results/phase5/analysis/figures/fig02_axis_b_link_degradation_boundary.png)
-
-Under 30% packet loss and Gilbert-Elliott burst fading (even under tight `600 B/min` caps), `JALC-Full` improves receiver F1 by **+10.6 to +11.6 pp** over `A5` (`p_holm < 0.05`) while holding Run-P95 finite-value AoI flat at **42–51 s** (vs. **140–190 s** for open-loop baselines; 0% AoI violation under lossless transport).
-
-### Phase 5.5: Real ESP32-S3 + E220 hardware-trace validation & pure C11 port
-
-![Phase 5.5: Detection F1, Run-P95 finite AoI, and measured physical E220 RF airtime across 24 real ESP32-S3 + E220-400T22D hardware loss logs.](results/phase5_hw_trace/fig05_e220_hardware_trace_validation.png)
-
-Replaying 24 audited ESP32-S3 + E220-400T22D Sub-GHz LoRa hardware logs (3,359 RF attempts from [EventGuard-LoRa](https://github.com/Sver0411/EventGuard-LoRa), held-out seeds `1200–1219`), `JALC-Full` improves receiver F1 by **+7.74 pp** over `A5` and **+9.46 pp** over `Fixed-20` (`p_holm <= 0.0175`), cuts P95 finite AoI from **225.9 s** to **46.4 s**, and consumes **less physical E220 RF airtime** than `Fixed-20` (`41.6 s` vs `43.8 s/seed`).
-
-| Embedded C11 Target (`src/tais/closed_loop/c11/tais_jalc.c`) | Measured Value |
+| Embedded C11 Kernel (`src/tais/closed_loop/c11/tais_jalc.c`) | Measured Value |
 | :--- | :--- |
 | Static controller state RAM (`sizeof(tais_jalc_t)`) | **1,072 B** (`0 B` heap / `malloc`) |
 | Combined RAM with 2× `SensorTrust` channels | **3,328 B** (`3.25 KB` — `< 0.7%` of ESP32-S3 512 KB SRAM) |
 | ESP32-S3 Xtensa LX7 (`-Os`) Flash footprint | **7,643 B `.text`**, `0 B .data`, `0 B .bss` |
 | Host joint step latency (`SensorTrust` + `JALC` + `Binary v1`) | **1.44 µs / step** (bit-exact parity across **27/27** trajectories) |
 
-[Phase 5 boundary report (ZH)](docs/PHASE5_BOUNDARY_RESULTS_ZH.md) · [Phase 5.5 E220 hardware-trace & C11 report (ZH)](docs/PHASE5_5_HW_TRACE_AND_C11_ZH.md) · [Closed-loop source](src/tais/closed_loop/) · [C11 implementation](src/tais/closed_loop/c11/)
+[Hardware-trace & C11 report (ZH)](docs/PHASE5_5_HW_TRACE_AND_C11_ZH.md) · [C11 implementation](src/tais/closed_loop/c11/)
 
-## Phase 6: 54-Mote Real-World External Validity & Spatial Drift Identifiability
+### 3. Real 54-Mote External Validity & Spatial Drift Identifiability
 
-The additive `src/tais/real_data/` package evaluates TAIS on the public MIT CSAIL Intel Berkeley Research Lab 54-mote dataset (2.31M raw lines audited; 1.82M valid T+RH rows; strictly causal replay with zero future interpolation) across a pre-declared chronological split (3-day calibration prefix `2004-02-28..03-01`, 1-day isolation gap, 12-day contiguous held-out block `2004-03-03..03-14` passing the $\ge 50\%$ coverage gate at **76.4%** mean 54-mote coverage, including the real March 10–11 outage).
+Evaluated on the public **MIT CSAIL Intel Berkeley Research Lab 54-mote** dataset (2.31M raw lines audited; 1.82M valid T+RH rows; strictly causal replay with zero future interpolation; 3-day calibration prefix, 1-day isolation gap, and 12-day contiguous held-out block passing the $\ge 50\%$ coverage gate at **76.4%** mean coverage, including the real March 10–11 outage):
 
-### Exp A: Real 54-mote sensing background × real E220 hardware loss traces (5,400 runs)
+![Intel Berkeley pre-evaluation coverage audit and external validity across lossless, E220 burst 20%, and E220 random 30% links.](results/phase6_intel_berkeley/figures/fig01_intel_berkeley_coverage_and_external_validity.png)
 
-![Phase 6 Exp A: Intel Berkeley pre-evaluation coverage audit and external validity across lossless, E220 burst 20%, and E220 random 30% links.](results/phase6_intel_berkeley/figures/fig01_intel_berkeley_coverage_and_external_validity.png)
+- **Real 54-mote sensing × real E220 hardware loss (5,400 runs):** Under `e220_random_30`, `JALC-Full` cuts real wall-clock P95 finite AoI from **2,225 s (37.1 min)** (`A5`) to **1,313 s (21.9 min)** (`−912 s`, `p_holm = 0.0258`), reduces AoI violation by **−44.2 pp**, outperforms `Fixed-20` on P95 AoI (`−94.6 s`, `p_holm = 0.0273`) at lower byte cost, and lifts Recall by **+15.6 pp** (`79.4%` vs. `63.8%`). Uncalibrated fixed `noise_floor = 0.15 °C` triggers additional background alarms during real morning HVAC warming (`+5–9 °C`), keeping overall F1 close to `A5` (`55.3%` vs. `55.8%`).
 
-Under `e220_random_30`, `JALC-Full` cuts real wall-clock P95 finite AoI from **2,225 s (37.1 min)** (`A5`) to **1,313 s (21.9 min)** (`−912 s`, `p_holm = 0.0258`), reduces AoI violation by **−44.2 pp**, beats `Fixed-20` on P95 AoI (`−94.6 s`, `p_holm = 0.0273`) at lower byte cost, and lifts Recall by **+15.6 pp** (`79.4%` vs `63.8%`). Honestly, uncalibrated fixed `noise_floor = 0.15 °C` triggers additional background alarms during real morning HVAC warming (`+5–9 °C`), keeping overall F1 close to `A5` (`55.3%` vs `55.8%`).
+![False alarm suppression, clean-day noise, drift identification, NullSpatial negative control, and local-slow unidentifiable boundary.](results/phase6_intel_berkeley/figures/fig02_spatial_identifiability_drift_vs_events.png)
 
-### Exp B: Causal spatial $k$-NN drift identifiability & equal-cost NullSpatial control (3,600 runs)
-
-![Phase 6 Exp B: False alarm suppression, clean-day noise, drift identification, NullSpatial negative control, and honest local-slow unidentifiable boundary.](results/phase6_intel_berkeley/figures/fig02_spatial_identifiability_drift_vs_events.png)
-
-Using matched causal differential spatial residuals against the $k=4$ nearest physical motes (mean spacing `5.09 m`), `SpatialKNN` separates single-sensor drift from common environmental ramps while proving via an equal-cost `NullSpatial` negative control that real physical neighbor correlation drives the gain:
+- **Causal spatial $k$-NN drift identifiability vs. equal-cost `NullSpatial` control (3,600 runs):** Matching causal differential residuals against the $k=4$ nearest physical motes (mean spacing `5.09 m`) cleanly separates single-sensor drift from shared environmental ramps:
 
 | Scenario (240 held-out runs each) | Metric | `SingleChannel` | `SpatialKNN` | `NullSpatial` | Date-Cluster Paired Effect (`p_holm`) |
 | :--- | :--- | :---: | :---: | :---: | :--- |
-| **`single_drift`** (H1) | False env alarms / run ↓ | `1.58` | **`0.40`** | `0.61` | **−75.0%** vs `SingleChannel` (`p = 0.0270` ✓) |
-| **`single_drift`** (H1) | Drift correctly identified ↑ | `0.0%` | **`88.3%`** (`96.5%` normal) | `87.5%` | **+88.3 pp** vs `SingleChannel` (`p = 0.0270` ✓) |
-| **Clean unperturbed days** | Spurious drift / run ↓ | `0.00` | **`0.78`** | `2.17` | **−63.8%** vs `NullSpatial` (`p = 0.0258` ✓) |
-| **`common_env_event`** (H1 + Control) | Common event recall ↑ | `85.8%` | **`85.8%`** | `40.4%` | **0.0 pp** loss; **+45.4 pp** vs `NullSpatial` (`p = 0.0270` ✓) |
-| **`drift_plus_local_fast`** (H2) | Event recall during drift ↑ | `23.3%` | **`88.3%`** | `88.3%` | **+65.0 pp** vs `SingleChannel` (`p = 0.0270` ✓) |
-| **`local_slow_event`** (**H3 Boundary**) | Single-node slow recall | `85.8%` | **`30.8%`** | `40.4%` | **−55.0 pp** honest unidentifiable boundary (`p = 0.0270`) |
+| **`single_drift`** | False env alarms / run ↓ | `1.58` | **`0.40`** | `0.61` | **−75.0%** vs. `SingleChannel` (`p = 0.0270` ✓) |
+| **`single_drift`** | Drift correctly identified ↑ | `0.0%` | **`88.3%`** (`96.5%` normal) | `87.5%` | **+88.3 pp** vs. `SingleChannel` (`p = 0.0270` ✓) |
+| **Clean unperturbed days** | Spurious drift / run ↓ | `0.00` | **`0.78`** | `2.17` | **−63.8%** vs. `NullSpatial` (`p = 0.0258` ✓) |
+| **`common_env_event`** | Common event recall ↑ | `85.8%` | **`85.8%`** | `40.4%` | **0.0 pp** loss; **+45.4 pp** vs. `NullSpatial` (`p = 0.0270` ✓) |
+| **`drift_plus_local_fast`** | Event recall during drift ↑ | `23.3%` | **`88.3%`** | `88.3%` | **+65.0 pp** vs. `SingleChannel` (`p = 0.0270` ✓) |
+| **`local_slow_event`** (Boundary) | Single-node slow recall | `85.8%` | **`30.8%`** | `40.4%` | **−55.0 pp** honest unidentifiable boundary (`p = 0.0270`) |
 
-[Phase 6 real-data & spatial report (ZH)](docs/PHASE6_REAL_DATA_SPATIAL_ZH.md) · [Real-data & spatial source](src/tais/real_data/) · [Phase 6 benchmark script](scripts/run_phase6_intel_berkeley.py)
+[Real-data & spatial report (ZH)](docs/PHASE6_REAL_DATA_SPATIAL_ZH.md) · [Real-data & spatial source](src/tais/real_data/) · [Benchmark script](scripts/run_phase6_intel_berkeley.py)
 
-## Research Stack & Related Repositories
+### 4. Detection–Communication Tradeoffs & Factorial Module Ablations
 
-TAIS sits at the adaptive-observation layer of a four-tier reproducible AIoT systems research stack:
+Across 20 held-out seeds × 46 synthetic scenarios (14 saved operating points with health information), TAIS also characterizes the baseline detection–communication–freshness frontier and full SensorTrust × AdaptiveSense × Selective-Upload (`T × S × U`) factorial ablations (17,280 runs, 78 Holm-corrected tests, plus 31,680 robust/risk-sampling evaluations documenting negative `NO_GO_DEFAULT` gates):
 
-```mermaid
-flowchart TB
-    L1["L1 · Reliable Sensing<br/>SensorTrust (Portable C11 health monitoring)"]
-    L2["L2 · Adaptive Observation & Trust Gating<br/>AdaptiveSense (ESP32-S3 sampling) → TAIS (Joint closed-loop scheduling & boundary analysis)"]
-    L3["L3 · Freshness & Lossy-Link Transport<br/>EventGuard-LoRa (Sub-GHz redundancy) · NetAdapt-IoT (AoI/QoS) · IoT-MPQUIC-Scheduler (Freshness MPQUIC)"]
-    L4["L4 · Fault Resilience, Benchmarks & CPS Validation<br/>EdgeFaultLab (Fault injection) · TinyEdgeBench (ESP32-S3 benchmarks) · Smart-Agriculture-Edge-AI · AgriTwin-CPS"]
-    L1 --> L2 --> L3 --> L4
-```
+![Sender-report F1 versus Binary v1 communication in decimal MB for all 14 operating points.](docs/assets/readme/g2-detection-communication.png)
 
-| Layer | Repository | Focus |
-| :--- | :--- | :--- |
-| L1 | [SensorTrust](https://github.com/Sver0411/SensorTrust) | Zero-allocation C11 sensor health diagnosis (`RANGE`, `STUCK`, `SPIKE`, `DRIFT`, `MISSING`) |
-| L2 | [AdaptiveSense](https://github.com/Sver0411/AdaptiveSense) | Change-aware adaptive sampling primitives and ESP32-S3 firmware |
-| L2 | [TAIS](https://github.com/Sver0411/TAIS) | Trust-aware importance scheduling, ablation studies, and closed-loop boundary analysis |
-| L3 | [EventGuard-LoRa](https://github.com/Sver0411/EventGuard-LoRa) | Event-aware redundancy evaluated on ESP32-S3 + E220 Sub-GHz LoRa links |
-| L3 | [NetAdapt-IoT](https://github.com/Sver0411/NetAdapt-IoT) | Multi-flow IoT resource scheduling balancing AoI, deadlines, and fairness |
-| L3 | [IoT-MPQUIC-Scheduler](https://github.com/Sver0411/IoT-MPQUIC-Scheduler) | Deadline- and freshness-aware multipath QUIC scheduling for IoT traffic |
-| L4 | [EdgeFaultLab](https://github.com/Sver0411/EdgeFaultLab) | Deterministic fault injection and resilience testing for edge/IoT systems |
-| L4 | [TinyEdgeBench](https://github.com/Sver0411/TinyEdgeBench) | Lightweight micro-benchmarks for TinyML / edge kernels on ESP32-class hardware |
-| L4 | [Smart-Agriculture-Edge-AI](https://github.com/Sver0411/Smart-Agriculture-Edge-AI) | Multi-node edge AI smart-agriculture system with LoRa failover and safe actuation |
-| L4 | [AgriTwin-CPS](https://github.com/Sver0411/AgriTwin-CPS) | Greenhouse digital twin and cyber-physical closed-loop fault-resilience simulator |
+![Operational fault-induced false reports versus pooled receiver P95 data age across all 14 operating points.](docs/assets/readme/g2-freshness.png)
 
-## Quick start
+- At comparable sampling totals (**85,055 vs. 82,800 samples**), `JO-SU-40` sends **959,129 bytes** vs. **2,940,838 bytes** for `Fixed-20+C11` and lowers fault-induced false reports (**157 vs. 353**), trading off higher receiver P95 ordinary-data age (**113 s vs. 18 s**). `GateOnly+U` retains `GateOnly`'s sender F1 at lower byte volume.
 
-Use **Python 3.10+** and a C11 compiler (`cc`, Clang or GCC). The bridge compiles on first use. Run from the checkout root; no hardware or external dataset is required.
+[Cross-generator report](docs/TAIS_CROSS_GENERATOR_REPORT.md) · [Module ablation analysis (ZH)](docs/MODULE_ABLATION_RESULTS_ZH.md) · [Robust-sampling boundary report (ZH)](docs/PHASE4_RESULTS_ZH.md) · [Plot data](results/tais-transfer/summary.csv) · [Paper](papers/tais/README.md)
 
-**1. Install and check the Core components**
+---
+
+## Quick Start
+
+Requires **Python 3.10+** and a C11 compiler (`cc`, Clang or GCC). The C11 bridge compiles automatically on first use; no hardware or external dataset is required for the core demonstration.
+
+**1. Install and run core unit tests**
 
 ```sh
 git clone --recurse-submodules https://github.com/Sver0411/TAIS.git
@@ -205,10 +121,10 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements-lock.txt
 python -m pip install -e . --no-build-isolation
-python -m pytest tests/test_core_stream.py tests/test_wire_codec.py -q
+python -m pytest tests/test_core_stream.py tests/test_wire_codec.py tests/test_closed_loop.py tests/test_closed_loop_c11_parity.py -q
 ```
 
-**2. Run the demonstration and inspect its received history**
+**2. Run the local demonstration and inspect received history**
 
 ```sh
 python examples/tais-core/run.py --scenario missing_cross_long --seed 20 \
@@ -216,39 +132,48 @@ python examples/tais-core/run.py --scenario missing_cross_long --seed 20 \
 python examples/tais-core/view_run.py results/scratch/quickstart-01 --tail 12
 ```
 
-Choose a **new output directory** for each run. Expect `status: COMPLETE`, frozen-policy parity and TX/RX counters. The directory contains `manifest.json` for provenance, `summary.json` for results and `journal.jsonl` for the actual sampled and received history. For a live terminal display, replace `--pace 0 --ui quiet` with `--pace .01 --ui live`.
+For a live terminal display, replace `--pace 0 --ui quiet` with `--pace .01 --ui live`. Choose a fresh output directory for each run.
 
-[Installation details, CSV/JSONL input and troubleshooting](docs/QUICKSTART.md) · [Standalone receiver and link examples](examples/tais-core/README.md).
+**3. Reproduce factorial ablations or regenerate figures**
 
-## Running modes
+```sh
+python scripts/benchmark_ablation.py replicate --out results/scratch/ablation-01 --workers 4
+python scripts/analyze_ablation.py
+python scripts/verify_ablation.py
+```
 
-GateOnly remains the default. SU numbers are **idle interval caps**, not fixed sampling periods.
+[Installation details & troubleshooting](docs/QUICKSTART.md) · [Standalone receiver examples](examples/tais-core/README.md) · [All experiment scripts](scripts/README.md)
 
-| Mode | Main tradeoff | Select with |
-| --- | --- | --- |
-| GateOnly | Health-gated baseline; short or fault-masked events can be missed | `--policy gateonly` |
-| GateOnly + U | Same sampling and sender detection, fewer uploads, older ordinary receiver data | `--policy gateonly-u` |
-| JO-SU-20 | Higher detection in the reported tests, with more samples and potentially more fault-induced reports | `--policy tais-su --su-mode high` |
-| JO-SU-30 | Lower sampling than SU20, but lost detections and failed the balanced-replacement gate | `--policy tais-su --su-mode balanced` |
-| JO-SU-40 | Lower-sampling operating point; no general near-budget quality advantage | [Python API / frozen benchmark](docs/QUICKSTART.md#mode-selection) |
+## Running Modes
 
-`balanced` names the historical SU30 candidate, not a passed qualification. Fixed-period, Delta, Variance and Rao-inspired schedules are research benchmark controls, not Core CLI modes. [Mode details](docs/QUICKSTART.md#mode-selection) · [SU-1 results](docs/TAIS_SU_RESULTS.md).
+`GateOnly` is the default CLI policy; `SU` numbers specify **idle interval caps**, not fixed sampling periods.
 
-## Research limitations
+| Mode | Main Tradeoff | Select With |
+| :--- | :--- | :--- |
+| `GateOnly` | Health-gated baseline; short or fault-masked events can be missed | `--policy gateonly` |
+| `GateOnly + U` | Same sampling and sender detection, fewer uploads, older ordinary data | `--policy gateonly-u` |
+| `JO-SU-20` | Higher detection at higher sampling effort and potential fault-induced reports | `--policy tais-su --su-mode high` |
+| `JO-SU-30` | Lower sampling than SU20, with lower detection (did not pass balanced gate) | `--policy tais-su --su-mode balanced` |
+| `JO-SU-40` | Lower-sampling operating point; no general near-budget quality advantage | [Python API / benchmark](docs/QUICKSTART.md#mode-selection) |
 
-- The main evaluations use synthetic data. The earlier real-greenhouse background study **failed its predefined held-out coverage gate**; Phase 6 passes the 50% coverage gate on the 54-mote Intel Berkeley indoor dataset with controlled interventions, while agricultural field-event validation remains open.
-- Natural-fault diagnosis accuracy, agricultural field-event performance, live multi-node wireless deployment and measured battery energy consumption remain unvalidated.
-- Trust scores are heuristic. Events entirely between samples, or erased by a same-channel fault, may be unrecoverable.
-- Fewer application bytes do not imply an equal percentage reduction in radio energy or longer measured battery life.
+## Scope & Limitations
 
-[Failure boundaries, negative results and research history](docs/README.md#history-and-negative-results).
+- Synthetic evaluations are complemented by 24 real E220 hardware loss logs and the 54-mote Intel Berkeley indoor dataset (with controlled interventions), while live multi-node agricultural field-event deployment and measured battery energy remain open.
+- Trust scores are heuristic; events occurring strictly between samples or fully masked by a same-channel fault may be unrecoverable.
+- Lower application-layer byte counts do not directly equal proportional radio energy reduction or longer battery life.
 
-## Documentation
+[Failure boundaries & negative results](docs/README.md#history-and-negative-results)
 
-- **Use the system:** [Quick start](docs/QUICKSTART.md) · [Core input and receiver contract](examples/tais-core/README.md).
-- **Understand the implementation:** [Repository and source map](docs/REPOSITORY_GUIDE.md) · [Core architecture](docs/TAIS_CORE_PROTOTYPE.md).
-- **Inspect or reproduce evidence:** [Research document index](docs/README.md) · [Results](results/README.md) · [Experiment and verification commands](scripts/README.md).
-- **Read the paper:** [PDF, LaTeX and build guide](papers/tais/README.md) · [中文概要](docs/TAIS_PAPER_SUMMARY_ZH.md) · [Submission checklist](docs/TAIS_SUBMISSION_CHECKLIST.md).
-- **Contribute and reuse:** [Contributing](CONTRIBUTING.md) · [MIT license](LICENSE) · [Third-party notices](THIRD_PARTY_NOTICES.md).
+## Documentation & Related Projects
 
-AdaptiveSense and SensorTrust remain pinned upstream dependencies in [vendor/](vendor). Adaptive sampling, health heuristics, deadbands and binary encoding are established techniques; TAIS contributes a reproducible integration and evaluation of their system-level tradeoffs.
+- **Use & extend:** [Quick start](docs/QUICKSTART.md) · [Core prototype contract](docs/TAIS_CORE_PROTOTYPE.md) · [Repository & source map](docs/REPOSITORY_GUIDE.md)
+- **Paper & reports:** [Paper & LaTeX guide](papers/tais/README.md) · [中文概要](docs/TAIS_PAPER_SUMMARY_ZH.md) · [Document index](docs/README.md) · [Results index](results/README.md)
+- **Part of a 4-layer AIoT systems stack:**
+  - **L1 · Reliable Sensing:** [SensorTrust](https://github.com/Sver0411/SensorTrust)
+  - **L2 · Adaptive Observation:** [AdaptiveSense](https://github.com/Sver0411/AdaptiveSense) · [TAIS](https://github.com/Sver0411/TAIS)
+  - **L3 · Freshness & Lossy Links:** [EventGuard-LoRa](https://github.com/Sver0411/EventGuard-LoRa) · [NetAdapt-IoT](https://github.com/Sver0411/NetAdapt-IoT) · [IoT-MPQUIC-Scheduler](https://github.com/Sver0411/IoT-MPQUIC-Scheduler)
+  - **L4 · Resilience & CPS Validation:** [EdgeFaultLab](https://github.com/Sver0411/EdgeFaultLab) · [TinyEdgeBench](https://github.com/Sver0411/TinyEdgeBench) · [Smart-Agriculture-Edge-AI](https://github.com/Sver0411/Smart-Agriculture-Edge-AI) · [AgriTwin-CPS](https://github.com/Sver0411/AgriTwin-CPS)
+
+## License
+
+Project code and documentation are released under the [MIT License](LICENSE). Pinned upstream dependencies (`AdaptiveSense`, `SensorTrust`) remain in [vendor/](vendor) with attribution in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
