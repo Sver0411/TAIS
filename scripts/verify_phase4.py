@@ -18,9 +18,6 @@ def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 def verify_historical_files():
     protected=json.loads((OUT/'historical-protection.json').read_text())['files']
     for name,h in protected.items():
-        if name=='README.md':
-            # Navigation-only updates to the root README are allowed (consistent with verify_paper.py).
-            continue
         assert sha(ROOT/name)==h,('historical file changed',name)
     return len(protected)
 

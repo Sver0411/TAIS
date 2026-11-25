@@ -6,7 +6,7 @@ TAIS is an open research prototype for monitoring changing environments with unr
 
 Causal stream processing · Sensor health and event state · Independent byte receiver · Reproducible experiments
 
-[Quick start](#quick-start) · [Architecture](#system-architecture) · [Results](#experimental-results) · [Paper](papers/tais/README.md) · [Documentation](docs/README.md)
+[Quick start](#quick-start) · [中文简介](README.zh-CN.md) · [Architecture](#system-architecture) · [Results](#experimental-results) · [Paper](papers/tais/README.md) · [Documentation](docs/README.md)
 
 ## See it run
 

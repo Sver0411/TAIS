@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: >-
+  If you use or discuss this work in academic or technical material, please
+  cite the repository and its frozen evaluation artifacts.
+type: software
+title: "TAIS: Trust-Aware Importance Scheduler"
+authors:
+  - name: Sver0411
+version: 0.5.0
+date-released: '2026-11-25'
+license: MIT
+repository-code: https://github.com/Sver0411/TAIS
+keywords:
+  - aiot
+  - adaptive-sampling
+  - age-of-information
+  - sensor-health
+  - reproducible-research

@@ -1,0 +1,18 @@
+name: Phase5 closed-loop boundary checks
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  closed-loop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - run: python -m pip install -r requirements-lock.txt
+      - run: python -m pip install -e . --no-build-isolation
+      - run: python -m pytest tests/test_closed_loop.py -q
+      - run: python scripts/benchmark_phase5_boundary.py audit --out results/scratch/ci-phase5
+      - run: python scripts/benchmark_phase5_boundary.py engineering --out results/scratch/ci-phase5 --workers 2
