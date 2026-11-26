@@ -22,6 +22,5 @@ cd papers/tais-closed-loop && tectonic manuscript.tex
 ## Pre-Submission Notes
 
 Before uploading to the IEEE Sensors Journal Author Portal:
-1. Optionally add a corresponding-author institutional email address to `\thanks{}` in `manuscript.tex`.
-2. Upload `figures/fig01_architecture.png` or `graphical_abstract.png` as the mandatory Graphical Abstract.
-3. Add author biography/photo if requested at the final acceptance proof stage.
+1. Upload `figures/fig01_architecture.png` or `graphical_abstract.png` as the mandatory Graphical Abstract.
+2. Add author biography/photo if requested at the final acceptance proof stage.
