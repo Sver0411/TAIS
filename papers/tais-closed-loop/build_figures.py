@@ -325,7 +325,7 @@ def build_fig06_spatial() -> None:
     scs = ["single_drift", "common_env_event", "local_fast_event", "drift_plus_local_fast", "local_slow_event"]
     sc_lbls = ["Single\nDrift ID", "Common\nEnv Ramp", "Local\nFast", "Drift +\nLocal Fast", "Local Slow\n(H3 Bound)"]
     x2 = np.arange(len(scs))
-    w = 0.26
+    w = 0.25
     m_style = {
         "SingleChannel": dict(color="#cc3311", hatch="///", alpha=0.85),
         "SpatialKNN":    dict(color="#004488", hatch="",    alpha=0.95),
@@ -340,7 +340,7 @@ def build_fig06_spatial() -> None:
         bars = axes[1].bar(x2 + (idx_m - 1) * w, vals, width=w, edgecolor="#222222", lw=0.5, label=m, **m_style[m])
         for bar in bars:
             h = bar.get_height()
-            axes[1].text(bar.get_x() + bar.get_width() / 2.0, h + 1.6, f"{h:.0f}%", ha="center", va="bottom", fontsize=6.1)
+            axes[1].text(bar.get_x() + bar.get_width() / 2.0, h + 1.5, f"{h:.0f}", ha="center", va="bottom", fontsize=5.8)
 
     axes[1].set(title="(b) Identifiability, NullSpatial Control & H3 Boundary", xticks=x2, xticklabels=sc_lbls,
                 ylabel="Detection / ID Rate (%)", ylim=(0, 114))
