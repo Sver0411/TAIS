@@ -41,6 +41,16 @@ plt.rcParams.update(
 )
 
 # Colorblind-safe & grayscale-distinguishable styles (distinct markers + linestyles)
+DISPLAY_NAME = {
+    "Fixed-20":     "Fixed-20",
+    "A5":           "Fixed-20-TU",
+    "A7":           "Adapt-TU",
+    "Risk-T1-U1":   "Risk-OpenLoop",
+    "JALC-ObsOnly": "JALC-ObsOnly",
+    "JALC-AoI":     "JALC-AoI",
+    "JALC-Full":    "JALC-Full",
+}
+
 STYLES = {
     "JALC-Full":    dict(color="#004488", marker="o", ls="-",  lw=1.7, ms=4.2, zorder=6),
     "JALC-AoI":     dict(color="#228833", marker="s", ls="-",  lw=1.2, ms=3.7, zorder=5),
@@ -95,10 +105,10 @@ def build_fig02_dynamics() -> None:
 
     fig, axes = plt.subplots(1, 4, figsize=(IEEE_W, 2.15), constrained_layout=True)
     panels = [
-        (axes[0], m_a5,   "(a) A5 (Fixed-20+T+U)",   "viridis", 0, 100, False),
-        (axes[1], m_a7,   "(b) A7 (Native S+T+U)",   "viridis", 0, 100, False),
+        (axes[0], m_a5,   "(a) Fixed-20-TU",         "viridis", 0, 100, False),
+        (axes[1], m_a7,   "(b) Adapt-TU",            "viridis", 0, 100, False),
         (axes[2], m_full, "(c) JALC-Full (Ours)",    "viridis", 0, 100, False),
-        (axes[3], m_diff, r"(d) $\Delta$F1: JALC-Full $-$ A5", "RdBu", -25, 25, True),
+        (axes[3], m_diff, r"(d) $\Delta$F1: JALC $-$ Fixed-20-TU", "RdBu", -25, 25, True),
     ]
     for idx, (ax, mat, title, cmap, vmin, vmax, is_diff) in enumerate(panels):
         im = ax.imshow(mat, cmap=cmap, vmin=vmin, vmax=vmax, aspect="auto")
@@ -144,7 +154,7 @@ def build_fig03_links() -> None:
     ci_f1 = _seed_ci(df, ["bandwidth_bpm", "loss_id", "method"], "rx_f1_micro")
     ci_aoi = _seed_ci(df, ["bandwidth_bpm", "loss_id", "method"], "finite_age_p95_s")
 
-    fig, axes = plt.subplots(2, 3, figsize=(IEEE_W, 3.65), sharex=True)
+    fig, axes = plt.subplots(2, 3, figsize=(IEEE_W, 3.25), sharex=True)
     x = np.arange(len(losses))
 
     for col_i, (bw, btitle) in enumerate(zip(bws, bw_titles)):
@@ -160,8 +170,8 @@ def build_fig03_links() -> None:
                 f1_m.append(v); f1_lo.append(lo); f1_hi.append(hi)
                 v2, lo2, hi2 = ci_aoi[(bw, lid, m)]
                 ao_m.append(v2); ao_lo.append(lo2); ao_hi.append(hi2)
-            ax_top.errorbar(x, f1_m, yerr=[f1_lo, f1_hi], label=m, capsize=1.8, elinewidth=0.65, **st)
-            ax_bot.errorbar(x, ao_m, yerr=[ao_lo, ao_hi], label=m, capsize=1.8, elinewidth=0.65, **st)
+            ax_top.errorbar(x, f1_m, yerr=[f1_lo, f1_hi], label=DISPLAY_NAME[m], capsize=1.8, elinewidth=0.65, **st)
+            ax_bot.errorbar(x, ao_m, yerr=[ao_lo, ao_hi], label=DISPLAY_NAME[m], capsize=1.8, elinewidth=0.65, **st)
 
         ax_top.set_ylim(38, 82)
         ax_top.grid(True)
@@ -197,7 +207,7 @@ def build_fig04_e220() -> None:
     ci_aoi = _seed_ci(df, ["regime_id", "method"], "finite_age_p95_s")
     ci_air = _seed_ci(df, ["regime_id", "method"], "airtime_per_seed")
 
-    fig, axes = plt.subplots(1, 3, figsize=(IEEE_W, 2.45))
+    fig, axes = plt.subplots(1, 3, figsize=(IEEE_W, 2.22))
     x = np.arange(len(regimes))
     for m in methods:
         st = STYLES[m]
@@ -210,9 +220,9 @@ def build_fig04_e220() -> None:
             if use_err:
                 los = [ci_dict[(r, m)][1] for r in regimes]
                 his = [ci_dict[(r, m)][2] for r in regimes]
-                ax.errorbar(x, ys, yerr=[los, his], label=m, capsize=1.8, elinewidth=0.65, **st)
+                ax.errorbar(x, ys, yerr=[los, his], label=DISPLAY_NAME[m], capsize=1.8, elinewidth=0.65, **st)
             else:
-                ax.plot(x, ys, label=m, **st)
+                ax.plot(x, ys, label=DISPLAY_NAME[m], **st)
 
     axes[0].set(title="(a) Receiver F1", ylabel="Receiver F1 (%)", ylim=(36, 75))
     axes[1].set(title="(b) Data Freshness", ylabel="Run-P95 Finite AoI (s)", ylim=(20, 380))
@@ -269,8 +279,8 @@ def build_fig05_intel_exp_a() -> None:
             tp, fp, n = g["receiver_tp"].sum(), g["receiver_fp"].sum(), g["n_events"].sum()
             f1s.append(200.0 * tp / (n + tp + fp) if (n + tp + fp) else 0.0)
             aois.append(g["real_finite_age_p95_s"].mean() / 60.0)
-        axes[1].plot(x, f1s, label=m, **st)
-        axes[2].plot(x, aois, label=m, **st)
+        axes[1].plot(x, f1s, label=DISPLAY_NAME[m], **st)
+        axes[2].plot(x, aois, label=DISPLAY_NAME[m], **st)
 
     axes[1].set(title="(b) Real BG × E220 F1", ylabel="Receiver F1 (%)", xticks=x, ylim=(39, 62))
     axes[1].set_xticklabels(link_lbls, rotation=12, ha="right")
@@ -293,7 +303,7 @@ def build_fig06_spatial() -> None:
     exp_b = pd.read_csv(ROOT / "results/phase6_intel_berkeley/exp_b_metrics.csv")
     modes = ["SingleChannel", "SpatialKNN", "NullSpatial"]
 
-    fig, axes = plt.subplots(1, 2, figsize=(IEEE_W, 2.55), gridspec_kw={"width_ratios": [1.0, 1.48]})
+    fig, axes = plt.subplots(1, 2, figsize=(IEEE_W, 2.30), gridspec_kw={"width_ratios": [1.0, 1.48]})
 
     # Panel (a): False alarms
     sd = exp_b[exp_b["scenario"] == "single_drift"]

@@ -13,20 +13,27 @@
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,calc}
 
+\setlength{\textfloatsep}{7pt plus 2pt minus 2pt}
+\setlength{\dbltextfloatsep}{7pt plus 2pt minus 2pt}
+\setlength{\floatsep}{6pt plus 2pt minus 2pt}
+\setlength{\dblfloatsep}{6pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{3pt plus 1pt minus 1pt}
+\setlength{\belowcaptionskip}{0pt}
+
 \begin{document}
 
 \title{Trust-Aware Joint Adaptive Control and Causal Spatial Reference for Reliable Resource-Constrained IoT Sensing}
 
-\author{Author Name(s) To Be Supplied Before Submission%
-\thanks{Manuscript prepared in IEEE Sensors Journal two-column format (\texttt{IEEEtran}). Author names, affiliations, funding acknowledgments, and final ethics/AI disclosures must be supplied by the human author(s) prior to journal submission. Reproducible source code, C11 firmware kernel, hardware-trace archives, and statistical tables are maintained in the TAIS repository.}}
+\author{Weicheng~Tong%
+\thanks{W.~Tong is with Shandong Agricultural Engineering University, Jinan, Shandong, China. Generative AI tools assisted with language editing, experiment-script drafting, and \LaTeX{} typesetting; the author conceived the design, executed and verified all experiments, C11 ports, and statistical analyses, and takes full responsibility for all claims. Reproducible source code, C11 firmware kernel, hardware-trace archives, and statistical tables are maintained at \url{https://github.com/Sver0411/TAIS}.}}
 
 \markboth{IEEE SENSORS JOURNAL, MANUSCRIPT DRAFT}%
-{Trust-Aware Joint Adaptive Control and Causal Spatial Reference for Reliable IoT Sensing}
+{Tong: Trust-Aware Joint Adaptive Control and Causal Spatial Reference for Reliable IoT Sensing}
 
 \maketitle
 
 \begin{abstract}
-Resource-constrained Internet of Things (IoT) monitoring faces two coupled reliability barriers: (i) under lossy low-power wireless links, open-loop adaptive sampling and selective transmission suffer severe Age of Information (AoI) inflation and missed event edges; and (ii) at the single-sensor level, gradual sensor drift is fundamentally confounded with genuine slow environmental changes. We present TAIS-JALC, a lean three-dimensional closed-loop controller integrating frozen C11 sensor-health gating, a bounded 4+1 observation state machine, AoI-sampling hard reservation, and causal link-telemetry redundancy over an unchanged stateless Binary~v1 wire protocol, together with a strictly causal differential spatial $k$-nearest-neighbor ($k$-NN) reference layer. Across 21,000 synthetic boundary runs, TAIS-JALC improves receiver F1 by +10.6 to +11.6 percentage points (pp) over selective fixed-period baselines under 30\% and burst packet loss while capping P95 finite AoI at 42--45\,s. Replayed over 24 real ESP32-S3 + E220-400T22D Sub-GHz hardware loss traces (3,359 RF attempts), TAIS-JALC strictly Pareto-dominates fixed polling (+9.46\,pp F1, $-$46.6\% P95 AoI, $-$54.4\% fault-induced false alarms, and $-$5.1\% RF airtime; all $p_{\text{Holm}} \le 0.0175$). A zero-allocation pure C11 port passes 27/27 bit-exact parity trajectories and compiles for ESP32-S3 (\texttt{-Os}) in 3,328\,B static RAM (including dual-channel health monitoring) and 7,643\,B flash code. Finally, across 12 held-out days of the 54-mote MIT Intel Berkeley dataset (9,000 runs), causal differential spatial $k$-NN cuts drift-induced false environmental alarms by $-$75.0\%, identifies 88.3\% of drifts (96.5\% on normal-coverage days), outperforms an equal-cost \texttt{NullSpatial} negative control by +45.4\,pp on common environmental ramps ($p_{\text{Holm}} = 0.027$), and explicitly quantifies its unidentifiable boundary on single-node slow local events ($-$55.0\,pp).
+Resource-constrained Internet of Things (IoT) monitoring faces two coupled reliability barriers: (i) under lossy low-power wireless links, open-loop adaptive sampling and selective transmission suffer severe Age of Information (AoI) inflation and missed event edges; and (ii) at the single-sensor level, gradual sensor drift is fundamentally confounded with genuine slow environmental changes. We present \texttt{TAIS-JALC}, a lean three-dimensional closed-loop controller integrating frozen C11 sensor-health gating, a bounded 4+1 observation state machine, AoI-sampling hard reservation, and causal link-telemetry redundancy over an unchanged stateless Binary~v1 wire protocol, together with a strictly causal differential spatial $k$-nearest-neighbor ($k$-NN) reference layer. Across 21,000 synthetic boundary runs, \texttt{TAIS-JALC} improves receiver F1 by +10.6 to +11.6 percentage points (pp) over selective fixed-period baselines (\texttt{Fixed-20-TU}) under 30\% and burst packet loss while capping P95 finite AoI at 42--45\,s. Under trace-driven replay over 24 measured ESP32-S3 + E220-400T22D Sub-GHz hardware loss logs (3,359 RF attempts), \texttt{TAIS-JALC} strictly Pareto-dominates fixed polling (+9.46\,pp F1, $-$46.6\% P95 AoI, $-$54.4\% fault-induced false alarms, and $-$5.1\% RF airtime; all $p_{\text{Holm}} \le 0.0175$). A zero-allocation pure C11 port passes 27/27 bit-exact parity trajectories and compiles for ESP32-S3 (\texttt{-Os}) in 3,328~B static RAM (including dual-channel health monitoring) and 7,643~B flash code. Finally, across 12 held-out days of the 54-mote MIT Intel Berkeley dataset (9,000 runs), causal differential spatial $k$-NN cuts drift-induced false environmental alarms by $-$75.0\%, identifies 88.3\% of drifts (96.5\% on normal-coverage days), outperforms an equal-cost \texttt{NullSpatial} negative control by +45.4\,pp on common environmental ramps ($p_{\text{Holm}} = 0.027$), and explicitly quantifies its unidentifiable boundary on single-node slow local events ($-$55.0\,pp).
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -34,33 +41,33 @@ Adaptive sampling, Age of Information (AoI), embedded C11, Internet of Things (I
 \end{IEEEkeywords}
 
 \section{Introduction}
-\IEEEPARstart{L}{ong-lived} wireless sensor networks (WSNs) and edge Internet of Things (IoT) deployments operate at the intersection of three coupled imperfections: low-cost transducers experience stuck readings, range violations, missing samples, and gradual calibration drift~\cite{sharma2010faults,ni2009sensor}; low-power wireless links such as Sub-GHz LoRa suffer bursty packet loss and strict duty-cycle limits~\cite{augustin2016lora,gilbert1960capacity}; and applications require timely, trustworthy state updates quantified by the Age of Information (AoI)~\cite{kaul2012realtime,yates2021age}.
+\IEEEPARstart{L}{ong-lived} wireless sensor networks (WSNs) and edge Internet of Things (IoT) deployments operate at the intersection of three coupled imperfections: low-cost transducers experience stuck readings, range violations, missing samples, and gradual calibration drift~\cite{sharma2010faults,ni2009sensor,chai2022stability}; low-power wireless links such as Sub-GHz LoRa suffer bursty packet loss and strict duty-cycle limits~\cite{augustin2016lora,gilbert1960capacity,chache2024lora}; and applications require timely, trustworthy state updates quantified by the Age of Information (AoI)~\cite{kaul2012realtime,yates2021age,kahraman2024survey}.
 
-Prior adaptive acquisition and transmission-suppression schemes typically treat these dimensions in isolation~\cite{rao2019adaptive,masoum2012quality,dias2017dual,arnaiz2024energy}. In practice, open-loop coupling fails in two concrete ways. First, when a node suppresses routine uploads to conserve airtime, even moderate wireless packet loss (15\%--30\%) erases event onsets and stretches receiver P95 finite-value AoI past 140--300\,s because lost frames must wait for the next sparse heartbeat. Second, when a single channel undergoes gradual sensor drift, any purely local temporal detector faces a fundamental identifiability deadlock: without external physical context, a slow $+4\,^{\circ}\text{C}$ drift over two hours is observationally indistinguishable from a genuine slow environmental warming ramp.
+Prior adaptive acquisition and transmission-suppression schemes typically treat these dimensions in isolation~\cite{rao2019adaptive,masoum2012quality,dias2017dual,arnaiz2024energy,wang2023emd}. In practice, open-loop coupling fails in two concrete ways. First, when a node suppresses routine uploads to conserve airtime, even moderate wireless packet loss (15\%--30\%) erases event onsets and stretches receiver P95 finite-value AoI past 140--300\,s because lost frames must wait for the next sparse heartbeat. Second, when a single channel undergoes gradual sensor drift, any purely local temporal detector faces a fundamental identifiability deadlock: without external physical context, a slow $+4\,^{\circ}\text{C}$ drift over two hours is observationally indistinguishable from a genuine slow environmental warming ramp.
 
 Equally important in empirical IoT systems research is separating genuine operational gains from simulation artifacts and reporting explicit failure boundaries. Purely synthetic benchmarks conceal non-stationary real-world diurnal heating cycles and real network outages, while unverified Python prototypes do not prove deployability on microcontroller-class hardware.
 
 To address both barriers without bloating protocol or memory overhead, this paper introduces and rigorously evaluates a unified closed-loop observation and causal spatial-reference framework built additively on the open-source TAIS architecture. Our contributions are fourfold:
 \begin{enumerate}
 \item \textbf{Lean 3D Closed-Loop Control and Zero-Allocation C11 Port:} We design \texttt{TAIS-JALC}, a 4+1 state controller governed by only five primary hyperparameters that couples trust-gated bounded sampling, per-channel AoI-sampling hard reservation, and causal loss-triggered $K{=}2$ critical-edge redundancy while reusing the stateless Binary~v1 frame format unchanged. We implement a zero-heap-allocation pure C11 kernel verified bit-exact against Python across 27 full trajectories and cross-compiled for ESP32-S3 Xtensa LX7 (3.25\,KB combined static RAM, 7.64\,KB controller \texttt{.text}).
-\item \textbf{Regime-Boundary Characterization and Real Hardware-Trace Validation:} Across 21,000 synthetic boundary runs (20 sweep + 20 held-out validation seeds) and 2,240 hardware-trace runs replaying 24 audited ESP32-S3 + E220-400T22D Sub-GHz LoRa logs (3,359 physical RF attempts), we establish statistically significant Holm-corrected gains and strict Pareto dominance over fixed polling under real lossy RF traces, alongside explicit failure regimes ($\le 10$\,s pulses, 600\,s ramps, and $7\times$ high-noise events).
+\item \textbf{Regime-Boundary Characterization and Measured E220 Hardware-Trace Validation:} Across 21,000 synthetic boundary runs (20 sweep + 20 held-out validation seeds) and 2,240 hardware-trace runs replaying 24 verified ESP32-S3 + E220-400T22D Sub-GHz LoRa logs (3,359 physical RF attempts), we establish statistically significant Holm-corrected gains and strict Pareto dominance over fixed polling under measured lossy RF traces, alongside explicit failure regimes ($\le 10$\,s pulses, 600\,s ramps, and $7\times$ high-noise events).
 \item \textbf{Real 54-Mote External Validity and Causal Differential Spatial Reference:} Auditing 2.31 million raw records from the MIT Intel Berkeley Research Lab 54-mote deployment~\cite{madden2004intel} under a strict chronological split (12 contiguous held-out days, 76.4\% mean coverage, zero future interpolation, retaining a real two-day outage), we evaluate both real-background $\times$ E220 external validity (5,400 runs) and a matched causal differential spatial $k$-NN detector (3,600 runs) that cancels static inter-mote and multi-day seasonal offsets.
-\item \textbf{Causal Falsification via Equal-Cost Negative Control and Honest Boundaries:} By pairing \texttt{SpatialKNN} against an equal-cost \texttt{NullSpatial} control (identical code, thresholds, and availability masks, fed calibration-day neighbor readings), we prove that real physical neighbor correlation---not extra computation---drives the +45.4\,pp common-event preservation advantage, while explicitly quantifying both real morning HVAC domain shift and the fundamental single-node slow-local-event unidentifiable boundary (H3).
+\item \textbf{Causal Falsification via Equal-Cost Negative Control and Honest Boundaries:} By pairing \texttt{SpatialKNN} against an equal-cost \texttt{NullSpatial} control (identical code, thresholds, and availability masks, fed calibration-day neighbor readings), we prove that real physical neighbor correlation---not extra computation---drives the +45.4\,pp common-event preservation advantage, while explicitly quantifying both real morning HVAC domain shift and the fundamental single-node slow-local-event unidentifiable boundary.
 \end{enumerate}
 
 \section{Related Work}
 \paragraph{Adaptive Sampling and Selective Transmission}
-Adaptive acquisition modulates sampling intervals based on signal variation, prediction error, or criticality~\cite{rao2019adaptive,masoum2012quality,algabroun2020dsra}. Dual-prediction and deadband upload rules further reduce radio transmissions by omitting routine updates within an error band~\cite{dias2017dual,arnaiz2024energy}. However, when sampling and selective transmission operate open-loop, sparse heartbeats interact destructively with wireless erasures, causing AoI spikes and missed onset edges.
+Adaptive acquisition modulates sampling intervals based on signal variation, empirical mode decomposition, prediction error, or criticality~\cite{rao2019adaptive,masoum2012quality,algabroun2020dsra,wang2023emd}. Dual-prediction and deadband upload rules further reduce radio transmissions by omitting routine updates within an error band~\cite{dias2017dual,arnaiz2024energy}. However, when sampling and selective transmission operate open-loop, sparse heartbeats interact destructively with wireless erasures, causing AoI spikes and missed onset edges.
 
 \paragraph{Age of Information and Lossy LPWAN Links}
-Age of Information (AoI) captures the freshness of the latest successfully received state at the monitor~\cite{kaul2012realtime,yates2021age}. In Sub-GHz LoRa and ISM-band networks, collisions, fading, and bursty channel memory modeled by Gilbert-Elliott processes~\cite{gilbert1960capacity,augustin2016lora} degrade single-shot transmissions. Most AoI scheduling studies assume trustworthy sensors or abstract packet queues, omitting transducer fault gating and finite-value versus null-frame age semantics.
+Age of Information (AoI) captures the freshness of the latest successfully received state at the monitor~\cite{kaul2012realtime,yates2021age,kahraman2024survey}, with recent extensions covering stochastic arrivals~\cite{kadota2021minimizing}, semantic staleness (Age of Incorrect Information)~\cite{maatouk2020aoii}, nonlinear Whittle indices~\cite{tripathi2024whittle}, soft AoI deadlines~\cite{li2025soft}, peak-AoI random access~\cite{wu2024paoi}, and multisource network coding~\cite{kahraman2024coding}. In Sub-GHz LoRa and LPWAN deployments, collisions, fading, and bursty channel memory modeled by Gilbert-Elliott processes~\cite{gilbert1960capacity,augustin2016lora} motivate coordinated scheduling~\cite{garridohidalgo2021lorawan}, priority-aware allocation~\cite{lima2021adaptive}, power control~\cite{algumaei2022lora}, and LoRa forward error correction trade-offs for AoI~\cite{chache2024lora}. Most AoI studies still assume trustworthy sensors or abstract queues, omitting transducer fault gating and finite-value versus null-frame age semantics.
 
-\paragraph{Sensor Faults and Spatio-Temporal Correlation}
-Real-world deployments exhibit frequent stuck-at, out-of-range, spike, missing, and drift faults~\cite{sharma2010faults,ni2009sensor}. Fault-tolerant event detection~\cite{yim2010fault} and cluster-correlated adaptation~\cite{harb2024clara} exploit redundancy across nearby nodes~\cite{vuran2004spatiotemporal,guestrin2004distributed}. Yet many spatial schemes rely on offline regression, non-causal smoothing, or lack equal-cost negative controls to isolate physical correlation from algorithmic complexity. Our work unifies strict causal execution, lightweight C11 closed-loop AoI control, real Sub-GHz hardware loss traces, and equal-cost negative-controlled spatial drift identifiability in a single reproducible study.
+\paragraph{Sensor Faults, Drift Compensation, and Spatio-Temporal Correlation}
+Real-world deployments exhibit frequent stuck-at, out-of-range, spike, missing, and long-term drift faults~\cite{sharma2010faults,ni2009sensor,chai2022stability}. Hardware-level temperature drift compensation~\cite{wang2022drift}, fault-tolerant event detection~\cite{yim2010fault}, and cluster-correlated adaptation~\cite{harb2024clara} exploit physical models or redundancy across nearby nodes~\cite{vuran2004spatiotemporal,guestrin2004distributed}. Yet many spatial schemes rely on offline regression, non-causal smoothing, or lack equal-cost negative controls to isolate physical correlation from algorithmic complexity. Our work unifies strict causal execution, lightweight C11 closed-loop AoI control, measured Sub-GHz hardware loss traces, and equal-cost negative-controlled spatial drift identifiability in a single reproducible study.
 
 \section{System Architecture and Methodology}
 
-Fig.~\ref{fig:arch} illustrates the complete end-to-end architecture combining local closed-loop control (\texttt{TAIS-JALC}) with the gateway/network-level causal differential spatial reference layer. Frozen upstream components---\texttt{SensorTrust} C11 health diagnosis, \texttt{AdaptiveSense} change analysis, and the stateless Binary~v1 wire codec---remain unmodified to guarantee fair comparison against frozen historical baselines.
+Fig.~\ref{fig:arch} illustrates the complete end-to-end architecture combining local closed-loop control (\texttt{TAIS-JALC}) with the gateway/network-level causal differential spatial reference layer. Upstream components---\texttt{SensorTrust} C11 health diagnosis, \texttt{AdaptiveSense} change analysis, and the stateless Binary~v1 wire codec---remain unmodified to guarantee fair comparison against baseline policies.
 
 \begin{figure*}[t]
 \centering
@@ -75,37 +82,37 @@ Fig.~\ref{fig:arch} illustrates the complete end-to-end architecture combining l
     dasharr/.style={-{Stealth[length=2.2mm]}, dashed, line width=0.75pt, draw=blue!60!black}
 ]
 \node[box] (in) at (0,0) {Due Sample\\$(t,\, x_T(t),\, x_H(t))$};
-\node[frozen] (st) at (3.3, 0.85) {\textbf{SensorTrust C11}\\(Frozen Health Gate)};
-\node[frozen] (ca) at (3.3,-0.85) {\textbf{ChangeAnalyzer}\\(Frozen EMA/Edge)};
+\node[frozen] (st) at (3.3, 0.85) {\textbf{SensorTrust C11}\\(Health Gate)};
+\node[frozen] (ca) at (3.3,-0.85) {\textbf{ChangeAnalyzer}\\(EMA/Edge)};
 \node[ctrl] (jalc) at (7.5, 0) {\textbf{TAIS-JALC Controller (Pure C11)}\\4+1 FSM $\cdot$ 5 Hyperparameters\\AoI-Sampling Hard Reservation\\Bounded Fast Budget ($\le 6/120$\,s)};
-\node[frozen] (v1) at (12.1, 0) {\textbf{Binary v1 Codec}\\Stateless Frames\\Critical-Edge $K{=}2$};
-\node[box] (link) at (15.3, 0) {\textbf{Lossy RF Link}\\Synthetic / GE /\\Real E220 Traces};
-\node[frozen] (rx) at (18.4, 0) {\textbf{CoreReceiver}\\Frame Dedup\\Finite-Value AoI};
-\node[spatial] (sp) at (14.0, -2.25) {\textbf{Causal Differential Spatial $k$-NN Reference (Gateway / Network Layer)}\\Matched Lagged Residual $\Delta r_{\text{spatial}}(t) = \Delta x_m(t) - \operatorname{median}_{j\in\mathcal{N}_k}\Delta x_j(t)$ $\cdot$ Abrupt Step Override $\cdot$ Graceful Offline Fallback};
+\node[frozen] (v1) at (12.6, 0) {\textbf{Binary v1 Codec}\\Stateless Frames\\Critical-Edge $K{=}2$};
+\node[box] (link) at (15.8, 0) {\textbf{Lossy RF Link}\\Synthetic / GE /\\Measured E220 Logs};
+\node[frozen] (rx) at (18.9, 0) {\textbf{CoreReceiver}\\Frame Dedup\\Finite-Value AoI};
+\node[spatial] (sp) at (13.4, -2.55) {\textbf{Causal Differential Spatial $k$-NN Reference (Gateway / Network Layer)}\\Matched Lagged Residual $\Delta r_{\text{spatial}}(t) = \Delta x_m(t) - \operatorname{median}_{j\in\mathcal{N}_k}\Delta x_j(t)$ $\cdot$ Abrupt Step Override $\cdot$ Graceful Offline Fallback};
 
 \draw[arr] (in.east) -- ++(0.35,0) |- (st.west);
 \draw[arr] (in.east) -- ++(0.35,0) |- (ca.west);
 \draw[arr] (st.east) -- ++(0.35,0) |- ([yshift=2.5mm]jalc.west);
 \draw[arr] (ca.east) -- ++(0.35,0) |- ([yshift=-2.5mm]jalc.west);
-\draw[arr] (jalc.east) -- node[above, font=\scriptsize]{Upload + $K$} (v1.west);
+\draw[arr] (jalc.east) -- node[above=2pt, font=\scriptsize]{Upload + $K$} (v1.west);
 \draw[arr] (v1.east) -- (link.west);
 \draw[arr] (link.east) -- (rx.west);
-\draw[arr] (rx.south) |- (sp.east);
+\draw[arr] (rx.south) -- (rx.south |- sp.north);
 
-\draw[dasharr] (link.south) -- ++(0,-0.65) -| node[pos=0.25, above, font=\scriptsize, text=blue!60!black]{Causal Link Telemetry ($\hat{p}_{\text{loss}}$, $t_{\text{rx}}^{(c)}$, BW)} (jalc.south);
-\draw[dasharr] (jalc.north) -- ++(0,0.85) -| node[pos=0.25, above, font=\scriptsize, text=blue!60!black]{Next Due Time $t_{\text{next}}$ (Eq.~\eqref{eq:aoi_reserve})} (in.north);
+\draw[dasharr] (link.south) -- ++(0,-0.75) -| node[pos=0.25, above=1pt, font=\scriptsize, text=blue!60!black]{Causal Link Telemetry ($\hat{p}_{\text{loss}}$, $t_{\text{rx}}^{(c)}$, BW)} (jalc.south);
+\draw[dasharr] (jalc.north) -- ++(0,0.85) -| node[pos=0.25, above=1pt, font=\scriptsize, text=blue!60!black]{Next Due Time $t_{\text{next}}$ (Eq.~\eqref{eq:aoi_reserve})} (in.north);
 \end{tikzpicture}%
 }
-\caption{End-to-end architecture of TAIS-JALC and the causal differential spatial $k$-NN reference layer. Frozen upstream modules (gray) remain untouched; the closed-loop controller (blue) runs in zero-allocation pure C11 on MCU-class nodes, while the causal spatial reference layer (teal) disambiguates slow single-sensor drift from common environmental ramps using physical neighbor streams.}
+\caption{End-to-end architecture of \texttt{TAIS-JALC} and the causal differential spatial $k$-NN reference layer. Upstream modules (gray) remain untouched; the closed-loop controller (blue) runs in zero-allocation pure C11 on MCU-class nodes, while the causal spatial reference layer (teal) disambiguates slow single-sensor drift from common environmental ramps using physical neighbor streams.}
 \label{fig:arch}
 \end{figure*}
 
 \subsection{Three-Dimensional Closed-Loop Control (TAIS-JALC)}
-At each due timestamp $t$, \texttt{TAIS-JALC} ingests dual-channel readings (temperature and humidity), \texttt{SensorTrust} health states (\texttt{HEALTHY}, \texttt{DEGRADED}, \texttt{FAULT}), \texttt{ChangeAnalyzer} event flags, and causal link feedback. To prevent hyperparameter bloat and overfitting, \texttt{TAIS-JALC} eliminates CUSUM detectors and depends on exactly five frozen primary hyperparameters (Table~\ref{tab:params}).
+At each due timestamp $t$, \texttt{TAIS-JALC} ingests dual-channel readings (temperature and humidity), \texttt{SensorTrust} health states (\texttt{HEALTHY}, \texttt{DEGRADED}, \texttt{FAULT}), \texttt{ChangeAnalyzer} event flags, and causal link feedback. To prevent hyperparameter bloat and overfitting, \texttt{TAIS-JALC} eliminates CUSUM detectors and depends on exactly five fixed primary hyperparameters (Table~\ref{tab:params}).
 
 \begin{table}[t]
 \centering
-\caption{Frozen Primary Hyperparameters of TAIS-JALC}
+\caption{Primary Hyperparameters of TAIS-JALC}
 \label{tab:params}
 \footnotesize
 \begin{tabular}{@{}lcl@{}}
@@ -133,10 +140,10 @@ t_{\text{next}} = \min\!\Big(t + I_{\text{obs}},\; \max\!\big(t + I_{\min},\; t_
 where $t_{\text{rx}}^{\star} = \min_{c \in \mathcal{C}_{\text{fin}}} t_{\text{rx}}^{(c)}$ is the stalest finite channel receipt time, $I_{\min} = 5$\,s, $\Delta_{\text{m}} = 5$\,s, and $T_{\text{AoI}}^{\max} \in \{T_{\text{AoI}}^{\text{quiet}}, T_{\text{AoI}}^{\text{active}}\}$. A sender-side lookahead guard further forces transmission whenever deferring to $t_{\text{next}}$ would breach $T_{\text{AoI}}^{\max}$.
 
 \paragraph{Causal Link Telemetry and Selective Redundancy}
-After every transmission attempt, causal link feedback updates an exponentially weighted moving average loss estimate $\hat{p}_{\text{loss}}$ and confirms whether finite values reached the receiver. When $\hat{p}_{\text{loss}} \ge \theta_{\text{loss}} = 0.10$, \texttt{TAIS-JALC} sets redundancy $K{=}2$ exclusively for high-value \texttt{event\_edge} and \texttt{health\_edge} snapshots while keeping ordinary updates at $K{=}1$ (and suppressing non-critical deadband updates during bandwidth congestion). Because the independent \texttt{CoreReceiver} natively deduplicates identical Binary~v1 frames by sequence/timestamp, zero wire-protocol modifications are required. We evaluate three incremental ablation variants: \texttt{JALC-ObsOnly} (4+1 FSM + legacy 120\,s upload), \texttt{JALC-AoI} (adding Eq.~\eqref{eq:aoi_reserve} and per-channel AoI caps), and \texttt{JALC-Full} (complete 3D closed loop with causal link telemetry and critical-edge $K{=}2$).
+After every transmission attempt, causal link feedback updates an exponentially weighted moving average loss estimate $\hat{p}_{\text{loss}}$ and confirms whether finite values reached the receiver. When $\hat{p}_{\text{loss}} \ge \theta_{\text{loss}} = 0.10$, \texttt{TAIS-JALC} sets redundancy $K{=}2$ exclusively for high-value event-edge and health-edge snapshots while keeping ordinary updates at $K{=}1$ (and suppressing non-critical deadband updates during bandwidth congestion). Because the independent \texttt{CoreReceiver} natively deduplicates identical Binary~v1 frames by sequence/timestamp, zero wire-protocol modifications are required. We evaluate three incremental ablation variants: \texttt{JALC-ObsOnly} (4+1 FSM + legacy 120\,s upload), \texttt{JALC-AoI} (adding Eq.~\eqref{eq:aoi_reserve} and per-channel AoI caps), and \texttt{JALC-Full} (complete 3D closed loop with causal link telemetry and critical-edge $K{=}2$).
 
 \subsection{Zero-Allocation Embedded C11 Implementation}
-To verify MCU-class feasibility without dynamic memory fragmentation, the complete \texttt{TAIS-JALC} state machine, rolling median/MAD buffers, fast-budget ring buffer, and link telemetry were ported to strict ANSI/ISO C11 (\texttt{src/tais/closed\_loop/c11/tais\_jalc.\{h,c\}}, compiled with \texttt{-std=c11 -Wall -Wextra -Werror}). All buffers are fixed-capacity value structs (\texttt{sizeof(tais\_jalc\_t)} $= 1{,}072$\,B supporting up to 4 channels; zero \texttt{malloc/free}; zero RTOS dependencies). Bit-exact parity against the reference Python implementation was verified over 27 full 1,800\,s trajectories spanning 3 ablation variants $\times$ 3 fault/event scenarios $\times$ 3 link regimes, confirming exact agreement ($<10^{-9}$) on every step's state, upload decision, redundancy $K$, fast-budget counters, and $t_{\text{next}}$.
+To verify MCU-class feasibility without dynamic memory fragmentation, the complete \texttt{TAIS-JALC} state machine, rolling median/MAD buffers, fast-budget ring buffer, and link telemetry were ported to strict ANSI/ISO C11 (\texttt{tais\_jalc.\{h,c\}}, compiled with \texttt{-std=c11 -Wall -Wextra -Werror}). All buffers are fixed-capacity value structs (\texttt{sizeof(tais\_jalc\_t)} $= 1{,}072$~B supporting up to 4 channels; zero \texttt{malloc/free}; zero RTOS dependencies). Bit-exact parity against the reference Python implementation was verified over 27 full 1,800\,s trajectories spanning 3 ablation variants $\times$ 3 fault/event scenarios $\times$ 3 link regimes, confirming exact agreement ($<10^{-9}$) on every step's state, upload decision, redundancy $K$, fast-budget counters, and $t_{\text{next}}$.
 
 \subsection{Causal Differential Spatial $k$-NN Reference}
 Single-channel detectors cannot distinguish slow sensor drift from genuine slow room-wide warming. Given physical node coordinates $\mathbf{p}_m \in \mathbb{R}^2$, for each target mote $m$ we select its $k{=}4$ nearest physical neighbors $\mathcal{N}_k(m)$ by Euclidean distance (excluding $m$). Critically, static calibration offsets computed days earlier drift under seasonal or solar microclimate changes. Instead, at each discrete slot $t$ (2-min cadence), both target and neighbors compute strictly causal matched lagged deviations over the identical past window $[t{-}L{-}W,\, t{-}L)$ with lag $L{=}20$ (40\,min) and window $W{=}40$ (80\,min):
@@ -144,7 +151,7 @@ Single-channel detectors cannot distinguish slow sensor drift from genuine slow 
 \Delta x_m(t) &= x_m(t) - \operatorname{median}\!\big(x_m[t{-}60 : t{-}20]\big), \label{eq:lagdev} \\
 \Delta r_{\text{spatial}}(t) &= \Delta x_m(t) - \operatorname{median}_{j \in \mathcal{N}_k^{\text{fresh}}(t)} \Delta x_j(t), \label{eq:spres}
 \end{align}
-where $\mathcal{N}_k^{\text{fresh}}(t)$ denotes neighbors with finite readings at $t$ and at least 5 finite history points in $[t{-}60:t{-}20)$. Static inter-mote and multi-day baseline offsets cancel identically in Eq.~\eqref{eq:lagdev}--\eqref{eq:spres} with zero future leakage.
+where $\mathcal{N}_k^{\text{fresh}}(t)$ denotes neighbors with finite readings at $t$ and at least 5 finite history points in $[t{-}60:t{-}20)$. Static inter-mote and multi-day baseline offsets cancel identically in Eqs.~\eqref{eq:lagdev}--\eqref{eq:spres} with zero future leakage.
 
 To preserve genuine sharp local events (e.g., sudden localized heat or door opening) even during ongoing slow drift, we also compute a strictly causal short-lag jump over $[t{-}8,\, t{-}2)$:
 \begin{equation}
@@ -163,15 +170,15 @@ To falsify the hypothesis that spatial gains arise from additional computation, 
 
 \section{Experimental Setup and Statistical Protocol}
 
-We conduct three strictly separated, seed- and time-isolated empirical studies without retuning frozen baselines (\texttt{Fixed-20}, \texttt{A5} = \texttt{Fixed-20+T+U}, \texttt{A7} = native \texttt{AdaptiveSense+T+U}, and \texttt{Risk-T1-U1}):
+We conduct three strictly separated, seed- and time-isolated empirical studies without retuning baseline policies: fixed polling (\texttt{Fixed-20}), fixed polling with trust gating and selective upload (\texttt{Fixed-20-TU}), native adaptive sampling with trust and selective upload (\texttt{Adapt-TU}), and open-loop risk-adaptive sampling (\texttt{Risk-OpenLoop}):
 
 \begin{enumerate}
-\item \textbf{Study~I --- Synthetic Regime-Boundary Matrix (21,000 runs):} A seed audit across 388 historical manifests confirmed zero overlap with sweep seeds \texttt{1020--1039} and held-out validation seeds \texttt{1100--1119} (20 seeds $\times$ 75 conditions $\times$ 7 methods each): Axis~A ($5\times 5$ event duration $10$--$600$\,s $\times$ amplitude $0.5\times$--$2.5\times$), Axis~B ($5\times 3$ packet loss $0\%$--$30\%$ + Gilbert-Elliott burst fading $\times$ bandwidth caps unlimited / 1200 / 600\,B/min), and Slice~C ($7\times$ noise and same/cross-channel faults at 0\% and 15\% loss).
-\item \textbf{Study~II --- Real ESP32-S3 + E220 Hardware Traces (2,240 runs):} We extracted 24 audited hardware runs (3,359 physical RF attempts; SHA-256 verified) from dual ESP32-S3 + E220-400T22D Sub-GHz LoRa nodes across four measured regimes (\texttt{e220\_random\_20}: 21.17\% loss; \texttt{e220\_random\_30}: 31.72\%; \texttt{e220\_burst\_20}: 19.15\%, max 9-frame burst; \texttt{e220\_burst\_30}: 28.02\%, max 12-frame burst; measured TX airtime 30.4\,ms/frame, ACK RTT 743.1\,ms) and replayed them on isolated held-out seeds \texttt{1200--1219}.
-\item \textbf{Study~III --- MIT Intel Berkeley 54-Mote Dataset (9,000 runs):} Stream-auditing all 2,313,682 raw lines of \texttt{data.txt.gz} removed 93,879 malformed rows, 9,719 unknown motes, 384,505 out-of-range temperatures, and 289,176 invalid humidities, yielding 1,816,504 valid T+RH records across 54 located motes (zero future interpolation; missing slots remain \texttt{None}). Under a pre-declared chronological split---calibration prefix (\texttt{2004-02-28} to \texttt{03-01}, 83.8\%--89.3\% coverage), 1-day isolation gap (\texttt{03-02}), and 12 contiguous held-out days (\texttt{2004-03-03} to \texttt{03-14})---mean 54-mote 2-min coverage is \textbf{76.4\%}, passing our $\ge 50\%$ coverage gate while intentionally retaining the real March~10--11 outage (31.1\% and 47.8\% coverage). Target motes (top-10 for Exp~A, top-20 for Exp~B; mean $k{=}4$ neighbor distance $5.09 \pm 0.74$\,m) were selected strictly from calibration counts.
+\item \textbf{Study~I --- Synthetic Regime-Boundary Matrix (21,000 runs):} A seed audit across all prior development runs confirmed zero overlap with sweep seeds \texttt{1020--1039} and held-out validation seeds \texttt{1100--1119} (20 seeds $\times$ 75 conditions $\times$ 7 methods each): Axis~A ($5\times 5$ event duration $10$--$600$\,s $\times$ amplitude $0.5\times$--$2.5\times$), Axis~B ($5\times 3$ packet loss $0\%$--$30\%$ + Gilbert-Elliott burst fading $\times$ bandwidth caps unlimited / 1200 / 600\,B/min), and Slice~C ($7\times$ noise and same/cross-channel faults at 0\% and 15\% loss).
+\item \textbf{Study~II --- Trace-Driven Replay Over Measured E220 Hardware Loss Logs (2,240 runs):} We replay our open-source benchmark of 24 verified hardware logs (3,359 physical RF attempts from dual ESP32-S3 + E220-400T22D Sub-GHz LoRa nodes across four measured regimes: E220-Rand20 at 21.17\% loss, E220-Rand30 at 31.72\%, E220-Burst20 at 19.15\% with max 9-frame burst, and E220-Burst30 at 28.02\% with max 12-frame burst; measured TX airtime 30.4\,ms/frame, ACK RTT 743.1\,ms) on isolated held-out seeds \texttt{1200--1219}.
+\item \textbf{Study~III --- MIT Intel Berkeley 54-Mote Dataset (9,000 runs):} To ensure cross-layer comparability with our companion gateway-scheduling benchmark, Study~II and Study~III share the same open-source 24-log E220 loss benchmark and the same chronological 54-mote MIT Intel Berkeley split~\cite{madden2004intel}. Stream-auditing all 2,313,682 raw lines yielded 1,816,504 valid T+RH records across 54 located motes (zero future interpolation; missing slots remain absent). Under the pre-declared chronological split---3-day calibration prefix (\texttt{2004-02-28} to \texttt{03-01}, 83.8\%--89.3\% coverage), 1-day isolation gap (\texttt{03-02}), and 12 contiguous held-out days (\texttt{2004-03-03} to \texttt{03-14})---mean 54-mote 2-min coverage is \textbf{76.4\%}, passing our $\ge 50\%$ gate while retaining the real March~10--11 outage (31.1\% and 47.8\% coverage). Target motes (top-10 for Exp~A, top-20 for Exp~B; mean $k{=}4$ neighbor distance $5.09 \pm 0.74$\,m) were selected strictly from calibration counts.
 \begin{itemize}
-\item \textit{Exp~A (5,400 runs):} 12 held-out dates $\times$ 10 motes $\times$ 3 controlled scenarios (\texttt{real\_clean\_events}, \texttt{real\_range\_cross}, \texttt{real\_drift\_cross}) $\times$ 3 links (\texttt{loss\_0}, \texttt{e220\_burst\_20}, \texttt{e220\_random\_30}) $\times$ 5 methods, mapping 3 real hours (\texttt{08:00--11:00}, 30\,s slots) 1:6 to TAIS 5\,s ticks with all reported AoI converted back to real wall-clock seconds.
-\item \textit{Exp~B (3,600 runs):} 12 held-out dates $\times$ 20 motes $\times$ 5 scenarios (\texttt{single\_drift}, \texttt{common\_env\_event}, \texttt{local\_fast\_event}, \texttt{drift\_plus\_local\_fast}, and \texttt{local\_slow\_event}) $\times$ 3 causal detectors (\texttt{SingleChannel}, \texttt{SpatialKNN}, \texttt{NullSpatial}) over full \texttt{06:00--20:00} real days (420 causal 2-min slots; daytime interventions at \texttt{11:00--15:00} with $+4.0\,^{\circ}\text{C}$ 2-h ramps and $+3.5\,^{\circ}\text{C}$ 40-min fast steps).
+\item \textit{Exp~A (5,400 runs):} 12 held-out dates $\times$ 10 motes $\times$ 3 controlled scenarios (Clean-Events, Range-Cross, Drift-Cross) $\times$ 3 links (Lossless, E220-Burst20, E220-Rand30) $\times$ 5 methods, mapping 3 real hours (\texttt{08:00--11:00}, 30\,s slots) 1:6 to TAIS 5\,s ticks with all reported AoI converted back to real wall-clock seconds.
+\item \textit{Exp~B (3,600 runs):} 12 held-out dates $\times$ 20 motes $\times$ 5 scenarios (Single-Drift, Common-Env, Local-Fast, Drift+Local-Fast, and Local-Slow) $\times$ 3 causal detectors (\texttt{SingleChannel}, \texttt{SpatialKNN}, \texttt{NullSpatial}) over full \texttt{06:00--20:00} real days (420 causal 2-min slots; daytime interventions at \texttt{11:00--15:00} with $+4.0\,^{\circ}\text{C}$ 2-h ramps and $+3.5\,^{\circ}\text{C}$ 40-min fast steps). Exp~B tests three prespecified hypotheses: \textbf{H1} (suppressing single-mote drift false alarms without degrading common environmental event recall), \textbf{H2} (recovering fast local events superimposed on active sensor drift), and \textbf{H3} (quantifying the physical unidentifiability boundary when a slow ramp is confined strictly to one node).
 \end{itemize}
 \end{enumerate}
 
@@ -182,16 +189,16 @@ All uncertainty intervals use cluster-paired bootstrap (5,000 resamples; seed cl
 
 \subsection{Study~I: Synthetic Effective and Failure Boundaries}
 
-Fig.~\ref{fig:p5_axis_a} maps held-out receiver F1 (\texttt{1100--1119}) across the $5\times 5$ event duration $\times$ amplitude grid. On short-to-medium events ($D \in [20, 45]$\,s, amplitude $\ge 0.75\times$), \texttt{JALC-Full} lifts held-out F1 by \textbf{+8.6 to +24.5\,pp} over \texttt{A5} (e.g., at $D{=}20$\,s, $1.5\times$: 33.9\% vs.\ 9.4\%; at $D{=}45$\,s, $2.5\times$: 71.1\% vs.\ 53.0\%). Fig.~\ref{fig:p5_axis_a} also exposes two sharp failure edges: ultra-short pulses ($D{\le}10$\,s) fail across all policies due to the frozen 10\,s debounce in \texttt{ChangeAnalyzer}, while smooth 600\,s ramps ($\le 1.5\times$) are absorbed by the frozen 60\,s EMA baseline (0\% recall across all policies).
+Fig.~\ref{fig:p5_axis_a} maps held-out receiver F1 (\texttt{1100--1119}) across the $5\times 5$ event duration $\times$ amplitude grid. On short-to-medium events ($D \in [20, 45]$\,s, amplitude $\ge 0.75\times$), \texttt{JALC-Full} lifts held-out F1 by \textbf{+8.6 to +24.5\,pp} over \texttt{Fixed-20-TU} (e.g., at $D{=}20$\,s, $1.5\times$: 33.9\% vs.\ 9.4\%; at $D{=}45$\,s, $2.5\times$: 71.1\% vs.\ 53.0\%). Fig.~\ref{fig:p5_axis_a} also exposes two sharp failure edges: ultra-short pulses ($D{\le}10$\,s) fail across all policies due to the 10\,s debounce in \texttt{ChangeAnalyzer}, while smooth 600\,s ramps ($\le 1.5\times$) are absorbed by the 60\,s EMA baseline (0\% recall across all policies).
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig02_dynamics_boundary.pdf}
-\caption{Study~I Axis~A event-dynamics boundary on held-out validation seeds (\texttt{1100--1119}, $5\times 5$ duration $\times$ amplitude grid): receiver F1 (\%) for (a) \texttt{A5}, (b) \texttt{A7}, (c) \texttt{JALC-Full}, and (d) incremental gain $\Delta$F1 (\texttt{JALC-Full} $-$ \texttt{A5} in pp), highlighting strong gains on 20--45\,s bursts alongside explicit $\le 10$\,s short-pulse and 600\,s slow-ramp failure boundaries.}
+\caption{Study~I Axis~A event-dynamics boundary on held-out validation seeds (\texttt{1100--1119}, $5\times 5$ duration $\times$ amplitude grid): receiver F1 (\%) for (a) \texttt{Fixed-20-TU}, (b) \texttt{Adapt-TU}, (c) \texttt{JALC-Full}, and (d) incremental gain $\Delta$F1 (\texttt{JALC-Full} $-$ \texttt{Fixed-20-TU} in pp), highlighting strong gains on 20--45\,s bursts alongside explicit $\le 10$\,s short-pulse and 600\,s slow-ramp failure boundaries.}
 \label{fig:p5_axis_a}
 \end{figure*}
 
-Fig.~\ref{fig:p5_axis_b} and Table~\ref{tab:p5_summary} report held-out validation results across Axis~A, Axis~B, and Slice~C. Under 0\% loss, \texttt{JALC-Full} matches \texttt{A5} in F1 ($+0.61$\,pp, $p_{\text{Holm}}{=}1.0$) while cutting P95 finite AoI by 61.6\% (105.4\,s $\to$ 40.5\,s, 0.00\% violation). Once packet loss reaches $\ge 15\%$ or Gilbert-Elliott burst fading, open-loop sparse baselines suffer AoI collapse (P95 rising to 140--190\,s) and missed event edges, whereas \texttt{JALC-Full} achieves Holm-significant F1 gains of \textbf{+11.55\,pp} over \texttt{A5} and \textbf{+11.28\,pp} over \texttt{Fixed-20} at 30\% loss ($p_{\text{Holm}} \le 0.046$) and \textbf{+10.61\,pp} under burst fading ($p_{\text{Holm}} = 0.020$), holding P95 finite AoI at 41.9\,s across Axis~B. In Slice~C, \texttt{JALC-Full} maintains non-degraded operational fault-induced false alarms (FI = 61 vs.\ 72 for \texttt{A5} and 240 for \texttt{Fixed-20}, $p_{\text{Holm}} = 0.020$) and reduces $7\times$ noise-only sampling by $-$69.9\% relative to \texttt{A7}; honestly, under $7\times$ noisy events, MAD scaling plus the 6/120\,s fast cap lowers \texttt{JALC-Full} recall (48.3\% vs.\ 58.3\% for \texttt{A5}).
+Fig.~\ref{fig:p5_axis_b} and Table~\ref{tab:p5_summary} report held-out validation results across Axis~A, Axis~B, and Slice~C. Under 0\% loss, \texttt{JALC-Full} matches \texttt{Fixed-20-TU} in F1 ($+0.61$\,pp, $p_{\text{Holm}}{=}1.0$) while cutting P95 finite AoI by 61.6\% (105.4\,s $\to$ 40.5\,s, 0.00\% violation). Once packet loss reaches $\ge 15\%$ or Gilbert-Elliott burst fading, open-loop sparse baselines suffer AoI collapse (P95 rising to 140--190\,s) and missed event edges, whereas \texttt{JALC-Full} achieves Holm-significant F1 gains of \textbf{+11.55\,pp} over \texttt{Fixed-20-TU} and \textbf{+11.28\,pp} over \texttt{Fixed-20} at 30\% loss ($p_{\text{Holm}} \le 0.046$) and \textbf{+10.61\,pp} under burst fading ($p_{\text{Holm}} = 0.020$), holding P95 finite AoI at 41.9\,s across Axis~B. In Slice~C, \texttt{JALC-Full} maintains non-degraded operational fault-induced false alarms (FI = 61 vs.\ 72 for \texttt{Fixed-20-TU} and 240 for \texttt{Fixed-20}, $p_{\text{Holm}} = 0.020$) and reduces $7\times$ noise-only sampling by $-$69.9\% relative to \texttt{Adapt-TU}; honestly, under $7\times$ noisy events, MAD scaling plus the 6/120\,s fast cap lowers \texttt{JALC-Full} recall (48.3\% vs.\ 58.3\% for \texttt{Fixed-20-TU}).
 
 \begin{figure*}[t]
 \centering
@@ -205,7 +212,7 @@ Fig.~\ref{fig:p5_axis_b} and Table~\ref{tab:p5_summary} report held-out validati
 \caption{Study~I Held-Out Validation Summary (Seeds \texttt{1100--1119})}
 \label{tab:p5_summary}
 \scriptsize
-\setlength{\tabcolsep}{3.2pt}
+\setlength{\tabcolsep}{2.7pt}
 \begin{tabular}{@{}llcccccc@{}}
 \toprule
 Group & Method & Rx F1 & Recall & P95 AoI & Viol. & Bytes & Rx FI \\
@@ -213,59 +220,59 @@ Group & Method & Rx F1 & Recall & P95 AoI & Viol. & Bytes & Rx FI \\
 \midrule
 \multirow{4}{*}{\shortstack[l]{Axis A\\Dyn.}}
  & Fixed-20 & 36.00 & 27.45 & 18.05 & 0.00 & 1616.5 & 0 \\
- & A5 & 32.06 & 24.55 & 107.09 & 43.22 & 534.8 & 0 \\
- & A7 & 23.80 & 16.55 & 113.40 & 50.46 & 525.8 & 0 \\
+ & Fixed-20-TU & 32.06 & 24.55 & 107.09 & 43.22 & 534.8 & 0 \\
+ & Adapt-TU & 23.80 & 16.55 & 113.40 & 50.46 & 525.8 & 0 \\
  & \textbf{JALC-Full} & \textbf{37.23} & \textbf{29.45} & \textbf{40.92} & \textbf{0.00} & 995.5 & 0 \\
 \midrule
 \multirow{5}{*}{\shortstack[l]{Axis B\\Links}}
  & Fixed-20 & 66.29 & 53.50 & 36.91 & 3.30 & 1939.8 & 0 \\
- & A5 & 65.94 & 52.93 & 139.97 & 42.87 & 805.3 & 0 \\
- & A7 & 52.49 & 43.74 & 158.83 & 47.53 & 1162.3 & 0 \\
+ & Fixed-20-TU & 65.94 & 52.93 & 139.97 & 42.87 & 805.3 & 0 \\
+ & Adapt-TU & 52.49 & 43.74 & 158.83 & 47.53 & 1162.3 & 0 \\
  & JALC-AoI & 67.49 & 57.67 & 65.56 & 9.03 & 1465.8 & 0 \\
  & \textbf{JALC-Full} & \textbf{71.70} & \textbf{63.24} & \textbf{41.94} & \textbf{1.77} & 1763.7 & 0 \\
 \midrule
 \multirow{4}{*}{\shortstack[l]{Slice C\\Faults}}
  & Fixed-20 & 47.14 & 46.82 & 33.17 & 1.42 & 1276.1 & 240 \\
- & A5 & 49.49 & 45.53 & 112.22 & 36.90 & 586.4 & 72 \\
+ & Fixed-20-TU & 49.49 & 45.53 & 112.22 & 36.90 & 586.4 & 72 \\
  & JALC-AoI & 52.54 & 47.80 & 54.87 & 4.83 & 937.9 & 55 \\
  & \textbf{JALC-Full} & \textbf{54.49} & \textbf{50.83} & \textbf{44.53} & \textbf{0.93} & 1032.0 & \textbf{61} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\subsection{Study~II: Real E220 Hardware Traces and C11 Footprint}
+\subsection{Study~II: Measured E220 Hardware Traces and C11 Footprint}
 
-Fig.~\ref{fig:p55_e220} and Table~\ref{tab:p55_hw} summarize the 2,240-run replay over real ESP32-S3 + E220-400T22D Sub-GHz hardware traces (\texttt{1200--1219}). Across all four measured E220 regimes, \texttt{JALC-Full} achieves \textbf{strict multi-objective Pareto dominance} over \texttt{Fixed-20}: \textbf{+9.46\,pp} receiver F1 ($p_{\text{Holm}}{=}0.0063$), \textbf{$-$40.47\,s} ($-$46.6\%) P95 finite AoI ($p_{\text{Holm}}{=}0.0063$), \textbf{$-$54.4\%} operational FI (78 vs.\ 171, $p_{\text{Holm}}{=}0.0063$), and \textbf{$-$5.1\%} lower measured physical E220 RF airtime (41.61\,s vs.\ 43.84\,s/seed). Compared with open-loop \texttt{A5}, \texttt{JALC-Full} lifts F1 by \textbf{+7.74\,pp} ($p_{\text{Holm}}{=}0.0175$) and slashes P95 AoI by \textbf{$-$179.53\,s} (225.92\,s $\to$ 46.39\,s, $p_{\text{Holm}}{=}0.0063$) with non-degraded FI ($p_{\text{Holm}}{=}1.0$). Under the harshest \texttt{e220\_burst\_30} regime (up to 12 consecutive lost frames), \texttt{A5} P95 AoI collapses to 321--324\,s whereas \texttt{JALC-Full} holds 60.52\,s. Transparently, this freshness guarantee requires 41.61\,s/seed of RF airtime versus 16.45\,s/seed for freshness-blind \texttt{A5}.
+Fig.~\ref{fig:p55_e220} and Table~\ref{tab:p55_hw} summarize the 2,240-run trace-driven replay over measured ESP32-S3 + E220-400T22D Sub-GHz hardware logs (\texttt{1200--1219}). Across all four measured E220 regimes, \texttt{JALC-Full} achieves \textbf{strict multi-objective Pareto dominance} over \texttt{Fixed-20}: \textbf{+9.46\,pp} receiver F1 ($p_{\text{Holm}}{=}0.0063$), \textbf{$-$40.47\,s} ($-$46.6\%) P95 finite AoI ($p_{\text{Holm}}{=}0.0063$), \textbf{$-$54.4\%} operational FI (78 vs.\ 171, $p_{\text{Holm}}{=}0.0063$), and \textbf{$-$5.1\%} lower measured physical E220 RF airtime (41.61\,s vs.\ 43.84\,s/seed). Compared with open-loop \texttt{Fixed-20-TU}, \texttt{JALC-Full} lifts F1 by \textbf{+7.74\,pp} ($p_{\text{Holm}}{=}0.0175$) and slashes P95 AoI by \textbf{$-$179.53\,s} (225.92\,s $\to$ 46.39\,s, $p_{\text{Holm}}{=}0.0063$) with non-degraded FI ($p_{\text{Holm}}{=}1.0$). Under the harshest E220-Burst30 regime (up to 12 consecutive lost frames), \texttt{Fixed-20-TU} P95 AoI collapses to 321--324\,s whereas \texttt{JALC-Full} holds 60.52\,s. Transparently, this freshness guarantee requires 41.61\,s/seed of RF airtime versus 16.45\,s/seed for freshness-blind \texttt{Fixed-20-TU}.
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig04_e220_hardware_traces.pdf}
-\caption{Study~II hardware-trace validation (20 held-out seeds \texttt{1200--1219}) replaying 24 audited ESP32-S3 + E220-400T22D Sub-GHz logs: (a) receiver F1, (b) Run-P95 finite AoI with the 45\,s cap (dashed), and (c) measured physical E220 RF airtime at 30.4\,ms/frame.}
+\caption{Study~II trace-driven replay (20 held-out seeds \texttt{1200--1219}) over 24 verified ESP32-S3 + E220-400T22D Sub-GHz loss logs: (a) receiver F1, (b) Run-P95 finite AoI with the 45\,s cap (dashed), and (c) measured physical E220 RF airtime at 30.4\,ms/frame.}
 \label{fig:p55_e220}
 \end{figure*}
 
 \begin{table}[t]
 \centering
-\caption{Study~II Real E220 Hardware-Trace Summary (All 4 Regimes, Seeds \texttt{1200--1219})}
+\caption{Study~II Measured E220 Hardware-Trace Summary (All 4 Regimes, Seeds \texttt{1200--1219})}
 \label{tab:p55_hw}
 \scriptsize
-\setlength{\tabcolsep}{3.0pt}
+\setlength{\tabcolsep}{2.5pt}
 \begin{tabular}{@{}lccccccc@{}}
 \toprule
 Method & Rx F1 & Recall & P95 AoI & Viol. & Bytes & Airtime & Rx FI \\
  & (\%) & (\%) & (s) & (\%) & (kB) & (s/seed) & \\
 \midrule
 Fixed-20 & 56.09 & 45.78 & 86.86 & 12.05 & 1027.6 & 43.84 & 171 \\
-A5 & 57.62 & 45.31 & 225.92 & 51.98 & 385.9 & 16.45 & 75 \\
-A7 & 46.96 & 36.77 & 251.96 & 55.37 & 500.6 & 21.29 & 58 \\
-Risk-T1-U1 & 60.24 & 49.17 & 226.72 & 52.51 & 460.3 & 19.62 & 67 \\
+Fixed-20-TU & 57.62 & 45.31 & 225.92 & 51.98 & 385.9 & 16.45 & 75 \\
+Adapt-TU & 46.96 & 36.77 & 251.96 & 55.37 & 500.6 & 21.29 & 58 \\
+Risk-OpenLoop & 60.24 & 49.17 & 226.72 & 52.51 & 460.3 & 19.62 & 67 \\
 JALC-AoI & 61.61 & 51.15 & 134.11 & 19.41 & 730.4 & 31.15 & 70 \\
 \textbf{JALC-Full} & \textbf{65.33} & \textbf{57.66} & \textbf{46.39} & \textbf{3.25} & \textbf{975.1} & \textbf{41.61} & \textbf{78} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Table~\ref{tab:c11} summarizes the pure C11 resource footprint. Cross-compiled with \texttt{xtensa-esp-elf-gcc 14.2.0 -Os}, the combined controller and dual-channel \texttt{SensorTrust} engine occupy only \textbf{3,328\,B (3.25\,KB)} of static RAM ($0.65\%$ of ESP32-S3's 512\,KB SRAM), \textbf{9,662\,B (9.44\,KB)} of flash \texttt{.text}, and \textbf{0\,B} of heap or static \texttt{.data/.bss}, executing at 1.44\,$\mu$s/step on an Apple arm64 host (694,228 updates/s).
+Table~\ref{tab:c11} summarizes the pure C11 resource footprint. Cross-compiled with \texttt{xtensa-esp-elf-gcc 14.2.0 -Os}, the combined controller and dual-channel \texttt{SensorTrust} engine occupy only \textbf{3,328~B (3.25\,KB)} of static RAM ($0.65\%$ of ESP32-S3's 512\,KB SRAM), \textbf{9,662~B (9.44\,KB)} of flash \texttt{.text}, and \textbf{0~B} of heap or static \texttt{.data/.bss}, executing at 1.44\,$\mu$s/step on an Apple arm64 host (694,228 updates/s).
 
 \begin{table}[t]
 \centering
@@ -277,10 +284,10 @@ Table~\ref{tab:c11} summarizes the pure C11 resource footprint. Cross-compiled w
 \toprule
 Metric (\texttt{-std=c11 -Wall -Wextra -Werror}) & Measured Value \\
 \midrule
-Controller RAM (\texttt{sizeof(tais\_jalc\_t)}, $\le 4$ ch.) & \textbf{1,072\,B} (0\,B heap) \\
-Total RAM (\texttt{tais\_jalc\_t} + $2{\times}$\texttt{sensor\_trust\_t}) & \textbf{3,328\,B} (3.25\,KB) \\
-ESP32-S3 \texttt{-Os} flash (\texttt{tais\_jalc} / \texttt{sensor\_trust}) & \textbf{7,643\,B} / \textbf{2,019\,B} \\
-ESP32-S3 static \texttt{.data} / \texttt{.bss} & \textbf{0\,B} / \textbf{0\,B} \\
+Controller RAM (\texttt{sizeof(tais\_jalc\_t)}, $\le 4$ ch.) & \textbf{1,072~B} (0~B heap) \\
+Total RAM (\texttt{tais\_jalc\_t} + $2{\times}$\texttt{sensor\_trust\_t}) & \textbf{3,328~B} (3.25\,KB) \\
+ESP32-S3 \texttt{-Os} flash (\texttt{tais\_jalc} / \texttt{sensor\_trust}) & \textbf{7,643~B} / \textbf{2,019~B} \\
+ESP32-S3 static \texttt{.data} / \texttt{.bss} & \textbf{0~B} / \textbf{0~B} \\
 Host joint latency (100k iters, arm64 \texttt{-O2}) & \textbf{1.44\,$\mu$s} (P99: 3.0\,$\mu$s) \\
 Python--C11 bit-exact parity ($<10^{-9}$) & \textbf{27 / 27} trajectories \\
 \bottomrule
@@ -289,15 +296,15 @@ Python--C11 bit-exact parity ($<10^{-9}$) & \textbf{27 / 27} trajectories \\
 
 \subsection{Study~III: 54-Mote External Validity and Spatial Identifiability}
 
-\paragraph{Exp~A --- Real Sensing Background $\times$ Real E220 Traces}
-Fig.~\ref{fig:p6_expa} shows the pre-evaluation coverage audit (passing the 50\% gate at 76.4\% over 12 contiguous held-out days) and Exp~A external validity (5,400 runs). Under \texttt{e220\_random\_30}, \texttt{JALC-Full} slashes real wall-clock P95 finite AoI from \textbf{2,225.3\,s (37.1\,min)} for \texttt{A5} to \textbf{1,313.4\,s (21.9\,min)} ($-$911.8\,s, $p_{\text{Holm}}{=}0.0258$), cuts AoI violation by \textbf{$-$44.2\,pp} ($p_{\text{Holm}}{=}0.0258$), beats \texttt{Fixed-20} on P95 AoI ($-$94.6\,s, $p_{\text{Holm}}{=}0.0273$) and violation ($-$5.7\,pp, $p_{\text{Holm}}{=}0.0258$) with lower byte volume (990 vs.\ 1,072\,kB) and lower FI (304 vs.\ 364), and raises recall by \textbf{+15.6\,pp} (79.38\% vs.\ 63.75\%).
+\paragraph{Exp~A --- Real Sensing Background $\times$ Measured E220 Traces}
+Fig.~\ref{fig:p6_expa} shows the pre-evaluation coverage audit (passing the 50\% gate at 76.4\% over 12 contiguous held-out days) and Exp~A external validity (5,400 runs). Under E220-Rand30, \texttt{JALC-Full} slashes real wall-clock P95 finite AoI from \textbf{2,225.3\,s (37.1\,min)} for \texttt{Fixed-20-TU} to \textbf{1,313.4\,s (21.9\,min)} ($-$911.8\,s, $p_{\text{Holm}}{=}0.0258$), cuts AoI violation by \textbf{$-$44.2\,pp} ($p_{\text{Holm}}{=}0.0258$), beats \texttt{Fixed-20} on P95 AoI ($-$94.6\,s, $p_{\text{Holm}}{=}0.0273$) and violation ($-$5.7\,pp, $p_{\text{Holm}}{=}0.0258$) with lower byte volume (990 vs.\ 1,072\,kB) and lower FI (304 vs.\ 364), and raises recall by \textbf{+15.6\,pp} (79.38\% vs.\ 63.75\%).
 
-Crucially, Exp~A also reveals an honest real-world domain shift: Intel Berkeley rooms experience rapid morning HVAC/solar warming ($+5.3$ to $+9.7\,^{\circ}\text{C}$ between \texttt{06:00} and \texttt{12:00}). Because the frozen synthetic \texttt{noise\_floor = 0.15\,$^{\circ}$C} was intentionally not retuned, natural morning warming triggers unlabelled background alarms in high-recall policies, leaving overall F1 statistically indistinguishable from \texttt{A5} (55.30\% vs.\ 55.84\%, $p_{\text{Holm}}{=}1.0$). This finding motivates spatial reference for non-stationary real backgrounds.
+Crucially, Exp~A also reveals an honest real-world domain shift: Intel Berkeley rooms experience rapid morning HVAC/solar warming ($+5.3$ to $+9.7\,^{\circ}\text{C}$ between \texttt{06:00} and \texttt{12:00}). Because the synthetic \texttt{noise\_floor = 0.15\,$^{\circ}$C} was intentionally not retuned, natural morning warming triggers unlabelled background alarms in high-recall policies, leaving overall F1 statistically indistinguishable from \texttt{Fixed-20-TU} (55.30\% vs.\ 55.84\%, $p_{\text{Holm}}{=}1.0$). This finding motivates spatial reference for non-stationary real backgrounds.
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig05_intel_berkeley_exp_a.pdf}
-\caption{Study~III Exp~A (MIT Intel Berkeley 54-mote deployment): (a) chronological coverage audit showing 3-day calibration prefix, 12-day held-out block (including real March~10--11 outage), and 50\% gate (dashed); (b) receiver F1; and (c) real wall-clock P95 finite AoI (min) across lossless and real E220 hardware traces.}
+\caption{Study~III Exp~A (MIT Intel Berkeley 54-mote deployment): (a) chronological coverage audit showing 3-day calibration prefix, 12-day held-out block (including real March~10--11 outage), and 50\% gate (dashed); (b) receiver F1; and (c) real wall-clock P95 finite AoI (min) across lossless and measured E220 hardware traces.}
 \label{fig:p6_expa}
 \end{figure*}
 
@@ -305,15 +312,15 @@ Crucially, Exp~A also reveals an honest real-world domain shift: Intel Berkeley 
 Fig.~\ref{fig:p6_expb} and Table~\ref{tab:p6_expb} report all 3,600 held-out runs across 12 dates $\times$ 20 motes. Four findings stand out with strict date-cluster Holm significance:
 \begin{enumerate}
 \item \textbf{Single-Mote Drift Suppression (H1):} \texttt{SpatialKNN} cuts drift-induced false environmental alarms by \textbf{$-$75.0\%} relative to \texttt{SingleChannel} (1.583 $\to$ 0.396/run, $p_{\text{Holm}}{=}0.0270$) while correctly identifying \textbf{88.33\%} of single-mote drifts (\textbf{96.5\%} on the 10 normal-coverage days vs.\ 0.0\% for \texttt{SingleChannel}, $p_{\text{Holm}}{=}0.0270$).
-\item \textbf{Equal-Cost Negative Control Falsification:} On \texttt{common\_env\_event}, \texttt{SpatialKNN} preserves \textbf{85.83\%} event recall with \textbf{0.00\,pp} degradation versus \texttt{SingleChannel} (95\% CI $[0.0, 0.0]$), whereas equal-cost \texttt{NullSpatial} (using identical code and 344.85 vs.\ 344.87 reference slots/day) collapses to \textbf{40.42\%} (\textbf{+45.42\,pp} advantage for \texttt{SpatialKNN}, $p_{\text{Holm}}{=}0.0270$). On completely unperturbed clean days, \texttt{SpatialKNN} also emits \textbf{$-$63.8\%} fewer spurious drift flags than \texttt{NullSpatial} (0.783 vs.\ 2.167/run, $p_{\text{Holm}}{=}0.0258$).
+\item \textbf{Equal-Cost Negative Control Falsification (H1):} On Common-Env, \texttt{SpatialKNN} preserves \textbf{85.83\%} event recall with \textbf{0.00\,pp} degradation versus \texttt{SingleChannel} (95\% CI $[0.0, 0.0]$), whereas equal-cost \texttt{NullSpatial} (using identical code and 344.85 vs.\ 344.87 reference slots/day) collapses to \textbf{40.42\%} (\textbf{+45.42\,pp} advantage for \texttt{SpatialKNN}, $p_{\text{Holm}}{=}0.0270$). On completely unperturbed clean days, \texttt{SpatialKNN} also emits \textbf{$-$63.8\%} fewer spurious drift flags than \texttt{NullSpatial} (0.783 vs.\ 2.167/run, $p_{\text{Holm}}{=}0.0258$).
 \item \textbf{Superimposed Drift + Fast Local Events (H2):} When a $+3.5\,^{\circ}\text{C}$ fast local event arrives during an active slow drift, \texttt{SingleChannel} is already saturated by false drift alarms (23.33\% recall), whereas \texttt{SpatialKNN} suppresses the drift ($-$65.9\% false alarms, $p_{\text{Holm}}{=}0.0270$) and recovers \textbf{88.33\%} event recall (\textbf{+65.00\,pp}, $p_{\text{Holm}}{=}0.0270$; \textbf{96.5\%} on normal days).
-\item \textbf{Real Outage Graceful Fallback and Honest H3 Boundary:} During the real March~10--11 outage, available spatial reference slots fall by 56\% (380.7 $\to$ 165.9/day), yet \texttt{SpatialKNN} gracefully matches \texttt{SingleChannel}'s 47.5\% event recall floor without crashing or suppressing valid events. Finally, on \texttt{local\_slow\_event} (a slow $+4\,^{\circ}\text{C}$ ramp confined strictly to a single mote), \texttt{SpatialKNN} recall drops by \textbf{$-$55.00\,pp} (85.83\% $\to$ 30.83\%, $p_{\text{Holm}}{=}0.0270$), empirically confirming the fundamental physical unidentifiability of single-node slow local events under single-modality spatial comparison.
+\item \textbf{Real Outage Graceful Fallback and Honest H3 Boundary:} During the real March~10--11 outage, available spatial reference slots fall by 56\% (380.7 $\to$ 165.9/day), yet \texttt{SpatialKNN} gracefully matches \texttt{SingleChannel}'s 47.5\% event recall floor without crashing or suppressing valid events. Finally, on Local-Slow (a slow $+4\,^{\circ}\text{C}$ ramp confined strictly to a single mote), \texttt{SpatialKNN} recall drops by \textbf{$-$55.00\,pp} (85.83\% $\to$ 30.83\%, $p_{\text{Holm}}{=}0.0270$), empirically confirming H3's physical unidentifiability of single-node slow local events under single-modality spatial comparison.
 \end{enumerate}
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig06_spatial_identifiability.pdf}
-\caption{Study~III Exp~B (12 held-out dates $\times$ 20 motes): (a) drift-induced false environmental alarms and clean-day spurious drift onsets per run; (b) drift identification, common-event preservation versus equal-cost \texttt{NullSpatial}, superimposed drift+fast recovery, and the honest \texttt{local\_slow\_event} H3 unidentifiable boundary.}
+\caption{Study~III Exp~B (12 held-out dates $\times$ 20 motes): (a) drift-induced false environmental alarms and clean-day spurious drift onsets per run; (b) drift identification, common-event preservation versus equal-cost \texttt{NullSpatial}, superimposed drift+fast recovery, and the honest Local-Slow H3 unidentifiable boundary.}
 \label{fig:p6_expb}
 \end{figure*}
 
@@ -322,19 +329,19 @@ Fig.~\ref{fig:p6_expb} and Table~\ref{tab:p6_expb} report all 3,600 held-out run
 \caption{Study~III Exp~B: Causal Spatial $k$-NN vs.\ SingleChannel and Equal-Cost NullSpatial (12 Held-Out Dates $\times$ 20 Motes)}
 \label{tab:p6_expb}
 \scriptsize
-\setlength{\tabcolsep}{4.5pt}
+\setlength{\tabcolsep}{4.3pt}
 \begin{tabular}{@{}llccccc@{}}
 \toprule
 Scenario (240 runs each) & Metric & SingleChannel & SpatialKNN & NullSpatial & SpatialKNN Paired Effect (95\% Date-Cluster CI) & $p_{\text{Holm}}$ \\
 \midrule
-\texttt{single\_drift} (H1) & False env / run $\downarrow$ & 1.583 & \textbf{0.396} & 0.613 & vs.\ SC: \textbf{$-$1.188} ($[-1.525,\,-0.846]$) & \textbf{0.0270} \\
-\texttt{single\_drift} (H1) & Drift ID (\%) $\uparrow$ & 0.0 & \textbf{88.3} (96.5$^\dagger$) & 87.5 & vs.\ SC: \textbf{+88.3\,pp} ($[+71.3,\,+97.9]$) & \textbf{0.0270} \\
+Single-Drift (H1) & False env / run $\downarrow$ & 1.583 & \textbf{0.396} & 0.613 & vs.\ SC: \textbf{$-$1.188} ($[-1.525,\,-0.846]$) & \textbf{0.0270} \\
+Single-Drift (H1) & Drift ID (\%) $\uparrow$ & 0.0 & \textbf{88.3} (96.5$^\dagger$) & 87.5 & vs.\ SC: \textbf{+88.3\,pp} ($[+71.3,\,+97.9]$) & \textbf{0.0270} \\
 Clean unperturbed days & Spurious drift / run $\downarrow$ & 0.000 & \textbf{0.783} & 2.167 & vs.\ Null: \textbf{$-$1.383} ($[-1.804,\,-0.954]$) & \textbf{0.0258} \\
-\texttt{common\_env\_event} (H1) & Event recall (\%) $\uparrow$ & 85.8 & \textbf{85.8} (93.5$^\dagger$) & 40.4 & vs.\ Null: \textbf{+45.4\,pp} ($[+32.5,\,+59.2]$); vs.\ SC: 0.0 & \textbf{0.0270} \\
-\texttt{local\_fast\_event} (H2) & Event recall (\%) $\uparrow$ & 85.4 & \textbf{87.9} (96.0$^\dagger$) & 88.3 & vs.\ SC: +2.5\,pp ($[+0.8,\,+4.2]$) & 1.0000 \\
-\texttt{drift\_plus\_local\_fast} (H2) & Event recall (\%) $\uparrow$ & 23.3 & \textbf{88.3} (96.5$^\dagger$) & 88.3 & vs.\ SC: \textbf{+65.0\,pp} ($[+46.3,\,+81.7]$) & \textbf{0.0270} \\
-\texttt{drift\_plus\_local\_fast} (H2) & Drift false env / run $\downarrow$ & 0.575 & \textbf{0.196} & 0.271 & vs.\ SC: \textbf{$-$0.379} ($[-0.533,\,-0.238]$) & \textbf{0.0270} \\
-\texttt{local\_slow\_event} (H3) & Event recall (\%) & 85.8 & \textbf{30.8} (35.5$^\dagger$) & 40.4 & vs.\ SC: \textbf{$-$55.0\,pp} ($[-68.3,\,-40.8]$) [H3 Bound] & \textbf{0.0270} \\
+Common-Env (H1) & Event recall (\%) $\uparrow$ & 85.8 & \textbf{85.8} (93.5$^\dagger$) & 40.4 & vs.\ Null: \textbf{+45.4\,pp} ($[+32.5,\,+59.2]$); vs.\ SC: 0.0 & \textbf{0.0270} \\
+Local-Fast (H2) & Event recall (\%) $\uparrow$ & 85.4 & \textbf{87.9} (96.0$^\dagger$) & 88.3 & vs.\ SC: +2.5\,pp ($[+0.8,\,+4.2]$) & 1.0000 \\
+Drift+Local-Fast (H2) & Event recall (\%) $\uparrow$ & 23.3 & \textbf{88.3} (96.5$^\dagger$) & 88.3 & vs.\ SC: \textbf{+65.0\,pp} ($[+46.3,\,+81.7]$) & \textbf{0.0270} \\
+Drift+Local-Fast (H2) & Drift false env / run $\downarrow$ & 0.575 & \textbf{0.196} & 0.271 & vs.\ SC: \textbf{$-$0.379} ($[-0.533,\,-0.238]$) & \textbf{0.0270} \\
+Local-Slow (H3) & Event recall (\%) & 85.8 & \textbf{30.8} (35.5$^\dagger$) & 40.4 & vs.\ SC: \textbf{$-$55.0\,pp} ($[-68.3,\,-40.8]$) [H3 Bound] & \textbf{0.0270} \\
 \bottomrule
 \multicolumn{7}{@{}l}{\scriptsize $^\dagger$Stratified performance on the 10 normal-coverage held-out days (excluding the real March~10--11 outage days, where \texttt{SpatialKNN} gracefully matches SC at 47.5\% recall).}
 \end{tabular}
@@ -349,14 +356,14 @@ Table~\ref{tab:regimes} synthesizes our findings into an actionable deployment b
 \caption{Operational Regime Matrix and Documented Failure Boundaries}
 \label{tab:regimes}
 \scriptsize
-\setlength{\tabcolsep}{3.5pt}
-\begin{tabular}{@{} >{\raggedright\arraybackslash}p{2.15cm} >{\raggedright\arraybackslash}p{1.65cm} >{\raggedright\arraybackslash}p{3.75cm} @{}}
+\setlength{\tabcolsep}{3.4pt}
+\begin{tabular}{@{} >{\raggedright\arraybackslash}p{2.10cm} >{\raggedright\arraybackslash}p{1.65cm} >{\raggedright\arraybackslash}p{3.80cm} @{}}
 \toprule
 Operating Regime & Recommended & Empirical Evidence \\
 \midrule
 Lossy/bursty links ($\ge 15\%$) + AoI SLA & \texttt{JALC-Full} & +7.7 to +11.6\,pp F1, 42--46\,s P95 AoI, strict Pareto win over \texttt{Fixed-20} on E220 traces \\
-Short--medium bursts ($20$--$45$\,s) & \texttt{JALC-AoI} / \texttt{Full} & +8.6 to +24.5\,pp F1 over \texttt{A5}; 0\% lossless AoI violation \\
-Lossless + extreme low airtime, lax AoI & \texttt{A5} & Lowest airtime (16.5\,s/seed); tolerates $>100$\,s P95 AoI \\
+Short--medium bursts ($20$--$45$\,s) & \texttt{JALC-AoI} / \texttt{Full} & +8.6 to +24.5\,pp F1 over \texttt{Fixed-20-TU}; 0\% lossless AoI violation \\
+Lossless + extreme low airtime, lax AoI & \texttt{Fixed-20-TU} & Lowest airtime (16.5\,s/seed); tolerates $>100$\,s P95 AoI \\
 Multi-node slow drift vs.\ room ramps & \texttt{SpatialKNN} & $-$75\% drift false alarms; +45.4\,pp vs.\ \texttt{NullSpatial}; +65.0\,pp on drift+fast \\
 $\le 10$\,s pulses / 600\,s ramps / $7\times$ noisy / single-node slow & Explicit failure boundary & Fixed EMA/debounce, MAD noise floor, and single-modality H3 identifiability limits \\
 \bottomrule
@@ -364,10 +371,10 @@ $\le 10$\,s pulses / 600\,s ramps / $7\times$ noisy / single-node slow & Explici
 \end{table}
 
 \paragraph{Explicit Scope Limitations}
-Three limitations must be stated transparently. First, while Study~III uses genuine 54-mote indoor backgrounds and natural outages, the injected events and drifts are controlled semi-synthetic interventions rather than field-annotated natural agricultural faults; indoor lab validation does not substitute for outdoor or greenhouse deployments. Second, Study~II combines real ESP32-S3 + E220 hardware loss logs with exact Xtensa ELF code/RAM sizes and host C11 latency, but physical board-level current draw, battery lifetime, and live multi-node RF interference remain future hardware work. Third, resolving both the Exp~A morning HVAC domain shift and the Exp~B H3 single-node slow-local-event boundary requires online diurnal background tracking and multi-modal physical coupling (combining temperature, humidity, illuminance, and supply-voltage diagnostics), which constitute our planned follow-on deployment study.
+Three limitations must be stated transparently. First, while Study~III uses genuine 54-mote indoor backgrounds and natural outages, the injected events and drifts are controlled semi-synthetic interventions rather than field-annotated natural agricultural faults; indoor lab validation does not substitute for outdoor or greenhouse deployments. Second, Study~II performs trace-driven replay over measured ESP32-S3 + E220 hardware loss logs paired with exact Xtensa ELF code/RAM sizes and host C11 latency, while direct on-chip \texttt{tais\_jalc} timing, physical board current draw, battery lifetime, and live multi-node RF interference remain future hardware work. Third, resolving both the Exp~A morning HVAC domain shift and the Exp~B H3 single-node slow-local-event boundary requires online diurnal background tracking and multi-modal physical coupling (combining temperature, humidity, illuminance, and supply-voltage diagnostics).
 
 \section{Conclusion}
-We presented \texttt{TAIS-JALC}, a lean 3D closed-loop sensing and communication controller in zero-allocation C11 (3.25\,KB RAM, 7.64\,KB controller flash on ESP32-S3), paired with a strictly causal differential spatial $k$-NN reference layer. Across 32,240 total runs spanning synthetic boundary sweeps, 24 real ESP32-S3 + E220 Sub-GHz hardware traces, and 12 held-out days of the 54-mote MIT Intel Berkeley dataset, our results establish Holm-significant freshness and detection improvements under lossy links, strict Pareto dominance over fixed polling on real RF traces, a $-$75.0\% reduction in drift-induced false alarms falsified against an equal-cost \texttt{NullSpatial} control (+45.4\,pp), and explicit characterization of the remaining temporal, noise, and single-modality spatial boundaries.
+We presented \texttt{TAIS-JALC}, a lean 3D closed-loop sensing and communication controller in zero-allocation C11 (3.25\,KB RAM, 7.64\,KB controller flash on ESP32-S3), paired with a strictly causal differential spatial $k$-NN reference layer. Across 32,240 total runs spanning synthetic boundary sweeps, trace-driven replay over 24 measured ESP32-S3 + E220 Sub-GHz hardware logs, and 12 held-out days of the 54-mote MIT Intel Berkeley dataset, our results establish Holm-significant freshness and detection improvements under lossy links, strict Pareto dominance over fixed polling on measured RF traces, a $-$75.0\% reduction in drift-induced false alarms falsified against an equal-cost \texttt{NullSpatial} control (+45.4\,pp), and explicit characterization of the remaining temporal, noise, and single-modality spatial boundaries.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
