@@ -1,26 +1,22 @@
-# TAIS Closed-Loop & Spatial Reference Manuscript (`IEEEtran`)
+# TAIS Closed-Loop & Spatial Reference Manuscript (Official IEEE Sensors Journal Template)
 
-This directory contains a standalone, publication-ready manuscript prepared in **IEEE Sensors Journal** double-column format (`\documentclass[journal]{IEEEtran}`) consolidating Studies I--III (TAIS Phases 5, 5.5, and 6) without modifying the frozen historical G1/G2 manuscript in `papers/tais/`.
+This directory contains the standalone, publication-ready manuscript formatted in the official **IEEE Sensors Journal** template (`\documentclass[journal,twoside,web]{ieeecolor}` + `jsen.sty`), consolidating Studies I--III (TAIS Phases 5, 5.5, and 6) without modifying the frozen historical G1/G2 manuscript in `papers/tais/`.
 
 ## Contents
 
-- `manuscript.tex` — Complete 8-page IEEE double-column LaTeX source (with TikZ architecture diagram, 5 native-print-width `7.16 in` vector PDF empirical figures, 6 `booktabs` tables, and 31 verified BibTeX references).
+- `manuscript.tex` — Complete 8-page official IEEE Sensors Journal double-column LaTeX source (with TikZ architecture diagram, 5 native-print-width `7.16 in` vector PDF empirical figures, 6 `booktabs` tables, and 31 verified BibTeX references).
+- `ieeecolor.cls`, `jsen.sty`, `IEEEtran.bst`, `LOGO-jsen-web.png` — Official IEEE Sensors Journal template assets for self-contained compilation.
 - `build_figures.py` — Deterministic figure generator reading frozen saved CSV/JSON outputs and emitting B&W-print-safe IEEE vector figures into `figures/`.
-- `figures/fig01_architecture.png` / `.pdf` — Standalone high-resolution Fig. 1 architecture diagram (also usable as IEEE Sensors Journal Graphical Abstract).
-- `figures/fig02_dynamics_boundary.pdf` .. `fig06_spatial_identifiability.pdf` — Native `7.16 in` double-column IEEE print-ready vector figures (no redundant report suptitles, serif 7.5--8.5 pt typography, distinct markers & hatches).
+- `build_graphical_abstract.py` — Deterministic 3:2 Graphical Abstract generator aligned with the revised manuscript statistics.
+- `figures/fig01_architecture.png` / `.pdf` and `fig02_dynamics_boundary.pdf` .. `fig06_spatial_identifiability.pdf` — Native `7.16 in` double-column IEEE print-ready vector figures.
 - `references.bib` — Verified peer-reviewed BibTeX entries (`IEEEtran` bibliography style).
-- `manuscript.pdf` — Compiled 8-page vector PDF (`tectonic manuscript.tex`, zero overfull/missing/undefined warnings).
+- `manuscript.pdf` — Compiled 8-page vector PDF (`tectonic -X compile manuscript.tex`, zero body overfull/missing/undefined warnings).
 - `graphical_abstract.pdf` / `graphical_abstract.png` — Mandatory IEEE Sensors Journal Graphical Abstract.
 
 ## Rebuild Commands
 
 ```sh
-python papers/tais-closed-loop/build_figures.py
-cd papers/tais-closed-loop && tectonic manuscript.tex
+python3 papers/tais-closed-loop/build_figures.py
+python3 papers/tais-closed-loop/build_graphical_abstract.py
+cd papers/tais-closed-loop && tectonic -X compile manuscript.tex
 ```
-
-## Pre-Submission Notes
-
-Before uploading to the IEEE Sensors Journal Author Portal:
-1. Upload `figures/fig01_architecture.png` or `graphical_abstract.png` as the mandatory Graphical Abstract.
-2. Add author biography/photo if requested at the final acceptance proof stage.

@@ -227,7 +227,8 @@ def build_fig04_e220() -> None:
     axes[0].set(title="(a) Receiver F1", ylabel="Receiver F1 (%)", ylim=(36, 75))
     axes[1].set(title="(b) Data Freshness", ylabel="Run-P95 Finite AoI (s)", ylim=(20, 380))
     axes[1].axhline(45.0, color="#222222", ls="--", lw=0.75, zorder=2)
-    axes[2].set(title="(c) Physical E220 RF Airtime", ylabel="Airtime / Seed (s)", ylim=(3.2, 12.2))
+    axes[2].set_title("(c) AUX-Timed DATA TX Cost Proxy", fontsize=7.6)
+    axes[2].set(ylabel="AUX TX Cost Proxy / Seed (s)", ylim=(3.2, 12.2))
     for ax in axes:
         ax.set_xticks(x)
         ax.set_xticklabels(reg_lbls, rotation=16, ha="right")
